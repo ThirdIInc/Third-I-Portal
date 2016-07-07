@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BUTTON_MASTER>
+	<BUTTON btnCode="1" btnName="Add New" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="addnew" />
+	<BUTTON btnCode="2" btnName="Search" btnOrder="2" btnFlag="V" enableAll="Y" btnClass="search" />
+	<BUTTON btnCode="3" btnName="Save" btnOrder="3" btnFlag="U" enableAll="Y" btnClass="save" />
+	<BUTTON btnCode="4" btnName="Edit" btnOrder="8" btnFlag="U" enableAll="Y" btnClass="edit" />
+	<BUTTON btnCode="5" btnName="Delete" btnOrder="9" btnFlag="D" enableAll="Y" btnClass="delete" />
+	<BUTTON btnCode="6" btnName="Cancel" btnOrder="40" btnFlag="V" enableAll="Y" btnClass="cancel" />
+	<BUTTON btnCode="7" btnName="Send For Approval" btnOrder="10" btnFlag="V" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="8" btnName="Next" btnOrder="11" btnFlag="V" enableAll="Y" btnClass="next" />
+	<BUTTON btnCode="9" btnName="Previous" btnOrder="11" btnFlag="V" enableAll="Y" btnClass="back" />
+	<BUTTON btnCode="10" btnName="Save and Next" btnOrder="11" btnFlag="V" enableAll="Y" btnClass="next" />
+	<BUTTON btnCode="11" btnName="Save and Previous" btnOrder="11" btnFlag="U" enableAll="Y" btnClass="back" />
+	<BUTTON btnCode="12" btnName="Back" btnOrder="27" btnFlag="V" enableAll="Y" btnClass="back" />
+	<BUTTON btnCode="13" btnName="Finish" btnOrder="13" btnFlag="U" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="14" btnName="Approve" btnOrder="14" btnFlag="U" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="15" btnName="Reject" btnOrder="15" btnFlag="U" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="17" btnName="Report" btnOrder="17" btnFlag="V" enableAll="N" btnClass="token" />
+	<BUTTON btnCode="18" btnName="Send" btnOrder="13" btnFlag="U" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="19" btnName="Convert To Employee" btnOrder="18" btnFlag="V" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="20" btnName="Clear" btnOrder="25" btnFlag="U" enableAll="Y" btnClass="reset" />
+	<BUTTON btnCode="21" btnName="Export Pdf Report" btnOrder="25" btnFlag="U" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="22" btnName="Export Text Report" btnOrder="25" btnFlag="U" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="23" btnName="Reset" btnOrder="26" btnFlag="U" enableAll="Y" btnClass="reset" />
+	<BUTTON btnCode="24" btnName="Add New Policy" btnOrder="30" btnFlag="I" enableAll="Y" btnClass="addnew" />
+	<BUTTON btnCode="25" btnName="Add Exceptions" btnOrder="35" btnFlag="I" enableAll="Y" btnClass="addnew" />
+	<BUTTON btnCode="26" btnName="Finalize" btnOrder="36" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="27" btnName="Lock" btnOrder="19" btnFlag="I" enableAll="Y" btnClass="lock" />
+	<BUTTON btnCode="28" btnName="UnLock" btnOrder="20" btnFlag="I" enableAll="Y" btnClass="unlock" />
+	<BUTTON btnCode="29" btnName="Return To List" btnOrder="21" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="30" btnName="On Hold" btnOrder="21" btnFlag="V" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="31" btnName="Withdraw" btnOrder="23" btnFlag="V" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="32" btnName="Recalculate" btnOrder="37" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="33" btnName="Draft" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="save" />
+	<BUTTON btnCode="34" btnName="Publish" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="save" />
+	<BUTTON btnCode="35" btnName="Send Back" btnOrder="18" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="36" btnName="Send Unblocked Request" btnOrder="20" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="37" btnName="View Policy" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="38" btnName="Revise Application" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="39" btnName="Sign Off" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="40" btnName="Accept Sign Off" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="41" btnName="Add New Employee" btnOrder="3" btnFlag="I" enableAll="Y" btnClass="addnew" />
+	<BUTTON btnCode="42" btnName="Copy Formula" btnOrder="42" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="43" btnName="Send Mail To Previous Employer" btnOrder="39" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="44" btnName="Reject Sign Off" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="45" btnName="Verify and Send" btnOrder="10" btnFlag="V" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="46" btnName="Close" btnOrder="12" btnFlag="V" enableAll="Y" btnClass="cancel" />
+	<BUTTON btnCode="47" btnName="Send Credentials" btnOrder="39" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="48" btnName="Conduct" btnOrder="40" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="49" btnName="Submit Record" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="50" btnName="Resubmit Record" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="51" btnName="Process" btnOrder="1" btnFlag="V" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="52" btnName="Mail Report" btnOrder="1" btnFlag="V" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="53" btnName="Preview" btnOrder="1" btnFlag="V" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="54" btnName="Add Employee" btnOrder="1" btnFlag="V" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="55" btnName="UnLock" btnOrder="20" btnFlag="U" enableAll="Y" btnClass="edit" />
+</BUTTON_MASTER>

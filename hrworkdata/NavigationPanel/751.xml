@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NAVIGATION_PANEL>
+<TEMPLATE tempCode="1">
+	<MODE modeCode="1">
+		<BUTTON btnCode="1"/>
+		<BUTTON btnCode="2"/>
+		
+	</MODE>
+	<MODE modeCode="2">
+		<BUTTON btnCode="3"/>
+		<BUTTON btnCode="6"/>
+	</MODE>
+	<MODE modeCode="3">
+		<BUTTON btnCode="4"/>
+		<BUTTON btnCode="5"/>
+		<BUTTON btnCode="6"/>
+	</MODE>
+</TEMPLATE></NAVIGATION_PANEL>

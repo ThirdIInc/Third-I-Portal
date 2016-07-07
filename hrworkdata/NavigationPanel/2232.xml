@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NAVIGATION_PANEL>
+	<TEMPLATE templateName="MASTER_PAYROLL">
+		<MODE modeCode="1">
+		     <BUTTON btnCode="7" />
+		     <BUTTON btnCode="8" />
+		     <BUTTON btnCode="21" />
+		</MODE>
+	</TEMPLATE>
+</NAVIGATION_PANEL>

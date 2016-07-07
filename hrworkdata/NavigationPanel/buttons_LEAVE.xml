@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BUTTON_MASTER>
+	<BUTTON btnCode="1" btnName="Add Application" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="addnew" />
+	<BUTTON btnCode="2" btnName="Search" btnOrder="2" btnFlag="I" enableAll="Y" btnClass="search" />
+	<BUTTON btnCode="3" btnName="Draft" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="save" /> 
+	<BUTTON btnCode="4" btnName="Send for Approval" btnOrder="2" btnFlag="I" enableAll="Y" btnClass="token" /> 
+	<BUTTON btnCode="5" btnName="Delete" btnOrder="3" btnFlag="D" enableAll="Y" btnClass="delete" />
+	<BUTTON btnCode="6" btnName="Reset" btnOrder="4" btnFlag="U" enableAll="Y" btnClass="reset" />
+	<BUTTON btnCode="7" btnName="Back" btnOrder="7" btnFlag="U" enableAll="Y" btnClass="back" />
+	<BUTTON btnCode="8" btnName="Report" btnOrder="6" btnFlag="V" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="9" btnName="Cancel Application" btnOrder="1" btnFlag="U" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="10" btnName="View Records" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="11" btnName="Process" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="12" btnName="Save" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="save" />
+	<BUTTON btnCode="13" btnName="Lock" btnOrder="2" btnFlag="I" enableAll="N" btnClass="lock" />
+	<BUTTON btnCode="14" btnName="UnLock" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="unlock" />
+	<BUTTON btnCode="15" btnName="Add New" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="addnew" />
+	<BUTTON btnCode="16" btnName="Publish" btnOrder="8" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="17" btnName="Publish With Mail" btnOrder="9" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="18" btnName="Add Hrs Application" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="addnew" />
+	
+	<BUTTON btnCode="19" btnName="Approve" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="20" btnName="Reject" btnOrder="2" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="21" btnName="Send Back" btnOrder="3" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="22" btnName="Back" btnOrder="4" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="23" btnName="Mail to Vendor" btnOrder="4" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="24" btnName="Send Mail" btnOrder="6" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="25" btnName="Cancel" btnOrder="7" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="26" btnName="Bank Statement" btnOrder="6" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="27" btnName="Tax Challan" btnOrder="6" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="28" btnName="Withdrawn" btnOrder="1" btnFlag="U" enableAll="Y" btnClass="token"/>
+	<BUTTON btnCode="29" btnName="BackToList" btnOrder="4" btnFlag="U" enableAll="Y" btnClass="token"/>
+</BUTTON_MASTER>

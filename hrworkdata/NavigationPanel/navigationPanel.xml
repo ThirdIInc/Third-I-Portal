@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NAVIGATION_PANEL>
+	<FORM menuCode="740">
+		<TEMPLATE tempCode="1">
+			<MODE modeCode="1">
+				<BUTTON btnCode="1" />
+				<BUTTON btnCode="2" />
+			</MODE>
+			<MODE modeCode="2">
+				<BUTTON btnCode="3" />
+				<BUTTON btnCode="6" />
+			</MODE>
+			<MODE modeCode="3">
+				<BUTTON btnCode="4" />
+				<BUTTON btnCode="5" />
+				<BUTTON btnCode="6" />
+			</MODE>
+		</TEMPLATE>
+	</FORM>
+	<FORM menuCode="739">
+		<TEMPLATE tempCode="1">
+			<MODE modeCode="1">
+				<BUTTON btnCode="1" />
+				<BUTTON btnCode="2" />
+			</MODE>
+			<MODE modeCode="2">
+				<BUTTON btnCode="3" />
+				<BUTTON btnCode="6" />
+			</MODE>
+			<MODE modeCode="3">
+				<BUTTON btnCode="4" />
+				<BUTTON btnCode="5" />
+				<BUTTON btnCode="6" />
+			</MODE>
+		</TEMPLATE>
+	</FORM>
+	<FORM menuCode="26">
+		<TEMPLATE tempCode="1">
+			<MODE modeCode="1">
+				<BUTTON btnCode="1" />
+				<BUTTON btnCode="2" />
+			</MODE>
+			<MODE modeCode="2">
+				<BUTTON btnCode="3" />
+				<BUTTON btnCode="6" />
+			</MODE>
+			<MODE modeCode="3">
+				<BUTTON btnCode="4" />
+				<BUTTON btnCode="5" />
+				<BUTTON btnCode="6" />
+			</MODE>
+		</TEMPLATE>
+	</FORM>
+	<FORM menuCode="573">
+		<TEMPLATE tempCode="1">
+			<MODE modeCode="1">
+				<BUTTON btnCode="1" />
+				<BUTTON btnCode="2" />
+			</MODE>
+			<MODE modeCode="2">
+				<BUTTON btnCode="3" />
+				<BUTTON btnCode="6" />
+			</MODE>
+			<MODE modeCode="3">
+				<BUTTON btnCode="4" />
+				<BUTTON btnCode="5" />
+				<BUTTON btnCode="6" />
+			</MODE>
+		</TEMPLATE>
+	</FORM>	
+	<FORM menuCode="211">
+		<TEMPLATE tempCode="1">
+			<MODE modeCode="1">
+				<BUTTON btnCode="1" />
+				<BUTTON btnCode="2" />
+			</MODE>
+			<MODE modeCode="2">
+				<BUTTON btnCode="3" />
+				<BUTTON btnCode="6" />
+			</MODE>
+			<MODE modeCode="3">
+				<BUTTON btnCode="4" />
+				<BUTTON btnCode="5" />
+				<BUTTON btnCode="6" />
+			</MODE>
+		</TEMPLATE>
+	</FORM>
+	<FORM menuCode="741">
+		<TEMPLATE tempCode="1">
+			<MODE modeCode="1">
+				<BUTTON btnCode="1" />
+				<BUTTON btnCode="2" />
+			</MODE>
+			<MODE modeCode="2">
+				<BUTTON btnCode="3" />
+				<BUTTON btnCode="6" />
+			</MODE>
+			<MODE modeCode="3">
+				<BUTTON btnCode="4" />
+				<BUTTON btnCode="5" />
+				<BUTTON btnCode="6" />
+			</MODE>
+		</TEMPLATE>
+	</FORM>
+	<FORM menuCode="458">
+		<TEMPLATE tempCode="1">
+			<MODE modeCode="1">
+				<BUTTON btnCode="1" />
+				<BUTTON btnCode="2" />
+			</MODE>
+			<MODE modeCode="2">
+				<BUTTON btnCode="3" />
+				<BUTTON btnCode="6" />
+			</MODE>
+			<MODE modeCode="3">
+				<BUTTON btnCode="4" />
+				<BUTTON btnCode="5" />
+				<BUTTON btnCode="6" />
+			</MODE>
+		</TEMPLATE>
+	</FORM>
+	<FORM menuCode="459">
+		<TEMPLATE tempCode="1">
+			<MODE modeCode="1">
+				<BUTTON btnCode="1" />
+				<BUTTON btnCode="2" />
+			</MODE>
+			<MODE modeCode="2">
+				<BUTTON btnCode="3" />
+				<BUTTON btnCode="6" />
+			</MODE>
+			<MODE modeCode="3">
+				<BUTTON btnCode="4" />
+				<BUTTON btnCode="5" />
+				<BUTTON btnCode="6" />
+			</MODE>
+		</TEMPLATE>
+	</FORM>
+	<FORM menuCode="25">
+		<TEMPLATE tempCode="1">
+			<MODE modeCode="1">
+				<BUTTON btnCode="1" />
+				<BUTTON btnCode="2" />
+			</MODE>
+			<MODE modeCode="2">
+				<BUTTON btnCode="3" />
+				<BUTTON btnCode="6" />
+			</MODE>
+			<MODE modeCode="3">
+				<BUTTON btnCode="4" />
+				<BUTTON btnCode="5" />
+				<BUTTON btnCode="6" />
+			</MODE>
+		</TEMPLATE>
+	</FORM>
+</NAVIGATION_PANEL>

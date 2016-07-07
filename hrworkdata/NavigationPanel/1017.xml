@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NAVIGATION_PANEL>
+	<TEMPLATE templateName="RESIGN">
+			<MODE modeCode="1">
+				<BUTTON btnCode="1" nextMode="2" />
+				</MODE>
+			<MODE modeCode="2">
+				<BUTTON btnCode="3" nextMode="3" />
+				<BUTTON btnCode="4" nextMode="1" />
+				<BUTTON btnCode="6" nextMode="2" />
+				<BUTTON btnCode="7" nextMode="1" />
+			</MODE>
+			<MODE modeCode="3">
+				<BUTTON btnCode="3" nextMode="3" />
+				<BUTTON btnCode="4" nextMode="1" />
+				<BUTTON btnCode="5" nextMode="1" />
+				<BUTTON btnCode="6" nextMode="2" />
+				<BUTTON btnCode="7" nextMode="1" />
+			 </MODE>
+			 <MODE modeCode="4">
+				<BUTTON btnCode="8" nextMode="1" />
+				<BUTTON btnCode="7" nextMode="4" />
+			 </MODE>
+			 <MODE modeCode="5">
+				<BUTTON btnCode="7" nextMode="1" />
+			 </MODE>
+			 <MODE modeCode="6">
+				<BUTTON btnCode="3" nextMode="3" />
+				<BUTTON btnCode="4" nextMode="1" />
+				<BUTTON btnCode="5" nextMode="1" />
+				<BUTTON btnCode="6" nextMode="2" />
+				<BUTTON btnCode="7" nextMode="1" />
+			</MODE>
+			 <MODE modeCode="7">
+				</MODE>
+			</TEMPLATE>	
+</NAVIGATION_PANEL>

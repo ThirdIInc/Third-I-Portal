@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BUTTON_MASTER>
+	<BUTTON btnCode="1" btnName="Add Application" btnOrder="1"
+		btnFlag="I" enableAll="Y" btnClass="addnew" />
+	<BUTTON btnCode="2" btnName="Draft" btnOrder="1" btnFlag="I"
+		enableAll="Y" btnClass="save" />
+	<BUTTON btnCode="3" btnName="Send for Approval" btnOrder="2"
+		btnFlag="I" enableAll="N" btnClass="token" />
+	<BUTTON btnCode="4" btnName="Reset" btnOrder="3" btnFlag="U"
+		enableAll="Y" btnClass="reset" />
+	<BUTTON btnCode="5" btnName="Delete" btnOrder="3" btnFlag="D"
+		enableAll="N" btnClass="delete" />
+	<BUTTON btnCode="6" btnName="Back To List" btnOrder="15" btnFlag="U"
+		enableAll="N" btnClass="back" />
+	<BUTTON btnCode="7" btnName="Cancel Application" btnOrder="4"
+		btnFlag="U" enableAll="N" btnClass="cancel" />
+	<BUTTON btnCode="8" btnName="Approve" btnOrder="1" btnFlag="I"
+		enableAll="N" btnClass="token" />
+	<BUTTON btnCode="9" btnName="Reject" btnOrder="3" btnFlag="I"
+		enableAll="N" btnClass="token" />
+	<BUTTON btnCode="10" btnName="Send Back" btnOrder="4" btnFlag="I"
+		enableAll="N" btnClass="token" />
+	<BUTTON btnCode="11" btnName="Close" btnOrder="5" btnFlag="I"
+		enableAll="N" btnClass="cancel" />
+	<BUTTON btnCode="12" btnName="Edit" btnOrder="1" btnFlag="U"
+		enableAll="Y" btnClass="edit" />
+	<BUTTON btnCode="13" btnName="Cancel" btnOrder="4" btnFlag="D"
+		enableAll="N" btnClass="cancel" />
+	<BUTTON btnCode="14" btnName="Add New" btnOrder="1" btnFlag="I"
+		enableAll="Y" btnClass="addnew" />
+	<BUTTON btnCode="15" btnName="Search" btnOrder="2" btnFlag="I"
+		enableAll="Y" btnClass="search" />
+	<BUTTON btnCode="16" btnName="Save" btnOrder="1" btnFlag="U"
+		enableAll="N" btnClass="save" />
+	<BUTTON btnCode="17" btnName="Submit Application" btnOrder="2"
+		btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="18" btnName="ReSubmit Application" btnOrder="2"
+		btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="19" btnName="Finalize" btnOrder="6" btnFlag="I"
+		enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="20" btnName="Forward" btnOrder="5" btnFlag="I"
+		enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="21" btnName="Save and Next" btnOrder="11"
+		btnFlag="V" enableAll="Y" btnClass="next" />
+	<BUTTON btnCode="22" btnName="Save and Previous" btnOrder="10"
+		btnFlag="U" enableAll="Y" btnClass="back" />
+	<BUTTON btnCode="23" btnName="Next" btnOrder="12" btnFlag="V"
+		enableAll="Y" btnClass="next" />
+	<BUTTON btnCode="24" btnName="Authorized Sign Off" btnOrder="1"
+		btnFlag="I" enableAll="N" btnClass="token" />
+	<BUTTON btnCode="25" btnName="Feedback" btnOrder="1" btnFlag="I"
+		enableAll="N" btnClass="token" />
+	<BUTTON btnCode="26" btnName="  Print" btnOrder="16" btnFlag="I"
+		enableAll="N" btnClass="token" />
+	<BUTTON btnCode="27" btnName="Closed Ticket" btnOrder="14"
+		btnFlag="I" enableAll="N" btnClass="token" />
+	<BUTTON btnCode="28" btnName="Add Project" btnOrder="1"
+		btnFlag="I" enableAll="Y" btnClass="addnew" />
+	<BUTTON btnCode="29" btnName="Close Project" btnOrder="5" btnFlag="I"
+		enableAll="N" btnClass="cancel" />	
+		
+		
+	<BUTTON btnCode="30" btnName="Approve and Close" btnOrder="2" btnFlag="I"
+		enableAll="N" btnClass="token" />
+	<BUTTON btnCode="31" btnName="Approve and Forward" btnOrder="1" btnFlag="I"
+		enableAll="N" btnClass="token" />	
+	<BUTTON btnCode="32" btnName="Close Activity" btnOrder="1" btnFlag="I"
+		enableAll="N" btnClass="token" />		
+	<BUTTON btnCode="33" btnName="Reopen" btnOrder="2" btnFlag="I"
+		enableAll="N" btnClass="token" />		
+		
+		
+</BUTTON_MASTER>

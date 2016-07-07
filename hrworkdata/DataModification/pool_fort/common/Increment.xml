@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA name="IncrementType"><OPTION name="Annual Increment" value="1" active="Y"/><OPTION name="Special Increment" value="2" active="Y"/><OPTION name="Sports Increment" value="3" active="Y"/><OPTION name="Deduction" value="4" active="Y"/></DATA>

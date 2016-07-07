@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NAVIGATION_PANEL>
+	<TEMPLATE templateName="HELPDESK">
+			<MODE modeCode="1">
+				<BUTTON btnCode="19" nextMode="2" />
+				</MODE>
+			<MODE modeCode="2">
+				<BUTTON btnCode="14" nextMode="3" />
+				<BUTTON btnCode="15" nextMode="1" />
+				<BUTTON btnCode="7" nextMode="2" />
+				<BUTTON btnCode="6" nextMode="1" />
+			</MODE>
+			<MODE modeCode="3">
+				<BUTTON btnCode="6" nextMode="1" />
+			 </MODE>
+			 <MODE modeCode="4">
+				<BUTTON btnCode="6" nextMode="1" />
+				<BUTTON btnCode="16" nextMode="1" />
+				<BUTTON btnCode="17" nextMode="1" />
+			 </MODE>
+			 <MODE modeCode="5">
+				<BUTTON btnCode="6" nextMode="1" />
+				<BUTTON btnCode="17" nextMode="1" />
+			 </MODE>
+			
+			 
+		</TEMPLATE>	
+</NAVIGATION_PANEL>

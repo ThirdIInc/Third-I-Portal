@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NAVIGATION_PANEL>
+	<TEMPLATE tempCode="1">
+			<MODE modeCode="1">
+				<BUTTON btnCode="19" />
+				<BUTTON btnCode="20" />
+			</MODE>
+			</TEMPLATE>	
+</NAVIGATION_PANEL>

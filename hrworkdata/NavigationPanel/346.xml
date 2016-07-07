@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NAVIGATION_PANEL>
+	<TEMPLATE tempCode="1">
+			<MODE modeCode="1">
+				<BUTTON btnCode="1" />
+				<BUTTON btnCode="2" />
+			</MODE>
+			<MODE modeCode="2">
+				<BUTTON btnCode="3" />
+				<BUTTON btnCode="6" />
+				<BUTTON btnCode="10" />
+			</MODE>
+			<MODE modeCode="3">
+				<BUTTON btnCode="4" />
+				<BUTTON btnCode="5" />
+				<BUTTON btnCode="6" />
+				<BUTTON btnCode="8" />
+			</MODE>
+			<MODE modeCode="4">
+				<BUTTON btnCode="4" />
+				<BUTTON btnCode="5" />
+				<BUTTON btnCode="6" />
+				<BUTTON btnCode="9" />
+			</MODE>
+			<MODE modeCode="5">
+				<BUTTON btnCode="4" />
+				<BUTTON btnCode="5" />
+				<BUTTON btnCode="6" />
+				<BUTTON btnCode="7" />
+				<BUTTON btnCode="9" />
+			</MODE>
+			<MODE modeCode="6">
+				<BUTTON btnCode="3" />
+				<BUTTON btnCode="5" />
+				<BUTTON btnCode="6" />
+				<BUTTON btnCode="7" />
+				<BUTTON btnCode="9" />
+			</MODE>
+			<MODE modeCode="7">
+				<BUTTON btnCode="3" />
+				<BUTTON btnCode="6" />
+				<BUTTON btnCode="11" />
+			</MODE>
+			
+			<MODE modeCode="8">
+				<BUTTON btnCode="8" />
+				<BUTTON btnCode="46" />
+			</MODE>
+			
+			<MODE modeCode="9">
+				<BUTTON btnCode="9" />
+				<BUTTON btnCode="46" />
+			</MODE>
+			
+		</TEMPLATE>
+</NAVIGATION_PANEL>

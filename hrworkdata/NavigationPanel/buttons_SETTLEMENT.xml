@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BUTTON_MASTER>
+	<BUTTON btnCode="1" btnName=" Save" btnOrder="3" btnFlag="I" enableAll="Y" btnClass="save" />
+	<BUTTON btnCode="2" btnName="  Save and Next" btnOrder="4" btnFlag="I" enableAll="Y" btnClass="saveandnext" />
+	<BUTTON btnCode="3" btnName="Save and Previous" btnOrder="2" btnFlag="I"  enableAll="Y" btnClass="saveandprevious" />
+	<BUTTON btnCode="4" btnName=" Next" btnOrder="5" btnFlag="V" enableAll="Y" btnClass="next" />
+	<BUTTON btnCode="5" btnName="  Previous" btnOrder="1" btnFlag="V"  enableAll="Y" btnClass="previous" />
+	<BUTTON btnCode="6" btnName="Save and Calculate" btnOrder="3" btnFlag="I"  enableAll="Y" btnClass="save" />
+	<BUTTON btnCode="7" btnName="Finalize" btnOrder="7" btnFlag="I" enableAll="N" btnClass="token" />
+	<BUTTON btnCode="11" btnName="Delete" btnOrder="6" btnFlag="I" enableAll="Y" btnClass="delete" />
+	<BUTTON btnCode="8" btnName="Report" btnOrder="8" btnFlag="V" enableAll="Y" btnClass="token" /> 
+	<BUTTON btnCode="9" btnName="Lock" btnOrder="9" btnFlag="I" enableAll="Y" btnClass="lock" />
+	<BUTTON btnCode="10" btnName="UnLock" btnOrder="10" btnFlag="I" enableAll="Y" btnClass="unlock" />
+    <BUTTON btnCode="12" btnName="Search" btnOrder="12" btnFlag="V" enableAll="Y" btnClass="search" />
+</BUTTON_MASTER>

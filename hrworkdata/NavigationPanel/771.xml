@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NAVIGATION_PANEL>
+	<TEMPLATE tempCode="1">
+		<MODE modeCode="1">
+			<BUTTON btnCode="1" nextMode="9" />
+			<BUTTON btnCode="2" nextMode="9" />
+		</MODE>
+		<MODE modeCode="2"> 
+			<BUTTON btnCode="6" nextMode="9" /> 
+			<BUTTON btnCode="8" nextMode="9" /> 
+		</MODE>
+		<MODE modeCode="3"> 
+			<BUTTON btnCode="8" nextMode="9" />  
+			<BUTTON btnCode="9" nextMode="9" />
+			<BUTTON btnCode="6" nextMode="9" /> 
+		</MODE>
+		<MODE modeCode="4"> 
+			<BUTTON btnCode="3" nextMode="9" /> 
+			<BUTTON btnCode="9" nextMode="9" />
+			<BUTTON btnCode="6" nextMode="9" />  
+		</MODE> 
+		<MODE modeCode="5">  
+			<BUTTON btnCode="4" nextMode="9" />
+			<BUTTON btnCode="5" nextMode="9" /> 
+			<BUTTON btnCode="8" nextMode="9" />
+			<BUTTON btnCode="29" nextMode="1" /> 
+		</MODE>
+
+		<MODE modeCode="6">  
+			<BUTTON btnCode="4" nextMode="9" />
+			<BUTTON btnCode="5" nextMode="9" /> 
+			<BUTTON btnCode="8" nextMode="9" />
+			<BUTTON btnCode="9" nextMode="9" />
+			<BUTTON btnCode="29" nextMode="1" /> 
+		</MODE>
+
+		<MODE modeCode="7">  
+			<BUTTON btnCode="4" nextMode="9" />
+			<BUTTON btnCode="5" nextMode="9" />  
+			<BUTTON btnCode="9" nextMode="9" />
+			<BUTTON btnCode="29" nextMode="1" /> 
+		</MODE>
+		
+		<MODE modeCode="8">  
+			<BUTTON btnCode="3" nextMode="9" />
+			<BUTTON btnCode="10" nextMode="9" />  
+			<BUTTON btnCode="29" nextMode="1" /> 
+		</MODE>
+			<MODE modeCode="9"> 
+			<BUTTON btnCode="3" nextMode="9" />
+			<BUTTON btnCode="11" nextMode="9" />
+			<BUTTON btnCode="10" nextMode="10"   />  
+			<BUTTON btnCode="29" nextMode="1" /> 
+		   </MODE>
+		   <MODE modeCode="10"> 
+			<BUTTON btnCode="3" nextMode="9"/>
+			<BUTTON btnCode="11" nextMode="9" />
+			<BUTTON btnCode="29" nextMode="1" /> 
+		   </MODE>
+		   <MODE modeCode="11"> 
+			<BUTTON btnCode="4" nextMode="9" />
+			<BUTTON btnCode="9" nextMode="9" /> 
+			<BUTTON btnCode="8" nextMode="9" /> 
+			<BUTTON btnCode="29" nextMode="9" /> 
+		   </MODE>
+		   <MODE modeCode="12"> 
+			<BUTTON btnCode="29" nextMode="9" />
+			<BUTTON btnCode="9" nextMode="9" /> 
+			<BUTTON btnCode="4" nextMode="9" /> 
+		   </MODE>
+		   <MODE modeCode="13"> 
+			<BUTTON btnCode="29" nextMode="9"/>
+			<BUTTON btnCode="8" nextMode="9"/>
+			<BUTTON btnCode="9" nextMode="9" /> 
+			<BUTTON btnCode="4" nextMode="9" />
+		   </MODE>
+	</TEMPLATE>
+</NAVIGATION_PANEL>

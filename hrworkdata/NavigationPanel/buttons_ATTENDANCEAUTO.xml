@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BUTTON_MASTER>
+	<BUTTON btnCode="1" btnName="Add New" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="addnew" />
+	<BUTTON btnCode="2" btnName="Search" btnOrder="2" btnFlag="V" enableAll="N" btnClass="search" />
+	<BUTTON btnCode="3" btnName="Save" btnOrder="1" btnFlag="U" enableAll="N" btnClass="save" />
+	<BUTTON btnCode="4" btnName="Edit" btnOrder="1" btnFlag="U" enableAll="Y" btnClass="edit" />
+	<BUTTON btnCode="5" btnName="Delete" btnOrder="2" btnFlag="D" enableAll="N" btnClass="delete" />
+	<BUTTON btnCode="6" btnName="Back" btnOrder="3" btnFlag="D" enableAll="N" btnClass="back" />
+	<BUTTON btnCode="7" btnName="Reset" btnOrder="2" btnFlag="U" enableAll="Y" btnClass="reset" />
+	<BUTTON btnCode="8" btnName="Report" btnOrder="3" btnFlag="V" enableAll="N" btnClass="token" />
+	<BUTTON btnCode="9" btnName="Start Scheduling" btnOrder="4" btnFlag="V" enableAll="N" btnClass="token" />
+	<BUTTON btnCode="10" btnName="Stop Scheduling" btnOrder="4" btnFlag="V" enableAll="N" btnClass="token" />
+</BUTTON_MASTER>

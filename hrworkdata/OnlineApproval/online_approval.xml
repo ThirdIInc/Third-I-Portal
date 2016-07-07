@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ORGANISATION>
+
+	<ProbationConfirmationAppl>
+		<PARAM MODEL="org.paradyne.model.probation.ProbationConfirmationModel"
+			METHOD="onlineApproveRejectSendBackAppl" NO_OF_PARAM="6" />
+	</ProbationConfirmationAppl>
+
+	<AssetAssignAppl>
+		<PARAM MODEL="org.paradyne.model.Asset.AssetApprovalModel"
+			METHOD="onlineApproveRejectSendBackAppl" NO_OF_PARAM="6" />
+	</AssetAssignAppl>
+
+	<PurchaseOrderAppl>
+		<PARAM MODEL="org.paradyne.model.Asset.PurchaseApprovalModel"
+			METHOD="onlineApproveRejectSendBackAppl" NO_OF_PARAM="6" />
+	</PurchaseOrderAppl>
+	
+	<AssetAppl>
+		<PARAM MODEL="org.paradyne.model.Asset.AssetApprovalModel"
+			METHOD="onlineApproveRejectSendBackAppl" NO_OF_PARAM="6" />
+	</AssetAppl>
+	
+	
+	<!-- updated by Prajakta for leave Admin Panel -->
+	<LeaveAppl>
+		<PARAM MODEL="org.paradyne.model.leave.LeaveApprovalModel"
+			METHOD="onlineApproveReject" NO_OF_PARAM="7" />
+	</LeaveAppl>
+	
+	<LeaveCancelAppl>
+		<PARAM MODEL="org.paradyne.model.leave.LeaveApprovalModel"
+			METHOD="onlineApproveRejectForCancellation" NO_OF_PARAM="7" />
+	</LeaveCancelAppl>
+	<!-- ends updated by Prajakta for leave Admin Panel -->
+	<SuggestionAppl>
+		<PARAM
+			MODEL="org.paradyne.model.settings.SuggestionApprovalModel"
+			METHOD="onlineApproveReject" NO_OF_PARAM="6" />
+	</SuggestionAppl>
+	<Travel>
+		<PARAM
+			MODEL="org.paradyne.model.TravelManagement.TravelProcess.TmsTrvlApprovalModel"
+			METHOD="onlineApproveReject" NO_OF_PARAM="5" />
+	</Travel>
+
+	<!-- ADDED BY REEBA BEGINS -->
+	<TravelAppl>
+		<PARAM
+			MODEL="org.paradyne.model.TravelManagement.TravelProcess.TmsTrvlApprovalModel"
+			METHOD="onlineApproveRejectSendBackAppl" NO_OF_PARAM="6" />
+	</TravelAppl>
+	<!-- ADDED BY REEBA ENDS -->
+
+	<TravelClaim>
+		<PARAM
+			MODEL="org.paradyne.model.TravelManagement.TravelClaim.TmsTrvlClmApprovalModel"
+			METHOD="onlineApproveReject" NO_OF_PARAM="6" />
+	</TravelClaim>
+
+	<TravelClaimUnblock>
+		<PARAM
+			MODEL="org.paradyne.model.TravelManagement.TravelClaim.TmsTrvlClmApprovalModel"
+			METHOD="onlineUnblockRejectRequest" NO_OF_PARAM="7" />
+	</TravelClaimUnblock>
+
+	<TravelClaimAdmin>
+		<PARAM
+			MODEL="org.paradyne.model.TravelManagement.TravelClaim.TmsTrvlClmAdminApprovalModel"
+			METHOD="onlineAdminApproveReject" NO_OF_PARAM="7" />
+	</TravelClaimAdmin>
+
+	<Recruitment>
+		<PARAM
+			MODEL="org.paradyne.model.recruitment.RequisitionApprovalModel"
+			METHOD="onlineApproveReject" NO_OF_PARAM="6" />
+	</Recruitment>
+	<ExtraWorkAppl>
+		<PARAM
+			MODEL="org.paradyne.model.extraWorkBenefits.ExtraWorkApprovalModel"
+			METHOD="onlineApproveReject" NO_OF_PARAM="6" />
+	</ExtraWorkAppl>
+
+
+	<Regularization>
+		<PARAM
+			MODEL="org.paradyne.model.leave.RegularizationApprovalModel"
+			METHOD="onlineApproveRejectPTAppl" NO_OF_PARAM="5" />
+	</Regularization>
+
+	<RedressalRegularization>
+		<PARAM
+			MODEL="org.paradyne.model.leave.RegularizationApprovalModel"
+			METHOD="OnlineApproveRejectRedressal" NO_OF_PARAM="5" />
+	</RedressalRegularization>
+
+	<SwipeRegularization>
+		<PARAM
+			MODEL="org.paradyne.model.leave.RegularizationApprovalModel"
+			METHOD="onlineApproveRejectSwipe" NO_OF_PARAM="5" />
+	</SwipeRegularization>
+
+	<LateRegularization>
+		<PARAM
+			MODEL="org.paradyne.model.leave.RegularizationApprovalModel"
+			METHOD="onlineApproveRejectLate" NO_OF_PARAM="5" />
+	</LateRegularization>
+	
+	
+	<WorkersInjury>
+		<PARAM
+			MODEL="org.paradyne.model.D1.WorkersCompInjuryApprModel"
+			METHOD="check" NO_OF_PARAM="5" />
+	</WorkersInjury>
+	
+		<ExpenseRequest>
+		<PARAM
+			MODEL="org.paradyne.model.D1.ExpenseApprovalRegModel"
+			METHOD="approve" NO_OF_PARAM="7" />
+	</ExpenseRequest>
+
+	<ConferenceAppl>
+		<PARAM
+			MODEL="org.paradyne.model.conference.ConferenceBookingApprovalModel"
+			METHOD="onlineApproveReject" NO_OF_PARAM="6" />
+	</ConferenceAppl>
+
+	<ReimbursementMgr>
+		<PARAM
+			MODEL="org.paradyne.model.reimbursement.ReimbManagerApprovalModel"
+			METHOD="onlineApproveReject" NO_OF_PARAM="9" />
+	</ReimbursementMgr>
+
+	<!-- Added by Prashant begins -->
+	<HelpdeskSubmission>
+		<PARAM MODEL="org.paradyne.model.helpdesk.HelpDeskAppModel"
+			METHOD="onlineApproveRejectSendBack" NO_OF_PARAM="11" />
+	</HelpdeskSubmission>
+	<!-- Added by Prashant ends -->
+	
+	<!-- Added by manish sakpal begins -->
+	<OutDoorOnline>
+		<PARAM MODEL="org.paradyne.model.attendance.OutdoorApprovalModel"
+			METHOD="onlineApproveRejectSendBack" NO_OF_PARAM="6" />
+	</OutDoorOnline>
+	
+	<OfferLetterDetails>
+		<PARAM MODEL="org.paradyne.model.recruitment.OfferDetailsModel"
+			METHOD="onlineAcceptRejectOffer" NO_OF_PARAM="5" />
+	</OfferLetterDetails>
+	
+	<AppointmentLetterDetails>
+		<PARAM MODEL="org.paradyne.model.recruitment.AppointmentDetailsModel"
+			METHOD="onlineAcceptRejectAppointment" NO_OF_PARAM="5" />
+	</AppointmentLetterDetails>
+	
+	
+	<CandidateScreeningApproval>
+		<PARAM MODEL="org.paradyne.model.recruitment.PostResumeModel"
+			METHOD="onlineApproveRejectSendBackAppl" NO_OF_PARAM="6" />
+	</CandidateScreeningApproval>
+	
+	<OffetLetterSigningAuthorityApproval>
+		<PARAM MODEL="org.paradyne.model.recruitment.OfferApprovalModel"
+			METHOD="onlineApproveRejectOffer" NO_OF_PARAM="6" />
+	</OffetLetterSigningAuthorityApproval>
+	
+	<AppointmentLetterSigningAuthorityApproval>
+		<PARAM MODEL="org.paradyne.model.recruitment.OfferApprovalModel"
+			METHOD="onlineApproveRejectAppointment" NO_OF_PARAM="6" />
+	</AppointmentLetterSigningAuthorityApproval>
+	
+	<!-- Added by manish sakpal ends -->
+	
+	<CashVoucherApp>
+		<PARAM MODEL="org.paradyne.model.voucher.CashVoucherModel"
+			METHOD="onlineApproveRejectSendBackAppl" NO_OF_PARAM="1" />
+	</CashVoucherApp>
+	
+	<CashVoucherApprover>
+		<PARAM MODEL="org.paradyne.model.voucher.VoucherApprovalModel"
+			METHOD="onlineApproveRejectSendBackAppl" NO_OF_PARAM="1" />
+	</CashVoucherApprover>
+	
+	<EmployeeCardInfoAppl>
+		<PARAM MODEL="org.paradyne.model.employeeCardInfo.EmployeeCardInfoModel"
+			METHOD="onlineApproveRejectSendBack" NO_OF_PARAM="6" />
+	</EmployeeCardInfoAppl>
+	
+	<BusinessCardInfoAppl>
+		<PARAM MODEL="org.paradyne.model.businessCardInfo.BusinessCardInfoModel"
+			METHOD="onlineApproveRejectSendBack" NO_OF_PARAM="9" />
+	</BusinessCardInfoAppl>
+	
+	<!-- Added By Archana For Vendor Invoice -->
+	<VendorInvoiceAppl>
+		<PARAM MODEL="org.paradyne.model.vendor.PartnerInvoiceApprovalModel"
+			METHOD="onlineApproveReject" NO_OF_PARAM="6" />
+	</VendorInvoiceAppl>
+	<!-- Added By Archana Ends -->
+
+</ORGANISATION>

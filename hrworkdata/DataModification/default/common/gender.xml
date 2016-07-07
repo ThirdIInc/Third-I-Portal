@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA name="gender">
+<OPTION name="Female" value="F" active="Y"/>
+<OPTION name="Male" value="M" active="Y"/>
+<OPTION name="Others" value="O" active="Y"/></DATA>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NAVIGATION_PANEL>
+	<TEMPLATE  templateName="D1INTEGRATION">
+		<MODE modeCode="1">
+			<BUTTON btnCode="9"/>
+			<BUTTON btnCode="10"/>
+			<BUTTON btnCode="20"/>
+			<BUTTON btnCode="24"/>
+			<BUTTON btnCode="6"/>
+			<BUTTON btnCode="26"/>
+		</MODE>
+		
+		<MODE modeCode="2">
+			<BUTTON btnCode="8"/>					
+			<BUTTON btnCode="9"/>
+			<BUTTON btnCode="10"/>
+			<BUTTON btnCode="6"/>
+			<BUTTON btnCode="26"/>
+		</MODE>
+		
+		<MODE modeCode="3">
+			<BUTTON btnCode="6"/>
+			<BUTTON btnCode="26"/>
+		</MODE>
+		
+		<MODE modeCode="4">
+			<BUTTON btnCode="9"/>
+			<BUTTON btnCode="10"/>
+			<BUTTON btnCode="24"/>
+			<BUTTON btnCode="6"/>
+			<BUTTON btnCode="26"/>
+		</MODE>
+		
+		<MODE modeCode="5">
+			<BUTTON btnCode="20"/>					
+			<BUTTON btnCode="9"/>
+			<BUTTON btnCode="10"/>
+			<BUTTON btnCode="6"/>
+			<BUTTON btnCode="26"/>
+		</MODE>
+	</TEMPLATE>
+</NAVIGATION_PANEL>		

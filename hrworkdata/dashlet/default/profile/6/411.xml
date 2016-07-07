@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<APPLICATIONSTUDIO>
+	<DASHLET name="HOME" rows="2" columns="2" width="66,33">
+		<HOME code="7" rowId="1" columnId="1"/>
+		<HOME code="8" rowId="1" columnId="2"/>
+		<HOME code="15" rowId="2" columnId="1"/>
+		<HOME code="16" rowId="2" columnId="2"/>
+	</DASHLET>
+</APPLICATIONSTUDIO>

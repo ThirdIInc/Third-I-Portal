@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NAVIGATION_PANEL>
+	<TEMPLATE templateName="CONFERENCE">
+			<MODE modeCode="1">
+				<BUTTON btnCode="1" nextMode="2" />
+				</MODE>
+			<MODE modeCode="2">
+				<BUTTON btnCode="3" nextMode="3" />
+				<BUTTON btnCode="4" nextMode="1" />
+				<BUTTON btnCode="6" nextMode="2" />
+				<BUTTON btnCode="7" nextMode="1" />
+			</MODE>
+			<MODE modeCode="3">
+				<BUTTON btnCode="3" nextMode="3" />
+				<BUTTON btnCode="4" nextMode="1" />
+				<BUTTON btnCode="5" nextMode="1" />
+				<BUTTON btnCode="6" nextMode="2" />
+				<BUTTON btnCode="7" nextMode="1" />
+			 </MODE>
+			 <MODE modeCode="4">
+				<BUTTON btnCode="9" nextMode="1" />
+				<BUTTON btnCode="8" nextMode="1" />
+				<BUTTON btnCode="7" nextMode="4" />
+			 </MODE>
+			  <MODE modeCode="5">
+				<BUTTON btnCode="4" nextMode="1" />
+				<BUTTON btnCode="7" nextMode="1" />
+				<BUTTON btnCode="8" nextMode="6" />
+			 </MODE>
+			 <!-- APPLICATION-APPROVED/REJECTED LIST-->
+			 <MODE modeCode="6">
+				<BUTTON btnCode="7" nextMode="1" />
+				<BUTTON btnCode="8" nextMode="6" />
+			 </MODE>
+			 <MODE modeCode="7">
+				<BUTTON btnCode="3" nextMode="3" />
+				<BUTTON btnCode="4" nextMode="1" />
+				<BUTTON btnCode="5" nextMode="1" />
+				<BUTTON btnCode="6" nextMode="2" />
+				<BUTTON btnCode="7" nextMode="1" />
+			</MODE>
+			 <!-- APPROVAL-PENDING LIST-->
+			 <MODE modeCode="8">
+				<BUTTON btnCode="10" nextMode="1" />
+				<BUTTON btnCode="11" nextMode="1" />
+				<BUTTON btnCode="12" nextMode="1" />
+				<BUTTON btnCode="13" nextMode="1" />
+			</MODE>
+			 <!-- APPROVAL-APPROVED/REJECTED LIST-->
+			 <MODE modeCode="9">
+				<BUTTON btnCode="13" nextMode="1" />
+			</MODE>
+			<MODE modeCode="10">				
+			</MODE>
+			<MODE modeCode="11">				
+				<BUTTON btnCode="18" nextMode="6"/>
+				<BUTTON btnCode="13" nextMode="1"/>
+			</MODE>
+		</TEMPLATE>	
+</NAVIGATION_PANEL>

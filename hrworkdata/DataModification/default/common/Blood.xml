@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DATA name="Blood Group">
+<OPTION name="A+" value="A+" active="Y"/>
+<OPTION name="A-"  value="A-" active="Y"/>
+<OPTION name="B+" value="B+" active="Y"/>
+<OPTION name="B-" value="B-" active="Y"/>
+<OPTION name="AB+" value="AB+" active="Y"/>
+<OPTION name="AB-" value="AB-" active="Y"/>
+<OPTION name="O+" value="O+" active="Y"/>
+<OPTION name="O-" value="O-" active="Y"/>
+</DATA>

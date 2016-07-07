@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NAVIGATION_PANEL>
+
+<TEMPLATE templateName="MASTER_PAYROLL">
+<MODE modeCode="1">
+	<BUTTON btnCode="1" />
+	<BUTTON btnCode="2" />
+</MODE>
+<MODE modeCode="2">
+	
+	<BUTTON btnCode="14" />
+	
+</MODE>
+<MODE modeCode="3">
+		<BUTTON btnCode="17"/>
+			<BUTTON btnCode="15"/>
+			<BUTTON btnCode="7"/>
+			<BUTTON btnCode="14"/>
+</MODE>
+
+<MODE modeCode="4">
+		<BUTTON btnCode="18"/>
+			<BUTTON btnCode="19"/>
+			<BUTTON btnCode="20"/>
+			<BUTTON btnCode="14"/>
+</MODE>
+<MODE modeCode="5">
+	<BUTTON btnCode="3" />
+	<BUTTON btnCode="14" />
+	
+</MODE>
+
+</TEMPLATE>
+</NAVIGATION_PANEL>

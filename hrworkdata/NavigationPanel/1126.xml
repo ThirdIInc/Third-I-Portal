@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NAVIGATION_PANEL>
+	<TEMPLATE templateName="MASTER_PAYROLL">
+	<!-- Approve, Reject, Send Back & Back -->
+		<MODE modeCode="1">
+		     <BUTTON btnCode="18" />
+		     <BUTTON btnCode="19" />
+		     <BUTTON btnCode="20" />
+		     <BUTTON btnCode="6" />
+		</MODE>
+		<MODE modeCode="2">
+		     <BUTTON btnCode="6" />
+		</MODE>
+		<MODE modeCode="3">
+		     <BUTTON btnCode="18" />
+		     <BUTTON btnCode="19" />
+		     <BUTTON btnCode="20" />
+		     <BUTTON btnCode="6" />
+		</MODE>
+	</TEMPLATE>
+</NAVIGATION_PANEL>

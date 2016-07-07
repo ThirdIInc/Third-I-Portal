@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA name="Marriage Status">
+<OPTION name="Married" value="M" active="Y"/>
+<OPTION name="UnMarried" value="U" active="Y"/>
+<OPTION name="Widow" value="W" active="Y"/>
+<OPTION name="Widower" value="A" active="Y"/>
+<OPTION name="Divorce" value="D" active="Y"/></DATA>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BUTTON_MASTER>
+	<BUTTON btnCode="1" btnName="Add New" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="addnew" />
+	<BUTTON btnCode="2" btnName="Search" btnOrder="2" btnFlag="V" enableAll="N" btnClass="search" />
+	<BUTTON btnCode="3" btnName="Save" btnOrder="1" btnFlag="U"  enableAll="N" btnClass="save" />
+	<BUTTON btnCode="4" btnName="Edit" btnOrder="1" btnFlag="U" enableAll="Y" btnClass="edit" />
+	<BUTTON btnCode="5" btnName="Delete" btnOrder="2" btnFlag="D"  enableAll="N" btnClass="delete" />
+	<BUTTON btnCode="6" btnName="Cancel" btnOrder="3" btnFlag="D"  enableAll="N" btnClass="cancel" />
+	<BUTTON btnCode="7" btnName="Reset" btnOrder="2" btnFlag="U" enableAll="Y" btnClass="reset" />
+	<BUTTON btnCode="8" btnName="Report" btnOrder="3" btnFlag="V" enableAll="N" btnClass="token" /> 
+	<BUTTON btnCode="9" btnName="Acceptance Letter" btnOrder="4" btnFlag="V" enableAll="N" btnClass="token" />
+	<BUTTON btnCode="10" btnName="No Dues Form" btnOrder="5" btnFlag="U" enableAll="N" btnClass="token" />
+	<BUTTON btnCode="11" btnName="Lock" btnOrder="3" btnFlag="U" enableAll="N" btnClass="lock" />
+	<BUTTON btnCode="12" btnName="Unlock" btnOrder="4" btnFlag="U" enableAll="Y" btnClass="unlock" />
+	<BUTTON btnCode="13" btnName="Back" btnOrder="4" btnFlag="U" enableAll="Y" btnClass="token" />
+</BUTTON_MASTER>

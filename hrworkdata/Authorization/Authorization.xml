@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG_AUTHORIZATION>
+	<MODULE moduleId="1" moduleName="Attendance Process" />
+	<MODULE moduleId="2" moduleName="Promotion" />
+	<MODULE moduleId="3" moduleName="Promotion Arrears" />
+	<MODULE moduleId="4" moduleName="Settlement" />
+	<MODULE moduleId="5" moduleName="Probation" />
+	<MODULE moduleId="6" moduleName="Extra Working Benefit" />
+	<MODULE moduleId="7" moduleName="Salary Process" />
+	<MODULE moduleId="8" moduleName="Bonus" />
+	<MODULE moduleId="9" moduleName="OT Calculation" />
+</CONFIG_AUTHORIZATION>

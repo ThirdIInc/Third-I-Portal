@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BUTTON_MASTER>
+	<BUTTON btnCode="1" btnName="Add New" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="addnew" />
+	<BUTTON btnCode="2" btnName="Draft" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="save" />
+	<BUTTON btnCode="3" btnName="Back" btnOrder="9" btnFlag="V" enableAll="Y" btnClass="back" />
+	<BUTTON btnCode="4" btnName="Send For Approval" btnOrder="6" btnFlag="V" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="5" btnName="View Policy" btnOrder="1" btnFlag="I" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="6" btnName="Delete" btnOrder="5" btnFlag="D" enableAll="Y" btnClass="delete" />
+	<BUTTON btnCode="7" btnName="Report" btnOrder="17" btnFlag="V" enableAll="N" btnClass="token" />
+	<BUTTON btnCode="8" btnName="Revoke" btnOrder="17" btnFlag="V" enableAll="Y" btnClass="token" />
+	<BUTTON btnCode="9" btnName="View Booking Details" btnOrder="17" btnFlag="V" enableAll="N" btnClass="token" />
+</BUTTON_MASTER>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HRHOME><COMMUNICATION name="GENERAL"><Link id="1" name="Birthday List" value="/pims/srd/Birthday_report.action"/><Link id="2" name="New Joinee" value="/pims/srd/NewJoinees_report.action"/><Link id="3" name="Holiday" value="/pims/srd/Holiday_holidayList.action"/><Link id="4" name="Resigned List" value="/pims/settlement/ResignationEmpList_resignEmployeeList.action"/><Link id="5" name="Quick Contacts" value="/pims/srd/NewJoinees_report.action"/></COMMUNICATION></HRHOME>
