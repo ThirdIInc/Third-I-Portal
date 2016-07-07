@@ -50,9 +50,10 @@ public class Template extends ModelBase {
 		 * return q1.getQueryId();
 		 */
 
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 4; i++) {
 			if (templateQuery.get(i) == null) {
 				templateQuery.remove(i);
+				System.out.println("hello");
 			} else {
 				TemplateQuery q1 = (TemplateQuery) templateQuery.get(i);
 				System.out.println("-------------------->>>>>>>"
