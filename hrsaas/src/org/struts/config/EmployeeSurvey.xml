@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+        
+   <struts>   
+        <package name="employeesurvey" namespace="/employeesurvey" extends="struts-default">
+        
+	        <result-types>
+			  	<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+			</result-types>
+			
+			<action name="EmployeeSurveyMaster_*" method="{1}" class="org.struts.action.employeeSurvey.EmployeeSurveyMasterAction">
+				<result name="input" type="tiles" >employeesurvey.EmployeeSurveyMaster</result>
+				<result name="success" type="tiles">employeesurvey.EmployeeSurveyMaster</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+			</action>
+			
+			<action name="EmployeeSurveyQuestionnaire_*" method="{1}" class="org.struts.action.employeeSurvey.EmployeeSurveyQuestionnaireAction">
+				<result name="input" type="tiles" >employeesurvey.EmployeeSurveyQuestionnaire</result>
+				<result name="success" type="tiles">employeesurvey.EmployeeSurveyQuestionnaire</result>	
+				<result name="viewOptions" type="tiles">employeesurvey.viewOptions</result>
+				<result name="f9page" type="tiles">common.f9page</result>	
+			</action>
+			
+			<action name="EmployeeSurvey_*" method="{1}" class="org.struts.action.employeeSurvey.EmployeeSurveyAction">
+				<result name="input" type="tiles">employeesurvey.EmployeeSurveyList</result>
+				<result name="success" type="tiles">employeesurvey.EmployeeSurvey</result>
+				<result name="f9page" type="tiles">common.f9page</result>
+			</action>
+			
+				<action name="EmployeeSurveyConfiguration_*" method="{1}" class="org.struts.action.employeeSurvey.EmployeeSurveyConfigurationAction">
+				<result name="input" type="tiles" >employeesurvey.EmployeeSurveyConfiguration</result>
+				<result name="success" type="tiles">employeesurvey.EmployeeSurveyConfiguration</result>	
+				<result name="mailMessageJsp" type="tiles">employeesurvey.mailMessageJsp</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+			</action>
+			
+				<action name="EmployeeSurveyReport_*" method="{1}" class="org.struts.action.employeeSurvey.EmployeeSurveyReportAction">
+				<result name="input" type="tiles" >employeesurvey.EmployeeSurveyReport</result>
+				<result name="success" type="tiles">employeesurvey.EmployeeSurveyReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+			</action>
+			
+			<action name="EmployeeSurveySummary_*" method="{1}" class="org.struts.action.employeeSurvey.EmployeeSurveySummaryAction">
+				<result name="input" type="tiles" >employeesurvey.EmployeeSurveySummary</result>
+				<result name="success" type="tiles">employeesurvey.EmployeeSurveySummary</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+			</action>
+			
+			 
+			
+        </package>
+	</struts>

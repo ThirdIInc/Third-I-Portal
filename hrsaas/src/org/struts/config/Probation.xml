@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="probation" namespace="/probation"
+		extends="struts-default">
+
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+		<action name="ProbationSetting_*" method="{1}"
+			class="org.struts.action.probation.ProbationSettingAction">
+			<result name="input" type="tiles">
+				probation.ProbationSetting
+			</result>
+			<result name="success" type="tiles">
+				probation.ProbationSetting
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="ProbationConfirmation_*" method="{1}"
+			class="org.struts.action.probation.ProbationConfirmationAction">
+			<result name="input" type="tiles">
+				probation.ProbationConfirmation
+			</result>
+			<result name="success" type="tiles">
+				probation.ProbationConfirmation
+			</result>
+			<result name="process" type="tiles">
+				probation.ProbationAlreadyProcess
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="ProbationLetters_*" method="{1}"
+			class="org.struts.action.probation.ProbationLettersAction">
+			<result name="input" type="tiles">
+				probation.ProbationLetters
+			</result>
+			<result name="success" type="tiles">
+				probation.ProbationLetters
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="ProbationEvaluationParameter_*" method="{1}"
+			class="org.struts.action.probation.ProbationEvaluationParameterAction">
+			<result name="input" type="tiles">probationList</result>
+			<result name="success" type="tiles">probationData</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="probationDueListBean_*" method="{1}"
+			class="org.struts.action.probation.ProbationDueListReportAction">
+			<result name="input" type="tiles">
+				probation.probationDueList
+			</result>
+			<result name="success" type="tiles">
+				probation.probationDueList
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="probationEvaluation_*" method="{1}"
+			class="org.struts.action.probation.ProbationEvaluationAction">
+			<result name="input" type="tiles">
+				probationEvaluationList
+			</result>
+			<result name="success" type="tiles">
+				probationEvaluation
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+<!-- Added by Nilesh -Define HR -->
+<action name="DefineHR_*" method="{1}"
+			class="org.struts.action.probation.DefineHRAction">
+			<result name="success" type="tiles">HRData</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+<!-- End of Define HR -->
+
+	<!-- Anantha lakshmi -->
+		<action name="ProbationMisReport_*" method="{1}" class="org.struts.action.probation.ProbationMisReportAction">
+			<result name="input" type="tiles">ProbationMisReport</result>
+			<result name="success" type="tiles">ProbationMisReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+	<!-- End by Anantha lakshmi -->		
+
+
+	</package>
+
+</struts>
+

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="mypage" namespace="/mypage"
+		extends="struts-default">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		<action name="MypageProcessManagerAlerts_*" method="{1}"
+			class="org.struts.action.mypage.MypageProcessManagerAlertsAction">
+			<result name="input" type="tiles">
+					alert.mypage
+			</result>
+			<result name="success" type="tiles">
+				alert.mypage
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="dashboard" type="tiles">
+				common.dashBoard
+			</result>
+			<result name="serviceJsp" type="tiles">
+				mypage.services
+			</result>
+			
+			<result name="analyticsDataJsp" type="tiles">
+				mypage.analyticsDataJsp
+			</result>
+		 		<result name="searchRecord" type="tiles" >
+				mypage.search
+			</result>
+			<result name="employeeDtlPage" type="tiles" >
+				mypage.employeeDetail
+			</result>
+			<result name="searchMenuRecord" >
+				/pages/mypage/mypagesearchMenuRecord.jsp
+			</result>
+			
+			<result name="serviceLinkMenu" >
+				/pages/mypage/serviceMenuLink.jsp
+			</result>
+
+			<result name="mytimeCard" type="tiles">mytimeCard</result>
+			<result name="attendanceRegularization" type="tiles" >attendanceRegularization</result>
+			<result name="annualAttendance" type="tiles" >annualAttendance</result>
+			<result name="myLeaves" type="tiles" >mypage.myLeaves</result>
+			<result name="holidays" type="tiles" >mypage.holidays</result>
+
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			
+			
+			<result name="shiftDetails">
+				 /pages/mypage/showShiftDetails.jsp
+			</result>
+			
+			
+			<result name="dashboard" type="tiles">mypage.dashBoard</result>
+			
+
+		</action>
+
+
+	<action name="RightTileAction_*" method="{1}"
+			class="org.struts.action.mypage.RightTileDataAction">
+			<result name="input" type="tiles">
+				rightMypageData
+			</result>
+	</action> 
+	
+	<action name="EmployeeRequi_*" method="{1}"
+			class="org.struts.action.recruitment.EmployeeReqAction">
+			<result name="input" type="tiles">
+				master.EmpRequisition
+			</result>
+			<result name="success" type="tiles">
+				master.EmpRequisition
+			</result>
+			<result name="next" type="tiles">master.next</result>
+			<result name="previous" type="tiles">
+				master.previous
+			</result>
+			<result name="viewFirst" type="tiles">
+				master.viewFirst
+			</result>
+			<result name="viewSecond" type="tiles">
+				master.viewSec
+			</result>
+			<result name="prevPageView" type="tiles">
+				master.viewPrev
+			</result>
+			<result name="viewBoth" type="tiles">
+				master.viewBoth
+			</result><result name="removeEmp" type="tiles">
+				master.removeEmp
+			</result>
+			<result name="applicationProcess" type="tiles">
+				master.applicationProcess
+			</result>
+			
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="offerDetail" type="chain">OfferDetails_detailsOffer</result>
+			<result name="offerDetails" type="chain">OfferDetails_input</result>
+			<result name="appointmentDetails" type="chain">AppointmentDetails_input</result>
+			<result name="appointmentDetail" type="chain">AppointmentDetails_detailsOffer</result>	
+			<result name="candEval" type="chain">ConductInterview_input</result>
+			<result name="candEvals" type="chain">ConductInterview_detailsOffer</result>	
+
+		</action>
+
+
+	</package>
+</struts>

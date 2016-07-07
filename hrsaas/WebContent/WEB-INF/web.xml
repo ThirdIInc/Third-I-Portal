@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>PeoplePower</display-name>
+	
+	<context-param>
+		<param-name>org.apache.tiles.CONTAINER_FACTORY</param-name>
+		<param-value>
+			org.apache.struts2.tiles.StrutsTilesContainerFactory
+		</param-value>
+	</context-param>
+
+	
+	
+	<context-param>
+<param-name> org.apache.tiles.impl.BasicTilesContainer.DEFINITIONS_CONFIG </param-name>
+<param-value>
+/WEB-INF/tiles/tiles-D1.xml,
+/WEB-INF/tiles/tiles-ApplicationStudio.xml,
+/WEB-INF/tiles/tiles-attendance.xml,
+/WEB-INF/tiles/tiles-eGov.xml,
+/WEB-INF/tiles/tiles-businessCardInfo.xml,
+/WEB-INF/tiles/tiles-DataMigration.xml,
+/WEB-INF/tiles/tiles-employeeCardInfo.xml,
+/WEB-INF/tiles/tiles-HelpDesk.xml,
+/WEB-INF/tiles/tiles-OpenCloseOffice.xml,
+/WEB-INF/tiles/tiles-PAS.xml,
+/WEB-INF/tiles/tiles-Pramotion.xml,
+/WEB-INF/tiles/tiles-SRDManagement.xml,
+/WEB-INF/tiles/tiles-TMS.xml,
+/WEB-INF/tiles/tiles-IncometaxManagement.xml,
+/WEB-INF/tiles/tiles-common.xml,
+/WEB-INF/tiles/tiles-PayrollManagement.xml,
+/WEB-INF/tiles/tiles-Pension.xml,
+/WEB-INF/tiles/tiles-Reimbursement.xml,
+/WEB-INF/tiles/tiles-KioskManagement.xml,
+/WEB-INF/tiles/tiles-LMS.xml,
+/WEB-INF/tiles/tiles-Loan.xml,
+/WEB-INF/tiles/tiles-OT.xml,
+/WEB-INF/tiles/tiles-Recruitment.xml,
+/WEB-INF/tiles/tiles-attendance.xml,
+/WEB-INF/tiles/tiles-CR.xml,
+/WEB-INF/tiles/tiles-VAS.xml,
+/WEB-INF/tiles/tiles-Reporting.xml,
+/WEB-INF/tiles/tiles-Samsara.xml,
+/WEB-INF/tiles/tiles-Asset.xml,
+/WEB-INF/tiles/tiles-conference.xml,
+/WEB-INF/tiles/tiles-Event.xml,
+/WEB-INF/tiles/tiles-ExtraWorkBenefits.xml,
+/WEB-INF/tiles/tiles-LeaveManagement.xml,
+/WEB-INF/tiles/tiles-myPage.xml,
+/WEB-INF/tiles/tiles-Poll.xml,
+/WEB-INF/tiles/tiles-Portal.xml,
+/WEB-INF/tiles/tiles-Probation.xml,
+/WEB-INF/tiles/tiles-Setting.xml,
+/WEB-INF/tiles/tiles-vendor.xml,
+/WEB-INF/tiles/tiles-Voucher.xml,
+/WEB-INF/tiles/tiles-WBT.xml,
+/WEB-INF/tiles/tiles-EmployeeSurvey.xml,
+/WEB-INF/tiles/tiles-MasterManagement.xml,
+/WEB-INF/tiles/tiles-Training.xml,
+/WEB-INF/tiles/tiles-Settlement.xml,
+/WEB-INF/tiles/tiles-DecisionOnePortal.xml
+</param-value>
+</context-param>
+
+	
+	 <filter>
+        <filter-name>struts2</filter-name>
+        <filter-class>org.struts.filter.CustomFilter</filter-class>
+    </filter>
+
+   	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+
+	<listener>
+		<listener-class>
+			org.apache.struts2.tiles.StrutsTilesListener
+		</listener-class>
+	</listener>
+	<listener>
+		<listener-class>
+			org.struts.listener.SessionListener
+		</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>
+			org.struts.action.ApplicationStudio.jobScheduling.SchedulerListener
+		</listener-class>
+	</listener>
+	
+	
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+<servlet>
+		<servlet-name>CewolfServlet</servlet-name>
+		<servlet-class>de.laures.cewolf.CewolfRenderer</servlet-class>
+		<!-- sets storage implementation -->
+		<init-param>
+			<param-name>storage</param-name>
+			<param-value>de.laures.cewolf.storage.TransientSessionStorage</param-value>
+		</init-param>
+
+		<!-- sets overlib.js location relative to webapp -->
+		<init-param>
+			<param-name>overliburl</param-name>
+			<param-value>/etc/overlib.js</param-value>
+		</init-param>
+		<!-- turn on or off debugging logging -->
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CewolfServlet</servlet-name>
+		<url-pattern>/cewolf/*</url-pattern>
+	</servlet-mapping>
+
+	
+	<session-config>
+		<session-timeout>0</session-timeout>
+	</session-config>
+	
+
+
+	<context-param>
+		<param-name>crystal_image_uri</param-name>
+		<param-value>/crystalreportviewers</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>crystal_image_use_relative</param-name>
+		<param-value>webapp</param-value>
+	</context-param>
+
+	
+
+ 
+
+	<servlet>
+		<servlet-name>CrystalReportViewerServlet</servlet-name>
+		<servlet-class>com.crystaldecisions.report.web.viewer.CrystalReportViewerServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CrystalReportViewerServlet</servlet-name>
+		<url-pattern>/CrystalReportViewerHandler</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+	<servlet-name>Connector</servlet-name>
+		<servlet-class>
+			net.fckeditor.connector.ConnectorServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Connector</servlet-name>
+		<!-- Do not wrap this line otherwise Glassfish will fail to load this file -->
+		<url-pattern>/fckeditor/editor/filemanager/connectors/*</url-pattern>
+	</servlet-mapping>
+
+	
+
+
+</web-app>

@@ -1,0 +1,42 @@
+.txt {
+	font-family: "Trebuchet MS";
+	font-size: 13px;
+	font-weight: bold;
+	color: #003366;
+	text-decoration: none;
+}
+.border {
+	font-family: "Trebuchet MS";
+	font-size: 18px;
+	color: #333333;
+	text-decoration: none;
+	border: 1px solid #D2E9FF;
+}
+
+
+.bg {
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+	border: 1px solid #D2E9FF;
+	background-color: #FFFFFF;
+}
+
+
+
+
+.button {
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: none;
+	border: 1px solid #D2E9FF;
+	font-weight: bold;
+	background-color: #003366;
+}
+.red {
+	font-family: "Trebuchet MS";
+	color: #990000;
+	text-decoration: none;
+}

@@ -1,0 +1,172 @@
+
+
+
+
+ul.noBullet {
+
+list-style-type: none;
+margin: 0;
+padding: 0;
+
+}
+
+
+
+li.noBullet {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.refersh
+{
+	background-image: url(../pages/common/themes/sugar/images/max.gif);
+	background-repeat: no-repeat;
+	border:0px;
+	height:15px;
+	width:15px;
+
+}
+.close
+{
+	background-image: url(../pages/common/themes/sugar/images/close.gif);
+	background-repeat: no-repeat;
+	border:0px;
+	height:15px;
+	width:15px;
+
+}
+.min
+{
+	background-image: url(../pages/common/themes/sugar/images/min.gif);
+	background-repeat: no-repeat;
+	border:0px;
+	height:15px;
+	width:15px;
+
+}
+
+.bggrad {
+	background-position: left top;	
+	overflow-y:auto;	
+	scrollbar-3dlight-color: white;
+	scrollbar-arrow-color: #4D84B3;
+	scrollbar-base-color: white;
+	scrollbar-darkshadow-color: white;
+	scrollbar-face-color: white;
+	scrollbar-highlight-color: #4D84B3;
+	scrollbar-shadow-color: #4D84B3;	
+	scrollbar-track-color:white;	
+}
+
+.bggradmenu {
+	background-image: url(../pages/common/themes/sugar/images/grad.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	overflow:auto;	 
+	width:190px;
+	scrollbar-3dlight-color: white;
+	scrollbar-arrow-color: #4D84B3;
+	scrollbar-base-color: white;
+	scrollbar-darkshadow-color: white;
+	scrollbar-face-color: white;
+	scrollbar-highlight-color: #4D84B3;
+	scrollbar-shadow-color: #4D84B3;	
+	scrollbar-track-color:white;
+	
+}
+
+.border{
+	
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #67A4D8;
+	border-right-color: #67A4D8;
+	border-bottom-color: #67A4D8;
+	border-left-color: #67A4D8;
+	padding: 0;
+	margin: 0;
+	}
+
+}
+
+.whitetable {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #042F71;
+	text-decoration: none;
+	height: 22px;
+	font-weight: bold;
+	vertical-align: middle;
+	background-image: url(../pages/common/themes/sugar/images/grad1.gif);
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #67A4D8;
+	border-right-color: #67A4D8;
+	border-bottom-color: #67A4D8;
+	border-left-color: #67A4D8;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.bluetable {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	background-color: #EDF4FC;
+	height: 22px;
+	font-weight: normal;
+	vertical-align: middle;
+
+}
+.whitetable1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+
+	height: 22px;
+	font-weight: normal;
+	vertical-align: middle;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #BFD9EE;
+	border-right-color: #BFD9EE;
+	border-bottom-color: #BFD9EE;
+	border-left-color: #BFD9EE;
+		padding-right: 5px;
+	padding-left: 5px;
+}
+.color{
+	background-color: #EFF6FC;
+}.txt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+}
+
+table.sortable thead {
+	cursor: default;
+
+}
+

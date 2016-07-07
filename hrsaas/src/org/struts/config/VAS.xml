@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="vas" namespace="/vas"
+		extends="struts-default">
+
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+		<action name="VASHome_*" method="{1}"
+			class="org.struts.action.vas.VASHomeAction">
+			<result name="input" type="tiles">vas.VASHome</result>
+			<result name="success" type="tiles">vas.VASHome</result>
+			</action>
+			
+			
+			<action name="VASServiceLogin_*" method="{1}" class="org.struts.action.vas.VASServiceLoginAction">
+				<result name="input" type="tiles">vas.ServiceLogin</result>
+				<result name="success" type="tiles">vas.ServiceLogin</result>				
+				<result name="f9page" type="tiles">common.f9page</result>
+					
+		 </action>
+	</package>
+</struts>

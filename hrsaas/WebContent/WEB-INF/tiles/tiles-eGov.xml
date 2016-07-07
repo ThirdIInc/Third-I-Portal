@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+ 	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+		<!-- Added by Priyanka -->
+<definition name=".leaveAttendanceHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/leaveAttendanceLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<!-- Ended by Priyanka -->
+
+	<definition name=".mainLayoutPay"
+		template="/pages/common/layoutPay.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+<definition name="pension.register.eGov" extends=".mainLayout">
+		<put-attribute name="title" value="Pension Register eGov" />
+		<put-attribute name="body"
+			value="/pages/egov/reports/pensionRegistereGov.jsp" />
+	</definition>
+<definition name="LicData" extends=".mainLayout">
+		<put-attribute name="title" value="LIC Report Data" />
+		<put-attribute name="body" value="/pages/egov/reports/LICReportData.jsp" />
+	</definition>
+	<definition name="e-GovPFBalance" extends=".mainLayout">
+		<put-attribute name="title" value="PF Balance e-Gov Report Data" />
+		<put-attribute name="body"
+			value="/pages/egov/reports/eGovPFReportData.jsp" />
+	</definition>
+	<definition name="PFBalanceUpload" extends=".mainLayout">
+		<put-attribute name="title" value="PF Balance Upload" />
+		<put-attribute name="body"
+			value="/pages/egov/reports/pfBalanceUpload.jsp" />
+	</definition>
+	<definition name="leave.CreditConfigeGov.Master"
+		extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Leave CreditConfigeGov Master" />
+		<put-attribute name="body"
+			value="/pages/egov/reports/leaveCreditConfigeGovMaster.jsp" />
+	</definition>
+	<definition name="leaveCreditConfigeGov.Data"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Leave CreditConfigeGov Master Data" />
+		<put-attribute name="body"
+			value="/pages/egov/reports/leaveCreditConfigeGovMasterData.jsp" />
+	</definition>
+	<definition name="leaveCreditConfigeGov.head"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Appraisal MIS Report" />
+		<put-attribute name="body" value="/pages/egov/reports/leaveHead.jsp" />
+	</definition>
+	<definition name="eGov.SalaryProcessList" extends=".mainLayout">
+		<put-attribute name="title" value="Salary Process" />
+		<put-attribute name="body"
+			value="/pages/egov/payroll/salaryProcesseGovList.jsp" />
+	</definition>
+	<definition name="eGov.SalaryProcess" extends=".mainLayout">
+		<put-attribute name="title" value="Salary Process" />
+		<put-attribute name="body"
+			value="/pages/egov/payroll/salaryProcesseGov.jsp" />
+	</definition>
+	<definition name="eGov.EditSalaryProcess" extends=".mainLayoutPay">
+		<put-attribute name="title" value="Salary Process Editable View" />
+		<put-attribute name="body"
+			value="/pages/egov/payroll/salaryProcesseGovView.jsp" />
+	</definition>
+	<definition name="eGov.uploadMonthlyAttendance"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Upload Monthly Attendance" />
+		<put-attribute name="body" value="/pages/egov/attendance/uploadMonthlyAttendanceEGov.jsp" />
+	</definition>
+	<definition name="eGov.MonthlyAttendanceProcessEGov"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Upload Monthly Attendance" />
+		<put-attribute name="body" value="/pages/egov/attendance/monthlyAttendanceProcessEGov.jsp" />
+	</definition>
+	<definition name="attendance.MonthAttendanceReporteGov"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Month Attendnace Report eGov" />
+		<put-attribute name="body"
+			value="/pages/egov/reports/monthAttendanceReporteGov.jsp" />
+	</definition>
+	<definition name="eGov.MonthlyArrearsReportEGov"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Month Attendnace Report eGov" />
+		<put-attribute name="body"
+			value="/pages/egov/reports/monthlyArrearsReportEGov.jsp" />
+	</definition>
+	<definition name="eGov.MonthlyArrearsEGovList"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Month Attendnace Report eGov" />
+		<put-attribute name="body"
+			value="/pages/egov/payroll/monthlyArrearsListEGov.jsp" />
+	</definition>
+	<definition name="eGov.MonthlyArrearsEGov"
+		extends=".mainLayoutPay">
+		<put-attribute name="title" value="Month Attendnace Report eGov" />
+		<put-attribute name="body"
+			value="/pages/egov/payroll/monthlyArrearsEGov.jsp" />
+	</definition>
+	<definition name="eGov.PensionPaybil"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Pension Paybil" />
+		<put-attribute name="body"
+			value="/pages/egov/reports/pensionPaybill.jsp" />
+	</definition>
+	<definition name="LoanApp" extends=".mainLayout">
+		<put-attribute name="title" value="LoanApp" />
+		<put-attribute name="body"
+			value="/pages/egov/payroll/loanApplicationEGovt.jsp" />
+	</definition>
+	<definition name="payroll.SalaryMisReportGov" extends=".mainLayout">
+		<put-attribute name="title" value="Salary Slip MIS Report" />
+		<put-attribute name="body"
+			value="/pages/gov/salarySlipMisReportGov.jsp" />
+	</definition>
+	<definition name="empCrediteGov" extends=".mainLayout">
+		<put-attribute name="title" value="Employee Credit Detail" />
+		<put-attribute name="body" value="/pages/gov/empCrediteGov.jsp" />
+	</definition>
+</tiles-definitions>

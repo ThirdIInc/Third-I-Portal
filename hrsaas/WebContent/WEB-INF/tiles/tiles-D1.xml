@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+ 
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions> 
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	
+	 <definition name=".decisionOneHomeLayout"
+	template="/pages/common/layout.jsp">
+	<put-attribute name="title" value="PeoplePower"/>
+	<put-attribute name="header" value="/pages/common/header.jsp"/>
+	<put-attribute name="menu" value="/pages/common/d1LeftMenuLayout.jsp"/>
+	<put-attribute name="rightTile" value="/pages/common/rightTile.jsp"/>
+	<put-attribute name="footer" value="/pages/common/footer.jsp" />
+	<put-attribute name="body" value="" />
+  </definition>
+		
+	<!-- Department Master Start -->
+	<definition name="d1.DepartmentNoMaster" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="PaySettings" />
+		<put-attribute name="body" value="/pages/D1/departmentNoMaster.jsp" />
+	</definition>
+	<definition name="d1.DeptNoMasterData" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="PaySettings" />
+		<put-attribute name="body" value="/pages/D1/departmentNoDataMaster.jsp" />
+	</definition>
+	<!-- Department Master End -->
+		<!-- Official Detail Settings Start -->
+	<definition name="setting.OfficialDetailSettings" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Official Detail Settings" />
+		<put-attribute name="body" value="/pages/D1/OfficialDetailSettings.jsp" />
+	</definition>
+	<definition name="setting.OfficialDetail" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Official Detail Settings" />
+		<put-attribute name="body" value="/pages/D1/OfficialDetailSettingsList.jsp" />
+	</definition>
+	<!-- Official Detail Settings End -->
+	<!-- Approval Settings Start -->
+	<definition name="setting.ApprovalSettings" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Approval Settings" />
+		<put-attribute name="body" value="/pages/D1/approvalSettings.jsp" />
+	</definition>
+	<!-- Approval Settings End -->
+	<!-- Personal Data Change Start -->
+	<definition name="d1Integration.personalDataChangeList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Personal Data Change" />
+		<put-attribute name="body" value="/pages/D1/personalDataChangeList.jsp" />
+	</definition>
+	<definition name="d1Integration.personalDataChangeData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Personal Data Change" />
+		<put-attribute name="body" value="/pages/D1/personalDataChangeData.jsp" />
+	</definition>
+	<!-- Personal Data Change End -->
+	<!-- Personal Data Change Approval Start -->
+	<definition name="d1Integration.personalDataChangeApprovalList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Personal Data Change Approver List" />
+		<put-attribute name="body"
+			value="/pages/D1/personalDataChangeApprovalList.jsp" />
+	</definition>
+	<definition name="d1Integration.personalDataChangeApprovalVIew"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Personal Data Change Approval" />
+		<put-attribute name="body"
+			value="/pages/D1/personalDataChangeApprovalDetails.jsp" />
+	</definition>
+	<!-- Personal Data Change Approval End -->
+	<!-- Vendor Master Start -->
+	<definition name="d1Integration.VendorMasterList"
+		extends=".mainLayout">
+		<put-attribute name="title" value="d1Integration.VendorMasterList" />
+		<put-attribute name="body" value="/pages/D1/vendormasterList.jsp" />
+	</definition>
+	<definition name="d1Integration.VendorMasterData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.VendorMasterData" />
+		<put-attribute name="body" value="/pages/D1/vendormasterData.jsp" />
+	</definition>
+	<!-- Vendor Master End -->
+	<!-- Business Unit Start -->
+	<definition name="d1Integration.BusinessUnitList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.BusinessUnitList" />
+		<put-attribute name="body" value="/pages/D1/businessMasterList.jsp" />
+	</definition>
+	<definition name="d1Integration.BusinessUnitData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.BusinessUnitData" />
+		<put-attribute name="body" value="/pages/D1/businessMasterData.jsp" />
+	</definition>
+	<!-- Business Unit End -->
+	<!-- Software Request Start -->
+	<definition name="d1Integration.SoftwareRequestList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.SoftwareRequestList" />
+		<put-attribute name="body" value="/pages/D1/softwareRequestList.jsp" />
+	</definition>
+	<definition name="d1Integration.SoftwareRequestData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.SoftwareRequestData" />
+		<put-attribute name="body"
+			value="/pages/D1/softwareMasterRequestData.jsp" />
+	</definition>
+	<!-- Software Request End -->
+	<!-- Imprint Type Start -->
+	<definition name="d1Integration.ImprintTypeList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.ImprintTypeList" />
+		<put-attribute name="body" value="/pages/D1/imprintTypeList.jsp" />
+	</definition>
+	<definition name="d1Integration.ImprintTypeData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.ImprintTypeData" />
+		<put-attribute name="body" value="/pages/D1/imprintTypeData.jsp" />
+	</definition>
+	<!--Imprint Type End -->
+	<!-- Stationary Start -->
+	<definition name="d1Integration.StationaryList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.StationaryList" />
+		<put-attribute name="body" value="/pages/D1/stationaryList.jsp" />
+	</definition>
+	<definition name="d1Integration.StationaryData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.StationaryData" />
+		<put-attribute name="body" value="/pages/D1/stationaryData.jsp" />
+	</definition>
+	<!--Stationary End -->
+	<!-- Class Request Start -->
+	<definition name="d1Integration.ClassReqList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.ClassReqList" />
+		<put-attribute name="body" value="/pages/D1/classRequestList.jsp" />
+	</definition>
+	<definition name="d1Integration.ClassReqData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.ClassReqData" />
+		<put-attribute name="body" value="/pages/D1/classRequestData.jsp" />
+	</definition>
+	<!--Class Request End -->
+	<!-- Class Request Approval Start -->
+	<definition name="d1Integration.ClassReqApproveList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.ClassReqApproveList" />
+		<put-attribute name="body" value="/pages/D1/classReqApprovalList.jsp" />
+	</definition>
+	<definition name="d1Integration.ClassReqApproveData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.ClassReqApproveData" />
+		<put-attribute name="body" value="/pages/D1/classReqAppData.jsp" />
+	</definition>
+	<!-- Class Request Approval End -->
+	<!-- Region Master Start -->
+	<definition name="settings.regionList" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="settings.regionList" />
+		<put-attribute name="body" value="/pages/D1/regionMasterInput.jsp" />
+	</definition>
+	<definition name="settings.regionAdd" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="settings.regionAdd" />
+		<put-attribute name="body" value="/pages/D1/regionMasterData.jsp" />
+	</definition>
+	<!-- Region Master End -->
+	<!-- Request To Back Out Voucher Start -->
+	<definition name="d1Integration.ReqToBackOutVoucherList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Request To Back Out Voucher List" />
+		<put-attribute name="body" value="/pages/D1/reqToBackOutVoucherList.jsp" />
+	</definition>
+	<definition name="d1Integration.ReqToBackOutVoucherDetails"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Request To Back Out Voucher Details" />
+		<put-attribute name="body"
+			value="/pages/D1/reqToBackOutVoucherDetails.jsp" />
+	</definition>
+	<!-- Request To Back Out Voucher End -->
+	<!-- Request To Back Out Voucher Approval Start -->
+	<definition name="d1Integration.ReqToBackOutApproverList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Request To Back Out Approver List" />
+		<put-attribute name="body" value="/pages/D1/reqToBackOutApproverList.jsp" />
+	</definition>
+	<definition name="d1Integration.ReqToBackOutApproverDetails"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Request To Back Out Approver Details" />
+		<put-attribute name="body"
+			value="/pages/D1/reqToBackOutApproverDetails.jsp" />
+	</definition>
+	<!-- Request To Back Out Voucher Approval End -->
+	<!-- Hardware Software Request Start -->
+	<definition name="d1Integration.HardwareSoftwareRequestList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Hardware Software Request List" />
+		<put-attribute name="body"
+			value="/pages/D1/hardwareSoftwareRequestList.jsp" />
+	</definition>
+	<definition name="d1Integration.HardwareSoftwareRequestForm"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Hardware Software Request Form" />
+		<put-attribute name="body"
+			value="/pages/D1/hardwareSoftwareRequestForm.jsp" />
+	</definition>
+	<!-- Hardware Software Request End -->
+	<!-- Hardware Software Request Approval Start -->
+	<definition name="d1Integration.HardwareSoftwareRequestApproverList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title"
+			value="Hardware Software Request Approver List" />
+		<put-attribute name="body"
+			value="/pages/D1/hardwareSoftwareRequestApproverList.jsp" />
+	</definition>
+	<definition name="d1Integration.HardwareSoftwareRequestApproverForm"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title"
+			value="Hardware Software Request Approver Form" />
+		<put-attribute name="body"
+			value="/pages/D1/hardwareSoftwareRequestApproverForm.jsp" />
+	</definition>
+	<!-- Hardware Software Request Approval End -->
+	<!-- Workers Comp Injury Start -->
+	<definition name="D1.input" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="workersCompInjury" />
+		<put-attribute name="body" value="/pages/D1/workersCompInjuryList.jsp" />
+	</definition>
+	<definition name="D1.workersCompInjury" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="workersCompInjury" />
+		<put-attribute name="body" value="/pages/D1/workersCompInjury.jsp" />
+	</definition>
+	<definition name="D1.Resubmit" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="workersCompInjury" />
+		<put-attribute name="body"
+			value="/pages/D1/workersCompInjuryResubmit.jsp" />
+	</definition>
+	<!-- Workers Comp Injury End -->
+		<!-- Workers Comp Injury Approval Start -->
+	<definition name="D1.inputAppr" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="workersCompInjury" />
+		<put-attribute name="body"
+			value="/pages/D1/workersCompInjuryApprList.jsp" />
+	</definition>
+	<definition name="D1.workersCompInjuryAppr" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="workersCompInjury" />
+		<put-attribute name="body" value="/pages/D1/workersCompInjuryAppr.jsp" />
+	</definition>
+	<!-- Workers Comp Injury Approval End -->
+	<!-- Non-Inventory Purchase Start -->
+	<definition name="D1.NonInventoryPurchaseList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="NonInventoryPurchase" />
+		<put-attribute name="body" value="/pages/D1/nonInventoryPurchaseList.jsp" />
+	</definition>
+	<definition name="D1.NonInventoryPurchaseData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="NonInventoryPurchase" />
+		<put-attribute name="body" value="/pages/D1/nonInventoryPurchaseData.jsp" />
+	</definition>
+	<!-- Non-Inventory Purchase End -->
+		<!-- Non-Inventory Purchase Approval Start -->
+	<definition name="D1.NonInventoryPurchaseApprList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="NonInventoryPurchase" />
+		<put-attribute name="body"
+			value="/pages/D1/nonInventoryPurchaseApprList.jsp" />
+	</definition>
+	<definition name="D1.NonInventoryPurchaseApprData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="NonInventoryPurchase" />
+		<put-attribute name="body"
+			value="/pages/D1/nonInventoryPurchaseApprData.jsp" />
+	</definition>
+	<!-- Non-Inventory Purchase Approval End -->
+	<!-- Short Term Disability Start --> 
+	<definition name="D1.ShortTermDisabilityInput"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="ShortTermDisability" />
+		<put-attribute name="body" value="/pages/D1/shortTermDisabilityList.jsp" />
+	</definition>
+	<definition name="D1.ShortTermDisability" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="ShortTermDisability" />
+		<put-attribute name="body" value="/pages/D1/shortTermDisability.jsp" />
+	</definition>
+	<definition name="D1.ShortTermDisabilityInputAppr"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="ShortTermDisability" />
+		<put-attribute name="body"
+			value="/pages/D1/shortTermDisabilityApprList.jsp" />
+	</definition>
+	<!-- Short Term Disability End --> 
+	<!-- Expense Reuest Start -->
+	<definition name="D1.ExpenseApprovalRegInput"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="ShortTermDisability" />
+		<put-attribute name="body" value="/pages/D1/expenseApprovalRegList.jsp" />
+	</definition>
+	<definition name="D1.ExpenseApprovalReg" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="ShortTermDisability" />
+		<put-attribute name="body" value="/pages/D1/expenseApprovalReg.jsp" />
+	</definition>
+
+	<definition name="D1.ExpenseApprovalRegApprInput"
+		extends=".mainLayout">
+		<put-attribute name="title" value="ShortTermDisability" />
+		<put-attribute name="body"
+			value="/pages/D1/expenseApprovalRegApprList.jsp" />
+	</definition>
+	<definition name="D1.ExpenseApprovalRegAppr"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="ShortTermDisability" />
+		<put-attribute name="body" value="/pages/D1/expenseApprovalRegAppr.jsp" />
+	</definition>
+	<!-- Expense Reuest End -->	
+	<!-- Quick Project Start -->
+	<definition name="D1.QuickProjectInput" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Quick Project Form" />
+		<put-attribute name="body" value="/pages/D1/quickProjectList.jsp" />
+	</definition>
+	<definition name="D1.QuickProject" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Quick Project Form" />
+		<put-attribute name="body" value="/pages/D1/quickProject.jsp" />
+	</definition>
+
+	<definition name="D1.QuickProjectApprInput" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Quick Project Approval" />
+		<put-attribute name="body" value="/pages/D1/quickProjectApprList.jsp" />
+	</definition>
+	<definition name="D1.QuickProjectAppr" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Quick Project Approval" />
+		<put-attribute name="body" value="/pages/D1/quickProjectAppr.jsp" />
+	</definition>
+	<!-- Quick Project End -->
+	<!--  CD-Rom Starts -->	 
+	<definition name="CDROM.input" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="CDROM Request View" />
+		<put-attribute name="body" value="/pages/D1/CDRomRequestList.jsp" />
+	</definition>
+	<definition name="CDROM.request" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="CDROM Request Application" />
+		<put-attribute name="body" value="/pages/D1/CDRomRequestData.jsp" />
+	</definition>
+	<definition name="view_Approve" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="CDROM Approval" />
+		<put-attribute name="body" value="/pages/D1/CDROMApproval.jsp" />
+	</definition>
+	<definition name="CDROMAPP.input" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="CDROM Approval Application" />
+		<put-attribute name="body" value="/pages/D1/CDRomApprovalList.jsp" />
+	</definition>	 
+	<!--  CD-Rom End -->
+		<!-- Department Location change Start -->
+	<definition name="d1Integration.DepartmentChangeApproval"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Department/Location ChangeApproval" />
+		<put-attribute name="body"
+			value="/pages/D1/DepartmentChangeApprovalList.jsp" />
+	</definition>
+	<definition name="settings.deptlocationChangeData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="settings.deptlocationChangeData" />
+		<put-attribute name="body"
+			value="/pages/D1/deptandlocationChangeData.jsp" />
+	</definition>
+	<definition name="settings.deptlocationChange"
+		extends=".mainLayout">
+		<put-attribute name="title" value="settings.deptlocationChange" />
+		<put-attribute name="body"
+			value="/pages/D1/deptandlocationChangeInput.jsp" />
+	</definition>
+	<definition name="dept_Approve" extends=".mainLayout">
+		<put-attribute name="title" value="Department/Location Change Approval" />
+		<put-attribute name="body"
+			value="/pages/D1/departmentLocationChangeApproval.jsp" />
+	</definition>
+	<!-- Department Location change End -->
+	<!-- ASIPO Reconciliation Start -->
+	<definition name="ASIPO.input" extends=".mainLayout">
+		<put-attribute name="title" value="ASIPO List" />
+		<put-attribute name="body" value="/pages/D1/aSIPOReconciliationList.jsp" />
+	</definition>
+	<definition name="ASIPO.success" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="ASIPO FORM" />
+		<put-attribute name="body" value="/pages/D1/aSIPOReconciliationForm.jsp" />
+	</definition>
+
+	<definition name="ASIPOApprover.input" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="ASIPO APPROVER List" />
+		<put-attribute name="body"
+			value="/pages/D1/aSIPOReconciliationApproverList.jsp" />
+	</definition>
+	<definition name="ASIPOApprover.success" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="ASIPO APPROVER FORM" />
+		<put-attribute name="body"
+			value="/pages/D1/aSIPOReconciliationApproverForm.jsp" />
+	</definition>
+	<!-- ASIPO Reconciliation End -->
+	<!-- Credit Check Request Start -->
+	<definition name="creditCheckRequest.input" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Credit Check Request List" />
+		<put-attribute name="body" value="/pages/D1/creditCheckRequestList.jsp" />
+	</definition>
+	<definition name="creditCheckRequest.success"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Credit Check Request FORM" />
+		<put-attribute name="body" value="/pages/D1/creditCheckRequestForm.jsp" />
+	</definition>
+
+	<definition name="creditCheckRequestApprover.input"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Credit Check Request Approver List" />
+		<put-attribute name="body"
+			value="/pages/D1/creditCheckRequestApproverList.jsp" />
+	</definition>
+	<definition name="creditCheckRequestApprover.success"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Credit Check Request Approver FORM" />
+		<put-attribute name="body"
+			value="/pages/D1/creditCheckRequestApproverForm.jsp" />
+	</definition>
+	<!-- Credit Check Request End -->
+	<!-- Termination Form Start -->
+	<definition name="termination.input" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Termination List" />
+		<put-attribute name="body" value="/pages/D1/terminationList.jsp" />
+	</definition>
+	<definition name="termination.success" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Termination FORM" />
+		<put-attribute name="body" value="/pages/D1/terminationForm.jsp" />
+	</definition>
+
+	<definition name="terminationApproval.input"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Termination Approval List" />
+		<put-attribute name="body" value="/pages/D1/terminationApprovalList.jsp" />
+	</definition>
+	<definition name="terminationApproval.success"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Termination Approval Form" />
+		<put-attribute name="body" value="/pages/D1/terminationApprovalForm.jsp" />
+	</definition>
+	<!-- Termination Form End -->
+	<!-- Capital Expenditure Start -->
+	<definition name="capitalExpenditure.input" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Capital Expenditure List" />
+		<put-attribute name="body" value="/pages/D1/capitalExpenditureList.jsp" />
+	</definition>
+	<definition name="capitalExpenditure.success"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Capital Expenditure FORM" />
+		<put-attribute name="body" value="/pages/D1/capitalExpenditureForm.jsp" />
+	</definition>
+
+	<definition name="capitalExpenditureApproval.input"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Capital Expenditure Approval List" />
+		<put-attribute name="body"
+			value="/pages/D1/capitalExpenditureApprovalList.jsp" />
+	</definition>
+	<definition name="capitalExpenditureApproval.success"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Capital Expenditure Approval FORM" />
+		<put-attribute name="body"
+			value="/pages/D1/capitalExpenditureApprovalForm.jsp" />
+	</definition>
+	<!-- Capital Expenditure End -->
+	<!-- Salary Plan Start -->
+	<definition name="SalaryPlan.List" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="SalaryPlan.List" />
+		<put-attribute name="body" value="/pages/D1/salaryPlanList.jsp" />
+	</definition>
+	<definition name="SalaryPlan.Data" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="SalaryPlan.Data" />
+		<put-attribute name="body" value="/pages/D1/salaryPlanData.jsp" />
+	</definition>
+	<!-- Salary Plan End -->
+	<!-- Authorized Travel Application Start -->
+	<definition name="travel.input" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Travel List" />
+		<put-attribute name="body"
+			value="/pages/D1/travelApplicationFormList.jsp" />
+	</definition>
+	<definition name="travel.form" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Travel Form" />
+		<put-attribute name="body" value="/pages/D1/travelApplicationForm.jsp" />
+	</definition>
+
+	<definition name="travel.formApp" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Travel Form Approval" />
+		<put-attribute name="body"
+			value="/pages/D1/TravelRequestApprovalForm.jsp" />
+	</definition>
+	<definition name="travelApp.input" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Travel Application Approval" />
+		<put-attribute name="body" value="/pages/D1/TravelApprovalList.jsp" />
+	</definition>
+	<!-- Authorized Travel Application End -->
+	<!-- New-Hire Rehire Start -->
+	<definition name="d1Integration.NewHireRehireList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="New Hire/Rehire List" />
+		<put-attribute name="body" value="/pages/D1/newHireRehireList.jsp" />
+	</definition>
+	<definition name="d1Integration.NewHireRehireDetails"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="New Hire/Rehire Details" />
+		<put-attribute name="body" value="/pages/D1/newHireRehireDetails.jsp" />
+	</definition>
+
+	<definition name="d1Integration.NewHireRehireApprovalList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="New Hire/Rehire Approval List" />
+		<put-attribute name="body"
+			value="/pages/D1/newHireRehireApprovalList.jsp" />
+	</definition>
+	<definition name="d1Integration.NewHireRehireApprovalDetails"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="New Hire/Rehire Approval Details" />
+		<put-attribute name="body"
+			value="/pages/D1/newHireRehireApprovalDetails.jsp" />
+	</definition>
+	<!-- New-Hire Rehire End -->
+	<!-- Ethinicity Start -->
+	<definition name="d1Integration.EthinicityList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.EthinicityList" />
+		<put-attribute name="body" value="/pages/D1/ethinicityList.jsp" />
+	</definition>
+	<definition name="d1Integration.EthinicityData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.EthinicityData" />
+		<put-attribute name="body" value="/pages/D1/ethinicityData.jsp" />
+	</definition>
+	<!-- Ethinicity End -->
+	<!-- Application Security Request Start -->
+	<definition name="d1Integration.applicationSecurityRequestList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Application Security Request" />
+		<put-attribute name="body"
+			value="/pages/D1/applicationSecurityRequestList.jsp" />
+	</definition>
+	<definition name="d1Integration.applicationSecurityRequestData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Application Security Request" />
+		<put-attribute name="body"
+			value="/pages/D1/applicationSecurityRequestData.jsp" />
+	</definition>
+
+	<definition
+		name="d1Integration.applicationSecurityRequestApprovalList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title"
+			value="Application Security Request Appproval" />
+		<put-attribute name="body"
+			value="/pages/D1/applicationSecurityRequestApprovalList.jsp" />
+	</definition>
+	<definition
+		name="d1Integration.applicationSecurityRequestApprovalData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title"
+			value="Application Security Request Appproval" />
+		<put-attribute name="body"
+			value="/pages/D1/applicationSecurityRequestApprovalData.jsp" />
+	</definition>
+	<!-- Application Security Request End -->
+		<!-- Report Request Change Start -->
+	<definition name="d1Integration.reportRequestChangeList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Report Request Change" />
+		<put-attribute name="body" value="/pages/D1/reportRequestChangeList.jsp" />
+	</definition>
+	<definition name="d1Integration.reportRequestChangeData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Report Request Change" />
+		<put-attribute name="body" value="/pages/D1/reportRequestChangeData.jsp" />
+	</definition>
+
+	<definition name="d1Integration.reportRequestChangeApprovalList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Report Request Change Approval" />
+		<put-attribute name="body"
+			value="/pages/D1/reportRequestChangeApprovalList.jsp" />
+	</definition>
+	<definition name="d1Integration.reportRequestChangeApprovalData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Report Request Change" />
+		<put-attribute name="body"
+			value="/pages/D1/reportRequestChangeApprovalData.jsp" />
+	</definition>
+	<!-- Report Request Change End -->
+	<!-- Referral Start -->
+	<definition name="d1Integration.ReferralList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.ReferralList" />
+		<put-attribute name="body" value="/pages/D1/referralList.jsp" />
+	</definition>
+	<definition name="d1Integration.ReferralData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.ReferralData" />
+		<put-attribute name="body" value="/pages/D1/referralData.jsp" />
+	</definition>
+	<!-- Referral Ends -->
+	<!-- Personal Reqisition Start -->
+	<definition name="d1Integration.PersonalRequisitionList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Personal Requisition List" />
+		<put-attribute name="body" value="/pages/D1/personalRequisitionList.jsp" />
+	</definition>
+	<definition name="d1Integration.PersonalRequisitionDetails"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Personal Requisition Details" />
+		<put-attribute name="body"
+			value="/pages/D1/personalRequisitionDetails.jsp" />
+	</definition>
+
+	<definition name="d1Integration.PersonalRequisitionApproverList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Personal Requisition Approver List" />
+		<put-attribute name="body"
+			value="/pages/D1/personalRequisitionApproverList.jsp" />
+	</definition>
+	<definition name="d1Integration.PersonalRequisitionApproverDetails"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Personal Requisition Approver Details" />
+		<put-attribute name="body"
+			value="/pages/D1/personalRequisitionApproverDetails.jsp" />
+	</definition>
+	<!-- Personal Reqisition End -->
+	<!-- IT Application Start -->
+	<definition name="d1Integration.ITAppList" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.ITAppList" />
+		<put-attribute name="body" value="/pages/D1/itApplicationList.jsp" />
+	</definition>
+	<definition name="d1Integration.ITAppData" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="d1Integration.ITAppData" />
+		<put-attribute name="body" value="/pages/D1/itApplicationData.jsp" />
+	</definition>
+	<!-- IT Application Ends -->
+	<!-- Cash Advance Request start -->
+	<definition name="d1Integration.CashAdvanceRequestList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Cash Advance Request List" />
+		<put-attribute name="body" value="/pages/D1/cashAdvanceRequestList.jsp" />
+	</definition>
+	<definition name="d1Integration.CashAdvanceRequestDetails"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Cash Advance Request Details" />
+		<put-attribute name="body"
+			value="/pages/D1/cashAdvanceRequestDetails.jsp" />
+	</definition>
+
+	<definition name="d1Integration.CashAdvanceRequestApprovalList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Cash Advance Request Approver List" />
+		<put-attribute name="body"
+			value="/pages/D1/cashAdvanceRequestApproverList.jsp" />
+	</definition>
+	<definition name="d1Integration.CashAdvanceRequestApprovalDetails"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Cash Advance Request Approver Details" />
+		<put-attribute name="body"
+			value="/pages/D1/cashAdvanceRequestApproverDetails.jsp" />
+	</definition>
+	<!-- Cash Advance Request End -->
+	<!-- CBT Form Start -->
+	<definition name="CBT.input" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="CBT List" />
+		<put-attribute name="body" value="/pages/D1/CBTFormList.jsp" />
+	</definition>
+	<definition name="CBT.form" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="CBT Form" />
+		<put-attribute name="body" value="/pages/D1/CBTForm.jsp" />
+	</definition>
+
+	<definition name="CBTApp.input" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="CBT Approval" />
+		<put-attribute name="body" value="/pages/D1/CBTApprovalList.jsp" />
+	</definition>
+	<definition name="CBTApp.form" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="CBT Approval" />
+		<put-attribute name="body" value="/pages/D1/CBTApprovalForm.jsp" />
+	</definition>
+	<!-- CBT Form End -->
+	<!-- Class Enrollment Form Start -->
+	<definition name="d1Integration.classEnrollmentFormList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Class Enrollment Form" />
+		<put-attribute name="body" value="/pages/D1/classEnrollmentFormList.jsp" />
+	</definition>
+	<definition name="d1Integration.classEnrollmentFormData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Class Enrollment Form" />
+		<put-attribute name="body" value="/pages/D1/classEnrollmentFormData.jsp" />
+	</definition>
+
+	<definition name="d1Integration.ClassEnrollmentApproverList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Class Enrollment Approver List" />
+		<put-attribute name="body"
+			value="/pages/D1/classEnrollmentApproverList.jsp" />
+	</definition>
+	<definition name="d1Integration.ClassEnrollmentApproverDetails"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Class Enrollment Approver Details" />
+		<put-attribute name="body"
+			value="/pages/D1/classEnrollmentApproverDetails.jsp" />
+	</definition>
+	<!-- Class Enrollment Form End -->
+	<!-- Information System Change Request Start -->
+	<definition name="d1Integration.InformationSystemChangeRequestList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title"
+			value="Information System Change Request List" />
+		<put-attribute name="body"
+			value="/pages/D1/infoSystemChangeRequestList.jsp" />
+	</definition>
+	<definition
+		name="d1Integration.InformationSystemChangeRequestDetails"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title"
+			value="Information System Change Request Details" />
+		<put-attribute name="body"
+			value="/pages/D1/infoSystemChangeRequestDetails.jsp" />
+	</definition>
+
+	<definition
+		name="d1Integration.InformationSystemChangeRequestApprList"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title"
+			value="Information System Change Request Approvar List" />
+		<put-attribute name="body"
+			value="/pages/D1/infoSystemChangeRequestApprList.jsp" />
+	</definition>
+	<definition
+		name="d1Integration.InformationSystemChangeRequestApprDetails"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title"
+			value="Information System Change Request Approver Details" />
+		<put-attribute name="body"
+			value="/pages/D1/infoSystemChangeRequestApprDetails.jsp" />
+	</definition>
+	<!-- Information System Change Request End -->
+		<!-- Termination MIS Start -->
+	<definition name="d1Integration.TerminationMISData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Termination MIS Report Details" />
+		<put-attribute name="body"
+			value="/pages/D1/reports/terminationMISReport.jsp" />
+	</definition>
+
+	<definition name="d1Integration.TerminationMISView"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Termination MIS View Report" />
+		<put-attribute name="body"
+			value="/pages/D1/reports/terminationViewMISReport.jsp" />
+	</definition>
+	<!-- Termination MIS End -->
+	<!-- Hire Rehire Mis Report Start -->
+	<definition name="hireRehireMisReport" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Hire Rehire Mis" />
+		<put-attribute name="body"
+			value="/pages/D1/reports/hireRehireMisReport.jsp" />
+	</definition>
+	<definition name="hireRehire.misReportView" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Hire Rehire MIS Report" />
+		<put-attribute name="body"
+			value="/pages/D1/reports/hireRehireMisReportView.jsp" />
+	</definition>
+	<!-- Hire Rehire Mis Report End -->
+	<!-- ATR MIS Report Start -->
+	<definition name="ATRMISReport" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="ATR MIS Report" />
+		<put-attribute name="body" value="/pages/D1/reports/aTRMISReport.jsp" />
+	</definition>
+	<definition name="ATRMISReport.misReportView"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="ATR MIS Report" />
+		<put-attribute name="body" value="/pages/D1/reports/aTRMISReportView.jsp" />
+	</definition>
+	<!-- ATR MIS Report End -->
+	<!-- D1 Super User Start -->
+	<definition name="D1SuperUser" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Late Regl MIS Report" />
+		<put-attribute name="body" value="/pages/D1/reports/d1SuperUser.jsp" />
+	</definition>
+	<!-- D1 Super User End -->
+	<!-- Quick Project Start -->
+	<definition name="D1.QuickProjectInput" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="ShortTermDisability" />
+		<put-attribute name="body" value="/pages/D1/quickProjectList.jsp" />
+	</definition>
+	<definition name="D1.QuickProject" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="ShortTermDisability" />
+		<put-attribute name="body" value="/pages/D1/quickProject.jsp" />
+	</definition>
+	<definition name="D1.QuickProjectAppr" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="ShortTermDisability" />
+		<put-attribute name="body" value="/pages/D1/quickProjectAppr.jsp" />
+	</definition>
+	<definition name="D1.QuickProjectApprInput" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="ShortTermDisability" />
+		<put-attribute name="body" value="/pages/D1/quickProjectApprList.jsp" />
+	</definition>
+	<!-- Quick Project End-->
+	<!-- Expense Mis Report Start -->
+	<definition name="expenseMisReport" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Expense MIS Report" />
+		<put-attribute name="body" value="/pages/D1/reports/expenseMISReport.jsp" />
+	</definition>	
+	<definition name="expense.misReportView" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Expense MIS Report" />
+		<put-attribute name="body" value="/pages/D1/reports/expenseMISReportView.jsp" />
+	</definition>
+	<!-- Expense Mis Report End -->
+	<!-- Work injury Mis Report Start -->
+	<definition name="d1Integration.WorkCompMISData"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title"
+			value="Work Comp Injury Illness MIS Report Details" />
+		<put-attribute name="body"
+			value="/pages/D1/reports/workcompinjuryMISReport.jsp" />
+	</definition>
+	<definition name="d1Integration.WorkCompMISView"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title"
+			value="Work Comp Injury Illness MIS View Report" />
+		<put-attribute name="body"
+			value="/pages/D1/reports/workcompinjuryViewMISReport.jsp" />
+	</definition>
+	<!-- Work injury Mis Report End -->
+	<!-- Business Requirement Document Start -->
+	<definition name="d1Integration.BRDList" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Business Req Document List" />
+		<put-attribute name="body" value="/pages/D1/businessReqDocList.jsp" />
+	</definition>
+	<definition name="d1Integration.BRDDetails" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Business Req Document Data" />
+		<put-attribute name="body" value="/pages/D1/businessReqDocDetails.jsp" />
+	</definition>
+	<definition name="d1Integration.BRDAppViewDetails"
+		extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Business Req Approval Document Data" />
+		<put-attribute name="body" value="/pages/D1/businessReqAppDetails.jsp" />
+	</definition>
+	<definition name="d1Integration.BRDAppList" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Business Req Approval Document List" />
+		<put-attribute name="body" value="/pages/D1/businessReqAppList.jsp" />
+	</definition>
+	<!-- Business Requirement Document End -->
+	<!-- Customer Concierge Request Start -->
+	<definition name="d1Integration.CustConciergeList" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Customer Concierge Request List" />
+		<put-attribute name="body"
+			value="/pages/D1/customerConciergeServiceRequestList.jsp" />
+	</definition>
+	<definition name="d1Integration.CustConciergeData" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Customer Concierge Request Detail" />
+		<put-attribute name="body"
+			value="/pages/D1/customerConciergeRequestData.jsp" />
+	</definition>
+
+	<definition name="d1Integration.CCSRApprList" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Customer Concierge Request Approval List" />
+		<put-attribute name="body"
+			value="/pages/D1/custConciergeServiceReqApproverList.jsp" />
+	</definition>	
+	<definition name="d1Integration.CCSRApprData" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Customer Concierge Request Approval List" />
+		<put-attribute name="body"
+			value="/pages/D1/custConciergeServiceReqApproverData.jsp" />
+	</definition>
+	<!-- Customer Concierge Request End -->
+	<!-- BRD Super User Start -->
+	<definition name="BRDSuperUserInitialPage" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="BRD Super User" />
+		<put-attribute name="body" value="/pages/D1/reports/brdSuperUser.jsp"></put-attribute>
+	</definition>
+	<!-- BRD Super User End -->	
+	<!-- Information System Change Mis Report Start -->
+	<definition name="infoChangeMisReport" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Information System Change Mis Report" />
+		<put-attribute name="body" value="/pages/D1/reports/informationSystemChangeMisReport.jsp"></put-attribute>
+	</definition>
+	<!-- Information System Change Mis Report End -->
+	<!-- BRD Mis Report Start -->
+	<definition name="brdMisReport" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="BRD Mis Report" />
+		<put-attribute name="body" value="/pages/D1/reports/brdMisReport.jsp"></put-attribute>
+	</definition>
+	<!-- BRD Mis Report End -->
+	<!-- Application Security Mis Report Start -->
+	<definition name="applicationSecurityMisReport" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Application Security Mis Report" />
+		<put-attribute name="body" value="/pages/D1/reports/applicationSecurityMisReport.jsp" />
+	</definition>		
+	<definition name="applicationSecurityMisReportView" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Application Security Mis Report" />
+		<put-attribute name="body" value="/pages/D1/reports/applicationSecurityMisReportView.jsp" />
+	</definition>
+	<!-- Application Security Mis Report End -->	
+		<!-- BRD Project type Start -->
+	<definition name="brdTypeListPage" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="BRD Type"/>
+		<put-attribute name="body" value="/pages/D1/brdTypeListPage.jsp"/>
+	</definition>	
+	<definition name="brdTypeDetailPage" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="BRD Type"/>
+		<put-attribute name="body" value="/pages/D1/brdTypeDetailPage.jsp"/>
+	</definition>
+	<!-- BRD Project type End -->
+	<!-- BRD Project Classification Start -->
+	<definition name="classificationListPage" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="BRD Type"/>
+		<put-attribute name="body" value="/pages/D1/brdClassificationListPage.jsp"/>
+	</definition>	
+	<definition name="classificationDetailPage" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="BRD Type"/>
+		<put-attribute name="body" value="/pages/D1/brdClassificationDetailPage.jsp"/>
+	</definition>
+	<!-- BRD Project Classification End -->
+
+</tiles-definitions>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+ 
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+
+	<definition name=".myPageLeftRightLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+
+	<definition name=".reportLayout"
+		template="/pages/common/reportLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	
+	<definition name=".payrollLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<!--  <put name="menu" value="/pages/common/payrollLeftMenu.jsp" />-->
+		<put-attribute name="menu" value="/pages/common/payrollLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+
+	<!-- Mapping for F9 Window  -->
+
+	<definition name="common.addTask" extends=".reportLayout">
+		<put-attribute name="body" value="/pages/common/calendar/addTask.jsp" />
+	</definition>
+
+	<definition name="common.f9TydutyPage" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9TydutyPage.jsp" />
+	</definition>
+	
+	<definition name="f9pageSearch" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9pageSearch.jsp" />
+	</definition>
+	<!-- Mapping END for F9 Window  -->
+	
+	<definition name="reimbursement.claimappl"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Reimbursement Clmaim Application" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbursementClmaimApplication.jsp" />
+	</definition>
+
+	<definition name="reimbursement.claimReimbursementJsp"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Booking Details" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbursementclaim.jsp" />
+	</definition>
+
+	<definition name="reimbursement.reimbursementHistory"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Reimbursement History" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbursementHistory.jsp" />
+	</definition>
+
+	<definition name="reimbursement.showApproval"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Reimbursement Admin Approval" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbAdminApproval.jsp" />
+	</definition>
+
+	<definition name="Reimb.managerApprovalView"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Manager Approval" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbManagerApprovalView.jsp" />
+	</definition>
+
+	<definition name="Reimbursement.disbursementData"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Reimbursement Disbursement" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbDisbursement.jsp" />
+	</definition>
+
+	<definition name="Reimb.managerApproval" extends=".mainLayout">
+		<put-attribute name="title" value="Manager Approval" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbManagerApproval.jsp" />
+	</definition>
+
+	<definition name="Reimb.managerApprovalView"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Manager Approval" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbManagerApprovalView.jsp" />
+	</definition>
+
+	<definition name="reimbursement.adminApproval"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Reimbursement Admin Approval" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbAdminApprovalList.jsp" />
+	</definition>
+
+	<definition name="reimbursement.showApproval"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Reimbursement Admin Approval" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbAdminApproval.jsp" />
+	</definition>
+
+	<definition name="reimbursement.report" extends=".payrollLayout">
+		<put-attribute name="title" value="Reimbursement Report" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbursementReport.jsp" />
+	</definition>
+
+	<definition name="Reimbursement.configurationList"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="configurationList" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbConfigurationList.jsp" />
+	</definition>
+
+	<definition name="Reimbursement.configurationData"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="configurationData" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbConfigurationData.jsp" />
+	</definition>
+
+	<definition name="Reimbursement.disbursementList"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Reimbursement Disbursement" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbDisbursementList.jsp" />
+	</definition>
+
+	<definition name="Reimbursement.disbursementData"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Reimbursement Disbursement" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbDisbursement.jsp" />
+	</definition>
+
+	<definition name="Reimbursement.processList"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Reimbursement Process" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbProcessList.jsp" />
+	</definition>
+
+	<definition name="Reimbursement.processData"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Reimbursement Process" />
+		<put-attribute name="body" value="/pages/reimbursement/reimbProcess.jsp" />
+	</definition>
+
+	<definition name="reimbursementbalance.report" extends=".payrollLayout">
+		<put-attribute name="title" value="Reimbursement Balance Report" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbursementBalanceReport.jsp" />
+	</definition>
+
+	<definition name="alert.mypage" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body"
+			value="/pages/mypage/mypageprocessManagerAlerts.jsp" />
+	</definition>
+
+	<definition name="mypage.services"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/mypage/services.jsp" />
+	</definition>
+
+
+
+
+	
+</tiles-definitions>

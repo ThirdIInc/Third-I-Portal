@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="master" namespace="/master"
+		extends="struts-default">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+		<action name="CheckListMaster_*" method="{1}"
+			class="org.struts.action.admin.master.CheckListMasterAction">
+			<result name="input" type="tiles">
+				master.CheckListMaster
+			</result>
+			<result name="success" type="tiles">
+				master.CheckListMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.CheckListReport
+			</result>
+			<result name="checkListData" type="tiles">
+				master.CheckListMasterData
+			</result>
+		</action>
+
+		<action name="RoadMilageMaster_*" method="{1}"
+			class="org.struts.action.admin.master.RoadMilageMasterAction">
+			<result name="input" type="tiles">master.Roadmilage</result>
+			<result name="success" type="tiles">
+				master.Roadmilage
+			</result>
+			<result name="report" type="tiles">
+				master.Roadmilagereport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="PayScaleMaster_*" method="{1}"
+			class="org.struts.action.admin.master.PayScaleMasterAction">
+			<result name="input" type="tiles">
+				master.payScaleMaster
+			</result>
+			<result name="success" type="tiles">
+				master.payScaleMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.payScaleMasterReport
+			</result>
+		</action>
+
+		<action name="CadreMaster_*" method="{1}"
+			class="org.struts.action.admin.master.CadreMasterAction">
+			<result name="input" type="tiles">
+				master.CadreMaster
+			</result>
+			<result name="success" type="tiles">
+				master.CadreMaster
+			</result>
+			<result name="report" type="tiles">
+				master.cardeReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="cadreData" type="tiles">
+				master.CadreMasterData
+			</result>
+		</action>
+
+		<action name="CasteMaster_*" method="{1}"
+			class="org.struts.action.admin.master.CasteMasterAction">
+			<result name="input" type="tiles">
+				master.CasteMaster
+			</result>
+			<result name="success" type="tiles">
+				master.CasteMaster
+			</result>
+			<result name="report" type="tiles">
+				master.CasteMasterReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="casteData" type="tiles">
+				master.CasteMasterData
+			</result>
+		</action>
+
+		<action name="LocationMaster_*" method="{1}"
+			class="org.struts.action.admin.master.LocationMasterAction">
+			<result name="input" type="tiles">
+				master.LocationMaster
+			</result>
+			<result name="success" type="tiles">
+				master.LocationMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.locationMasterReport
+			</result>
+			<result name="locationData" type="tiles">
+				master.LocationMasterData
+			</result>
+		</action>
+
+		<action name="DesignationMaster_*" method="{1}"
+			class="org.struts.action.admin.master.DesignationMasterAction">
+			<result name="input" type="tiles">
+				master.DesignationMaster
+			</result>
+			<result name="success" type="tiles">
+				master.DesignationMaster
+			</result>
+			<result name="report" type="tiles">
+				master.DesignationMasterReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="QualificationMaster_*" method="{1}"
+			class="org.struts.action.admin.master.QualificationMasterAction">
+			<result name="input" type="tiles">
+				master.QualificationMaster
+			</result>
+			<result name="success" type="tiles">
+				master.QualificationMaster
+			</result>
+			<result name="view" type="tiles">
+				master.QualificationMasterView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.QualificationReport
+			</result>
+			<result name="qualificationData" type="tiles">
+				master.QualificationMasterData
+			</result>
+		</action>
+
+		<action name="DeptMaster_*" method="{1}"
+			class="org.struts.action.admin.master.DeptMasterAction">
+			<result name="input" type="tiles">master.DeptMaster</result>
+			<result name="success" type="tiles">
+				master.DeptMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.DeptReport
+			</result>
+			<result name="deptData" type="tiles">
+				master.DeptMasterData
+			</result>
+		</action>
+
+		<action name="CenterMaster_*" method="{1}"
+			class="org.struts.action.admin.master.CenterMasterAction">
+			<result name="input" type="tiles">
+				master.CenterMaster
+			</result>
+			<result name="success" type="tiles">
+				master.CenterMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.CenterReport
+			</result>
+			<result name="centerData" type="tiles">
+				master.CenterMasterData
+			</result>
+		</action>
+
+		<action name="EmpTypeMaster_*" method="{1}"
+			class="org.struts.action.admin.master.EmpTypeMasterAction">
+			<result name="input" type="tiles">
+				master.EmpTypeMaster
+			</result>
+			<result name="success" type="tiles">
+				master.EmpTypeMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.EmpTypeReport
+			</result>
+			<result name="showData" type="tiles">
+				master.EmpTypeMasterData
+			</result>
+		</action>
+
+		<action name="DebitHeadMaster_*" method="{1}"
+			class="org.struts.action.admin.master.DebitHeadMasterAction">
+			<result name="input" type="tiles">
+				master.DebitHeadMaster
+			</result>
+			<result name="success" type="tiles">
+				master.DebitHeadMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.DebitHeadReport
+			</result>
+		</action>
+
+
+
+		<action name="BankMaster_*" method="{1}"
+			class="org.struts.action.admin.master.BankMasterAction">
+			<result name="input" type="tiles">master.BankMaster</result>
+			<result name="success" type="tiles">
+				master.BankMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.BankReport
+			</result>
+			<result name="bankData" type="tiles">
+				master.BankMasterData
+			</result>
+			<result name="defineTemplate" type="tiles">
+				master.DefineTemplate
+			</result>
+		</action>
+
+		<action name="LeaveMaster_*" method="{1}"
+			class="org.struts.action.admin.master.LeaveMasterAction">
+			<result name="input" type="tiles">leave.LeaveMaster</result>
+			<result name="success" type="tiles">
+				leave.LeaveMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.LeaveReport
+			</result>
+			<result name="leaveData" type="tiles">
+				leave.LeaveMasterData
+			</result>
+		</action>
+
+
+		<action name="DivisionMaster_*" method="{1}"
+			class="org.struts.action.admin.master.DivisionAction">
+			<result name="input" type="tiles">
+				master.DivisionMaster
+			</result>
+			<result name="success" type="tiles">
+				master.DivisionMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.DivisionReport
+			</result>
+			<result name="showData" type="tiles">
+				master.DivisionMasterData
+			</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			
+		</action>
+
+		<action name="RecruitmentMedium_*" method="{1}"
+			class="org.struts.action.admin.master.RecruitmentMediumAction">
+			<result name="input" type="tiles">
+				master.RecruitmentMedium
+			</result>
+			<result name="success" type="tiles">
+				master.RecruitmentMedium
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.RecruitmentReport
+			</result>
+		</action>
+
+
+		<action name="ShiftMaster_*" method="{1}"
+			class="org.struts.action.admin.master.ShiftMasterAction">
+			<result name="input" type="tiles">
+				master.ShiftMasterList
+			</result>
+			<result name="success" type="tiles">
+				master.ShiftMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.ShiftReport
+			</result>
+			<result name="leaveList" type="tiles">
+				master.ShiftLeaves
+			</result>
+		</action>
+
+		<action name="RelationMaster_*" method="{1}"
+			class="org.struts.action.admin.master.RelationMasterAction">
+			<result name="input" type="tiles">
+				master.RelationMaster
+			</result>
+			<result name="success" type="tiles">
+				master.RelationMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.RelationReport
+			</result>
+			<result name="relationData" type="tiles">
+				master.RelationMasterData
+			</result>
+		</action>
+
+		<action name="RankMaster_*" method="{1}"
+			class="org.struts.action.admin.master.RankMasterAction">
+			<result name="input" type="tiles">master.RankMaster</result>
+			<result name="success" type="tiles">
+				master.RankMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.RankReport
+			</result>
+			<result name="view" type="tiles">
+				master.RankMasterView
+			</result>
+			<result name="rankData" type="tiles">
+				master.RankMasterData
+			</result>
+		</action>
+
+		<action name="DisciplineMaster_*" method="{1}"
+			class="org.struts.action.admin.master.DisciplineMasterAction">
+			<result name="input" type="tiles">
+				master.DisciplineMaster
+			</result>
+			<result name="success" type="tiles">
+				master.DisciplineMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.DisciplineReport
+			</result>
+		</action>
+
+		<action name="ReligionMaster_*" method="{1}"
+			class="org.struts.action.admin.master.ReligionMasterAction">
+			<result name="input" type="tiles">
+				master.ReligionMaster
+			</result>
+			<result name="success" type="tiles">
+				master.ReligionMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.ReligionReport
+			</result>
+			<result name="religionData" type="tiles">
+				master.ReligionMasterData
+			</result>
+		</action>
+
+		<action name="TradeMaster_*" method="{1}"
+			class="org.struts.action.admin.master.TradeMasterAction">
+			<result name="input" type="tiles">
+				master.TradeMaster
+			</result>
+			<result name="success" type="tiles">
+				master.TradeMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.TradeReport
+			</result>
+			<result name="tradeData" type="tiles">
+				master.TradeMasterData
+			</result>
+		</action>
+
+		<action name="TitleMaster_*" method="{1}"
+			class="org.struts.action.admin.master.TitleMasterAction">
+			<result name="input" type="tiles">
+				master.TitleMaster
+			</result>
+			<result name="success" type="tiles">
+				master.TitleMaster
+			</result>
+			<result name="report" type="tiles">
+				master.TitleMasterReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="titleData" type="tiles">
+				master.TitleMasterData
+			</result>
+		</action>
+
+		<action name="AwardMaster_*" method="{1}"
+			class="org.struts.action.admin.master.AwardMasterAction">
+			<result name="input" type="tiles">
+				master.AwardMaster
+			</result>
+			<result name="success" type="tiles">
+				master.AwardMaster
+			</result>
+			<result name="report" type="tiles">
+				master.AwardReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="awardData" type="tiles">
+				master.AwardMasterData
+			</result>
+		</action>
+
+		<action name="CategoryMaster_*" method="{1}"
+			class="org.struts.action.admin.master.CategoryMasterAction">
+			<result name="input" type="tiles">
+				master.CategoryMaster
+			</result>
+			<result name="success" type="tiles">
+				master.CategoryMaster
+			</result>
+			<result name="report" type="tiles">
+				master.CategoryMasterReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="categoryData" type="tiles">
+				master.CategoryMasterData
+			</result>
+		</action>
+
+
+		<action name="PayBillMaster_*" method="{1}"
+			class="org.struts.action.admin.master.PayBillMasterAction">
+			<result name="input" type="tiles">
+				master.PayBillMaster
+			</result>
+			<result name="success" type="tiles">
+				master.PayBillMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.PayBillMasterReport
+			</result>
+		</action>
+
+		<action name="DiagnosisMaster_*" method="{1}"
+			class="org.struts.action.admin.master.DiagnosisMasterAction">
+			<result name="input" type="tiles">
+				master.DiagnosisMaster
+			</result>
+			<result name="success" type="tiles">
+				master.DiagnosisMaster
+			</result>
+			<result name="report" type="tiles">
+				master.DiagnosisMasterReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+
+		<action name="HolidayMaster_*" method="{1}"
+			class="org.struts.action.admin.master.HolidayMasterAction">
+			<result name="input" type="tiles">
+				master.HolidayMaster
+			</result>
+			<result name="success" type="tiles">
+				master.HolidayMaster
+			</result>
+			<result name="report" type="tiles">
+				master.HolidayMasterReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="holidayData" type="tiles">
+				master.HolidayMasterData
+			</result>
+		</action>
+
+		<action name="BranchHolidayMaster_*" method="{1}"
+			class="org.struts.action.admin.master.BranchHolidayMasterAction">
+			<result name="input" type="tiles">
+				master.BranchHolidayMaster
+			</result>
+			<result name="success" type="tiles">
+				master.BranchHolidayMaster
+			</result>
+			<result name="report" type="tiles">
+				master.BranchHolidayMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="PunishMaster_*" method="{1}"
+			class="org.struts.action.admin.master.PunishMasterAction">
+			<result name="input" type="tiles">
+				master.PunishMaster
+			</result>
+			<result name="success" type="tiles">
+				master.PunishMaster
+			</result>
+			<result name="report" type="tiles">
+				master.PunishMasterReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="punishData" type="tiles">
+				master.PunishMasterData
+			</result>
+		</action>
+
+
+		<action name="ExpendMaster_*" method="{1}"
+			class="org.struts.action.admin.master.ExpenditureAction">
+			<result name="input" type="tiles">master.expend</result>
+			<result name="success" type="tiles">master.expend</result>
+			<result name="report" type="tiles">master.report</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+
+		<action name="Requisition_*" method="{1}"
+			class="org.struts.action.admin.master.RequisitionAction">
+			<result name="input" type="tiles">
+				master.Requisition
+			</result>
+			<result name="success" type="tiles">
+				master.Requisition
+			</result>
+			<result name="report" type="tiles">
+				master.RequiReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="Company_*" method="{1}"
+			class="org.struts.action.admin.master.CompanyMasterAction">
+			<result name="input" type="tiles">
+				master.companyMaster
+			</result>
+			<result name="success" type="tiles">
+				master.companyMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="PFParameter_*" method="{1}"
+			class="org.struts.action.admin.master.PFParameterAction">
+			<result name="input" type="tiles">
+				master.PFParameter
+			</result>
+			<result name="success" type="tiles">
+				master.PFParameter
+			</result>
+			<result name="EPFScreen" type="tiles">
+				master.EPFScreen
+			</result>
+			<result name="GPFScreen" type="tiles">
+				master.GPFScreen
+			</result>
+			<result name="VPFScreen" type="tiles">
+				master.VPFScreen
+			</result>
+			<result name="PFTrustScreen" type="tiles">
+				master.PFTrustScreen
+			</result>
+			<result name="ConfigEmpScreen" type="tiles">
+				master.ConfigEmpScreen
+			</result>
+			<result name="report" type="tiles">
+				master.PFParameter
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+			<result name="EPFScreenData" type="tiles">
+				master.EPFScreenData
+			</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+		<action name="ESIMaster_*" method="{1}"
+			class="org.struts.action.admin.master.ESIMasterAction">
+			<result name="input" type="tiles">master.ESIMaster</result>
+			<result name="success" type="tiles">
+				master.ESIMaster
+			</result>
+			<result name="report" type="tiles">master.ESIMaster</result>
+			<result name="showData" type="tiles">
+				master.ESIMasterData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="SkillMaster_*" method="{1}"
+			class="org.struts.action.admin.master.SkillMasterAction">
+			<result name="input" type="tiles">
+				master.SkillMaster
+			</result>
+			<result name="success" type="tiles">
+				master.SkillMaster
+			</result>
+			<result name="view" type="tiles">
+				master.SkillMasterView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.SkillMaster
+			</result>
+		</action>
+
+		<action name="SpecializationMaster_*" method="{1}"
+			class="org.struts.action.admin.master.SpecializationMasterAction">
+			<result name="input" type="tiles">
+				master.SpecializationMaster
+			</result>
+			<result name="success" type="tiles">
+				master.SpecializationMaster
+			</result>
+			<result name="view" type="tiles">
+				master.SpecializationMasterView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.SpecializationMaster
+			</result>
+		</action>
+
+		<action name="RecruitmentPartners_*" method="{1}"
+			class="org.struts.action.admin.master.RecruitmentPartnersAction">
+			<result name="input" type="tiles">
+				master.RecpatnersMaster
+			</result>
+			<result name="success" type="tiles">
+				master.RecpatnersMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.RecpatnersMaster
+			</result>
+			<result name="view" type="tiles">
+				master.RecpatnersMasterView
+			</result>
+		</action>
+
+		<action name="JobDescriptionMaster_*" method="{1}"
+			class="org.struts.action.admin.master.JobDescriptionMasterAction">
+			<result name="input" type="tiles">
+				master.JobDescriptionMaster
+			</result>
+			<result name="success" type="tiles">
+				master.JobDescriptionMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.JobDescriptionMaster
+			</result>
+			<result name="view" type="tiles">
+				master.JobDescriptionMasterView
+			</result>
+		</action>
+
+		<!--Round Type Master ADDED BY DHANASHREE-->
+		<action name="RoundTypeMaster_*" method="{1}"
+			class="org.struts.action.admin.master.RoundTypeMasterAction">
+			<result name="input" type="tiles">
+				master.roundTypeMasterList
+			</result>
+			<result name="success" type="tiles">
+				master.roundTypeMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="ProfTaxMaster_*" method="{1}"
+			class="org.struts.action.admin.master.ProfTaxAction">
+			<!-- UPDATED BY REEBA -->
+			<result name="input" type="tiles">
+				master.ProfTaxMasterList
+			</result>
+			<result name="success" type="tiles">
+				master.ProfTaxMaster
+			</result>
+			<result name="report" type="tiles">
+				master.ProfTaxMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+		<action name="ExamMaster_*" method="{1}"
+			class="org.struts.action.exam.ExamMasterAction">
+			<result name="input" type="tiles">master.examMaster</result>
+			<result name="success" type="tiles">
+				master.examMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="view" type="tiles">
+				master.examMasterView
+			</result>
+			<result name="contentPage" type="tiles">contentPage</result>
+			<result name="instructionPage" type="tiles">instructionPage</result>
+		</action>
+
+		<action name="QuestionBankAction_*" method="{1}"
+			class="org.struts.action.exam.QuestionBankAction">
+			<result name="input" type="tiles">
+				master.QuestionBank
+			</result>
+			<result name="success" type="tiles">
+				master.QuestionBank
+			</result>
+			<result name="readOnly" type="tiles">
+				master.readonly
+			</result>
+			<result name="view" type="tiles">master.view</result>
+			<result name="viewAns" type="tiles">master.viewAns</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+				
+		</action>
+
+		<action name="OnlinePaper_*" method="{1}"
+			class="org.struts.action.recruitment.OnlinePaperAction">
+			<result name="input" type="tiles">
+				recruitment.OnlinePaper
+			</result>
+			<result name="success" type="tiles">
+				recruitment.OnlinePaper
+			</result>
+			<result name="report" type="tiles">
+				recruitment.OnlinePaper
+			</result>
+			<result name="priview" type="tiles">
+				recruitment.priview
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="CandidateSchedule_*" method="{1}"
+			class="org.struts.action.exam.CandidateScheduleAction">
+			<result name="input" type="tiles">
+				master.CandidateSchedule
+			</result>
+			<result name="success" type="tiles">
+				master.CandidateSchedule
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="CandidateScheduleReport_*" method="{1}"
+			class="org.struts.action.exam.CandidateScheduleReportAction">
+			<result name="input" type="tiles">
+				master.CandidateScheduleReport
+			</result>
+			<result name="success" type="tiles">
+				master.CandidateScheduleReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="IndustryMaster_*" method="{1}"
+			class="org.struts.action.admin.master.IndustryMasterAction">
+			<result name="input" type="tiles">
+				master.IndustryMaster
+			</result>
+			<result name="success" type="tiles">
+				master.IndustryMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="view" type="tiles">
+				master.IndustryMasterView
+			</result>
+		</action>
+
+		<action name="CandidatesTestResult_*" method="{1}"
+			class="org.struts.action.exam.CandidatesTestResultAction">
+			<result name="input" type="tiles">
+				master.CandidatesTestResult
+			</result>
+			<result name="success" type="tiles">
+				master.CandidatesTestResult
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="JourneyMaster_*" method="{1}"
+			class="org.struts.action.admin.master.JourneyMasterAction">
+			<result name="input" type="tiles">
+				master.JourneyMaster
+			</result>
+			<result name="success" type="tiles">
+				master.JourneyMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="TaskProject_*" method="{1}"
+			class="org.struts.action.admin.master.TaskProjectAction">
+			<result name="input" type="tiles">
+				master.TaskProject
+			</result>
+			<result name="success" type="tiles">
+				master.TaskProject
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="projectData" type="tiles">
+				master.TaskProjectData
+			</result>
+		</action>
+
+		<action name="TaskMaster_*" method="{1}"
+			class="org.struts.action.admin.master.TaskMasterAction">
+			<result name="input" type="tiles">master.TaskMaster</result>
+			<result name="success" type="tiles">
+				master.TaskMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="taskData" type="tiles">
+				master.TaskMasterData
+			</result>
+		</action>
+
+
+		<action name="FormulaBuilder_*" method="{1}"
+			class="org.struts.action.FormulaBuilder.FormulaBuilderAction">
+			<result name="input" type="tiles">
+				payroll.FormulaBuilder
+			</result>
+			<result name="success" type="tiles">
+				payroll.FormulaBuilder
+			</result>
+			<result name="report" type="tiles">
+				payroll.FormulaBuilder
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9calc">
+				/pages/FormulaBuilder/formulaCalc.jsp
+			</result>
+		</action>
+
+		<action name="MailEventsMaster_*" method="{1}"
+			class="org.struts.action.admin.master.MailEventsMasterAction">
+			<result name="input" type="tiles">
+				master.MailEventMaster
+			</result>
+			<result name="success" type="tiles">
+				master.MailEventMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="ModuleMaster_*" method="{1}"
+			class="org.struts.action.admin.master.ModuleMasterAction">
+			<result name="input" type="tiles">
+				master.ModuleMaster
+			</result>
+			<result name="success" type="tiles">
+				master.ModuleMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="OnsitePosting_*" method="{1}"
+			class="org.struts.action.admin.master.OnsitePostingAction">
+			<result name="input" type="tiles">
+				master.OnsitePostingMaster
+			</result>
+			<result name="success" type="tiles">
+				master.OnsitePostingMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="postingData" type="tiles">
+				master.OnsitePostingData
+			</result>
+		</action>
+
+		<action name="AccountCategoryMaster_*" method="{1}"
+			class="org.struts.action.admin.master.AccountCategoryMasterAction">
+			<result name="input" type="tiles">
+				master.AccountCategoryMaster
+			</result>
+			<result name="success" type="tiles">
+				master.AccountCategoryMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="accountData" type="tiles">
+				master.AccountCategoryMasterData
+			</result>
+		</action>
+		<action name="CostCenterMaster_*" method="{1}"
+			class="org.struts.action.admin.master.CostCenterMasterAction">
+			<result name="input" type="tiles">
+				master.CostCenterMaster
+			</result>
+			<result name="success" type="tiles">
+				master.CostCenterMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="castCenterData" type="tiles">
+				master.CostCenterMasterData
+			</result>
+		</action>
+
+
+		<!-- LWF Configuration -->
+		<action name="LWFConfigurationMaster_*" method="{1}"
+			class="org.struts.action.admin.master.LWFConfigurationMasterAction">
+			<result name="input" type="tiles">
+				lwf.configurationList
+			</result>
+			<result name="success" type="tiles">
+				lwf.configuration
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+		</action>
+
+		<action name="LeaveReason_*" method="{1}"
+			class="org.struts.action.leave.LeaveReasonAction">
+			<result name="input" type="tiles">
+				master.LeaveReason
+			</result>
+			<result name="success" type="tiles">
+				master.LeaveReason
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="showData" type="tiles">
+				master.LeaveReasonData
+			</result>
+		</action>
+		<!-- Added By Anantha lakshmi -->
+		<action name="DivisionConfiguration_*" method="{1}"
+			class="org.struts.action.admin.master.DivisionConfigurationAction">
+			<result name="input" type="tiles">
+				master.DivisionConfig
+			</result>
+			<result name="success" type="tiles">
+				master.DivisionConfig
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				master.DivisionReport
+			</result>
+			<result name="showData" type="tiles">
+				master.DivisionConfigData
+			</result>
+		</action>
+
+
+		<action name="LangMaster_*" method="{1}"
+			class="org.struts.action.admin.master.LangMasterAction">
+			<result name="input" type="tiles">master.LangMaster</result>
+			<result name="success" type="tiles">
+				master.LangMaster
+			</result>
+			<result name="report" type="tiles">
+				master.LangReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="langData" type="tiles">
+				master.LangMasterData
+			</result>
+		</action>
+
+		<!-- Added by Nilesh D on 24th Nov 2011 -->
+		<action name="FinancialStatement_*" method="{1}"
+			class="org.struts.action.admin.master.FinancialStatementAction">
+			<result name="input" type="tiles">
+				master.ViewDetails
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+		
+		<action name="EmailPayrollReport_*" method="{1}" class="org.struts.action.payroll.EmailPayrollReportAction">
+				<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Added by Prajakta B. on 6th Feb 2013 for MyApps-->
+		<action name="MyAppsMaster_*" method="{1}" class="org.struts.action.admin.master.MyAppsMasterAction">
+				<result name="success" type="tiles">master.MyApps</result>
+				<result name="input" type="tiles">master.MyApps</result>
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+				<result name="showData" type="tiles">master.MyAppsData</result>
+		</action>
+		<!--ends Added by Prajakta B. on 6th Feb 2013 for MyApps-->
+		
+	</package>
+</struts>

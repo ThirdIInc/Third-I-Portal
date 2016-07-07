@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+ 
+
+	<definition name=".homeLayout"
+		template="/pages/common/homeLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name=".myPageLeftRightLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name=".reportLayout"
+		template="/pages/common/reportLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+	<definition name=".loginLayout"
+		template="/pages/common/loginLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+ 
+
+	<definition name="portalHomePage" extends=".homeLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/portal/employeePortal.jsp" />
+	</definition>
+	
+	<definition name="login.glodyneLogout" extends=".loginLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/portal/glodyneLogout.jsp" />
+	</definition>
+
+
+	<definition name="login.ChangeExpiryPassword"
+		extends=".loginLayout">
+		<put-attribute name="title" value="Change Expiry Password" />
+		<put-attribute name="body" value="/pages/portal/changeExpiryPassword.jsp" />
+	</definition>
+
+
+	<definition name="login.secureImgMsg" extends=".reportLayout">
+		<put-attribute name="title" value="Secure Message And Image" />
+		<put-attribute name="body"
+			value="/pages/portal/secureImageAndMessage.jsp" />
+	</definition>
+
+	<definition name="login.ChangeFirstLoginpassword"
+		extends=".reportLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body"
+			value="/pages/portal/changeFirstLoginGlodynePassword.jsp" />
+	</definition>
+	
+	<definition name="login.securityquestion" extends=".loginLayout">
+		<put-attribute name="title" value="Login Security Questions" />
+		<put-attribute name="body"
+			value="/pages/portal/loginSecurityQuestions.jsp" />
+	</definition>
+
+	<definition name="login.Employeeportal" extends=".homeLayout">
+		<put-attribute name="title" value="Employee Portal" />
+		<put-attribute name="body" value="/pages/common/employeePortalHome.jsp" />
+	</definition>
+
+
+	<definition name="login.connectWithCeo" extends=".mainLayout">
+		<put-attribute name="title" value="Employee Portal" />
+		<put-attribute name="body" value="/pages/portal/connectWithCeo.jsp" />
+	</definition>
+
+	<definition name="mypage.search" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/mypage/myPagEmpDirSearch.jsp" />
+	</definition>
+
+	<definition name="moreInfoDashlet"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/portal/moreInfoabtdashlet.jsp" />
+	</definition>
+
+	<definition name="mypage.showMoreInfo"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/portal/showGeneralInfo.jsp" />
+	</definition>
+
+
+	<definition name="mypage.employeeDtlRecord"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/portal/employeeSearchDetail.jsp" />
+	</definition>
+
+	<definition name="mypage.showQuickDownload"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/common/showMoreQuickDownload.jsp" />
+	</definition>
+	
+	<definition name="mypage.showKnowledge"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/common/showMoreKnowledge.jsp" />
+	</definition>
+	
+	<definition name="mypage.quickContactsDashlet"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/common/quickContactsDashlet.jsp" />
+	</definition>
+
+
+	<definition name="login.forgotPassword" extends=".reportLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body"
+			value="/pages/portal/glodyneforgotPassword.jsp" />
+	</definition>
+
+
+	<definition name="login.forgotPwdError" extends=".loginLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/portal/glodyneerror.jsp" />
+	</definition>
+
+	<definition name="login.forgotpasswordquestion"
+		extends=".reportLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body"
+			value="/pages/portal/glodyneForgotPassQuestion.jsp" />
+	</definition>
+
+	<definition name="login.multipleusernamecredential"
+		extends=".reportLayout">
+		<put-attribute name="title" value="Multiple User Name Credential" />
+		<put-attribute name="body" value="/pages/portal/multipleUserName.jsp" />
+	</definition>
+
+	<definition name="relogin.Login" extends=".loginLayout">
+		<put-attribute name="title" value="Session Expired" />
+		<put-attribute name="body" value="/pages/common/relogin.jsp" />
+	</definition>
+
+
+	<definition name="relogin.blank" extends=".loginLayout">
+		<put-attribute name="title" value="Session Expired" />
+		<put-attribute name="body" value="/pages/common/blank.html" />
+	</definition>
+
+
+	<definition name="eventData" extends=".reportLayout">
+		<put-attribute name="title" value="GloFest Event" />
+		<put-attribute name="body" value="/pages/portal/glofestEvent.jsp" />
+	</definition>
+
+	<definition name="rightglofest"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/portal/rightglofest.jsp" />
+	</definition>
+
+	<definition name="rewardPage"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/portal/reward.jsp" />
+	</definition>
+
+<!--entry for helpdesk starts -->
+
+	<definition name="portal.helpDeskEvent" extends=".reportLayout">
+		<put-attribute name="title" value="GloFest Event" />
+		<put-attribute name="body" value="/pages/portal/helpDeskEvent.jsp" />
+	</definition>
+
+	<!--entry for helpdesk ends-->
+
+	<definition name="mynotes" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/portal/myNotes.jsp" />
+	</definition>
+
+	<definition name="MyFavourites" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/portal/myFavourites.jsp" />
+	</definition>
+	
+
+
+<!--entry for mypage starts-->
+	<definition name="mypage.search" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/mypage/myPagEmpDirSearch.jsp" />
+	</definition>
+
+	<definition name="mypage.holidays"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Holidays" />
+		<put-attribute name="body" value="/pages/mypage/holidays.jsp" />
+	</definition>
+
+	<!--entry for mypage ends-->
+
+</tiles-definitions>

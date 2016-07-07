@@ -1,0 +1,18 @@
+<!DOCTYPE validators PUBLIC
+        "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+        "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+    <field name="leaveApplication.empCode">
+        <field-validator type="requiredstring">
+            <message key="requiredstring"/>
+        </field-validator>
+    </field>
+    
+    <field name="leaveApplication.relieverName">
+        <field-validator type="requiredstring">
+           <message key="i18n.requiredstring"><![CDATA[ required and must be string ]]></message>
+        </field-validator>
+    </field>
+    
+</validators>

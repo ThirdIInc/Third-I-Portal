@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="dataMigration" namespace="/dataMigration" extends="struts-default">
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+		</result-types>
+		
+		<action name="EmpDetailsUpload_*" method="{1}" class="org.struts.action.DataMigration.EmpDetailsUploadAction">
+			<result name="input" type="tiles">DataMigration.empDetails</result>
+			<result name="success" type="tiles">DataMigration.empDetails</result>
+		</action>
+		
+		<action name="MasterDetailsUpload_*" method="{1}" class="org.struts.action.DataMigration.MasterDetailsUploadAction">
+			<result name="input" type="tiles">DataMigration.masterDetails</result>
+			<result name="success" type="tiles">DataMigration.masterDetails</result>
+		</action>
+		
+		<action name="PesonalPartialUpload_*" method="{1}" class="org.struts.action.DataMigration.PersonalPartialUploadAction">
+			<result name="input" type="tiles" >partialUpload.personal</result>
+			<result name="success" type="tiles">partialUpload.personal</result>	
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="EmployeewiseUpload_*" method="{1}" class="org.struts.action.DataMigration.EmployeewiseUploadAction">
+			<result name="input" type="tiles">DataMigration.employeewiseUpload</result>
+			<result name="success" type="tiles">DataMigration.employeewiseUpload</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="OfficalPartialUpload_*" method="{1}" class="org.struts.action.DataMigration.OfficialPartialUploadAction">
+			<result name="input" type="tiles">partialUpload.official</result>
+			<result name="success" type="tiles">partialUpload.official</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="AssetMasterUpload_*" method="{1}" class="org.struts.action.DataMigration.AssetMasterUploadAction">
+			<result name="input" type="tiles">DataMigration.assetMaster</result>
+			<result name="success" type="tiles">DataMigration.assetMaster</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="CandidateDetailsUpload_*" method="{1}" class="org.struts.action.DataMigration.CandidateDetailsUploadAction">
+			<result name="input" type="tiles">DataMigration.CndDetails</result>
+			<result name="success" type="tiles">DataMigration.CndDetails</result>
+		</action>
+		
+	</package> 
+</struts>

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="leaves" namespace="/leaves"
+		extends="struts-default">
+
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+		<!--
+			
+			<action name="LeaveMaster_*" method="{1}"
+			class="org.struts.action.leave.LeaveMasterAction"><result name="input" type="tiles">leave.LeaveMaster</result>
+			<result name="success" type="tiles">leave.LeaveMaster</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			</action>
+			
+			
+		-->
+
+		<action name="LeaveBalance_*" method="{1}"
+			class="org.struts.action.leave.LeaveBalanceAction">
+			<result name="input" type="tiles">
+				leave.LeaveBalance
+			</result>
+			<result name="success" type="tiles">
+				leave.LeaveBalance
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				leave.LeaveBalReport
+			</result>
+		</action>
+
+		<action name="LeaveApproval_*" method="{1}"
+			class="org.struts.action.leave.LeaveApprovalAction">
+			<result name="input" type="tiles">
+				leave.LeaveApproval
+			</result>
+			<result name="success" type="tiles">
+				leave.LeaveApproval
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="leaveApplicationForm" type="tiles">
+				leave.leaveApplicationForm
+			</result>
+		</action>
+
+		<action name="LeaveAdminApproval_*" method="{1}"
+			class="org.struts.action.leave.LeaveAdminApprovalAction">
+			<result name="input" type="tiles">
+				leave.LeaveAdminApproval
+			</result>
+			<result name="success" type="tiles">
+				leave.LeaveAdminApproval
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="leaveApplicationForm" type="tiles">
+				leave.leaveAdminApplicationForm
+			</result>
+		</action>
+
+		<action name="LeaveApplication_*" method="{1}"
+			class="org.struts.action.leave.LeaveApplicationAction">
+			<result name="input" type="tiles">
+				leave.LeaveApplication
+			</result>
+			<result name="success" type="tiles">
+				leave.LeaveApplication
+			</result>
+			<result name="successApprov" type="chain">
+				LeaveApproval_approve
+			</result>
+			<result name="successCancel" type="chain">
+				LeaveCancel_input
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				leave.LeaveReport
+			</result>
+			<result name="reportGeneral" type="tiles">
+				leave.LeaveGenReport
+			</result>
+			<result name="f9ParamPage" type="tiles">
+				common.f9ParamPage
+			</result>
+			<result name="successJsp" type="tiles">
+				leave.levhistory
+			</result>
+			<result name="leaveApplicationJsp" type="tiles">
+				leave.levApplicationJsp
+			</result>
+			<result name="leaveApplicationFirstJsp" type="tiles">
+				leave.levApplicationFirstJsp
+			</result>
+			<result name="leaveApprovalJsp" type="chain">
+				LeaveApproval_callstatus
+			</result>
+			<result name="leaveAdminApprovalJsp" type="chain">
+				LeaveAdminApproval_callstatus
+			</result>
+			<!-- For mypage Entry starts -->
+			<result name="mymessages" type="chain">
+				MypageProcessManagerAlerts_input
+			</result>
+			<result name="serviceJsp" type="chain">
+				MypageProcessManagerAlerts_serviceData
+			</result>
+
+			<result name="mytimeCard" type="chain">
+				MypageProcessManagerAlerts_mytimeCard
+			</result>
+
+			<result name="myLeaves" type="chain">
+				MypageProcessManagerAlerts_myLeaves
+			</result>
+
+			<!-- Added by janisha for redesign purpose -->
+
+			<result name="leaveApplicationApprovalJsp" type="tiles">
+				leave.leaveApplicationApprovalJsp
+			</result>
+
+			<!-- For mypage Entry ends -->
+
+
+		</action>
+
+		<action name="LeaveCancel_*" method="{1}"
+			class="org.struts.action.leave.LeaveCancelAction">
+			<result name="input" type="tiles">leave.LeaveCancel</result>
+			<result name="success" type="tiles">
+				leave.LeaveCancel
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="LeaveExtension_*" method="{1}"
+			class="org.struts.action.leave.LeaveExtensionAction">
+			<result name="input" type="tiles">
+				leave.LeaveExtension
+			</result>
+			<result name="success" type="tiles">
+				leave.LeaveExtension
+			</result>
+			<result name="successView" type="tiles">
+				leave.LeaveExtensionView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="LeaveAudit_*" method="{1}"
+			class="org.struts.action.leave.LeaveAuditAction">
+			<result name="input" type="tiles">leave.LeaveAudit</result>
+			<result name="success" type="tiles">
+				leave.LeaveAudit
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="leaveBalanceReport_*" method="{1}"
+			class="org.struts.action.leave.LeaveBalanceReportAction">
+			<result name="input" type="tiles">
+				leave.leaveBalanceReport
+			</result>
+			<result name="success" type="tiles">
+				leave.leaveBalanceReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="LeaveDCE_*" method="{1}"
+			class="org.struts.action.leave.LeaveDCEListAction">
+			<result name="input" type="tiles">leave.dce</result>
+			<result name="success" type="tiles">leave.dce</result>
+		</action>
+
+		<action name="LeavePolicy_*" method="{1}"
+			class="org.struts.action.leave.LeavePolicyAction">
+			<result name="input" type="tiles">leave.LeavePolicy</result>
+			<result name="success" type="tiles">
+				leave.LeavePolicy
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9calc" type="tiles">leave.leavecons</result>
+			<result name="leaveList" type="tiles">
+				leave.ShiftLeaves
+			</result>
+			<result name="leaveintervalmonth" type="tiles">
+				leave.intervalMonth
+			</result>
+		</action>
+
+		<action name="LeaveMisReport_*" method="{1}"
+			class="org.struts.action.leave.LeaveMisReportAction">
+			<result name="input" type="tiles">leave.LeaveMisReport</result>
+			<result name="success" type="tiles">leave.LeaveMisReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+		<action name="LeaveEncashment_*" method="{1}"
+			class="org.struts.action.leave.LeaveEncashmentAction">
+			<result name="input" type="tiles">
+				leave.LeaveEncashmentAppl
+			</result>
+			<result name="success" type="tiles">
+				leave.LeaveEncashment
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="successJspPage" type="tiles">
+				leave.encashHistory
+			</result>
+			<!-- my page code -->
+			<result name="mymessages" type="chain">
+				MypageProcessManagerAlerts_input
+			</result>
+			<result name="serviceJsp" type="chain">
+				MypageProcessManagerAlerts_serviceData
+			</result>
+		</action>
+
+		<action name="LeaveEntitle_*" method="{1}"
+			class="org.struts.action.leave.LeaveEntitleAction">
+			<result name="input" type="tiles">
+				leave.LeaveEntitle
+			</result>
+			<result name="success" type="tiles">
+				leave.LeaveEntitle
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+
+		<action name="LeaveRegularization_*" method="{1}"
+			class="org.struts.action.leave.LeaveRegularizationAction">
+			<result name="input" type="tiles">
+				leave.LeaveRegularization
+			</result>
+			<result name="success" type="tiles">
+				leave.LeaveRegularization
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mytimeCard" type="chain">
+				MypageProcessManagerAlerts_mytimeCard
+			</result>
+
+		</action>
+		<!-- 
+			<action name="LeaveEncashmentReport_*" method="{1}" class="org.struts.action.leave.LeaveEncashmentReportAction">
+			<result name="input" type="tiles">leave.LeaveEncashmentReport</result>
+			<result name="success" type="tiles">leave.LeaveMisReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			</action>
+			
+		-->
+		<action name="LeaveEncashmentReport_*" method="{1}"
+			class="org.struts.action.leave.LeaveEncashmentReportAction">
+			<result name="input" type="tiles">
+				leave.LeaveEncashmentReport
+			</result>
+			<result name="success" type="tiles">
+				leave.LeaveEncashmentReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">
+				common.mailReport
+			</result>
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+		</action>
+
+
+		<action name="LeaveEncashApproval_*" method="{1}"
+			class="org.struts.action.leave.LeaveEncashApprovalAction">
+			<result name="input" type="tiles">
+				leave.LeaveEncashmentApproval
+			</result>
+			<result name="success" type="tiles">
+				leave.LeaveEncashmentApproval
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mymessages" type="chain">
+				MypageProcessManagerAlerts_input
+			</result>
+			<result name="serviceJsp" type="chain">
+				MypageProcessManagerAlerts_serviceData
+			</result>
+		</action>
+
+
+		<action name="LeaveApplicationMis_*" method="{1}"
+			class="org.struts.action.leave.LeaveApplicationMisAction">
+			<result name="input" type="tiles">
+				leave.LeaveApplicationMis
+			</result>
+			<result name="success" type="tiles">
+				leave.LeaveApplicationMis
+			</result>
+			<result name="mailReport" type="tiles">
+				common.mailReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+		</action>
+
+		<action name="LeaveHistoryMis_*" method="{1}"
+			class="org.struts.action.leave.LeaveHistoryMisAction">
+			<result name="input" type="tiles">
+				leave.LeaveHistoryMis
+			</result>
+			<result name="success" type="tiles">
+				leave.LeaveHistoryMis
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+			<result name="mailReport" type="tiles">
+				common.mailReport
+			</result>
+		</action>
+
+		<action name="LeaveCancelApproval_*" method="{1}"
+			class="org.struts.action.leave.LeaveCancelApprovalAction">
+			<result name="input" type="tiles">
+				leave.LeaveCancelApproval
+			</result>
+			<result name="success" type="tiles">
+				leave.LeaveCancelApproval
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="LeavePolicySetting_*" method="{1}"
+			class="org.struts.action.leave.LeavePolicySettingAction">
+			<result name="input" type="tiles">
+				leave.LeavePolicySetting
+			</result>
+			<result name="success" type="tiles">
+				leave.LeavePolicySetting
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+		<action name="LeavePolicyMIS_*" method="{1}"
+			class="org.struts.action.leave.LeavePolicyMISReportAction">
+			<result name="input" type="tiles">
+				leave.LeavePolicyMIS
+			</result>
+			<result name="success" type="tiles">
+				leave.LeavePolicyMIS
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">
+				common.mailReport
+			</result>
+		</action>
+
+		<!-- Add Leave Regularization-->
+		<action name="Regularization_*" method="{1}"
+			class="org.struts.action.leave.RegularizationAction">
+			<result name="input" type="tiles">
+				leave.Regularization
+			</result>
+			<result name="success" type="tiles">
+				leave.Regularization
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="regularizationList" type="tiles">
+				leave.regularizationList
+			</result>
+			<result name="regularizationAppl" type="tiles">
+				leave.regularizationAppl
+			</result>
+			<result name="personalTime" type="tiles">
+				leave.personalTime
+			</result>
+
+			<!-- for mypage -->
+
+			<result name="mytimeCard" type="chain">
+				MypageProcessManagerAlerts_mytimeCard
+			</result>
+
+			<result name="attendanceRegularization" type="chain">
+				MypageProcessManagerAlerts_attendanceRegularization
+			</result>
+
+			<result name="serviceJsp" type="chain">
+				MypageProcessManagerAlerts_serviceData
+			</result>
+
+			<result name="mymessages" type="chain">
+				MypageProcessManagerAlerts_input
+			</result>
+
+
+		</action>
+
+		<action name="RegularizationApproval_*" method="{1}"
+			class="org.struts.action.leave.RegularizationApprovalAction">
+			<result name="input" type="tiles">
+				leave.RegularizationApproval
+			</result>
+			<result name="success" type="tiles">
+				leave.RegularizationApproval
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="regularizationApprAppl" type="tiles">
+				leave.regularizationApprAppl
+			</result>
+			<result name="personalTime" type="tiles">
+				leave.personalTime
+			</result>
+
+			<!-- For mypage Entry starts -->
+			<result name="mymessages" type="chain">
+				MypageProcessManagerAlerts_input
+			</result>
+
+
+			<result name="serviceJsp" type="chain">
+				MypageProcessManagerAlerts_serviceData
+			</result>
+
+
+
+
+
+
+
+		</action>
+
+		<action name="MaternityLeaveSetting_*" method="{1}"
+			class="org.struts.action.leave.MaternityLeaveSettingAction">
+			<result name="input" type="tiles">leave.Maternity</result>
+			<result name="success" type="tiles">leave.Maternity</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="LeaveEncashmentProcess_*" method="{1}"
+			class="org.struts.action.leave.LeaveEncashmentProcessAction">
+			<result name="input" type="tiles">
+				leave.leaveEncashmentProcess
+			</result>
+			<result name="success" type="tiles">
+				leave.leaveEncashmentProcess
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+		</action>
+
+
+		<!-- This is for mypage starts -->
+
+		<action name="MypageProcessManagerAlerts_*" method="{1}"
+			class="org.struts.action.mypage.MypageProcessManagerAlertsAction">
+			<result name="input" type="tiles">alert.mypage</result>
+			<result name="mymessages" type="chain">
+				MypageProcessManagerAlerts_input
+			</result>
+			<result name="serviceJsp" type="tiles">
+				mypage.services
+			</result>
+			<result name="mytimeCard" type="tiles">mytimeCard</result>
+			<result name="myLeaves" type="tiles">
+				mypage.myLeaves
+			</result>
+			<result name="attendanceRegularization" type="tiles">
+				attendanceRegularization
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="shiftDetails">
+				/pages/mypage/showShiftDetails.jsp
+			</result>
+		</action>
+
+		<!-- This is for mypage ends -->
+
+		<action name="EmailPayrollReport_*" method="{1}"
+			class="org.struts.action.payroll.EmailPayrollReportAction">
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+	</package>
+	<!-- Add actions here -->
+</struts>

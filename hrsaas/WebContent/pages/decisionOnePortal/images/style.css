@@ -1,0 +1,87 @@
+/* CSS Document */
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+  
+
+.dashborder {
+	border: 1px solid #EEEEEE;
+}
+
+.dashlink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #2080ad;
+	text-decoration: none;
+}
+.bottomborder {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #E1E1E1;
+	border-right-color: #E1E1E1;
+	border-bottom-color: #E1E1E1;
+	border-left-color: #E1E1E1;
+}
+.networkbut {
+	background-image: url(images/networkbutton.gif);
+	height: 22px;
+	width: 148px;
+	border: 1px solid #CCCCCC;
+	padding-left: 15px;
+}
+
+
+
+#timecardId a {
+  font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#timecardId a:hover {
+  font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: red;
+	text-decoration: none;
+}
+
+#timecardId span {
+  font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+	.mainactive {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #FFFFCC;
+	text-decoration: none;
+}.border {
+	border: 1px solid #EBEBEB;
+}
+.button {
+
+	background-image: url(images/button.gif);
+	height: 22px;
+	border: 1px solid #CCCCCC;
+}
+
+ 
+ 

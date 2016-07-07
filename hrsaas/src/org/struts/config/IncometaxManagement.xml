@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+  <struts>
+   <package name="incometax" namespace="/incometax" extends="struts-default">
+        
+	        <result-types>
+			  	<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+			</result-types>
+		
+		<action name="EmployeeInvestment_*" method="{1}" class="org.struts.action.payroll.incometax.EmpInvestmentMasterAction">
+				<result name="input" type="tiles" >incometax.EmployeeInvestment</result>
+				<result name="success" type="tiles">incometax.EmployeeInvestment</result>	
+				<result name="hraPage" type="tiles">incometax.HouseRent</result>
+				<result name="mailReport" type="tiles">common.mailReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		</action>
+		
+			<action name="TaxSlab_*" method="{1}" class="org.struts.action.payroll.incometax.TaxSlabAction">
+				<result name="input" type="tiles" >incometax.TaxSlab</result>
+				<result name="success" type="tiles">incometax.TaxSlab</result>	
+				<result name="showData" type="tiles">incometax.TaxSlabData</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		</action>
+
+		<action name="FundBalance_*" method="{1}" class="org.struts.action.payroll.incometax.FundBalanceAction">
+				<result name="input" type="tiles" >incometax.FundBalance</result>
+				<result name="success" type="tiles">incometax.FundBalance</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		</action>	
+		
+		
+		<action name="TDSCal_*" method="{1}" class="org.struts.action.payroll.incometax.TdsCalculationAction">
+				<result name="input" type="tiles" >incometax.Tdscal</result>
+				<result name="success" type="tiles">incometax.Tdscal</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="report" type="tiles">incometax.TdsReport</result>		
+		</action>
+		
+		
+		<action name="TdsCalReport_*" method="{1}" class="org.struts.action.payroll.incometax.TdsCalReportAction">
+				<result name="input" type="tiles" >incometax.TdsCalReport</result>
+				<result name="report" type="tiles" >incometax.TdsCalReport</result>
+				<result name="success" type="tiles">incometax.TdsCalReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		</action>
+	
+		<action name="Form16_*" method="{1}" class="org.struts.action.payroll.incometax.Form16MisReportAction">
+				<result name="input" type="tiles" >incometax.Form16</result>
+				<result name="success" type="tiles">incometax.Form16</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		</action>
+		
+		<!--  <action name="Form16MisReport_*" method="{1}" class="org.struts.action.payroll.incometax.Form16MisReportAction">
+				<result name="input" type="tiles" >incometax.Form16Mis</result>
+				<result name="success" type="tiles">incometax.Form16Mis</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		</action>
+		
+		<action name="TaxComputationMisReport_*" method="{1}" class="org.struts.action.payroll.incometax.TaxComputationMisReportAction">
+				<result name="input" type="tiles" >incometax.TaxComputationMis</result>
+				<result name="success" type="tiles">incometax.TaxComputationMis</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		</action>-->
+		
+		<action name="TaxChallan_*" method="{1}" class="org.struts.action.payroll.incometax.TaxChallanAction">
+				<result name="input" type="tiles" >incometax.taxChallanList</result>
+				<result name="success" type="tiles">incometax.taxChallan</result>
+				<result name="taxChallanNext" type="tiles">incometax.taxChallanNext</result>
+				<result name="viewAndEditEmp" type="tiles">incometax.viewAndEditEmp</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="mailReport" type="tiles">common.mailReport</result>		
+		</action>
+	
+		
+		<action name="HouseRent_*" method="{1}" class="org.struts.action.payroll.incometax.HouseRentAction">
+				<result name="input" type="tiles" >incometax.HouseRent</result>
+				<result name="success" type="tiles">incometax.HouseRent</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		</action>
+		
+		<action name="TdsCalculator_*" method="{1}" class="org.struts.action.payroll.incometax.TdsCalculatorAction">
+				<result name="input" type="tiles" >incometax.Tdscalculator</result>
+				<result name="success" type="tiles">incometax.Tdscalculator</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="report" type="tiles">incometax.TdsReport</result>	
+		</action>
+		
+
+		<action name="FormV_*" method="{1}" class="org.struts.action.payroll.incometax.FormVAction">
+				<result name="input" type="tiles">incometax.formV</result>
+				<result name="success" type="tiles">incometax.formV</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="mailReport" type="tiles">common.mailReport</result>
+				<result name="f9multiSelect" type="tiles">
+					f9multiSelect
+				</result>
+		 </action>
+		
+		
+		<action name="Form24_*" method="{1}" class="org.struts.action.payroll.incometax.Form24Action">
+				<result name="input" type="tiles" >incometax.Form24</result>
+				<result name="success" type="tiles">incometax.Form24</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		</action>
+		
+		<action name="ETds_*" method="{1}" class="org.struts.action.payroll.incometax.ETdsAction">
+				<result name="input" type="tiles" >incometax.eTds</result>
+				<result name="success" type="tiles">incometax.eTds</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		</action>
+		<action name="Form12_*" method="{1}" class="org.struts.action.payroll.incometax.Form12Action">
+           <result name="input" type="tiles">incometax.Form12</result> 
+                 <result name="success" type="tiles">incometax.Form12</result> 
+                 <result name="f9page" type="tiles">common.f9page</result>
+                 <result name="mailReport" type="tiles">common.mailReport</result>
+                 <result name="f9multiSelect" type="tiles">f9multiSelect</result> 
+             </action>
+             
+		<action name="Form27A_*" method="{1}" class="org.struts.action.payroll.incometax.Form27Action">
+				<result name="input" type="tiles" >incometax.Form27A</result>
+				<result name="success" type="tiles">incometax.Form27A</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="mailReport" type="tiles">common.mailReport</result>		
+		</action>
+
+		<action name="IncomeTaxDeclaration_*" method="{1}" class="org.struts.action.payroll.incometax.IncomeTaxDeclarationAction">
+				<result name="input" type="tiles" >incometax.ITDeclaration</result>
+				<result name="success" type="tiles">incometax.ITDeclaration</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		</action>
+		
+		<action name="StmtCalculation_*" method="{1}" class="org.struts.action.payroll.incometax.TaxComputationMisReportAction">
+				<result name="input" type="tiles">stmt.calculate</result>
+				<result name="success" type="tiles">stmt.calculate</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+		 </action>
+
+
+
+			<action name="InvestmentVerification_*" method="{1}" class="org.struts.action.payroll.incometax.InvestmentVerificationAction">
+				<result name="input" type="tiles">Inv.verification</result>
+				<result name="success" type="tiles">Inv.verification</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+		 </action>
+		 
+		  <action name="EmpPrevIncome_*" method="{1}" class="org.struts.action.payroll.incometax.EmployeePreviousIncomeAction">
+				<result name="input" type="tiles" >incometax.EmpPrevIncomeList</result>
+				<result name="success" type="tiles">incometax.EmpPrevIncome</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		</action>
+		
+		 <action name="DivisionTaxCalc_*" method="{1}" class="org.struts.action.payroll.incometax.DivisionTaxCalcAction">
+				<result name="input" type="tiles" >incometax.DivisionTaxCalc</result>
+				<result name="success" type="tiles">incometax.DivisionTaxCalc</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="f9multiSelect" type="tiles">f9multiSelect</result>		
+		</action>
+		
+		<action name="InvestmentDeclarationReport_*" method="{1}" class="org.struts.action.payroll.incometax.InvestmentDeclarationReportAction">
+				<result name="input" type="tiles" >incometax.InvestmentDeclaration</result>
+				<result name="success" type="tiles">incometax.InvestmentDeclaration</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		</action>
+		
+		<action name="PFReconciliation_*" method="{1}" class="org.struts.action.payroll.incometax.PFReconciliationReportAction">
+				<result name="input" type="tiles" >incometax.PFReconciliation</result>
+				<result name="success" type="tiles">incometax.PFReconciliation</result>	
+				<result name="mailReport" type="tiles">common.mailReport</result>
+				<result name="f9page" type="tiles">common.f9page</result>			
+		</action> 
+		<action name="EmailPayrollReport_*" method="{1}" class="org.struts.action.payroll.EmailPayrollReportAction">
+				<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="EmployeeWisePerqsReport_*" method="{1}"
+			class="org.struts.action.payroll.incometax.EmployeeWisePerqsReportAction">
+			<result name="input" type="tiles">incometax.EmployeeWisePerqsReport</result>
+			<result name="success" type="tiles">incometax.EmployeeWisePerqsReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+  </package>
+          
+   </struts>

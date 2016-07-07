@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+        
+   <struts>   
+        <package name="conference" namespace="/conference" extends="struts-default">
+	        <result-types>
+			  	<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+			</result-types>
+			
+			<!-- Mapping for Assessment Master   -->
+			<action name="ConferenceMaster_*" method="{1}" class="org.struts.action.conference.ConferenceMasterAction">
+				<result name="input" type="tiles">conferencemaster.Master</result>
+				<result name="Success" type="tiles">conferencemaster.Master</result>
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="report" type="tiles">conferencemaster.report</result>
+				<result name="Data" type="tiles">conferencemaster.Data</result>					
+			</action>
+			
+			<action name="ConferenceBooking_*" method="{1}" class="org.struts.action.conference.ConferenceBookingAction">
+				<result name="input" type="tiles">conferencebook.Master</result>
+				<result name="Success" type="tiles">conferencebook.Master</result>
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="showData" type="tiles">conferencebook.MasterData</result>
+				<result name="approverList" type="tiles">conferencebook.AppData</result>	
+				<!-- For mypage Entry starts -->
+				<result name="mymessages" type="chain">MypageProcessManagerAlerts_input </result>
+				<result name="serviceJsp" type="chain">MypageProcessManagerAlerts_serviceData</result>
+			    <!-- For mypage Entry ends -->							
+			</action>
+			
+			<action name="ConferenceApproval_*" method="{1}" class="org.struts.action.conference.ConferenceBookingApprovalAction">
+				<result name="input" type="tiles">conferenceApproval</result>
+				<result name="success" type="tiles">conferenceApproval</result>
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<!-- For mypage Entry starts -->
+				<result name="mymessages" type="chain">MypageProcessManagerAlerts_input </result>
+				<result name="serviceJsp" type="chain">MypageProcessManagerAlerts_serviceData</result>
+			    <!-- For mypage Entry ends -->					
+			</action>
+			
+			<action name="VenueMaster_*" method="{1}" class="org.struts.action.conference.VenueMasterAction">
+				<result name="input" type="tiles">venuemaster.Master</result>
+				<result name="Success" type="tiles">venuemaster.Master</result>
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="report" type="tiles">venuemaster.report</result>	
+				<result name="Data" type="tiles">venuemaster.Data</result>		
+			</action>
+			
+			<action name="ConferenceMisReport_*" method="{1}" class="org.struts.action.conference.ConferenceBookingMisReportAction">
+				<result name="input" type="tiles">ConferenceBookingMisReport</result>
+				<result name="success" type="tiles">ConferenceBookingMisReport</result>
+				<result name="f9page" type="tiles">common.f9page</result>
+			</action>
+					
+			<!-- This is for mypage starts -->
+		<action name="MypageProcessManagerAlerts_*" method="{1}" class="org.struts.action.mypage.MypageProcessManagerAlertsAction">
+			<result name="input" type="tiles">alert.mypage</result>
+			<result name="mymessages" type="chain">MypageProcessManagerAlerts_input </result>
+			<result name="serviceJsp" type="tiles">mypage.services</result>	
+		</action>
+
+        </package>  
+	</struts>
+
+

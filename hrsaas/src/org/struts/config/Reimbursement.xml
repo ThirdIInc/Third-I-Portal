@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="Reimbursement" namespace="/Reimbursement"
+		extends="struts-default">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+ 
+		
+		<action name="ReimbursementClmAppl_*" method="{1}"
+			class="org.struts.action.reimbursement.ReimbursementClmaimApplicationAction">
+			<result name="input" type="tiles">
+				reimbursement.claimappl
+			</result>
+			<result name="success" type="tiles">
+				reimbursement.claimappl
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="claimReimbursementJsp" type="tiles">
+				reimbursement.claimReimbursementJsp
+			</result>
+			<result name="reimbursementHistory" type="tiles">reimbursement.reimbursementHistory</result>
+			
+			<!-- my page code -->	
+				<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>	
+			<result name="showApproval" type="tiles">reimbursement.showApproval</result>
+			<result name="showData" type="tiles">Reimb.managerApprovalView</result>
+			<result name="disbData" type="tiles">Reimbursement.disbursementData</result>
+		</action>
+		
+ 
+		<action name="ReimbManagerApproval_*" method="{1}"
+			class="org.struts.action.reimbursement.ReimbManagerApprovalAction">
+			<result name="input" type="tiles">Reimb.managerApproval</result>
+			<result name="success" type="tiles">Reimb.managerApproval</result>
+			<result name="showData" type="tiles">Reimb.managerApprovalView</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>	
+ 
+
+
+ 
+		<action name="ReimbAdminApproval_*" method="{1}" class="org.struts.action.reimbursement.ReimbAdminApprovalAction">
+			<result name="input" type="tiles">reimbursement.adminApproval</result>
+			<result name="success" type="tiles">reimbursement.adminApproval</result>
+			<result name="showApproval" type="tiles">reimbursement.showApproval</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="ReimbursementReport_*" method="{1}" class="org.struts.action.reimbursement.ReimbursementReportAction">
+			<result name="input" type="tiles">reimbursement.report</result>
+			<result name="success" type="tiles">reimbursement.report</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+		<!--  Reimbursement Configuration -->
+		<action name="ReimbConfiguration_*" method="{1}"
+			class="org.struts.action.reimbursement.ReimbConfigurationAction">
+			<result name="input" type="tiles">Reimbursement.configurationList</result>
+			<result name="success" type="tiles">Reimbursement.configurationData</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- end of Reimbursement Configuration -->
+		
+		<!--  Reimbursement Disbursement -->
+		<action name="ReimbDisbursement_*" method="{1}"
+			class="org.struts.action.reimbursement.ReimbDisbursementAction">
+			<result name="input" type="tiles">Reimbursement.disbursementList</result>
+			<result name="success" type="tiles">Reimbursement.disbursementList</result>
+			<result name="disbData" type="tiles">Reimbursement.disbursementData</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<!-- my page code -->	
+				<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>	
+		</action>
+		<!-- end of Reimbursement Configuration -->
+		
+			<!--  Reimbursement Disbursement -->
+		<action name="ReimbProcess_*" method="{1}"
+			class="org.struts.action.reimbursement.ReimbProcessAction">
+			<result name="input" type="tiles">Reimbursement.processList</result>
+			<result name="success" type="tiles">Reimbursement.processList</result>
+			<result name="ProcData" type="tiles">Reimbursement.processData</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- end of Reimbursement Configuration -->
+		<action name="EmailPayrollReport_*" method="{1}" class="org.struts.action.payroll.EmailPayrollReportAction">
+				<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="ReimbursementBalanceReport_*" method="{1}" class="org.struts.action.reimbursement.ReimbursementBalanceReportAction">
+			<result name="input" type="tiles">reimbursementbalance.report</result>
+			<result name="success" type="tiles">reimbursementbalance.report</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+ 	<!-- This is for mypage starts -->
+		
+			<action name="MypageProcessManagerAlerts_*" method="{1}" class="org.struts.action.mypage.MypageProcessManagerAlertsAction">
+			<result name="input" type="tiles">alert.mypage</result>
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="tiles">
+				mypage.services
+			</result>	
+			</action>
+ 
+ 
+	</package>
+</struts>

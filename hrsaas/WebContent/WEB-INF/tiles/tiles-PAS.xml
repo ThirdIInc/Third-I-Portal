@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name=".myPageLeftRightLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name=".f9Layout"
+		template="/pages/common/f9layout.jsp">
+		<put-attribute name="title" value="Select record" />
+		<put-attribute name="header" value="/pages/common/f9header.jsp" />
+		<put-attribute name="footer" value="/pages/common/f9footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+<!-- Added by prajakta -->
+<definition name=".pasHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/pasLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+<!-- Ends Added by prajakta -->	
+	<definition name="f9multiSelect" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9MultiSelect.jsp" />
+	</definition>
+
+	<definition name="common.f9page" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9page.jsp" />
+	</definition>
+
+	<definition name="common.mailReport" extends=".mainLayout">
+		<put-attribute name="body" value="/pages/payroll/emailReport.jsp"/>
+	</definition>
+
+	
+
+<!-- Appraisal Calendar Start -->
+<!-- modified by Prajakta B -->
+
+	<definition name="Appraisal.Calendar" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Calendar" />
+		<put-attribute name="body" value="/pages/PAS/viewAppraisalCalendar.jsp" />
+	</definition>
+
+	<definition name="Appraisal.Calendar.EligibleEmp"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Eligible Employees" />
+		<put-attribute name="body" value="/pages/PAS/appraisalEligibleEmp.jsp" />
+	</definition>
+
+	<definition name="Appraisal.Calendar.Edit" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Calendar" />
+		<put-attribute name="body" value="/pages/PAS/appraisalCalendar.jsp" />
+	</definition>
+
+	<definition name="Appraisal.Map.GoalComp" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Calendar" />
+		<put-attribute name="body" value="/pages/PAS/appraisalGoalCompMap.jsp" />
+	</definition>
+	
+	<definition name="Appraisal.ImportAppraisal" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Calendar" />
+		<put-attribute name="body" value="/pages/PAS/importAppraisal.jsp" />
+	</definition>
+	
+	<definition name="Appraisal.EligibilityCriteria" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Calendar" />
+		<put-attribute name="body" value="/pages/PAS/eligibilityCriteria.jsp" />
+	</definition>
+	
+	<definition name="Appraisal.EligibilityCriteriaSave" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Calendar" />
+		<put-attribute name="body" value="/pages/PAS/eligibilityCriteria.jsp" />
+	</definition>
+
+<!-- Appraisal Calendar End -->
+
+<!-- Appraiser Configuration  Start-->
+
+
+	<definition name="Appraiser.Config.view" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraiser Configuration" />
+		<put-attribute name="body" value="/pages/PAS/appraiserConfig.jsp" />
+	</definition>
+	<definition name="Appraiser.moveGroup" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraiser Configuration" />
+		<put-attribute name="body" value="/pages/PAS/moveToGroup.jsp" />
+	</definition>
+	<definition name="Appraiser.defineAppraiser" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraiser Configuration" />
+		<put-attribute name="body" value="/pages/PAS/defineAppraiser.jsp" />
+	</definition>
+	<definition name="Appraiser.defineAppraisee" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraiser Configuration" />
+		<put-attribute name="body" value="/pages/PAS/defineAppraisee.jsp" />
+	</definition>
+	<definition name="Appraiser.addEmloyee" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraiser Configuration" />
+		<put-attribute name="body" value="/pages/PAS/addEmloyee.jsp" />
+	</definition>
+
+	<!-- Appraiser Configuration  End-->
+
+<!-- Appraisal Report Start-->
+	<definition name="Appraisal.report" extends=".mainLayout">
+		<put-attribute name="title" value="Appraisal Report" />
+		<put-attribute name="body" value="/pages/PAS/appraisalReport.jsp" />
+	</definition>
+<!-- Appraisal Report End-->
+
+<!-- Appraisal Summary Report Start-->
+	<definition name="Appraisal.summaryReport" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Apprisal Summary" />
+		<put-attribute name="body" value="/pages/PAS/appraisalSummaryReport.jsp" />
+	</definition>
+<!-- Appraisal Summary Report End-->
+
+<!-- Appraisal Phase Configuration Start-->
+
+	<definition name="Appraisal.PhaseConfig" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Phase Configuration" />
+		<put-attribute name="body" value="/pages/PAS/appraisalPhaseConfig.jsp" />
+	</definition>
+
+<!-- Appraisal Phase Configuration End-->
+
+<!-- Appraisal Phase Schedule Start-->
+
+	<definition name="Appraisal.Schedule.view" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Schedule" />
+		<put-attribute name="body" value="/pages/PAS/appraisalScheduleView.jsp" />
+	</definition>
+
+	<definition name="Appraisal.Schedule" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Calendar" />
+		<put-attribute name="body" value="/pages/PAS/appraisalSchedule.jsp" />
+	</definition>
+
+<!-- Appraisal Phase Schedule End-->
+
+<!-- Question Category Master Start-->
+
+	<definition name="Question.Category.view" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Question Category" />
+		<put-attribute name="body" value="/pages/PAS/questionCategoryView.jsp" />
+	</definition>
+
+	<definition name="Question.Category" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Question Category" />
+		<put-attribute name="body" value="/pages/PAS/questionCategory.jsp" />
+	</definition>
+
+<!-- Question Category Master End-->
+
+<!-- Questionnaire Definition  Start-->
+
+	<definition name="Questionnaire.Definition.view"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Questionnaire Definition" />
+		<put-attribute name="body"
+			value="/pages/PAS/questionnaireDefinitionView.jsp" />
+	</definition>
+
+	<definition name="Questionnaire.Definition" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Questionnaire Definition" />
+		<put-attribute name="body" value="/pages/PAS/questionnaireDefinition.jsp" />
+	</definition>
+	
+<!-- Questionnaire Definition  End-->
+
+<!-- Rating Scale Definition  Start-->
+	<definition name="RatingScale.Definition.view"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Rating Scale Definition" />
+		<put-attribute name="body"
+			value="/pages/PAS/ratingScaleDefinitionView.jsp" />
+	</definition>
+
+	<definition name="RatingScale.Definition" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Rating Scale Definition" />
+		<put-attribute name="body" value="/pages/PAS/ratingScaleDefinition.jsp" />
+	</definition>
+<!-- Rating Scale Definition  End-->
+
+<!-- Appraisal Form Designer - Template Defination Start-->
+	<definition name="Appraisal.Template" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Template Defination" />
+		<put-attribute name="body" value="/pages/PAS/templateDefination.jsp" />
+	</definition>
+<!-- Appraisal Form Designer - Template Defination End-->
+
+<!-- Appraisal Form Designer - Appraisal Instructions Start-->
+	<definition name="Appraisal.Instruction" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Instruction" />
+		<put-attribute name="body" value="/pages/PAS/appraisalInstruction.jsp" />
+	</definition>
+<!-- Appraisal Form Designer - Appraisal Instructions End-->
+
+<!-- Appraisal Form Designer - Define Section Start-->
+	<definition name="Appraisal.Section" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Section" />
+		<put-attribute name="body" value="/pages/PAS/defineSection.jsp" />
+	</definition>
+<!-- Appraisal Form Designer - Define Section End-->
+
+<!-- Appraisal Form Designer -Section Mapping Start-->
+	<definition name="Section.Mapping" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Section Mapping" />
+		<put-attribute name="body" value="/pages/PAS/sectionMapping.jsp" />
+	</definition>
+	<definition name="SectionMapping.moveGroup" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Section Mapping" />
+		<put-attribute name="body" value="/pages/PAS/moveToGroupMapping.jsp" />
+	</definition>
+	<definition name="SectionMapping.defineTemplateQues" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Section Mapping" />
+		<put-attribute name="body" value="/pages/PAS/defineTemplateQues.jsp" />
+	</definition>
+	<definition name="SectionMapping.defineTempEmployee" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Section Mapping" />
+		<put-attribute name="body" value="/pages/PAS/defineTemplateEmployee.jsp" />
+	</definition>
+	<definition name="SectionMapping.addEmloyee" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Section Mapping" />
+		<put-attribute name="body" value="/pages/PAS/addTemplateEmployee.jsp" />
+	</definition>
+
+<!-- Appraisal Form Designer -Section Mapping End-->
+
+<!-- Appraisal Form Designer - Training details Start-->
+	<definition name="Appraisal.trainingDetails"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Calendar" />
+		<put-attribute name="body" value="/pages/PAS/trainingDetails.jsp" />
+	</definition>
+<!-- Appraisal Form Designer - Training details End-->
+
+<!-- Appraisal Form Designer - Awards details Start-->
+	<definition name="Appraisal.awardRecog" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Award Recognition" />
+		<put-attribute name="body" value="/pages/PAS/awardsRecognition.jsp" />
+	</definition>
+<!-- Appraisal Form Designer - Awards details End-->
+
+<!-- Appraisal Form Designer - Desciplinary details Start-->
+	<definition name="Appraisal.discipMeasures" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Disciplinary Measures" />
+		<put-attribute name="body" value="/pages/PAS/disciplinaryMeasures.jsp" />
+	</definition>
+<!-- Appraisal Form Designer - Desciplinary details End-->
+
+<!-- Appraisal Form Designer -Career proression Start-->
+	<definition name="Appraisal.careerProg" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Career Progression" />
+		<put-attribute name="body" value="/pages/PAS/careerProgression.jsp" />
+	</definition>
+<!-- Appraisal Form Designer -Career proression End-->
+
+<!-- Appraisal Form Designer - Weightage Distribution Start-->
+	<definition name="Appraisal.weighDistri" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Weightage Distribution" />
+		<put-attribute name="body" value="/pages/PAS/weightageDistribution.jsp" />
+	</definition>
+<!-- Appraisal Form Designer - Weightage Distribution End-->
+
+<!-- Appraisal Form Designer - Form finalization Start-->
+	<definition name="Appraisal.frmFinal" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Form Finalization" />
+		<put-attribute name="body" value="/pages/PAS/formFinalization.jsp" />
+	</definition>
+<!-- Appraisal Form Designer - Form finalization End-->
+
+<!-- Appraisal Form -->
+	<!-- Appraisal Form Start Start-->
+	<definition name="Appraisal.Form.Start"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Appraisal List" />
+		<put-attribute name="body" value="/pages/PAS/apprFormStart.jsp" />
+	</definition>
+	<!-- Appraisal Form Start End-->
+
+	<!-- Appraisal Form General Info Start-->
+	<definition name="Appraisal.Form.General.Info"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Appraisal Form" />
+		<put-attribute name="body" value="/pages/PAS/apprFormGeneralInfo.jsp" />
+	</definition>
+	<!-- Appraisal Form General Info End-->
+
+	<!-- Appraisal Form Instructions Start-->
+	<definition name="Appraisal.Form.Instruction"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Appraisal Form" />
+		<put-attribute name="body" value="/pages/PAS/apprFormInstruction.jsp" />
+	</definition>
+	<!-- Appraisal Form Instructions End-->
+
+	<!-- Appraisal Form Section Start-->
+	
+	<definition name="Appraisal.Form.Preview" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Appraisal Form" />
+		<put-attribute name="body" value="/pages/PAS/apprFormPreview.jsp" />
+	</definition>
+	
+	<definition name="Appraisal.Form.Section" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Appraisal Form" />
+		<put-attribute name="body" value="/pages/PAS/apprFormSection.jsp" />
+	</definition>
+	<definition name="Appraisal.PreviousPhase.Details"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Form" />
+		<put-attribute name="body" value="/pages/PAS/previousPhaseDetails.jsp" />
+	</definition>
+	
+	<!-- Appraisal Form Section End-->
+
+	<!-- Appraisal Form Training details Start-->
+	<definition name="Appraisal.ApprFormTrainingDtls"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Training Details" />
+		<put-attribute name="body" value="/pages/PAS/apprFormTrainingDtls.jsp" />
+	</definition>
+	<definition name="ApprFormTrainingDtls.previousPhaseDetails"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Training Details" />
+		<put-attribute name="body"
+			value="/pages/PAS/apprFormTrainingDtlsPreviousPhase.jsp" />
+	</definition>
+
+	<!-- Appraisal Form Training details End-->
+	
+	<!-- Appraisal Form Award Start-->
+	<definition name="Appraisal.ApprFormAwardDtls"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Award Details" />
+		<put-attribute name="body" value="/pages/PAS/apprFormAwardDtls.jsp" />
+	</definition>
+	<definition name="ApprFormAwardDtls.previousPhaseDetails"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Award Details" />
+		<put-attribute name="body"
+			value="/pages/PAS/apprFormAwardDtlsPreviousPhase.jsp" />
+	</definition>
+	<!-- Appraisal Form Award End-->
+	
+	<!-- Appraisal Form Disciplinary Start-->
+	<definition name="Appraisal.ApprFormDiscpMeasures"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Disciplinary Action" />
+		<put-attribute name="body" value="/pages/PAS/apprFormDiscpMeasures.jsp" />
+	</definition>
+	<definition name="ApprFormDiscpMeasures.previousPhaseDetails"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Disciplinary Action" />
+		<put-attribute name="body"
+			value="/pages/PAS/apprFormDiscpMeasuresPreviousPhase.jsp" />
+	</definition>
+	<!-- Appraisal Form Disciplinary End-->
+
+	<!-- Appraisal Form Career Progression Start-->
+	<definition name="Appraisal.ApprFormCareerProgression"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Career Progression" />
+		<put-attribute name="body"
+			value="/pages/PAS/apprFormCareerProgression.jsp" />
+	</definition>
+
+	<definition name="ApprFormCareerProgression.previousPhaseDetails"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Career Progression" />
+		<put-attribute name="body"
+			value="/pages/PAS/apprFormCareerProgressionPreviousPhase.jsp" />
+	</definition>
+
+	<!-- Appraisal Form Career Progression End-->
+
+	<!-- Evaluator panel Start-->
+	<definition name="Evaluator.Panel"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Evaluator Panel" />
+		<put-attribute name="body" value="/pages/PAS/evaluatorPanel.jsp" />
+	</definition>
+	<!-- Evaluator panel End-->
+
+	<!-- Appraisal Score Balancer Start-->
+	<definition name="Appraisal.ScoreBalancer" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Score Balancer" />
+		<put-attribute name="body" value="/pages/PAS/scoreBalancer.jsp" />
+	</definition>
+	<!-- Appraisal Score Balancer End-->
+
+	<!-- Appraisal Bell Curve Start-->
+	<definition name="Appraisal.BellCurve" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Bell Curve" />
+		<put-attribute name="body" value="/pages/PAS/appraisalBellCurve.jsp" />
+	</definition>
+
+	<!-- Appraisal Bell Curve End-->
+
+	<!-- Appraisal Eligible Employee Report -->
+	<definition name="Appraisal.EligibleEmpReport"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Eligible Employee Report" />
+		<put-attribute name="body"
+			value="/pages/PAS/appraisalEligibleEmpReport.jsp" />
+	</definition>
+
+	<!-- Appraisal Questionnaire Report -->
+	<definition name="Appraisal.QuestionnaireReport"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Questionnaire Report" />
+		<put-attribute name="body"
+			value="/pages/PAS/appraisalQuestionnaireReport.jsp" />
+	</definition>
+
+	<!-- Appraisal Score Balancer Report -->
+	<definition name="Appraisal.ScoreBalancerReport"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Score Balancer Report" />
+		<put-attribute name="body"
+			value="/pages/PAS/appraisalScoreBalancerReport.jsp" />
+	</definition>
+
+	<!-- Appraisal Form Preview Report -->
+	<definition name="Appraisal.FormPreview" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Form Preview" />
+		<put-attribute name="body" value="/pages/PAS/appraisalFormPreview.jsp" />
+	</definition>
+
+	<!-- Appraisal Form Configuration Report -->
+	<definition name="Appraisal.configReport" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Configuration Report" />
+		<put-attribute name="body" value="/pages/PAS/appraisalConfigReport.jsp" />
+	</definition>
+
+	<!-- Appraisal Status Report -->
+	<definition name="Appraisal.statusReport" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Status Report" />
+		<put-attribute name="body" value="/pages/PAS/appraisalStatusReport.jsp" />
+	</definition>
+
+	<!-- Appraisal Statistics Report -->
+	<definition name="apprisal.statistic" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Apprisal Statistics" />
+		<put-attribute name="body" value="/pages/PAS/appraisalStatistic.jsp" />
+	</definition>
+
+	<!-- Appraisal Form Report -->
+	<definition name="apprisal.formReport" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Apprisal Form Report" />
+		<put-attribute name="body" value="/pages/PAS/appraisalFormReport.jsp" />
+	</definition>
+
+	<!-- Appraisal Configuration Status Report -->
+	<definition name="apprisal.configStatusReport"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Apprisal Form Report" />
+		<put-attribute name="body"
+			value="/pages/PAS/appraisalConfigStatusReport.jsp" />
+	</definition>
+
+	<!-- Appraiser Configuration Report -->
+	<definition name="Appraiser.ConfigurationReport"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraiser Configuration Report" />
+		<put-attribute name="body"
+			value="/pages/PAS/AppraiserConfigurationReport.jsp" />
+	</definition>
+
+	<!-- Appraisal Reminder Mail -->
+	<definition name="Appraisal.ReminderMail" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Reminder Mail" />
+		<put-attribute name="body" value="/pages/PAS/reminderMail.jsp" />
+	</definition>
+
+	<!-- Appraiser Evaluator Score Balancer Report -->
+	<definition name="Appraisal.EvaluatorScoreBalancerRpt"
+		extends=".pasHomeLayout">
+		<put-attribute name="title"
+			value="Appraiser Evaluator Score Balancer Report" />
+		<put-attribute name="body"
+			value="/pages/PAS/appraisalEvaluatorScoreBalancerReport.jsp" />
+	</definition>
+
+	<!-- Appraisal Rating Defination -->
+	<definition name="Appraisal.ApprRatingDefinition"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraiser Rating Definition" />
+		<put-attribute name="body" value="/pages/PAS/apprRatingDefinition.jsp" />
+	</definition>
+
+	<!-- Appraisal Monitoring -->
+	<definition name="Appraisal.Monitoring" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Monitoring" />
+		<put-attribute name="body" value="/pages/PAS/appraisalMonitoring.jsp" />
+	</definition>
+
+	<!-- Department Rating-->
+	<definition name="Appraisal.deptRating" extends=".pasHomeLayout">
+		<put-attribute name="title" value="deptRating" />
+		<put-attribute name="body" value="/pages/PAS/departmentRating.jsp" />
+	</definition>
+
+	<!-- Appraisal MIS Report -->
+	<definition name="Appraisal.MIS.Report" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Monitoring" />
+		<put-attribute name="body" value="/pages/PAS/appraisalMisReport.jsp" />
+	</definition>
+
+	<!-- Appraisal Question Analysis -->
+	<definition name="Appraisal.QuesAnalysis" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Appraisal Question Analysis" />
+		<put-attribute name="body" value="/pages/PAS/appraisalQuesAnalysis.jsp" />
+	</definition>
+
+	<!-- Mapping for Employee Goal Setting -->
+	<definition name="Appraisal.EmpGoalAssessment"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Employee Goal Assessment" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/empGoalAssessment.jsp" />
+	</definition>
+
+	<definition name="Appraisal.EmpGoalAssmtView"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Employee Goal" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/empGoalAssmtView.jsp" />
+	</definition>
+
+
+	<!-- Goal Initialization -->
+	<definition name="Appraisal.GoalInit" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Goal Initialization" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/goalInitialization.jsp" />
+	</definition>
+	<definition name="Appraisal.GoalAddNew" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Goal Initialization" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/goalInitializationAddNew.jsp" />
+	</definition>
+	<definition name="Appraisal.eligibleEmployee" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Eligible Employee" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/goalEligibleEmployee.jsp" />
+	</definition>
+	
+	<!-- New Defination Added -->
+	<definition name="Appraisal.listEligibleEmployee" extends=".pasHomeLayout">
+	   <put-attribute name="title" value="Eligible Employee List"/>
+	   <put-attribute name="body"
+	      value="/pages/PAS/GoalSetting/goalEligibleListPage.jsp"/>
+	</definition>
+
+	<!-- Employee Goal Setting -->
+	<definition name="Appraisal.EmpGoalSetting" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Employee Goal Setting" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/empGoalSetting.jsp" />
+	</definition>
+	<definition name="Appraisal.EmpGoalDetails"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Employee Goal Setting" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/empGoalSettingDetails.jsp" />
+	</definition>
+	<definition name="EmpGoalSetting" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Goal Initialization" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/competencyDetails.jsp" />
+	</definition>
+
+	<!-- Employee Goal Approval -->
+	<definition name="Appraisal.EmpGoalApproval"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Employee Goal Approval" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/empGoalApproval.jsp" />
+	</definition>
+
+	<!-- Employee Goal Report -->
+	<definition name="Appraisal.EmpGoalReport" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Employee Goal Report" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/empGoalReport.jsp" />
+	</definition>
+	
+	<!-- My Team Goal Report -->
+	<definition name="Appraisal.TeamReport" extends=".pasHomeLayout">
+		<put-attribute name="title" value="My Team Goal Report" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/myTeamGoalReport.jsp" />
+	</definition>
+	
+	<!-- Goal Assesment Report -->
+	<definition name="Appraisal.GoalAssesReport" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Goal Assesment Report" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/goalAssesmentReport.jsp" />
+	</definition>
+	
+	<!-- Goal Rating Report -->
+	<definition name="Appraisal.GoalRatingReport" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Goal Rating Report" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/goalRatingSheetReport.jsp" />
+	</definition>
+
+	<!-- Appraisal MIS Report -->
+	<definition name="Appraisal.MIS.KFReport" extends=".mainLayout">
+		<put-attribute name="title" value="Appraisal MIS Report" />
+		<put-attribute name="body" value="/pages/PAS/appraisalMisReportKF.jsp" />
+	</definition>
+
+	<!-- MONTHLY PERFORMANCE RATING - ADDED BY REEBA -->
+	<definition name="Appraisal.MonthlyRating" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Monthly Rating" />
+		<put-attribute name="body" value="/pages/PAS/monthlyRating.jsp" />
+	</definition>
+
+	<!-- Monthly Rating Report -->
+	<definition name="Appraisal.monthlyRatingReport"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Apprisal Monthly Rating Report" />
+		<put-attribute name="body" value="/pages/PAS/monthlyRatingReport.jsp" />
+	</definition>
+
+	<!-- Self goal assessment -->
+	<definition name="Appraisal.selfGoalAssessment"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Self goal assessment" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/selfGoalAssessment.jsp" />
+	</definition>
+	<definition name="Appraisal.selfGoalAssmtView"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Self Goal" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/selfGoalAssmtView.jsp" />
+	</definition>
+
+	<!-- Reviewer goal assessment-->
+	<definition name="Appraisal.reviewerGoalAssessment"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Reviewer goal assessment" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/reviewerGoalAssessment.jsp" />
+	</definition>
+	<definition name="Appraisal.reviewerGoalAssessmentView"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Reviewer goal assessment" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/reviewerGoalAssmtView.jsp" />
+	</definition>
+
+	<!-- Goal Reporting Structure-->
+	<definition name="goal.ReportingStructure" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Goal Reporting Structure" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/goalReportingStructure.jsp" />
+	</definition>
+	
+	<!-- Goal Monitoring-->
+	<definition name="goal.monitoring" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Goal Monitoring" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/goalMonitoring.jsp" />
+	</definition>
+
+	<!-- MANAGEMENT REVIEW PANEL  -->
+	<definition name="Appraisal.MgmntReviewPanel"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Management Review Panel" />
+		<put-attribute name="body" value="/pages/PAS/mgmntReviewPanel.jsp" />
+	</definition>
+	<definition name="MgmntReviewPanel.employeeList"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Management Review Panel" />
+		<put-attribute name="body" value="/pages/PAS/mgmntReviewEmployeeList.jsp" />
+	</definition>
+	<definition name="MgmntReviewPanel.employeeDetails"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Employee Appraisal Details" />
+		<put-attribute name="body"
+			value="/pages/PAS/mgmntReviewEmployeeDetails.jsp" />
+	</definition>
+
+	<!-- Employee Score Calculation-->
+	<definition name="Appraisal.EmployeeScoreCalc"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Employee Score Calculation" />
+		<put-attribute name="body"
+			value="/pages/PAS/employeeScoreCalculationList.jsp" />
+	</definition>
+
+	<!-- Employee CTC Calculation-->
+	<definition name="Appraisal.EmployeeCTCCalc"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Employee CTC Calculation" />
+		<put-attribute name="body"
+			value="/pages/PAS/employeeScoreCalculation.jsp" />
+	</definition>
+
+	<!-- Self Compentency Assessment-->
+	<definition name="SelfCompentencyAssesment.selfAssesmentListPage"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Self Compentency Assessment" />
+		<put-attribute name="body"
+			value="/pages/PAS/Competency/selfCompentencyAssesmentListPage.jsp" />
+	</definition>
+	<definition name="SelfCompentencyAssesment.selfAssesmentDetailPage"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Self Compentency Assessment" />
+		<put-attribute name="body"
+			value="/pages/PAS/Competency/selfCompentencyAssesmentDetailPage.jsp" />
+	</definition>
+
+	<!-- Self Compentency Assessment Approval-->
+	<definition
+		name="SelfCompentencyAssessmentApprovalAction.selfAssessmentApprovalListPage"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Self Compentency Assessment Approval" />
+		<put-attribute name="body"
+			value="/pages/PAS/Competency/selfCompentencyAssessmentApprovalListPage.jsp" />
+	</definition>
+	<definition
+		name="SelfCompentencyAssessmentApprovalAction.selfAssessmentApprovalDetailPage"
+		extends=".pasHomeLayout">
+		<put-attribute name="title" value="Self Compentency Assesment" />
+		<put-attribute name="body"
+			value="/pages/PAS/Competency/selfCompentencyAssessmentApprovalDetailPage.jsp" />
+	</definition>
+
+	<!-- Reviewerf Compentency Assessment -->
+	<definition name="ReviewerCompetencyAssessmentAction.reviewerListPage" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Self Compentency Assessment Approval" />
+		<put-attribute name="body" value="/pages/PAS/Competency/reviewerCompetencyAssessmentListPage.jsp" />
+	</definition>
+	<definition name="ReviewerCompetencyAssessmentAction.reviewerDetailPage" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Self Compentency Assesment" />
+		<put-attribute name="body" value="/pages/PAS/Competency/reviewerCompetencyAssessmentDetailPage.jsp" />
+	</definition>
+
+	<!-- Competency Designation Mapping -->
+	<definition name="CompDesignMappingData" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Competency Designation Mapping " />
+		<put-attribute name="body" value="/pages/PAS/Competency/compDesignMappingData.jsp" />
+	</definition>
+
+	<!-- Competency Initialization -->
+	<definition name="CompInit" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Competency Initialization" />
+		<put-attribute name="body" value="/pages/PAS/Competency/compInitialization.jsp" />
+	</definition>
+	<definition name="CompAddNew" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Competency Initialization" />
+		<put-attribute name="body" value="/pages/PAS/Competency/compInitializationAddNew.jsp" />
+	</definition>
+
+	<!-- My Page -->
+	<definition name="alert.mypage" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body"
+			value="/pages/mypage/mypageprocessManagerAlerts.jsp" />
+	</definition>
+
+	<definition name="mypage.services"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/mypage/services.jsp" />
+	</definition>
+
+	<!-- Mapping for competency Development Plan start-->
+	<definition name="competency.competencyDevelopmentPlan" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Competency Development Plan" />
+		<put-attribute name="body" value="/pages/PAS/Competency/competencyDevelopmentPlan.jsp" />
+	</definition>
+	
+	<definition name="competency.competencyDevelopmentPlanData" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Competency Development Plan Data" />
+		<put-attribute name="body"
+			value="/pages/PAS/Competency/competencyDevelopmentPlanData.jsp" />
+	</definition>
+	<!-- Mapping for competency Development Plan end-->
+
+	<!-- Competency Development Plan Report-->
+	<definition name="competency.competencyDevPlanReport" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Competency Development Plan Report" />
+		<put-attribute name="body" value="/pages/PAS/Competency/competencyDevPlanReport.jsp" />
+	</definition>
+
+	<!-- Competency Development Plan Report-->
+	<definition name="competency.roleWiseCompMisReport" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Competency Development Plan Report" />
+		<put-attribute name="body" value="/pages/PAS/Competency/rolewiseCompReport.jsp" />
+	</definition>
+
+	<!-- Goal  Status Report-->
+	<definition name="Appraisal.GoalStatusReport" extends=".pasHomeLayout">
+		<put-attribute name="title" value=" Goal  Status Report" />
+		<put-attribute name="body"
+			value="/pages/PAS/GoalSetting/goalStatusReport.jsp" />
+	</definition>
+
+	<!-- My Team Competency Report-->
+	<definition name="competency.myTeamCompReport" extends=".pasHomeLayout">
+		<put-attribute name="title" value="My Team Competency Report " />
+		<put-attribute name="body" value="/pages/PAS/Competency/myTeamCompetencyReport.jsp" />
+	</definition>
+
+	<!-- My Team Goal Rating Report-->
+	<definition name="goal.myTeamGoalRatingReport" extends=".pasHomeLayout">
+		<put-attribute name="title" value="My Team Goal Rating Report " />
+		<put-attribute name="body" value="/pages/PAS/GoalSetting/myTeamGoalRatingReport.jsp" />
+	</definition>
+
+	<!-- Employee  Wise Competency Report-->
+	<definition name="competency.empCompReport" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Employee  Wise Competency Report " />
+		<put-attribute name="body" value="/pages/PAS/Competency/empCompReport.jsp" />
+	</definition>
+
+	<!-- My Team Competency Dept Report-->
+	<definition name="competency.MyTeamCompDetReport" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Employee  Wise Competency Report " />
+		<put-attribute name="body" value="/pages/PAS/Competency/myTeamCompDetReport.jsp" />
+	</definition>
+
+	<!-- Competency Rating Sheet Report-->
+	<definition name="competency.CompetencyRatingSheet" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Competency Rating Sheet Report" />
+		<put-attribute name="body" value="/pages/PAS/Competency/competencyRatingSheet.jsp" />
+	</definition>
+
+	<!-- Competency Status Report-->
+	<definition name="competency.CompetencyStatuReport" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Competency Status Report" />
+		<put-attribute name="body" value="/pages/PAS/Competency/copetencyStatusReport.jsp" />
+	</definition>
+	
+	<!-- Competency Monitoring-->
+	<definition name="competency.monitoring" extends=".mainLayout">
+		<put-attribute name="title" value="Competency Monitoring" />
+		<put-attribute name="body" value="/pages/PAS/Competency/competencyMonitoring.jsp" />
+	</definition>
+	<definition name="CompetencyMaster.competencyMasterListPage" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Compentency Master" />
+		<put-attribute name="body" value="/pages/PAS/Competency/competencyMasterPage.jsp" />
+	</definition>
+
+<definition name="CompetencyMaster.competencyData" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Compentency Master" />
+		<put-attribute name="body" value="/pages/PAS/Competency/competencyDetailPage.jsp" />
+	</definition>
+
+	</tiles-definitions>
+

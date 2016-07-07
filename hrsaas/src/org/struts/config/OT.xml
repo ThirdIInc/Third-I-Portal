@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+        
+    <struts>   
+        <package name="ot" namespace="/ot" extends="struts-default">
+        
+	        <result-types>
+			  	<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+			</result-types>
+		
+			<action name="FormulaBuilder_*" method="{1}"
+			class="org.struts.action.FormulaBuilder.FormulaBuilderAction">
+			<result name="showData" type="tiles">
+				payroll.formulaBuilderData
+			</result>
+			<result name="input" type="tiles">
+				payroll.FormulaBuilder
+			</result>
+			<result name="success" type="tiles">
+				payroll.FormulaBuilder
+			</result>
+			<result name="report" type="tiles">
+				payroll.FormulaBuilder
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9calc">
+				/pages/FormulaBuilder/formulaCalc.jsp
+			</result>
+		</action>
+		
+		
+		
+		<action name="OtConfiguration_*" method="{1}" class="org.struts.action.payroll.ot.OtConfigurationAction">
+			<result name="input" type="tiles">ot.configListPage</result>
+			<result name="success" type="tiles">ot.configPage</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+		
+		<action name="ShiftRoster_*" method="{1}" class="org.struts.action.payroll.ot.ShiftRosterAction">
+			<result name="input" type="tiles">ot.shiftRosterPage</result>
+			<result name="success" type="tiles">ot.shiftRosterPage</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="f9pageSearch" type="tiles">f9pageSearch</result>
+		</action>
+		
+		<action name="OtRegister_*" method="{1}" class="org.struts.action.payroll.ot.OtRegisterAction">
+			<result name="input" type="tiles">ot.otRegisterPage</result>
+			<result name="success" type="tiles">ot.otRegisterPage</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+		
+		<action name="OtCalculations_*" method="{1}" class="org.struts.action.payroll.ot.OtCalculationsAction">
+			<result name="input" type="tiles">ot.otCalculationsListPage</result>
+			<result name="success" type="tiles">ot.otCalculationsDtlPage</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="f9pageSearch" type="tiles">f9pageSearch</result>
+			<result name="viewEmpDetails" type="tiles">
+				ot.otViewEmpDtlPage
+			</result>
+		</action>
+		
+		<action name="OtMISReport_*" method="{1}" class="org.struts.action.payroll.ot.OtMISReportAction">
+			<result name="input" type="tiles">ot.otMISReportPage</result>
+			<result name="success" type="tiles">ot.otMISReportPage</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="f9pageSearch" type="tiles">f9pageSearch</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>	
+		</action>
+		
+		<action name="OtRegisterMISReport_*" method="{1}" class="org.struts.action.payroll.ot.OtRegisterMISReportAction">
+			<result name="input" type="tiles">ot.otRegisterMISReport</result>
+			<result name="success" type="tiles">ot.otRegisterMISReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="f9pageSearch" type="tiles">f9pageSearch</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>	
+		</action>
+		
+		<action name="EmailPayrollReport_*" method="{1}" class="org.struts.action.payroll.EmailPayrollReportAction">
+				<result name="f9page" type="tiles">common.f9page</result>
+		</action>	
+
+ </package>
+       
+</struts>

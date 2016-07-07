@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name=".myPageLeftRightLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name=".mainLayoutPay"
+		template="/pages/common/layoutPay.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>	
+	
+	<definition name=".payrollLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<!--  <put name="menu" value="/pages/common/payrollLeftMenu.jsp" />-->
+		<put-attribute name="menu" value="/pages/common/payrollLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>	
+	
+	<definition name="incometax.HouseRent" extends=".mainLayout">
+		<put-attribute name="title" value="House Rent" />
+		<put-attribute name="body" value="/pages/payroll/incometax/houseRent.jsp" />
+	</definition>
+<!-- ADDED BY REEBA FOR PREVIOUS EMPLOYER INCOME -->
+	<definition name="incometax.EmpPrevIncomeList"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Employee Previous Income" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/employeePreviousIncomeList.jsp" />
+	</definition>
+
+	<definition name="incometax.EmpPrevIncome" extends=".payrollLayout">
+		<put-attribute name="title" value="Employee Previous Income" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/employeePreviousIncome.jsp" />
+	</definition>
+	<!-- ADDITION BY REEBA ENDS -->
+
+	<definition name="incometax.EmployeeInvestment"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Employee Investment" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/employeeInvestment.jsp" />
+	</definition>
+
+
+	<definition name="incometax.TaxSlab" extends=".payrollLayout">
+		<put-attribute name="title" value="Employee Investment" />
+		<put-attribute name="body" value="/pages/payroll/incometax/taxSlab.jsp" />
+	</definition>
+	<definition name="incometax.TaxSlabData" extends=".payrollLayout">
+		<put-attribute name="title" value="Employee Investment" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/taxSlabData.jsp" />
+	</definition>
+
+	<definition name="incometax.FundBalance" extends=".payrollLayout">
+		<put-attribute name="title" value="Fund Balance" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/fundBalance.jsp" />
+	</definition>
+
+	<definition name="incometax.Tdscal" extends=".payrollLayout">
+		<put-attribute name="title" value="Employee Investment" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/tdsCalculation.jsp" />
+	</definition>
+
+	<definition name="incometax.TdsCalReport" extends=".payrollLayout">
+		<put-attribute name="title" value="Employee Investment" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/tdsCalReport.jsp" />
+	</definition>
+
+	<definition name="Inv.verification" extends=".payrollLayout">
+		<put-attribute name="title" value="Bonus Acquaintance Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/investmentVerification.jsp" />
+	</definition>
+
+
+	<definition name="incometax.TdsReport" extends=".payrollLayout">
+		<put-attribute name="title" value="Employee Investment" />
+		<put-attribute name="body" value="/pages/payroll/incometax/tdsReport.jsp" />
+	</definition>
+
+	<definition name="incometax.Form16"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Form 16" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/form16MisReport.jsp" />
+	</definition>
+
+	<definition name="incometax.Form16Mis" extends=".mainLayout">
+		<put-attribute name="title" value="Form 16 Mis Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/form16MisReport.jsp" />
+	</definition>
+
+	<definition name="incometax.TaxComputationMis"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Tax Computation Mis Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/taxComputationMisReport.jsp" />
+	</definition>
+
+	<definition name="incometax.taxChallanList" extends=".payrollLayout">
+		<put-attribute name="title" value="Tax Challan" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/taxChallanList.jsp" />
+	</definition>
+
+	<definition name="incometax.taxChallanNext" extends=".payrollLayout">
+		<put-attribute name="title" value="Tax Challan" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/taxChallanNext.jsp" />
+	</definition>
+
+	<definition name="incometax.viewAndEditEmp" extends=".payrollLayout">
+		<put-attribute name="title" value="Tax Challan" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/taxChallanEmpDtl.jsp" />
+	</definition>
+
+	<definition name="incometax.taxChallan" extends=".payrollLayout">
+		<put-attribute name="title" value="Tax Challan" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/taxChallan.jsp" />
+	</definition>
+
+	<definition name="incometax.Tdscalculator"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Tds Calculator" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/tdsCalculator.jsp" />
+	</definition>
+
+	<definition name="incometax.Form24" extends=".payrollLayout">
+		<put-attribute name="title" value="Form 24" />
+		<put-attribute name="body" value="/pages/payroll/incometax/form24.jsp" />
+	</definition>
+
+	<definition name="incometax.Form12" extends=".payrollLayout">
+		<put-attribute name="title" value="Form 12" />
+		<put-attribute name="body" value="/pages/payroll/incometax/form12.jsp" />
+	</definition>
+
+	<definition name="incometax.eTds" extends=".payrollLayout">
+		<put-attribute name="title" value="ETDS" />
+		<put-attribute name="body" value="/pages/payroll/incometax/eTds.jsp" />
+	</definition>
+
+	<definition name="incometax.ITDeclaration" extends=".payrollLayout">
+		<put-attribute name="title" value="Income Tax Declaration" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/incometaxDeclaration.jsp" />
+	</definition>
+
+	<definition name="incometax.formV" extends=".payrollLayout">
+		<put-attribute name="title" value="FormV" />
+		<put-attribute name="body" value="/pages/payroll/incometax/formV.jsp" />
+	</definition>
+
+	<definition name="incometax.Form27A" extends=".payrollLayout">
+		<put-attribute name="title" value="Form 27" />
+		<put-attribute name="body" value="/pages/payroll/incometax/form27A.jsp" />
+	</definition>
+
+	<definition name="incometax.DivisionTaxCalc"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Division Tax Calculation" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/divisionTaxCalc.jsp" />
+	</definition>
+	
+	<definition name="incometax.waitPage"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Division Tax Calculation" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/divisionTaxCalc-wait.jsp" />
+	</definition>
+
+	<definition name="incometax.InvestmentDeclaration"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Investment Declaration Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/investmentDeclarationReport.jsp" />
+	</definition>
+
+	<definition name="incometax.PFReconciliation"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="PF Reconciliation" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/pfReconciliationReport.jsp" />
+	</definition>
+
+	<definition name="stmt.calculate" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Tax calculation" />
+		<put-attribute name="body"
+			value="/pages/payroll/incometax/taxComputationMisReport.jsp" />
+	</definition>
+
+	<definition name="incometax.EmployeeWisePerqsReport" extends=".payrollLayout">
+		<put-attribute name="title" value="Employee Perquisites Report" />
+		<put-attribute name="body" value="/pages/payroll/incometax/employeewisePerqsReport.jsp" />
+	</definition>
+
+</tiles-definitions>

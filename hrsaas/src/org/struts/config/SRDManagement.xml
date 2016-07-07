@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+        
+<struts>
+   <package name="srd" namespace="/srd" extends="struts-default" >
+    <result-types>
+		<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+			</result-types>
+			        
+			<action name="OfficialDetail_*" method="{1}" class="org.struts.action.admin.srd.OfficialDetailAction">
+				<result name="input" type="tiles" >srd.OfficialDetail</result>
+				<result name="success" type="tiles">srd.OfficialDetail</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="f9ParamPage" type="tiles">common.f9ParamPage</result>					
+			</action>
+			<action name="FamilyDetails_*" method="{1}" class="org.struts.action.admin.srd.FamilyDetailsAction">
+				<result name="input" type="tiles" >srd.FamilyDetails</result>
+				<result name="success" type="tiles">srd.FamilyDetails</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="famReport" type="tiles">srd.FamilyReport</result>	
+				<result name="marriReport" type="tiles">srd.MarriageReport</result>			
+			</action> 
+			
+			<!-- Action Mapping Added By Priyanka for Bussiness Card Report -->
+			
+			
+			<action name="NomineeDetail_*" method="{1}" class="org.struts.action.admin.srd.NomineeDetailAction">
+				<result name="input" type="tiles" >srd.NomineeDetail</result>
+				<result name="success" type="tiles">srd.NomineeDetail</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action> 	
+			
+			<action name="EmployeeCheckList_*" method="{1}" class="org.struts.action.admin.srd.EmployeeCheckListAction">
+				<result name="input" type="tiles" >srd.EmployeeCheckList</result>
+		<result name="success" type="tiles">srd.EmployeeCheckList</result>	
+				<result name="login" type="tiles">srd.EmployeeCheckListReport</result>
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>	
+			
+			<action name="QualificationDetail_*" method="{1}" class="org.struts.action.admin.srd.QualificationDetailAction">
+				<result name="input" type="tiles" >srd.QualificationDetail</result>
+				<result name="success" type="tiles">srd.QualificationDetail</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>
+
+		  <action name="SalaryDetail_*" method="{1}" class="org.struts.action.admin.srd.SalaryDetailAction">
+				<result name="input" type="tiles" >srd.SalaryDetail</result>
+				<result name="success" type="tiles">srd.SalaryDetail</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		 </action>
+		  
+		 <action name="AwardDetails_*" method="{1}" class="org.struts.action.admin.srd.AwardDetailsAction">
+				<result name="input" type="tiles" >srd.AwardDetails</result>
+				<result name="success" type="tiles">srd.AwardDetails</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="report" type="tiles">srd.AwardReport</result>
+				
+			</action> 
+			<action name="AddressDetails_*" method="{1}" class="org.struts.action.admin.srd.AddressDetailsAction">
+				<result name="input" type="tiles" >srd.AddressDetails</result>
+				<result name="success" type="tiles">srd.AddressDetails</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+			</action>			
+			 <action name="AddressBook_*" method="{1}" class="org.struts.action.admin.srd.AddressBookAction">
+				<result name="input" type="tiles">srd.AddressBook</result>
+				<result name="success" type="tiles">srd.AddressBook</result>
+				<result name="f9page" type="tiles">common.f9page</result>
+			</action>
+			<action name="ServiceVerification_*" method="{1}" class="org.struts.action.admin.srd.ServiceVerificationAction">
+				<result name="input" type="tiles" >srd.ServiceVerification</result>
+				<result name="success" type="tiles">srd.ServiceVerification</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>
+			<action name="PersonnelDetail_*" method="{1}" class="org.struts.action.admin.srd.PersonnelDetailAction">
+				<result name="input" type="tiles" >srd.PersonnelDetail</result>
+				<result name="success" type="tiles">srd.PersonnelDetail</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>
+			
+			<action name="TransferApplication_*" method="{1}" class="org.struts.action.admin.transfer.TransferAction">
+					<result name="input" type="tiles" >transfer.TransferApplication</result>
+					<result name="success" type="tiles">transfer.TransferApplication</result>	
+					<result name="f9page" type="tiles">common.f9page</result>	
+					<result name="report" type="tiles">transfer.TransferApplicationReport</result>		
+			</action>
+			<action name="TransferApproval_*" method="{1}"
+				class="org.struts.action.admin.transfer.TransferApprovalAction">
+				<result name="input" type="tiles">transfer.TransferApproval</result>
+				<result name="success" type="tiles">transfer.TransferApproval</result>
+				<result name="f9page" type="tiles">common.f9page</result>
+			</action>
+				
+			
+			<action name="PromotionHistory_*" method="{1}" class="org.struts.action.admin.srd.PromotionHistoryAction">
+				<result name="input" type="tiles" >srd.PromotionHistory</result>
+				<result name="success" type="tiles">srd.PromotionHistory</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+			</action>
+		 	
+			<action name="PayHistory_*" method="{1}" class="org.struts.action.admin.srd.PayHistoryAction">
+				<result name="input" type="tiles" >srd.PayHistory</result>
+				<result name="success" type="tiles">srd.PayHistory</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+			</action>	
+			
+		
+		<action name="WorkExp_*" method="{1}" class="org.struts.action.admin.srd.WorkExpAction">
+			<result name="input" type="tiles" >srd.WorkExp</result>
+			<result name="success" type="tiles">srd.WorkExp</result>	
+			<result name="f9page" type="tiles">common.f9page</result>				
+		</action>
+		
+		<action name="PunishHistory_*" method="{1}" class="org.struts.action.admin.srd.PunishHistoryAction">
+			<result name="input" type="tiles" >srd.PunishHistory</result>
+			<result name="success" type="tiles">srd.PunishHistory</result>	
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>	
+		
+		<action name="LeaveHistory_*" method="{1}" class="org.struts.action.admin.srd.LeaveHistoryAction">
+			<result name="input" type="tiles" >srd.LeaveHistory</result>
+			<result name="success" type="tiles">srd.LeaveHistory</result>	
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>	
+		
+		<action name="RehireProcess_*" method="{1}" class="org.struts.action.admin.srd.RehireProcessAction">
+			<result name="input" type="tiles" >srd.RehireProcess</result>
+			<result name="success" type="tiles">srd.RehireProcess</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>	
+			<result name="rehirePage" type="tiles">srd.RehirePage</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>	
+			
+				 <!-- Mapping for Initial Appoinment -->
+		 <action name="InitialAppointment_*" method="{1}" class="org.struts.action.admin.srd.InitialAppointmentAction">
+				<result name="input" type="tiles" >srd.InitialAppointment</result>
+				<result name="success" type="tiles">srd.InitialAppointment</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				
+		</action> 	
+		
+		<action name="ServiceBook_*" method="{1}" class="org.struts.action.admin.srd.ServiceBookAction">
+				<result name="input" type="tiles" >srd.ServiceBook</result>
+				<result name="success" type="tiles">srd.ServiceBook</result>	
+				<result name="f9page" type="tiles">common.f9page</result>				
+		</action>
+		
+		
+		
+	
+		 	 <action name="EmployeeExperience_*" method="{1}" class="org.struts.action.admin.srd.EmployeeExperienceAction">
+				<result name="input" type="tiles" >srd.EmployeeExperience</result>
+				<result name="success" type="tiles">srd.EmployeeExperience</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="projectDtl" type="tiles">srd.EmployeeProjectDetail</result>	
+		 </action>
+
+
+			<action name="EmpLic_*" method="{1}" class="org.struts.action.admin.srd.EmpLicAction">
+				<result name="input" type="tiles" >srd.EmpLic</result>
+				<result name="success" type="tiles">srd.EmpLic</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		 </action>
+		 <action name="MISReport_*" method="{1}" class="org.struts.action.admin.srd.MISReportAction">
+				<result name="input" type="tiles" >srd.misReport</result>
+				<result name="success" type="tiles">srd.misReport</result>	
+				<result name="viewOnScreen" type="tiles">srd.misReportView</result> 
+				<result name="f9multiSelect" type="tiles">f9multiSelect</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		 </action>
+		 <!-- Anantha Lakshmi -->
+		 <action name="accMISReport_*" method="{1}" class="org.struts.action.admin.srd.AccMISReportAction">
+				<result name="input" type="tiles" >srd.accReport</result>
+				<result name="success" type="tiles">srd.accReport</result>	
+				<result name="viewOnScreen" type="tiles">srd.accReportView</result> 
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="f9multiSelect" type="tiles">f9multiSelect</result>			
+		 </action>
+		 
+		
+		<!-- Anantha Lakshmi -->
+		 
+		
+		<action name="RetGratuityNom_*" method="{1}"
+			class="org.struts.action.admin.srd.RetGratuityNomAction">
+			<result name="input" type="tiles">srd.RetGratuityNom</result>
+			<result name="success" type="tiles">srd.RetGratuityNom</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			
+		</action>
+		
+		
+		
+		
+		<action name="FamilyPensionNom_*" method="{1}"
+			class="org.struts.action.admin.srd.FamilyPensionNomAction">
+			<result name="input" type="tiles">srd.FamilyPensionNom</result>
+			<result name="success" type="tiles">srd.FamilyPensionNom</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			
+		</action>
+		
+		<action name="EmpChangeHistory_*" method="{1}" class="org.struts.action.admin.srd.EmpChangeHistoryAction">
+				<result name="input" type="tiles" >srd.changeHistory</result>
+				<result name="success" type="tiles">srd.changeHistory</result>	
+				<result name="f9page" type="tiles">common.f9page</result>		
+				 				
+			</action>
+			
+			
+			<action name="AlertMessage_*" method="{1}" class="org.struts.action.admin.srd.MessageAlertAction">
+				<result name="input" type="tiles" >srd.AlertMessage</result>
+				<result name="success" type="tiles">srd.AlertMessage</result>	
+				<result name="sucessPage" type="tiles">srd.Detail</result>	
+				<result name="f9page" type="tiles">common.f9page</result>				
+			</action>
+			
+			<action name="TransferMisReport_*" method="{1}" class="org.struts.action.admin.transfer.TransferMisReportAction">
+				<result name="input" type="tiles">transfer.TransferMisReport</result>
+				<result name="success" type="tiles">transfer.TransferMisReport</result>
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>
+			<action name="NewJoinees_*" method="{1}" class="org.struts.action.admin.srd.NewJoineeAction"> 
+		        
+			</action>
+			<action name="Holiday_*" method="{1}" class="org.struts.action.admin.srd.HolidayAction"> 
+		        
+			</action>
+			
+			<action name="Birthday_*" method="{1}" class="org.struts.action.admin.srd.BirthdayReportAction"> 
+		        
+			</action>
+			
+ 
+			
+		<!-- 	Add actions here -->    
+		
+		
+		<action name="SendMail_*" method="{1}" class="org.struts.action.admin.srd.SendMailAction">
+				<result name="input" type="tiles" >srd.SendMail</result>
+				<result name="success" type="tiles">srd.SendMail</result>	
+				
+				<result name="f9page" type="tiles">common.f9page</result>	
+						
+			</action>
+			
+			<action name="BirthdayMail_*" method="{1}" class="org.struts.action.admin.srd.BirthdayAction">
+				<result name="input" type="tiles" >srd.SendMail</result>
+				<result name="success" type="tiles">srd.SendMail</result>	
+				<result name="birthDay" type="tiles">srd.birthDay</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="successjsp" type="tiles">srd.dept</result>
+				<result name="birthdayform" type="tiles">srd.birthDayMail</result>		
+			  <result name="anniversary" type="tiles">srd.anniversaryMail</result>	
+			</action>
+			
+			<action name="AddressDetailsMis_*" method="{1}" class="org.struts.action.admin.srd.AddressDetailsMisAction">
+				<result name="input" type="tiles">srd.addressDetails</result>
+				<result name="success" type="tiles">srd.addressDetails</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+			</action>
+			
+			 <action name="FamilyReport_*" method="{1}" class="org.struts.action.admin.srd.FamilyMisReportAction">
+				<result name="input" type="tiles" >srd.familyReport</result>
+				<result name="success" type="tiles">srd.familyReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		 </action>
+		 
+		 <!-- Added By Priyanka Kumbhar -->
+		 
+		  <action name="RequestBusinessCardMisReport_*" method="{1}" class="org.struts.action.admin.srd.RequestBusinessCardMisReportAction">
+				<result name="input" type="tiles" >srd.requestBusinessCardMisReport</result>
+				<result name="success" type="tiles">srd.requestBusinessCardMisReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="mailReport" type="tiles">common.mailReport</result>	
+					<result name="f9multiSelect" type="tiles">f9multiSelect</result>	
+		 </action>
+		 
+		 
+		  <action name="EmployeeIdCardMisReport_*" method="{1}" class="org.struts.action.admin.srd.EmployeeIdCardMisReportAction">
+				<result name="input" type="tiles" >srd.employeeIdCardMisReport</result>
+				<result name="success" type="tiles">srd.employeeIdCardMisReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="mailReport" type="tiles">common.mailReport</result>	
+				<result name="f9multiSelect" type="tiles">f9multiSelect</result>	
+		 </action>
+		 
+		 
+		 
+		 
+		 <!-- Ended By Priyanka Kumbhar -->
+		 
+		 
+		 
+		  <!-- Added by Anantha Lakshmi for Exp MIS Report -->
+		 <action name="QualificationReport_*" method="{1}" class="org.struts.action.admin.srd.QualificationMisReportAction">
+				<result name="input" type="tiles" >srd.qualReport</result>
+				<result name="success" type="tiles">srd.qualReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="f9multiSelect" type="tiles">f9multiSelect</result>	
+				<result name="mailReport" type="tiles">common.mailReport</result>				
+		 </action>
+		
+		 
+		 	  <action name="ExperienceMISReport_*" method="{1}" class="org.struts.action.admin.srd.ExperinceMisReportAction">
+				<result name="input" type="tiles" >srd.expReport</result>
+				<result name="success" type="tiles">srd.expReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		 	  </action>
+		 
+		  <!-- End by Anantha for Exp MIS Report  -->
+		 
+		  <action name="NomineeReport_*" method="{1}" class="org.struts.action.admin.srd.NomineeMisReportAction">
+				<result name="input" type="tiles" >srd.nomineeReport</result>
+				<result name="success" type="tiles">srd.nomineeReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		 </action>
+		 
+		   <action name="WarningLetter_*" method="{1}" class="org.struts.action.admin.srd.WarningLetterAction">
+				<result name="input" type="tiles" >srd.warningLetter</result>
+				<result name="success" type="tiles">srd.warningLetter</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		 </action>
+		 
+		 <action name="ProbationSetting_*" method="{1}" class="org.struts.action.admin.srd.ProbationSettingAction">
+				<result name="input" type="tiles">srd.ProbationSetting</result>
+				<result name="success" type="tiles">srd.ProbationSetting</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		 </action>
+		 
+		   <action name="ProbationConfirmation_*" method="{1}" class="org.struts.action.admin.srd.ProbationConfirmationAction">
+				<result name="input" type="tiles">srd.ProbationConfirmation</result>
+				<result name="success" type="tiles">srd.ProbationConfirmation</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		 </action>
+		 
+		 <action name="EmployeePosting_*" method="{1}" class="org.struts.action.admin.srd.EmployeePostingAction">
+				<result name="input" type="tiles" >srd.EmployeePosting</result>
+				<result name="success" type="tiles">srd.EmployeePosting</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		</action>
+		
+		<action name="ProfReferences_*" method="{1}" class="org.struts.action.admin.srd.ProfReferencesAction">
+				<result name="input" type="tiles" >srd.ProfRef</result>
+				<result name="success" type="tiles">srd.ProfRef</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		</action>
+		
+		
+		 <action name="PostingMisReport_*" method="{1}" class="org.struts.action.admin.srd.PostingMisReportAction">
+				<result name="input" type="tiles" >srd.postingReport</result>
+				<result name="success" type="tiles">srd.postingReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="f9multiSelect" type="tiles">f9multiSelect</result>	
+				<result name="mailReport" type="tiles">common.mailReport</result>		
+		 </action>
+		 
+		  <action name="ManpowerSnapshot_*" method="{1}" class="org.struts.action.admin.srd.ManpowerSnapshotAction">
+				<result name="input" type="tiles" >srd.manpowerSnapshot</result>
+				<result name="success" type="tiles">srd.manpowerSnapshot</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		 </action>
+		 
+		 <action name="EmpCountSummary_*" method="{1}" class="org.struts.action.admin.srd.EmpCountSummaryAction">
+				<result name="input" type="tiles" >srd.empCountSummary</result>
+				<result name="success" type="tiles">srd.empCountSummary</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		 </action>
+		 <!-- Added by Prashant Starts -->
+		 <action name="GratuityDetails_*" method="{1}" class="org.struts.action.admin.srd.GratuityDetailsAction">
+				<result name="input" type="tiles" >srd.GratuityDetails</result>
+				<result name="success" type="tiles">srd.GratuityDetails</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		 </action>
+		  <!-- Added by Prashant Ends -->
+		  
+		  
+		   <!-- Added by Vish Starts -->
+		 <action name="EventMaster_*" method="{1}" class="org.struts.action.admin.srd.EventMasterAction">
+				<result name="input" type="tiles" >srd.eventmaster</result>
+				<result name="success" type="tiles">srd.eventmaster</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="f9multiSelect" type="tiles">f9multiSelect</result>		
+		 </action>
+		  <!-- Added by Vish Ends -->
+	 <!-- Added by Shashank starts -->
+	 <action name="LicMisReport_*" method="{1}" class="org.struts.action.admin.srd.LICMisReportAction">
+				<result name="input" type="tiles" >srd.LICMisReport</result>
+				<result name="success" type="tiles">srd.LICMisReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="f9multiSelect" type="tiles">f9multiSelect</result>	
+				<result name="mailReport" type="tiles">common.mailReport</result>		
+		 </action>
+		  <!-- Added by Shashank Ends -->
+		 <!-- Added by Nilesh - VISA -->
+		 <action name="VisaDetails_*" method="{1}" class="org.struts.action.admin.srd.VisaDetailsAction">
+		 		<result name="input" type="tiles">srd.VisaDetails</result>
+				<result name="success" type="tiles">srd.VisaDetails</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		 </action>
+		 
+		   <action name="ProfessionalReferenceMis_*" method="{1}" class="org.struts.action.admin.srd.ProfessionalReferenceMisAction">
+				<result name="input" type="tiles" >srd.ProfessionalReferenceMis</result>
+				<result name="success" type="tiles">srd.ProfessionalReferenceMis</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		 </action>
+		 <action name="SkillDetails_*" method="{1}" class="org.struts.action.admin.srd.SkillDetailsAction">
+				<result name="input" type="tiles" >srd.SkillDetails</result>
+				<result name="success" type="tiles">srd.SkillDetails</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		 </action>
+		 
+		 
+		 <!-- Added By vijay Sonawane START -->
+			 <action name="PromotionHistoryMis_*" method="{1}" class="org.struts.action.admin.srd.PromotionHistoryMisReportAction">
+				<result name="input" type="tiles">srd.PromotionDetails</result>
+				<result name="success" type="tiles">srd.PromotionDetails</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="mailReport" type="tiles">common.mailReport</result>
+				<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			</action>
+			<action name="IncrementHistoryMis_*" method="{1}" class="org.struts.action.admin.srd.IncrementHistoryMisReportAction">
+				<result name="input" type="tiles">srd.IncrementDetails</result>
+				<result name="success" type="tiles">srd.IncrementDetails</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="mailReport" type="tiles">common.mailReport</result>
+				<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			</action>
+			<action name="NomineeReport_*" method="{1}" class="org.struts.action.admin.srd.NomineeMisReportAction">
+				<result name="input" type="tiles" >srd.nomineeReport</result>
+				<result name="success" type="tiles">srd.nomineeReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>		
+				<result name="mailReport" type="tiles">common.mailReport</result>	
+				<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+				
+			 </action>
+			 <action name="AddressDetailsMis_*" method="{1}" class="org.struts.action.admin.srd.AddressDetailsMisAction">
+				<result name="input" type="tiles">srd.addressDetails</result>
+				<result name="success" type="tiles">srd.addressDetails</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="mailReport" type="tiles">common.mailReport</result>
+				<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			</action>
+		 <!-- Added By vijay Sonawane END -->	  
+		       
+		     <action name="FamilyReport_*" method="{1}" class="org.struts.action.admin.srd.FamilyMisReportAction">
+		     	<result name="input" type="tiles">srd.familyReport</result>
+		     	<result name="success" type="tiles">srd.familyReport</result>
+		     	<result name="f9page" type="tiles">common.f9page</result>
+		     	<result name="mailReport" type="tiles">common.mailReport</result>
+		     	<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		     </action>
+		     
+		     <action name="ExperienceMISReport_*" method="{1}" class="org.struts.action.admin.srd.ExperinceMisReportAction">
+		     	<result name="input" type="tiles"> srd.expReport</result>
+		     	<result name="success" type="tiles">srd.expReport</result>
+		     	<result name="f9page" type="tiles">common.f9page</result>
+		     	<result name="mailReport" type="tiles">common.mailReport</result>
+		     	<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		     </action>
+		     
+		      <!-- Added by Archana Starts for Award MIS Report-->
+		     <action name="AwardMisReport_*" method="{1}" class="org.struts.action.admin.srd.AwardMisReportAction">
+		     	<result name="input" type="tiles">srd.awardMisReport</result>
+		     	<result name="success" type="tiles">srd.awardMisReport</result>
+		     	<result name="f9page" type="tiles">common.f9page</result>
+		     	<result name="mailReport" type="tiles">common.mailReport</result>
+		     	<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		     </action>
+
+		     <action name="DisciplinaryMisReport_*" method="{1}" class="org.struts.action.admin.srd.DisciplinaryMisReportAction">
+		     	<result name="input" type="tiles">srd.disciplinaryMisReport</result>
+		     	<result name="success" type="tiles">srd.disciplinaryMisReport</result>
+		     	<result name="f9page" type="tiles">common.f9page</result>
+		     	<result name="mailReport" type="tiles">common.mailReport</result>
+		     	<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		     </action>
+		     <!-- Added by Archana Ends-->
+
+		     <action name="EmailPayrollReport_*" method="{1}" class="org.struts.action.payroll.EmailPayrollReportAction">
+		     	<result name="f9page" type="tiles">common.f9page</result>
+		     </action>
+		     
+		     <!--Added By Tinshuk Singh Begin-->
+		<action name="VisaMISReport_*" method="{1}" class="org.struts.action.admin.srd.VisaMISReportAction">
+				<result name="input" type="tiles" >srd.visaReport</result>
+				<result name="success" type="tiles">srd.visaReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="mailReport" type="tiles">common.mailReport</result>
+				<result name="f9multiSelect" type="tiles">f9multiSelect	</result>			
+		 </action>
+		 
+		 <action name="SkillsMISReport_*" method="{1}" class="org.struts.action.admin.srd.SkillsMISReportAction">
+				<result name="input" type="tiles" >srd.skillsReport</result>
+				<result name="success" type="tiles">srd.skillsReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="mailReport" type="tiles">common.mailReport</result>
+				<result name="f9multiSelect" type="tiles">f9multiSelect	</result>			
+		 </action>
+           <!--Added By Tinshuk Singh End-->
+          <action name="CTCDetail_*" method="{1}" class="org.struts.action.admin.srd.CTCDetailAction">
+				<result name="input" type="tiles" >srd.CTCDetail</result>
+				<result name="success" type="tiles">srd.CTCDetail</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+		 </action>
+		 </package>
+        
+</struts>

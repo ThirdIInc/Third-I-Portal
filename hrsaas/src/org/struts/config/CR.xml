@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+        
+    <struts>   
+        <package name="cr" namespace="/cr" extends="struts-default">
+        
+	        <result-types>
+			  	<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+			</result-types>
+		
+		<action name="CustomerReportLogin_*" method="{1}"
+			class="org.struts.action.CR.CustomerReportLoginAction">
+			<result name="success" type="tiles">
+				login.customerReportHeader
+			</result>
+			
+			<result name="input">/pages/CR/customerLogin.jsp</result>
+			<result name="customerChangePass" type="tiles">
+				login.customerChangePass
+			</result>
+			<result name="clientChangePass" type="tiles">
+				login.clientChangePass
+			</result>
+			<result name="logout" type="tiles">login.candLogout</result>
+			<result name="error" type="tiles">
+				login.candidateLogin
+			</result>
+			<result name="gofortest" type="tiles">
+				recruitment.priview
+			</result>
+			
+			<result name="multipleAccount" type="tiles">login.customerMultipleAccount</result>
+			
+		</action>
+		
+		<action name="CustomerAccountInfo_*" method="{1}"
+			class="org.struts.action.CR.CustomerAccountInfoAction">
+			<result name="success" type="tiles">login.customerReportHeader</result>
+			<result name="input" type="tiles">cr.CustomerAccountInfo</result>
+			<result name="getAccReport" type="tiles">cr.CustomerAccountInfo</result>
+			<result name="generateReport">/pages/CR/generateReport.jsp</result>
+			<result name="Daily_Performance_summary">/pages/CR/dailyPerformanceSummary.jsp</result>
+			<result name="Weekly_Performance_Summary">/pages/CR/weeklyPerformanceSummary.jsp</result>
+			<result name="Week_Stoplight_Summary">/pages/CR/weekStoplightSummary.jsp</result>
+			<result name="Daily_Performance_summary_Group">/pages/CR/dailyPerformanceSummaryGroup.jsp</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="customerChangePass" type="tiles">login.customerChangePass</result>	
+			<result name="clientChangePass" type="tiles">
+				login.clientChangePass
+			</result>
+			<result name="getMultipleAccount" type="tiles">cr.CustomerMultipleAccountInfo</result>
+		</action>
+		
+		<action name="CustomerHistoryReport_*" method="{1}" class="org.struts.action.CR.CustomerHistoryReportAction">
+		<result name="input" type="tiles">cr.custHistoryReport</result>
+		<result name="success" type="tiles">cr.custHistoryReport</result>
+		<result name="f9page" type="tiles">common.f9page</result>
+		<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action> 
+		
+		<action name="CRMAccountInfo_*" method="{1}"
+			class="org.struts.action.CR.CRMAccountInfoAction">
+			<result name="success" type="tiles">login.customerReportHeader</result>
+			<result name="input" type="tiles">cr.CustomerAccountInfo</result>
+			<result name="getAccReportCRM" type="tiles">cr.CustomerAccountInfo_CRM</result>
+			<result name="generateReportCRM">/pages/CR/generateReport.jsp</result>
+			<result name="Daily_Performance_summary_CRM">/pages/CR/dailyPerformanceSummaryCRM.jsp</result>
+			<result name="Weekly_Performance_Summary_CRM">/pages/CR/weeklyPerformanceSummaryCRM.jsp</result>
+			<result name="Week_Stoplight_Summary_CRM">/pages/CR/weekStoplightSummaryCRM.jsp</result>
+			<result name="Daily_Performance_summary_Group_CRM">/pages/CR/dailyPerformanceSummaryGroupCRM.jsp</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="customerChangePass_CRM" type="tiles">login.customerChangePass</result>					
+		</action>
+		
+		<action name="AccountMaster_*" method="{1}" class="org.struts.action.CR.AccountMasterAction">
+			<result name="input" type="tiles">cr.accountMasterListPage</result>
+			<result name="success" type="tiles">cr.accountMasterDataPage</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="crmMappingDtl" type="tiles">cr.crmMappingDtlPage</result>
+			<result name="businessUserDtl" type="tiles">cr.businessUserDtlPage</result>
+			<result name="customerHistoryReport" type="tiles">cr.customerHistoryReport</result>
+			
+		</action>
+		<!--
+		  Added by Vivek Wadhwani for Client Master-->
+		<action name="ClientMaster_*" method="{1}" class="org.struts.action.CR.ClientMasterAction">
+			<result name="input" type="tiles">cr.clientMasterListPage</result>
+			<result name="success" type="tiles">cr.clientMasterListPage</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="crmMappingDtl" type="tiles">cr.crmMappingDtlPage</result>
+			<result name="businessUserDtl" type="tiles">cr.clientBusinessUserDtlPage</result>
+			<result name="customerHistoryReport" type="tiles">cr.customerHistoryReport</result>
+			<result name="report" type="tiles">
+				cr.ClientReport
+			</result>
+			<result name="clientData" type="tiles">
+				cr.ClientMasterData
+			</result>
+		</action>
+
+		
+
+		
+		
+		
+		<action name="PerformanceMetrics_*" method="{1}" class="org.struts.action.CR.PerformanceMetricsAction">
+			<result name="input" type="tiles">cr.crmList</result>
+			<result name="success" type="tiles">cr.performanceMetricsPage</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="escalationDtl" type="tiles">cr.escalationDtlPage</result>
+			<result name="plannedDtl" type="tiles">cr.plannedDtlPage</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="dataReconcilation" type="tiles">cr.dataReconcilationPage</result>
+			<result name="callViewPage" type="tiles">cr.callViewPage</result>
+		</action>
+		
+		<!-- For Analytics Module Main Page  -->
+		<action name="D1AnalyticHome_*" method="{1}" class="org.struts.action.CR.D1AnalyticHomeAction">
+			<result name="input" type="tiles">home.d1AnalyticHome</result>
+			<result name="success" type="tiles">home.d1AnalyticHome</result>
+			<result name="clientChangePass" type="tiles">
+				login.clientChangePass
+			</result>
+		</action>
+		
+		<action name="D1AnalyticHomeExternalUser_*" method="{1}" class="org.struts.action.CR.D1AnalyticHomeAction">
+			<result name="input" type="tiles">home.d1AnalyticHomeExternalUser</result>
+			<result name="success" type="tiles">home.d1AnalyticHomeExternalUser</result>
+			<result name="clientChangePass" type="tiles">
+				login.clientChangePass
+			</result>
+		</action>
+		
+		
+		
+		<!--
+		  Added by Vijay Gaikwad for DashBoard-->
+		<action name="DashBoard_*" method="{1}" class="org.struts.action.CR.DashBoardAction">
+			<result name="input" type="tiles">cr.dashBoard</result>		
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="menulist" type="tiles">cr.dashBoardMenu</result>
+			<result name="PopUpTable" type="tiles">cr.dashBoradPopupTab</result>
+			<result name="showComponent" type="tiles">cr.dashBoardshowComponent</result>
+	  		<result name="sendMail" type="tiles">cr.dashboardMail</result>
+			<result name="mailReport" type="tiles">cr.dashboardMail</result>
+			<result name="success" type="tiles">cr.dashBoardReportScheduler</result>
+			<result name="reportScheduler" type="tiles">cr.dashBoardReportScheduler</result>
+			<result name="emailClosed" type="tiles">cr.emailClosed</result>
+			<result name="callMIS" type="tiles">cr.callMIS</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="HRMInput" type="tiles">cr.dashboardHRM</result>
+		</action>
+		<action name="ReasonMaster_*" method="{1}" class="org.struts.action.CR.ReasonMasterAction">
+			<result name="input" type="tiles">cr.Reason</result>	
+		</action>
+		<action name="ProductFamily_*" method="{1}" class="org.struts.action.CR.ProductFamilyAction">
+			<result name="input" type="tiles">cr.Reason</result>	
+		</action>
+		<!-- DashBoard Configuration -->
+		<action name="DashBoardConfiguration_*" method="{1}" class="org.struts.action.CR.DashBoardConfigurationAction">
+		<result name="input" type="tiles">cr.dashBoardConfiguration</result>
+		</action>
+		<!-- End DashBoard Configuration -->		
+		<!-- Added by Vivek Wadhwani for Data Reconcile -->
+		<action name="DataReconcile_*" method="{1}" class="org.struts.action.CR.DataReconcileAction">
+			<result name="input" type="tiles">cr.DataReconcileListPage</result>
+			<result name="success" type="tiles">cr.DataReconcileListPage</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			
+		</action>
+		<!--   End Data Reconcile  -->
+		
+		<action name="ManageClientDashBoard_*" method="{1}" class="org.struts.action.CR.ManageClientDashBoardAction">
+			<result name="input" type="tiles">cr.manageClientDashBoardList</result>
+			<result name="internalUser" type="tiles">cr.manageClientDashBoardEmployeeMap</result>
+			<result name="externalUser" type="tiles">cr.manageClientDashBoardAccountMap</result>
+			<result name="dashBoardAccountList" type="tiles">cr.manageClientDashBoardAccountList</result>
+			<result name="updateDashBoardDetails" type="tiles">cr.manageClientDashBoardEdit</result>
+			<result name="success" type="tiles">cr.accountMasterDataPage</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="crmMappingDtl" type="tiles">cr.crmMappingDtlPage</result>
+			<result name="businessUserDtl" type="tiles">cr.businessUserDtlPage</result>
+			<result name="customerHistoryReport" type="tiles">cr.customerHistoryReport</result>
+			<result name="userFilter" type="tiles">cr.userFilter</result>		
+		</action>
+		
+		<!-- OT Budget -->
+		<action name="DecisionOneOTBudget_*" method="{1}" class="org.struts.action.CR.DecisionOneOTBudgetAction">
+			<result name="input" type="tiles">cr.DecisionOneOTBudgetPage</result>
+			<result name="success" type="tiles">cr.DecisionOneOTBudgetPage</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			
+		</action>
+		<!-- End Of OT Budget -->
+		
+		<!-- MRC data upload -->
+			<action name="MRCdataUpload_*" method="{1}" class="org.struts.action.CR.MRCdataUploadAction">
+			<result name="input" type="tiles">cr.Reason</result>
+			</action>
+		<!-- End of MRC DATA UPLOAD -->
+
+ </package>
+       
+</struts>

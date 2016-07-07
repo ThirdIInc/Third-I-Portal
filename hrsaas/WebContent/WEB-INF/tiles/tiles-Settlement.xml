@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+		<!-- Added by priyanka -->
+	<definition name=".hrmHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/hrmHomeLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<!-- ended by priyanka -->
+
+	<definition name=".myPageLeftRightLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name=".hrmHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/hrmHomeLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name="settlement.ResignationDetail"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Settlement" />
+		<put-attribute name="body"
+			value="/pages/settlement/resignationDetails.jsp" />
+	</definition>
+
+	<definition name="settlement.ExitInterview" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Settlement" />
+		<put-attribute name="body" value="/pages/settlement/exitIntQues.jsp" />
+	</definition>
+	
+	<definition name="settlement.Settlement" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Settlement" />
+		<put-attribute name="body"
+			value="/pages/settlement/SettlementDetails.jsp" />
+	</definition>
+	
+	<definition name="settlement.SettlementDetail"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Settlement" />
+		<put-attribute name="body"
+			value="/pages/settlement/SettlementDetails1.jsp" />
+	</definition>
+	
+	<definition name="settlement.SettlementFirst"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Settlement" />
+		<put-attribute name="body"
+			value="/pages/settlement/SettlementDetailsFirst.jsp" />
+	</definition>
+	<definition name="settlement.SettlementSecond"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Settlement" />
+		<put-attribute name="body"
+			value="/pages/settlement/SettlementDetailsSecond.jsp" />
+	</definition>
+	<definition name="settlement.SettlementThird"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Settlement" />
+		<put-attribute name="body"
+			value="/pages/settlement/SettlementDetailsThird.jsp" />
+	</definition>
+	<definition name="settlement.SettlMISReport"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="SettlementMISReport" />
+		<put-attribute name="body"
+			value="/pages/settlement/settlementMisReport.jsp" />
+	</definition>
+
+	<definition name="settlement.letters" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="SettlementLetters" />
+		<put-attribute name="body"
+			value="/pages/settlement/settlementLetters.jsp" />
+	</definition>
+	<definition name="departmentClearanceChecklist"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Department Clearance Checklist" />
+		<put-attribute name="body"
+			value="/pages/settlement/departmentClearanceChecklist.jsp" />
+	</definition>
+
+
+	<definition name="departmentClearance" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Department Clearance Checklist" />
+		<put-attribute name="body"
+			value="/pages/settlement/departmentClearance.jsp" />
+	</definition>
+
+	<definition name="departmentClearanceForm" extends=".mainLayout">
+		<put-attribute name="title" value="Department Clearance Checklist" />
+		<put-attribute name="body"
+			value="/pages/settlement/departmentClearanceListForm.jsp" />
+	</definition>
+
+	<definition name="settlement.register" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Settlement Register" />
+		<put-attribute name="body"
+			value="/pages/settlement/settlementRegister.jsp" />
+	</definition>
+
+	<definition name="settlement.resignationMISReport"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Audit Trail Report" />
+		<put-attribute name="body"
+			value="/pages/settlement/resignationDetailsMis.jsp" />
+	</definition>
+
+	<!-- settlement -->
+
+	<definition name="settlement.resignEmpList" extends=".mainLayout">
+		<put-attribute name="title" value="Resign Employee List" />
+		<put-attribute name="body"
+			value="/pages/settlement/resignEmployeeList.jsp" />
+	</definition>
+	<definition name="resignationApplication" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Resignation Application" />
+		<put-attribute name="body"
+			value="/pages/settlement/resignationApplicationFirst.jsp" />
+	</definition>
+
+	<definition name="resignApplicationJsp" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Resignation Application" />
+		<put-attribute name="body"
+			value="/pages/settlement/resignationApplication.jsp" />
+	</definition>
+
+	<definition name="resignationApproval" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Resignation Approval" />
+		<put-attribute name="body"
+			value="/pages/settlement/resignationApproval.jsp" />
+	</definition>
+
+	<definition name="resignationHRApproval" extends=".hrmHomeLayout">
+
+		<put-attribute name="title" value="Resignation HR Approval" />
+		<put-attribute name="body" value="/pages/settlement/resignHrApproval.jsp" />
+	</definition>
+
+	<definition name="resignHrApprovalForm" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Resignation HR Approval" />
+		<put-attribute name="body"
+			value="/pages/settlement/resignationHrApprovalForm.jsp" />
+	</definition>
+
+		<definition name="gratuityReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Gratuity Report" />
+		<put-attribute name="body" value="/pages/settlement/gratuityReport.jsp" />
+	</definition>
+
+
+</tiles-definitions>

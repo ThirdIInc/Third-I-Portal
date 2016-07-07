@@ -1,0 +1,789 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+
+<head>
+	<title>Menu </title>
+
+	<link rel="StyleSheet" href="dtree.css" type="text/css" />
+
+	<script type="text/javascript" src="dtree.js"></script>
+
+</head>
+
+<body>
+
+<div class="dtree">
+
+	<p><a href="javascript: d.openAll();">open all</a> | <a href="javascript: d.closeAll();">close all</a></p>
+
+	<span style="background-color: #FFFFFF">
+
+	<script type="text/javascript">
+
+		d = new dTree('d');
+
+		d.add(0,-1,'Home');
+		d.add(1,0,'Administration','');
+		d.add(2,0,'Advance and Claims','');		
+		d.add(3,0,'Payroll','');
+		d.add(4,0,'Cash Office','');
+		d.add(11,1,'Service Documents','');				
+		d.add(7,1,'Master Tables','');
+		d.add(9,1,'Annual Confidential Report','');
+		d.add(10,1,'Manpower Sanction','');	
+		d.add(800,1,'conference','');
+		d.add(500,1,'Voucher','');	
+
+
+
+
+
+		d.add(501,500,'vOUCHER HEAD MASTER','../Administration/voucher/cash head.html','','main');
+		d.add(502,500,'CASH vOUCHER','../Administration/voucher/cash voucher.html','','main');
+		d.add(503,500,'CASH APPROVAL(admin)','../Administration/voucher/Voucher Approval(adm).html','','main');
+		d.add(504,500,'CASH APPROVAL(account)','../Administration/voucher/Voucher Approval(acc).html','','main');
+
+
+
+
+
+
+
+	
+		
+//11 is reports to servive document
+                d.add(700,11,'REports','');
+
+		d.add(15,0,'Attendance','');
+		d.add(16,1,'Leave','');
+		d.add(17,1,'Transfer','');
+		d.add(18,1,'Ty Duty','');
+		d.add(400,1,'Hierarchy','');
+		d.add(401,400,'Employee','../Administration/hierarchy/employee.html','','main');
+		d.add(402,400,'Naval Dockyard Hierarchy','../Administration/hierarchy/navaldockyard.html','','main');
+		d.add(12,1,'Increment','');	
+
+		d.add(13,12,'Pay Fixation','');
+
+
+		d.add(801,800,'Conference Accessories Master','../Administration/conference/Conference Accessories Master.html','','main');
+		d.add(802,800,'Conference Booking','../Administration/conference/Conference Booking.html','','main');
+		d.add(803,800,'Venue Master','../Administration/conference/Venue Master.html','','main');
+			
+		d.add(406,403,'Periodical Increment Certificate','');		
+	//sai   d.add(408,0,'SAMPLE LINK','../_Misc/link.html','','main');
+
+
+		d.add(19,7,'Cadre','../Administration/master/cadre.html','','main');
+		d.add(20,7,'City','../Administration/master/city.html','','main');
+		d.add(21,7,'Discipline','../Administration/master/discipline.html','','main');
+		d.add(23,7,'Department','../Administration/master/department.html','','main');
+		d.add(24,7,'Pay Scale','../Administration/master/payscale.html','','main');
+		d.add(25,7,'Qualification','../Administration/master/qualification.html','','main');
+		d.add(26,7,'Rank','../Administration/master/rank.html','','main');
+		d.add(27,7,'Recruitment Medium','../Administration/master/recruitment medium.html','','main');
+		d.add(28,7,'Trade','../Administration/master/trade.html','','main');
+		d.add(29,7,'Debit Head','../Administration/master/debit.html','','main');
+		d.add(30,7,'Credit Head','../Administration/master/credit.html','','main');
+		d.add(31,7,'Center','../Administration/master/center.html','','main');
+		d.add(32,7,'Cast','../Administration/master/caste.html','','main');
+		d.add(33,7,'Category','../Administration/master/category.html','','main');
+		d.add(34,7,'Bank','../Administration/master/bank.html','','main');
+		d.add(35,7,'Designation','../Administration/master/designation.html','','main');
+		
+
+		d.add(36,7,'Award','../Administration/master/award.html','','main');
+
+	
+		d.add(37,7,'Leave','../Administration/master/leave.html','','main');
+		d.add(38,7,'Relation','../Administration/master/relation.html','','main');
+		d.add(39,7,'Religion','../Administration/master/religion.html','','main');
+		d.add(40,7,'Group','../Administration/master/group.html','','main');
+		d.add(41,7,'Employee Type','../Administration/master/employee type.html','','main');
+		d.add(42,7,'Division','../Administration/master/division.html','','main');
+
+
+
+		d.add(43,7,'Training','../Administration/master/training.html','','main');
+		d.add(44,7,'Expenditure ','../Administration/master/expenditure.html','','main');
+		d.add(45,7,'TA Master ','../Administration/master/tamaster.html','','main');	
+		d.add(46,7,'D.C.E.','../Administration/master/dce.html','','main');
+		d.add(47,7,'Diagnosis','../Administration/master/diagnosis.html','','main');
+		d.add(48,7,'Foreign Exchange','../Administration/master/foreign Exchange.html','','main');
+		d.add(49,7,'Holiday','../Administration/master/holiday.html','','main');
+		d.add(50,7,'Hotel Master ','../Administration/master/hotel master.html','','main');
+		d.add(51,7,'Local Railway Station ','../Administration/master/local railwaystation.html','','main');
+		d.add(52,7,'Medical ','../Administration/master/medical.html','','main');
+		d.add(53,7,'Pay Bill ','../Administration/master/paybill.html','','main');
+		d.add(54,7,'Pay Scale  ','../Administration/master/payscale.html','','main');
+		d.add(55,7,'Punishment  ','../Administration/master/punishment.html','','main');
+		d.add(56,7,'Shift ','../Administration/master/shift.html','','main');
+		d.add(57,7,'TA Distance  ','../Administration/master/tadistance.html','','main');
+		d.add(58,7,'Title  ','../Administration/master/title.html','','main');
+
+
+/*  ALL R IN ADMIN
+      ADDinG SERVICE DOCUMENT(11) -20FIELDS  SUBFOLDER REPORTS(700)-9 LATER 3DOC
+
+   ADDING PAYFIXATION(13) TO INCREMENTS(12)-2 LATER -3
+GIVING NEW NUMBERING 700 ONWORDS
+                         
+*/
+
+
+		
+		
+		d.add(701,11,'Employee Change History','../Administration/service document/employee change information.html','','main');
+		d.add(702,11,'Official Details','../Administration/service document/officialdetails.html','','main');
+		d.add(703,11,'personal Details','../Administration/service document/personaldetails.html','','main');
+		d.add(704,11,'Salary Details','../Administration/service document/Salary Details.html','','main');
+		d.add(705,11,'Family Details','../Administration/service document/family details.html','','main');
+		
+		d.add(706,11,'Qualification Details','../Administration/service document/qualification details.html','','main');
+		
+		d.add(708,11,'Employee Experience','../Administration/service document/Employee Experience.html','','main');
+		d.add(709,11,'Award Details','../Administration/service document/Award Details.html','','main');
+		d.add(710,11,'Nominee Details','../Administration/service document/Nominee Detail.html','','main');
+		d.add(707,11,'Address Details','../Administration/service document/Address Details.html','','main');
+		
+		d.add(711,11,'Small Family Norms','../Administration/service document/Small Family Norms.html','','main');
+		d.add(712,11,'Appointment','../Administration/service document/appointment.html','','main');
+		d.add(713,11,'Service Verification','../Administration/service document/seviceverifi.html','','main');
+		d.add(714,11,'Employee Check List','../Administration/service document/employee checklist.html','','main');
+		d.add(715,11,'Year wise Leave History','../Administration/service document/yearwiseleave history.html','','main');
+		
+		
+		d.add(716,11,'pay History','../Administration/service document/PAY HISTORY.html','','main');
+		d.add(717,11,'promotion History','../Administration/service document/PROMOTION  HISTORY.html','','main');
+		d.add(718,11,'ACp/placement History','../Administration/service document/ACPPlacement History.html','','main');
+		d.add(719,11,'Departmental Qualification Examination History','../Administration/service document/departmentalQualificationExaminationhis.html','','main');
+		d.add(720,11,'punishment History','../Administration/service document/punishmenthistory.html','','main');
+
+
+
+		d.add(721,700,'Central Government Employees Insurance Scheme','../Administration/service document/reports/Central Government Employees Insurance.html','','main');
+		d.add(722,700,'Family pension Nomination report','../Administration/service document/reports/Family Pension Nomination Report.html','','main');
+		d.add(723,700,'Home Town Declaration Report','../Administration/service document/reports/Home Town Declaration Report.html','','main');
+		d.add(724,700,'MIS Report','../Administration/service document/reports/MIS Report.html','','main');
+		d.add(725,700,'Oath Taking Report','../Administration/service document/reports/Oath Taking Report.html','','main');
+		d.add(726,700,'Official Secrets Act Report','../Administration/service document/reports/Official Secrets Act Report.html','','main');
+	
+		d.add(727,700,'Retirement Gratuity Nomination Report','../Administration/service document/reports/Retirement Gratuity Nomination Report.html','','main');
+		d.add(728,700,'Service Book','../Administration/service document/reports/Service Book.html','','main');
+		d.add(729,700,'Service Officers Biodata','../Administration/service document/reports/Service Officers Biodata.html','','main');
+
+		d.add(730,11,'Employee House','../Administration/service document/employeehouse.html','','main');
+		d.add(731,11,'L.I.C','../Administration/service document/Lic.html','','main');
+		d.add(732,11,'Training','../Administration/service document/training.html','','main');
+
+
+
+	
+		 d.add(699,12,'Annual Increment','../Administration/increment/annualincrement.html','','main');
+              
+               
+               d.add(733,13,'pay','../Administration/increment/payfixation/','','main');
+	        d.add(734,13,'pay','../Administration/increment/payfixation/','','main');
+
+
+		 d.add(735,12,'Periodical Increment','../Administration/increment/periodicalincrement.html','','main');
+		 d.add(736,12,'Seniority List','../Administration/increment/senioritylist.html','','main');
+		 d.add(737,12,'Stepping Up and Anti Dating','../Administration/increment/steppingupandantidating.html','','main');
+
+
+
+
+
+
+		d.add(738,9,'ACR Application','../Administration/annual confidential report/acrapplication.html','','main');
+		d.add(739,9,'Assessment Master','../Administration/annual confidential report/assessmentmaster.html','','main');
+		d.add(740,9,'Annual Assessment ','../Administration/annual confidential report/annualassessment.html','','main');
+		d.add(741,9,'Assessment Report','../Administration/annual confidential report/assessmentreport.html','','main');
+
+
+
+		d.add(742,10,'Manpower Report ','../Administration/manpower saction/manpower report.html','','main');
+		d.add(743,10,'Seniority List ','../Administration/manpower saction/senioritylist.html','','main');
+
+
+
+
+		d.add(744,16,'Leave MIS Report','../Administration/leave/leave misreport.html','','main');
+		d.add(745,16,'Leave Balance Report','../Administration/leave/leave balancereport.html','','main');
+		d.add(746,16,'Leave Audit ','../Administration/leave/leave audit.html','','main');
+		d.add(747,16,'Leave Encashment','../Administration/leave/leaveencashment.html','','main');
+		d.add(748,16,'Leave Entitle Process','../Administration/leave/leave entitle.html','','main');
+
+
+
+		d.add(749,17,'Certificate By OcUnit ','../Administration/transfer/certificatebyocunit.html','','main');
+		d.add(750,17,'No Demand Certificate ','../Administration/transfer/nodemandcertificate.html','','main');
+		d.add(751,17,'Posting Application ','../Administration/transfer/postingappl.html','','main');
+		
+		d.add(752,17,'Transfer Certificate','../Administration/transfer/transfercertificate.html','','main');
+		d.add(753,17,'Transfer Movement Order ','../Administration/transfer/transfermovementorder.html','','main');
+		d.add(754,17,'Transfer Order ','../Administration/transfer/transfer order.html','','main');
+		
+		d.add(755,17,'Transfer Pm Approval','../Administration/transfer/transfer pm approval.html','','main');
+		d.add(756,17,'Transfer With in Dockyard ','../Administration/transfer/transfer with in dockyard.html','','main');
+		d.add(757,17,'Undertaking Report ','../Administration/transfer/undertaking report.html','','main');
+
+
+
+		d.add(758,2008,'Casual Labour Report','../Administration/casual labour/casualreport.html','','main');
+
+
+
+
+		d.add(43,8,'Official Details','../Administration/service document/officialdetails.html','','main');
+		d.add(44,8,'Personal Detail','..//Administration/service document/personaldetails.html','','main');
+		d.add(45,8,'Qualification Details','../Administration/service document/qualification details.html','','main');
+		d.add(46,8,'Family Details','../Administration/service document/family details.html','','main');
+		d.add(47,8,'Nominee','../Administration/service document/Nominee Detail.html','','main');
+		d.add(48,8,'Address Details','../Administration/service document/Address Details.html','','main');
+		
+		d.add(49,8,'Small Family Norms','../Administration/service document/Small Family Norms.html','','main');
+
+
+		d.add(50,8,'Awards','../Administration/service document/Award Details.html','','main');
+		d.add(51,8,'Service Verification','../Administration/service document/seviceverifi.html','','main');
+		
+
+
+
+		d.add(301,8,'Other Salary Details','../PROTOTYPE/hrms_sal.htm','','main');
+	d.add(302,8,'Initial appointment/Medical details','../Administration/service document/appointment.html','','main');
+
+
+
+		d.add(50,8,'Employee Change History','../Administration/service document/employee change information.html','','main');
+		d.add(50,8,'Employee Experience','../Administration/service document/Employee Experience.html','','main');
+		d.add(50,8,'Year Wise Leave History ','../Administration/service document/yearwiseleave history.html','','main');
+
+
+
+
+
+
+
+		d.add(52,9,'ACR Details','../Administration/annual confidential report/acrmaster.html','','main');
+		d.add(53,9,'Assessment Record','../Administration/annual confidential report/assessmentrecord.html','','main');
+		d.add(54,9,'ACR Approval','../Administration/annual confidential report/acrapproval.html','','main');                
+		
+		d.add(54,10,'SRO Details','../Administration/manpower saction/srodetails.html','','main');
+		d.add(55,10,'Sanction','../Administration/manpower saction/sanstion details.html','','main');
+
+		
+		d.add(56,15,'Upload Data from Nodes','../attendance/Upload Attendance.html','','main');
+
+		d.add(57,15,'View Attendance','../attendance/view Attendance.html','','main');
+
+
+
+
+
+		
+		d.add(60,16,'Leave Regularization','../Administration/leave/leaveregula.html','','main');
+
+
+
+		d.add(61,16,'Leave Policy','../Administration/leave/leavepolicy.html','','main');
+		d.add(62,16,'Leave Application Form','../Administration/leave/leave applicationform.html','','main');
+		d.add(63,16,'Leave Approval','../Administration/leave/leave approval.html','','main');
+		d.add(64,16,'Leave Balance','../Administration/leave/leave balance.html','','main');
+
+
+		d.add(65,16,'Leave DCE List','../Administration/leave/leave dcelistgeneration.html','','main');
+		d.add(66,17,'Transfer Application','../Administration/transfer/transferapplication.html','','main');
+		d.add(67,17,'Transfer Approval','../Administration/transfer/transferapproval.html','','main');
+		
+		
+
+		d.add(68,18,'Temporary Duty Proposal','../Administration/tyduty/tydutyproposal.html','','main');
+		d.add(69,18,'Temporary Duty Approval','../Administration/tyduty/tydutyapp.html','','main');
+	
+		d.add(70,18,'Temporary Duty Pm Approval','../Administration/tyduty/tydutypmapp.html','','main');
+
+
+	//     d.add(71,18,'Advance Approval','../PROTOTYPE/ty_adv_approval.htm','','main');
+
+		d.add(72,18,'Temporary Duty MiS Report','../Administration/tyduty/tydutypmisreport.html','','main');
+
+//		d.add(73,18,'Claim Approval','../PROTOTYPE/ty_claim_approval.htm','','main');
+
+
+		
+//		d.add(74,2,'Medical Application','');
+//		d.add(75,2,'Transfer','../PROTOTYPE/transfer_adv.htm','','main');
+
+//		d.add(76,2,'Temporary Duty Transfer','../PROTOTYPE/temp_duty_adv.htm','','main');
+
+
+
+
+
+		d.add(74,2,'Medical','../PROTOTYPE/medical_adv.htm','','main');
+	d.add(77,2,'Temporary Duty','');
+		
+
+
+		d.add(78,2,'Children Tution Fees','');
+		d.add(79,2,'HBA','');
+
+//adding new one on temp duty 12
+
+              d.add(325,77,'Temporary Duty Advance Requisition ','../Advances and claims/tyduty/tydutyadvcerequistion.html','','main');
+              d.add(326,77,'Temporary Duty Advance Approval','../Advances and claims/tyduty/adv approval.html','','main'); 
+	      d.add(327,77,'Temporary Duty Advance PM Approval','../Advances and claims/tyduty/adv  pmappro.html','','main');
+              d.add(328,77,'Temporary Duty Advance CDA Audit','../Advances and claims/tyduty/adv cdaaudit.html','','main');
+              d.add(329,77,'Temporary Duty DP Sheet Generation','../Advances and claims/tyduty/adv dpsheet.html','','main');
+              d.add(330,77,'Local Ty Duty','../Advances and claims/tyduty/local tyduty.html','','main');         
+        
+              d.add(331,77,'Temporary Duty Claim Requisition ','../Advances and claims/tyduty/Tydutyclaimrequition.html','','main');           
+         
+              d.add(332,77,'Temporary Duty Claim Approval','../Advances and claims/tyduty/claim approval.html','','main');           
+           
+              d.add(333,77,'Temporary Duty Claim PM Approval','../Advances and claims/tyduty/Temporary Duty Adv claim  PM Approval.html','','main');	
+	      d.add(334,77,'Temporary Duty Claim CDA Audit','../Advances and claims/tyduty/claim cdaaudit.html','','main');         
+          
+              d.add(335,77,'Temporary Duty Claim DP Sheet','../Advances and claims/tyduty/claim dpsheet.html','','main');          
+  	   
+              d.add(336,77,'Transfer','../Advances and claims/tyduty/transfer.html','','main');	
+
+
+
+
+
+
+
+
+
+
+//		d.add(79,2,'Other Form','../PROTOTYPE/other_adv.htm','','main');
+
+		//	d.add(80,77,'Inside Mumbai','../PROTOTYPE/travels_in_mum.htm','','main');
+	//     		d.add(81,77,'Outside Mumbai','../PROTOTYPE/travels_out_mum.htm','','main');
+		
+		//d.add(82,3,'Master','');
+		
+
+	//	d.add(83,3,'Salary Master','../PROTOTYPE/salary_master.htm','','main');
+		
+		d.add(84,3,'Bonus','');
+		d.add(85,3,'DA','');
+		d.add(86,3,'Income Tax','');
+		d.add(87,3,'NDA','');
+		d.add(88,3,'OT','');
+		d.add(89,3,'Pay Arrears','');
+		d.add(90,3,'Recovery','');
+		d.add(91,3,'Salary','');
+		
+
+	/*	d.add(92,82,'Credit Detail','../PROTOTYPE/credit_master.htm','Click for view credit detail','main');
+		d.add(93,82,'Debit Detail','../PROTOTYPE/debit_master.htm','Click for view debit detail','main');
+		d.add(94,8,'Salary Detail','../Administration/service document/Salary Details.html','Click for view salary detail','main');		
+		
+		
+		d.add(97,82,'OT Parameter','../PROTOTYPE/ot_parameter.htm','','main');
+		d.add(98,82,'HRA Parameter','../PROTOTYPE/hra_parameter.htm','','main');
+		d.add(99,82,'CCA Parameter','../PROTOTYPE/cca_parameter.htm','','main');
+		d.add(100,82,'TA Parameter','../PROTOTYPE/ta_parameter.htm','','main');
+		d.add(101,82,'DA Parameter','../PROTOTYPE/da_parameter.htm','','main');
+*/
+		d.add(102,7,'Check List Master','../Administration/master/checklist.html','','main');
+
+		d.add(103,8,'Employee Check List','../Administration/service document/employee checklist.html','','main');
+
+
+
+
+		d.add(104,15,'Nodes Master','../attendance/Node Master.html','','main');
+	
+//links r not added    this is for payroll
+	
+		d.add(105,84,'Bonus parameter','../payroll/bonus/bonusparameter.html','','main');
+		d.add(106,84,'Employee Bonus','../payroll/bonus/employeebponus.html','','main');
+		d.add(107,84,'Bonus Acquaintance Roll','../payroll/bonus/bonus aquinta.html','','main');
+
+
+		
+		d.add(248,85,'DA parameter','../payroll/da/daparameter.html','','main');
+		d.add(249,85,'DA Arrear','../payroll/da/daarrear.html','','main');
+		d.add(251,85,'DA Arrear Audit','../payroll/da/daarearaudit.html','','main');
+//		d.add(252,85,'DA Arrear Audit','../payroll/da/','','main');
+		d.add(253,85,'DA Arrear Report','../payroll/da/daarrear report.html','','main');
+		
+
+
+ 		d.add(254,86,'TDS Slab','../payroll/income tax/taxslab.html','','main');
+		d.add(255,86,'Tax Investment','../payroll/income tax/taxinvestment.html','','main');
+		d.add(256,86,'Fund Balance','../payroll/income tax/fundbalance.html','','main');	
+		d.add(257,86,'Employee Investment','../payroll/income tax/employeeinvestment.html','','main');
+		d.add(258,86,'TDS calculation','../payroll/income tax/tdscalculatuion.html','','main');
+		d.add(259,86,'TDS Report','../payroll/income tax/tds report.html','','main');
+		d.add(260,86,'Form 16','../payroll/income tax/form 16.html','','main');
+	        d.add(298,86,'TAX Challan','../payroll/income tax/tax challan.html','','main');
+
+		d.add(261,87,'Night Duty Allowance Calculation','../payroll/nda/night_duty_allowance_calculation.html','','main');
+		d.add(262,87,'Night Duty Allowance Attendance','../payroll/nda/attendance.html','','main');
+		
+		
+		d.add(263,88,'OT upload','../payroll/ot/upload.html','','main');
+		d.add(264,88,'OT Split-up process','../payroll/ot/splitup.html','','main');
+		d.add(265,88,'OT Calculation','../payroll/ot/ot calculate.html','','main');
+
+		d.add(266,88,'OT Audit','../payroll/ot/ot audit.html','','main');
+
+		d.add(267,88,'OT Arrear','../payroll/ot/ot arrear.html','','main');
+
+		d.add(268,88,'OT Parameter','../payroll/ot/otparameter.html','','main');
+
+		
+		d.add(250,88,'Reports','');
+
+		
+		d.add(269,250,'OT Hours','../payroll/ot/report/ot hours.html','','main');
+		d.add(270,250,'OT Acquaintance Roll','../payroll/ot/report/ot arrear acq.html','','main');
+		d.add(271,250,'OT Arrear Acquaintance Roll','../payroll/ot/report/ot aquitance.html','','main');
+
+		
+		
+		d.add(272,89,'Arrears','../payroll/pay arrears/Arrears.html','','main');
+		
+		d.add(276,90,'Table Recovery Configuration','../payroll/recovery/table recovery config.html','','main');
+		d.add(277,90,'Table Recovery ','../payroll/recovery/table recovery.html','','main');
+
+		
+		d.add(278,91,'Employee Credit Configuration','../payroll/salary/employee credit detail.html','','main');	
+		d.add(279,91,'Employee Debit Configuration','../payroll/salary/employee debit config.html','','main');
+		d.add(280,91,'Loan Details','../payroll/salary/loanrecovery.html','','main');
+		d.add(281,91,'Salary process-Ind','../payroll/salary/salary process ind.html','','main');
+		d.add(282,91,'Salary Audit-Ind','../payroll/salary/salary audit ind.html','','main');
+		d.add(283,91,'Subsistance Allowance','../payroll/salary/subsistanceallow.html','','main');
+		d.add(284,91,'Employee Salary Slip','../payroll/salary/employeesalary slip.html','','main');
+		d.add(285,91,'CCA Parameter','../payroll/salary/ccaparameter.html','','main');
+		d.add(286,91,'Salary process-NI/CIV/MIN','../payroll/salary/salary process ni-cv.html','','main');
+		d.add(287,91,'Salary Audit-NI/CIV/MIN','../payroll/salary/salary audit ni.html','','main');
+
+			d.add(275,91,'Reports','');
+				d.add(290,275,'Bank Statement','../payroll/salary/report/bankstatement.html','','main');
+				d.add(291,275,'Employee Investment','../payroll/salary/report/emp investment.html','','main');
+				d.add(292,275,'Industrial Salary Report','../payroll/salary/report/industrial salary report.html','','main');
+				d.add(293,275,'LoanDetails Report','../payroll/salary/report/loandetailsreport.html','','main');
+				d.add(294,275,'NDA Acquaintance','../payroll/salary/report/nda acq roll.html','','main');
+				d.add(295,275,'NDA Hours Report','../payroll/salary/report/nda hours report.html','','main');
+				d.add(296,275,'Non Industrial Salary Acqaintance Roll ','../payroll/salary/report/non indu salary acq.html','','main');
+				d.add(297,275,'Non Recovery','../payroll/salary/report/non recovery.html','','main');
+			
+								
+				
+			d.add(105,91,'Over Recovery','../payroll/salary/overrecovery.html','','main');
+
+		
+	d.add(299,3,'Salary Ledger','../payroll/salary ledger.html','','main');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		d.add(109,74,'Medical Advance - CDA Audit','../Advances and claims/medical/ma cda audit.html','','main');
+		//d.add(110,74,'Medical Certificate A','../PROTOTYPE/medicala.htm','','main');
+
+//adding new medicals 13
+
+		
+		d.add(345,74,'Medical Advance - DP Sheet','../Advances and claims/medical/medicaladvdpsheet.html','','main');
+		
+		d.add(346,74,'Medical Advances -HQ Approval ','../Advances and claims/medical/ma hq approval.html','','main');
+
+		d.add(347,74,'Medical Claim - CDA Audit','../Advances and claims/medical/medi claim cda audit.html','','main');
+		d.add(348,74,'Medical Claim - DP Sheet','../Advances and claims/medical/medi claim dpsheet.html','','main');
+		d.add(349,74,'Medical Claim - PM Approval','../Advances and claims/medical/medicalclaimpmapproval.html','','main');
+		d.add(350,74,'Medical Advances - Application Form ','../Advances and claims/medical/medicaladvappform.html','','main');
+		d.add(351,74,'Medical Advance - Manager Approval','../Advances and claims/medical/ma adv manager.html','','main');
+		d.add(352,74,'Medical Advance - PM Approval ','../Advances and claims/medical/medi adv pm approval.html','','main');
+		d.add(353,74,'Medical Claim - Application Form','../Advances and claims/medical/medi claim application.html','','main');
+		d.add(354,74,'Medical Claim - Manager Approval','../Advances and claims/medical/medi claim manag approval.html','','main');
+		d.add(355,74,'Medical DCE List','../Advances and claims/medical/dce list.html','','main');
+		d.add(356,74,'Medical History ','../Advances and claims/medical/history.html','','main');
+		d.add(357,74,'Medical Test','../Advances and claims/medical/medical test.html','','main');
+
+
+
+
+
+
+
+
+
+
+		
+        d.add(111,2,'LTC ','');
+ 
+		d.add(360,111,'LTC Advance APPLICATION','../Advances and claims/ltc/ltcadvapplication.html','','main');
+		d.add(361,111,'LTC Advance Approval','../Advances and claims/ltc/ltcadvanceapproval.html','','main');
+		d.add(362,111,'LTC Advance PM Approval','../Advances and claims/ltc/LTC Advance pmapproval.html','','main');
+		d.add(363,111,'LTC Advance CDA Audit','../Advances and claims/ltc/LTC Advance cda audit.html','','main');
+		d.add(364,111,'LTC Advance DP Sheet','../Advances and claims/ltc/ltcadvdpsheet.html','','main');
+
+	   d.add(405,78,'Children Tution Fee Claim','../Advances and claims/children tution fees/Children Tution Fee Claim.html','','main');
+		//d.add(117,78,'Children Tution Fees Approval','../PROTOTYPE/child_adv_approval.htm','','main');
+           d.add(406,78,'Children Tution Fee Claim Approval','../Advances and claims/children tution fees/Children Tution Fee Claimapproval.html','','main');
+	
+           d.add(407,78,'Child Tution Fee Claim PM Approval','../Advances and claims/children tution fees/Children Tuition Fee Claim PM Approval.html','','main');
+	   d.add(408,78,'Children Tution Fee Claim CDA Audit','../Advances and claims/children tution fees/Children Tution Fee Claim Grant.html','','main');
+	    d.add(409,78,'Children Tution Fee Claim DP Sheet','../Advances and claims/children tution fees/Children Tution Fee Claim DP Sheet Generation.html','','main');
+
+
+ 
+
+
+
+	 d.add(118,2,'GPF','');
+
+
+	/*added newones	10
+                d.add(375,118,'GPF Temp. Withdrawal Application','../PROTOTYPE/gpf_temp.htm','','main');
+		d.add(376,118,'GPF Temp. Withdrawal Approval','../PROTOTYPE/gpf_temp_approval.htm','','main');
+		d.add(377,118,'GPF Final Withdrawal Application','../PROTOTYPE/gpf_final.htm','','main');
+		d.add(378,118,'GPF Final Withdrawal Approval','../PROTOTYPE/gpf_final_approval.htm','','main');
+*/
+
+		d.add(379,118,'Temporary GPF-Application Form','../Advances and claims/gpf/temp gpf-apform.html','','main');
+		d.add(380,118,'Temporary GPF-Manager Approval','../Advances and claims/gpf/gpf-managerapproval.html','','main');
+		d.add(381,118,'Temporary GPF-PM Approval','../Advances and claims/gpf/GPF-PM Approval.html','','main');
+		d.add(382,118,'Temporary GPF-CDA Audit','../Advances and claims/gpf/GPF Temp-Cda audit.html','','main');
+		d.add(383,118,'Temporary GPF DP Sheet','../Advances and claims/gpf/GPF Temp-dpsheet.html','','main');
+		d.add(384,118,'Final GPF -Application Form','../Advances and claims/gpf/final temp gpf-apform.html','','main');
+		d.add(385,118,'Final GPF- Manager Approval','../Advances and claims/gpf/final gpf-managerapproval.html','','main');
+		d.add(386,118,'Final GPF- PM Approval','../Advances and claims/gpf/final GPF-PM Approval.html','','main');
+		d.add(387,118,'Final GPF- CDA Audit','../Advances and claims/gpf/final GPF Temp-Cda audit.html','','main');
+		d.add(388,118,'Final GPF- DP Sheet ','../Advances and claims/gpf/final GPF Temp-dpsheet.html','','main');
+
+
+
+		d.add(370,79,'HBA Application','../Advances and claims/hba/hba application.html','','main');
+//		d.add(125,79,'HBA Surety','../PROTOTYPE/surety.htm','','main');
+		
+		d.add(371,79,'HBA Approve','../Advances and claims/hba/hba approval.html','','main');
+
+		d.add(372,79,'House Building Advance - Pm Approval','../Advances and claims/hba/housebuildingadvpm.html','','main');
+		d.add(373,79,'House Building Advance - HQ Approval ','../Advances and claims/hba/house Building Advance-hqapp.html','','main');
+		d.add(374,79,'House Building Advance - DP Sheet ','../Advances and claims/hba/House Building Advance- DP Sheet Generation.html','','main');
+
+
+	d.add(126,2,'Festival Advance','');
+
+
+
+		//d.add(131,130,'Deputation Advance ','../Advances and claims/deputation/deputation advance.html','','main');
+//add newones--4		
+                 
+                d.add(128,126,'Festival Master','../Advances and claims/festival advance/Festival Master.html','','main');
+	   
+		d.add(390,126,'Festival Advance Application','../Advances and claims/festival advance/Festival Advance Application.html','','main');
+		d.add(391,126,'Festival Advance - Manager Approval','../Advances and claims/festival advance/Festival Advance -Manager Approval.html','','main');
+		d.add(392,126,'Festival Advance - Pm Approval','../Advances and claims/festival advance/Festival Advance - PM Approval.html','','main');
+		d.add(393,126,'Festival Advance - HQ Approval ','../Advances and claims/festival advance/Festival Advance - hqapproval.html','','main');
+		d.add(394,126,'Festival Advance - DP Sheet','../Advances and claims/festival advance/Festival Advance - CDA Audit DP Sheet.html','','main');
+
+		
+
+
+
+
+
+	d.add(130,2,'Deputation','');
+	d.add(395,130,'Deputation Advance ','../Advances and claims/deputation/deputation advance.html','','main');
+//added newones..		
+                // d.add(132,130,'Deputation Advance Approval','../PROTOTYPE/deputation_adv_approval.htm','','main');
+		d.add(396,130,'Deputation Advance Pm Approval ','../Advances and claims/deputation/Deputation Advance - Pm Approval.html','','main');
+		d.add(397,130,'Deputation Advance HQ Approval  ','../Advances and claims/deputation/Deputation Advance - hq Approval.html','','main');
+		d.add(398,130,'Deputation Advance Approval','../Advances and claims/deputation/Deputation Advance Approvals.html','','main');
+		d.add(399,130,'Deputation Advance DP Sheet ','../Advances and claims/deputation/Deputation Advance - CDA Audit DP Sheet.html','','main');
+
+	d.add(133,2,'Other Advance','');
+	//adding new ones 4    starting from 340	
+//d.add(134,133,'Other Advance Application','../PROTOTYPE/other_adv.htm','','main');
+
+
+		d.add(340,133,'Other Advance- Application Form','../Advances and claims/other advance/otherdutyapplicationform.html','','main');
+		d.add(341,133,'Other Advance- Manager Approval','../Advances and claims/other advance/managerapproval.html','','main');
+		d.add(342,133,'Other Advance- PM Approval','../Advances and claims/other advance/Other Advance - PM Approval.html','','main');
+		d.add(343,133,'Other Advance- HQ Approval ','../Advances and claims/other advance/otheradvHQapp.html','','main');
+		d.add(344,133,'Other Advance- CDA Audit DP Sheet','../Advances and claims/other advance/otheradvCDADpsheet.html','','main');
+
+
+
+
+		
+		d.add(137,4,'Cash Mangement','');
+		d.add(300,137,'Cash Sanction','../cashoffice/cash mangement/cashsantion.html','','main');
+		d.add(138,137,'Cash Requisition','../cashoffice/cash mangement/REQUISITION FORM.html','','main');
+		d.add(139,137,'Cash Approval','../cashoffice/cash mangement/cashapproval.html','','main');	
+		
+		d.add(140,4,'Denominations Mangement','','','main');
+	//	d.add(141,4,'Generate Schedule For DCR','../PROTOTYPE/genschdcr.htm','','main');
+	//	d.add(142,4,'Generate Schedule For LWF','../PROTOTYPE/genschlwf.htm','','main');
+	//	d.add(143,4,'Generate Schedule For LIC','../PROTOTYPE/genschlic.htm','','main');
+
+
+//		d.add(156,4,'Bank Reconciliation','../PROTOTYPE/bankreconcile.htm','','main');
+		
+		d.add(151,140,'Current Denomination','../cashoffice/denomination/currentdenomination.html','','main');
+		d.add(152,140,'Add Denomination','../cashoffice/denomination/adddenomi.html','','main');
+
+	//	d.add(101,1,'Node 1.2','example01.html');
+	//	d.add(100,0,'My Pictures','example01.html','Pictures I\'ve taken over the years','','','img/imgfolder.gif');
+	//	d.add(110,100,'The trip to Iceland','example01.html','Pictures of Gullfoss and Geysir');
+	//	d.add(1000,1,'Mom\'s birthday','example01.html');
+	//	d.add(111,110,'Recycle Bin','example01.html','','','img/trash.gif'); 
+	
+	
+
+	//	d.add(157,3,'Income Tax','');
+	
+	/*      d.add(158,157,'tax slab','../PROTOTYPE/tax slab.htm','','main');
+		d.add(159,157,'Investment/Deduction master','../PROTOTYPE/investded.htm','','main');
+		d.add(160,157,'Employee investment','../PROTOTYPE/empinvest.htm','','main');
+		
+		d.add(161,157,'TDSCalculation','../PROTOTYPE/Incometax.htm','','main');
+	*/	
+		
+		
+		d.add(163,16,'Leave Cancellation','../Administration/leave/leave cancel.html','','main');
+		d.add(164,16,'Leave Extention','../Administration/leave/leave extention.html','','main');
+	
+
+
+/* deleting leave reports(3)  
+            d.add(165,16,'Leave REPORTS','');
+		d.add(166,165,'Leave MIS Report','../Administration/leave/leave misreport.html','','main');
+		d.add(167,165,'Leave yearly balance report','../Administration/leave/leave balancereport.html','','main');
+		d.add(168,165,'Absentee Report','../PROTOTYPE/absentreport.htm','','main');
+	*/		
+		
+      //sai     d.add(175,0,'CDA(N)','');
+	//sai		d.add(176,175,'Attendance','../PROTOTYPE/view_attend.htm','','main');
+			
+	//	d.add(177,175,'Overtime calculation','../PROTOTYPE/ot_attend.htm','','main');
+
+	//	d.add(178,175,'Leave audit','../PROTOTYPE/leave_audit.htm','','main');
+
+//		d.add(179,175,'Monthly salary industrial','../PROTOTYPE/industrial_payroll.htm','','main');
+//		d.add(180,175,'salary audit non-industrial','../PROTOTYPE/non_industrial_payroll.htm','','main');
+		
+//		d.add(181,175,'cash requisition approval','../PROTOTYPE/cash_req_approval.htm','','main');
+	//	d.add(182,175,'Advances & claims audit','../PROTOTYPE/other_adv_approval.htm','','main');	
+	//	d.add(183,175,'Generate DP sheet','','','main');	
+
+		d.add(184,0,'User Management','../home/User Management.html','Click for view user management','main');
+		d.add(185,0,'Profile Management','../home/profilemgt.html','','main');
+		d.add(186,0,'Password Change','../home/passwordchange.html','','main');
+
+
+
+		//d.add(186,79,'HBA Approval','../PROTOTYPE/hba_adv_approval.htm','','main');
+	/* medical neglect
+  		d.add(187,74,'Medical Certificate B','../PROTOTYPE/medicalb.htm','','main');
+		d.add(188,74,'Medical Expenses','../PROTOTYPE/medicalexpnse.htm','','main');
+		d.add(189,74,'Medical Approval','../PROTOTYPE/medical_adv_approval.htm','','main');
+	*/
+  		//d.add(190,79,'HBA FORM3','../PROTOTYPE/hab2.htm','','main');
+		//d.add(191,79,'HBA FORM5','../PROTOTYPE/hba3.htm','','main');
+		// d.add(192,140,'Generate Denomination Letter','../PROTOTYPE/denletter.htm','','main');
+		
+         //       d.add(500,4,'Salary to Bank Statements','../PROTOTYPE/salary_bank_statement.htm','','main');
+	//	d.add(501,4,'Cheque to Bank','../PROTOTYPE/cheque_details.htm','','main');
+	//	d.add(2002,4,'Generate Coin List','../PROTOTYPE/gen_coin_list.htm','','main');
+	//	d.add(2003,4,'Non-Disbursement','../PROTOTYPE/non_disbursement.htm','','main');
+
+
+//		d.add(2004,4,'Mis-Muster','../cashoffice/mismusterst.html','','main');
+
+
+//		d.add(2005,4,'UD List','../PROTOTYPE/ud_list.htm','','main');
+//		d.add(2006,4,'Pay Table Recovery Cheque Details','../PROTOTYPE/table_recovery_cheque_details.htm','','main');
+//		d.add(2007,4,'Treasury Reciepts','','','main');
+
+
+//sai not add the links upto 1015
+
+		d.add(1004,4,'Dp sheet','../cashoffice/dpsheetentries.html','','main');
+		d.add(1005,4,'coin List','../cashoffice/coinlist.html','','main');
+		d.add(1006,4,'Table Recovery statement','../cashoffice/recoveryreport.html','','main');
+		d.add(1007,4,'Disbursed-Non Disbursed Salary','../cashoffice/disbursedsalary.html','','main');
+		d.add(1008,4,'MIs Muster Statement','../cashoffice/mismusterst.html','','main');
+		d.add(1009,4,'Composite Salary Disbursement statement','../cashoffice/compositesalarydis.html','','main');
+		d.add(1010,4,'Treasury Receipts','../cashoffice/treasuryreceipts.html','','main');
+		d.add(1011,4,'Generate UD Forms','../cashoffice/generateudform.html','','main');
+		d.add(1012,4,'UD payment','../cashoffice/udpayments.html','','main');
+		d.add(1013,4,'Cash books','../cashoffice/cashbooks.html','','main');
+		d.add(1014,4,'progressive balance register','../cashoffice/prog bal register.html','','main');	
+		d.add(1015,4,'Bank Reconciliation','../cashoffice/bank recon.html','','main');
+		
+
+
+
+
+
+
+
+//lobour report rala
+
+		d.add(2008,1,'Casual','');
+		d.add(2009,2008,'Casual Labour registration','../Administration/casual labour/Casual Register.html','','main');
+		d.add(2010,2008,'Casual Labour requirement','../Administration/casual labour/Casual Requirement.html','','main');
+		d.add(2011,2008,'Casual Labour assignment','../Administration/casual labour/casuallabourassign.html','','main');
+		
+			
+		d.add(3000,4,'Cash Assignment','');
+		d.add(200,3000,'Vendor Master','../cashoffice/cash Assignment/vendormaster.html','','main');
+		d.add(201,3000,'Cash Assignment','../cashoffice/cash Assignment/cashassign.html','','main');
+		d.add(202,3000,'Fund Statement','../cashoffice/cash Assignment/fundstatement.html','','main');
+		d.add(203,3000,'List of cheques issued month','../cashoffice/cash Assignment/listchequeissue.html','','main');
+
+		d.add(204,4,'Coin List Report','../cashoffice/coinlistreport.html','','main');
+		d.add(205,4,'xxxTable Recovery','../cashoffice/tablerecovery.html','','main');
+
+
+
+
+/*		d.add(3001,3000,'Cash Book','../PROTOTYPE/cash_book.htm','','main');
+	d.add(3002,3000,'Progressive Register','../PROTOTYPE/progressive_register.htm','','main');
+		d.add(3003,3000,'Non-Public Fund Account','../PROTOTYPE/non_public_fund.htm','','main');
+
+*/
+		d.add(3004,8,'Promotion History','../Administration/service document/PROMOTION   HISTORY.html','','main');
+		d.add(3005,8,'ACP/Placement History','../Administration/service document/ACPPlacement History.html','','main');
+		d.add(3006,8,'Pay History','../Administration/service document/PAY   HISTORY.html','','main');
+		d.add(3007,8,'Departmental Qualification Examination History ','../Administration/service document/departmentalQualificationExaminationhis.html','','main');
+		d.add(3008,8,'Punishment History','../Administration/service document/punishmenthistory.html','','main');
+
+
+		d.add(3009,8,'Year Wise EOL(PA) History ','../PROTOTYPE/EOLHistory.html','','main');
+		document.write(d);
+
+
+		//-->
+	</script>
+
+	</span>
+
+</div>
+
+</body>
+	
+</html>

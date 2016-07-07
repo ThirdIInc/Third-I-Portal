@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+        
+    <struts>   
+        <package name="setting" namespace="/setting" extends="struts-default">
+        
+	        <result-types>
+			  	<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+			</result-types>
+		
+			<action name="SettingMaster_*" method="{1}" class="org.struts.action.settings.SettingMasterAction">
+				<result name="input" type="tiles" >master.setting</result>
+				<result name="success" type="tiles">master.setting</result>	
+				<result name="corporate" type="tiles">master.corporate</result>	
+				<result name="knowledge" type="tiles">master.knowledge</result>	
+				<result name="genInfo" type="tiles">master.genInfo</result>	
+				<result name="poll" type="tiles">master.poll</result>	
+				<result name="compComm" type="tiles">master.compComm</result>	
+				<result name="thought" type="tiles">master.thought</result>	
+				<result name="quickLink" type="tiles">master.quickLink</result>	
+				
+				<result name="eMail" type="tiles">master.eMail</result>		
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="f9multiSelect" type="tiles">f9multiSelect</result>		
+			</action>
+		
+			<action name="PasswordSettings_*" method="{1}" class="org.struts.action.settings.PasswordSettingsAction">
+				<result name="input" type="tiles">master.passSetting</result>	
+				<result name="success" type="tiles">master.passSetting</result>		
+			</action>
+			
+			<action name="MailSettings_*" method="{1}" class="org.struts.action.settings.MailSettingsAction">
+				<result name="input" type="tiles">master.mail</result>	
+				<result name="success" type="tiles">master.mail</result>
+				<result name="configureServerJsp" type="tiles">master.configureServerJsp</result>
+				<result name="intChecklist" type="tiles">master.mailChecklist</result>
+
+						
+			</action>
+			
+			<action name="AlertSettings_*" method="{1}" class="org.struts.action.settings.AlertSettingsAction">
+				<result name="input" type="tiles">master.eMail</result>	
+				<result name="success" type="tiles">master.eMail</result>		
+			</action>
+		
+			<action name="EmailConfig_*" method="{1}" class="org.struts.action.settings.EmailConfigAction">
+				<result name="input" type="tiles" >master.email</result>
+				<result name="success" type="tiles">master.email</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>
+		
+			 <action name="Suggestion_*" method="{1}" class="org.struts.action.settings.SuggestionAction">
+				<result name="input" type="tiles" >master.suggestion</result>
+				<result name="success" type="tiles">master.suggestion</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>
+			
+			 <action name="SuggestionApproval_*" method="{1}" class="org.struts.action.settings.SuggestionApprovalAction">
+				<result name="input" type="tiles" >master.SuggestionAppr</result>
+				<result name="success" type="tiles">master.SuggestionAppr</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>
+			
+		 	<action name="Services_*" method="{1}" class="org.struts.action.settings.ServicesAction">
+				<result name="input" type="tiles" >setting.Services</result>
+				<result name="success" type="tiles">setting.Services</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>
+		
+		 	<action name="SuperSetting_*" method="{1}" class="org.struts.action.settings.SuperSettingsAction">
+				<result name="input" type="tiles" >setting.SuperSet</result>
+				<result name="success" type="tiles">setting.SuperSet</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>
+			
+			<action name="PayrollSettings_*" method="{1}" class="org.struts.action.settings.PayrollSettingsAction">
+				<result name="input" type="tiles" >setting.paySettings</result>
+				<result name="success" type="tiles">setting.paySettings</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>
+		
+			<action name="UserCreation_*" method="{1}" class="org.struts.action.settings.UserCreationAction">
+				<result name="input" type="tiles" >setting.usercreation</result>
+				<result name="success" type="tiles">setting.usercreation</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>
+			
+				<action name="SuggestionMisReport_*" method="{1}" class="org.struts.action.settings.SuggestionMisReportAction">
+				<result name="input" type="tiles" >setting.suggmisreport</result>
+				<result name="success" type="tiles">setting.suggmisreport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>
+			
+			<action name="RecruitmentSettings_*" method="{1}" class="org.struts.action.settings.RecruitmentSettingsAction">
+				<result name="input" type="tiles" >Recruitment.Settings</result>
+				<result name="success" type="tiles">Recruitment.Settings</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>
+			
+			<action name="GratuityConfig_*" method="{1}" class="org.struts.action.settings.GratuityConfigurationAction">
+				<result name="input" type="tiles" >setting.gratuityConfig</result>
+				<result name="success" type="tiles">setting.gratuityConfig</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="creditList" type="tiles">setting.gratuityCredits</result>			
+			</action>
+			
+			<action name="SalarySlipConfiguration_*" method="{1}" class="org.struts.action.settings.SalarySlipConfigurationAction">
+				<result name="input" type="tiles" >settings.salarySlipConfig</result>
+				<result name="success" type="tiles">settings.salarySlipConfig</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+			</action>
+			
+			<action name="AdminConfSettings_*" method="{1}" class="org.struts.action.settings.AdminConfAction">
+				<result name="input" type="tiles" >settings.adminConf</result>
+				<result name="success" type="tiles">settings.adminConf</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+			</action>
+			
+			
+			<!-- ADDED BY Vijay Shedge Begins -->
+			<action name="ReportSettings_*" method="{1}"
+				class="org.struts.action.settings.ReportSettingsAction">
+				<result name="input" type="tiles">settings.reportlayoutconfig</result>
+				<result name="success" type="tiles">settings.reportlayoutconfig</result>
+				<result name="f9page" type="tiles">common.f9page</result>
+				
+			</action>
+			<!-- ADDED BY Vijay Shedge Ends -->
+	
+	<!-- Added by Nilesh Dhandare 24th Jan 2012 -->
+	<action name="TipsSetting_*" method="{1}" class="org.struts.action.settings.TipsAction"> 
+				<result name="input" type="tiles">home.tipsLink</result>
+				<result name="viewReq" type="tiles">tips.message</result>
+	           <result name="f9multiSelect" type="tiles">f9multiSelect</result>		
+	</action>
+	
+	
+	
+	
+	
+		
+	
+	
+	
+	
+ </package>
+ 
+ 
+ 
+        <!-- Add actions here -->    
+</struts>

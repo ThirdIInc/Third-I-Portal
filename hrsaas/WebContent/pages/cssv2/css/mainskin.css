@@ -1,0 +1,182 @@
+body {
+margin:0;
+}
+.toplink {
+	font-size: 11px;
+	font-style: normal;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.txt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #797979;
+	text-decoration: none;
+}
+
+
+	
+
+		.blue {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #253880;
+	text-decoration: none;
+}
+		.bg {
+	background-image: url(topbg.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+
+		.bg1 {
+	background-image: url(images/botbg.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.border {
+	border-top: 1px solid #CCCCCC;
+}
+.border1 {
+	border-bottom: 1px solid #CCCCCC;
+		border-top: 1px solid #CCCCCC;
+}.blaclink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #797979;
+	text-decoration: none;
+	font-weight: lighter;
+	line-height: 18px;
+	
+}
+
+
+.redlink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #993300;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.blacklink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+	
+
+}
+
+
+
+
+.headerblue {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #003366;;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+.header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #666666;
+	text-decoration: none;
+}
+.headerwhite {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.headerred {
+
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #993300;
+	text-decoration: none;
+}
+
+.smalllink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #2F5497;
+	text-decoration: none;
+	font-weight: bold;
+}
+.darklink {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: lighter;
+}
+.bullet {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #993300;
+	text-decoration: none;
+	list-style-position: outside;
+	list-style-type:square;
+	margin-top:0px;
+	padding-left:25px;
+   	height:0px;
+	
+}
+
+.bullet1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #993300;
+	text-decoration: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-top:0px;
+	padding-left:22px;
+	height:0px;
+	list-style-image: url(6.gif);
+
+}
+.testimonial {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	color: #797979;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 18px;
+	font-style: italic;
+}
+.testred {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #993300;
+	text-decoration: none;
+	font-weight: bold;
+}
+.box {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: none;
+	border: 1px solid #CCCCCC;
+}
+.smalllinkCopy {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+}

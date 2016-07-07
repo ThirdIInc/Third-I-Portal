@@ -1,0 +1,35 @@
+/**
+ * 
+ */
+package org.paradyne.sql.settings;
+
+import org.paradyne.lib.SqlBase;
+
+/**
+ * @author prakashs
+ *
+ */
+public class ServicesModelSql extends SqlBase {
+	public String getQuery(int id){
+		switch (id){
+		case 1: return "INSERT INTO HRMS_SERVICES_HDR (SERVICES_HDR_CODE,SERVICES_HDR_SUBHEADER) VALUES((SELECT NVL(MAX(SERVICES_HDR_CODE),0)+1 FROM HRMS_SERVICES_HDR),?)";
+		
+		case 2: return "INSERT INTO HRMS_SERVICES_DTL (SERVICES_HDR_CODE,SERVICES_DTL_NAME,SERVICES_DTL_PATH,SERVICES_DTL_CODE)"
+			+" VALUES (?,?,?,?)";
+		
+		case 3 :return "UPDATE HRMS_SERVICES_HDR SET SERVICES_HDR_SUBHEADER=? WHERE SERVICES_HDR_CODE =?";
+		
+		case 4:return "UPDATE HRMS_SERVICES_DTL SET SERVICES_DTL_NAME=?,SERVICES_DTL_PATH=? WHERE SERVICES_HDR_CODE =? AND SERVICES_DTL_CODE=? ";
+		
+		case 5 :return "SELECT SERVICES_DTL_NAME,SERVICES_DTL_PATH FROM HRMS_SERVICES_DTL WHERE SERVICES_HDR_CODE = ?";
+		
+		case 6:return "UPDATE HRMS_SERVICES_DTL SET SERVICES_DTL_NAME= ?,SERVICES_DTL_PATH= ? WHERE SERVICES_DTL_CODE =? AND SERVICES_HDR_CODE=? ";
+		
+		case 7:return "DELETE FROM HRMS_SERVICES_HDR WHERE SERVICES_HDR_CODE=? ";
+		
+		case 8: return "DELETE FROM HRMS_SERVICES_DTL WHERE SERVICES_HDR_CODE=?";
+		
+		default :return "";
+		}
+	}
+}

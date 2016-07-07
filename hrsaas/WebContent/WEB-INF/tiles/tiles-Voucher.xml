@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+ 
+
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	
+
+
+
+	<definition name=".myPageLeftRightLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+	<definition name=".reportLayout"
+		template="/pages/common/reportLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<!--  Added by Priyanka-->
+	<definition name=".adminHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/adminLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+<!--Ended By Priyanka  -->
+	
+ 
+		<definition name="master.voucher" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Voucher Master" />
+		<put-attribute name="body" value="/pages/voucher/voucherHeadMaster.jsp" />
+	</definition>
+
+	
+	<definition name="master.Vchreport" extends=".reportLayout">
+		<put-attribute name="title" value="Voucher Master Report" />
+		<put-attribute name="body" value="/pages/voucher/VoucherHdReport.jsp" />
+	</definition>
+
+
+	<definition name="master.voucherData" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Voucher Master" />
+		<put-attribute name="body" value="/pages/voucher/VoucherMasterData.jsp" />
+	</definition>
+
+
+
+
+	<definition name="master.voucherApprov" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Voucher Master Data" />
+		<put-attribute name="body" value="/pages/voucher/voucherApproval.jsp" />
+	</definition>
+
+ 
+	<definition name="master.report" extends=".mainLayout">
+		<put-attribute name="title" value="Expenditure" />
+		<put-attribute name="body" value="/pages/admin/master/expendReport.jsp" />
+	</definition>
+
+	<definition name="voucherApplication.MasterData"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Voucher Master Data" />
+		<put-attribute name="body"
+			value="/pages/voucher/voucherApplicationData.jsp" />
+	</definition>
+	
+	<definition name="voucherApproval.Data"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Voucher Master Data" />
+		<put-attribute name="body" value="/pages/voucher/voucherApproval.jsp" />
+	</definition>
+	
+
+	
+	<definition name="master.voucherApprovAc" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Voucher Master" />
+		<put-attribute name="body" value="/pages/voucher/voucherApprovalac.jsp" />
+	</definition>
+
+
+
+	<definition name="master.cashVoucher" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Cash Voucher" />
+		<put-attribute name="body" value="/pages/voucher/cashVoucher.jsp" />
+	</definition>
+
+		<definition name="master.cashVoucherApprove"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Cash Voucher" />
+		<put-attribute name="body" value="/pages/voucher/viewofApplications.jsp" />
+	</definition>
+
+
+		<definition name="master.addCashVoucherApp"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Business Req Document Data" />
+		<put-attribute name="body"
+			value="/pages/voucher/addCashVoucherApplication.jsp" />
+	</definition>
+
+		<definition name="master.accountantList"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Business Req Document Data" />
+		<put-attribute name="body"
+			value="/pages/voucher/voucherAccountant.jsp" />
+	</definition>
+
+
+	<definition name="voucherApplication.MasterData"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Voucher Master Data" />
+		<put-attribute name="body"
+			value="/pages/voucher/voucherApplicationData.jsp" />
+	</definition>
+
+
+
+	<definition name="report.cashVoucher" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Cash Voucher Report" />
+		<put-attribute name="body" value="/pages/voucher/voucherMisReport.jsp" />
+	</definition>
+
+
+	<definition name="voucherApplication.Master"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Voucher Master" />
+		<put-attribute name="body" value="/pages/voucher/voucherApplication.jsp" />
+	</definition>
+
+	
+	<definition name="voucherApplication.MasterData"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Voucher Master Data" />
+		<put-attribute name="body"
+			value="/pages/voucher/voucherApplicationData.jsp" />
+	</definition>
+
+		<definition name="voucher.uploads" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Voucher Upload" />
+		<put-attribute name="body" value="/pages/voucher/voucherUploads.jsp" />
+	</definition>
+
+
+
+  <!-- mypage mapping starts-->
+
+	<definition name="alert.mypage" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body"
+			value="/pages/mypage/mypageprocessManagerAlerts.jsp" />
+	</definition>
+	
+	<definition name="mypage.services"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/mypage/services.jsp" />
+	</definition>
+
+	 
+
+ <!-- mypage mapping ends-->
+
+
+
+
+	
+</tiles-definitions>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+        
+<struts>   
+        <package name="employeeCard" namespace="/employeeCard" extends="struts-default">
+        
+	        <result-types>
+			  	<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+			</result-types>
+			
+			<action name="EmployeeCardInfo_*" method="{1}" class="org.struts.action.employeeCardInfo.EmployeeCardInfoAction">
+				<result name="input" type="tiles" > employeeCard.info</result>
+				<result name="success" type="tiles">employeeCard.info</result>	
+				<result name="vendorDetails" type="tiles">vendor.info</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+			<!-- my page code -->
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+
+			</action>
+		 
+			<!-- This is for mypage starts -->
+		
+			<action name="MypageProcessManagerAlerts_*" method="{1}" class="org.struts.action.mypage.MypageProcessManagerAlertsAction">
+			<result name="input" type="tiles">alert.mypage</result>
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="tiles">
+				mypage.services
+			</result>	
+			</action>
+		
+		<!-- This is for mypage ends -->
+        </package>
+</struts>

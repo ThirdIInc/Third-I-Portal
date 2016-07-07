@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+ 
+
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute  name="title" value="PeoplePower" />
+		<put-attribute  name="header" value="/pages/common/header.jsp" />
+		<put-attribute  name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute  name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute  name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute  name="body" value="" />
+	</definition>
+	
+	
+	
+	
+
+	<definition name=".myPageLeftRightLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute  name="title" value="PeoplePower" />
+		<put-attribute  name="header" value="/pages/common/header.jsp" />
+		<put-attribute  name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute  name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute  name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute  name="body" value="" />
+	</definition>
+	
+		
+	<definition name=".adminHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/adminLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name="AssetType.Master" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Asset Types" />
+		<put-attribute  name="body" value="/pages/Asset/AssetTypes.jsp" />
+	</definition>
+	
+	<definition name="AssetTypeReport" extends=".mainLayout">
+		<put-attribute  name="title" value="Asset Types" />
+		<put-attribute  name="body" value="/pages/Asset/assetTypeReport.jsp" />
+	</definition>
+
+	<definition name="AssetType.MasterData" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Asset Types" />
+		<put-attribute  name="body" value="/pages/Asset/assetTypesData.jsp" />
+	</definition>
+
+
+	<definition name="AssetMaster.Master" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Asset Master" />
+		<put-attribute  name="body" value="/pages/Asset/AssetMaster.jsp" />
+	</definition>
+
+	<definition name="AssetMasterReport" extends=".mainLayout">
+		<put-attribute  name="title" value="Asset Master Report" />
+		<put-attribute  name="body" value="/pages/Asset/assetMasterReport.jsp" />
+	</definition>
+
+	<definition name="AssetMaster.MasterData" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Asset Master" />
+		<put-attribute  name="body" value="/pages/Asset/AssetMasterData.jsp" />
+	</definition>
+
+	<definition name="UnitMaster.Master" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Unit Master" />
+		<put-attribute  name="body" value="/pages/Asset/UnitMaster.jsp" />
+	</definition>
+
+
+	<definition name="UnitMaster.Data" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Unit Master" />
+		<put-attribute  name="body" value="/pages/Asset/UnitMasterData.jsp" />
+	</definition>
+
+	<definition name="VendorMaster.Master" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Vendor Master" />
+		<put-attribute  name="body" value="/pages/Asset/VendorMaster.jsp" />
+	</definition>
+
+	<definition name="VendorMaster.Data" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Vendor Master" />
+		<put-attribute  name="body" value="/pages/Asset/VendorMasterData.jsp" />
+	</definition>
+
+		<definition name="AssetEmployee.MasterList"
+		extends=".myPageLeftRightLayout">
+		<put-attribute  name="title" value="Asset Employee" />
+		<put-attribute  name="body" value="/pages/Asset/AssetEmployeeList.jsp" />
+	</definition>
+
+
+	<definition name="AssetEmployee.Master"
+		extends=".myPageLeftRightLayout">
+		<put-attribute  name="title" value="Asset Employee" />
+		<put-attribute  name="body" value="/pages/Asset/AssetEmployee.jsp" />
+	</definition>
+
+
+	<definition name="AssetActualAssignment" extends=".mainLayout">
+		<put-attribute  name="title" value="Asset Assignment" />
+		<put-attribute  name="body" value="/pages/Asset/assetActualAssignment.jsp" />
+	</definition>
+
+
+	
+	<definition name="AssetRequstForm" extends=".mainLayout">
+		<put-attribute  name="title" value="Asset Requst Form" />
+		<put-attribute  name="body" value="/pages/Asset/assetRequestForm.jsp" />
+	</definition>
+
+	<definition name="AssetAssignment" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Asset Assignment" />
+		<put-attribute  name="body" value="/pages/Asset/assetAssignment.jsp" />
+	</definition>
+
+
+	<definition name="AssignmentEdit" extends=".mainLayout">
+		<put-attribute  name="title" value="Asset Assignment" />
+		<put-attribute  name="body" value="/pages/Asset/assignmentEdit.jsp" />
+	</definition>
+
+<definition name="report.AssetEmployee" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Asset To Employee MIS Report" />
+		<put-attribute  name="body"
+			value="/pages/Asset/assetEmployeeMisReport.jsp" />
+	</definition>
+
+
+	<definition name="AssetsubTypes" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Asset Sub-Types" />
+		<put-attribute  name="body" value="/pages/Asset/assetSubType.jsp" />
+	</definition>
+
+
+	<definition name="AssetsubType.MasterData" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Asset Sub-Types" />
+		<put-attribute  name="body" value="/pages/Asset/assetSubTypeData.jsp" />
+	</definition>
+
+	<definition name="AssetApproval" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Asset Approval" />
+		<put-attribute  name="body" value="/pages/Asset/assetApproval.jsp" />
+	</definition>
+
+	<definition name="AssetAssignment" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Asset Assignment" />
+		<put-attribute  name="body" value="/pages/Asset/assetAssignment.jsp" />
+	</definition>
+
+
+	<definition name="WareHouseMaster" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Ware House Master" />
+		<put-attribute  name="body" value="/pages/Asset/wareHouseMaster.jsp" />
+	</definition>
+
+
+	<definition name="WareHouseMaster.Data" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Ware House Master" />
+		<put-attribute  name="body" value="/pages/Asset/WareHouseMasterData.jsp" />
+	</definition>
+
+	<definition name="AssetReturn" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Asset Return" />
+		<put-attribute  name="body" value="/pages/Asset/AssetReturn.jsp" />
+	</definition>
+
+	<definition name="RateListData" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Rate List" />
+		<put-attribute  name="body" value="/pages/Asset/rateListData.jsp" />
+	</definition>
+
+
+	<definition name="RateList" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Rate List" />
+		<put-attribute  name="body" value="/pages/Asset/rateList.jsp" />
+	</definition>
+
+
+	<definition name="PurchaseOrderlst" extends=".myPageLeftRightLayout">
+		<put-attribute  name="title" value="Purchase Order" />
+		<put-attribute  name="body" value="/pages/Asset/purchaseOrderList.jsp" />
+	</definition>
+
+	<definition name="PurchaseOrder" extends=".myPageLeftRightLayout">
+		<put-attribute  name="title" value="Purchase Order" />
+		<put-attribute  name="body" value="/pages/Asset/purchaseOrder.jsp" />
+	</definition>
+
+
+<definition name="PurchaseInwardDetails" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Purchase Inward Details" />
+		<put-attribute  name="body" value="/pages/Asset/purchaseInwardDetails.jsp" />
+	</definition>
+
+
+	<definition name="PurchaseOrderApproval" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Purchase Order Approval" />
+		<put-attribute  name="body" value="/pages/Asset/purchaseOrderApproval.jsp" />
+	</definition>
+
+
+	<definition name="AssetReport" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Asset Report" />
+		<put-attribute  name="body" value="/pages/Asset/assetReport.jsp" />
+	</definition>
+
+<definition name="PurchaseInward" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Purchase Inward" />
+		<put-attribute  name="body" value="/pages/Asset/purchaseInwards.jsp" />
+	</definition>
+
+
+	<definition name="PurchaseMis" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Purchase Mis Report" />
+		<put-attribute  name="body" value="/pages/Asset/PurchaseMisReport.jsp" />
+	</definition>
+
+
+	<definition name="AssetDirectAssignment" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="Asset Direct Assignment" />
+		<put-attribute  name="body"
+			value="/pages/Asset/assetDirectAssignmentData.jsp" />
+	</definition>
+
+
+	<definition name="AssetAppMis" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="AssestApplicationMisReport" />
+		<put-attribute  name="body" value="/pages/Asset/assestApplicationMis.jsp" />
+	</definition>
+
+
+	<definition name="AssetCountRpt" extends=".adminHomeLayout">
+		<put-attribute  name="title" value="AssetCountRpt" />
+		<put-attribute  name="body" value="/pages/Asset/assetCountReport.jsp" />
+	</definition>
+
+
+	<!--entry for mypage starts-->
+
+	<definition name="alert.mypage" extends=".myPageLeftRightLayout">
+		<put-attribute  name="title" value="PeoplePower" />
+		<put-attribute  name="body"
+			value="/pages/mypage/mypageprocessManagerAlerts.jsp" />
+	</definition>
+
+	<definition name="mypage.services"
+			extends=".myPageLeftRightLayout">
+			<put-attribute  name="title" value="PeoplePower" />
+			<put-attribute  name="body" value="/pages/mypage/services.jsp" />
+		</definition>
+
+<!--entry for mypage ends-->
+</tiles-definitions>
+

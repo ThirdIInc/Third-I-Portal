@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="vendor" namespace="/vendor"
+		extends="struts-default">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+		<action name="PartnerInvoice_*" method="{1}"
+			class="org.struts.action.vendor.PartnerInvoiceAction">
+			<result name="input" type="tiles">
+				vendor.partnerInvoiceList
+			</result>
+			<result name="success" type="tiles">
+				vendor.partnerInvoiceList
+			</result>
+			<result name="invoiceCreation" type="tiles">
+				vendor.partnerInvoiceCreation
+			</result>
+			<result name="invoiceApproval" type="chain">
+				PartnerInvoiceApproval_input
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+		</action>
+
+		<action name="VendorLogin_*" method="{1}"
+			class="org.struts.action.vendor.VendorLoginAction">
+			<result name="input" type="tiles">vendor.login</result>
+			<result name="invalid" type="tiles">vendor.login</result>
+			<result name="success" type="tiles">
+				mainheadervendor
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="partnerHomePage" type="tiles">
+				recruit.partnerLogin
+			</result>
+			<result name="logout" type="tiles">
+				vendor.vendorLogout
+			</result>
+			<result name="forgotVendorPassword" type="tiles">
+				vendor.vendorForgotPassword
+			</result>
+		</action>
+
+		<action name="VendorHomePage_*" method="{1}"
+			class="org.struts.action.vendor.VendorHomePageAction">
+			<result name="success" type="tiles">menu.vendortree</result>
+			<result name="input" type="tiles">vendor.vendorHome</result>
+		</action>
+
+		<action name="PartnerInvoiceApproval_*" method="{1}"
+			class="org.struts.action.vendor.PartnerInvoiceApprovalAction">
+			<result name="input" type="tiles">
+				vendor.partnerApprovalList
+			</result>
+			<result name="success" type="tiles">
+				vendor.partnerApprovalList
+			</result>
+			<result name="invoiceCreation" type="tiles">
+				vendor.partnerInvoiceCreation
+			</result>
+		</action>
+
+		<action name="InvoiceAcceptance_*" method="{1}"
+			class="org.struts.action.vendor.InvoiceAcceptanceAction">
+			<result name="input" type="tiles">
+				vendor.invoiceAcceptanceList
+			</result>
+			<result name="success" type="tiles">
+				vendor.invoiceAcceptanceList
+			</result>
+			<result name="invoiceAccept" type="tiles">
+				vendor.invoiceAccept
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+		</action>
+
+		<action name="VendorReportStructure_*" method="{1}"
+			class="org.struts.action.vendor.VendorReportStructureAction">
+			<result name="input" type="tiles">
+				vendor.reportStructureList
+			</result>
+			<result name="success" type="tiles">
+				vendor.reportStructureList
+			</result>
+			<result name="reportStructure" type="tiles">
+				vendor.reportStructure
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="VendorRegistration_*" method="{1}"
+			class="org.struts.action.vendor.VendorRegistrationAction">
+			<result name="input" type="tiles">
+				vendor.registration
+			</result>
+			<result name="success" type="tiles">
+				vendor.registration
+			</result>
+		</action>
+		
+		<action name="InvoiceDisbursement_*" method="{1}"
+			class="org.struts.action.vendor.InvoiceDisbursementAction">
+			<result name="input" type="tiles">
+				vendor.invoiceDisbursementList
+			</result>
+			<result name="success" type="tiles">
+				vendor.invoiceDisbursement
+			</result>
+				<result name="invoiceClmDisbrView" type="tiles">
+				vendor.invoiceDisbursement
+			</result>
+		</action>
+		
+		<action name="PartnerChgPassword_*" method="{1}"
+			class="org.struts.action.vendor.PartnerChgPasswordAction">
+			<result name="input" type="tiles">
+				vendor.chagePassword
+			</result>
+			<result name="success" type="tiles">
+				vendor.chagePassword
+			</result>
+		</action>
+	</package>
+</struts>

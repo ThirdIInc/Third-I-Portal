@@ -1,0 +1,432 @@
+ 
+<%@ taglib prefix="s" uri="/struts-tags"%>
+
+<%@ include file="/pages/common/labelManagement.jsp"%>
+
+
+<script type="text/javascript"
+	src="../pages/common/include/javascript/sorttable.js"></script>
+<s:form action="InvoiceDisbursement" method="post" id="paraFrm"
+	validate="true" target="main" theme="simple">
+<s:hidden name="myPage" id="myPage" />
+
+ 
+	<table width="100%" border="0" cellpadding="2" cellspacing="1"
+		class="formbg">
+		<tr>
+			<td width="100%" colspan="7">
+			<table width="100%" border="0" align="center" cellpadding="0"
+				cellspacing="0" class="formbg">
+				<tr>
+					<td valign="bottom" class="txt"><strong class="text_head"><img
+						src="../pages/images/recruitment/review_shared.gif" width="25"
+						height="25" /></strong></td>
+					<td width="93%" class="txt"><strong class="text_head">Invoice	Disbursement  </strong></td>
+					<td width="3%" valign="top" class="txt">
+					<div align="right"><img
+						src="../pages/images/recruitment/help.gif" width="16" height="16" /></div>
+					</td>
+				</tr>
+			</table>
+			</td>
+		</tr>
+
+		<!--<tr>
+			<td width="100%" colspan="7">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0"
+				class="formbg">
+				<tr>
+					<td width="20%"><b><label name="disbDiv" id="disbDiv6"
+						ondblclick="callShowDiv(this);"><%=label.get("disbDiv")%></label>
+					:</b></td>
+					<td width="30%"><s:hidden name="divisionCode" /><s:textfield
+						name="divisionName" theme="simple" size="30" readonly="true" />&nbsp;
+					<img src="../pages/images/recruitment/search2.gif" height="18"
+						class="iconImage" align="absmiddle" width="18"
+						onclick="javascript:callsF9(500,325,'InvoiceDisbursement_f9division.action');"
+						id="ctrlHide"></td>
+					<td width="10%" align="center"><input type="button"
+						name="searchBtn" class="token" value="   Filter   "
+						onclick="searchByFilter();"></td>
+					<td width="10%" align="center"><input type="button"
+						name="clearBtn" class="token" value="   Clear   "
+						onclick="clearFilter();"></td>
+					<td width="30%" align="center"><input type="button"
+						name="reportBtn" class="token" value="Generate Bank Statement"
+						onclick="statementReport();"></td>
+				</tr>
+
+			</table>
+			</td>
+		</tr>
+		--><%	int totalPage = 0;
+					int pageNo = 0;
+			%>
+		<tr>
+			<td width="100%" colspan="7">
+			<div id="first">
+			<table width="100%" class="formbg" border="0">
+				<tr>
+					<script><!--
+		    	function setAction(listType){
+		    	document.getElementById('myPage').value="";
+			    if(listType=="p"){
+			      	document.getElementById('paraFrm').action='InvoiceDisbursement_input.action';
+			      	document.getElementById('paraFrm').submit();
+			    }
+			    if(listType=="c"){
+			      	document.getElementById('paraFrm').action='InvoiceDisbursement_getClosedList.action';
+			      	document.getElementById('paraFrm').submit();
+			     }
+		    	}
+		   			--></script>
+					<td><a href="#" onclick="setAction('p')">Pending Claim List</a> | <a href="#" onclick="setAction('c')">Closed Claim List</a></td>
+				</tr>
+			</table>
+			</div>
+			</td>
+		</tr>
+		<%
+			int row1 = 0;
+		%>
+		
+		<!-- PENDING CLAIM LIST BEGINS - ADDED BY REEBA -->
+		<s:if test="%{listType == 'pending'}">
+			<tr>
+				<td width="100%" colspan="7">
+				<table width="100%" border="0" align="center" cellpadding="0"
+					cellspacing="0" class=formbg>
+					<tr>
+						<td width="70%" class="formtxt"><strong>Pending
+						Claim Disbursement List</strong></td>
+						
+						<td width="20%" align="right" ><b>Page:</b>
+										<%
+											totalPage = (Integer) request.getAttribute("totalPage");
+											pageNo = (Integer) request.getAttribute("pageNo");
+										%><a href="#"
+											onclick="callPage('1', 'F', '<%=totalPage%>', 'InvoiceDisbursement_input.action');">
+										<img title="First Page" src="../pages/common/img/first.gif"
+											width="10" height="10" class="iconImage" /> </a>&nbsp; <a
+											href="#"
+											onclick="callPage('P', 'P', '<%=totalPage%>', 'InvoiceDisbursement_input.action');">
+										<img title="Previous Page"
+											src="../pages/common/img/previous.gif" width="10" height="10"
+											class="iconImage" /> </a> <input type="text" name="pageNoField"
+											id="pageNoField" size="3" value="<%=pageNo%>" maxlength="10"
+											onkeypress="callPageText(event, '<%=totalPage%>', 'InvoiceDisbursement_input.action');return numbersOnly();" />
+										of <%=totalPage%> <a href="#"
+											onclick="callPage('N', 'N', '<%=totalPage%>', 'InvoiceDisbursement_input.action');">
+										<img title="Next Page" src="../pages/common/img/next.gif"
+											class="iconImage" /> </a>&nbsp; <a href="#"
+											onclick="callPage('<%=totalPage%>', 'L', '<%=totalPage%>', 'InvoiceDisbursement_input.action');">
+										<img title="Last Page" src="../pages/common/img/last.gif"
+											width="10" height="10" class="iconImage" /> </a></td>
+						
+
+					</tr>
+					
+					<tr>
+						<td colspan=""><strong> &nbsp; </strong></td>
+						
+						<td  align="center"><input type="button"
+							name="disburseBtn" class="token" value=" Disburse "
+							onclick="callClaimDisburse();"></td>
+						
+					</tr>
+
+					<tr>
+						<td width="100%" colspan="7">
+						<table width="100%" cellpadding="1" cellspacing="1" class="formbg" border="0">
+							<tr>
+								<td width="5%" class="formth"><strong>Sr.No</strong></td>
+								<td width="10%" class="formth"><strong>Partner Code </strong></td>
+								<td width="10%" class="formth"><strong>Partner Name 
+								 </strong></td>
+								<td width="25%" class="formth"><strong>Invoice Date </strong></td>
+								<td width="15%" class="formth"><strong>Claim
+								Amount</strong></td>
+								<td width="15%" class="formth">Status</td>
+								<td width="15%" class="formth"><strong>Disburse11</strong></td>
+							</tr>
+							<%!int i = 0;%>
+							<%! int b = 0;%>
+							<%
+									int k = 1, count2 = 0, x = 0;
+							int Sr = pageNo * 20 - 20;
+									%>
+
+							<s:iterator value="vendorDisbrList">
+								<tr id="trvlRow_<%=k %>" <%if(count2%2==0){
+						%>
+									class="tableCell1" <%}else{ %> class="tableCell2"
+									<%	}count2++; %> title="double click to edit"
+									onmouseover="javascript:newRowColor(this);"
+									onmouseout="javascript:oldRowColor(this,<%=count2%2 %>);"
+									 />
+									<td class="sortableTD"><%=++Sr%></td>
+									<td class="sortableTD"><s:property
+										value="vendorCodeItt" /></td>
+									<td class="sortableTD"><s:property
+										value="vendorNameItt" /></td>
+									<td class="sortableTD"> <s:property value="invoiceDateItt" /></td>
+								 
+									<td class="sortableTD" nowrap="nowrap"><s:property
+										value="disburseAmountItt" /></td>
+									<td class="sortableTD" align="right">
+										<s:property value="statusItt" />
+										 </td>
+									<td class="sortableTD" align="center"> 
+									 <s:if test='%{currentStatus =="T"}'>  
+
+										<input type="hidden" name="hidClaimCode"
+											id="hidClaimCode<%=x%>" />
+										<input type="checkbox" class="sortableTD" id="clmChkBox<%=x%>"
+											name="clmChkBox"
+											onclick="callForClaimDisburse('<s:property value="appCode"/>','<%=x%>')" />
+									</s:if><s:else>  
+										<input type="button" class="token" value="Add to Statement"
+											onclick="viewDetails('<s:property value="itClmAppId"/>',
+												'<s:property value="itClmStatus"/>','<s:property value="appId"/>',
+												'<s:property value="appCode"/>','<s:property value="currentStatus"/>','<s:property value="displayClaimStatus"/>');">
+									</s:else>
+									 
+									 				 </td>
+
+								</tr>
+
+							 
+
+								<%
+										k++;
+										x++;
+										%>
+							</s:iterator>
+							<%
+									i = k;
+									b = x;
+									%>
+
+
+							<s:if test="noClaimData">
+								<tr>
+									<td width="100%" colspan="7" align="center"><font
+										color="red">No Data To Display</font></td>
+								</tr>
+							</s:if>
+
+						</table>
+						</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+			</s:if>
+			<!-- PENDING CLAIM LIST ENDS - ADDED BY REEBA -->
+			<!-- CLOSED CLAIM LIST BEGINS - ADDED BY REEBA -->
+			
+			<s:if test="%{listType == 'closed'}">
+			<tr>
+				<td width="100%" colspan="7">
+				<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class=formbg>
+					<tr>
+						<td colspan="4"><strong> Closed	Claim Disbursement List </strong></td>
+						<td align="right" ><b>Page:</b>
+										<%
+										totalPage = (Integer) request.getAttribute("totalPage");
+										pageNo = (Integer) request.getAttribute("pageNo");
+										%> <a href="#"
+											onclick="callPage('1', 'F', '<%=totalPage%>', 'InvoiceDisbursement_getClosedList.action');">
+										<img title="First Page" src="../pages/common/img/first.gif"
+											width="10" height="10" class="iconImage" /> </a>&nbsp; <a
+											href="#"
+											onclick="callPage('P', 'P', '<%=totalPage%>', 'InvoiceDisbursement_getClosedList.action');">
+										<img title="Previous Page"
+											src="../pages/common/img/previous.gif" width="10" height="10"
+											class="iconImage" /> </a> <input type="text" name="pageNoField"
+											id="pageNoField" size="3" value="<%=pageNo%>" maxlength="10"
+											onkeypress="callPageText(event, '<%=totalPage%>', 'InvoiceDisbursement_getClosedList.action');return numbersOnly();" />
+										of <%=totalPage%> <a href="#"
+											onclick="callPage('N', 'N', '<%=totalPage%>', 'InvoiceDisbursement_getClosedList.action');">
+										<img title="Next Page" src="../pages/common/img/next.gif"
+											class="iconImage" /> </a>&nbsp; <a href="#"
+											onclick="callPage('<%=totalPage%>', 'L', '<%=totalPage%>', 'InvoiceDisbursement_getClosedList.action');">
+										<img title="Last Page" src="../pages/common/img/last.gif"
+											width="10" height="10" class="iconImage" /> </a></td>
+					</tr>
+					<tr>
+						<td width="100%" colspan="7">
+						<table width="100%" cellpadding="1" cellspacing="1" class="formbg">
+						<tr>
+								<td width="5%" class="formth" colspan="1"><strong>Sr.No</strong></td>
+								<td width="10%" class="formth" colspan="1"><strong>Partner Code </strong></td>
+								<td width="10%" class="formth" colspan="1"><strong>Partner Name 
+								 </strong></td>
+								<td width="25%" class="formth" colspan="1"><strong>Invoice Date </strong></td>
+								<td width="15%" class="formth" colspan="1"><strong>Claim
+								Amount</strong></td>
+								<td width="15%" class="formth" colspan="1">Status</td>
+								<td width="15%" class="formth" colspan="1"><strong>Disburse</strong></td>
+							</tr>
+							<%!int ii = 0;
+							
+							%>
+							<%		int closedSr = pageNo * 20 - 20;
+									int kk = 1, count3 = 0;
+							%>
+
+							<s:iterator value="vendorDisbrList">
+								<tr id="trvlRow_<%=kk %>" <%if(count3%2==0){
+						%>
+									class="tableCell1" <%}else{ %> class="tableCell2"
+									<%	}count3++; %> title="double click to edit"
+									onmouseover="javascript:newRowColor(this);"
+									onmouseout="javascript:oldRowColor(this,<%=count3%2 %>);"
+							>
+									<td class="sortableTD"><%=++closedSr%>  
+									<td class="sortableTD"><s:property
+										value="vendorCodeItt" /></td>
+									<td class="sortableTD"><s:property
+										value="vendorNameItt" /></td>
+									<td class="sortableTD"> <s:property value="invoiceDateItt" />&nbsp;</td>
+								 
+									<td class="sortableTD" nowrap="nowrap"><s:property
+										value="disburseAmountItt" />&nbsp;</td>
+									<td class="sortableTD" align="right">
+										<s:property value="statusItt" />
+										 </td>
+									<td class="sortableTD" align="right"><input type="button"
+										class="token" value="View"
+										onclick="viewDetails('<s:property value="itClmAppId"/>','<s:property value="itClmStatus"/>','<s:property value="appId"/>','<s:property value="appCode"/>','<s:property value="currentStatus"/>')">
+									</td>
+
+								</tr>
+
+								<script>
+							
+								if(document.getElementById('currentStatus<%=kk%>').value=="P"){
+								
+								   document.getElementById('trvlRow_<%=kk%>').style.background ='#FFFF33';
+								 }
+								
+								</script>
+
+								<%
+										kk++;
+										%>
+							</s:iterator>
+							<%
+									ii = kk;
+									%>
+
+
+							<s:if test="noClaimData">
+								<tr>
+									<td width="100%" colspan="7" align="center"><font
+										color="red">No Data To Display</font></td>
+								</tr>
+							</s:if>
+
+						</table>
+						
+						</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+
+
+
+
+
+			<!-- CLOSED CLAIM LIST ENDS - ADDED BY REEBA -->
+
+
+
+
+		</s:if>
+
+
+
+<s:hidden name="noClaimData" />
+<s:hidden name="tmsClmAppId" />
+<s:hidden name="tmsClmStatus" />
+<s:hidden name="trvlAppId" />
+	<s:hidden name="trvlAppCode" />
+	<s:hidden name="status" id="paraFrm_status"/>
+
+	</table>
+
+</s:form>
+
+<script>
+
+
+function viewDetails(clmAppId,clmStatus,appId,appCode,currentStatus, claimAppStatus){ 
+	 
+	try{
+	
+	 
+	document.getElementById('paraFrm_tmsClmAppId').value = clmAppId; 
+	document.getElementById('paraFrm_tmsClmStatus').value = clmStatus; 
+	document.getElementById('paraFrm_trvlAppId').value = appId; 
+	document.getElementById('paraFrm_trvlAppCode').value = appCode; 
+	document.getElementById('paraFrm').action = 'InvoiceDisbursement_callView.action?disStatus='+currentStatus+'&claimAppStatus='+claimAppStatus;	  
+	 
+	 alert(document.getElementById('paraFrm').action );
+	 
+	document.getElementById('paraFrm').submit();
+    document.getElementById('paraFrm').target = "main";
+	}catch(e){alert(e);}
+
+	
+}//end of viewDetails
+
+function callForClaimDisburse(id,i){
+ 		if(document.getElementById('clmChkBox'+i).checked == true){
+			document.getElementById('hidClaimCode'+i).value=id;
+		} else {
+			document.getElementById('hidClaimCode'+i).value="";
+		}
+ 	}
+
+
+function callClaimDisburse(){
+	 		document.getElementById('paraFrm').target = "_self";
+			document.getElementById('paraFrm').action='InvoiceDisbursement_sendClaimDisbursementMailSMS.action';
+		   	document.getElementById('paraFrm').submit();
+ 	}
+  	
+ 	function clearFilter(){
+		document.getElementById('paraFrm').target = "_self";
+		document.getElementById('paraFrm').action = 'InvoiceDisbursement_clearFilter.action';
+		document.getElementById('paraFrm').submit();
+	}
+	
+	
+	function searchByFilter(){
+		try{
+				filterStatus = document.getElementById('paraFrm_status').value;
+				if(filterStatus=="P"){
+				   	document.getElementById('paraFrm').action='InvoiceDisbursement_input.action';
+				   	document.getElementById('paraFrm').submit();
+				}
+				if(filterStatus=="C") {
+				   	document.getElementById('paraFrm').action='InvoiceDisbursement_getClosedList.action';
+				   	document.getElementById('paraFrm').submit();
+				}
+		}
+		catch(e)
+		{
+			alert(e);
+		}
+	}
+	
+	function statementReport(){
+		document.getElementById('paraFrm').target = "_self";
+		document.getElementById('paraFrm').action = 'InvoiceDisbursement_generateBankStatementReport.action';
+		document.getElementById('paraFrm').submit();
+	}
+ 	
+</script>
+ 

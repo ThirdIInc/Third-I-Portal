@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="event" namespace="/event" extends="struts-default">
+
+		<result-types>
+
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+
+		<action name="CeoConfiguration_*" method="{1}"
+			class="org.struts.action.event.CeoConfigurationAction">
+			<result name="input" type="tiles">event.ceoconfig</result>
+			<result name="success" type="tiles">event.ceoconfig</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+		<action name="CeoMessageReport_*" method="{1}"
+		class="org.struts.action.event.CeoMessageReportAction">
+		<result name="input" type="tiles">event.ceoMessageReport</result>
+		<result name="success" type="tiles">event.ceoMessageReport</result>
+		<result name="f9page" type="tiles">common.f9page</result>
+		<result name="mailReport" type="tiles">common.mailReport</result>	
+		<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+
+
+		<action name="ConfigureApplCredential_*" method="{1}"
+			class="org.struts.action.event.ConfigureApplCredentialAction">
+			<result name="input" type="tiles">
+				event.configureapplcredential
+			</result>
+			<result name="success" type="tiles">
+				event.configureapplcredential
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		
+		<action name="CeoMessageList_*" method="{1}"
+			class="org.struts.action.event.CeoMessageListAction">
+			<result name="input" type="tiles">
+				event.ceomessagelist
+			</result>
+			<result name="success" type="tiles">
+				event.ceomessagelist
+			</result>
+			<result name="view" type="tiles">
+				event.view
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		
+
+		
+
+
+	</package>
+</struts>

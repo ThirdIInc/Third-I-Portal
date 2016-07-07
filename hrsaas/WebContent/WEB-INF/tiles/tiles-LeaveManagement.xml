@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+ 
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>	
+	
+	<definition name=".myPageLeftRightLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name=".reportLayout"
+		template="/pages/common/reportLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+  <definition name=".myProfileLayout"
+		template="/pages/common/myProfileLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<!-- Added by Priyanka -->
+<definition name=".leaveAttendanceHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/leaveAttendanceLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<!-- Ended by Priyanka -->
+	
+	<definition name=".f9Layout"
+		template="/pages/common/f9layout.jsp">
+		<put-attribute name="title" value="Select record" />
+		<put-attribute name="header" value="/pages/common/f9header.jsp" />
+		<put-attribute name="footer" value="/pages/common/f9footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+		<!-- Added by priyanka -->
+<definition name=".hrmHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/hrmHomeLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<!-- ended by priyanka -->
+	
+	
+
+
+	<definition name="leave.LeaveBalance" extends=".myProfileLayout">
+		<put-attribute name="title" value="Leave Balance" />
+		<put-attribute name="body" value="/pages/admin/leave/leaveBalance.jsp" />
+	</definition>
+
+<definition name="leave.LeaveBalReport" extends=".mainLayout">
+		<put-attribute name="title" value="Leave Balance Report" />
+		<put-attribute name="body" value="/pages/admin/leave/leaveBalReport.jsp" />
+
+	</definition>
+
+<definition name="leave.LeaveApproval"
+		extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Leave Approval" />
+		<put-attribute name="body" value="/pages/admin/leave/leaveApproval.jsp" />
+	</definition>
+
+
+<definition name="leave.LeaveAdminApproval" extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Leave Approval" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/leaveAdminApproval.jsp" />
+	</definition>
+
+	<definition name="leave.LeaveApplication"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Leave Application" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/leaveApplicationFirst.jsp" />
+	</definition>
+
+	
+	<definition name="leave.LeaveReport" extends=".reportLayout">
+		<put-attribute name="title" value="Leave Report" />
+		<put-attribute name="body" value="/pages/admin/leave/leaveAppReport.jsp" />
+	</definition>
+
+	<definition name="leave.LeaveGenReport" extends=".reportLayout">
+		<put-attribute name="title" value="Leave Report" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/leaveReportGeneral.jsp" />
+	</definition>
+
+	<definition name="common.f9ParamPage" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9ParamPage.jsp" />
+	</definition>
+
+	<definition name="leave.levhistory" extends=".reportLayout">
+		<put-attribute name="title" value="Leave History " />
+		<put-attribute name="body" value="/pages/admin/leave/leaveHistory.jsp" />
+	</definition>
+
+
+<definition name="leave.levApplicationJsp"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Leave Application" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/leaveApplication.jsp" />
+
+	</definition>
+
+
+	<definition name="leave.levApplicationFirstJsp"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Leave Application" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/leaveApplicationFirst.jsp" />
+
+	</definition>
+
+
+	<definition name="leave.leaveApplicationApprovalJsp" extends=".myPageLeftRightLayout">
+ 
+		<put-attribute name="title" value="Leave Application Approval" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/leaveApplicationApproval.jsp" />
+
+	</definition>
+
+	<definition name="leave.LeaveCancel" extends=".mainLayout">
+		<put-attribute name="title" value="Leave Cancel" />
+		<put-attribute name="body" value="/pages/admin/leave/leaveCancel.jsp" />
+	</definition>
+
+	<definition name="leave.LeaveExtension" extends=".mainLayout">
+		<put-attribute name="title" value="Leave Extension" />
+		<put-attribute name="body" value="/pages/admin/leave/leaveExtension.jsp" />
+	</definition>
+
+	<definition name="leave.LeaveExtensionView" extends=".mainLayout">
+		<put-attribute name="title" value="Leave Extension" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/leaveExtensionView.jsp" />
+	</definition>
+
+
+	<definition name="leave.LeaveAudit" extends=".mainLayout">
+		<put-attribute name="title" value="Leave Audit" />
+		<put-attribute name="body" value="/pages/admin/leave/leaveAudit.jsp" />
+	</definition>
+
+	<definition name="leave.leaveBalanceReport" extends=".mainLayout">
+		<put-attribute name="title" value="Leave Balance Report" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/leaveBalanceReport.jsp" />
+
+	</definition>
+
+
+	<definition name="leave.dce" extends=".mainLayout">
+		<put-attribute name="title" value="Leave DCE List" />
+		<put-attribute name="body" value="/pages/admin/leave/leaveDCE.jsp" />
+	</definition>
+
+
+	<definition name="leave.LeavePolicy" extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Leave Policy" />
+		<put-attribute name="body" value="/pages/admin/leave/leavePolicy.jsp" />
+	</definition>
+
+
+	<definition name="leave.leavecons" extends=".mainLayout">
+		<put-attribute name="title" value="Leave Encashment History " />
+		<put-attribute name="body" value="/pages/admin/leave/leaveCons.jsp" />
+	</definition>
+
+<definition name="leave.ShiftLeaves" extends=".mainLayout">
+		<put-attribute name="title" value="Leave List" />
+		<put-attribute name="body" value="/pages/admin/leave/policyLeaveList.jsp" />
+	</definition>
+
+
+<definition name="leave.intervalMonth" extends=".mainLayout">
+		<put-attribute name="title" value="Appraisal MIS Report" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/leaveIntervalMonths.jsp" />
+	</definition>
+
+	<definition name="leave.LeaveMisReport" extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Leave Mis Report" />
+		<put-attribute name="body" value="/pages/admin/leave/leaveMisReport.jsp" />
+	</definition>
+
+
+	<definition name="leave.LeaveEncashmentAppl" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="LeaveEncashment" />
+		<put-attribute name="body" value="/pages/admin/leave/leaveEncashAppl.jsp" />
+	</definition>
+
+
+	
+	<definition name="leave.LeaveEncashment" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="LeaveEncashment" />
+		<put-attribute name="body" value="/pages/admin/leave/leaveEncashment.jsp" />
+	</definition>
+
+
+	
+	<definition name="leave.encashHistory" extends=".reportLayout">
+		<put-attribute name="title" value="Leave Encashment History " />
+		<put-attribute name="body"
+			value="/pages/admin/leave/leaveEncashHistory.jsp" />
+	</definition>
+
+
+	<definition name="leave.LeaveEntitle" extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Leave Entitle Process" />
+		<put-attribute name="body" value="/pages/admin/leave/leaveEntitle.jsp" />
+	</definition>
+
+
+<definition name="leave.LeaveRegularization"
+		extends=".mainLayout">
+		<put-attribute name="title" value="LeaveRegularization" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/leaveRegularization.jsp" />
+	</definition>
+
+<definition name="leave.LeaveEncashmentReport"
+		extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Leave Mis Report" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/LeaveEncashmentReport.jsp" />
+	</definition>
+
+<definition name="leave.LeaveEncashmentApproval"
+		extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Promotion Report" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/leaveEncashApproval.jsp" />
+	</definition>
+
+<definition name="leave.LeaveApplicationMis"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="LeaveApplicationMis" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/leaveApplicationMis.jsp" />
+	</definition>
+
+<definition name="leave.LeaveHistoryMis"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="LeaveHistoryMis" />
+		<put-attribute name="body" value="/pages/admin/leave/leaveHistoryMis.jsp" />
+	</definition>
+
+
+	<definition name="leave.LeaveCancelApproval"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Leave Cancel Approval" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/leaveCancelApproval.jsp" />
+	</definition>
+
+<definition name="leave.LeavePolicySetting" extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Leave Policy Setting" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/leavePolicySetting.jsp" />
+	</definition>
+
+	<definition name="leave.LeavePolicyMIS" extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Leave Policy Setting" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/leavePolicyMISReport.jsp" />
+	</definition>
+
+
+<definition name="leave.Regularization"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Regularization" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/regularizationFirst.jsp" />
+	</definition>
+
+
+	<definition name="leave.regularizationList"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Regularization" />
+		<put-attribute name="body" value="/pages/admin/leave/regularization.jsp" />
+	</definition>
+
+
+
+<definition name="leave.regularizationAppl"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Regularization" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/regularizationApplication.jsp" />
+	</definition>
+
+
+	<definition name="leave.personalTime" extends=".mainLayout">
+		<put-attribute name="title" value="Regularization" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/regularizationPersonalTime.jsp" />
+	</definition>
+
+
+	<definition name="leave.RegularizationApproval"
+		extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Regularization" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/regularizationApproval.jsp" />
+	</definition>
+
+	<definition name="leave.regularizationApprAppl"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Regularization" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/regularizationApprovalApplication.jsp" />
+	</definition>
+
+	<definition name="leave.personalTime" extends=".mainLayout">
+		<put-attribute name="title" value="Regularization" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/regularizationPersonalTime.jsp" />
+	</definition>
+
+	<definition name="leave.Maternity" extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Maternity Leave Setting" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/maternityLeaveSetting.jsp" />
+	</definition>
+
+
+	<definition name="leave.leaveEncashmentProcess"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Leave Encashment Process" />
+		<put-attribute name="body"
+			value="/pages/admin/leave/leaveEncashmentProcess.jsp" />
+	</definition>
+
+
+ <!-- common mapping starts-->
+
+	<definition name="common.mailReport" extends=".mainLayout">
+		<put-attribute name="body" value="/pages/payroll/emailReport.jsp"/>
+	</definition>
+
+	<definition name="f9multiSelect" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9MultiSelect.jsp" />
+	</definition>
+
+<definition name="common.f9page" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9page.jsp" />
+	</definition>
+ <!-- common mapping ends-->
+
+
+ <!-- mypage mapping starts-->
+
+	<definition name="alert.mypage" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body"
+			value="/pages/mypage/mypageprocessManagerAlerts.jsp" />
+	</definition>
+	
+	<definition name="mypage.services"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/mypage/services.jsp" />
+	</definition>
+
+
+	<definition name="mytimeCard" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="My Timecard" />
+		<put-attribute name="body" value="/pages/mypage/myTimeCard.jsp" />
+	</definition>
+
+	
+	<definition name="mypage.myLeaves"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="My Leaves" />
+		<put-attribute name="body" value="/pages/mypage/myLeaves.jsp" />
+	</definition>
+
+
+	<definition name="attendanceRegularization"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Attendance Regularization" />
+		<put-attribute name="body"
+			value="/pages/mypage/attendanceRegularization.jsp" />
+	</definition>
+
+	 <!-- mypage mapping ends-->
+
+</tiles-definitions>
+

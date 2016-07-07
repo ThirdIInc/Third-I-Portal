@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+ 
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name=".reportLayout"
+		template="/pages/common/reportLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+ 
+	<definition name=".f9Layout"
+		template="/pages/common/f9layout.jsp">
+		<put-attribute name="title" value="Select record" />
+		<put-attribute name="header" value="/pages/common/f9header.jsp" />
+		<put-attribute name="footer" value="/pages/common/f9footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name=".payrollLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<!--  <put name="menu" value="/pages/common/payrollLeftMenu.jsp" />-->
+		<put-attribute name="menu" value="/pages/common/payrollLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+
+<definition name=".hrmHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/hrmHomeLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<!-- Coommon f9 Page Entries-->
+	
+	<!-- Added by Priyanka -->
+<definition name=".leaveAttendanceHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/leaveAttendanceLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<definition name=".adminHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/adminLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name=".recruitmentHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower"/>
+		<put-attribute name="header" value="/pages/common/header.jsp"/>
+		<put-attribute name="menu" value="/pages/common/recruitmentHomeLeftMenu.jsp"/>
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp"/>
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>	
+	<!--Ended By Priyanka  -->
+	
+	<definition name=".cofigurationLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/configurationLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>	
+	
+	
+	<definition name="common.f9page" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9page.jsp" />
+	</definition>
+
+	<definition name="f9multiSelect" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9MultiSelect.jsp" />
+	</definition>
+
+	<definition name="common.mailReport" extends=".mainLayout">
+		<put-attribute name="body" value="/pages/payroll/emailReport.jsp"/>
+	</definition>
+
+<!--Master Management Start -->
+
+	<definition name="master.CheckListMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="CheckList Master " />
+		<put-attribute name="body"
+			value="/pages/admin/master/checkListMaster.jsp" />
+	</definition>
+
+	<definition name="master.CheckListReport" extends=".reportLayout">
+		<put-attribute name="title" value="CheckList Report" />
+		<put-attribute name="body"
+			value="/pages/admin/master/checkListReport.jsp" />
+	</definition>
+
+	<definition name="master.CheckListMasterData"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="CheckList Master Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/checkListMasterData.jsp" />
+	</definition>
+
+	<definition name="master.Roadmilage" extends=".mainLayout">
+		<put-attribute name="title" value="Road Mileage Master" />
+		<put-attribute name="body" value="/pages/admin/master/roadMilage.jsp" />
+	</definition>
+
+	<definition name="master.payScaleMaster" extends=".mainLayout">
+		<put-attribute name="title" value="Pay Scale Master" />
+		<put-attribute name="body" value="/pages/admin/master/payScaleMaster.jsp" />
+	</definition>
+
+	<definition name="master.payScaleMasterReport"
+		extends=".reportLayout">
+		<put-attribute name="title" value="Pay Scale Master Report" />
+		<put-attribute name="body" value="/pages/admin/master/payScaleReport.jsp" />
+	</definition>
+
+	<definition name="master.CadreMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Cadre Master" />
+		<put-attribute name="body" value="/pages/admin/master/cadreMaster.jsp" />
+	</definition>
+
+	<definition name="master.cardeReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="CardeReport" />
+		<put-attribute name="body"
+			value="/pages/admin/master/cardeMasterReport.jsp" />
+	</definition>
+
+	<definition name="master.CadreMasterData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Cadre Master Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/cadreMasterData.jsp" />
+	</definition>
+
+	<definition name="master.CasteMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Caste Master" />
+		<put-attribute name="body" value="/pages/admin/master/caste.jsp" />
+	</definition>
+
+	<definition name="master.CasteMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Caste Master" />
+		<put-attribute name="body" value="/pages/admin/master/caste.jsp" />
+	</definition>
+
+	<definition name="master.CasteMasterData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Caste MAster" />
+		<put-attribute name="body"
+			value="/pages/admin/master/casteMasterData.jsp" />
+	</definition>
+
+	<definition name="master.LocationMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="City Master" />
+		<put-attribute name="body" value="/pages/admin/master/locationMaster.jsp" />
+	</definition>
+
+	<definition name="master.locationMasterReport"
+		extends=".reportLayout">
+		<put-attribute name="title" value="Location Master Report" />
+		<put-attribute name="body"
+			value="/pages/admin/master/locationMasterReport.jsp" />
+	</definition>
+
+	<definition name="master.LocationMasterData"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Location Master Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/loacationMasterData.jsp" />
+	</definition>
+
+	<definition name="master.DesignationMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Designation Master" />
+		<put-attribute name="body"
+			value="/pages/admin/master/designationMaster.jsp" />
+	</definition>
+
+	<definition name="master.DesignationMasterReport"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Designation Master Report" />
+		<put-attribute name="body"
+			value="/pages/admin/master/designationReport.jsp" />
+	</definition>
+
+	<definition name="master.QualificationMaster"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Qualification Master" />
+		<put-attribute name="body"
+			value="/pages/admin/master/qualificationMaster.jsp" />
+	</definition>
+
+	<definition name="master.QualificationMasterView"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Qualification Master" />
+		<put-attribute name="body"
+			value="/pages/admin/master/qualificationMasterView.jsp" />
+	</definition>
+
+	<definition name="master.QualificationReport"
+		extends=".reportLayout">
+		<put-attribute name="title" value="Qualification Report" />
+		<put-attribute name="body"
+			value="/pages/admin/master/qualificationReport.jsp" />
+	</definition>
+
+	<definition name="master.QualificationMasterData"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Qualification Master Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/qualificationMasterData.jsp" />
+	</definition>
+
+	<definition name="master.DeptMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Department Master" />
+		<put-attribute name="body" value="/pages/admin/master/deptMaster.jsp" />
+	</definition>
+
+	<definition name="master.DeptReport" extends=".reportLayout">
+		<put-attribute name="title" value="Department Report" />
+		<put-attribute name="body" value="/pages/admin/master/deptReport.jsp" />
+	</definition>
+
+	<definition name="master.DeptMasterData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Department Master Data" />
+		<put-attribute name="body" value="/pages/admin/master/deptMasterData.jsp" />
+	</definition>
+
+	<definition name="master.CenterMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Center Master" />
+		<put-attribute name="body" value="/pages/admin/master/centerMaster.jsp" />
+	</definition>
+
+	<definition name="master.CenterReport" extends=".reportLayout">
+		<put-attribute name="title" value="Center Report" />
+		<put-attribute name="body" value="/pages/admin/master/centerReport.jsp" />
+	</definition>
+
+	<definition name="master.CenterMasterData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Center Master Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/centerMasterData.jsp" />
+	</definition>	
+
+	<definition name="master.EmpTypeMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Employee Type Master" />
+		<put-attribute name="body" value="/pages/admin/master/empTypeMaster.jsp" />
+	</definition>
+
+	<definition name="master.EmpTypeReport" extends=".reportLayout">
+		<put-attribute name="title" value="Employee Type Report" />
+		<put-attribute name="body" value="/pages/admin/master/empTypeReport.jsp" />
+	</definition>
+
+	<definition name="master.EmpTypeMasterData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Employee Type Master Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/empTypeMasterData.jsp" />
+	</definition>
+
+	<definition name="master.BankMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Bank Master" />
+		<put-attribute name="body" value="/pages/admin/master/bankMaster.jsp" />
+	</definition>
+
+	<definition name="master.BankReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Bank Report" />
+		<put-attribute name="body" value="/pages/admin/master/bankReport.jsp" />
+	</definition>
+
+	<definition name="master.BankMasterData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Bank Master Data" />
+		<put-attribute name="body" value="/pages/admin/master/bankMasterData.jsp" />
+	</definition>
+
+	<definition name="master.DefineTemplate" extends=".mainLayout">
+		<put-attribute name="title" value="Bank Master Data" />
+		<put-attribute name="body" value="/pages/admin/master/defineTemplate.jsp" />
+	</definition>
+
+	<definition name="leave.LeaveMaster" extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Leave Master" />
+		<put-attribute name="body" value="/pages/admin/master/leaveMaster.jsp" />
+	</definition>
+
+	<definition name="master.LeaveReport" extends=".reportLayout">
+		<put-attribute name="title" value="Leave Master Report" />
+		<put-attribute name="body"
+			value="/pages/admin/master/leaveMasterReport.jsp" />
+	</definition>
+
+	<definition name="leave.LeaveMasterData" extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Leave Master Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/leaveMasterData.jsp" />
+	</definition>
+
+	<definition name="master.HotelDaMaster" extends=".mainLayout">
+		<put-attribute name="title" value="Hotel Da Master" />
+		<put-attribute name="body" value="/pages/admin/master/hotelDaMaster.jsp" />
+	</definition>
+
+	<definition name="master.HotelDaMaster" extends=".mainLayout">
+		<put-attribute name="title" value="Hotel Da Master" />
+		<put-attribute name="body" value="/pages/admin/master/hotelDaMaster.jsp" />
+	</definition>
+
+	<definition name="master.HotelReport" extends=".reportLayout">
+		<put-attribute name="title" value="Hotel Report" />
+		<put-attribute name="body" value="/pages/admin/master/hotelReport.jsp" />
+	</definition>
+
+	<definition name="master.DivisionMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Division Master" />
+		<put-attribute name="body" value="/pages/admin/master/divisionMaster.jsp" />
+	</definition>
+
+	<definition name="master.DivisionReport" extends=".reportLayout">
+		<put-attribute name="title" value="Division Master Report" />
+		<put-attribute name="body"
+			value="/pages/admin/master/divMasterReport.jsp" />
+	</definition>
+
+	<definition name="master.DivisionMasterData"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Division Master Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/divisionMasterData.jsp" />
+	</definition>
+
+	<definition name="master.RecruitmentMedium" extends=".mainLayout">
+		<put-attribute name="title" value="Recruitment Medium" />
+		<put-attribute name="body" value="/pages/admin/master/mediumMaster.jsp" />
+	</definition>
+
+	<definition name="master.RecruitmentReport"
+		extends=".reportLayout">
+		<put-attribute name="title" value="Recruitment Medium Report" />
+		<put-attribute name="body"
+			value="/pages/admin/master/recruitmentMediumReport.jsp" />
+	</definition>
+
+	<definition name="master.LocalRailwayStation"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Local Railway Station" />
+		<put-attribute name="body" value="/pages/admin/master/localRlwy.jsp" />
+	</definition>
+
+	<definition name="master.StationReport" extends=".reportLayout">
+		<put-attribute name="title" value="Local Railway Station" />
+		<put-attribute name="body"
+			value="/pages/admin/master/localRlwyReport.jsp" />
+	</definition>
+
+	<definition name="master.ShiftMasterList" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Shift Master List" />
+		<put-attribute name="body"
+			value="/pages/admin/master/shiftMasterList.jsp" />
+	</definition>
+
+	<definition name="master.ShiftMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Shift Master" />
+		<put-attribute name="body" value="/pages/admin/master/shiftMaster.jsp" />
+	</definition>
+
+	<definition name="master.ShiftReport" extends=".reportLayout">
+		<put-attribute name="title" value="Shift Report" />
+		<put-attribute name="body" value="/pages/admin/master/shiftReport.jsp" />
+	</definition>
+
+	<definition name="master.ShiftLeaves" extends=".mainLayout">
+		<put-attribute name="title" value="Leave List" />
+		<put-attribute name="body" value="/pages/admin/master/shiftLeaveList.jsp" />
+	</definition>
+
+	<definition name="master.RelationMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Relation Master" />
+		<put-attribute name="body" value="/pages/admin/master/relationMaster.jsp" />
+	</definition>
+
+	<definition name="master.RelationReport" extends=".reportLayout">
+		<put-attribute name="title" value="Relation Report" />
+		<put-attribute name="body" value="/pages/admin/master/relationReport.jsp" />
+	</definition>
+
+	<definition name="master.RelationMasterData"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Relation Master Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/relationMasterData.jsp" />
+	</definition>
+
+	<definition name="master.RankMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Rank Master" />
+		<put-attribute name="body" value="/pages/admin/master/rankMaster.jsp" />
+	</definition>
+
+	<definition name="master.RankReport" extends=".reportLayout">
+		<put-attribute name="title" value="Rank Report" />
+		<put-attribute name="body" value="/pages/admin/master/rankReport.jsp" />
+	</definition>
+
+	<definition name="master.RankMasterView" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Rank Master" />
+		<put-attribute name="body" value="/pages/admin/master/rankMasterView.jsp" />
+	</definition>
+
+	<definition name="master.RankMasterData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Rank Master Data" />
+		<put-attribute name="body" value="/pages/admin/master/rankMasterData.jsp" />
+	</definition>
+
+	<definition name="master.DisciplineMaster" extends=".mainLayout">
+		<put-attribute name="title" value="Marriage Report" />
+		<put-attribute name="body"
+			value="/pages/admin/master/disciplineMaster.jsp" />
+	</definition>
+
+	<definition name="master.DisciplineReport"
+		extends=".reportLayout">
+		<put-attribute name="title" value="Discipline Report" />
+		<put-attribute name="body" value="/pages/admin/master/dispReport.jsp" />
+	</definition>
+
+	<definition name="master.ReligionMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Religion Master" />
+		<put-attribute name="body" value="/pages/admin/master/religionMaster.jsp" />
+	</definition>
+
+	<definition name="master.ReligionReport" extends=".reportLayout">
+		<put-attribute name="title" value="Religion Report" />
+		<put-attribute name="body" value="/pages/admin/master/religionReport.jsp" />
+	</definition>
+
+	<definition name="master.ReligionMasterData"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Religion Master" />
+		<put-attribute name="body"
+			value="/pages/admin/master/religionMasterData.jsp" />
+	</definition>
+
+	<definition name="master.TradeMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Trade Master" />
+		<put-attribute name="body" value="/pages/admin/master/tradeMaster.jsp" />
+	</definition>
+
+	<definition name="master.TradeReport" extends=".reportLayout">
+		<put-attribute name="title" value="Trade Report" />
+		<put-attribute name="body" value="/pages/admin/master/tradeReport.jsp" />
+	</definition>
+
+	<definition name="master.TradeMasterData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Trade Master Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/tradeMasterData.jsp" />
+	</definition>
+
+	<definition name="master.TitleMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Title Master" />
+		<put-attribute name="body" value="/pages/admin/master/titleMaster.jsp" />
+	</definition>
+
+	<definition name="master.TitleMasterReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="TitleMasterReport" />
+		<put-attribute name="body"
+			value="/pages/admin/master/titleMasterReport.jsp" />
+	</definition>
+
+	<definition name="master.TitleMasterData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Title Master Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/titleMasterData.jsp" />
+	</definition>
+
+	<definition name="master.AwardMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Award Master" />
+		<put-attribute name="body" value="/pages/admin/master/awardMaster.jsp" />
+	</definition>
+
+	<definition name="master.AwardReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="AwardReport" />
+		<put-attribute name="body" value="/pages/admin/master/awardReport.jsp" />
+	</definition>
+
+	<definition name="master.AwardMasterData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Award Master Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/awardMasterData.jsp" />
+	</definition>
+
+	<definition name="master.CategoryMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Category Master" />
+		<put-attribute name="body" value="/pages/admin/master/categoryMaster.jsp" />
+	</definition>
+
+	<definition name="master.CategoryMasterReport"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Category Master Report" />
+		<put-attribute name="body"
+			value="/pages/admin/master/categoryMasterReport.jsp" />
+	</definition>
+
+	<definition name="master.CategoryMasterData"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Category Master Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/categoryMasterData.jsp" />
+	</definition>
+
+	<definition name="master.GroupMaster" extends=".mainLayout">
+		<put-attribute name="title" value="Group Master" />
+		<put-attribute name="body" value="/pages/admin/master/groupMaster.jsp" />
+	</definition>
+
+	<definition name="master.GroupReport" extends=".reportLayout">
+		<put-attribute name="title" value="Group Report" />
+		<put-attribute name="body" value="/pages/admin/master/groupReport.jsp" />
+	</definition>
+
+	<definition name="master.PayBillMaster" extends=".payrollLayout">
+		<put-attribute name="title" value="Pay Bill Master" />
+		<put-attribute name="body" value="/pages/admin/master/payBillMaster.jsp" />
+	</definition>
+
+	<definition name="master.PayBillMasterReport"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Pay Bill Master" />
+		<put-attribute name="body" value="/pages/admin/master/payBillReport.jsp" />
+	</definition>
+
+	<definition name="master.DiagnosisMaster" extends=".mainLayout">
+		<put-attribute name="title" value="DiagnosisMaster" />
+		<put-attribute name="body"
+			value="/pages/admin/master/diagnosisMaster.jsp" />
+	</definition>
+
+	<definition name="master.DiagnosisMasterReport"
+		extends=".mainLayout">
+		<put-attribute name="title" value="DiagnosisMasterReport" />
+		<put-attribute name="body"
+			value="/pages/admin/master/diagnosisMasterReport.jsp" />
+	</definition>
+
+	<definition name="master.MedicalMaster" extends=".mainLayout">
+		<put-attribute name="title" value="Medical Master" />
+		<put-attribute name="body" value="/pages/admin/master/medicalMaster.jsp" />
+	</definition>
+
+	<definition name="master.MedicalMasterReport"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Medical Master" />
+		<put-attribute name="body" value="/pages/admin/master/medicalReport.jsp" />
+	</definition>
+
+	<definition name="master.DceMaster" extends=".mainLayout">
+		<put-attribute name="title" value="DCE Master" />
+		<put-attribute name="body" value="/pages/admin/master/dceMaster.jsp" />
+	</definition>
+
+	<definition name="master.DceMasterReport" extends=".mainLayout">
+		<put-attribute name="title" value="DceMasterReport" />
+		<put-attribute name="body"
+			value="/pages/admin/master/dceMasterReport.jsp" />
+	</definition>
+
+	<definition name="master.HolidayMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Holiday Master" />
+		<put-attribute name="body" value="/pages/admin/master/holidayMaster.jsp" />
+	</definition>
+
+	<definition name="master.HolidayMasterReport"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="HolidayMasterReport" />
+		<put-attribute name="body"
+			value="/pages/admin/master/holidayMasterReport.jsp" />
+	</definition>
+
+	<definition name="master.HolidayMasterData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Holiday Master Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/holidayMasterData.jsp" />
+	</definition>
+
+	<definition name="master.BranchHolidayMaster"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Branchwise Holiday Master" />
+		<put-attribute name="body"
+			value="/pages/admin/master/branchHolidayMaster.jsp" />
+	</definition>
+
+	<definition name="master.PunishMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Punishment Master" />
+		<put-attribute name="body" value="/pages/admin/master/punishMaster.jsp" />
+	</definition>
+
+	<definition name="master.PunishMasterReport"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="PunishMasterReport" />
+		<put-attribute name="body"
+			value="/pages/admin/master/punishMasterReport.jsp" />
+	</definition>
+
+	<definition name="master.PunishMasterData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Punishment Master Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/punishMasterData.jsp" />
+	</definition>
+
+	<definition name="master.ForeignExchange" extends=".mainLayout">
+		<put-attribute name="title" value="Foreign Exchange" />
+		<put-attribute name="body"
+			value="/pages/admin/master/foreignExchange.jsp" />
+	</definition>
+
+	<definition name="master.ForeignExchange1"
+		extends=".reportLayout">
+		<put-attribute name="title" value="Foreign Exchange Report" />
+		<put-attribute name="body"
+			value="/pages/admin/master/foreignExchangeReport.jsp" />
+	</definition>
+
+	<definition name="master.query" extends=".mainLayout">
+		<put-attribute name="title" value="Expenditure" />
+		<put-attribute name="body" value="/pages/admin/master/queryMaster.jsp" />
+	</definition>
+
+	<definition name="master.report" extends=".mainLayout">
+		<put-attribute name="title" value="Expenditure" />
+		<put-attribute name="body" value="/pages/admin/master/expendReport.jsp" />
+	</definition>
+
+	<definition name="master.expend" extends=".mainLayout">
+		<put-attribute name="title" value="Expenditure" />
+		<put-attribute name="body" value="/pages/admin/master/expenditure.jsp" />
+	</definition>
+
+	<definition name="master.TrainingMaster" extends=".mainLayout">
+		<put-attribute name="title" value="Training master" />
+		<put-attribute name="body" value="/pages/admin/master/trainingMaster.jsp" />
+	</definition>
+
+	<definition name="master.TrainingReport" extends=".reportLayout">
+		<put-attribute name="title" value="Training Report" />
+		<put-attribute name="body" value="/pages/admin/master/trainingReport.jsp" />
+	</definition>
+
+	<definition name="master.TADistanceMaster" extends=".mainLayout">
+		<put-attribute name="title" value="TaDistance master" />
+		<put-attribute name="body" value="/pages/admin/master/taDistance.jsp" />
+	</definition>
+
+	<definition name="master.TADistanceReport"
+		extends=".reportLayout">
+		<put-attribute name="title" value="TaDistance Report" />
+		<put-attribute name="body"
+			value="/pages/admin/master/taDistanceReport.jsp" />
+	</definition>
+
+	<definition name="master.TAMaster" extends=".mainLayout">
+		<put-attribute name="title" value="TA Master" />
+		<put-attribute name="body" value="/pages/admin/master/taMaster.jsp" />
+	</definition>
+
+	<definition name="master.TAReport" extends=".reportLayout">
+		<put-attribute name="title" value="TA Report" />
+		<put-attribute name="body" value="/pages/admin/master/taMasterReport.jsp" />
+	</definition>
+
+	<definition name="master.Requisition" extends=".mainLayout">
+		<put-attribute name="title" value="Requisition" />
+		<put-attribute name="body" value="/pages/admin/master/requestion.jsp" />
+	</definition>
+
+	<definition name="master.RequiReport" extends=".mainLayout">
+		<put-attribute name="title" value="RequisitionReport" />
+		<put-attribute name="body"
+			value="/pages/admin/master/requisitionReport.jsp" />
+	</definition>
+
+	<definition name="master.companyMaster" extends=".hrmHomeLayout">
+		<put-attribute name="body" value="/pages/admin/master/companyMaster.jsp" />
+	</definition>
+
+	<definition name="master.PFParameter" extends=".payrollLayout">
+		<put-attribute name="title" value="PFParameter Master" />
+		<put-attribute name="body"
+			value="/pages/payroll/pf/pfOrganizationConfig.jsp" />
+	</definition>
+
+	
+	<definition name="master.GPFScreen" extends=".payrollLayout">
+		<put-attribute name="title" value="GPF Parameter Master" />
+		<put-attribute name="body" value="/pages/payroll/pf/gpfConfig.jsp" />
+	</definition>
+
+	<definition name="master.VPFScreen" extends=".payrollLayout">
+		<put-attribute name="title" value="VPF Parameter Master" />
+		<put-attribute name="body" value="/pages/payroll/pf/vpfConfig.jsp" />
+	</definition>
+
+	<definition name="master.PFTrustScreen" extends=".payrollLayout">
+		<put-attribute name="title" value="PF Trust Parameter Master" />
+		<put-attribute name="body" value="/pages/payroll/pf/pfTrustConfig.jsp" />
+	</definition>
+
+	<definition name="master.ConfigEmpScreen" extends=".payrollLayout">
+		<put-attribute name="title" value="Configure Employee" />
+		<put-attribute name="body" value="/pages/payroll/pf/pfEmpConfig.jsp" />
+	</definition>
+	<definition name="master.EPFScreen" extends=".payrollLayout">
+		<put-attribute name="title" value="EPF Parameter Master" />
+		<put-attribute name="body" value="/pages/payroll/pf/epfConfig.jsp" />
+	</definition>
+	<definition name="master.EPFScreenData" extends=".payrollLayout">
+		<put-attribute name="title" value="EPF Parameter Master" />
+		<put-attribute name="body" value="/pages/payroll/pf/epfConfigData.jsp" />
+	</definition>
+
+	<definition name="master.ESIMaster" extends=".payrollLayout">
+		<put-attribute name="title" value="ESI Master" />
+		<put-attribute name="body" value="/pages/admin/master/ESIMaster.jsp" />
+	</definition>
+
+	<definition name="master.ESIMasterData" extends=".payrollLayout">
+		<put-attribute name="title" value="ESI Master" />
+		<put-attribute name="body" value="/pages/admin/master/ESIMasterData.jsp" />
+	</definition>
+
+	<definition name="master.SkillMaster" extends=".recruitmentHomeLayout">
+		<put-attribute name="body" value="/pages/admin/master/skillMaster.jsp" />
+	</definition>
+	
+	<definition name="master.SkillMasterView" extends=".recruitmentHomeLayout">
+		<put-attribute name="body"
+			value="/pages/admin/master/skillMasterView.jsp" />
+	</definition>
+
+	<definition name="master.SpecializationMaster"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="body"
+			value="/pages/admin/master/SpecializationMaster.jsp" />
+	</definition>
+
+	<definition name="master.SpecializationMasterView"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="body"
+			value="/pages/admin/master/specializationMasterView.jsp" />
+	</definition>
+
+	<definition name="master.RecpatnersMasterView"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="body"
+			value="/pages/admin/master/recruitmentPartnersView.jsp" />
+	</definition>
+
+	<definition name="master.RecpatnersMaster" extends=".recruitmentHomeLayout">
+		<put-attribute name="body"
+			value="/pages/admin/master/recruitmentPartners.jsp" />
+	</definition>
+
+	<definition name="master.JobDescriptionMaster"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="body"
+			value="/pages/admin/master/jobDescriptionMaster.jsp" />
+	</definition>
+
+	<definition name="master.JobDescriptionMasterView"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="body"
+			value="/pages/admin/master/jobDescriptionMasterView.jsp" />
+	</definition>
+
+	<definition name="master.roundTypeMasterList"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Round Type Master" />
+		<put-attribute name="body"
+			value="/pages/admin/master/roundTypeMasterList.jsp" />
+	</definition>
+
+	<definition name="master.roundTypeMaster" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Round Type Master" />
+		<put-attribute name="body"
+			value="/pages/admin/master/roundTypeMaster.jsp" />
+	</definition>
+
+	<definition name="master.ProfTaxMasterList" extends=".payrollLayout">
+		<put-attribute name="title" value="Professional Tax Master" />
+		<put-attribute name="body"
+			value="/pages/admin/master/profTaxMasterList.jsp" />
+	</definition>
+
+	<definition name="master.ProfTaxMaster" extends=".payrollLayout">
+		<put-attribute name="title" value="Professional Tax Master" />
+		<put-attribute name="body" value="/pages/admin/master/profTaxMaster.jsp" />
+	</definition>
+
+	<definition name="master.examMaster" extends=".mainLayout">
+		<put-attribute name="title" value="Exam Master" />
+		<put-attribute name="body" value="/pages/exam/examMaster.jsp" />
+	</definition>
+
+	<definition name="master.examMasterView" extends=".mainLayout">
+		<put-attribute name="title" value="Exam Master" />
+		<put-attribute name="body" value="/pages/exam/examMasterView.jsp" />
+	</definition>
+
+	 <definition name="contentPage" extends=".mainLayout">
+		<put-attribute name="title" value="contentPage" />
+		<put-attribute name="body" value="/pages/exam/contentPage.jsp" />
+	</definition>
+
+	 <definition name="instructionPage" extends=".mainLayout">
+		<put-attribute name="title" value="instructionPage" />
+		<put-attribute name="body" value="/pages/exam/instructionPage.jsp" />
+	</definition>
+
+	<definition name="master.QuestionBank" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Question Bank" />
+		<put-attribute name="body" value="/pages/exam/questionBank.jsp" />
+	</definition>
+
+	<definition name="master.readonly" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Question Bank" />
+		<put-attribute name="body" value="/pages/exam/questionBankReadOnly.jsp" />
+	</definition>
+
+	<definition name="master.view" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Question Bank" />
+		<put-attribute name="body" value="/pages/exam/questionBankView.jsp" />
+	</definition>
+
+	<definition name="master.viewAns" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Question Bank" />
+		<put-attribute name="body" value="/pages/exam/answerOption.jsp" />
+	</definition>
+
+	<definition name="recruitment.OnlinePaper" extends=".mainLayout">
+		<put-attribute name="title" value="OnlinePaper" />
+		<put-attribute name="body" value="/pages/recruitment/onlinePaper.jsp" />
+	</definition>
+
+	<definition name="recruitment.priview" extends=".mainLayout">
+		<put-attribute name="title" value="OnlinePaper" />
+		<put-attribute name="body"
+			value="/pages/recruitment/onlinePaperPriview.jsp" />
+	</definition>
+
+	<definition name="master.CandidateSchedule" extends=".mainLayout">
+		<put-attribute name="title" value="CandidateSchedule" />
+		<put-attribute name="body" value="/pages/exam/candidateSchedule.jsp" />
+	</definition>
+
+	<definition name="master.CandidateScheduleReport"
+		extends=".mainLayout">
+		<put-attribute name="title" value="CandidateScheduleReport" />
+		<put-attribute name="body"
+			value="/pages/exam/candidateScheduleReport.jsp" />
+	</definition>
+
+	<definition name="master.IndustryMaster" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="IndustryType" />
+		<put-attribute name="body" value="/pages/admin/master/industryMaster.jsp" />
+	</definition>
+
+	<definition name="master.IndustryMasterView"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="IndustryType" />
+		<put-attribute name="body"
+			value="/pages/admin/master/industryMasterView.jsp" />
+	</definition>
+
+	<definition name="master.CandidatesTestResult"
+		extends=".mainLayout">
+		<put-attribute name="title" value="CandidatesTestResult" />
+		<put-attribute name="body" value="/pages/exam/candidatesTestResult.jsp" />
+	</definition>
+
+	<definition name="master.JourneyMaster" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Journey Master" />
+		<put-attribute name="body" value="/pages/admin/master/journeyMaster.jsp" />
+	</definition>
+
+	<definition name="master.TaskProject" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Task Project" />
+		<put-attribute name="body" value="/pages/admin/master/TaskProject.jsp" />
+	</definition>
+
+	<definition name="master.TaskProjectData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Task Project" />
+		<put-attribute name="body"
+			value="/pages/admin/master/taskProjectData.jsp" />
+	</definition>
+
+	<definition name="master.TaskMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Task Type" />
+		<put-attribute name="body" value="/pages/admin/master/taskMaster.jsp" />
+	</definition>
+
+	<definition name="master.TaskMasterData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Task Type Data" />
+		<put-attribute name="body" value="/pages/admin/master/taskMasterData.jsp" />
+	</definition>
+
+	<definition name="master.queryMaster" extends=".mainLayout">
+		<put-attribute name="title" value="Query Master" />
+		<put-attribute name="body"
+			value="/pages/admin/master/queryStringMaster.jsp" />
+	</definition>
+
+	<definition name="payroll.FormulaBuilder" extends=".payrollLayout">
+		<put-attribute name="title" value="Formula Builder" />
+		<put-attribute name="body"
+			value="/pages/FormulaBuilder/formulaBuilder.jsp" />
+	</definition>
+
+	<definition name="master.MailEventMaster" extends=".cofigurationLayout">
+		<put-attribute name="title" value="MailEventsMaster" />
+		<put-attribute name="body"
+			value="/pages/admin/master/MailEventsMaster.jsp" />
+	</definition>
+
+	<definition name="master.ModuleMaster" extends=".cofigurationLayout">
+		<put-attribute name="title" value="ModuleMaster" />
+		<put-attribute name="body" value="/pages/admin/master/ModuleMaster.jsp" />
+	</definition>
+
+	<definition name="master.OnsitePostingMaster"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Onsite Posting Master " />
+		<put-attribute name="body" value="/pages/admin/master/onsitePosting.jsp" />
+	</definition>
+
+	<definition name="master.OnsitePostingData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Onsite Posting Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/onsitePostingData.jsp" />
+	</definition>
+	
+	<definition name="master.AccountCategoryMaster"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Account Category Master " />
+		<put-attribute name="body"
+			value="/pages/admin/master/accountCategoryMaster.jsp" />
+	</definition>
+
+	<definition name="master.AccountCategoryMasterData"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Account Category Master" />
+		<put-attribute name="body"
+			value="/pages/admin/master/accountCategoryMasterData.jsp" />
+	</definition>
+
+	<definition name="master.CostCenterMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Cost Center  Master " />
+		<put-attribute name="body"
+			value="/pages/admin/master/costCenterMaster.jsp" />
+	</definition>
+
+	<definition name="master.CostCenterMasterData"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Cost Center Master " />
+		<put-attribute name="body"
+			value="/pages/admin/master/costCenterMasterData.jsp" />
+	</definition>
+
+	<definition name="lwf.configurationList" extends=".payrollLayout">
+		<put-attribute name="title" value="LWF Configuration Master" />
+		<put-attribute name="body"
+			value="/pages/admin/master/lwfConfigurationMasterList.jsp" />
+	</definition>
+
+	<definition name="lwf.configuration" extends=".payrollLayout">
+		<put-attribute name="title" value="LWF Configuration Master" />
+		<put-attribute name="body"
+			value="/pages/admin/master/lwfConfigurationMaster.jsp" />
+	</definition>
+
+	<definition name="master.LeaveReason" extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Leave Reason Master" />
+		<put-attribute name="body" value="/pages/admin/leave/leaveReason.jsp" />
+	</definition>
+
+	<definition name="master.LeaveReasonData" extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Leave Reason Master" />
+		<put-attribute name="body" value="/pages/admin/leave/leaveReasonData.jsp" />
+	</definition>
+
+	<definition name="master.DivisionConfig" extends=".payrollLayout">
+		<put-attribute name="title" value="Division Configuration" />
+		<put-attribute name="body"
+			value="/pages/admin/master/divisionConfiguration.jsp" />
+	</definition>
+
+	<definition name="master.DivisionConfigData"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Division Configuration Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/divisionConfigurationData.jsp" />
+	</definition>
+
+	<definition name="master.LangMaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Lang Master" />
+		<put-attribute name="body" value="/pages/admin/master/langMaster.jsp" />
+	</definition>
+
+	<definition name="master.LangMasterData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Lang Master Data" />
+		<put-attribute name="body" value="/pages/admin/master/langMasterData.jsp" />
+	</definition>
+
+	<definition name="master.ViewDetails" extends=".mainLayout">
+		<put-attribute name="title" value="Financial Statement" />
+		<put-attribute name="body"
+			value="/pages/admin/master/financeStatementDetails.jsp" />
+	</definition>
+	<!-- Added by Prajakta B. on 6th Feb 2013 for MyApps-->
+	<definition name="master.MyApps" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="My Apps" />
+		<put-attribute name="body"
+			value="/pages/admin/master/myAppsMaster.jsp" />
+	</definition>
+	
+	<definition name="master.MyAppsData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="My Apps" />
+		<put-attribute name="body"
+			value="/pages/admin/master/myAppsMasterData.jsp" />
+	</definition>
+	<!--ends Added by Prajakta B. on 6th Feb 2013 for MyApps-->
+	
+	
+	
+</tiles-definitions>

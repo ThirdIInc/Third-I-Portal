@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software 
+Foundation//DTD Tiles Configuration 2.0//EN"
+"http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<!--Layout and common definitions begins-->
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile"
+			value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+
+	<definition name=".myProfileLayout"
+		template="/pages/common/myProfileLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile"
+			value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name=".myPageLeftRightLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile"
+			value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+
+	<definition name=".reportLayout"
+		template="/pages/common/reportLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<!-- Added by priyanka -->
+	<definition name=".hrmHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu"
+			value="/pages/common/hrmHomeLeftMenu.jsp" />
+		<put-attribute name="rightTile"
+			value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<!-- ended by priyanka -->
+
+	<definition name="common.dashBoard" extends=".mainLayout">
+		<put-attribute name="title" value="Common Dashboard Page" />
+		<put-attribute name="body"
+			value="/pages/common/commonDashboard.jsp" />
+	</definition>
+
+
+	<definition name="common.mailReport" extends=".hrmHomeLayout">
+		<put-attribute name="body"
+			value="/pages/payroll/emailReport.jsp" />
+	</definition>
+
+	<!--Layout and common definitions ends-->
+
+	<!-- SRD definition begins -->
+
+	<definition name="srd.misReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="MIS Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/misReport.jsp" />
+	</definition>
+
+	<definition name="srd.misReportView" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="MIS Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/misReportView.jsp" />
+	</definition>
+
+	<definition name="srd.ServiceBook" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Bio Data Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/serviceBookReport.jsp" />
+	</definition>
+
+	<definition name="srd.OfficialDetail" extends=".myProfileLayout">
+		<put-attribute name="title" value="Official Detail" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/officialDetail.jsp" />
+	</definition>
+
+	<definition name="srd.CTCDetail" extends=".myProfileLayout">
+		<put-attribute name="title" value="CTC Information" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/ctcDetail.jsp" />
+	</definition>
+
+	<definition name="srd.FamilyDetails" extends=".myProfileLayout">
+		<put-attribute name="title" value="Family Details" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/familyDetails.jsp" />
+	</definition>
+	<definition name="srd.NomineeDetail" extends=".myProfileLayout">
+		<put-attribute name="title" value="Nominee Detail" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/nomineeDetail.jsp" />
+	</definition>
+
+	<definition name="srd.SalaryDetail" extends=".myProfileLayout">
+		<put-attribute name="title" value="Salary Detail" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/salaryDetail.jsp" />
+	</definition>
+
+	<definition name="srd.MarriageReport" extends=".reportLayout">
+		<put-attribute name="title" value="Marriage Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/marriageReport.jsp" />
+	</definition>
+
+	<definition name="srd.EmployeeCheckList"
+		extends=".myProfileLayout">
+		<put-attribute name="title" value="Employee Check List" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/employeeCheckList.jsp" />
+	</definition>
+
+	<definition name="srd.EmployeeCheckListReport"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Employee Check List" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/empCheckListReport.jsp" />
+	</definition>
+
+	<definition name="srd.ServiceVerification" extends=".mainLayout">
+		<put-attribute name="title" value="Service Verification" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/serviceVerification.jsp" />
+	</definition>
+
+	<definition name="srd.QualificationDetail"
+		extends=".myProfileLayout">
+		<put-attribute name="title" value="Qualification Detail" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/qualification.jsp" />
+	</definition>
+
+	<definition name="srd.PersonnelDetail" extends=".myProfileLayout">
+		<put-attribute name="title" value="Personal Detail" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/personnelDetail.jsp" />
+	</definition>
+
+	<definition name="srd.AddressDetails" extends=".myProfileLayout">
+		<put-attribute name="title" value="Address Details" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/addressDetails.jsp" />
+	</definition>
+
+	<definition name="srd.SmallFamily" extends=".mainLayout">
+		<put-attribute name="title" value="Small Family" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/SmallFamily.jsp" />
+	</definition>
+
+	<definition name="srd.OffSecActs" extends=".mainLayout">
+		<put-attribute name="title" value="Official Secret Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/OffSecActs.jsp" />
+
+	</definition>
+
+
+	<definition name="srd.OathTaking" extends=".mainLayout">
+		<put-attribute name="title" value="Oath taking Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/OathTakingRep.jsp" />
+
+	</definition>
+
+	<definition name="srd.HomeTown" extends=".mainLayout">
+		<put-attribute name="title"
+			value="Home Town Declaration Report" />
+		<put-attribute name="body" value="/pages/admin/srd/hmTnDcl.jsp" />
+
+	</definition>
+
+
+	<definition name="srd.CentralGovEmpInsSch" extends=".mainLayout">
+		<put-attribute name="title"
+			value="Central Govt. Employee Insurance Scheme" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/govEmpInsSch.jsp" />
+
+	</definition>
+
+
+
+	<definition name="srd.FamilyPensionNom" extends=".mainLayout">
+		<put-attribute name="title"
+			value="Nomination For family Pension" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/famPensionNom.jsp" />
+
+	</definition>
+
+
+	<definition name="srd.RetGratuityNom" extends=".mainLayout">
+		<put-attribute name="title"
+			value="Nomination For Retirement Gratuity" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/retGratuity.jsp" />
+
+	</definition>
+
+	<definition name="srd.EmployeeExperience"
+		extends=".myProfileLayout">
+		<put-attribute name="title" value="Employee Experience" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/employeeExperience.jsp" />
+	</definition>
+
+	<definition name="srd.InitialAppointment" extends=".mainLayout">
+		<put-attribute name="title" value="Initial Appointment" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/InitialAppointment.jsp" />
+	</definition>
+
+
+	<definition name="srd.AwardDetails" extends=".myProfileLayout">
+		<put-attribute name="title" value="Award Details" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/awardDetails.jsp" />
+	</definition>
+
+	<definition name="srd.ProfRef" extends=".myProfileLayout">
+		<put-attribute name="title" value="Professinal References" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/ProfReferences.jsp" />
+	</definition>
+
+
+	<definition name="srd.AwardReport" extends=".reportLayout">
+		<put-attribute name="title" value="Award Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/AwardDetailsReport.jsp" />
+
+	</definition>
+
+	<definition name="srd.PromotionHistory"
+		extends=".myProfileLayout">
+		<put-attribute name="title" value="Promotion History" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/promotionHistory.jsp" />
+	</definition>
+
+	<definition name="srd.AcpHistory" extends=".mainLayout">
+		<put-attribute name="title" value="ACP/Placement History" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/acpHistory.jsp" />
+	</definition>
+
+	<definition name="srd.PayHistory" extends=".myProfileLayout">
+		<put-attribute name="title" value="Pay History" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/payHistory.jsp" />
+	</definition>
+
+	<definition name="srd.Training" extends=".mainLayout">
+		<put-attribute name="title" value="Training" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/training.jsp" />
+	</definition>
+
+	<definition name="srd.employeeHouse" extends=".mainLayout">
+		<put-attribute name="title" value="EmployeeHouse" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/employeeHouse.jsp" />
+	</definition>
+
+	<definition name="srd.changeHistory" extends=".mainLayout">
+		<put-attribute name="title" value="ChangeHistory" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/empChangeHistory.jsp" />
+	</definition>
+
+	<definition name="srd.qualReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Qual Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/qualificationMisReport.jsp" />
+	</definition>
+
+	<definition name="srd.nomineeReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Nominee Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/nomineeMisReport.jsp" />
+	</definition>
+
+	<definition name="srd.expReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Experince Mis Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/experinceMisReport.jsp" />
+	</definition>
+
+
+	<definition name="srd.BioData" extends=".mainLayout">
+		<put-attribute name="title" value="Bio Data Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/bioDataReport.jsp" />
+	</definition>
+
+	<definition name="srd.WorkExp" extends=".mainLayout">
+		<put-attribute name="title" value="Work Experience Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/workExpReport.jsp" />
+	</definition>
+
+	<definition name="srd.DqeHistory" extends=".mainLayout">
+		<put-attribute name="title" value="DQE History" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/dqeHistory.jsp" />
+	</definition>
+
+	<definition name="srd.PunishHistory" extends=".myProfileLayout">
+		<put-attribute name="title" value="Punishment History" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/punishHistory.jsp" />
+	</definition>
+
+	<definition name="srd.RehireProcess" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Rehire Process" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/rehireProcess.jsp" />
+	</definition>
+	<definition name="srd.RehirePage" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Rehire Process" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/rehirePage.jsp" />
+	</definition>
+
+	<definition name="srd.LeaveHistory" extends=".mainLayout">
+		<put-attribute name="title" value="Leave History" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/leaveHistory.jsp" />
+	</definition>
+
+
+
+	<definition name="srd.InitialAppointment" extends=".mainLayout">
+		<put-attribute name="title" value="Initial Appointment" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/InitialAppointment.jsp" />
+	</definition>
+
+	<definition name="srd.Detail" extends=".mainLayout">
+		<put-attribute name="title" value="Alert Message" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/messageDetail.jsp" />
+	</definition>
+
+	<definition name="srd.AlertMessage" extends=".mainLayout">
+		<put-attribute name="title" value="Alert Message" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/messageAlert.jsp" />
+	</definition>
+
+	<definition name="srd.EmpLic" extends=".myProfileLayout">
+		<put-attribute name="title" value="Emp Lic" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/employeeLic.jsp" />
+	</definition>
+
+	<definition name="srd.RetGratuityNom" extends=".mainLayout">
+		<put-attribute name="title"
+			value="Nomination For Retirement Gratuity" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/retGratuity.jsp" />
+
+	</definition>
+
+	<definition name="srd.OffSecActs" extends=".mainLayout">
+		<put-attribute name="title" value="Official Secret Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/OffSecActs.jsp" />
+
+	</definition>
+
+
+	<definition name="srd.OathTaking" extends=".mainLayout">
+		<put-attribute name="title" value="Oath taking Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/OathTakingRep.jsp" />
+
+	</definition>
+
+	<!-- Mapping for Home town declaration -->
+	<definition name="srd.HomeTown" extends=".mainLayout">
+		<put-attribute name="title"
+			value="Home Town Declaration Report" />
+		<put-attribute name="body" value="/pages/admin/srd/hmTnDcl.jsp" />
+
+	</definition>
+
+	<!-- Mapping for Central Govt Emp Insurance Scheme -->
+	<definition name="srd.CentralGovEmpInsSch" extends=".mainLayout">
+		<put-attribute name="title"
+			value="Central Govt. Employee Insurance Scheme" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/govEmpInsSch.jsp" />
+
+	</definition>
+
+
+	<!-- Mapping for Family Pension Nomination -->
+	<definition name="srd.FamilyPensionNom" extends=".mainLayout">
+		<put-attribute name="title"
+			value="Nomination For family Pension" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/famPensionNom.jsp" />
+
+	</definition>
+
+	<definition name="srd.OfficerReport" extends=".mainLayout">
+		<put-attribute name="title" value="Service Officer's Biodata" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/officerReport.jsp" />
+	</definition>
+
+	<definition name="srd.EmployeeCheckListReport"
+		extends=".reportLayout">
+		<put-attribute name="title" value="Employee Check List" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/empCheckListReport.jsp" />
+	</definition>
+
+	<definition name="srd.EmployeeCheckListReport"
+		extends=".reportLayout">
+		<put-attribute name="title" value="Employee Check List" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/empCheckListReport.jsp" />
+	</definition>
+
+	<definition name="srd.SendMail" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="SendMail" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/sendMail.jsp" />
+	</definition>
+
+	<definition name="srd.birthDay" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="SendMail" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/birthDayList.jsp" />
+	</definition>
+
+	<definition name="srd.EmployeePosting" extends=".myProfileLayout">
+		<put-attribute name="title" value="Employee Posting" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/employeePosting.jsp" />
+	</definition>
+
+	<definition name="srd.birthDayMail" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="SendMail" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/birthdayMail.jsp" />
+	</definition>
+
+	<definition name="srd.anniversaryMail" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="SendMail" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/anniversaryMail.jsp" />
+	</definition>
+
+	<definition name="srd.dept" extends=".mainLayout">
+		<put-attribute name="title" value="SendMail" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/deptList.jsp" />
+	</definition>
+
+	<definition name="srd.addressDetails" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Address Details Mis" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/addressDetailsMis.jsp" />
+	</definition>
+	<definition name="srd.familyReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Family Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/familyMisReport.jsp" />
+	</definition>
+
+    <!-- Added By Priyanka Kumbhar -->
+    
+    <definition name="srd.requestBusinessCardMisReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Business Card Mis Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/requestBusinessCardMisReport.jsp" />
+	</definition>
+	
+	
+	 <definition name="srd.employeeIdCardMisReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Employee Id Card Mis Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/employeeIdCardMisReport.jsp" />
+	</definition>
+	
+    <!-- Ended By Priyanka Kumbhar -->
+
+	<definition name="srd.postingReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Posting Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/postingMisReport.jsp" />
+	</definition>
+
+	<definition name="srd.qualReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Qual Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/qualificationMisReport.jsp" />
+	</definition>
+
+	<definition name="srd.nomineeReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Nominee Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/nomineeMisReport.jsp" />
+	</definition>
+
+	<definition name="srd.manpowerSnapshot" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Manpower Snapshot" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/manpowerSnapshot.jsp" />
+	</definition>
+
+	<definition name="srd.empCountSummary" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Emp Count Summary" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/empHeadCountSummary.jsp" />
+	</definition>
+
+	<definition name="srd.warningLetter" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Bio Data Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/warningLetter.jsp" />
+	</definition>
+
+	<definition name="srd.ProbationSetting" extends=".mainLayout">
+		<put-attribute name="title" value="Probation Setting" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/probationSetting.jsp" />
+
+	</definition>
+
+	<definition name="srd.ProbationConfirmation"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Probation Confirmation" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/probationConfirm.jsp" />
+
+	</definition>
+
+	<definition name="srd.GratuityDetails" extends=".mainLayout">
+		<put-attribute name="title" value="Gratutity Detail" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/gratuityDetails.jsp" />
+	</definition>
+
+	<definition name="srd.eventmaster" extends=".mainLayout">
+		<put-attribute name="title" value="Event Master" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/eventMaster.jsp" />
+	</definition>
+
+	<definition name="srd.LICMisReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="srd.LICMisReport" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/LICMisReport.jsp" />
+	</definition>
+
+	<definition name="srd.accReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Accounttant Mis Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/accMisReport.jsp" />
+	</definition>
+	<definition name="srd.accReportView" extends=".mainLayout">
+		<put-attribute name="title" value="Acc MIS Report View " />
+		<put-attribute name="body"
+			value="/pages/admin/srd/accMisReportView.jsp" />
+	</definition>
+
+	<definition name="srd.SkillDetails" extends=".myProfileLayout">
+		<put-attribute name="title" value="Skill Details" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/skillDetail.jsp" />
+	</definition>
+	<!-- Added by manish sakpal ENDS -->
+
+	<definition name="srd.ProfessionalReferenceMis"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Lang Master Data" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/professionalReferenceMis.jsp" />
+	</definition>
+	<definition name="srd.VisaDetails" extends=".myProfileLayout">
+		<put-attribute name="title" value="Visa Details" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/visaDetailsList.jsp" />
+	</definition>
+
+	<definition name="srd.awardMisReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Award MIS Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/awardMisReport.jsp" />
+	</definition>
+	<definition name="srd.disciplinaryMisReport"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Disciplinary MIS Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/disciplinaryMisReport.jsp" />
+	</definition>
+
+	<definition name="srd.visaReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Visa Mis Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/visaMISReport.jsp" />
+	</definition>
+
+	<definition name="srd.skillsReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Skills Mis Report" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/skillsMISReport.jsp" />
+	</definition>
+
+
+	<definition name="transfer.TransferApplication"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Transfer Application" />
+		<put-attribute name="body"
+			value="/pages/admin/transfer/transApp.jsp" />
+	</definition>
+
+
+	<!-- Mapping for Transfer Application Report  -->
+	<definition name="transfer.TransferApplicationReport"
+		extends=".reportLayout">
+		<put-attribute name="title" value="Transfer Report" />
+		<put-attribute name="body"
+			value="/pages/admin/transfer/transferReport.jsp" />
+
+	</definition>
+	<definition name="transfer.TransferApproval"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Transfer Approval" />
+		<put-attribute name="body"
+			value="/pages/admin/transfer/transferApproval.jsp" />
+	</definition>
+
+	<definition name="transfer.TransferPmApproval"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Transfer Pm Approval" />
+		<put-attribute name="body"
+			value="/pages/admin/transfer/transferPmApp.jsp" />
+	</definition>
+
+	<definition name="transfer.postingCompGround"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Oath taking Report" />
+		<put-attribute name="body"
+			value="/pages/admin/transfer/postingCompGrnd.jsp" />
+
+	</definition>
+
+	<!-- Mapping for Certifiacte of Transfer -->
+	<definition name="transfer.transferCompassionate"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Certificate" />
+		<put-attribute name="body"
+			value="/pages/admin/transfer/transferComps.jsp" />
+
+	</definition>
+
+	<!-- Mapping for Certifiacte by the Oc unit -->
+	<definition name="transfer.CertOcUnit" extends=".mainLayout">
+		<put-attribute name="title" value="Certificate by the Oc Unit" />
+		<put-attribute name="body"
+			value="/pages/admin/transfer/CertOcUnit.jsp" />
+
+	</definition>
+
+	<!-- Mapping for Certifiacte by the Oc unit -->
+	<definition name="transfer.UndertakingReport"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Undertaking Report" />
+		<put-attribute name="body"
+			value="/pages/admin/transfer/UnderTakingRep.jsp" />
+
+	</definition>
+
+
+	<!-- Mapping for Transfer Order -->
+	<definition name="transfer.TransferOrder" extends=".mainLayout">
+		<put-attribute name="title" value="TransferOrder Report" />
+		<put-attribute name="body"
+			value="/pages/admin/transfer/transferOrder.jsp" />
+
+	</definition>
+
+
+	<!-- Mapping for Transfer with in Dockyard -->
+	<definition name="transfer.TransferDockyard"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Transfer with in Dockyard" />
+		<put-attribute name="body"
+			value="/pages/admin/transfer/transferDockyard.jsp" />
+
+	</definition>
+
+	<!-- Mapping for No Demand Certificate -->
+	<definition name="transfer.NoDemandCert" extends=".mainLayout">
+		<put-attribute name="title" value="No Demand Certificate" />
+		<put-attribute name="body"
+			value="/pages/admin/transfer/noDemandCert.jsp" />
+
+	</definition>
+
+	<!-- Mapping for Transfer Movement Order -->
+	<definition name="transfer.TransferMovementOrder"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Transgfer Movement Order" />
+		<put-attribute name="body"
+			value="/pages/admin/transfer/TransferMovement.jsp" />
+	</definition>
+
+	<!-- Mapping for Transfer MisReport -->
+	<definition name="transfer.TransferMisReport"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Transfer Mis Report" />
+		<put-attribute name="body"
+			value="/pages/admin/transfer/transferMisReport.jsp" />
+	</definition>
+
+	<!--  Mapping for Project Details-->
+	<definition name="srd.EmployeeProjectDetail"
+		extends=".myProfileLayout">
+		<put-attribute name="title" value="Employee Project Detail" />
+		<put-attribute name="body"
+			value="/pages/admin/srd/employeeProjectDetail.jsp" />
+	</definition>
+
+
+	<!-- SRD definition ends -->
+
+
+
+</tiles-definitions>

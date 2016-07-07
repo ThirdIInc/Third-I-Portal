@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+<!--Layout and common definitions begins-->
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+	<definition name=".myPageLeftRightLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+<definition name="common.dashBoard" extends=".mainLayout">
+		<put-attribute name="title" value="Common Dashboard Page" />
+		<put-attribute name="body" value="/pages/common/commonDashboard.jsp" />
+	</definition>
+<!--  Added by Priyanka-->
+	<definition name=".adminHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/adminLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+<!--Ended By Priyanka  -->
+
+	<definition name="mypage.services"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/mypage/services.jsp" />
+	</definition>
+
+<!--Layout and common definitions ends-->
+
+<!-- Helpdesk definition begins -->
+
+<definition name="helpdesk.HelpDeskDeptMaster"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="HelpDesk Dept" />
+		<put-attribute name="body" value="/pages/helpdesk/helpDeskDeptMaster.jsp" />
+	</definition>
+
+	<definition name="helpdesk.HelpDeskDeptMasterList"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="HelpDesk Dept List" />
+		<put-attribute name="body" value="/pages/helpdesk/helpDeskDeptList.jsp" />
+	</definition>
+
+
+	<definition name="helpdesk.HelpDeskReqType" extends=".adminHomeLayout">
+		<put-attribute name="title" value="HelpDesk ReqType" />
+		<put-attribute name="body" value="/pages/helpdesk/helpDeskReqType.jsp" />
+	</definition>
+
+	<definition name="helpdesk.HelpDeskReqTypeList"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="HelpDesk ReqType List" />
+		<put-attribute name="body"
+			value="/pages/helpdesk/helpDeskReqTypeList.jsp" />
+	</definition>
+
+
+	<definition name="helpdesk.HelpDeskSubReqType"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="HelpDesk Subreq Type" />
+		<put-attribute name="body" value="/pages/helpdesk/helpDeskSubReqType.jsp" />
+	</definition>
+
+	<definition name="helpdesk.HelpDeskSubReqTypeList"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="HelpDesk SubRequest List" />
+		<put-attribute name="body"
+			value="/pages/helpdesk/helpDeskSubReqTypeList.jsp" />
+	</definition>
+
+
+	<definition name="helpdesk.HelpDeskSLAMaster"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="HelpDesk SLA" />
+		<put-attribute name="body" value="/pages/helpdesk/helpDeskSLAMaster.jsp" />
+	</definition>
+
+	<definition name="helpdesk.HelpDeskSLAMasterList"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="HelpDesk SLA List" />
+		<put-attribute name="body" value="/pages/helpdesk/helpDeskSLAList.jsp" />
+	</definition>
+
+	<definition name="helpdesk.Master"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Help Desk" />
+		<put-attribute name="body" value="/pages/helpdesk/helpDesk.jsp" />
+	</definition>
+
+	<definition name="helpdesk.MasterList"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Help Desk" />
+		<put-attribute name="body" value="/pages/helpdesk/helpDeskList.jsp" />
+	</definition>
+
+	<definition name="helpDeskReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Help Desk MIS Report" />
+		<put-attribute name="body" value="/pages/helpdesk/helpDeskMisReport.jsp" />
+	</definition>
+	<definition name="helpDeskReqReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Help Desk Request Duration Report" />
+		<put-attribute name="body" value="/pages/helpdesk/helpDeskReqDurationReport.jsp" />
+	</definition>
+	
+		<definition name="techReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Help Desk Request Analysis Report" />
+		<put-attribute name="body" value="/pages/helpdesk/helpDeskTechReport.jsp" />
+	</definition>
+	<definition name="helpdeskappr.Master" extends=".adminHomeLayout">
+		<put-attribute name="title" value="HelpDesk Approval" />
+		<put-attribute name="body" value="/pages/helpdesk/HelpDeskApproval.jsp" />
+	</definition>
+	<definition name="viewHelpDeskApp.Master" extends=".mainLayout">
+		<put-attribute name="title" value="Help Desk Application" />
+		<put-attribute name="body" value="/pages/helpdesk/ViewHelpDeskApp.jsp" />
+	</definition>
+
+	<definition name="helpdesk.HelpDeskStatus" extends=".mainLayout">
+		<put-attribute name="title" value="HelpDesk Status Categories" />
+		<put-attribute name="body"
+			value="/pages/helpdesk/helpDeskStatusCateg.jsp" />
+	</definition>
+
+	<definition name="helpdesk.HelpDeskStatusList"
+		extends=".mainLayout">
+		<put-attribute name="title" value="HelpDesk Status Category List" />
+		<put-attribute name="body"
+			value="/pages/helpdesk/helpDeskStatCategList.jsp" />
+	</definition>
+
+	<definition name="helpdesk.HelpDeskMgrRep" extends=".adminHomeLayout">
+		<put-attribute name="title" value="HelpDesk Manager Reporting" />
+		<put-attribute name="body" value="/pages/helpdesk/helpDeskMgrRep.jsp" />
+	</definition>
+
+	<definition name="helpdesk.HelpDeskMgrRepList"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="HelpDesk Manager Reporting" />
+		<put-attribute name="body" value="/pages/helpdesk/helpDeskMgrRepList.jsp" />
+	</definition>
+
+	<definition name="helpdesk.HelpDeskTechRep" extends=".adminHomeLayout">
+		<put-attribute name="title" value="HelpDesk Tech Reporting" />
+		<put-attribute name="body" value="/pages/helpdesk/helpDeskTechRep.jsp" />
+	</definition>
+
+	<definition name="helpdesk.HelpDeskTechRepList"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="HelpDesk Tech Reporting" />
+		<put-attribute name="body"
+			value="/pages/helpdesk/helpDeskTechRepList.jsp" />
+	</definition>
+
+	<definition name="helpdesk.HelpDeskProcess" extends=".adminHomeLayout">
+		<put-attribute name="title" value="HelpDesk Process" />
+		<put-attribute name="body" value="/pages/helpdesk/helpdeskProcess.jsp" />
+	</definition>
+<definition name="helpdesk.HelpDeskProcessData"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="HelpDesk Process" />
+		<put-attribute name="body"
+			value="/pages/helpdesk/helpdeskProcessData.jsp" />
+	</definition>
+
+	<definition name="helpdeskappr.MasterView" extends=".adminHomeLayout">
+		<put-attribute name="title" value="HelpDesk Approval" />
+		<put-attribute name="body"
+			value="/pages/helpdesk/helpDeskApprovalView.jsp" />
+	</definition>
+<!--Layout definitions ends-->
+</tiles-definitions>

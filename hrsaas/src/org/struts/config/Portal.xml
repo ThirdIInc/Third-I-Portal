@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="portal" namespace="/portal"
+		extends="struts-default">
+
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+		<action name="GlodyneLogin_*" method="{1}"
+			class="org.struts.action.portal.GlodyneLoginAction">
+			<result name="input">
+				/pages/portal/glodyneLogin.jsp
+			</result>
+			<result name="success" type="tiles">
+				portalHomePage
+			</result>
+			<result name="invalid">
+				/pages/portal/glodyneLogin.jsp
+			</result>
+			<result name="logout" type="tiles">
+				login.glodyneLogout
+			</result>
+			<result name="send-to-changePassword" type="tiles">
+				login.ChangeExpiryPassword
+			</result>
+			<result name="forwardTo" type="tiles">
+				login.secureImgMsg
+			</result>
+			<result name="send-to-changePwd" type="tiles">
+				login.ChangeFirstLoginpassword
+			</result>
+			<result name="successJsp">
+				/pages/portal/glodyneLogin.jsp
+			</result>
+			<result name="send-to-question" type="tiles">
+				login.securityquestion
+			</result>
+			<result name="notActive">
+				/pages/portal/glodyneLogin.jsp
+			</result>
+			<result name="alreadyInSession">
+				/pages/portal/aboutPreviouSession.jsp
+			</result>
+		</action>
+
+
+		<action name="EmployeePortal_*" method="{1}"
+			class="org.struts.action.common.EmployeePortalAction">
+			<result name="showEmpPortal" type="tiles">
+				login.Employeeportal
+			</result>
+			<result name="connectWithCeo" type="tiles">
+				login.connectWithCeo
+			</result>
+			<result name="searchRecord" type="tiles" >
+				mypage.search
+			</result>
+			<result name="showMorePortal" type="tiles"  >
+				moreInfoDashlet
+			</result>
+			<result name="glodyneLogosDownload" >
+				/pages/portal/glodyneLogosDownload.jsp
+			</result>
+			<result name="gree_wall" >
+			/pages/portal/gree_wall.jsp
+			</result>
+			<result name="showGeneralInfo" type="tiles" >
+				mypage.showMoreInfo
+			</result>
+			<result name="searchMenuRecord" >
+				/pages/portal/searchMenuRecord.jsp
+			</result>
+			<result name="employeeDtlPage" >
+				mypage.employeeDtlRecord
+			</result>
+			<result name="showQuickDownload" type="tiles">
+				mypage.showQuickDownload
+			</result>			
+			<result name="quickContactsDashlet" type="tiles">
+				mypage.quickContactsDashlet
+			</result>	
+			<result name="showKnowledge" type="tiles">
+				mypage.showKnowledge
+			</result>			
+		</action>
+
+		<action name="ForgotPassword_*" method="{1}"
+			class="org.struts.action.portal.GlodyneForgotPwdAction">
+			<result name="input" type="tiles">
+				login.forgotPassword
+			</result>
+			<result name="success" type="tiles">
+				login.forgotPassword
+			</result>
+			<result name="forgotPage" type="tiles">
+				login.forgotPassword
+			</result>
+			<result name="page" type="tiles">
+				login.forgotPwdError
+			</result>
+			<result name="fail" type="tiles">
+				login.forgotPassword
+			</result>
+			<result name="forgotque" type="tiles">
+				login.forgotpasswordquestion
+			</result>
+			<result name="userNameJsp" type="tiles">
+				login.multipleusernamecredential
+			</result>
+
+		</action>
+
+
+		<action name="GloReLogin_*" method="{1}"
+			class="org.struts.action.portal.GlodyneLoginAction">
+			<result name="input" type="tiles">relogin.Login</result>
+			<result name="invalid" type="tiles">relogin.Login</result>
+			<result name="success" type="tiles">relogin.blank</result>
+		</action>
+		
+		
+		<action name="EventData_*" method="{1}"
+			class="org.struts.action.portal.EventDataAction">
+			<result name="input" type="tiles">eventData</result>
+			<result name="success" type="tiles">eventData</result>
+			<result name="rightglofest" type="tiles">
+				rightglofest
+			</result>
+			<result name="feedback">
+				/pages/portal/feedbackForm.jsp
+			</result>
+			<result name="rewardPage" type="tiles">
+				rewardPage
+			</result>
+			<result name="helpdeskpage" type="tiles">
+				portal.helpDeskEvent
+			</result>
+			<result name="helpdeskApprovalpage" type="tiles">
+				portal.helpDeskApproval
+			</result>
+			<result name="helpdeskConsolepage" type="tiles">
+				portal.consolePage
+			</result>
+		</action>
+		
+		<action name="MyNotes_*" method="{1}"
+			class="org.struts.action.portal.MyNotesAction">
+			<result name="input" type="tiles">mynotes</result>
+			<result name="success" type="tiles">mynotes</result>
+		</action>
+		
+		
+		<action name="MyFavourites_*" method="{1}"
+			class="org.struts.action.portal.MyFavouritesAction">
+			<result name="input" type="tiles">MyFavourites</result>
+			<result name="success" type="tiles">MyFavourites</result>
+		</action>
+		
+		<action name="TipsSetting_*" method="{1}" class="org.struts.action.portal.TipsSettingAction">
+			<result name="input" type="tiles">tipsData</result>
+			<result name="success" type="tiles">tipsData</result>
+			<result name="rightglofest" >/pages/portal/rightglofest.jsp</result>
+			<result name="view" >/pages/portal/tipsInfo.jsp</result>
+		</action>
+		
+	<!-- for mypage entry starts -->	
+	 	<action name="MypageProcessManagerAlerts_*" method="{1}"
+			class="org.struts.action.mypage.MypageProcessManagerAlertsAction">
+			<result name="searchRecord" type="tiles" >
+				mypage.search
+			</result>
+			<result name="holidays" type="tiles" >mypage.holidays</result>
+	  	</action>	
+	<!-- for mypage entry ends -->
+
+	</package>
+</struts>

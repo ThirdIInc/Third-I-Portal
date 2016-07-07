@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+        
+    <struts>   
+        <package name="TravelMngt" namespace="/TravelMngt" extends="struts-default">
+        
+	        <result-types>
+			  	<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+			</result-types>
+			<action name="TravelAppMngt_*" method="{1}" class="org.struts.action.TravelManagement.TravelApplicationAction">
+				<result name="input" type="tiles" >TravelMngt.TravelApp</result>
+				<result name="success" type="tiles">TravelMngt.TravelApp</result>
+				<result name="travelCancel" type="tiles">TravelMngt.TravelAppCancel</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	 
+			</action>  
+			
+		<action name="TravelAppr_*" method="{1}" class="org.struts.action.TravelManagement.TravelApproverAction">
+				<result name="input" type="tiles" >TravelMngt.TravelApprover</result>
+				<result name="success" type="tiles">TravelMngt.TravelApprover</result>	
+				<result name="viewTravelAppDtl" type="tiles">TravelMngt.viewTravelAppDtl</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	 
+			</action> 
+			 
+			
+			<action name="TravelSchdule_*" method="{1}" class="org.struts.action.TravelManagement.TravelScheduleAction">
+				<result name="input" type="tiles" >TravelMngt.TravelSchedule</result>
+				<result name="success" type="tiles">TravelMngt.TravelSchedule</result>	
+				<result name="viewTravelScheduleDtl" type="tiles">TravelMngt.TravelApp</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	 
+			</action> 
+			<action name="TravelMisReport_*" method="{1}" class="org.struts.action.TravelManagement.TravelMisReportAction">
+				<result name="input" type="tiles" >TravelMngt.TravelMISReport</result>
+				<result name="success" type="tiles">TravelMngt.TravelMISReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	 
+			</action> 
+			
+			
+			<action name="TravelConfirmation_*" method="{1}" class="org.struts.action.TravelManagement.TravelConfirmationAction">
+				<result name="input" type="tiles" >travel.conf</result>
+				<result name="success" type="tiles">travel.conf</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>
+			
+			<action name="TravelCancel_*" method="{1}" class="org.struts.action.TravelManagement.TravelConfirmationAction">
+				<result name="input" type="tiles" >TravelMngt.cancel</result>
+				<result name="success" type="tiles">TravelMngt.cancel</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>
+			
+			<action name="TravelScheduleReport_*" method="{1}" class="org.struts.action.TravelManagement.TravelScheduleReportAction">
+				<result name="input" type="tiles" >TravelMngt.TravelScheduleReport</result>
+				<result name="success" type="tiles">TravelMngt.TravelScheduleReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	 
+			</action> 
+			
+				<action name="TravelAdminMaster_*" method="{1}" class="org.struts.action.TravelManagement.TravelAdminMasterAction">
+				<result name="input" type="tiles" >TravelMngt.admin</result>
+				<result name="success" type="tiles">TravelMngt.admin</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	 
+			</action> 
+			
+			<action name="TravelGradeExpense_*" method="{1}" class="org.struts.action.TravelManagement.TravelGradeExpenseAction">
+				<result name="input" type="tiles" >TravelMngt.travelGrade</result>
+				<result name="success" type="tiles">TravelMngt.travelGrade</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	 
+			</action>  
+			
+			
+	
+        
+  </package>            
+</struts>

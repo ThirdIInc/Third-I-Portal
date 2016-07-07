@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="LMS" namespace="/LMS" extends="struts-default">
+
+		<result-types>
+			<!-- Added By Nilesh -->
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		<action name="EmployeeType_*" method="{1}"
+			class="org.struts.action.LMS.EmployeeTypeAction">
+			<result name="input" type="tiles">LMS.EmployeeType</result>
+		</action>
+
+		<!-- (Start) Added by Manish Sakpal -->
+		<action name="Designation_*" method="{1}"
+			class="org.struts.action.LMS.LmsDesignationAction">
+			<result name="input" type="tiles">LMS.Designation</result>
+		</action>
+
+		<action name="MapDebits_*" method="{1}"
+			class="org.struts.action.LMS.LmsMapDebitsAction">
+			<result name="input" type="tiles">LMS.MapDebits</result>
+		</action>
+
+		<!-- (End) Added by Manish Sakpal -->
+
+		<!-- (Start) Added by Dhanashree -->
+		<action name="ColonyMaster_*" method="{1}"
+			class="org.struts.action.LMS.ColonyMasterAction">
+			<result name="input" type="tiles">
+				LMS.ColonyMasterList
+			</result>
+			<result name="success" type="tiles">
+				LMS.ColonyMasterData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="HouseMaster_*" method="{1}"
+			class="org.struts.action.LMS.HouseMasterAction">
+			<result name="input" type="tiles">
+				LMS.HouseMasterList
+			</result>
+			<result name="success" type="tiles">
+				LMS.HouseMasterData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- (End) Added by Dhanashree  -->
+
+
+		<!-- Minimum Wages Act Start Added By Nilesh Dhandare -->
+		<action name="MinimumWagesAct_*" method="{1}"
+			class="org.struts.action.LMS.MinimumWagesActAction">
+			<result name="input" type="tiles">
+				Returns.MinimumWagesAct
+			</result>
+			<result name="next" type="tiles">
+				Returns.MinimumWagesActBook
+			</result>
+		</action>
+
+		<action name="ReturnAct_*" method="{1}"
+			class="org.struts.action.LMS.ReturnsActAction">
+			<result name="input" type="tiles">Returns.HomePage</result>
+			<result name="general_workforce" type="tiles">
+				Returns.MinWagesAct
+			</result>
+			<result name="monthlyActs" type="tiles">
+				Returns.MinimumWagesAct
+			</result>
+			<result name="gratuityrules" type="tiles">
+				Returns.GratuityRules
+			</result>
+			<result name="rentallowance" type="tiles">
+				Returns.RentAllowance
+			</result>
+			<result name="bonusrules" type="tiles">
+				Returns.BonusRules
+			</result>
+
+			<result name="childlabour" type="tiles">
+				Returns.ChildLabour
+			</result>
+
+			<result name="equalrenumeration" type="tiles">
+				Returns.EqualRenumeration
+			</result>
+
+			<result name="maternitybenefits" type="tiles">
+				Returns.MaternityBenefits
+			</result>
+
+			<result name="annualfactory" type="tiles">
+				Returns.AnnualFactory
+			</result>
+			<result name="minimumWages" type="tiles">
+				Returns.MinimumWagesActBook
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<!-- (Start) Added by manish sakpal -->
+		<action name="DisputeManagementSystem_*" method="{1}"
+			class="org.struts.action.LMS.DisputeManagementSystemAction">
+			<result name="input" type="tiles">
+				Lms.DisputeManagementList
+			</result>
+			<result name="success" type="tiles">
+				Lms.DisputeManagementDetail
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="AccidentDetails_*" method="{1}"
+			class="org.struts.action.LMS.AccidentDetailsAction">
+			<result name="input" type="tiles">
+				Lms.AccidentDetailList
+			</result>
+			<result name="success" type="tiles">
+				Lms.AccidentDetails
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- (End) Added by manish sakpal -->
+
+		<!-- Added by janisha  -->
+		<action name="AccommodationMaster_*" method="{1}"
+			class="org.struts.action.LMS.AccommodationMasterAction">
+			<result name="input" type="tiles">
+				LMS.AccommodationMasterList
+			</result>
+			<result name="success" type="tiles">
+				LMS.AccommodationMasterData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="successCheck" type="tiles">
+				LMS.AccommodationMasterCheckOutData
+			</result>
+		</action>
+		<!-- End Added by janisha  -->
+
+		<!-- Added Ganesh -->
+		<action name="TradeUnionWorkCouncil_*" method="{1}"
+			class="org.struts.action.LMS.TradeUnionWorkCouncilAction">
+			<result name="input" type="tiles">
+				Dispute.TradeUnionWorkCouncilList
+			</result>
+			<result name="success" type="tiles">
+				Dispute.TradeUnionWorkCouncilData
+			</result>
+
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="WelfareInformation_*" method="{1}"
+			class="org.struts.action.LMS.WelfareInformationAction">
+			<result name="input" type="tiles">
+				welfare.WelfareInformationData
+			</result>
+			<result name="success" type="tiles">
+				welfare.WelfareInformationData
+			</result>
+
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="SafetyCommitteeMaster_*" method="{1}"
+			class="org.struts.action.LMS.SafetyCommitteeMasterAction">
+			<result name="input" type="tiles">
+				SafetyCommittee.SafetyCommitteeMasterList
+			</result>
+			<result name="success" type="tiles">
+				SafetyCommittee.SafetyCommitteeMasterData
+			</result>
+
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="RulesAndPolicyMaster_*" method="{1}"
+			class="org.struts.action.LMS.RulesAndPolicyMasterAction">
+			<result name="input" type="tiles">
+				RulesAndPolicy.RulesAndPolicyMasterList
+			</result>
+			<result name="success" type="tiles">
+				RulesAndPolicy.RulesAndPolicyMasterData
+			</result>
+
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- Added Ganesh end-->
+
+	</package>
+</struts>

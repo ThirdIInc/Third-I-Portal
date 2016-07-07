@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+ 
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name=".myPageLeftRightLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+<definition name=".payrollLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<!--  <put name="menu" value="/pages/common/payrollLeftMenu.jsp" />-->
+		<put-attribute name="menu" value="/pages/common/payrollLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<!-- Added by Priyanka -->
+<definition name=".leaveAttendanceHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/leaveAttendanceLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<!-- Ended by Priyanka -->
+	<definition name="extraWorkBenefits.ExtraWorkBenefitsList"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Extra Work Benefits List" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/extraWorkingBenefitsList.jsp" />
+	</definition>
+
+<definition name="extraWorkBenefits.ExtraWorkBenefits"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Extra Work Benefits" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/extraWorkingBenefits.jsp" />
+	</definition>
+
+
+<definition name="extraWorkBenefits.extraWorkAppr"
+		extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Extra Work Benefits Approval" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/extraWorkApproval.jsp" />
+	</definition>
+
+		<definition name="extraWorkBenefits.viewExtraWork"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Comp Off" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/viewExtraWork.jsp" />
+	</definition>
+
+<definition name="extraWorkBenefits.extraWorkApplnList"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Extra Work Benefits" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/extraWorkApplicationList.jsp" />
+	</definition>
+
+	<definition name="extraWorkBenefits.extraWorkAppln"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Extra Work Benefits Application" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/extraWorkApplication.jsp" />
+	</definition>
+
+
+	<definition name="extraWorkBenefits.ExtraWorkBenefitsCal"
+		extends=".mainLayout">
+		<put-attribute name="title" value="ExtraWorkBenifits Calculation" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/extraWorkBenifitCalculation.jsp" />
+	</definition>
+
+	<definition name="extraWorkBenefits.ExtraWorkBenefitsCalReport"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Leave List" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/extraWorkBenefitsCalculationReport.jsp" />
+	</definition>
+
+
+	<definition name="extraWorkBenefits.ExtraWorkBenefitsMisReport"
+		extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Extra Work Benefit Mis" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/extraWorkBenefitMis.jsp" />
+	</definition>
+
+	<definition name="extraWorkBenefits.misReportView"
+		extends=".mainLayout">
+		<put-attribute name="title" value="MIS Report" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/extraWorkBenefitViewOnScreenMis.jsp" />
+	</definition>
+
+
+	<definition name="attendanceReglMisReport" extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Attendance Regularization Mis" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/attReglMisReport.jsp" />
+	</definition>
+
+	<definition name="attendanceRegl.misReportView"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Attendance Regl MIS Report" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/attReglMisReportView.jsp" />
+	</definition>
+
+
+	<definition name="lateReglMisReport" extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Late Regularization Mis" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/lateReglMisReport.jsp" />
+	</definition>
+
+
+<definition name="lateRegl.misReportView" extends=".mainLayout">
+		<put-attribute name="title" value="Late Regl MIS Report" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/lateReglMisReportView.jsp" />
+	</definition>
+
+
+	<definition name="redressalMisReport" extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Redressal Regularization Mis" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/redressalMisReport.jsp" />
+	</definition>
+
+	<definition name="redressal.misReportView" extends=".mainLayout">
+		<put-attribute name="title" value="Redressal Regl MIS Report" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/redressalMisReportView.jsp" />
+	</definition>
+
+
+<definition name="personalTimeMisReport" extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="title" value="Personal Time Regularization Mis" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/personalTimeMisReport.jsp" />
+	</definition>
+
+
+		<definition name="personalTime.misReportView"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Personal Time Regl MIS Report" />
+		<put-attribute name="body"
+			value="/pages/extraWorkBenefits/personalTimeMisReportView.jsp" />
+	</definition>
+
+
+ <!-- mypage mapping starts-->
+
+	<definition name="alert.mypage" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body"
+			value="/pages/mypage/mypageprocessManagerAlerts.jsp" />
+	</definition>
+	
+	<definition name="mypage.services"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/mypage/services.jsp" />
+	</definition>
+
+		<definition name="mytimeCard" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="My Timecard" />
+		<put-attribute name="body" value="/pages/mypage/myTimeCard.jsp" />
+	</definition>
+
+
+	
+	<definition name="mypage.myLeaves"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="My Leaves" />
+		<put-attribute name="body" value="/pages/mypage/myLeaves.jsp" />
+	</definition>
+
+ <!-- mypage mapping ends-->
+
+</tiles-definitions>

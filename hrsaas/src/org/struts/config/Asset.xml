@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+        
+   <struts>   
+        <package name="asset" namespace="/asset" extends="struts-default">
+        
+	        <result-types>
+			  	<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+			</result-types>
+			
+			<!-- Mapping for Assessment Master   -->
+						
+			<action name="AssetTypes_*" method="{1}" class="org.struts.action.Asset.AssetTypeAction">
+				<result name="input" type="tiles" >AssetType.Master</result>
+				<result name="success" type="tiles">AssetType.Master</result>
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="report" type="tiles">AssetTypeReport</result>	
+				<result name="showData" type="tiles">AssetType.MasterData</result>	
+			</action>
+			
+			<action name="AssetMaster_*" method="{1}" class="org.struts.action.Asset.AssetMasterAction">
+				<result name="input" type="tiles" >AssetMaster.Master</result>
+				<result name="success" type="tiles">AssetMaster.Master</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="report" type="tiles">AssetMasterReport</result>
+				<result name="showData" type="tiles">AssetMaster.MasterData</result>
+			</action>
+			
+			<action name="UnitMaster_*" method="{1}" class="org.struts.action.Asset.UnitMasterAction">
+				<result name="input" type="tiles" >UnitMaster.Master</result>
+				<result name="success" type="tiles">UnitMaster.Master</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="report" type="tiles">UnitMasterReport</result>
+				<result name="Data" type="tiles">UnitMaster.Data</result>	
+			</action>
+			
+			<action name="VendorMaster_*" method="{1}" class="org.struts.action.Asset.VendorMasterAction">
+				<result name="input" type="tiles" >VendorMaster.Master</result>
+				<result name="success" type="tiles">VendorMaster.Master</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="report" type="tiles">VendorMasterReport</result>
+				<result name="Data" type="tiles">VendorMaster.Data</result>				
+			</action>
+			
+			
+			<action name="AssetEmployee_*" method="{1}" class="org.struts.action.Asset.AssetEmployeeAction">
+				<result name="input" type="tiles" >AssetEmployee.MasterList</result>
+				<result name="success" type="tiles">AssetEmployee.Master</result>
+				<result name="assignAsset" type="tiles">AssetActualAssignment</result>
+				<result name="requstForm" type="tiles">AssetRequstForm</result>
+				<result name="AssetAssignment" type="tiles">AssetAssignment</result>
+				<result name="AssignmentEdit" type="tiles">AssignmentEdit</result>
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="assetApprovalPage" type="chain">AssetApproval_input</result>
+				
+				 
+			<!-- my page code -->
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+
+			
+			</action>
+			
+			<action name="AssetEmployeeReport_*" method="{1}" class="org.struts.action.Asset.AssetEmployeeMisAction">
+				<result name="input" type="tiles" >report.AssetEmployee</result>
+				<result name="success" type="tiles">report.AssetEmployee</result>
+				<result name="f9page" type="tiles">common.f9page</result>	
+			</action>
+			
+				
+			
+				<action name="AssetSubTypes_*" method="{1}" class="org.struts.action.Asset.AssetSubTypesAction">
+				<result name="input" type="tiles" >AssetsubTypes</result>
+				<result name="success" type="tiles">AssetsubTypes</result>
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="showData" type="tiles">AssetsubType.MasterData</result>
+			</action>
+			
+			<action name="AssetApproval_*" method="{1}" class="org.struts.action.Asset.AssetApprovalAction">
+				<result name="input" type="tiles">AssetApproval</result>
+				<result name="success" type="tiles">AssetApproval</result>
+				
+				<!-- For mypage Entry -->
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+				<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+			</action>
+			
+			<action name="AssetAssignment_*" method="{1}" class="org.struts.action.Asset.AssetAssignmentAction">
+				<result name="input" type="tiles" >AssetAssignment</result>
+				<result name="success" type="tiles">AssetAssignment</result>
+				<result name="AssetAssignment" type="tiles">AssetAssignment</result>
+				<result name="f9page" type="tiles">common.f9page</result>
+				
+			</action>
+			
+					
+			<action name="WareHouseMaster_*" method="{1}" class="org.struts.action.Asset.WareHouseMasterAction">
+				<result name="input" type="tiles" >WareHouseMaster</result>
+				<result name="success" type="tiles">WareHouseMaster</result>
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="Data" type="tiles">WareHouseMaster.Data</result>	
+			</action>
+			
+			<action name="AssetReturn_*" method="{1}" class="org.struts.action.Asset.AssetReturnAction">
+				<result name="input" type="tiles" >AssetReturn</result>
+				<result name="success" type="tiles">AssetReturn</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+			</action>
+			
+			<action name="RateList_*" method="{1}" class="org.struts.action.Asset.RateListAction">
+				<result name="input" type="tiles" >RateListData</result>
+				<result name="Data" type="tiles" >RateListData</result>
+				<result name="success" type="tiles">RateList</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+			</action>
+			
+			<action name="PurchaseOrder_*" method="{1}" class="org.struts.action.Asset.PurchaseOrderAction">
+				<result name="input" type="tiles" >PurchaseOrderlst</result>
+				<result name="success" type="tiles">PurchaseOrder</result>
+				<result name="PurchaseInwardDetails" type="tiles">PurchaseInwardDetails</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				
+						 
+			<!-- my page code -->
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+			
+			</action>
+			
+			<action name="PurchaseOrderApproval_*" method="{1}" class="org.struts.action.Asset.PurchaseOrderApprovalAction">
+				<result name="input" type="tiles" >PurchaseOrderApproval</result>
+				<result name="success" type="tiles">PurchaseOrderApproval</result>	
+					<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			</action>
+			
+			<action name="AssetReport_*" method="{1}" class="org.struts.action.Asset.AssetReportAction">
+				<result name="input" type="tiles" >AssetReport</result>
+				<result name="success" type="tiles">AssetReport</result>
+				<result name="f9page" type="tiles">common.f9page</result>	
+			</action>
+			
+			<action name="PurchaseInward_*" method="{1}" class="org.struts.action.Asset.PurchaseInwardAction">
+				<result name="input" type="tiles" >PurchaseInward</result>
+				<result name="success" type="tiles">PurchaseInward</result>
+				<result name="f9page" type="tiles">common.f9page</result>	
+			</action>
+			
+			<action name="PurchaseMisReport_*" method="{1}" class="org.struts.action.Asset.PurchaseMisReportAction">
+				<result name="input" type="tiles" >PurchaseMis</result>
+				<result name="success" type="tiles">PurchaseMis</result>
+				<result name="f9page" type="tiles">common.f9page</result>	
+			</action>
+			
+			<action name="AssetDirectAssign_*" method="{1}" class="org.struts.action.Asset.AssetDirectAssignmentAction">
+				<result name="input" type="tiles" >AssetDirectAssignment</result>
+				<result name="success" type="tiles">AssetDirectAssignment</result>				
+				<result name="f9page" type="tiles">common.f9page</result>
+				
+			</action>
+			<!-- Added by Annatha lakshmi  -->
+			
+			<action name="AssetApplicationMisReport_*" method="{1}" class="org.struts.action.Asset.AssetApplicationMisAction">
+				<result name="input" type="tiles" >AssetAppMis</result>
+				<result name="success" type="tiles">AssetAppMis</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+			</action>
+			<!-- Added by Annatha lakshmi  end -->
+			<!-- Added by Annatha lakshmi  -->
+			
+			<action name="AssetCountReport_*" method="{1}" class="org.struts.action.Asset.AssetCountReportAction">
+				<result name="input" type="tiles" >AssetCountRpt</result>
+				<result name="success" type="tiles">AssetCountRpt</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+			</action>
+			
+			
+			
+		 
+			<!-- This is for mypage starts -->
+		
+			<action name="MypageProcessManagerAlerts_*" method="{1}" class="org.struts.action.mypage.MypageProcessManagerAlertsAction">
+			<result name="input" type="tiles">alert.mypage</result>
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="tiles">
+				mypage.services
+			</result>	
+			</action>
+		<!-- This is for mypage ends -->
+			
+			
+        </package>
+        
+	</struts>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="attendance" namespace="/attendance" extends="struts-default">
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+		</result-types>    
+                
+		<action name="MonthAttendance_*" method="{1}" class="org.struts.action.attendance.MonthAttendanceAction">
+			<result name="input" type="tiles" >attendance.MonthAttendance</result>
+			<result name="success" type="tiles">attendance.MonthAttendance</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="DailyAttendance_*" method="{1}" class="org.struts.action.attendance.DailyAttendanceAction">
+			<result name="input" type="tiles" >attendance.DailyAttendance</result>
+			<result name="success" type="tiles">attendance.DailyAttendance</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="DailyAttendanceReport_*" method="{1}" class="org.struts.action.attendance.DailyAttendanceReportAction">
+			<result name="input" type="tiles" >attendance.DailyAttendanceReport</result>
+			<result name="success" type="tiles">attendance.DailyAttendanceReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>	
+			
+		</action>
+		
+		<action name="MonthAttendanceReport_*" method="{1}" class="org.struts.action.attendance.MonthAttendanceReportAction">
+			<result name="input" type="tiles" >attendance.MonthAttendanceReport</result>
+			<result name="success" type="tiles">attendance.MonthAttendanceReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+		<action name="CompOff_*" method="{1}" class="org.struts.action.attendance.CompOffAction">
+			<result name="input" type="tiles" >attendance.compOff</result>
+			<result name="success" type="tiles">attendance.compOff</result>				 
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="CompOffApp_*" method="{1}" class="org.struts.action.attendance.CompOffApprovalAction">
+			<result name="input" type="tiles" >attendance.compOffApp</result>
+			<result name="success" type="tiles">attendance.compOffApp</result>
+			<result name="viewCompOff" type="tiles">attendance.viewCompOff</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="CompOffReport_*" method="{1}" class="org.struts.action.attendance.CompOffMisReportAction">
+			<result name="input" type="tiles" >attendance.compOffAppMisReport</result>
+			<result name="success" type="tiles">attendance.compOffAppMisReport</result>				 
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+		<action name="OutdoorVisit_*" method="{1}" class="org.struts.action.attendance.OutdoorVisitAction">
+			<result name="input" type="tiles" >attendance.OutdoorVisitListPage</result>
+			<result name="success" type="tiles">attendance.OutdoorVisit</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="showAttendanceRecord" type="tiles">attendance.showAttendanceRecord</result>
+			<result name="approvalList" type="chain">OutdoorApproval_input</result>
+		</action>
+		
+		<action name="OutdoorApproval_*" method="{1}" class="org.struts.action.attendance.OutdoorApprovalAction">
+			<result name="input" type="tiles" >attendance.OutdoorApproval</result>
+			<result name="success" type="tiles">attendance.OutdoorApproval</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="OutdoorVisitMisReport_*" method="{1}" class="org.struts.action.attendance.OutdoorVisitMisReportAction">
+			<result name="input" type="tiles" >attendance.OutdoorVisitMisReport</result>
+			<result name="success" type="tiles">attendance.OutdoorVisitMisReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="PaidLeaveDetails_*" method="{1}" class="org.struts.action.attendance.PaidLeaveDetailsAction">
+			<result name="input" type="tiles" >attendance.paidLeave</result>
+			<result name="success" type="tiles">attendance.paidLeave</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="AttendanceSettings_*" method="{1}" class="org.struts.action.attendance.AttendanceSettingsAction">
+			<result name="input" type="tiles">attendance.settings</result>
+			<result name="success" type="tiles">attendance.settings</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="leaveType">/pages/attendance/leaveCombination.jsp</result>
+		</action>
+		
+		<action name="UploadAttendance_*" method="{1}" class="org.struts.action.attendance.UploadAttendanceAction">
+			<result name="input" type="tiles" >attendance.uploadAttendance</result>
+			<result name="success" type="tiles">attendance.uploadAttendance</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+       <action name="UploadMonthlyAttendance_*" method="{1}" class="org.struts.action.attendance.UploadMonthlyAttendanceAction">
+			<result name="input" type="tiles" >attendance.uploadMonthlyAttendance</result>
+			<result name="success" type="tiles">attendance.uploadMonthlyAttendance</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="MonthAttendanceProcess_*" method="{1}" class="org.struts.action.attendance.MonthAttendanceProcessAction">
+			<result name="input" type="tiles" >attendance.monthAttendanceProcess</result>
+			<result name="success" type="tiles">attendance.monthAttendanceProcess</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="ViewMonthAttendance_*" method="{1}" class="org.struts.action.attendance.ViewMonthAttendanceAction">
+			<result name="input" type="tiles" >attendance.viewMonthAttendance</result>
+			<result name="success" type="tiles">attendance.viewMonthAttendance</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewAttendanceDetails" type="tiles">attendance.viewMonthAttendanceDetails</result>
+		</action>
+		
+		<action name="AutoPresentAttendance_*" method="{1}" class="org.struts.action.attendance.AutoPresentAttendanceAction">
+			<result name="input" type="tiles" >attendance.autoPresent</result>
+			<result name="success" type="tiles">attendance.autoPresent</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="showData" type="tiles">attendance.autoPresentData</result>
+		</action>
+		
+		<action name="AutoUploadAttendance_*" method="{1}" class="org.struts.action.attendance.AutoUploadAttendanceAction">
+			<result name="input" type="tiles" >attendance.autoUpload</result>
+			<result name="success" type="tiles">attendance.autoUpload</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="showData" type="tiles">attendance.autoUploadData</result>
+		</action>
+		
+		<action name="DailyMusterReport_*" method="{1}" class="org.struts.action.attendance.DailyMusterReportAction">
+			<result name="input" type="tiles" >attendance.DailyMusterReport</result>
+			<result name="success" type="tiles">attendance.DailyMusterReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+		<!-- UPDATED BY SHASHI BEGINS -->
+			<action name="UploadMonthlyAttnStatistics_*" method="{1}" class="org.struts.action.attendance.monthlyAttendance.UploadMonthlyAttnStatisticsAction">
+			<result name="input" type="tiles" >attendance.UploadMonthlyAttnStatistics</result>
+			<result name="success" type="tiles">attendance.UploadMonthlyAttnStatistics</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="MonthlyAttnProcessStatistics_*" method="{1}" class="org.struts.action.attendance.monthlyAttendance.MonthlyAttnProcessStatisticsAction">
+			<result name="input" type="tiles" >attendance.MonthlyAttnProcessStatisticsList</result>
+			<result name="success" type="tiles">attendance.MonthlyAttnProcessStatistics</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+			<action name="LeaveAdminApproval_*" method="{1}"
+			class="org.struts.action.leave.LeaveAdminApprovalAction">
+			<result name="input" type="tiles">
+				leave.LeaveAdminApproval
+			</result>
+			<result name="success" type="tiles">
+				leave.LeaveAdminApproval
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="leaveApplicationForm" type="tiles">
+				leave.leaveAdminApplicationForm
+			</result>
+			
+		</action>
+		<action name="LeaveApplication_*" method="{1}"
+			class="org.struts.action.leave.LeaveApplicationAction">
+			<result name="input" type="tiles">
+				leave.LeaveApplication
+			</result>
+			<result name="success" type="tiles">
+				leave.LeaveApplication
+			</result>
+			<result name="successApprov" type="chain">
+				LeaveApproval_approve
+			</result>
+			<result name="successCancel" type="chain">
+				LeaveCancel_input
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				leave.LeaveReport
+			</result>
+			<result name="reportGeneral" type="tiles">
+				leave.LeaveGenReport
+			</result>
+			<result name="f9ParamPage" type="tiles">
+				common.f9ParamPage
+			</result>
+			<result name="successJsp" type="tiles">
+				leave.levhistory
+			</result>
+			<result name="leaveApplicationJsp" type="tiles">
+				leave.levApplicationJsp
+			</result>
+			<result name="leaveApplicationFirstJsp" type="tiles">
+				leave.levApplicationFirstJsp
+			</result>
+			<result name="leaveApprovalJsp" type="chain">
+				LeaveApproval_callstatus
+			</result>
+			<result name="leaveAdminApprovalJsp" type="chain">
+				LeaveAdminApproval_callstatus
+			</result>
+		</action>
+		
+		<!-- Added by Nilesh D on 15th Feb 2012 -->
+		<action name="EmailPayrollReport_*" method="{1}" class="org.struts.action.payroll.EmailPayrollReportAction">
+				<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Added by Nilesh D End -->
+		
+		
+    </package> 
+</struts>

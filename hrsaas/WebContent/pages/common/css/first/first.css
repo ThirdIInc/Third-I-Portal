@@ -1,0 +1,250 @@
+.txt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+}
+
+.textfield {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	text-align: left;
+	padding-left: 3px;
+	padding-top: 5px;
+	border: none;
+	text-decoration: none;
+	height: 25px;
+	width: 105px;
+	border: none;
+}
+
+.head_bg {
+	background-image: url(images/head_bg.gif);
+	border: 1px solid #abc1e4;
+}
+
+.windColor{
+	background-color: #EBF1FB;
+	
+}
+
+.font_size1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+}
+
+.font_size2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+
+.font_size3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+	text-decoration: none;
+}
+
+.font_size4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000000;
+	text-decoration: none;
+}
+
+.bookmark {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #CC0000;
+	padding-left: 3px;
+	text-decoration: none;
+}
+
+.blue {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #1f376b;
+	text-decoration: none;
+}
+
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.bookmark1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #CC0000;
+	text-decoration: none;
+}
+
+.button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #002B55;
+	background-image: url(images/button1.png);
+	text-decoration: none;
+	border: none;
+	height: 25px;
+	width: 25px;
+}
+
+.bigbutton {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #002B55;
+	background-image: url(images/button2.png);
+	text-decoration: none;
+	background-color: #e0edfc;
+	border: none;
+	height: 25px;
+	width: 105px;
+}
+
+
+
+
+.tab_01{
+	background-image:url('images/tab_01.gif'); 
+
+}
+.tab_02{
+	background-image:url('images/tab_02.gif'); 
+	
+}
+.tab_03{
+	background-image:url('images/tab_03.gif'); 
+	
+}
+.tab_04{
+	background-image:url('images/tab_04.gif'); 
+	
+}
+.tab_05{
+	background-image:url('images/tab_05.gif'); 
+	
+}
+.tab_06{
+	background-image:url('images/tab_06.gif'); 
+	
+}
+.tab_07{
+	background-image:url('images/tab_07.gif'); 
+
+}
+.tab_08{
+	background-image:url('images/tab_08.gif'); 
+	
+}
+.tab_09{
+	background-image:url('images/tab_09.gif'); 
+	
+}
+.tab1_01{
+	background-image:url('images/tab1_01.gif'); 
+	
+}
+.tab1_02{
+	background-image:url('images/tab1_02.gif'); 
+	
+}
+.tab1_03{
+	background-image:url('images/tab1_03.gif'); 
+	
+}
+.tab1_04{
+	background-image:url('images/tab1_04.gif'); 
+	
+}
+.tab1_06{
+	background-image:url('images/tab1_06.gif'); 
+	
+}
+
+.tab1_07{
+	background-image:url('images/tab1_07.gif'); 
+	
+}
+.tab1_08{
+	background-image:url('images/tab1_08.gif'); 
+	
+}
+
+.tab1_09{
+	background-image:url('images/tab1_09.gif'); 
+	
+}
+.tab1_10{
+	background-image:url('images/tab1_10.gif'); 
+	
+}
+
+.formbg {
+	background-image: url('images/grad.gif');
+	background-repeat: repeat-x;
+	border: 1px solid #AFBFE1;
+	background-color: white;
+	padding: 5px;
+}
+INPUT{
+	font-Family:Arial;
+	FONT-SIZE: 11px;
+	color: #000000;
+	border:1px solid #AFBFE1;
+}
+
+input.token {
+	font-Family:Arial;
+	FONT-SIZE: 11px;
+	color: #1f376b;
+	height: 20px;
+	text-decoration: none;
+	border:1px solid #abc1e4;
+	background-color:#FFFFFF;
+	cursor: hand;
+	background-repeat: no-repeat;
+	background-position: left center;
+	margin-bottom:2px;
+	margin-top:2px;
+}
+
+.formth {
+	font-Family:Arial;
+	FONT-SIZE: 11px;
+	color: #000000;
+	text-decoration: none;
+	height: 16px;
+	vertical-align: middle;
+	background-image: url('images/grad.gif');
+	text-align: center;
+	padding-right: 5px;
+	padding-left: 5px;
+	border-right:1px solid #abc1e4;
+	border-bottom:1px solid #abc1e4;
+}
+.sortableTD {
+	font-Family:Arial;
+	FONT-SIZE: 11px;
+	color: #000000;
+	text-decoration: none;
+	height: 16px;
+	vertical-align: middle;
+	padding-right: 5px;
+	padding-left: 5px;
+	border-right:1px solid #abc1e4;
+	border-bottom:1px solid #abc1e4;
+}

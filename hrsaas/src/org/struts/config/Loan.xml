@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+        
+    <struts>   
+        <package name="loan" namespace="/loan" extends="struts-default">
+        
+	        <result-types>
+			  	<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+			</result-types>
+		
+			 <action name="LoanMaster_*" method="{1}" class="org.struts.action.Loan.LoanMasterAction">
+				<result name="input" type="tiles" >master.LoanMaster</result>
+				<result name="success" type="tiles">master.LoanMaster</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+				<result name="showData" type="tiles">master.LoanMasterData</result>
+				<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>	
+			</action>
+			
+			<action name="LoanClosure_*" method="{1}" class="org.struts.action.Loan.LoanClosureAction">
+				<result name="input" type="tiles" >master.LoanClosure</result>
+				<result name="success" type="tiles">master.LoanClosure</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+				
+			</action>	
+			
+			<action name="LoanProcessing_*" method="{1}" class="org.struts.action.Loan.LoanProcessingAction">
+				<result name="input" type="tiles" >master.LoanProcessinglist</result>
+				<result name="success" type="tiles">master.LoanProcessing</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="guarnatorPage" type="tiles">LoanProcessing.guarnatorPage</result>
+				<result name="calculateEMI" type="tiles">calculateEMIPage</result>
+				<result name="pageDtls" type="tiles" >master.LoanProcessing</result>			
+				<!-- For mypage Entry -->
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="successApprov" type="chain">
+				LoanApproval_input
+			</result>
+			</action>	
+			
+			<action name="LoanApplication_*" method="{1}" class="org.struts.action.Loan.LoanApplicationAction">
+				<result name="input" type="tiles" >master.LoanApplication</result>
+				<result name="success" type="tiles">master.LoanApplication</result>	
+				<result name="calculateEMI" type="tiles">calculateEMIPage</result>
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+				
+					<!-- my page code -->	
+				<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>	
+	 		
+			</action>	
+			
+			<action name="LoanApproval_*" method="{1}" class="org.struts.action.Loan.LoanApprovalAction">
+				<result name="input" type="tiles" >master.LoanHrApprovallist</result>
+				<result name="success" type="tiles">master.LoanApplication</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="pageDtls" type="tiles" >master.LoanApproval</result>
+				<!-- For mypage Entry -->
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+						
+			</action>
+			
+			<action name="LoanMisReport_*" method="{1}" class="org.struts.action.Loan.LoanMisReportAction">
+				<result name="input" type="tiles" >master.LoanMisReport</result>
+				<result name="success" type="tiles">master.LoanMisReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>
+			
+			<action name="LoanIndexReport_*" method="{1}" class="org.struts.action.Loan.LoanIndexAction">
+				<result name="input" type="tiles" >master.LoanIndexReport</result>
+				<result name="success" type="tiles">master.LoanIndexReport</result>	
+				<result name="mailReport" type="tiles">common.mailReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+			</action>
+		
+			<action name="NewLoanIssuedRpt_*" method="{1}" class="org.struts.action.Loan.NewLoansIssuedReportAction">
+				<result name="input" type="tiles" >newLoan.IssuedReport</result>
+				<result name="success" type="tiles">newLoan.IssuedReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="viewOnScreen" type="tiles">newLoan.viewOnScreen</result>			
+			</action>
+			<action name="LoanIssuedRpt_*" method="{1}" class="org.struts.action.payroll.payroll_UMC.UmcLoanIssuedReportAction">
+				<result name="input" type="tiles" >umcLoan.IssuedReport</result>
+				<result name="success" type="tiles">umcLoan.IssuedReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="viewOnScreen" type="tiles">umcLoan.viewOnScreen</result>
+			</action>
+			<action name="UmcLoanIndexReport_*" method="{1}" class="org.struts.action.payroll.payroll_UMC.UmcLoanIndexReportAction">
+				<result name="input" type="tiles" >umcLoan.LoanIndexReport</result>
+				<result name="success" type="tiles">umcLoan.LoanIndexReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+			</action>
+			
+			
+			<!-- Added Ganesh -->
+			
+			<action name="LoanMISApplicationReport_*" method="{1}" class="org.struts.action.Loan.LoanMISApplicationReportAction">
+				<result name="input" type="tiles" >Loan.LoanMISIndexReport</result>
+				<result name="success" type="tiles">Loan.LoanMISIndexReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="mailReport" type="tiles">common.mailReport</result>	
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+			</action>
+			
+			
+			
+			<!-- This is for mypage starts -->
+		
+			<action name="MypageProcessManagerAlerts_*" method="{1}" class="org.struts.action.mypage.MypageProcessManagerAlertsAction">
+			<result name="input" type="tiles">alert.mypage</result>
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="tiles">
+				mypage.services
+			</result>	
+			</action>
+			
+		 <action name="EmailPayrollReport_*" method="{1}" class="org.struts.action.payroll.EmailPayrollReportAction">
+				<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+ </package>
+        <!-- Add actions here -->    
+</struts>

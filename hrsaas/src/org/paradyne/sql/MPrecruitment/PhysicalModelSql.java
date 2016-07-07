@@ -1,0 +1,31 @@
+/**
+ * 
+ */
+package org.paradyne.sql.MPrecruitment;
+
+import org.paradyne.lib.SqlBase;
+
+
+public class PhysicalModelSql extends SqlBase {
+
+	public String getQuery(int id){
+		switch (id) {
+		
+		case 1 : System.out.println("sssssssssssssssssss");
+			return " insert into HRMS_MP_PERSONAL( "
+				+" PERSONAL_RECUIRT_ID,PERSONAL_HEIGHT,PERSONAL_CHEST,PERSONAL_CHESTWITH_INCR,PERSONAL_RELIGION	"
+				+" ,PERSONAL_CAST,PERSONAL_CATEGORY,PERSONAL_CAT_SC,PERSONAL_CAT_ST,PERSONAL_CAT_VJ,PERSONAL_CAT_NT1	"
+				+" ,PERSONAL_CAT_NT2,PERSONAL_CAT_NT3,PERSONAL_CAT_SBC,PERSONAL_CAT_OBC,PERSONAL_CAT_OPEN,PERSONAL_CAT_NCL "	
+				+" ,PERSONAL_CAT_CERT_OFFICER,PERSONAL_CAT_CERT_NO,PERSONAL_CAT_CERT_DATE,PERSONAL_ID)"
+				+" values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,TO_DATE(?,'dd-mm-yyyy'),(select Nvl(max(PERSONAL_ID),0)+1 from HRMS_MP_PERSONAL))";
+		
+		case 2:return "update HRMS_MP_PERSONAL set PERSONAL_HEIGHT=?,PERSONAL_CHEST=?,PERSONAL_CHESTWITH_INCR	=?, "
+		+" PERSONAL_RELIGION=?,PERSONAL_CAST=?,PERSONAL_CATEGORY=?,PERSONAL_CAT_SC	=?,PERSONAL_CAT_ST=?,PERSONAL_CAT_VJ	=?, "
+		+" PERSONAL_CAT_NT1=?,PERSONAL_CAT_NT2=?,PERSONAL_CAT_NT3=?,PERSONAL_CAT_SBC=?,PERSONAL_CAT_OBC=?,	"
+		+" PERSONAL_CAT_OPEN=?,PERSONAL_CAT_NCL=?,PERSONAL_CAT_CERT_OFFICER=?,PERSONAL_CAT_CERT_NO=?,	"
+		+" PERSONAL_CAT_CERT_DATE=? WHERE PERSONAL_RECUIRT_ID=? ";
+
+		default : return "";
+		}
+	}
+}

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+ 
+
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	
+	<!-- Added by priyanka -->
+<definition name=".hrmHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/hrmHomeLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<!-- ended by priyanka -->
+	
+	
+	<definition name="probation.ProbationSetting"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Probation Setting" />
+		<put-attribute name="body" value="/pages/probation/probationSetting.jsp" />
+
+	</definition>
+
+	<definition name="probation.ProbationConfirmation"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Probation Confirmation" />
+		<put-attribute name="body" value="/pages/probation/probationConfirm.jsp" />
+
+	</definition>
+
+
+	<definition name="probation.ProbationAlreadyProcess"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Probation Confirmation" />
+		<put-attribute name="body"
+			value="/pages/probation/probationConfirmAlreadyprocess.jsp" />
+	</definition>
+
+
+<definition name="probation.ProbationLetters"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Probation Letters" />
+		<put-attribute name="body" value="/pages/probation/probationLetters.jsp" />
+	</definition>
+
+<definition name="probationList" extends=".hrmHomeLayout">
+		<put-attribute name="title"
+			value="Probation Evaluation Parameter Details" />
+		<put-attribute name="body"
+			value="/pages/probation/probationevaluationParameterList.jsp" />
+	</definition>
+
+<definition name="probationData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Probation Evaluation Parameter Data" />
+		<put-attribute name="body"
+			value="/pages/probation/probationevaluationParamaterData.jsp" />
+	</definition>
+
+
+<definition name="probation.probationDueList"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Probation Due lIst Report" />
+		<put-attribute name="body" value="/pages/probation/probationDueList.jsp" />
+
+	</definition>
+
+<definition name="probationEvaluationList" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Probation Evaluation" />
+		<put-attribute name="body"
+			value="/pages/probation/ProbationEvaulationList.jsp" />
+
+	</definition>
+
+<definition name="probationEvaluation" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Probation Evaluation" />
+		<put-attribute name="body"
+			value="/pages/probation/ProbationEvaluation.jsp" />
+
+	</definition>
+
+<definition name="HRData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Define HR Policy" />
+		<put-attribute name="body" value="/pages/probation/defineHR.jsp" />
+	</definition>
+
+<definition name="ProbationMisReport" extends=".mainLayout">
+		<put-attribute name="title" value="Probation Mis Report" />
+		<put-attribute name="body"
+			value="/pages/probation/probationMisReport.jsp" />
+	</definition>
+
+</tiles-definitions>

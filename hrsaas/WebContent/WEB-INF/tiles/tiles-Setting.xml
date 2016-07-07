@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+ 
+
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	
+			<!-- Added by priyanka -->
+<definition name=".hrmHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/hrmHomeLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<!-- ended by priyanka -->
+	
+	
+	<definition name=".myPageLeftRightLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name=".payrollLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<!--  <put name="menu" value="/pages/common/payrollLeftMenu.jsp" />-->
+		<put-attribute name="menu" value="/pages/common/payrollLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+ 	<definition name=".recruitmentHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower"/>
+		<put-attribute name="header" value="/pages/common/header.jsp"/>
+		<put-attribute name="menu" value="/pages/common/recruitmentHomeLeftMenu.jsp"/>
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp"/>
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+		
+	<definition name=".cofigurationLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/configurationLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name="master.setting" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Setting Master" />
+		<put-attribute name="body" value="/pages/settings/corporate.jsp" />
+	</definition>
+	
+
+	<definition name="master.corporate" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Setting Master" />
+		<put-attribute name="body" value="/pages/settings/corporate.jsp" />
+	</definition>
+
+		<definition name="master.knowledge" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Setting Master" />
+		<put-attribute name="body" value="/pages/settings/knowledge.jsp" />
+	</definition>
+
+		<definition name="master.genInfo" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Setting Master" />
+		<put-attribute name="body" value="/pages/settings/generalInfo.jsp" />
+	</definition>
+
+		<definition name="master.poll" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Setting Master" />
+		<put-attribute name="body" value="/pages/settings/poll.jsp" />
+	</definition>
+
+		<definition name="master.compComm" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Setting Master" />
+		<put-attribute name="body" value="/pages/settings/companyComm.jsp" />
+	</definition>
+
+	<definition name="master.thought" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Setting Master" />
+		<put-attribute name="body" value="/pages/settings/thought.jsp" />
+	</definition>
+
+		<definition name="master.quickLink" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Setting Master" />
+		<put-attribute name="body" value="/pages/settings/quickLink.jsp" />
+	</definition>
+
+	<definition name="master.eMail" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Setting Master" />
+		<put-attribute name="body" value="/pages/settings/eMail.jsp" />
+	</definition>
+
+
+		<definition name="master.passSetting" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Setting Master" />
+		<put-attribute name="body" value="/pages/settings/passwordSettings.jsp" />
+	</definition>
+
+		<definition name="master.mail" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Setting Master" />
+		<put-attribute name="body" value="/pages/settings/mail.jsp" />
+	</definition>
+
+
+	
+	<definition name="master.configureServerJsp"
+		extends=".cofigurationLayout">
+		<put-attribute name="title" value="My Mail Setting" />
+		<put-attribute name="body"
+			value="/pages/settings/myMailConfiguration.jsp" />
+	</definition>
+
+
+	<definition name="master.mailChecklist" extends=".cofigurationLayout">
+		<put-attribute name="title" value="MailSetting Checklist Form" />
+		<put-attribute name="body" value="/pages/settings/mailChecklist.jsp" />
+	</definition>
+
+
+		<definition name="master.eMail" extends=".mainLayout">
+		<put-attribute name="title" value="Setting Master" />
+		<put-attribute name="body" value="/pages/settings/eMail.jsp" />
+	</definition>
+
+
+		<definition name="master.email" extends=".mainLayout">
+		<put-attribute name="title" value="Config Master" />
+		<put-attribute name="body" value="/pages/settings/emailConfig.jsp" />
+	</definition>
+
+
+	<definition name="master.suggestion"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Suggestion Master" />
+		<put-attribute name="body" value="/pages/settings/SuggestionForm.jsp" />
+	</definition>
+
+		<definition name="master.SuggestionAppr" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Suggestion Approval" />
+		<put-attribute name="body" value="/pages/settings/SuggestionApproval.jsp" />
+	</definition>
+
+
+	<definition name="setting.Services" extends=".mainLayout">
+		<put-attribute name="body" value="/pages/settings/services.jsp" />
+	</definition>
+
+
+	<definition name="setting.SuperSet" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Settings" />
+		<put-attribute name="body" value="/pages/settings/superSettings.jsp" />
+	</definition>
+
+
+		<definition name="setting.paySettings" extends=".cofigurationLayout">
+		<put-attribute name="title" value="PaySettings" />
+		<put-attribute name="body" value="/pages/settings/payrollSettings.jsp" />
+	</definition>
+
+
+	<definition name="setting.usercreation" extends=".mainLayout">
+		<put-attribute name="title" value="User Creation" />
+		<put-attribute name="body" value="/pages/settings/userCreation.jsp" />
+	</definition>
+
+
+		<definition name="setting.suggmisreport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Suggestion MisReport" />
+		<put-attribute name="body"
+			value="/pages/settings/SuggestionMisReport.jsp" />
+	</definition>
+
+
+		<definition name="Recruitment.Settings" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="RecruitmentSettings" />
+		<put-attribute name="body"
+			value="/pages/settings/recruitmentSettings.jsp" />
+	</definition>
+
+
+	
+	<definition name="setting.gratuityConfig" extends=".payrollLayout">
+		<put-attribute name="title" value="Gratuity Configuration" />
+		<put-attribute name="body"
+			value="/pages/settings/gratuityConfiguration.jsp" />
+	</definition>
+
+
+		<definition name="setting.gratuityCredits" extends=".mainLayout">
+		<put-attribute name="title" value="Credit List" />
+		<put-attribute name="body"
+			value="/pages/settings/gratuityConfCreditList.jsp" />
+	</definition>
+
+
+		<definition name="settings.salarySlipConfig"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Salary Slip Configuration" />
+		<put-attribute name="body"
+			value="/pages/settings/salarySlipConfiguration.jsp" />
+	</definition>
+
+
+	<definition name="settings.adminConf" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Admin Configuration" />
+		<put-attribute name="body" value="/pages/settings/adminConfSetting.jsp" />
+	</definition>
+
+		<definition name="home.tipsLink" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Tips Setting" />
+		<put-attribute name="body" value="/pages/settings/tips.jsp" />
+	</definition>
+
+		<definition name="tips.message" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Tips Information"/>
+		<put-attribute name="body" value="/pages/settings/sendMassMailReuest.jsp"/>
+	</definition>
+
+
+
+</tiles-definitions>

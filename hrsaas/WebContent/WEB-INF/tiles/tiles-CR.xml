@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	* 
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name=".homeLayout"
+		template="/pages/common/homeLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="" />
+	</definition>
+ 
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name=".CRLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/CR/crFooter.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name=".reportLayout"
+		template="/pages/common/reportLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name=".CRWithoutFooterLayout" template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<!-- For Analytics Layout -->
+	<definition name=".D1AnalyticLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<!-- For Analytics External Layout Layout -->
+	<definition name=".D1AnalyticLayoutExternalUser"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name=".decisionOneHomeLayout"
+	template="/pages/common/layout.jsp">
+	<put-attribute name="title" value="PeoplePower"/>
+	<put-attribute name="header" value="/pages/common/header.jsp"/>
+	<put-attribute name="menu" value="/pages/common/d1LeftMenuLayout.jsp"/>
+	<put-attribute name="rightTile" value="/pages/common/rightTile.jsp"/>
+	<put-attribute name="footer" value="/pages/common/footer.jsp" />
+	<put-attribute name="body" value="" />
+  </definition>
+	
+	<definition name="cr.custHistoryReport" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Customer Login" />
+		<put-attribute name="body" value="/pages/CR/customerHistoryReport.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="login.customerReportLogin" extends=".mainLayout">
+		<put-attribute name="title" value="Customer Login" />
+		<put-attribute name="body" value="/pages/CR/customerLogin.jsp" />
+	</definition>
+	
+	<definition name="login.customerReportHeader" extends=".CRLayout">
+		<put-attribute name="title" value="Customer Login" />
+		<put-attribute name="body" value="/pages/CR/customerReportHeader.jsp" />
+	</definition>
+	
+	<definition name="login.customerChangePass" extends=".CRWithoutFooterLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body"
+			value="/pages/CR/customerChangePassword.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="cr.CustomerAccountInfo" extends=".CRWithoutFooterLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body"
+			value="/pages/CR/customerAccountList.jsp" />
+	</definition>
+
+	<definition name="cr.getAccReport" extends=".CRWithoutFooterLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body"
+			value="/pages/CR/customerReportList.jsp" />
+	</definition>
+
+	<definition name="cr.generateReport" extends=".CRWithoutFooterLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body"
+			value="/pages/CR/generateReport.jsp" />
+	</definition>
+	
+	<!-- START:CRM TILES MAPPING -->
+	<definition name="cr.CustomerAccountInfo_CRM" extends=".CRWithoutFooterLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body"
+			value="/pages/CR/crmAccountList.jsp" />
+	</definition>
+	<!-- START:CRM TILES MAPPING -->
+
+	<definition name="cr.performanceMetricsPage"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Performance Metrics" />
+		<put-attribute name="body"
+			value="/pages/CR/performanceMetricsPage.jsp" />
+	</definition>
+	<definition name="cr.crmList"
+		extends=".mainLayout">
+		<put-attribute name="title" value="CRM List" />
+		<put-attribute name="body"
+			value="/pages/CR/crmListPage.jsp" />
+	</definition>
+	
+	<definition name="cr.Reason"
+		extends=".mainLayout">
+		<put-attribute name="title" value="CRM List" />
+		<put-attribute name="body"
+			value="/pages/CR/crmListPage.jsp" />
+	</definition>
+	<definition name="cr.escalationDtlPage"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Escalation" />
+		<put-attribute name="body"
+			value="/pages/CR/escalationDtlPage.jsp" />
+	</definition>
+	<definition name="cr.plannedDtlPage"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Planned" />
+		<put-attribute name="body"
+			value="/pages/CR/plannedDtlPage.jsp" />
+	</definition>
+
+	<!--  Start of Client User Master -->
+
+	<definition name="cr.clientMasterListPage" extends=".mainLayout">
+		<put-attribute name="title" value="Client Master" />
+		<put-attribute name="body" value="/pages/CR/clientMasterList.jsp" />
+	</definition>
+
+	<definition name="cr.clientBusinessUserDtlPage" extends=".mainLayout">
+		<put-attribute name="title" value="Client Master" />
+		<put-attribute name="body" value="/pages/CR/clientMasterList.jsp" />
+	</definition>
+	
+	<definition name="common.f9page" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9page.jsp" />
+	</definition>
+
+	<definition name="f9multiSelect" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9MultiSelect.jsp" />
+	</definition>
+
+	<definition name="cr.ClientReport" extends=".reportLayout">
+		<put-attribute name="title" value="Client Report" />
+		<put-attribute name="body" value="/pages/CR/clientReport.jsp" />
+	</definition>
+	
+	<definition name="cr.ClientMasterData" extends=".mainLayout">
+		<put-attribute name="title" value="Client Master Data" />
+		<put-attribute name="body"
+			value="/pages/CR/clientMasterData.jsp" />
+	</definition>
+	
+	<!--  End of Client User Master -->
+	
+	
+	
+	<definition name="cr.accountMasterListPage" extends=".mainLayout">
+		<put-attribute name="title" value="Account Master" />
+		<put-attribute name="body" value="/pages/CR/accountMasterList.jsp" />
+	</definition>
+	<definition name="cr.accountMasterDataPage"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Account Master Data" />
+		<put-attribute name="body"
+			value="/pages/CR/accountMasterData.jsp" />
+	</definition>
+	<definition name="cr.crmMappingDtlPage"
+		extends=".mainLayout">
+		<put-attribute name="title" value="CRM Mapping Dtl Page" />
+		<put-attribute name="body"
+			value="/pages/CR/crmMappingDtlPage.jsp" />
+	</definition>
+	<definition name="cr.businessUserDtlPage"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Business User Dtl Page" />
+		<put-attribute name="body"
+			value="/pages/CR/businessUserDtlPage.jsp" />
+	</definition>
+
+	<definition name="login.customerMultipleAccount" extends=".CRLayout">
+		<put-attribute name="title" value="Customer Login" />
+		<put-attribute name="body" value="/pages/CR/customerMultipleAccount.jsp" />
+	</definition>
+
+
+	<definition name="cr.CustomerMultipleAccountInfo" extends=".CRWithoutFooterLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body"
+			value="/pages/CR/customerMultipleAccountList.jsp" />
+	</definition>
+	
+	<definition name="cr.customerHistoryReport" extends=".mainLayout">
+		<put-attribute name="title" value="Customer History Report" />
+		<put-attribute name="body" value="/pages/CR/customerHistoryReport.jsp" />
+	</definition>
+	
+	<definition name="cr.dataReconcilationPage"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Planned" />
+		<put-attribute name="body"
+			value="/pages/CR/dataReconcilationPage.jsp" />
+	</definition>
+	
+	
+	<definition name="cr.DataReconcileSuccess"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Planned" />
+		<put-attribute name="body"
+			value="/pages/CR/dataReconcileSuccess.jsp" />
+	</definition>
+	
+	<definition name="cr.callViewPage"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Planned" />
+		<put-attribute name="body"
+			value="/pages/CR/callViewPage.jsp" />
+	</definition>
+	
+
+	<definition name="home.d1AnalyticHome" extends=".D1AnalyticLayout">
+		<put-attribute name="title" value="People Power"/>
+		<put-attribute name="body" value="/pages/CR/d1AnalyticHome.jsp"/>
+	</definition>
+	
+	<definition name="home.d1AnalyticHomeExternalUser" extends=".D1AnalyticLayoutExternalUser">
+		<put-attribute name="title" value="People Power"/>
+		<put-attribute name="body" value="/pages/CR/d1AnalyticHome.jsp"/>
+	</definition>
+	
+	<definition name="home.d1DashBoardHome" extends=".mainLayout">
+		<put-attribute name="title" value="People Power"/>
+		<put-attribute name="body" value="/pages/CR/d1DashBoardHome.jsp"/>
+	</definition>
+	
+	<definition name="login.clientChangePass" extends=".mainLayout">
+		<put-attribute name="title" value="People Power" />
+		<put-attribute name="body"
+			value="/pages/CR/changePassword.jsp" />
+	</definition>
+	
+	<definition name="cr.dashBoard"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Planned" />
+		<put-attribute name="body"
+			value="/pages/CR/dashBoard.jsp" />
+	</definition>
+	<definition name="cr.dashBoardMenu"
+		extends=".homeLayout">
+		<put-attribute name="title" value="Reports" />
+		<put-attribute name="body"
+			value="/pages/CR/dashBoardMenu.jsp" />
+	</definition>
+	
+	<definition name="cr.dashBoradPopupTab"
+		extends=".homeLayout">
+		<put-attribute name="title" value="Reports" />
+		<put-attribute name="body"
+			value="/pages/CR/dashBoradPopupTab.jsp" />
+	</definition>
+	
+	
+	<definition name="cr.dashBoardshowComponent"
+		extends=".homeLayout">
+		<put-attribute name="title" value="Reports" />
+		<put-attribute name="body"
+			value="/pages/CR/dashBoradComponent.jsp" />
+	</definition>
+	<definition name="cr.dashboardMail"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Reports" />
+		<put-attribute name="body"
+			value="/pages/CR/dashboardMail.jsp" />
+	</definition>
+	
+	<definition name="cr.emailClosed"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Reports" />
+		<put-attribute name="body"
+			value="/pages/CR/emailClosed.jsp" />
+	</definition>
+	
+	<definition name="cr.callMIS"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Reports" />
+		<put-attribute name="body"
+			value="/pages/CR/dashBoardMIS.jsp" />
+	</definition>
+	
+	<definition name="cr.dashboardHRM"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Reports" />
+		<put-attribute name="body"
+			value="/pages/CR/dashboardHRM.jsp" />
+	</definition>
+	<definition name="cr.dashBoardReportScheduler"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Reports" />
+		<put-attribute name="body"
+			value="/pages/CR/dashBoardReportScheduler.jsp" />
+	</definition>
+	<definition name="cr.f9employeeToMail"
+		extends=".homeLayout">
+		<put-attribute name="title" value="Reports" />
+		<put-attribute name="body"
+		value="/pages/CR/dashboardMail.jsp" />
+	</definition>
+	<definition name="common.f9page" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9page.jsp" />
+	</definition>
+	<!-- For DashBoard Configuration  -->
+
+	<definition name="cr.dashBoardConfiguration" extends=".mainLayout">
+		<put-attribute name="title" value="Planned" />
+		<put-attribute name="body"	value="/pages/CR/dashBoardConfiguration.jsp" />
+			</definition>
+	<!-- End DashBoard Configuration -->
+	
+	
+	
+	<!-- For Managed Components -->
+
+	<definition name="cr.manageComponentsList"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Planned" />
+		<put-attribute name="body"
+			value="/pages/CR/manageComponentsList.jsp" />
+	</definition>
+	
+	<definition name="cr.manageComponentsPage"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Planned" />
+		<put-attribute name="body"
+			value="/pages/CR/mangeComponetsPage.jsp" />
+	</definition>
+	
+
+	<!--  Start of Data Reconciliation -->
+
+	<definition name="cr.DataReconcileListPage" extends=".mainLayout">
+		<put-attribute name="title" value="Data Reconciliation" />
+		<put-attribute name="body" value="/pages/CR/dataReconciliationList.jsp" />
+	</definition>
+
+
+	<definition name="common.f9page" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9page.jsp" />
+	</definition>
+
+	<definition name="f9multiSelect" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9MultiSelect.jsp" />
+	</definition>
+
+	
+	<!--  End of Data Reconciliation -->
+
+	<!-- Start of Manage Client DashBoard  -->
+	
+	<definition name="cr.manageClientDashBoardList" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Manage Client DashBoard Master" />
+		<put-attribute name="body" value="/pages/CR/manageClientDashBoardList.jsp" />
+	</definition>
+	
+	<definition name="cr.manageClientDashBoardEmployeeMap" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Manage Client DashBoard Employee Map" />
+		<put-attribute name="body" value="/pages/CR/manageClientDashBoardEmployeeMap.jsp" />
+	</definition>
+	
+	<definition name="cr.manageClientDashBoardAccountMap" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Manage Client DashBoard Account Map" />
+		<put-attribute name="body" value="/pages/CR/manageClientDashBoardAccountMap.jsp" />
+	</definition>
+	
+	<definition name="cr.manageClientDashBoardAccountList" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Manage Client DashBoard Account List" />
+		<put-attribute name="body" value="/pages/CR/manageClientDashBoardAccountList.jsp" />
+	</definition>
+	
+	<definition name="cr.manageClientDashBoardEdit" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Edit Client DashBoard Account List" />
+		<put-attribute name="body" value="/pages/CR/manageClientDashBoardEdit.jsp" />
+	</definition>
+
+	<definition name="cr.userFilter" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="User Filter" />
+		<put-attribute name="body" value="/pages/CR/userFilterForDashboard.jsp" />
+	</definition>
+	<!-- OT Budget Start -->
+	<definition name="cr.DecisionOneOTBudgetPage" extends=".mainLayout">
+		<put-attribute name="title" value="Data Reconciliation" />
+		<put-attribute name="body" value="/pages/CR/decisiononeOTBudgetPage.jsp" />
+	</definition>
+	<!-- OT Budget End -->
+
+	
+	<!-- End of Manage Client DashBoard  -->
+	<!-- MRC Data Upload Screen -->
+	<!-- 
+	<definition name="cr.MRCDataUploadInput" extends=".mainLayout">
+		<put-attribute name="title" value="MRC Data Upload" />
+		<put-attribute name="body" value="/pages/CR/mrcDataUploadInput.jsp" />
+	</definition>
+	 -->
+	<!-- End MRc Data Upload screen -->
+	
+	
+</tiles-definitions>

@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+ 
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name=".myPageLeftRightLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+	<definition name=".mainLayoutPay"
+		template="/pages/common/layoutPay.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>	
+
+	<definition name=".reportLayout"
+		template="/pages/common/reportLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+ 
+	<definition name=".f9Layout"
+		template="/pages/common/f9layout.jsp">
+		<put-attribute name="title" value="Select record" />
+		<put-attribute name="header" value="/pages/common/f9header.jsp" />
+		<put-attribute name="footer" value="/pages/common/f9footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name=".payrollLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<!--  <put name="menu" value="/pages/common/payrollLeftMenu.jsp" />-->
+		<put-attribute name="menu" value="/pages/common/payrollLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+
+	<!-- Mapping for F9 Window  -->
+
+	<definition name="common.f9page" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9page.jsp" />
+	</definition>
+	<definition name="common.addTask" extends=".reportLayout">
+		<put-attribute name="body" value="/pages/common/calendar/addTask.jsp" />
+	</definition>
+
+	<definition name="common.f9ParamPage" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9ParamPage.jsp" />
+	</definition>
+
+	<definition name="common.f9TydutyPage" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9TydutyPage.jsp" />
+	</definition>
+
+	<definition name="f9multiSelect" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9MultiSelect.jsp" />
+	</definition>
+	
+	<definition name="f9pageSearch" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9pageSearch.jsp" />
+	</definition>
+
+	<!-- Mapping END for F9 Window  -->
+
+	<definition name="overRecovery" extends=".mainLayout">
+		<put-attribute name="title" value="Over Recovery" />
+		<put-attribute name="body" value="/pages/payroll/salary/overrecovery.jsp" />
+	</definition>
+	
+	<definition name="overRecoveryReport" extends=".reportLayout">
+		<put-attribute name="title" value="Over Recovery Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/salary/overrecoveryReport.jsp" />
+	</definition>
+	
+	<definition name="payroll.CreditMaster" extends=".payrollLayout">
+		<put-attribute name="title" value="Credit Master" />
+		<put-attribute name="body" value="/pages/payroll/master/creditMaster.jsp" />
+	</definition>
+
+	<definition name="payroll.CreditMasterData" extends=".payrollLayout">
+		<put-attribute name="title" value="Center Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/master/creditMasterData.jsp" />
+	</definition>
+
+	<definition name="payroll.creditReport" extends=".reportLayout">
+		<put-attribute name="title" value="Credit Report" />
+		<put-attribute name="body" value="/pages/payroll/master/creditReport.jsp" />
+	</definition>
+	
+	<definition name="common.mailReport" extends=".mainLayout">
+		<put-attribute name="body" value="/pages/payroll/emailReport.jsp"/>
+	</definition>
+
+	<definition name="payroll.DebitMaster" extends=".payrollLayout">
+		<put-attribute name="title" value="Debit Master" />
+		<put-attribute name="body" value="/pages/payroll/master/debitMaster.jsp" />
+	</definition>
+
+	<definition name="payroll.DeditMasterData" extends=".payrollLayout">
+		<put-attribute name="title" value="Debit Master" />
+		<put-attribute name="body"
+			value="/pages/payroll/master/debitMasterData.jsp" />
+	</definition>
+
+	<definition name="payroll.DebitReport" extends=".reportLayout">
+		<put-attribute name="title" value="Debit Report" />
+		<put-attribute name="body" value="/pages/payroll/master/debitReport.jsp" />
+	</definition>
+
+	<definition name="payroll.Credit" extends=".payrollLayout">
+		<put-attribute name="title" value="Credit Detail" />
+		<put-attribute name="body" value="/pages/payroll/master/empCredit.jsp" />
+	</definition>
+
+	<definition name="payroll.incHistory" extends=".mainLayout">
+		<put-attribute name="title" value="Credit Detail" />
+		<put-attribute name="body"
+			value="/pages/payroll/master/empCreditIncrementHistory.jsp" />
+	</definition>
+
+	<definition name="NdaAttend" extends=".mainLayout">
+		<put-attribute name="title" value="Nda Hours Report" />
+		<put-attribute name="body" value="/pages/payroll/NDA/ndaAttendance.jsp" />
+	</definition>
+
+	<definition name="NdaCalc" extends=".mainLayout">
+		<put-attribute name="title" value="Nda Hours Report" />
+		<put-attribute name="body" value="/pages/payroll/NDA/ndaCalculation.jsp" />
+	</definition>
+
+	<definition name="payroll.DAArear" extends=".mainLayout">
+		<put-attribute name="title" value="Da Arrear" />
+		<put-attribute name="body" value="/pages/payroll/daArrears.jsp" />
+	</definition>
+
+	<definition name="payroll.DAArearAudit" extends=".mainLayout">
+		<put-attribute name="title" value="Da Arrear Audit" />
+		<put-attribute name="body" value="/pages/payroll/daArrearsAudit.jsp" />
+	</definition>
+
+	<definition name="payroll.DaAcquintanceRoll"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Da Acquintance Roll" />
+		<put-attribute name="body" value="/pages/payroll/daAcquintanceRoll.jsp" />
+	</definition>
+
+	<definition name="payroll.NonIndustrialSalaryAction"
+		extends=".mainLayoutPay">
+		<put-attribute name="title" value="Non Industrial Salary" />
+		<put-attribute name="body" value="/pages/payroll/nonIndustrialSalary.jsp" />
+	</definition>
+
+	<definition name="payroll.NonIndustrialSalaryAcquaintanceRollAction"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Non Industrial Salary" />
+		<put-attribute name="body"
+			value="/pages/payroll/nonIndustrialSalaryAcquaintanceRoll.jsp" />
+	</definition>
+
+	<definition name="payroll.IndustrialSalaryAuditAction"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Non Industrial Salary Audit" />
+		<put-attribute name="body"
+			value="/pages/payroll/industrialSalaryAudit.jsp" />
+	</definition>
+
+	<definition name="payroll.NonIndustrialSalaryAudit"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Non Industrial Salary Audit" />
+		<put-attribute name="body"
+			value="/pages/payroll/nonIndustrialSalaryAudit.jsp" />
+	</definition>
+
+	<definition name="payroll.taxInvData" extends=".payrollLayout">
+		<put-attribute name="title" value="Tax Investment" />
+		<put-attribute name="body"
+			value="/pages/payroll/master/taxInvestmentData.jsp" />
+	</definition>
+
+	<definition name="payroll.taxInvReport" extends=".payrollLayout">
+		<put-attribute name="title" value="Tax Investment Report" />
+		<put-attribute name="body" value="/pages/payroll/master/taxInvReport.jsp" />
+	</definition>
+
+	<definition name="Arrears" extends=".mainLayout">
+		<put-attribute name="title" value="NDA Detail" />
+		<put-attribute name="body" value="/pages/payroll/Arrears/payArrears.jsp" />
+	</definition>
+
+	<definition name="bonus.EmpBonus" extends=".mainLayout">
+		<put-attribute name="title" value="Bonus Report" />
+		<put-attribute name="body" value="/pages/payroll/empBonus.jsp" />
+	</definition>
+
+	<definition name="debit.EmpDebit" extends=".payrollLayout">
+		<put-attribute name="title" value="Debit Report" />
+		<put-attribute name="body" value="/pages/payroll/empDebit.jsp" />
+	</definition>
+
+	<definition name="bonusAcq.BonusAcqReport" extends=".mainLayout">
+		<put-attribute name="title" value="Bonus Acquaintance Report" />
+		<put-attribute name="body" value="/pages/payroll/bonusAcqReport.jsp" />
+	</definition>
+
+	<definition name="ndaAcqRoll.report" extends=".mainLayout">
+		<put-attribute name="title" value="Nda Acquittance Roll Report" />
+		<put-attribute name="body" value="/pages/payroll/NDA/ndaAcqRoll.jsp" />
+	</definition>
+
+	<definition name="ndaHours.report" extends=".mainLayout">
+		<put-attribute name="title" value="Nda Hours Report" />
+		<put-attribute name="body" value="/pages/payroll/NDA/ndaHours.jsp" />
+	</definition>
+
+	<definition name="payroll.OtParaMaster" extends=".mainLayout">
+		<put-attribute name="title" value="Ot Parameter Master" />
+		<put-attribute name="body" value="/pages/payroll/master/otParaMaster.jsp" />
+	</definition>
+
+	<definition name="payroll.OtParaReport" extends=".reportLayout">
+		<put-attribute name="title" value="Ot Parameter Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/master/otParaMasterReport.jsp" />
+	</definition>
+
+	<definition name="payroll.CcaParaMaster" extends=".mainLayout">
+		<put-attribute name="title" value="CCA Parameter" />
+		<put-attribute name="body"
+			value="/pages/payroll/master/ccaParaMaster.jsp" />
+	</definition>
+
+	<definition name="payroll.CcaParaReport" extends=".reportLayout">
+		<put-attribute name="title" value="Cca Parameter Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/master/ccaParaReport.jsp" />
+	</definition>
+
+	<definition name="payroll.DaParaMaster" extends=".mainLayout">
+		<put-attribute name="title" value="DA Parameter" />
+		<put-attribute name="body" value="/pages/payroll/master/daParaMaster.jsp" />
+	</definition>
+
+	<definition name="payroll.DaParaReport" extends=".reportLayout">
+		<put-attribute name="title" value="Da Parameter Report" />
+		<put-attribute name="body" value="/pages/payroll/master/daParaReport.jsp" />
+	</definition>
+
+	<definition name="payroll.BonusParaMaster" extends=".mainLayout">
+		<put-attribute name="title" value="Bonus Parameter" />
+		<put-attribute name="body"
+			value="/pages/payroll/master/bonusParaMaster.jsp" />
+	</definition>
+
+	<definition name="payroll.BonusParaReport"
+		extends=".reportLayout">
+		<put-attribute name="title" value="Bonus Parameter Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/master/bonusParaReport.jsp" />
+	</definition>
+
+	<definition name="payroll.LoanInstallment" extends=".mainLayout">
+		<put-attribute name="title" value="Loan Installment" />
+		<put-attribute name="body"
+			value="/pages/payroll/master/loanInstallment.jsp" />
+	</definition>
+
+	<definition name="payroll.LoanDetailsReport"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Loan Details Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/master/loanInstallmentReport.jsp" />
+	</definition>
+
+	<definition name="payroll.IndustrialSalaryAction"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Industrial Salary" />
+		<put-attribute name="body" value="/pages/payroll/industrialSalary.jsp" />
+	</definition>
+
+	<definition name="payroll.SalarySlip" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Salary Slip Generator Form" />
+		<put-attribute name="body" value="/pages/payroll/salary/salarySlip.jsp" />
+	</definition>
+
+	<definition name="payroll.IndustrialSalaryReport"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Industrial Salary" />
+		<put-attribute name="body"
+			value="/pages/payroll/industrialSalaryAcquaintanceReport.jsp" />
+	</definition>
+
+	<definition name="payroll.SalaryLedger" extends=".mainLayout">
+		<put-attribute name="title" value="Salary Ledger" />
+		<put-attribute name="body" value="/pages/payroll/salaryLedger.jsp" />
+	</definition>
+
+	<definition name="payroll.BankStatement" extends=".payrollLayout">
+		<put-attribute name="title" value="Bank Statement" />
+		<put-attribute name="body"
+			value="/pages/payroll/salary/bankStatementReport.jsp" />
+	</definition>
+
+	<definition name="payroll.SalaryStatementBank"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="SalaryStatementBank" />
+		<put-attribute name="body"
+			value="/pages/payroll/salary/salaryStatementBank.jsp" />
+	</definition>
+
+	<definition name="payroll.NonRecovery" extends=".mainLayout">
+		<put-attribute name="title" value="Non Recovery" />
+		<put-attribute name="body"
+			value="/pages/payroll/salary/nonRecoveryReport.jsp" />
+	</definition>
+
+	<definition name="payroll.RecoveryReport" extends=".mainLayout">
+		<put-attribute name="title" value="Recovery Report" />
+		<put-attribute name="body" value="/pages/payroll/salary/recoveryRep.jsp" />
+	</definition>
+
+	<definition name="payroll.WelPayroll" extends=".mainLayout">
+		<put-attribute name="title" value="PayRoll" />
+		<put-attribute name="body" value="/pages/payroll/welcomePayroll.jsp" />
+	</definition>
+
+	<definition name="payroll.PTaxReport" extends=".payrollLayout">
+		<put-attribute name="title" value="Over Recovery Report" />
+		<put-attribute name="body" value="/pages/payroll/pTaxReport.jsp" />
+	</definition>
+
+	<definition name="payroll.pfStatutoryReport"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="PF Statutory Report" />
+		<put-attribute name="body" value="/pages/payroll/pfReport.jsp" />
+	</definition>
+
+	<definition name="payroll.esicStatutoryReport"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="ESIC Statutory Report" />
+		<put-attribute name="body" value="/pages/payroll/esicReport.jsp" />
+	</definition>
+
+	<definition name="payroll.tdsStatutoryReport"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="TDS Statutory Report" />
+		<put-attribute name="body" value="/pages/payroll/tdsReport.jsp" />
+	</definition>
+
+	<definition name="payroll.lwfStatutoryReport"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="LWF Statutory Report" />
+		<put-attribute name="body" value="/pages/payroll/lwfReport.jsp" />
+	</definition>
+
+	<definition name="payroll.SalaryStatement" extends=".payrollLayout">
+		<put-attribute name="title" value="Over Recovery" />
+		<put-attribute name="body"
+			value="/pages/payroll/salary/salaryStatement.jsp" />
+	</definition>
+
+	<definition name="payroll.SalaryRegister" extends=".payrollLayout">
+		<put-attribute name="title" value="Salary Register" />
+		<put-attribute name="body" value="/pages/payroll/salaryRegister.jsp" />
+	</definition>
+
+	<definition name="payroll.PayslipMsg" extends=".mainLayout">
+		<put-attribute name="title" value="PayRoll" />
+		<put-attribute name="body" value="/pages/payroll/salary/payslipMsg.jsp" />
+	</definition>
+
+	<definition name="pfslip.report" extends=".payrollLayout">
+		<put-attribute name="title" value="PF Slip Report" />
+		<put-attribute name="body" value="/pages/payroll/pf/pfSlipReport.jsp" />
+	</definition>
+
+	<definition name="pfslip.detailreport" extends=".payrollLayout">
+		<put-attribute name="title" value="PF Trust Summary Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/pf/pfSlipDetailReport.jsp" />
+	</definition>
+
+	<definition name="payroll.SalaryGrade" extends=".payrollLayout">
+		<put-attribute name="title" value="Salary Grade" />
+		<put-attribute name="body" value="/pages/payroll/salary/salaryGrade.jsp" />
+	</definition>
+
+	<definition name="payroll.SalaryGradeData" extends=".payrollLayout">
+		<put-attribute name="title" value="Salary Grade" />
+		<put-attribute name="body"
+			value="/pages/payroll/salary/salaryGradeData.jsp" />
+	</definition>
+
+	<definition name="payroll.CashDisburseList" extends=".mainLayout">
+		<put-attribute name="title" value="Cash Disburse" />
+		<put-attribute name="body"
+			value="/pages/payroll/salary/cashDisburseList.jsp" />
+	</definition>
+
+	<definition name="payroll.CashDisburse" extends=".mainLayout">
+		<put-attribute name="title" value="Cash Disburse" />
+		<put-attribute name="body" value="/pages/payroll/salary/cashDisburse.jsp" />
+	</definition>
+
+	<definition name="payroll.CashClaim" extends=".mainLayout">
+		<put-attribute name="title" value="Cash Claim" />
+		<put-attribute name="body" value="/pages/payroll/salary/cashClaim.jsp" />
+	</definition>
+
+	<definition name="payroll.CashClaimList" extends=".mainLayout">
+		<put-attribute name="title" value="Cash Claim" />
+		<put-attribute name="body"
+			value="/pages/payroll/salary/cashClaimList.jsp" />
+	</definition>
+
+	<definition name="payroll.CashClaimNew" extends=".mainLayout">
+		<put-attribute name="title" value="Cash Claim" />
+		<put-attribute name="body" value="/pages/payroll/salary/cashClaimNew.jsp" />
+	</definition>
+
+	<definition name="payroll.CashClaimApproval"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Cash Claim Approval" />
+		<put-attribute name="body" value="/pages/payroll/cashClaimApproval.jsp" />
+	</definition>
+
+	<definition name="payroll.ClaimMisReport" extends=".mainLayout">
+		<put-attribute name="title" value="Claim Mis" />
+		<put-attribute name="body" value="/pages/payroll/claimReport.jsp" />
+	</definition>
+
+	<definition name="payroll.cashProcess" extends=".payrollLayout">
+		<put-attribute name="title" value="Salary Register" />
+		<put-attribute name="body" value="/pages/payroll/cashProcess.jsp" />
+	</definition>
+
+	<definition name="payroll.DebitRecoveryRep" extends=".payrollLayout">
+		<put-attribute name="title" value="Debit Recovery Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/salary/debitRecoveryReport.jsp" />
+	</definition>
+
+	<definition name="payroll.ProffesionalTax" extends=".payrollLayout">
+		<put-attribute name="title" value="Professional Tax Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/ProfessionalTaxReport.jsp" />
+	</definition>
+
+	<definition name="payroll.formulaBuilderData"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Formula Builder" />
+		<put-attribute name="body"
+			value="/pages/FormulaBuilder/formulaBuilderData.jsp" />
+	</definition>
+
+	<definition name="payroll.FormulaBuilder" extends=".payrollLayout">
+		<put-attribute name="title" value="Formula Builder" />
+		<put-attribute name="body"
+			value="/pages/FormulaBuilder/formulaBuilder.jsp" />
+	</definition>
+
+	<definition name="leave.LeavePolicy" extends=".mainLayout">
+		<put-attribute name="title" value="Leave Policy" />
+		<put-attribute name="body" value="/pages/admin/leave/leavePolicy.jsp" />
+	</definition>
+
+	<definition name="payroll.UploadDebit" extends=".mainLayout">
+		<put-attribute name="title" value="Upload Debit" />
+		<put-attribute name="body" value="/pages/payroll/salary/uploadDebit.jsp" />
+	</definition>
+
+	<definition name="payroll.UploadCredit" extends=".payrollLayout">
+		<put-attribute name="title" value="Upload Credit" />
+		<put-attribute name="body" value="/pages/payroll/salary/uploadCredit.jsp" />
+	</definition>
+
+	<definition name="payroll.EmpSalReg"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Employee Salary Register" />
+		<put-attribute name="body" value="/pages/payroll/empSalReg.jsp" />
+	</definition>
+
+	<definition name="payroll.MonthlyArrearsList"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Monthly Arrears" />
+		<put-attribute name="body"
+			value="/pages/payroll/Arrears/monthlyArrearsList.jsp" />
+	</definition>
+
+	<definition name="payroll.MonthlyArrears"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Monthly Arrears" />
+		<put-attribute name="body"
+			value="/pages/payroll/Arrears/monthlyArrears.jsp" />
+	</definition>
+
+	<definition name="payroll.PromotionArrearsList"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Promotional Arrears" />
+		<put-attribute name="body"
+			value="/pages/payroll/Arrears/promotionArrearsList.jsp" />
+	</definition>
+	
+	<definition name="payroll.PromotionArrears"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Promotional Arrears" />
+		<put-attribute name="body"
+			value="/pages/payroll/Arrears/promotionArrears.jsp" />
+	</definition>
+
+	<definition name="payroll.promotionArrearsEmpView"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Promotional Arrears" />
+		<put-attribute name="body"
+			value="/pages/payroll/Arrears/promotionArrearsEmpView.jsp" />
+	</definition>	
+	
+	<definition name="payroll.UploadArrears" extends=".payrollLayout">
+		<put-attribute name="title" value="Upload Arrears" />
+		<put-attribute name="body"
+			value="/pages/payroll/Arrears/uploadArrears.jsp" />
+	</definition>
+
+	<definition name="master.TDSMasterList" extends=".payrollLayout">
+		<put-attribute name="title" value="TDS Master" />
+		<put-attribute name="body" value="/pages/admin/master/tdsMasterList.jsp" />
+	</definition>
+
+	<definition name="master.TDSMaster" extends=".payrollLayout">
+		<put-attribute name="title" value="TDS Master" />
+		<put-attribute name="body" value="/pages/admin/master/tdsMaster.jsp" />
+	</definition>
+
+	<definition name="payroll.paProcess" extends=".mainLayoutPay">
+		<put-attribute name="title" value="PAProcess" />
+		<put-attribute name="body" value="/pages/payroll/salary/paProcess.jsp" />
+	</definition>
+
+	<definition name="payroll.payzonemaster" extends=".payrollLayout">
+		<put-attribute name="title" value="SalaryZone Configuration" />
+		<put-attribute name="body"
+			value="/pages/payroll/master/payrollzoneMaster.jsp" />
+	</definition>
+
+	<definition name="payroll.paProcessReport"
+		extends=".mainLayoutPay">
+		<put-attribute name="title" value="PAProcess" />
+		<put-attribute name="body"
+			value="/pages/payroll/salary/paProcessReport.jsp" />
+	</definition>
+
+	<definition name="payroll.monArrReport" extends=".payrollLayout">
+		<put-attribute name="title" value="MonthlyArrearsReport" />
+		<put-attribute name="body"
+			value="/pages/payroll/salary/monthlyArrearsReport.jsp" />
+	</definition>
+
+	<definition name="payroll.CashBalance" extends=".payrollLayout">
+		<put-attribute name="title" value="CashBalance" />
+		<put-attribute name="body" value="/pages/payroll/cashBalance.jsp" />
+	</definition>
+
+	<definition name="payroll.cashArrears" extends=".mainLayoutPay">
+		<put-attribute name="title" value="CashArrears" />
+		<put-attribute name="body" value="/pages/payroll/cashArrears.jsp" />
+	</definition>
+
+	<definition name="payroll.form5report" extends=".payrollLayout">
+		<put-attribute name="title" value="Form5" />
+		<put-attribute name="body" value="/pages/payroll/form5PF.jsp" />
+	</definition>
+
+	<definition name="payroll.form10report" extends=".payrollLayout">
+		<put-attribute name="title" value="Form10" />
+		<put-attribute name="body" value="/pages/payroll/form10PF.jsp" />
+	</definition>
+
+	<definition name="payroll.wageReport" extends=".payrollLayout">
+		<put-attribute name="title" value="Wage Report" />
+		<put-attribute name="body" value="/pages/payroll/wageReport.jsp" />
+	</definition>
+
+	<definition name="payroll.form6Report" extends=".payrollLayout">
+		<put-attribute name="title" value="Form 6" />
+		<put-attribute name="body" value="/pages/payroll/form6EsicReport.jsp" />
+	</definition>
+
+	<definition name="payroll.pfChallan" extends=".payrollLayout">
+		<put-attribute name="title" value="PF Challan" />
+		<put-attribute name="body" value="/pages/payroll/pfChallanList.jsp" />
+	</definition>
+
+	<definition name="payroll.pfChallanData" extends=".payrollLayout">
+		<put-attribute name="title" value="PF Challan" />
+		<put-attribute name="body" value="/pages/payroll/pfChallan.jsp" />
+	</definition>
+
+	<definition name="payroll.Form6A" extends=".payrollLayout">
+		<put-attribute name="title" value="Form 6A" />
+		<put-attribute name="body" value="/pages/payroll/form6A.jsp" />
+	</definition>
+
+	<definition name="payroll.Form7" extends=".payrollLayout">
+		<put-attribute name="title" value="Form7" />
+		<put-attribute name="body" value="/pages/payroll/form7.jsp" />
+	</definition>
+
+	<definition name="payroll.esicChallanList" extends=".payrollLayout">
+		<put-attribute name="title" value="ESICChallan" />
+		<put-attribute name="body" value="/pages/payroll/esicChallanList.jsp" />
+	</definition>
+
+	<definition name="payroll.esicChallan" extends=".payrollLayout">
+		<put-attribute name="title" value="ESICChallan" />
+		<put-attribute name="body" value="/pages/payroll/esicChallan.jsp" />
+	</definition>
+
+	<definition name="payroll.Forrm3a" extends=".payrollLayout">
+		<put-attribute name="title" value="Phisical" />
+		<put-attribute name="body" value="/pages/payroll/form3a.jsp" />
+	</definition>
+
+	<definition name="payroll.annualRep" extends=".payrollLayout">
+		<put-attribute name="title" value="Form7" />
+		<put-attribute name="body" value="/pages/payroll/annualEarningsRep.jsp" />
+	</definition>
+
+	<definition name="payroll.tdsperquisite" extends=".payrollLayout">
+		<put-attribute name="title" value="TDS Perquisite" />
+		<put-attribute name="body"
+			value="/pages/payroll/master/Tdsperquisites.jsp" />
+	</definition>
+
+	<definition name="payroll.tdsperquisiteData"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="TDS Perquisite" />
+		<put-attribute name="body"
+			value="/pages/payroll/master/TdsperquisitesData.jsp" />
+	</definition>
+
+	<definition name="tds.Perquisite" extends=".payrollLayout">
+		<put-attribute name="title" value="Debit Report" />
+		<put-attribute name="body" value="/pages/payroll/empPerquisites.jsp" />
+	</definition>
+
+	<definition name="payroll.form12BA" extends=".payrollLayout">
+		<put-attribute name="title" value="Voucher Application" />
+		<put-attribute name="body" value="/pages/payroll/salary/form12BA.jsp" />
+	</definition>
+
+	<definition name="payroll.salaryJV" extends=".payrollLayout">
+		<put-attribute name="title" value="Salary JV" />
+		<put-attribute name="body" value="/pages/payroll/salaryJV.jsp" />
+	</definition>
+
+	<definition name="payroll.salpaybill" extends=".payrollLayout">
+		<put-attribute name="title" value="Salary PayBill" />
+		<put-attribute name="body" value="/pages/payroll/salaryBill.jsp" />
+	</definition>
+
+	<definition name="payroll.BranchWiseSal" extends=".payrollLayout">
+		<put-attribute name="title" value="Branch WIse Salary Report" />
+		<put-attribute name="body" value="/pages/payroll/branchWiseSalReport.jsp" />
+	</definition>
+
+	<definition name="payroll.salReconcil" extends=".payrollLayout">
+		<put-attribute name="title" value="Salary Reconcil" />
+		<put-attribute name="body"
+			value="/pages/payroll/salaryReconcilationReport.jsp" />
+	</definition>
+
+	<definition name="payroll.form1" extends=".payrollLayout">
+		<put-attribute name="title" value="Form1" />
+		<put-attribute name="body" value="/pages/payroll/form1.jsp" />
+	</definition>
+
+	<definition name="payroll.form2" extends=".payrollLayout">
+		<put-attribute name="title" value="Form2" />
+		<put-attribute name="body" value="/pages/payroll/form2.jsp" />
+	</definition>
+
+	<definition name="payroll.salSummary" extends=".payrollLayout">
+		<put-attribute name="title" value="Salary Summary" />
+		<put-attribute name="body" value="/pages/payroll/salarySummary.jsp" />
+	</definition>
+
+	<definition name="payroll.PfInterestCal" extends=".payrollLayout">
+		<put-attribute name="title" value="PF Interest Calculatiuon" />
+		<put-attribute name="body" value="/pages/payroll/pf/pfInterestCal.jsp" />
+	</definition>
+
+	<definition name="pfIntestCalForEmp" extends=".payrollLayout">
+		<put-attribute name="title" value="PF Interest Calculatiuon" />
+		<put-attribute name="body" value="/pages/payroll/pf/pfInterestForEmp.jsp" />
+	</definition>
+
+	<definition name="payroll.PfRegister" extends=".payrollLayout">
+		<put-attribute name="title" value="PF trust Register" />
+		<put-attribute name="body"
+			value="/pages/payroll/pf/pfBalanceRegister.jsp" />
+	</definition>
+
+	<definition name="payroll.UploadSalary" extends=".payrollLayout">
+		<put-attribute name="title" value="Upload Salary" />
+		<put-attribute name="body" value="/pages/payroll/salary/uploadSalary.jsp" />
+	</definition>
+
+	<definition name="payroll.SalaryMisReport"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Salary Slip MIS Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/salary/salarySlipMisReport.jsp" />
+	</definition>
+
+	<definition name="payroll.SalaryProcessList"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Salary Process" />
+		<put-attribute name="body" value="/pages/payroll/salaryProcessList.jsp" />
+	</definition>
+
+	<definition name="payroll.SalaryProcess" extends=".payrollLayout">
+		<put-attribute name="title" value="Salary Process" />
+		<put-attribute name="body" value="/pages/payroll/salaryProcess.jsp" />
+	</definition>
+
+	<definition name="payroll.showEmpRecord"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Salary Process Editable View" />
+		<put-attribute name="body" value="/pages/payroll/salaryProcessEmpView.jsp" />
+	</definition>
+
+	<definition name="payroll.EditSalaryProcess"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Salary Process Editable View" />
+		<put-attribute name="body" value="/pages/payroll/salaryProcessView.jsp" />
+	</definition>
+
+	<definition name="payroll.manageCurrentOnHold"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Salary Process Editable View" />
+		<put-attribute name="body" value="/pages/payroll/salaryProcessManageOnHold.jsp" />
+	</definition>
+
+	<definition name="payroll.managePreviousOnHold"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Salary Process Editable View" />
+		<put-attribute name="body" value="/pages/payroll/salaryProcessManagePrevOnHold.jsp" />
+	</definition>
+	
+	<definition name="UMC.SalaryProcessList" extends=".mainLayout">
+		<put-attribute name="title" value="Salary Process" />
+		<put-attribute name="body"
+			value="/pages/payroll/payroll_UMC/salaryProcessList.jsp" />
+	</definition>
+
+	<definition name="UMC.SalaryProcess" extends=".mainLayout">
+		<put-attribute name="title" value="Salary Process" />
+		<put-attribute name="body"
+			value="/pages/payroll/payroll_UMC/salaryProcess.jsp" />
+	</definition>
+
+	<definition name="UMC.EditSalaryProcess" extends=".mainLayoutPay">
+		<put-attribute name="title" value="Salary Process Editable View" />
+		<put-attribute name="body"
+			value="/pages/payroll/payroll_UMC/salaryProcessView.jsp" />
+	</definition>
+
+	<definition name="payroll.BankStatementMis" extends=".payrollLayout">
+		<put-attribute name="title" value="Bank Statement Mis" />
+		<put-attribute name="body" value="/pages/payroll/bankStatementMis.jsp" />
+	</definition>
+
+	<definition name="payroll.misReportView" extends=".payrollLayout">
+		<put-attribute name="title" value=" Bank Statement Mis Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/bankStatementMisViewOnScreen.jsp" />
+	</definition>
+
+	<definition name="payroll.FormA1CumReturn" extends=".payrollLayout">
+		<put-attribute name="title" value="FormA1CumReturn" />
+		<put-attribute name="body" value="/pages/payroll/formA1CumReturn.jsp" />
+	</definition>
+
+	<definition name="payroll.PTaxChallanReport"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Professional Tax Challan Report" />
+		<put-attribute name="body" value="/pages/payroll/pTaxChallanReport.jsp" />
+	</definition>
+
+	<definition name="pf.form98" extends=".payrollLayout">
+		<put-attribute name="title" value="PF Slip Report" />
+		<put-attribute name="body" value="/pages/payroll/pf/pfForm98.jsp" />
+	</definition>
+
+	<definition name="payroll.CashBalanceReport"
+		extends=".mainLayout">
+		<put-attribute name="title" value="CashBalanceReport" />
+		<put-attribute name="body"
+			value="/pages/payroll/salary/cashBalanceReport.jsp" />
+	</definition>
+
+	<definition name="payroll.mealVoucher" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Meal Voucher Declaration" />
+		<put-attribute name="body" value="/pages/payroll/mealVoucher.jsp" />
+	</definition>
+
+	<definition name="payroll.mealVoucherConf" extends=".payrollLayout">
+		<put-attribute name="title" value="Meal Voucher Configuration" />
+		<put-attribute name="body"
+			value="/pages/payroll/mealVoucherConfiguration.jsp" />
+	</definition>
+
+	<definition name="payroll.allowancePay" extends=".payrollLayout">
+		<put-attribute name="title" value="Allowance Pay" />
+		<put-attribute name="body" value="/pages/payroll/allowancePay.jsp" />
+	</definition>
+
+	<definition name="payroll.allowancePayReport"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Allowance Pay Report" />
+		<put-attribute name="body" value="/pages/payroll/allowancePayReport.jsp" />
+	</definition>
+
+	<definition name="payroll.reimburseConfig" extends=".payrollLayout">
+		<put-attribute name="title" value="Reimbursement Configuration" />
+		<put-attribute name="body"
+			value="/pages/payroll/salary/reimbursementConfiguration.jsp" />
+	</definition>
+
+	<definition name="payroll.reimburseConfigView"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Reimbursement Configuration" />
+		<put-attribute name="body"
+			value="/pages/payroll/salary/reimbursementConfigurationData.jsp" />
+	</definition>
+
+	<definition name="salary.lTCConfig" extends=".payrollLayout">
+		<put-attribute name="title" value="LTC Config" />
+		<put-attribute name="body" value="/pages/payroll/salary/lTCConfig.jsp" />
+	</definition>
+
+	<definition name="payroll.LTCCalcList" extends=".payrollLayout">
+		<put-attribute name="title" value="Cash Claim" />
+		<put-attribute name="body"
+			value="/pages/payroll/salary/ltcProcessList.jsp" />
+	</definition>
+
+	<definition name="payroll.LTCCalc" extends=".payrollLayout">
+		<put-attribute name="title" value="Cash Claim" />
+		<put-attribute name="body" value="/pages/payroll/salary/ltcProcess.jsp" />
+	</definition>
+
+	<definition name="payroll.LTCReport" extends=".payrollLayout">
+		<put-attribute name="title" value="LTC Report" />
+		<put-attribute name="body" value="/pages/payroll/salary/ltcReport.jsp" />
+	</definition>
+
+	<definition name="payroll.Form5" extends=".payrollLayout">
+		<put-attribute name="title" value="Form5" />
+		<put-attribute name="body" value="/pages/payroll/esicForm5.jsp" />
+	</definition>
+
+	<definition name="payroll.esicBranchWise" extends=".payrollLayout">
+		<put-attribute name="title" value="ESIC Branch Wise Summary Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/esicBranchWiseSummaryReport.jsp" />
+	</definition>
+
+	<definition name="payroll.esicBranchWise" extends=".payrollLayout">
+		<put-attribute name="title" value="ESIC Branch Wise Summary Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/esicBranchWiseSummaryReport.jsp" />
+	</definition>
+
+	<definition name="payroll.epfReconciliation"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="PF Reconciliation" />
+		<put-attribute name="body"
+			value="/pages/payroll/epfMonthlyReconciliationReport.jsp" />
+	</definition>
+
+	<definition name="payroll.esicReconciliation"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="ESIC Branch Wise Summary Report" />
+		<put-attribute name="body"
+			value="/pages/payroll/esicMonthlyReconciliationReport.jsp" />
+	</definition>
+
+	<definition name="payroll.esicForm6" extends=".payrollLayout">
+		<put-attribute name="title" value="ESIC Branch Wise Summary Report" />
+		<put-attribute name="body" value="/pages/payroll/esicForm6.jsp" />
+	</definition>
+
+	<definition name="payroll.pfTrustMaster" extends=".payrollLayout">
+		<put-attribute name="title" value="PF Trust Master Report" />
+		<put-attribute name="body" value="/pages/payroll/pfTrustMasterReport.jsp" />
+	</definition>
+
+	<definition name="master.DonationMaster" extends=".payrollLayout">
+		<put-attribute name="title" value="Donation Master" />
+		<put-attribute name="body"
+			value="/pages/admin/master/donationMasterData.jsp" />
+	</definition>
+
+	<definition name="master.DonationMasterData"
+		extends=".payrollLayout">
+		<put-attribute name="title" value="Donation Master Data" />
+		<put-attribute name="body"
+			value="/pages/admin/master/donationMasterData.jsp" />
+	</definition>
+
+	<definition name="payroll.miscSalUpload" extends=".payrollLayout">
+		<put-attribute name="title" value="Misc Salary Upload" />
+		<put-attribute name="body" value="/pages/payroll/miscSalaryUpload.jsp" />
+	</definition>
+
+	<definition name="payroll.unauthorizedPage" extends=".payrollLayout">
+		<put-attribute name="title" value="Unauthorized Access" />
+		<put-attribute name="body" value="/pages/payroll/unauthorizedAccess.jsp" />
+	</definition>
+
+	<definition name="payroll.annualEarning" extends=".payrollLayout">
+		<put-attribute name="title" value="Employee Annual Earning Report" />
+		<put-attribute name="body" value="/pages/payroll/employeeAnnualEarningReport.jsp" />
+	</definition>
+	
+	<definition name="payroll.ReconciliationReport" extends=".payrollLayout">
+		<put-attribute name="title" value="Reconciliation Report" />
+		<put-attribute name="body" value="/pages/payroll/reconciliationReport.jsp" />
+	</definition>
+	
+	<definition name="payroll.MonthlyEDSummaryReport" extends=".payrollLayout">
+		<put-attribute name="title" value="Monthly E/D Summary Report" />
+		<put-attribute name="body" value="/pages/payroll/monthlyEDSummaryReport.jsp" />
+	</definition>
+
+	<definition name="payroll.YearlyEDSummaryReport" extends=".payrollLayout">
+		<put-attribute name="title" value="Yearly E/D Summary Report" />
+		<put-attribute name="body" value="/pages/payroll/yearlyEDSummaryReport.jsp" />
+	</definition>
+
+	<definition name="payroll.ReconciliationControlSheet" extends=".payrollLayout">
+		<put-attribute name="title" value="Reconciliation Report" />
+		<put-attribute name="body" value="/pages/payroll/reconciliationControlSheet.jsp" />
+	</definition>
+
+	<definition name="bonus.initialListPage" extends=".payrollLayout">
+		<put-attribute name="title" value="Bonus/Allowance List View" />
+		<put-attribute name="body" value="/pages/payroll/bonus/bonusAllowanceListPage.jsp" />
+	</definition>
+		
+	<definition name="bonus.detailPage" extends=".payrollLayout">
+		<put-attribute name="title" value="Bonus/Allowance Processing" />
+		<put-attribute name="body" value="/pages/payroll/bonus/bonusAllowanceDetailPage.jsp" />
+	</definition>
+		
+	<definition name="bonus.employeeRecords" extends=".payrollLayout">
+		<put-attribute name="title" value="Bonus Allowance Processing" />
+		<put-attribute name="body" value="/pages/payroll/bonus/bonusAllowanceEditRecords.jsp" />
+	</definition>
+		
+	<definition name="bonusAllowanceReportPage" extends=".payrollLayout">
+		<put-attribute name="title" value="Bonus Report" />
+		<put-attribute name="body" value="/pages/payroll/bonus/bonusAllowanceReport.jsp" />
+	</definition>
+	
+	<definition name="LTA.misReport" extends=".payrollLayout">
+		<put-attribute name="title" value="LTA MIS Report" />
+		<put-attribute name="body" value="/pages/lta/ltaMisReport.jsp" />
+	</definition>
+
+	<definition name="LTA.viewOnScreen" extends=".payrollLayout">
+		<put-attribute name="title" value="LTA Employee List " />
+		<put-attribute name="body" value="/pages/lta/ltaEmployeeList.jsp" />
+	</definition>
+	
+	<definition name="LTA.TaxCalculation" extends=".payrollLayout">
+		<put-attribute name="title" value="LTA Tax Calculation" />
+		<put-attribute name="body" value="/pages/lta/ltaCalculation.jsp" />
+	</definition>
+	
+</tiles-definitions>

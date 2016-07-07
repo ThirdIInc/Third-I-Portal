@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="eGov" namespace="/eGov" extends="struts-default">
+
+		<result-types>
+			<result-type name="tiles"
+						 class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		
+		<!--
+		
+		<action name="LoanApplicationEGovAction_*" method="{1}"
+			class="org.struts.action.eGov.payroll.LoanApplicationEGovAction">
+			<result name="input" type="tiles">LoanApp</result>
+			<result name="addnew" type="tiles">LoanApp</result>
+			<result name="success" type="tiles">LoanApp</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		
+
+		
+		<action name="eGovPFReport_*" method="{1}"
+			class="org.struts.action.eGov.reports.PFBalanceeGovReportAction">
+			<result name="input" type="tiles">e-GovPFBalance</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="PFBalance_*" method="{1}"
+			class="org.struts.action.eGov.reports.PFBalanceUploadAction">
+			<result name="input" type="tiles">PFBalanceUpload</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="LeaveCreditConfigeGov_*" method="{1}"
+			class="org.struts.action.eGov.reports.LeaveCreditConfigeGovAction">
+			<result name="input" type="tiles">
+				leave.CreditConfigeGov.Master
+			</result>
+			
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="showData" type="tiles">
+				leaveCreditConfigeGov.Data
+			</result>
+			<result name="leavehead" type="tiles">leaveCreditConfigeGov.head</result>
+		</action>
+		
+		<action name="LICReport_*" method="{1}"
+			class="org.struts.action.eGov.reports.LICReportDataAction">
+			<result name="input" type="tiles">LicData</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+	-->	
+	
+	
+	<action name="LeaveCreditConfigeGov_*" method="{1}"
+			class="org.struts.action.eGov.reports.LeaveCreditConfigeGovAction">
+			<result name="input" type="tiles">
+				leave.CreditConfigeGov.Master
+			</result>
+			
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="showData" type="tiles">
+				leaveCreditConfigeGov.Data
+			</result>
+			<result name="leavehead" type="tiles">leaveCreditConfigeGov.head</result>
+		</action>
+		
+		
+		
+		
+	<action name="SalarySlipMisReportGov_*" method="{1}"
+			class="org.struts.action.gov.SalarySlipMisReportActionGov">
+			<result name="input" type="tiles">
+				payroll.SalaryMisReportGov
+			</result>
+			<result name="success" type="tiles">
+				payroll.SalaryMisReportGov
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+	
+	
+		<action name="EmpCrediteGov_*" method="{1}"
+			class="org.struts.action.gov.EmpCreditActioneGov">
+			<result name="input" type="tiles">empCrediteGov</result>
+			<result name="success" type="tiles">empCrediteGov</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">empCrediteGov</result>
+		</action>
+	
+	
+	<action name="PensionSummaryReport_*" method="{1}"
+			class="org.struts.action.gov.PensionSummaryReportAction">
+			<result name="input" type="tiles">PensionSummaryReport</result>
+			<result name="success" type="tiles">PensionSummaryReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">empCrediteGov</result>
+		</action>
+	
+	</package>
+</struts>
+ 

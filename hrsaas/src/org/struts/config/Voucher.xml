@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+  <struts>
+   <package name="voucher" namespace="/voucher" extends="struts-default">
+        
+	        <result-types>
+			  	<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+			</result-types>
+			
+		<action name="VoucherMaster_*" method="{1}" class="org.struts.action.voucher.VoucherMasterAction">
+			<result name="input" type="tiles">master.voucher</result>
+			<result name="success" type="tiles">master.voucher</result>	
+			<result name="report" type="tiles">master.Vchreport</result>	
+			<result name="f9page" type="tiles">common.f9page</result>	
+			<result name="Data" type="tiles">master.voucherData</result>				
+		</action>
+				
+		<action name="VoucherApprovalMaster_*" method="{1}" class="org.struts.action.voucher.VoucherApprovalMasterAction">
+			<result name="input" type="tiles">master.voucherApprov</result>
+			<result name="success" type="tiles">master.voucherApprov</result>	
+			<result name="report" type="tiles">master.report</result>	
+			<result name="f9page" type="tiles">common.f9page</result>	
+			<result name="showData" type="tiles">voucherApplication.MasterData</result>				
+		</action>		
+		
+		<action name="VoucherApprovalAc_*" method="{1}" class="org.struts.action.voucher.VoucherApprovalAcAction">
+			<result name="input" type="tiles">master.voucherApprovAc</result>
+			<result name="success" type="tiles">master.voucherApprovAc</result>	
+			<result name="report" type="tiles">master.report</result>	
+			<result name="f9page" type="tiles">common.f9page</result>				
+		</action>		
+		
+		<action name="CashVoucher_*" method="{1}" class="org.struts.action.voucher.CashVoucherAction">
+			<result name="input" type="tiles">master.cashVoucher</result>
+			<result name="success" type="tiles">master.cashVoucher</result>	
+			<result name="report" type="tiles">master.report</result>	
+			<result name="f9page" type="tiles">common.f9page</result>	
+			<result name="successApprove" type="tiles">master.cashVoucherApprove</result>
+			<!--Anantha Lakshmi  -->
+			<result name="addCashVoucherApp" type="tiles">master.addCashVoucherApp</result>		
+			<result name="accountantList" type="tiles">master.accountantList</result>					
+			<result name="mymessages" type="chain">MypageProcessManagerAlerts_input</result>
+			<result name="serviceJsp" type="chain">MypageProcessManagerAlerts_serviceData</result>
+			<result name="showData" type="tiles">voucherApplication.MasterData</result>	
+		</action>	
+		
+		<action name="CashVoucherReport_*" method="{1}" class="org.struts.action.voucher.VoucherMisReportAction">
+			<result name="input" type="tiles">report.cashVoucher</result>
+			<result name="success" type="tiles">report.cashVoucher</result>	
+			<result name="f9page" type="tiles">common.f9page</result>	
+		</action>
+		
+		<action name="VoucherApplication_*" method="{1}" class="org.struts.action.voucher.VoucherApplicationAction">
+			<result name="input" type="tiles">voucherApplication.Master</result>
+			<result name="success" type="tiles">voucherApplication.Master</result>
+			<result name="f9page" type="tiles">common.f9page</result>	
+			<result name="showData" type="tiles">voucherApplication.MasterData</result>
+			<result name="voucherApproval" type="chain">VoucherApprovalMaster_callstatus</result>
+			<!-- my page code -->
+			<result name="mymessages" type="chain">MypageProcessManagerAlerts_input </result>
+			<result name="serviceJsp" type="chain">MypageProcessManagerAlerts_serviceData</result>										
+		</action>	
+		
+		<!-- Added by Anantha lakshmi -->
+		<action name="VoucherUploads_*" method="{1}" class="org.struts.action.voucher.VoucherUploadAction">
+			<result name="input" type="tiles">voucher.uploads</result>
+			<result name="success" type="tiles">voucher.uploads</result>
+			<result name="f9page" type="tiles">common.f9page</result>	
+		</action>	
+				
+			<!-- This is for mypage starts -->
+		<action name="MypageProcessManagerAlerts_*" method="{1}" class="org.struts.action.mypage.MypageProcessManagerAlertsAction">
+			<result name="input" type="tiles">alert.mypage</result>
+			<result name="mymessages" type="chain">MypageProcessManagerAlerts_input</result>
+			<result name="serviceJsp" type="tiles">mypage.services</result>	
+		</action>
+		
+  </package>
+ </struts>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+        
+<struts>   
+	<package name="AppStudio" namespace="/AppStudio" extends="struts-default">        
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+		</result-types>
+			
+		<action name="EmailTemplate_*" method="{1}" class="org.struts.action.ApplicationStudio.EmailTemplateAction">
+			<result name="input" type="tiles" >AppStudio.EmailTemplate</result>
+			<result name="success" type="tiles">AppStudio.EmailTemplate</result>				
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>
+		
+		<action name="EmailTemplateClient_*" method="{1}" class="org.struts.action.ApplicationStudio.EmailTemplateClient">
+			<result name="input" type="tiles" >AppStudio.EmailTemplateClient</result>
+			<result name="success" type="tiles">AppStudio.EmailTemplateClient</result>				
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>
+		
+		<action name="ThemeSettings_*" method="{1}" class="org.struts.action.ApplicationStudio.ThemeSettingsAction">
+			<result name="input" type="tiles" >AppStudio.themes</result>
+			<result name="success" type="tiles">AppStudio.themes</result>
+			<result name="apply" >/pages/common/mainHeader.jsp</result>	
+			<result name="applyPortal" >/pages/portal/employeePortal.jsp</result>	
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		 
+		
+		<action name="NavigationPanelSettings_*" method="{1}" class="org.struts.action.ApplicationStudio.NavigationPanelSettingsAction">
+			<result name="input" type="tiles" >AppStudio.NavigationPanelSettings</result>
+			<result name="success" type="tiles">AppStudio.NavigationPanelSettings</result>				
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>		
+		
+		<action name="LetterTemplate_*" method="{1}" class="org.struts.action.ApplicationStudio.LetterTemplateAction">
+			<result name="input" type="tiles" >AppStudio.LetterTemplate</result>
+			<result name="success" type="tiles">AppStudio.LetterTemplate</result>				
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>
+		
+		<action name="LetterTemplateClient_*" method="{1}" class="org.struts.action.ApplicationStudio.LetterTemplateClient">
+			<result name="input" type="tiles" >AppStudio.LetterTemplateClient</result>
+			<result name="success" type="tiles">AppStudio.LetterTemplateClient</result>				
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>
+		
+		<action name="ButtonMaster_*" method="{1}" class="org.struts.action.ApplicationStudio.ButtonMasterAction">
+			<result name="input" type="tiles" >AppStudio.ButtonMaster</result>
+			<result name="success" type="tiles">AppStudio.ButtonMaster</result>				
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>
+		
+		<action name="BirthdayMailSettings_*" method="{1}" class="org.struts.action.ApplicationStudio.BirthdayMailSettingsAction">
+			<result name="input" type="tiles" >AppStudio.BirthdayMaillSettings</result>
+			<result name="success" type="tiles">AppStudio.BirthdayMaillSettings</result>				
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>
+		
+		<action name="DashletSettings_*" method="{1}" class="org.struts.action.ApplicationStudio.DashletSettingsAction">
+			<result name="input" type="tiles" >AppStudio.DashletSettings</result>
+			<result name="success" type="tiles">AppStudio.DashletSettings</result>				
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>
+		
+		<action name="DashletProfileSettings_*" method="{1}" class="org.struts.action.ApplicationStudio.DashletProfileSettingsAction">
+			<result name="input" type="tiles" >AppStudio.DashletProfileSettings</result>
+			<result name="success" type="tiles">AppStudio.DashletProfileSettings</result>				
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>
+		
+		<action name="DefaultDashlet_*" method="{1}" class="org.struts.action.ApplicationStudio.DefaultDashletConfigAction">
+			<result name="input" type="tiles" >AppStudio.DefaultDashletConfig</result>
+			<result name="success" type="tiles">AppStudio.DefaultDashletConfig</result>				
+			<result name="f9page" type="tiles">common.f9page</result>	 
+			<result name="dashletList" type="tiles">AppStudio.DashletList</result>	
+		</action>
+		
+		<action name="UserDashlet_*" method="{1}" class="org.struts.action.ApplicationStudio.UserDashletConfigAction">
+			<result name="input" type="tiles" >AppStudio.UserDashletConfig</result>
+			<result name="success" type="tiles">AppStudio.UserDashletConfig</result>				
+			<result name="f9page" type="tiles">common.f9page</result>	
+			<result name="dashletList" type="tiles">AppStudio.DashletList</result> 
+		</action>
+		
+		<action name="IPFilter_*" method="{1}" class="org.struts.action.ApplicationStudio.IPFilterAction">
+			<result name="input" type="tiles">AppStudio.IPFilter</result>
+			<result name="success" type="tiles">AppStudio.IPFilter</result>				
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>
+		
+		<action name="MenuRelease_*" method="{1}" class="org.struts.action.ApplicationStudio.MenuReleaseAction">
+			<result name="input" type="tiles" >AppStudio.MenuRelease</result>
+			<result name="success" type="tiles">AppStudio.MenuRelease</result>
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action> 
+			
+		<action name="DataModification_*" method="{1}" class="org.struts.action.ApplicationStudio.DataModificationAction">
+			<result name="input" type="tiles" >AppStudio.DataModification</result>
+			<result name="success" type="tiles">AppStudio.DataModification</result>
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action> 
+		
+		<action name="ProcessManagerAlerts_*" method="{1}" class="org.struts.action.ApplicationStudio.ProcessManagerAlertsAction">
+			<result name="input" type="tiles">AppStudio.ProcessManagerAlerts</result>
+			<result name="success" type="tiles">AppStudio.ProcessManagerAlerts</result>				
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="dashboard" type="tiles">common.dashBoard</result>
+		</action>
+		
+		<action name="ProcessManagerAlertsAppraisal_*" method="{1}" class="org.struts.action.ApplicationStudio.ProcessManagerAlertsAction">
+			<result name="input" type="tiles">AppStudio.ProcessManagerAlertsAppraisal</result>
+			<result name="success" type="tiles">AppStudio.ProcessManagerAlertsAppraisal</result>				
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="dashboard" type="tiles">common.dashBoard</result>
+		</action>
+		
+		<action name="MenuTabSetting_*" method="{1}" class="org.struts.action.ApplicationStudio.MenuTabSettingAction">
+			<result name="input" type="tiles" >AppStudio.MenuSettings</result>
+			<result name="success" type="tiles">AppStudio.MenuSettings</result>
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action> 
+		
+		<action name="AutoBirthday_*" method="{1}" class="org.struts.action.ApplicationStudio.AutoBirthdayAction" />
+		
+		<action name="OnlineApprRejc_*" method="{1}" class="org.struts.action.ApplicationStudio.OnlineApproveReject">
+			<result name="success" type="tiles">/pages/ApplicationStudio/onlineApproval.jsp</result>
+			<result name="approveRejectApp" >/pages/ApplicationStudio/onlineApproval.jsp</result>
+			<result name="approvalConfirm" >/pages/ApplicationStudio/onlineConfirm.jsp</result>
+				<result name="gotoApplication">/pages/common/mainHeader.jsp</result>
+		</action>
+		
+		<action name="BdayTemplate_*" method="{1}" class="org.struts.action.ApplicationStudio.BirthdayTemplateAction">
+			<result name="input" type="tiles" >AppStudio.BirthdayTemplate</result>
+			<result name="success" type="tiles">AppStudio.BirthdayTemplate</result>	
+			<result name="previewTemplate">/pages/ApplicationStudio/birthdayTemplatePreview.jsp</result>				
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>
+		
+		<action name="AnniversaryTemplate_*" method="{1}" class="org.struts.action.ApplicationStudio.AnniversaryTemplateAction">
+			<result name="input" type="tiles" >AppStudio.AnniversaryTemplate</result>
+			<result name="success" type="tiles">AppStudio.AnniversaryTemplate</result>	
+			<result name="previewTemplate">/pages/ApplicationStudio/anniversaryTemplatePreview.jsp</result>				
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>
+		
+		<action name="AnniversaryMailSettings_*" method="{1}" class="org.struts.action.ApplicationStudio.AnniversaryMailSettingsAction">
+			<result name="input" type="tiles" >AppStudio.AnniversaryMailSettings</result>
+			<result name="success" type="tiles">AppStudio.AnniversaryMailSettings</result>				
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>
+		
+		<action name="UploadDatasheet_*" method="{1}" class="org.struts.action.ApplicationStudio.UploadDatasheetAction">
+			<result name="input" type="tiles" >AppStudio.UploadDatasheet</result>
+			<result name="success" type="tiles">AppStudio.UploadDatasheet</result>				
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>
+
+		<action name="ShowMaster">
+			<result type="tiles">AppStudio.ShowMaster</result>
+		</action>	
+		
+		<action name="AuditTrailReport_*" method="{1}" class="org.struts.action.ApplicationStudio.AuditTrailReportAction">
+			<result name="input" type="tiles">AppStudio.audittrailreport</result>
+			<result name="success" type="tiles">AppStudio.audittrailreport</result>	
+			<result name="f9page" type="tiles">common.f9page</result>			
+		</action>
+		 
+		<action name="AlertEmailSetting_*" method="{1}" class="org.struts.action.ApplicationStudio.AlertEmailSettingAction">
+			<result name="input" type="tiles">AppStudio.AlertEmailSetting</result>
+			<result name="success" type="tiles">AppStudio.AlertEmailSetting</result>	
+			<result name="f9page" type="tiles">common.f9page</result>			
+		</action>
+		 
+		<action name="LetterTypeMaster_*" method="{1}" class="org.struts.action.ApplicationStudio.LetterTypeMasterAction">
+			<result name="input" type="tiles">AppStudio.LetterTypeMaster</result>
+			<result name="success" type="tiles">AppStudio.LetterTypeMaster</result>	
+			<result name="f9page" type="tiles">common.f9page</result>			
+		</action>
+		 
+		<action name="ConfigAuthorization_*" method="{1}" class="org.struts.action.ApplicationStudio.configAuth.ConfigAuthorizationAction">
+			<result name="input" type="tiles">AppStudio.configAuth</result>
+			<result name="success" type="tiles">AppStudio.configAuth</result>	
+			<result name="miscSalaryPage" type="tiles">AppStudio.MiscSalaryUploadAuth</result>
+			<result name="componenthead" type="tiles">AppStudio.ComponentHead</result>
+			<result name="credithead" type="tiles">AppStudio.CreditHead</result>
+			<result name="f9page" type="tiles">common.f9page</result>			
+		</action>		 
+		 
+		<action name="NavigationPanel_*" method="{1}" class="org.struts.action.ApplicationStudio.NavigationPanelAction" />
+		 
+		<action name="Authorization_*" method="{1}" class="org.struts.action.ApplicationStudio.configAuth.AuthorizationCheckingAction" />
+		
+		
+		 <!-- Action For Auto mail AlertSettings -->
+		 <action name="AutoMailSetting_*" method="{1}" class="org.struts.action.ApplicationStudio.AutoMailAlertSettingsAction">
+			<result name="input" type="tiles" >AppStudio.AutoMailAlertSettings</result>
+			<result name="success" type="tiles">AppStudio.AutoMailAlertSettings</result>		
+			<result name="onloadList" type="tiles">AppStudio.AutoMailAlertSettingsList</result>	
+			<result name="centerData" type="tiles">AppStudio.AutoMailAlertSettings</result>		
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>
+		
+		
+		<!-- Anantha lakshmi -->
+		 <action name="Event_*" method="{1}" class="org.struts.action.ApplicationStudio.EventAction">
+			<result name="input" type="tiles" >AppStudio.eventSettings</result>
+			<result name="eventData" type="tiles" >AppStudio.eventData</result>
+			<result name="success" type="tiles">AppStudio.eventSettings</result>		
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>
+		
+		<!-- Vishwambhar -->
+		 <action name="AlertAdminSetting_*" method="{1}" class="org.struts.action.ApplicationStudio.AlertAdminSettingAction">
+			<result name="input" type="tiles" >AppStudio.AlertAdminSetting</result>
+			<result name="eventData" type="tiles" >AppStudio.AlertAdminSetting</result>
+			<result name="success" type="tiles">AppStudio.AlertAdminSetting</result>		
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>
+		
+		 <action name="AlertClientSetting_*" method="{1}" class="org.struts.action.ApplicationStudio.AlertClientSettingAction">
+			<result name="input" type="tiles" >AppStudio.AlertClientSetting</result>
+			<result name="eventData" type="tiles" >AppStudio.AlertClientSetting</result>
+			<result name="success" type="tiles">AppStudio.AlertClientSetting</result>		
+			<result name="f9page" type="tiles">common.f9page</result>	 
+		</action>
+		
+		<action name="EmployeeDirectoryConf_*" method="{1}" class="org.struts.action.ApplicationStudio.EmployeeDirectoryConfigurationAction">
+				<result name="input" type="tiles" >AppStudio.EmployeeDirectoryConf</result>
+				<result name="success" type="tiles">AppStudio.EmployeeDirectoryConf</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+		 </action>		
+		<action name="MyContacts_*" method="{1}" class="org.struts.action.ApplicationStudio.MyContactsAction">
+			<result name="input" type="tiles">AppStudio.MyContacts</result>
+			<result name="success" type="tiles">AppStudio.MyContacts</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action> 
+		
+		<action name="MyDownloads_*" method="{1}" class="org.struts.action.ApplicationStudio.MyDownloadsAction">
+			<result name="input" type="tiles">AppStudio.MyDownloads</result>
+			<result name="success" type="tiles">AppStudio.MyDownloads</result>
+			<result name="download" type="tiles">AppStudio.MyDownloads</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+		
+		<!-- End Added By Tinshuk  -->
+		
+	</package>
+</struts>

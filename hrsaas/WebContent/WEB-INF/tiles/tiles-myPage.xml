@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+ 
+
+	<definition name=".homeLayout"
+		template="/pages/common/homeLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name=".myPageLeftRightLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+ 
+	<definition name=".f9Layout"
+		template="/pages/common/f9layout.jsp">
+		<put-attribute name="title" value="Select record" />
+		<put-attribute name="header" value="/pages/common/f9header.jsp" />
+		<put-attribute name="footer" value="/pages/common/f9footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+	<definition name="alert.mypage" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body"
+			value="/pages/mypage/mypageprocessManagerAlerts.jsp" />
+	</definition>
+
+
+	<definition name="common.dashBoard" extends=".mainLayout">
+		<put-attribute name="title" value="Common Dashboard Page" />
+		<put-attribute name="body" value="/pages/common/commonDashboard.jsp" />
+	</definition>
+
+	<definition name="mypage.services"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/mypage/services.jsp" />
+	</definition>
+
+	<definition name="mypage.analyticsDataJsp"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/mypage/analytics.jsp" />
+	</definition>
+
+	<definition name="mypage.search" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/mypage/myPagEmpDirSearch.jsp" />
+	</definition>
+
+<definition name="mypage.employeeDetail"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body"
+			value="/pages/mypage/mypageEmpSearchDetail.jsp" />
+	</definition>
+
+	<definition name="mytimeCard" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="My Timecard" />
+		<put-attribute name="body" value="/pages/mypage/myTimeCard.jsp" />
+	</definition>
+
+	<definition name="attendanceRegularization"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Attendance Regularization" />
+		<put-attribute name="body"
+			value="/pages/mypage/attendanceRegularization.jsp" />
+	</definition>
+
+	<definition name="annualAttendance"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Anuual Attendance" />
+		<put-attribute name="body" value="/pages/mypage/annualAttendance.jsp" />
+	</definition>
+
+	<definition name="mypage.myLeaves"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="My Leaves" />
+		<put-attribute name="body" value="/pages/mypage/myLeaves.jsp" />
+	</definition>
+
+	<definition name="mypage.holidays"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Holidays" />
+		<put-attribute name="body" value="/pages/mypage/holidays.jsp" />
+	</definition>
+
+<definition name="mypage.dashBoard"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="body" value="/pages/mypage/mypageDashBoard.jsp" />
+	</definition>
+
+
+<definition name="rightMypageData" extends=".homeLayout">
+		<put-attribute name="body"
+			value="/pages/mypage/rightTileData.jsp" />
+	</definition>
+	
+	<!--for recrruitment dashboard starts-->
+	<definition name="master.EmpRequisition" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Budget Head Master" />
+		<put-attribute name="body" value="/pages/recruitment/employeeReq.jsp" />
+	</definition>
+	
+	<definition name="master.next" extends=".myPageLeftRightLayout">
+		<put-attribute name="body" value="/pages/recruitment/employeeReq1.jsp" />
+	</definition>
+
+		<definition name="master.previous" extends=".myPageLeftRightLayout">
+		<put-attribute name="body" value="/pages/recruitment/employeeReq.jsp" />
+	</definition>
+
+		<definition name="master.viewFirst" extends=".myPageLeftRightLayout">
+		<put-attribute name="body" value="/pages/recruitment/employeeReqView.jsp" />
+	</definition>
+
+	<definition name="master.viewSec" extends=".myPageLeftRightLayout">
+		<put-attribute name="body"
+			value="/pages/recruitment/employeeReqView1.jsp" />
+	</definition>
+
+	<definition name="master.viewPrev" extends=".myPageLeftRightLayout">
+		<put-attribute name="body" value="/pages/recruitment/employeeReqView.jsp" />
+	</definition>
+
+	<definition name="master.viewBoth" extends=".myPageLeftRightLayout">
+		<put-attribute name="body"
+			value="/pages/recruitment/empReqsnBothPage.jsp" />
+	</definition>
+
+	<definition name="master.removeEmp" extends=".myPageLeftRightLayout">
+		<put-attribute name="body"
+			value="/pages/recruitment/empReqRemoveEmployee.jsp" />
+	</definition>
+
+	<definition name="master.applicationProcess"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Manpower Requisition Approval" />
+		<put-attribute name="body"
+			value="/pages/recruitment/applicationProcessed.jsp" />
+	</definition>
+
+	<!--for recrruitment dashboard ends-->
+
+	<definition name="common.f9page" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9page.jsp" />
+	</definition>
+	
+</tiles-definitions>

@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+ 
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+		<definition name=".myPageLeftRightLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+<!--  Added by Priyanka-->
+	<definition name=".adminHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/adminLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/adminLeftMenu.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+<!--Ended By Priyanka  -->
+
+	<definition name="common.mailReport" extends=".mainLayout">
+		<put-attribute name="body" value="/pages/payroll/emailReport.jsp"/>
+	</definition>
+	<definition name="alert.mypage" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body"
+			value="/pages/mypage/mypageprocessManagerAlerts.jsp" />
+	</definition>
+	<definition name="mypage.services"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/mypage/services.jsp" />
+	</definition>
+	<definition name="mytimeCard" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="My Timecard" />
+		<put-attribute name="body" value="/pages/mypage/myTimeCard.jsp" />
+	</definition>
+	<definition name="mypage.myLeaves"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="My Leaves" />
+		<put-attribute name="body" value="/pages/mypage/myLeaves.jsp" />
+	</definition>
+	<definition name="TMS.travelModeView" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Mode" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelModeView.jsp" />
+	</definition>
+	<definition name="TMS.travelMode" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Mode" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelMode.jsp" />
+	</definition>
+	<definition name="TMS.travelPurpose" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Purpose" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelPurpose.jsp" />
+	</definition>
+
+	<definition name="TMS.travelPurposeView" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Purpose" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelPurposeView.jsp" />
+	</definition>
+	<definition name="TMS.locationType" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Location Type" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/locationType.jsp" />
+	</definition>
+	<definition name="TMS.locationTypeView" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Location Type" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/locationTypeView.jsp" />
+	</definition>
+	<definition name="TMS.foodTypeView" extends=".adminHomeLayout">
+		<put-attribute name="title" value="FoodType" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/foodTypeView.jsp" />
+	</definition>
+
+	<definition name="TMS.foodType" extends=".adminHomeLayout">
+		<put-attribute name="title" value="FoodType" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/foodType.jsp" />
+	</definition>
+	<definition name="TMS.hotelType" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Hotel Type" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/hotelType.jsp" />
+	</definition>
+	<definition name="TMS.hotelViewType" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Hotel Type" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/hotelTypeView.jsp" />
+	</definition>
+
+	<definition name="TMS.roomTypeView" extends=".adminHomeLayout">
+		<put-attribute name="title" value="RoomType" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/roomTypeView.jsp" />
+	</definition>
+
+	<definition name="TMS.roomType" extends=".adminHomeLayout">
+		<put-attribute name="title" value="RoomType" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/roomType.jsp" />
+	</definition>
+	<definition name="TMS.travelGrade" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Grade" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelGrade.jsp" />
+	</definition>
+	<definition name="TMS.expenses" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Expenses Category" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/expensesCategory.jsp" />
+	</definition>
+	<definition name="TMS.travelExpensesView" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Expenses Category" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/expensesCategoryView.jsp" />
+	</definition>
+	<definition name="TMS.advDefaulter" extends=".mainLayout">
+			<put-attribute name="title" value="Appraisal Bell Curve" />
+			<put-attribute name="body"
+				value="/pages/TravelManagement/ExpenseClaim/travelAdvanceDefaulter.jsp" />
+	</definition>
+	<definition name="TMS.travelSearchList" extends=".adminHomeLayout">
+		<put-attribute name="title" value="TMS Policy" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Config/policySearchList.jsp" />
+	</definition>
+	<definition name="TMS.travelPolicy" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Management" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/tmsTravelPolicy.jsp" />
+	</definition>
+	<definition name="TMS.polSaveSecond" extends=".adminHomeLayout">
+		<put-attribute name="title" value="TMS Policy" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Config/policyGrade.jsp" />
+	</definition>
+
+	<definition name="TMS.polSaveThird" extends=".adminHomeLayout">
+		<put-attribute name="title" value="TMS Policy" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Config/policyTravelDtl.jsp" />
+	</definition>
+	<definition name="TMS.trAppReadOnly" extends=".mainLayout">
+		<put-attribute name="title" value="Travel Mode" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelPlan/travelApplicationReadOnly.jsp" />
+	</definition>
+	<definition name="TMS.trApp" extends=".mainLayout">
+		<put-attribute name="title" value="FoodType" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelPlan/travelApplication.jsp" />
+	</definition>
+	<definition name="TMS.trPolicy" extends=".mainLayout">
+		<put-attribute name="title" value="Travel Mode" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelPlan/travelPolicyForView.jsp" />
+	</definition>
+
+	<definition name="TMS.trApproverView" extends=".mainLayout">
+		<put-attribute name="title" value="Travel Application" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelPlan/travelApplicationForApprover.jsp" />
+	</definition>
+
+	<definition name="TMS.trApproverForReadOnly"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Travel Application" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelPlan/travelApproverReadOnly.jsp" />
+	</definition>
+	<definition name="TMS.travelProcessManager" extends=".mainLayout">
+		<put-attribute name="title" value="Travel Process Manager" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelProcessManager.jsp" />
+	</definition>
+	<definition name="TMS.travelAuth" extends=".mainLayout">
+		<put-attribute name="title" value="Travel Authorities" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelAuthorities.jsp" />
+	</definition>
+	<definition name="TMS.TravelApprover" extends=".mainLayout">
+		<put-attribute name="title" value="TravelApprover" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelPlan/travelApprover.jsp" />
+	</definition>
+	<definition name="TMS.TravelExpDisburse" extends=".mainLayout">
+		<put-attribute name="title" value="Travel Expenses Disbursementr" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/travelExpensesDisbursement.jsp" />
+	</definition>
+	<definition name="TMS.TravelExp" extends=".mainLayout">
+		<put-attribute name="title" value="TravelManagement" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/expensePaymentDtls.jsp" />
+	</definition>
+	<definition name="TMS.TravelBal" extends=".mainLayout">
+		<put-attribute name="title" value="TravelManagement" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/balPaymentDtls.jsp" />
+	</definition>
+
+	<definition name="TMS.TravelFull" extends=".mainLayout">
+		<put-attribute name="title" value="TravelManagementt" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/fullPaymentDtls.jsp" />
+	</definition>
+
+	<definition name="TMS.TravelSchle" extends=".mainLayout">
+		<put-attribute name="title" value="Travel Schedule" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelPlan/trvlSchedule.jsp" />
+	</definition>
+
+	<definition name="TMS.schedule" extends=".mainLayout">
+		<put-attribute name="title" value="TravelManagementt" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelPlan/trvlSchDtls.jsp" />
+	</definition>
+	<definition name="TMS.schTrvlList" extends=".mainLayout">
+		<put-attribute name="title" value="TravelManagementt" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelPlan/trvlSchTrvlList.jsp" />
+	</definition>
+	<definition name="TMS.schReglList" extends=".mainLayout">
+		<put-attribute name="title" value="TravelManagementt" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelPlan/trvlSchDtls.jsp" />
+	</definition>
+	<definition name="TMS.schCancel" extends=".mainLayout">
+		<put-attribute name="title" value="TravelManagementt" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelPlan/trvlSchTrvPendinglCancelList.jsp" />
+	</definition>
+	<definition name="TMS.schCanceled" extends=".mainLayout">
+		<put-attribute name="title" value="TravelManagementt" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelPlan/trvlSchTrvlCanceledList.jsp" />
+	</definition>
+
+	<definition name="TMS.TravelSchApprover" extends=".mainLayout">
+		<put-attribute name="title" value="Travel Schedule Approver" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelPlan/travelScheduleApprover.jsp" />
+	</definition>
+	<definition name="TMS.SchApprView" extends=".mainLayout">
+		<put-attribute name="title" value="TravelManagementt" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelPlan/travelScheduleApprView.jsp" />
+	</definition>
+
+
+	<definition name="TMS.SchApprPending" extends=".mainLayout">
+		<put-attribute name="title" value="TravelManagementt" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelPlan/travelScheduleApprPending.jsp" />
+	</definition>
+	<definition name="TMS.travelAdvanceDisbursement"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Travel Advance Disbursement" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelAdvanceDisbursement.jsp" />
+	</definition>
+	<definition name="TMS.advancePaymentDetails"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Travel Advance Disbursement" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/advancePaymentDetails.jsp" />
+	</definition>
+
+	<definition name="TMS.paymentDetails" extends=".mainLayout">
+		<put-attribute name="title" value="Travel Advance Disbursement" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/paymentDetails.jsp" />
+	</definition>
+
+	<definition name="TMS.travelAcknowledgement"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Travel Acknowledgement" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelAcknowledgement.jsp" />
+	</definition>
+	<definition name="TMS.travelScheduleDetails"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Travel Acknowledgement" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelScheduleDetails.jsp" />
+	</definition>
+	<definition name="TravelMngt.expenseClaimApproval"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Expense Claim Approval" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/ExpenseClaim/expenseClaimApproval.jsp" />
+	</definition>
+	<definition name="TravelMngt.expenseClaimApp"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Expense Claim Application" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/ExpenseClaim/expenseClaimApp.jsp" />
+	</definition>
+	<definition name="TravelMngt.viewTravelClaimAppHdr"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Expense Claim Application" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/ExpenseClaim/expenseClaimAppHdr.jsp" />
+	</definition>
+	<definition name="TMS.travelClass" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Class" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelClass.jsp" />
+	</definition>
+
+	<definition name="TMS.travelClassView" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Class" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelClassView.jsp" />
+	</definition>
+	<definition name="travel.hotelMaster" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Functional Domain" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/hotelMaster.jsp" />
+	</definition>
+
+	<definition name="travel.hotelMasteraddnew" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Functional Domain" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/hotelMasterData.jsp" />
+	</definition>
+
+	<definition name="TrvlMngt.TrvlProcess.travelApp"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Travel Application" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/travelApplication.jsp" />
+	</definition>
+	<definition name="TrvlMngt.TrvlProcess.travelAppEmpInfo"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Travel Application" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/travelAppEmpInfo.jsp" />
+	</definition>
+	<definition name="TrvlMngt.TrvlProcess.travelAppTourDtls"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Travel Application" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/travelAppTourDtls.jsp" />
+	</definition>
+	<definition name="TrvlMngt.TrvlProcess.travelAppAdvIdntDtls"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Travel Application" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/travelAppAdvIdntDtls.jsp" />
+	</definition>
+	<definition name="TrvlMngt.TrvlProcess.travelFoodType"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Travel Application" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/travelFoodType.jsp" />
+	</definition>
+	<definition name="TrvlMngt.TrvlProcess.travelPolicy"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Policy" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/travelAppPolicyView.jsp" />
+	</definition>
+	<definition name="TrvlMngt.TrvlProcess.travelAppPreview"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Application" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/travelAppPreview.jsp" />
+	</definition>
+	<definition name="TravelApprNew.schldTrvlList"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Application" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/scheduledTrvlList.jsp" />
+	</definition>
+	<definition name="TrvlProcess.monitorStartBook"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Booking Details" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/tmsStartBooking.jsp" />
+	</definition>
+	<definition name="TrvlMngt.TrvlProcess.addEmployeeTraveller"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Traveller Details" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/addEmployeeTraveller.jsp" />
+	</definition>
+
+	<definition name="TrvlMngt.bookingJspPage" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Booking" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/viewBookingDetails.jsp" />
+	</definition>
+	<definition name="TrvlMngt.applicationjsppage"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Booking" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/tmsTrvlApprovalView.jsp" />
+	</definition>
+	<definition name="TMS.travelviewpolicy" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Management" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/tmsTravelPolicyView.jsp" />
+	</definition>
+	<definition name="TMS.travelGradePolicy" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Management" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/tmsTravelPolicyGrade.jsp" />
+	</definition>
+	<definition name="TMS.travelDetails" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Management" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/tmsTravelDetail.jsp" />
+	</definition>
+	<definition name="TMS.TravelApproval" extends=".adminHomeLayout">
+		<put-attribute name="title" value="TravelApprover" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/tmsTrvlApproval.jsp" />
+	</definition>
+	<definition name="TMS.TravelApprovalView" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Approval" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/travelApprovalView.jsp" />
+	</definition>
+	<definition name="TMS.CmtsTrail" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Comments Trail" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/tmsTrvlCmtsTrail.jsp" />
+	</definition>
+	<definition name="TMS.trvlMangAuth" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Management Authorities" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/tmsTrvlMangAuthorities.jsp" />
+	</definition>
+	<definition name="TMS.trvlMangAuthView" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Management Authorities" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/tmsTrvlMangAuthoritiesView.jsp" />
+	</definition>
+	<definition name="TMS.trvlMangAuthBranch" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Management Authorities" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/tmsTrvlMangAuthBranch.jsp" />
+	</definition>
+	<definition name="TMS.trvlDesk" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Desk" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/tmsTrvlDesk.jsp" />
+	</definition>
+	<definition name="TMS.trvlDeskView" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Desk" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/tmsTrvlDeskView.jsp" />
+	</definition>
+	<definition name="TMS.trvlDeskBook" extends=".mainLayout">
+		<put-attribute name="title" value="Travel Desk" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/tmsFastBooking.jsp" />
+	</definition>
+	<definition name="TMS.travelProManager" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Process Manager" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/tmsTrvlProcessMngr.jsp" />
+	</definition>
+
+
+	<definition name="TrvlProcess.travelMonitor"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Monitoring" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/travelMonitoring.jsp" />
+	</definition>
+
+	<definition name="TrvlProcess.monitorTrvlDtl"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Journey Details" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/monitorTrvlDtl.jsp" />
+	</definition>
+
+	<definition name="TrvlProcess.monitorAccomDtl"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Accomodation Details" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/monitorAccomDtl.jsp" />
+	</definition>
+
+	<definition name="TrvlProcess.monitorLocConvDtl"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Local Conveyance Details" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/monitorLocConvDtl.jsp" />
+	</definition>
+
+	<definition name="TrvlProcess.monitorStartBook"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Booking Details" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/tmsStartBooking.jsp" />
+	</definition>
+	<definition name="TMS.currencyMaster" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Currency Master" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/currencyMaster.jsp" />
+	</definition>
+
+	<definition name="TMS.currencyMasterView" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Currency Master" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/currencyMasterView.jsp" />
+	</definition>
+<!-- Claim Apllication -->
+	<definition name="TMS.trvlClaim" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Travel Claim Application" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/tmsClaimApplication.jsp" />
+	</definition>
+	<definition name="TMS.trvlClaimDtl" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Travel Claim Application" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/tmsClaimApplicationDtl.jsp" />
+	</definition>
+	
+	<definition name="TMS.trvlClaimView"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Travel Claim Application" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/tmsClaimApplicationView.jsp" />
+	</definition>
+
+
+	<!-- Travel Claim Approval -->
+	<definition name="TMS.TravelClmApproval" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Claim Approver" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/tmsTrvlClmApproval.jsp" />
+	</definition>
+	<definition name="TMS.TrvlClmApprvlView" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Approval" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/tmsTrvlClmApprovalView.jsp" />
+	</definition>
+	<definition name="TMS.TrvlExpenditureView" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Claim Expenditure" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/tmsTrvlClmExpenditureView.jsp" />
+	</definition>
+
+
+
+	<definition name="TMS.TravelClmAdminApproval"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Claim Admin Approver" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/tmsTrvlClmAdminApproval.jsp" />
+	</definition>
+	<definition name="TMS.TrvlClmAdminApprvlView"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Claim Admin Approval" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/tmsTrvlClmAdminApprovalView.jsp" />
+	</definition>
+	<definition name="TMS.TrvlClmAdminExpenditure"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Claim Admin Approval" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/tmsTrvlClmAdminApprovalExpenditure.jsp" />
+	</definition>
+
+
+
+	<definition name="TMS.pendingDisburse" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Disbursement" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/pendingAdvDidb.jsp" />
+	</definition>
+
+	<definition name="TMS.closedDisburse" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Disbursement" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/closedAdvDisb.jsp" />
+	</definition>
+	<definition name="TMS.advanceDefaulter" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Disbursement" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/advanceDefaulters.jsp" />
+	</definition>
+
+	<definition name="TMS.TravelExpDisbrsmnt" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Expense Disbursement" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/tmsClmDisbursement.jsp" />
+	</definition>
+	<definition name="TMS.trvlClmDisbrView" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Expense Disbursement View" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/tmsClmDisbursementView.jsp" />
+	</definition>
+	<definition name="TMS.trvlClmAckView" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Calim Acknowledgement View" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/tmsClmAckView.jsp" />
+	</definition>
+	<definition name="TMS.travelSettDefault" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Advance Settlement Defaulter" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/trvlSettmntDefaltrList.jsp" />
+	</definition>
+	<definition name="TMS.travelAdvSett" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Advance Settlement Defaulter" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/trvlAdvSettlement.jsp" />
+	</definition>
+
+	<definition name="TMS.trvlApplicantReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Applicant Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlApplicantReport.jsp" />
+	</definition>
+	<definition name="TMS.trvlApplicantReportView"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Applicant Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlApplicantReportView.jsp" />
+	</definition>
+
+	<definition name="TMS.trvlApprvrReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Approver Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlApprvrReport.jsp" />
+	</definition>
+	<definition name="TMS.trvlApprvrReportView" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Approver Report View" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlApprvrReportView.jsp" />
+	</definition>
+	<!-- Report for Main Scheduler -->
+	<definition name="TMS.trvlMainSchdlrReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Main Scheduler Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlMainSchdlrReport.jsp" />
+	</definition>
+	<definition name="TMS.trvlMainSchdlrReportView"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Main Scheduler Report View" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlMainSchdlrReportView.jsp" />
+	</definition>
+	<!-- Report for Sub Scheduler -->
+	<definition name="TMS.trvlSubSchdlrReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Sub Scheduler Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlSubSchdlrReport.jsp" />
+	</definition>
+	<definition name="TMS.trvlSubSchdlrReportView"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Sub Scheduler Report View" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlSubSchdlrReportView.jsp" />
+	</definition>
+	<!-- Report for Accountant -->
+	<definition name="TMS.travelAccntReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Accountant Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlAccntReport.jsp" />
+	</definition>
+	<definition name="TMS.travelAccntReportView"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Accountant Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlAccntReportView.jsp" />
+	</definition>
+	<!-- Report for Administrator -->
+	<definition name="TMS.travelAdminReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Admin Head Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlAdminReport.jsp" />
+	</definition>
+	<definition name="TMS.travelAdminReportView"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Admin Head Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlAdminReportView.jsp" />
+	</definition>
+
+	<definition name="TravelMngt.travelAgencyList"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel management Agency List" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelAgencyList.jsp" />
+	</definition>
+
+	<definition name="TravelMngt.travelAgency" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel management Agency List" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelAgency.jsp" />
+	</definition>
+	<!-- (end) Entry for Travel Agency Master -->
+
+<!-- (Start)Entries for customer master -->
+	<definition name="TravelMngt.customerList" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Customer master List" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/customerList.jsp" />
+	</definition>
+
+	<definition name="TravelMngt.customerData" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Customer master Data" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/customerData.jsp" />
+	</definition>
+
+<!-- (End)Entries for customer master -->
+
+	<definition name="travel.cityGradeinput" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Functional Domain" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/cityGradeMaster.jsp" />
+	</definition>
+
+	<definition name="travel.cityGradeMasteraddnew"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Functional Domain" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/cityGradeMasterData.jsp" />
+	</definition>
+<!-- (start) Entry for Project Master -->
+	<definition name="TravelMngt.projectMasterList"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Project Master" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/projectMasterList.jsp" />
+	</definition>
+	<definition name="TravelMngt.projectMaster" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Project Master" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/projectMaster.jsp" />
+	</definition>
+	<!-- (end) Entry for Project Master -->
+	<!-- (start) Entry for Travel Mode Master -->
+	<definition name="TravelMngt.travelModeMasterList"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Mode Master" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelModeMasterList.jsp" />
+	</definition>
+	<definition name="TravelMngt.travelModeMaster"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Mode Master" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelModeMaster.jsp" />
+	</definition>
+	<!-- (end) Entry for Travel Mode Master -->
+<!-- booking-->
+	<definition name="TravelMngt.travelQuickBooking"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Quick  Booking" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/travelQuickBooking.jsp" />
+	</definition>
+	<definition name="TravelMngt.bookingDetailsJspPage"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Quick  Booking" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/startTravelQuickBooking.jsp" />
+	</definition>
+
+
+	<definition name="TravelMngt.assignToSubschedulerPage"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Booking" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/assignBookingToSubscheduler.jsp" />
+	</definition>
+	<definition name="TravelMngt.showBookingPage"
+		extends=".adminHomeLayout">
+
+		<put-attribute name="title" value="Booking Details" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/viewBookingDetails.jsp" />
+	</definition>
+	<!-- (start) Entry for Expense Summary Report -->
+	<definition name="TMS.expenseSummaryReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Expense Summary Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/expenseSummaryReport.jsp" />
+	</definition>
+
+	<!-- (end) Entry for Expense Summary Report  -->
+
+
+	<definition name="TMS.travelApplicantionReport"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Application Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/travelApplicationReport.jsp" />
+	</definition>
+	<definition name="TMS.travelClaimReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Application Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/travelClaimMisReport.jsp" />
+	</definition>
+	<definition name="TMS.Acknowledgement" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Claim Acknowledgement" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/claimAcknowledge.jsp" />
+	</definition>
+
+	<definition name="TravelMngt.showBookingPage"
+		extends=".mainLayout">
+
+		<put-attribute name="title" value="Booking Details" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelProcess/viewBookingDetails.jsp" />
+	</definition>
+
+	<definition name="reimbursement.claimappl"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Reimbursement Clmaim Application" />
+		<put-attribute name="body"
+			value="/pages/reimbursement/reimbursementClmaimApplication.jsp" />
+	</definition>
+
+
+	<definition name="TMS.unblockApplication" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Unblock Travel application" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelClaim/tmsUnblockApplications.jsp" />
+	</definition>
+	<definition name="TMS.AdvanceClaimDisbursementReport"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Application Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/advanceClaimDisbursementReport.jsp" />
+	</definition>
+
+	<definition name="TMS.travelRating" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Rating" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelRating.jsp" />
+	</definition>
+
+	<definition name="TMS.travelRatingData" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Rating Data" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/Master/travelRatingData.jsp" />
+	</definition>
+	<!-- Reports-->
+
+	<definition name="TMS.costReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Expense Summary Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlCostReport.jsp" />
+	</definition>
+
+	<definition name="TMS.accomReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Expense Summary Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlAccomodationReport.jsp" />
+	</definition>
+
+	<definition name="TMS.empClaimReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Expense Summary Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlEmpwiseClaimReport.jsp" />
+	</definition>
+
+	<definition name="TMS.hotelCostReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Expense Summary Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlHotelwiseCostReport.jsp" />
+	</definition>
+
+	<definition name="TMS.deviationReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Expense Summary Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlDeviationReport.jsp" />
+	</definition>
+
+	<definition name="TMS.airlinesCostReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Expense Summary Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlAirlinesCostReport.jsp" />
+	</definition>
+
+	<definition name="TMS.outstationReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Expense Summary Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlOutstationMedReport.jsp" />
+	</definition>
+	<definition name="TMS.advReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Advance Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlAdvanceReport.jsp" />
+	</definition>
+	<definition name="TMS.bestTravellerReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Best Traveller Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlBestTravellerReport.jsp" />
+	</definition>
+	<definition name="TMS.frequentTravellerReport"
+		extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Frequent Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlFrequentTravellerReport.jsp" />
+	</definition>
+	<definition name="TMS.bookingReport" extends=".adminHomeLayout">
+		<put-attribute name="title" value="Travel Booking Report" />
+		<put-attribute name="body"
+			value="/pages/TravelManagement/TravelReports/trvlBookingReport.jsp" />
+	</definition>
+</tiles-definitions>

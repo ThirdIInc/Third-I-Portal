@@ -1,0 +1,1124 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+ 
+
+	<definition name=".homeLayout"
+		template="/pages/common/homeLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name=".recruitmentLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/recruitment/candidateLoginFooter.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	
+	<definition name=".myPageLeftRightLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+
+	<definition name=".reportLayout"
+		template="/pages/common/reportLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name=".pagereportLayout"
+		template="/pages/common/pagereportLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name=".loginLayout"
+		template="/pages/common/loginLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<!-- code added by priyanka -->
+	
+ <definition name=".hrmHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/hrmHomeLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	
+	<definition name=".recruitmentHomeLayout"
+	template="/pages/common/layout.jsp">
+	<put-attribute name="title" value="PeoplePower"/>
+	<put-attribute name="header" value="/pages/common/header.jsp"/>
+	<put-attribute name="menu" value="/pages/common/recruitmentHomeLeftMenu.jsp"/>
+	<put-attribute name="rightTile" value="/pages/common/rightTile.jsp"/>
+	<put-attribute name="footer" value="/pages/common/footer.jsp" />
+	<put-attribute name="body" value="" />
+	</definition>
+	<!-- code ended by priyanka -->
+	
+	<!-- Candidate Change Password Action Start -->
+	<definition name="recruit.changePass" extends=".recruitmentLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body" value="/pages/recruitment/candChangePassword.jsp" />
+	</definition>
+	<!-- Candidate Change Password Action End -->
+
+
+	<!-- Candidate Job Board Start -->
+	<definition name="recruitment.CandJobBoard" extends=".recruitmentLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body" value="/pages/recruitment/candidateJobBoard.jsp" />
+	</definition>
+	<definition name="recruitment.requi" extends=".mainLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body" value="/pages/recruitment/empReqsnBothPage.jsp" />
+	</definition>
+	<definition name="master.candJobBoardViewReq"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="body"
+			value="/pages/recruitment/candidateJobBoardViewReq.jsp" />
+	</definition>
+	<definition name="recruitment.scopeOfResume"
+		extends=".reportLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body" value="/pages/recruitment/scopeOfResume.jsp" />
+	</definition>
+	<!-- Candidate Job Board End -->
+
+	
+	<!-- Candidate Registration Start -->
+	<definition name="recruit.Registration" extends=".loginLayout">
+		<put-attribute name="title" value="Candidate Registration" />
+		<put-attribute name="body" value="/pages/recruitment/candidateReg.jsp" />
+	</definition>	
+	<definition name="login.candidateForgotPassword"
+		extends=".loginLayout">
+		<put-attribute name="title" value="Candidate Forgot Password" />
+		<put-attribute name="body" 
+			value="/pages/recruitment/candidateForgotPassword.jsp" />
+	</definition>
+	<!-- Candidate Registration End -->
+
+
+	<!-- Candidate Login Start -->
+	<definition name="mainheadercnadidate" extends=".homeLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/recruitment/candidateHeader.jsp"></put-attribute>
+	</definition>
+	<definition name="login.candidateLogin" extends=".loginLayout">
+		<put-attribute name="title" value="Candidate Login" />
+		<put-attribute name="body" value="/pages/recruitment/candidateLogin.jsp" />
+	</definition>
+	<definition name="login.candLogout" extends=".loginLayout">
+		<put-attribute name="title" value="Candidate Login" />
+		<put-attribute name="body" value="/pages/recruitment/candLogout.jsp" />
+	</definition>
+	<definition name="recruitment.priview" extends=".mainLayout">
+		<put-attribute name="title" value="OnlinePaper" />
+		<put-attribute name="body"
+			value="/pages/recruitment/onlinePaperPriview.jsp" />
+	</definition>
+	<!-- Candidate Login End-->
+
+
+	<!-- Candidate Profile Start -->
+	<definition name="CandidateProfile" extends=".recruitmentLayout">
+		<put-attribute name="title" value="CandidateProfile" />
+		<put-attribute name="body" value="/pages/recruitment/candProfileView.jsp" />
+	</definition>
+	<definition name="recruit.candProfile" extends=".recruitmentLayout">
+		<put-attribute name="title" value="CandidateProfile" />
+		<put-attribute name="body" value="/pages/recruitment/candProfileView.jsp" />
+	</definition>
+	<definition name="recruit.candProfile2" extends=".recruitmentLayout">
+		<put-attribute name="title" value="CandidateProfile" />
+		<put-attribute name="body"
+			value="/pages/recruitment/candProfileView1.jsp" />
+	</definition>
+	<definition name="recruit.candProfileEdit" extends=".recruitmentLayout">
+		<put-attribute name="title" value="CandidateProfile" />
+		<put-attribute name="body" value="/pages/recruitment/candProfile.jsp" />
+	</definition>
+	<definition name="recruit.candProfile1" extends=".recruitmentLayout">
+		<put-attribute name="title" value="CandidateProfile" />
+		<put-attribute name="body" value="/pages/recruitment/candProfile1.jsp" />
+	</definition>
+	<!-- Candidate Profile End -->
+
+
+	<!-- Schedule Induction Start -->
+	<definition name="inductionSchedule.Master" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Induction Schedule Approval" />
+		<put-attribute name="body" value="/pages/recruitment/inductionSchedule.jsp" />
+	</definition>
+	<definition name="viewInductionSchdPlan.Master"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Induction Schedule Approval" />
+		<put-attribute name="body" value="/pages/recruitment/viewInductionSchdPlan.jsp" />
+	</definition>
+	<definition name="scheduledInductionSchdPlan.Master"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Induction Schedule Approval" />
+		<put-attribute name="body"
+			value="/pages/recruitment/scheduledInduction.jsp" />
+	</definition>
+	<!-- Schedule Induction End -->
+
+
+	<!-- Induction Feedback Start -->
+	<definition name="inductionFeedback.Master" 
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Induction Feedback" />
+		<put-attribute name="body"
+			value="/pages/recruitment/inductionFeedback.jsp" />
+	</definition>
+	<definition name="viewFeedback.Master" extends=".mainLayout">
+		<put-attribute name="title" value="Induction Schedule Approval" />
+		<put-attribute name="body" value="/pages/recruitment/viewFeedback.jsp" />
+	</definition>
+	<!-- Induction Feedback End -->
+
+
+	<!-- Test Reschedule Start -->
+	<definition name="master.TestReschedule" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body" value="/pages/recruitment/testReschedule.jsp" />
+	</definition>	
+	<!-- Test Reschedule End -->
+
+
+	<!-- Create Appointment and offer Start -->
+	<definition name="CreateAppointment" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Create Appointment" />
+		<put-attribute name="body" value="/pages/recruitment/createAppointment.jsp" />
+	</definition>
+	<definition name="Appointment Details" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Appointment Details" />
+		<put-attribute name="body"
+			value="/pages/recruitment/appointmentDetails.jsp" />
+	</definition>
+	<definition name="Appointment.joiningCheckList"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Appointment Details" />
+		<put-attribute name="body" value="/pages/recruitment/testChecklist.jsp" />
+	</definition>
+	<definition name="viewAppointmentDetails" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="viewOfferDetails" />
+		<put-attribute name="body"
+			value="/pages/recruitment/viewAppointmentDetails.jsp" />
+	</definition>
+	
+	<definition name="Create Offer" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Create Offer" />
+		<put-attribute name="body" value="/pages/recruitment/createOffer.jsp" />
+	</definition>
+	<definition name="Offer Details" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Offer Details" />
+		<put-attribute name="body" value="/pages/recruitment/offerDetails.jsp" />
+	</definition>
+	<definition name="Offer.joiningCheckList" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Offer Details" />
+		<put-attribute name="body" value="/pages/recruitment/testChecklist.jsp" />
+	</definition>
+	<definition name="viewOfferDetails" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="viewOfferDetails" />
+		<put-attribute name="body"
+			value="/pages/recruitment/viewOfferDetails.jsp" />
+	</definition>
+	<definition name="salaryStructure" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Salary Structure" />
+		<put-attribute name="body"
+			value="/pages/recruitment/offerSalaryStructure.jsp" />
+	</definition>
+	<definition name="recruit.Approval" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Offer Approval" />
+		<put-attribute name="body" value="/pages/recruitment/offerApproval.jsp" />
+	</definition>
+	<!-- Create Appointment and offer End -->
+
+
+	<!-- Post Interview Start -->
+	<definition name="master.PostInterview" extends=".mainLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body" value="/pages/recruitment/postInterview.jsp" />
+	</definition>
+	<!-- Post Interview End -->
+
+	<!-- Schedule Interview Start -->
+	<definition name="master.InterviewSchedule" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body" value="/pages/recruitment/interviewSchedule.jsp" />
+	</definition>
+	<definition name="master.intChecklist" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Interview Checklist Form" />
+		<put-attribute name="body" value="/pages/recruitment/testChecklist.jsp" />
+	</definition>
+	<definition name="InterviewSchedule.viewTestDetails"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Test Result" />
+		<put-attribute name="body" value="/pages/recruitment/viewTestResult.jsp" />
+	</definition>
+	<definition name="recruitment.SchdInterviewList"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body"
+			value="/pages/recruitment/schdInterviewList.jsp" />
+	</definition>
+	<definition name="recruitment.IntStatusList"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body"
+			value="/pages/recruitment/interviewStatusList.jsp" />
+	</definition>
+	<!-- Schedule Interview Start -->
+
+
+	<!-- Employee Requisition Start -->
+	<definition name="master.EmpRequisition" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="Budget Head Master" />
+		<put-attribute name="body" value="/pages/recruitment/employeeReq.jsp" />
+	</definition>
+		<definition name="master.next" extends=".myPageLeftRightLayout">
+		<put-attribute name="body" value="/pages/recruitment/employeeReq1.jsp" />
+	</definition>
+	<definition name="master.previous" extends=".myPageLeftRightLayout">
+		<put-attribute name="body" value="/pages/recruitment/employeeReq.jsp" />
+	</definition>
+	<definition name="master.viewFirst" extends=".myPageLeftRightLayout">
+		<put-attribute name="body" value="/pages/recruitment/employeeReqView.jsp" />
+	</definition>
+	<definition name="master.viewSec" extends=".myPageLeftRightLayout">
+		<put-attribute name="body"
+			value="/pages/recruitment/employeeReqView1.jsp" />
+	</definition>
+	<definition name="master.viewPrev" extends=".myPageLeftRightLayout">
+		<put-attribute name="body" value="/pages/recruitment/employeeReqView.jsp" />
+	</definition>
+	<definition name="master.viewBoth" extends=".myPageLeftRightLayout">
+		<put-attribute name="body"
+			value="/pages/recruitment/empReqsnBothPage.jsp" />
+	</definition>
+	<definition name="master.removeEmp" extends=".myPageLeftRightLayout">
+		<put-attribute name="body"
+			value="/pages/recruitment/empReqRemoveEmployee.jsp" />
+	</definition>
+	<definition name="master.applicationProcess" extends=".mainLayout">
+		<put-attribute name="title" value="Manpower Requisition Approval" />
+		<put-attribute name="body" value="/pages/recruitment/applicationProcessed.jsp" />
+	</definition>
+
+	<definition name="My Requisition" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body" value="/pages/recruitment/myRequisition.jsp" />
+	</definition>
+	<!-- Employee Requisition End -->
+
+
+	<!-- Candidate Evolution Start -->
+	<definition name="master.candidate" extends=".mainLayout">
+		<put-attribute name="title" value="Candidate Evolution" />
+		<put-attribute name="body" value="/pages/recruitment/candidateEvolution.jsp" />
+	</definition>
+	<definition name="master.report" extends=".mainLayout">
+		<put-attribute name="title" value="Expenditure" />
+		<put-attribute name="body" value="/pages/admin/master/expendReport.jsp" />
+	</definition>
+	<!-- Candidate Evolution End -->
+
+	<!-- Entrance Test Start -->
+	<definition name="master.entrance" extends=".mainLayout">
+		<put-attribute name="title" value="Entrance Test " />
+		<put-attribute name="body" value="/pages/recruitment/entranceTest.jsp" />
+	</definition>
+	<definition name="master.entrancetestmaster"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Entrance Test Master" />
+		<put-attribute name="body"
+			value="/pages/recruitment/entranceTestMaster.jsp" />
+	</definition>
+	<!-- Entrance Test End -->
+	
+
+	<!-- Post Applied Start -->
+	<definition name="master.postApplied" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Post Applied Master" />
+		<put-attribute name="body"
+			value="/pages/recruitment/PostAppliedMaster.jsp" />
+	</definition>
+	<!-- Post Applied End -->
+
+
+	<!-- Questionnarie Master Start -->
+	<definition name="master.questmaster" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Questionnarie Master" />
+		<put-attribute name="body"
+			value="/pages/recruitment/QuestionnaireMaster.jsp" />
+	</definition>
+	<definition name="master.questmasterData" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Questionnarie Master Data" />
+		<put-attribute name="body"
+			value="/pages/recruitment/questionnaireMasterData.jsp" />
+	</definition>
+	<!-- Questionnarie Master End -->
+
+
+	<!-- Recruitment Setting Start -->
+	<definition name="master.RecruitmentSetting" extends=".mainLayout">
+		<put-attribute name="title" value="Recruitment Setting" />
+		<put-attribute name="body" value="/pages/recruitment/recruitmentSetting.jsp" />
+	</definition>	
+	<!-- Recruitment Setting End -->
+
+	<!-- Application Form Start -->
+	<definition name="applicationForm.recruitment" extends=".mainLayout">
+		<put-attribute name="title" value="Recruitment Application Form" />
+		<put-attribute name="body" value="/pages/recruitment/applicationForm.jsp" />
+	</definition>
+	<!-- Application Form End -->
+
+
+	<!-- Requisition Approval Start -->
+	<definition name="RequisitionApproval" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Employee Requision Approval" />
+		<put-attribute name="body"
+			value="/pages/recruitment/requisitionApproval.jsp" />
+	</definition>
+	<!-- Requisition Approval End -->
+
+
+	<!-- Online Paper Start -->
+	<definition name="login.Login" extends=".loginLayout">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/pages/common/login.jsp" />
+	</definition>
+	<definition name="recruitment.OnlinePaper" extends=".mainLayout">
+		<put-attribute name="title" value="OnlinePaper" />
+		<put-attribute name="body" value="/pages/recruitment/onlinePaper.jsp" />
+	</definition>
+	<definition name="recruitment.priview" extends=".mainLayout">
+		<put-attribute name="title" value="OnlinePaper" />
+		<put-attribute name="body"
+			value="/pages/recruitment/onlinePaperPriview.jsp" />
+	</definition>
+	<!-- Vacancy End -->
+
+
+	<!-- Subjective Marks Start -->
+	<definition name="recruitment.subjectiveMarks"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Subjective" />
+		<put-attribute name="body" value="/pages/recruitment/subjectiveMarks.jsp" />
+	</definition>
+	<!-- Subjective Marks End -->
+	
+
+	<!-- Domain Master Start -->
+	<definition name="master.DomainMaster" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Functional Domain" />
+		<put-attribute name="body" value="/pages/recruitment/domainMaster.jsp" />
+	</definition>
+	<definition name="master.viewDomainMaster" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Functional Domain" />
+		<put-attribute name="body"
+			value="/pages/recruitment/domainMasterView.jsp" />
+	</definition>
+	<!-- Domain Master End -->
+
+
+	
+	<!-- Candidate Screening Approval Start -->
+	<definition name="recruit.CandidateScreening" extends=".recruitmentHomeLayout">
+		<put-attribute name="body"
+			value="/pages/recruitment/candidateScreeningApproval.jsp" />
+	</definition>
+	<definition name="recruit.CandidateScreeningStatus"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="body"
+			value="/pages/recruitment/candidateScreeningStatus.jsp" />
+	</definition>
+	<!-- Candidate Screening Approval Start -->
+
+
+	<!-- Vacancy Management Start -->
+	<definition name="recruitment.VacancyManagement" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body" value="/pages/recruitment/vacancyManagement.jsp" />
+	</definition>
+	<definition name="recruitment.VacancyPublish"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body" value="/pages/recruitment/vacancyPublish.jsp" />
+	</definition>
+	<definition name="recruitment.ViewVacancyPublish"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body"
+			value="/pages/recruitment/viewVacancyPublish.jsp" />
+	</definition>
+	<definition name="recruitment.ViewCancelVacanciesList"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body"
+			value="/pages/recruitment/viewCancelVacanciesList.jsp" />
+	</definition>
+	<!-- Vacancy Management End -->
+
+
+	<!-- Candidate Databank Start -->
+	<definition name="rec.candDB" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Subjective" />
+		<put-attribute name="body" value="/pages/recruitment/candDataBank.jsp" />
+	</definition>
+	<definition name="rec.candDB1" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Subjective" />
+		<put-attribute name="body" value="/pages/recruitment/candDataBank1.jsp" />
+	</definition>
+	<definition name="rec.candDBView" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Subjective" />
+		<put-attribute name="body" value="/pages/recruitment/candDataBankView.jsp" />
+	</definition>
+	<definition name="rec.candDBView1" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Subjective" />
+		<put-attribute name="body" value="/pages/recruitment/candDataBankView1.jsp" />
+	</definition>
+	<!-- Candidate Databank End -->
+
+
+	<!-- Schedule Test Start -->
+	<definition name="recruitment.TestSchedule" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Test Scheduling Form" />
+		<put-attribute name="body" value="/pages/recruitment/testSchedule.jsp" />
+	</definition>
+	<definition name="recruitment.TestCheckList"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Test Checklist Form" />
+		<put-attribute name="body" value="/pages/recruitment/testChecklist.jsp" />
+	</definition>
+	<!-- Schedule Test End -->
+
+
+	<!-- Interview Details Start -->
+	<definition name="recruitment.IntDetails" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Interview Details" />
+		<put-attribute name="body"
+			value="/pages/recruitment/interviewDetails.jsp" />
+	</definition>
+	<definition name="recruitment.viewDetails" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Previous Interview Details" />
+		<put-attribute name="body"
+			value="/pages/recruitment/viewInterviewDetails.jsp" />
+	</definition>
+	<definition name="recruitment.ConductIntr" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body"
+			value="/pages/recruitment/conductInterview.jsp" />
+	</definition>
+	<!-- Interview Details End -->
+
+
+	<!-- Candidate Search Start -->
+	<definition name="master.CandidateSearch" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body" value="/pages/recruitment/candidateSearch.jsp" />
+	</definition>	 
+	<!-- Candidate Search End -->
+
+	<!-- Post Resume Start -->
+	<definition name="Post Resume" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Post Resume" />
+		<put-attribute name="body" value="/pages/recruitment/postResume.jsp" />
+	</definition>
+	<!-- Post Resume End -->
+
+	
+	<!-- Background Check Start -->
+	<definition name="recruit.bgcheck" extends=".mainLayout">
+		<put-attribute name="title" value="BackgroundCheck" />
+		<put-attribute name="body" value="/pages/recruitment/BackGroundList.jsp" />
+	</definition>
+	<definition name="recruit.bgcheck1" extends=".mainLayout">
+		<put-attribute name="title" value="BackgroundCheck" />
+		<put-attribute name="body" value="/pages/recruitment/backGroundCheck.jsp" />
+	</definition>
+	<definition name="recruit.bgcheckPrev" extends=".mainLayout">
+		<put-attribute name="title" value="BackgroundCheck" />
+		<put-attribute name="body" value="/pages/recruitment/backGroundCheckView.jsp" />
+	</definition>
+	<definition name="recruit.backGroundCheckMailMesage" extends=".mainLayout">
+		<put-attribute name="title" value="BackgroundCheckMailMessage" />
+		<put-attribute name="body"
+			value="/pages/recruitment/backgroundCheckMailToPreviousEmployer.jsp" />
+	</definition>
+	<!-- Background Check End -->
+
+
+
+	<!-- Pre-joining checklist Start -->
+	<definition name="recruit.Precheck" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="prejoining Activities" />
+		<put-attribute name="body"
+			value="/pages/recruitment/PrejoiningActivitiesList.jsp" />
+	</definition>
+	<definition name="recruit.Precheck1" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="prejoining Activities" />
+		<put-attribute name="body"
+			value="/pages/recruitment/prejoiningActivities.jsp" />
+	</definition>
+	<definition name="recruit.PrecheckPrev" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="prejoining Activities" />
+		<put-attribute name="body"
+			value="/pages/recruitment/PrejoiningActivitiesView.jsp" />
+	</definition>
+	<definition name="recruit.monitor" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="prejoining Activities Monitor" />
+		<put-attribute name="body"
+			value="/pages/recruitment/PrejoiningActivitiesMoniterList.jsp" />
+	</definition>
+	<!-- Pre-joining checklist End -->
+
+
+	<!-- Test Templates Start -->
+	<definition name="master.TestTemplate" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Test Template" />
+		<put-attribute name="body" value="/pages/recruitment/testTemplate.jsp" />
+	</definition>
+	<definition name="master.TestQuestions" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Test Template" />
+		<put-attribute name="body" value="/pages/recruitment/testQuestions.jsp" />
+	</definition>
+	<definition name="master.TemplateViewRec" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Test Template" />
+		<put-attribute name="body"
+			value="/pages/recruitment/testTemplateView.jsp" />
+	</definition>
+	<!-- Test Templates End -->
+
+
+	<!-- Test Result and online test Start -->
+	<definition name="Test Result" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Test Result" />
+		<put-attribute name="body" value="/pages/recruitment/testResult.jsp" />
+	</definition>
+
+	<definition name="master.OnlineTest" extends=".recruitmentLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body" value="/pages/recruitment/onlineTestLogin.jsp" />
+	</definition>
+	<definition name="master.OnlineTestTemplateDtl"
+		extends=".recruitmentLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body"
+			value="/pages/recruitment/onlineTestTemplateDtl.jsp" />
+	</definition>
+	<definition name="master.OnlineTestScreen" extends=".recruitmentLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body"
+			value="/pages/recruitment/onlineTestScreen.jsp" />
+	</definition>
+	<definition name="master.OnlineTestSubmit" extends=".recruitmentLayout">
+		<put-attribute name="title" value="Recruitment" />
+		<put-attribute name="body"
+			value="/pages/recruitment/onlineTestSubmit.jsp" />
+	</definition>	 
+	<!-- Test Result and online test  End -->
+
+
+	<!-- Convert To Employee Start -->
+	<definition name="convertEmp" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Test Template" />
+		<put-attribute name="body" value="/pages/recruitment/convertToEmp.jsp" />
+	</definition>
+	<!-- Convert To Employee End -->
+
+
+	<!-- Open vacancy report Start -->
+	<definition name="OpenVac" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Open Vacancies Report" />
+		<put-attribute name="body"
+			value="/pages/recruitment/OpenVacancyReport.jsp" />
+	</definition>
+	<definition name="recruit.dispReq" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Select Multiple Requisition" />
+		<put-attribute name="body" value="/pages/recruitment/openVacDisplay.jsp" />
+	</definition>
+	<definition name="recruit.openVacView" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Open Vaccany" />
+		<put-attribute name="body"
+			value="/pages/recruitment/openVacViewReport.jsp" />
+	</definition>
+	<!-- Open Vacancy report End -->
+
+
+	<!-- Interview Analysis Start -->
+	<definition name="recruit.InterviewAnalysis" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Interview Analysis" />
+		<put-attribute name="body"
+			value="/pages/recruitment/schInterviewAnalysis.jsp" />
+	</definition>
+	<definition name="recruit.InterviewAnalysisDispReq" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Interview Analysis" />
+		<put-attribute name="body"
+			value="/pages/recruitment/schInterviewAnalysisDisplay.jsp" />
+	</definition>
+	<definition name="recruit.InterviewAnalysisView" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Interview Analysis" />
+		<put-attribute name="body"
+			value="/pages/recruitment/schInterviewViewReport.jsp" />
+	</definition>
+	<definition name="recruit.viewSummary" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Interview Analysis" />
+		<put-attribute name="body"
+			value="/pages/recruitment/schInterviewAnalysisSummary.jsp" />
+	</definition>
+	<!-- Interview Analysis End -->
+
+
+	<!-- Scheduled Test Analysis Start -->
+	<definition name="recruit.schTestAnalysis" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Schedule Test Analysis" />
+		<put-attribute name="body" value="/pages/recruitment/schTestAnalysis.jsp" />
+	</definition>
+	<definition name="recruit.TestAnalysisDispReq"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Schedule Test Analysis" />
+		<put-attribute name="body"
+			value="/pages/recruitment/schTestAnalysisDisplay.jsp" />
+	</definition>
+	<definition name="recruit.TestAnalysisView" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Schedule Test Analysis" />
+		<put-attribute name="body"
+			value="/pages/recruitment/schTestViewReport.jsp" />
+	</definition>
+	<definition name="recruit.viewTestSummary" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Schedule Test Analysis" />
+		<put-attribute name="body"
+			value="/pages/recruitment/schTestAnalysisSummary.jsp" />
+	</definition>
+	<!-- Scheduled Test Analysis End -->
+
+
+
+	<!-- Test Interview Report Start -->
+	<definition name="recruit.testIntRep" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Schedule Test/Interview Report" />
+		<put-attribute name="body"
+			value="/pages/recruitment/scheduleTestIntRep.jsp" />
+	</definition>
+	<definition name="recruit.viewTestIntRep" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Schedule Test/Interview Report" />
+		<put-attribute name="body" value="/pages/recruitment/viewSchTestInt.jsp" />
+	</definition>
+	<definition name="recruit.TestInterviewpReq"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="View Tnterview/Test Schedule" />
+		<put-attribute name="body"
+			value="/pages/recruitment/viewIntTestschedule.jsp" />
+	</definition>
+	<definition name="recruit.dispsummaryReport"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Summary Report" />
+		<put-attribute name="body"
+			value="/pages/recruitment/intTestsummaryReport.jsp" />
+	</definition>
+
+	<definition name="recruit.interviewEvaluation"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Interview Evaluation Report" />
+		<put-attribute name="body"
+			value="/pages/recruitment/interviewEvaluationReport.jsp" />
+	</definition>
+	<definition name="recruit.interviewEvaluationView"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Interview Evaluation Report" />
+		<put-attribute name="body"
+			value="/pages/recruitment/intEvaluationViewReport.jsp" />
+	</definition>	
+	<!-- Test Interview Report End -->
+
+
+	<!-- Candidate and induction status report Start -->
+	<definition name="CandidateStatus" extends=".mainLayout">
+		<put-attribute name="title" value="Candidate Status Report" />
+		<put-attribute name="body"
+			value="/pages/recruitment/candidateStatusReport.jsp" />
+	</definition>
+	<definition name="common.report1" extends=".pagereportLayout">
+		<put-attribute name="body" value="/pages/common/report.jsp" />
+	</definition>
+	<definition name="viewCandidstaeSearchReport" extends=".mainLayout">
+		<put-attribute name="title" value="Competency Development Plan Data" />
+		<put-attribute name="body"
+			value="/pages/recruitment/viewCandidateStatus.jsp" />
+	</definition>
+	<definition name="common.mailReport" extends=".mainLayout">
+		<put-attribute name="body" value="/pages/payroll/emailReport.jsp"/>
+	</definition>
+
+	<definition name="InductionStatus" extends=".mainLayout">
+		<put-attribute name="title" value="Induction Status Report" />
+		<put-attribute name="body"
+			value="/pages/recruitment/inductionStatusReport.jsp" />
+	</definition>
+	<!-- Candidate and induction status report End -->
+
+
+	<!-- Advertisement form and report Start -->
+	<definition name="recruit.advertisement" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Advertisement" />
+		<put-attribute name="body" value="/pages/recruitment/advertisement.jsp" />
+	</definition>
+	<definition name="recruit.advertisementDtl" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Advertisement" />
+		<put-attribute name="body"
+			value="/pages/recruitment/advertisementDtl.jsp" />
+	</definition>
+
+	<definition name="recruit.adverReport" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Advertisement Report" />
+		<put-attribute name="body" value="/pages/recruitment/advertiseReport.jsp" />
+	</definition>
+	<definition name="recruit.adverReportView" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Advertisement Report" />
+		<put-attribute name="body"
+			value="/pages/recruitment/advertiseViewReport.jsp" />
+	</definition>
+	<definition name="recruit.advertiseDispReq" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Advertisement Report" />
+		<put-attribute name="body"
+			value="/pages/recruitment/advertiseVacDisplay.jsp" />
+	</definition>
+	<!-- Advertisement form and report End -->
+
+
+	<!-- Configure mail alert start -->
+	<definition name="recruit.ConfmailAlert" extends=".mainLayout">
+		<put-attribute name="title" value="ConfigureMailAlerts" />
+		<put-attribute name="body"
+			value="/pages/recruitment/ConfigureMailAlerts.jsp" />
+	</definition>
+	<definition name="recruit.CentralisedPanel" extends=".mainLayout">
+		<put-attribute name="title" value="ConfigureMailAlerts" />
+		<put-attribute name="body"
+			value="/pages/recruitment/CentralisedPanelSetting.jsp" />
+	</definition>
+	<!-- Configure mail alert End -->
+
+
+	<!-- Manpower Requisition Report Start -->
+	<definition name="ManpowerRequisitionAnalysis"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Manpower Requisition Analysis" />
+		<put-attribute name="body"
+			value="/pages/recruitment/manpwrReqsnAnalysis.jsp" />
+	</definition>
+	<definition name="view.manpwrReqsn" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Manpower Requisition Analysis" />
+		<put-attribute name="body" value="/pages/recruitment/manpowerReqsn.jsp" />
+	</definition>
+	<definition name="view.manpwrReqsnPageWise" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Manpower Requisition Analysis" />
+		<put-attribute name="body"
+			value="/pages/recruitment/viewManpowerAnalysis.jsp" />
+	</definition>
+	<!-- Manpower Requisition End -->
+
+
+	<!-- Partner Start -->
+	<definition name="recruit.partnerLogin" extends=".mainLayout">
+		<put-attribute name="title" value="Partner Login" />
+		<put-attribute name="body" value="/pages/recruitment/partnerLogin.jsp" />
+	</definition>
+	<definition name="recruit.partnerLogout" extends=".loginLayout">
+		<put-attribute name="title" value="Partner Logout" />
+		<put-attribute name="body" value="/pages/recruitment/partnerLogout.jsp" />
+	</definition>
+	<definition name="recruit.partnerForgotPassword"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Partner Forgot Password" />
+		<put-attribute name="body"
+			value="/pages/recruitment/partnerForgotPassword.jsp" />
+	</definition>
+	<definition name="menu.partnertree" extends=".reportLayout">
+		<put-attribute name="title" value="Menu" />
+		<put-attribute name="body" value="/pages/recruitment/partnerTreeMenu.jsp" />
+	</definition>
+	<definition name="recruit.PartnerHome" extends=".mainLayout">
+		<put-attribute name="title" value="Partner Login" />
+		<put-attribute name="body" value="/pages/recruitment/partnerHome.jsp" />
+	</definition>
+	<definition name="recruit.partnerJobBoard" extends=".mainLayout">
+		<put-attribute name="title" value="Menu" />
+		<put-attribute name="body" value="/pages/recruitment/partnerJobBoard.jsp" />
+	</definition>
+	<definition name="master.viewFirst" extends=".myPageLeftRightLayout">
+		<put-attribute name="body" value="/pages/recruitment/employeeReqView.jsp" />
+	</definition>
+	<definition name="recruit.partnerChangePass" extends=".mainLayout">
+		<put-attribute name="title" value="Menu" />
+		<put-attribute name="body" value="/pages/recruitment/partnerChangePassword.jsp" />
+	</definition>
+	<!-- Partner End -->
+	
+
+	<!-- Offer and appointment analysis report Start -->
+	<definition name="recruit.offerAnalysis" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Offer Letter Analysis" />
+		<put-attribute name="body"
+			value="/pages/recruitment/offerLetterAnalysisReport.jsp" />
+	</definition>
+	<definition name="recruit.offerAnalysisView"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Offer Letter Analysis" />
+		<put-attribute name="body"
+			value="/pages/recruitment/offerLetterAnalysisReportView.jsp" />
+	</definition>
+	<definition name="recruit.offerAnalysisDisp"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Offer Letter Analysis" />
+		<put-attribute name="body"
+			value="/pages/recruitment/offerLetterDisplay.jsp" />
+	</definition>
+
+	<definition name="recruitment.appointLetterAnalysis"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Appointment Letter Analysis" />
+		<put-attribute name="body"
+			value="/pages/recruitment/appointmentLetterAnalysisReport.jsp" />
+	</definition>
+	<definition name="recruit.appointAnalysisView"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Appointment Letter Analysis" />
+		<put-attribute name="body"
+			value="/pages/recruitment/appointmentLetterAnalysisReportView.jsp" />
+	</definition>
+	<definition name="recruit.appointAnalysisDisp"
+		extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Appointment Letter Analysis" />
+		<put-attribute name="body"
+			value="/pages/recruitment/offerLetterDisplay.jsp" />
+	</definition>
+	<!-- Offer and appointment analysis report End -->
+
+
+	<!-- Manpower and CTC Projection Start -->
+	<definition name="manpowerProjection.report"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Manpower Requisition Report" />
+		<put-attribute name="body"
+			value="/pages/recruitment/manpowerProjectionReport.jsp" />
+	</definition>
+	<definition name="manpowerProjection.viewReport"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Manpower Requisition Report" />
+		<put-attribute name="body"
+			value="/pages/recruitment/manpowerProjectionViewReport.jsp" />
+	</definition>
+	<definition name="ctcProjection.report" extends=".mainLayout">
+		<put-attribute name="title" value="CTC Projection Report" />
+		<put-attribute name="body"
+			value="/pages/recruitment/ctcProjectionReport.jsp" />
+	</definition>
+	<definition name="ctc.viewReport" extends=".mainLayout">
+		<put-attribute name="title" value="CTC Projection Report" />
+		<put-attribute name="body"
+			value="/pages/recruitment/ctcProjectionViewReport.jsp" />
+	</definition>
+	<!-- Manpower and CTC Projection End -->
+
+
+	<!-- Interview Assessment Master Start -->
+	<definition name="recruit.interviewMaster" extends=".mainLayout">
+		<put-attribute name="title" value="Functional Domain" />
+		<put-attribute name="body" value="/pages/recruitment/InterviewMaster.jsp" />
+	</definition>
+	<definition name="recruit.interviewMasteraddnew"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Functional Domain" />
+		<put-attribute name="body"
+			value="/pages/recruitment/InterviewMasterData.jsp" />
+	</definition>
+	<definition name="recruit.interviewAssessmentReport"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Interview Assessment Report" />
+		<put-attribute name="body"
+			value="/pages/recruitment/interviewAssessmentReport.jsp" />
+	</definition>
+	<!-- Interview Assessment Master End -->
+
+
+
+	<!-- Resume approval start -->
+	<definition name="resumeApproval.resumeApproval"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Subjective" />
+		<put-attribute name="body" value="/pages/recruitment/resumeApproval.jsp" />
+	</definition>
+	<definition name="resumeApproval.resumeApprovalView"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Subjective" />
+		<put-attribute name="body"
+			value="/pages/recruitment/resumeApprovalView.jsp" />
+	</definition>
+	<definition name="resumeApproval.resumeApprovalView1"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Subjective" />
+		<put-attribute name="body"
+			value="/pages/recruitment/resumeApprovalView1.jsp" />
+	</definition>
+	<definition name="resumeApproval.resumeApproval1"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Subjective" />
+		<put-attribute name="body" value="/pages/recruitment/resumeApproval1.jsp" />
+	</definition>
+	<!-- Resume approval end -->
+
+
+	<!-- Pre-Offer Processing start -->
+	<definition name="recruit.preOfferProcessing1"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Pre Offer Processing" />
+		<put-attribute name="body"
+			value="/pages/recruitment/preOfferProcessing.jsp" />
+	</definition>
+	<definition name="recruit.preOfferProcessing"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Pre Offer Processing" />
+		<put-attribute name="body"
+			value="/pages/recruitment/preOfferProcessingList.jsp" />
+	</definition>
+	<definition name="recruit.preOfferProcessingPrev"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Pre Offer Processing" />
+		<put-attribute name="body"
+			value="/pages/recruitment/preOfferProcessingView.jsp" />
+	</definition>
+	<!-- Pre-Offer Processing end -->
+
+
+	<!-- Partner Start -->
+	<definition name="recruit.consultantHome" extends=".mainLayout">
+		<put-attribute name="title" value="Partner Login" />
+		<put-attribute name="body" value="/pages/recruitment/partnerHome.jsp" />
+	</definition>
+	<definition name="recruit.consultantJobPrtal"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Menu" />
+		<put-attribute name="body" value="/pages/recruitment/consultantBoard.jsp" />
+	</definition>
+
+	<definition name="Partner Post Resume" extends=".mainLayout">
+		<put-attribute name="title" value="Partner Post Resume" />
+		<put-attribute name="body"
+			value="/pages/recruitment/partnerPostResume.jsp" />
+	</definition>
+	<!-- Partner End -->
+
+	
+	<!-- Closed Requisition Start -->
+	<definition name="recruit.closedRequisition" extends=".mainLayout">
+		<put-attribute name="title" value="Closed Requisition" />
+		<put-attribute name="body" value="/pages/recruitment/closedRequisition.jsp" />
+	</definition>
+	<!-- Closed Requisistion End -->
+
+
+	<!-- My Submitted resume start -->
+	<definition name="my submitted resume" extends=".mainLayout">
+		<put-attribute name="title" value="My Submitted Resume" />
+		<put-attribute name="body" 
+			value="/pages/recruitment/mySubmittedResumeList.jsp" />
+	</definition>
+	<!-- My Submitted resume end -->
+
+	<definition name="alert.mypage" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body"
+			value="/pages/mypage/mypageprocessManagerAlerts.jsp" />
+	</definition>
+	<definition name="mypage.services"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/mypage/services.jsp" />
+	</definition>
+	<definition name="uploadDocs" extends=".recruitmentLayout">
+		<put-attribute name="title" value="Candidate Registration" />
+		<put-attribute name="body" value="/pages/recruitment/uploadDocuments.jsp" />
+	</definition>
+	
+	<definition name="recruit.interviewGroupList" extends=".recruitmentHomeLayout">
+		<put-attribute name="title" value="Interview Assess Master" />
+		<put-attribute name="body"
+			value="/pages/recruitment/interviewAssessmentGroupList.jsp" />
+	</definition>
+	
+	<definition name="recruit.interviewMasteraddnew" extends=".recruitmentHomeLayout">
+	<put-attribute name="title" value="Interview Assess Master" />
+	<put-attribute name="body"
+			value="/pages/recruitment/interviewMasterData.jsp" />
+	</definition>
+	
+	<definition name="recruit.interviewAddNewGroup" extends=".recruitmentHomeLayout">
+	<put-attribute name="title" value="Interview Assess Master" />
+	<put-attribute name="body"
+			value="/pages/recruitment/interviewAssessmentGroupDetail.jsp" />
+	</definition>
+</tiles-definitions>

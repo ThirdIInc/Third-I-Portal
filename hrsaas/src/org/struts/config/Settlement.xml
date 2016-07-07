@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+        
+    <struts>   
+        <package name="settlement" namespace="/settlement" extends="struts-default">
+        
+	        <result-types>
+			  	<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+			</result-types>
+		
+			 <action name="ResignationDetails_*" method="{1}" class="org.struts.action.settlement.ResignationDetailsAction">
+				<result name="input" type="tiles" >settlement.ResignationDetail</result>
+				<result name="success" type="tiles">settlement.ResignationDetail</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				
+			</action>
+			
+			<action name="ExitInterview_*" method="{1}" class="org.struts.action.settlement.ExitIntQuesAction">
+				<result name="input" type="tiles" >settlement.ExitInterview</result>
+				<result name="success" type="tiles">settlement.ExitInterview</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+				
+			</action>
+			<action name="SettlmentDetails_*" method="{1}" class="org.struts.action.settlement.SettlmentDetailsAction">
+				<result name="input" type="tiles" >settlement.Settlement</result>
+				<result name="success" type="tiles">settlement.Settlement</result>
+				<result name="detailView" type="tiles">settlement.SettlementDetail</result>
+				<result name="settlementFirst" type="tiles">settlement.SettlementFirst</result>	
+				<result name="settlementSecond" type="tiles">settlement.SettlementSecond</result>
+				<result name="settlementThird" type="tiles">settlement.SettlementThird</result>	
+				<result name="f9page" type="tiles">common.f9page</result>			
+				
+			</action>
+			
+			
+			<action name="SettlementMisReport_*" method="{1}" class="org.struts.action.settlement.SettlementMisReportAction">
+				<result name="input" type="tiles" >settlement.SettlMISReport</result>
+				<result name="success" type="tiles">settlement.SettlMISReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	 
+			</action> 
+		 
+		    <action name="ResignationDetailsMis_*" method="{1}" class="org.struts.action.settlement.ResignationDetailsMisAction">
+				<result name="input" type="tiles" >settlement.resignationMISReport</result>
+				<result name="success" type="tiles">settlement.resignationMISReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	 
+			</action>
+			
+		    <action name="SettlementLetters_*" method="{1}" class="org.struts.action.settlement.SettlmentLettersAction">
+				<result name="input" type="tiles" >settlement.letters</result>
+				<result name="success" type="tiles">settlement.letters</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	 
+			</action>  
+		
+		    <action name="ResignationApplication_*" method="{1}" class="org.struts.action.settlement.ResignationApplicationAction">
+				<result name="input" type="tiles" >resignationApplication</result>
+				<result name="success" type="tiles">resignationApplication</result>	
+				<result name="resignApplicationJsp" type="tiles">resignApplicationJsp</result>	
+				 <result name="approvalJspPage" type="chain" >_callstatus</result>
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<!-- For mypage Entry starts -->
+				<result name="mymessages" type="chain">MypageProcessManagerAlerts_input</result>
+				<result name="serviceJsp" type="chain">MypageProcessManagerAlerts_serviceData</result>
+				<!-- For mypage Entry ends -->				 
+			</action>  
+			
+			<action name="ResignationApproval_*" method="{1}" class="org.struts.action.settlement.ResignationApprovalAction">
+				<result name="input" type="tiles">resignationApproval</result>
+				<result name="success" type="tiles">resignationApproval</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				<!-- For mypage Entry starts -->
+				<result name="mymessages" type="chain">MypageProcessManagerAlerts_input</result>
+				<result name="serviceJsp" type="chain">MypageProcessManagerAlerts_serviceData</result>
+				<!-- For mypage Entry ends -->	 
+			</action>  
+			
+			<action name="ResignationHRApproval_*" method="{1}" class="org.struts.action.settlement.ResignationHRApprovalAction">
+				<result name="input" type="tiles">resignationHRApproval</result>
+				<result name="success" type="tiles">resignationHRApproval</result>	
+				<result name="resignHrApprovalForm" type="tiles">resignHrApprovalForm</result>	
+				<result name="resignHrApprovalFormJsp" type="chain">ResignationHRApproval_callstatus</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	 
+			</action> 
+		
+			<action name="DepartmentClearanceChecklist_*" method="{1}" class="org.struts.action.settlement.DepartmentClearanceChecklistAction">
+				<result name="input" type="tiles">departmentClearanceChecklist</result>
+				<result name="success" type="tiles">departmentClearanceChecklist</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	 
+			</action> 
+			
+			<action name="DepartmentClearance_*" method="{1}" class="org.struts.action.settlement.DepartmentClearanceAction">
+				<result name="input" type="tiles">departmentClearance</result>
+				<result name="success" type="tiles">departmentClearance</result>
+				<result name="departmentClearanceForm" type="tiles">departmentClearanceForm</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	 
+			</action> 
+			
+			<action name="GratuityReport_*" method="{1}" class="org.struts.action.settlement.GratuityReportAction">
+				<result name="input" type="tiles">gratuityReport</result>
+				<result name="success" type="tiles">gratuityReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	 
+			</action> 
+			
+			<action name="ResignationEmpList_*" method="{1}" class="org.struts.action.settlement.ResignEmployeeListAction">
+				<result name="resignEmpList" type="tiles">settlement.resignEmpList</result>	 
+			</action> 
+			
+			<action name="SettlementRegister_*" method="{1}" class="org.struts.action.settlement.SettlementRegisterAction">
+				<result name="input" type="tiles">settlement.register</result>	 
+				<result name="f9page" type="tiles">common.f9page</result>
+			</action> 
+			
+			
+			<!-- This is for mypage starts -->
+		
+			<action name="MypageProcessManagerAlerts_*" method="{1}" class="org.struts.action.mypage.MypageProcessManagerAlertsAction">
+			<result name="input" type="tiles">alert.mypage</result>
+			<result name="mymessages" type="chain">MypageProcessManagerAlerts_input </result>
+			<result name="serviceJsp" type="tiles">mypage.services</result>	
+		</action>
+		
+		<!-- This is for mypage ends -->
+		
+ </package>
+        <!-- Add actions here -->    
+</struts>

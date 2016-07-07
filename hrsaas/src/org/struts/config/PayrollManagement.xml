@@ -1,0 +1,1535 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="payroll" namespace="/payroll" extends="struts-default">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		<action name="overRecovery_*" method="{1}"
+			class="org.struts.action.payroll.salary.OverRecoveryAction">
+			<result name="input" type="tiles">overRecovery</result>
+			<result name="success" type="tiles">overRecovery</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">overRecoveryReport</result>
+		</action>
+
+		<action name="CreditMaster_*" method="{1}"
+			class="org.struts.action.payroll.CreditMasterAction">
+			<result name="input" type="tiles">
+				payroll.CreditMaster
+			</result>
+			<result name="success" type="tiles">
+				payroll.CreditMaster
+			</result>
+			<result name="showData" type="tiles">
+				payroll.CreditMasterData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				payroll.creditReport
+			</result>
+			<result name="mailReport" type="tiles">common.mailReport
+			 </result>
+		</action>
+
+		<action name="DebitMaster_*" method="{1}"
+			class="org.struts.action.payroll.DebitMasterAction">
+			<result name="input" type="tiles">
+				payroll.DebitMaster
+			</result>
+			<result name="success" type="tiles">
+				payroll.DebitMaster
+			</result>
+			<result name="showData" type="tiles">
+				payroll.DeditMasterData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				payroll.DebitReport
+			</result>
+			<result name="mailReport" type="tiles">common.mailReport
+			 </result>
+			
+		</action>
+
+
+
+		<action name="EmpCredit_*" method="{1}"
+			class="org.struts.action.payroll.EmpCreditAction">
+			<result name="input" type="tiles">payroll.Credit</result>
+			<result name="success" type="tiles">payroll.Credit</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">payroll.Credit</result>
+			<result name="viewinchistory" type="tiles">payroll.incHistory</result>
+		</action>
+
+		<action name="NdaAttend_*" method="{1}"
+			class="org.struts.action.payroll.NdaAttendAction">
+			<result name="input" type="tiles">NdaAttend</result>
+			<result name="success" type="tiles">NdaAttend</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">NdaAttend</result>
+		</action>
+		<action name="NdaCalc_*" method="{1}"
+			class="org.struts.action.payroll.NdaCalcAction">
+			<result name="input" type="tiles">NdaCalc</result>
+			<result name="success" type="tiles">NdaCalc</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">NdaAttend</result>
+		</action>
+
+		<action name="DaArrear_*" method="{1}"
+			class="org.struts.action.payroll.DaArrearAction">
+			<result name="input" type="tiles">payroll.DAArear</result>
+			<result name="success" type="tiles">payroll.DAArear</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="DaArrearAudit_*" method="{1}"
+			class="org.struts.action.payroll.DaArrearAuditAction">
+			<result name="input" type="tiles">
+				payroll.DAArearAudit
+			</result>
+			<result name="success" type="tiles">
+				payroll.DAArearAudit
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="DaAcquintanceRoll_*" method="{1}"
+			class="org.struts.action.payroll.DaAcquintanceRollAction">
+			<result name="input" type="tiles">
+				payroll.DaAcquintanceRoll
+			</result>
+			<result name="success" type="tiles">
+				payroll.DaAcquintanceRoll
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="NonIndustrialSalary_*" method="{1}"
+			class="org.struts.action.payroll.NonIndustrialSalaryAction">
+			<result name="input" type="tiles">
+				payroll.NonIndustrialSalaryAction
+			</result>
+			<result name="success" type="tiles">
+				payroll.NonIndustrialSalaryAction
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="NonIndustrialSalaryAcquaintanceRoll_*"
+			method="{1}"
+			class="org.struts.action.payroll.NonIndustrialSalaryAcquaintanceRollAction">
+			<result name="input" type="tiles">
+				payroll.NonIndustrialSalaryAcquaintanceRollAction
+			</result>
+			<result name="success" type="tiles">
+				payroll.NonIndustrialSalaryAcquaintanceRollAction
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="IndustrialSalaryAudit_*" method="{1}"
+			class="org.struts.action.payroll.IndustrialSalaryAuditAction">
+			<result name="input" type="tiles">
+				payroll.IndustrialSalaryAuditAction
+			</result>
+			<result name="success" type="tiles">
+				payroll.IndustrialSalaryAuditAction
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="NonIndustrialSalaryAudit_*" method="{1}"
+			class="org.struts.action.payroll.NonIndustrialSalaryAuditAction">
+			<result name="input" type="tiles">
+				payroll.NonIndustrialSalaryAudit
+			</result>
+			<result name="success" type="tiles">
+				payroll.NonIndustrialSalaryAudit
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				payroll.NonIndustrialSalaryAuditReport
+			</result>
+		</action>
+
+		<action name="TaxInv_*" method="{1}" class="org.struts.action.payroll.TaxInvAction">
+			<!-- Hiding listing page 
+			<result name="input" type="tiles">payroll.taxInv</result>
+			-->
+			<result name="input" type="tiles">payroll.taxInvData</result>
+			<result name="success" type="tiles">payroll.taxInvData</result>
+			<result name="showData" type="tiles">payroll.taxInvData</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">payroll.taxInvReport</result>
+		</action>
+
+		<action name="Arrears_*" method="{1}"
+			class="org.struts.action.payroll.ArrearsAction">
+			<result name="input" type="tiles">Arrears</result>
+			<result name="success" type="tiles">Arrears</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">Arrears</result>
+		</action>
+
+		<action name="EmpBonus_*" method="{1}"
+			class="org.struts.action.payroll.EmpBonusAction">
+			<result name="input" type="tiles">bonus.EmpBonus</result>
+			<result name="success" type="tiles">bonus.EmpBonus</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				common.bonusEmpBonusReport
+			</result>
+		</action>
+
+		<action name="EmpDebit_*" method="{1}"
+			class="org.struts.action.payroll.EmpDebitAction">
+			<result name="input" type="tiles">debit.EmpDebit</result>
+			<result name="success" type="tiles">debit.EmpDebit</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				common.bonusEmpDebitReport
+			</result>
+		</action>
+
+
+		<action name="BonusAcqReport_*" method="{1}"
+			class="org.struts.action.payroll.BonusAcqReportAction">
+			<result name="input" type="tiles">
+				bonusAcq.BonusAcqReport
+			</result>
+			<result name="success" type="tiles">
+				bonusAcq.BonusAcqReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				common.bonus.BonusAcqReport
+			</result>
+		</action>
+
+
+
+		<action name="NdaAcqRoll_*" method="{1}"
+			class="org.struts.action.payroll.NdaAcqRollAction">
+			<result name="input" type="tiles">ndaAcqRoll.report</result>
+			<result name="success" type="tiles">
+				ndaAcqRoll.report
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				ndaAcqRoll.report
+			</result>
+		</action>
+
+		<action name="NdaHours_*" method="{1}"
+			class="org.struts.action.payroll.NdaHoursAction">
+			<result name="input" type="tiles">ndaHours.report</result>
+			<result name="success" type="tiles">ndaHours.report</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">ndaHours.report</result>
+		</action>
+
+		<action name="OtParaMaster_*" method="{1}"
+			class="org.struts.action.payroll.OtParaMasterAction">
+			<result name="input" type="tiles">
+				payroll.OtParaMaster
+			</result>
+			<result name="success" type="tiles">
+				payroll.OtParaMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				payroll.OtParaReport
+			</result>
+		</action>
+
+		<action name="CcaParaMaster_*" method="{1}"
+			class="org.struts.action.payroll.CcaParaMasterAction">
+			<result name="input" type="tiles">
+				payroll.CcaParaMaster
+			</result>
+			<result name="success" type="tiles">
+				payroll.CcaParaMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				payroll.CcaParaReport
+			</result>
+		</action>
+
+		<action name="DaParaMaster_*" method="{1}"
+			class="org.struts.action.payroll.DaParaMasterAction">
+			<result name="input" type="tiles">
+				payroll.DaParaMaster
+			</result>
+			<result name="success" type="tiles">
+				payroll.DaParaMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				payroll.DaParaReport
+			</result>
+		</action>
+
+		<action name="BonusParaMaster_*" method="{1}"
+			class="org.struts.action.payroll.BonusParaMasterAction">
+			<result name="input" type="tiles">
+				payroll.BonusParaMaster
+			</result>
+			<result name="success" type="tiles">
+				payroll.BonusParaMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				payroll.BonusParaReport
+			</result>
+		</action>
+
+		<action name="LoanInstallment_*" method="{1}"
+			class="org.struts.action.payroll.LoanInstallmentAction">
+			<result name="input" type="tiles">
+				payroll.LoanInstallment
+			</result>
+			<result name="success" type="tiles">
+				payroll.LoanInstallment
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="LoanDetailsReport_*" method="{1}"
+			class="org.struts.action.payroll.LoanInstallmentAction">
+			<result name="input" type="tiles">
+				payroll.LoanDetailsReport
+			</result>
+			<result name="success" type="tiles">
+				payroll.LoanDetailsReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+		<action name="IndustrialSalary_*" method="{1}"
+			class="org.struts.action.payroll.IndustrialSalaryAction">
+			<result name="input" type="tiles">
+				payroll.IndustrialSalaryAction
+			</result>
+			<result name="success" type="tiles">
+				payroll.IndustrialSalaryAction
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="SalarySlip_*" method="{1}"
+			class="org.struts.action.payroll.SalarySlipGeneratorAction">
+			<result name="input" type="tiles">
+				payroll.SalarySlip
+			</result>
+			<result name="success" type="tiles">
+				payroll.SalarySlip
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				payroll.SalarySlip
+			</result>
+		</action>
+
+		<action name="IndustrialSalaryReport_*" method="{1}"
+			class="org.struts.action.payroll.IndustrialSalaryAcquaintanceRollAction">
+			<result name="input" type="tiles">
+				payroll.IndustrialSalaryReport
+			</result>
+			<result name="success" type="tiles">
+				payroll.IndustrialSalaryReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="SalaryLedger_*" method="{1}"
+			class="org.struts.action.payroll.SalaryLedgerAction">
+			<result name="input" type="tiles">
+				payroll.SalaryLedger
+			</result>
+			<result name="success" type="tiles">
+				payroll.SalaryLedger
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="BankStatement_*" method="{1}"
+			class="org.struts.action.payroll.BankStatementAction">
+			<result name="input" type="tiles">
+				payroll.BankStatement
+			</result>
+			<result name="success" type="tiles">
+				payroll.BankStatement
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="SalaryStatementBank_*" method="{1}"
+			class="org.struts.action.payroll.salary.SalaryStatementBankAction">
+			<result name="input" type="tiles">
+				payroll.SalaryStatementBank
+			</result>
+			<result name="success" type="tiles">
+				payroll.SalaryStatementBank
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="NonRecovery_*" method="{1}"
+			class="org.struts.action.payroll.NonRecoveryAction">
+			<result name="input" type="tiles">
+				payroll.NonRecovery
+			</result>
+			<result name="success" type="tiles">
+				payroll.NonRecovery
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="RecoveryReport_*" method="{1}"
+			class="org.struts.action.payroll.RecoveryReportAction">
+			<result name="input" type="tiles">
+				payroll.RecoveryReport
+			</result>
+			<result name="success" type="tiles">
+				payroll.RecoveryReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				payroll.RecoveryReport
+			</result>
+		</action>
+		<action name="WelcomePayroll_*" method="{1}"
+			class="org.struts.action.payroll.WelcomePayrollAction">
+			<result name="input" type="tiles">
+				payroll.WelPayroll
+			</result>
+			<result name="success" type="tiles">
+				payroll.WelPayroll
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				payroll.WelPayroll
+			</result>
+		</action>
+
+		<action name="PTaxReport_*" method="{1}"
+			class="org.struts.action.payroll.PTaxReportAction">
+			<result name="input" type="tiles">
+				payroll.PTaxReport
+			</result>
+			<result name="success" type="tiles">
+				payroll.PTaxReport
+			</result>
+			<result name="pfReport" type="tiles">
+				payroll.pfStatutoryReport
+			</result>
+			<result name="esicReport" type="tiles">
+				payroll.esicStatutoryReport
+			</result>
+			<result name="tdsReport" type="tiles">
+				payroll.tdsStatutoryReport
+			</result>
+			<result name="lwfReport" type="tiles">
+				payroll.lwfStatutoryReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+			
+			<result name="mailReport" type="tiles">common.mailReport</result>
+
+
+		</action>
+		
+		<action name="TDSReport_*" method="{1}"
+			class="org.struts.action.payroll.TDSReportAction">
+			<result name="input" type="tiles">payroll.tdsStatutoryReport</result>
+			<result name="success" type="tiles">payroll.tdsStatutoryReport</result>
+			<result name="tdsReport" type="tiles">payroll.tdsStatutoryReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+		
+		<action name="PFReport_*" method="{1}"
+			class="org.struts.action.payroll.PFReportAction">
+			<result name="input" type="tiles">payroll.pfStatutoryReport</result>
+			<result name="success" type="tiles">payroll.pfStatutoryReport</result>
+			<result name="pfReport" type="tiles">payroll.pfStatutoryReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+		
+		<action name="LWFReport_*" method="{1}"
+			class="org.struts.action.payroll.LWFReportAction">
+			<result name="input" type="tiles">payroll.lwfStatutoryReport</result>
+			<result name="success" type="tiles">payroll.lwfStatutoryReport</result>
+			<result name="pfReport" type="tiles">payroll.lwfStatutoryReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+		
+		<action name="ESICReport_*" method="{1}"
+			class="org.struts.action.payroll.ESICReportAction">
+			<result name="input" type="tiles">payroll.esicStatutoryReport</result>
+			<result name="success" type="tiles">payroll.esicStatutoryReport</result>
+			<result name="esicReport" type="tiles">payroll.esicStatutoryReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+
+		<action name="SalaryStatement_*" method="{1}"
+			class="org.struts.action.payroll.salary.SalaryStatementAction">
+			<result name="input" type="tiles">
+				payroll.SalaryStatement
+			</result>
+			<result name="success" type="tiles">
+				payroll.SalaryStatement
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="SalaryRegister_*" method="{1}"
+			class="org.struts.action.payroll.SalaryRegisterAction">
+			<result name="input" type="tiles">payroll.SalaryRegister</result>
+			<result name="success" type="tiles">payroll.SalaryRegister</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+		<action name="PayslipMsg_*" method="{1}"
+			class="org.struts.action.payroll.salary.PayslipMsgAction">
+			<result name="input" type="tiles">
+				payroll.PayslipMsg
+			</result>
+			<result name="success" type="tiles">
+				payroll.PayslipMsg
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- PF Slip Report -->
+
+		<action name="PFSlipReport_*" method="{1}"
+			class="org.struts.action.payroll.pf.PFSlipReportAction">
+			<result name="input" type="tiles">pfslip.report</result>
+			<result name="success" type="tiles">pfslip.report</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- PF Trust Summary Report -->
+
+		<action name="PFSlipDetailReport_*" method="{1}"
+			class="org.struts.action.payroll.pf.PFSlipDetailReportAction">
+			<result name="input" type="tiles">
+				pfslip.detailreport
+			</result>
+			<result name="success" type="tiles">
+				pfslip.detailreport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="SalaryGrade_*" method="{1}"
+			class="org.struts.action.payroll.salary.SalaryGradeAction">
+			<result name="input" type="tiles">
+				payroll.SalaryGrade
+			</result>
+			<result name="success" type="tiles">
+				payroll.SalaryGrade
+			</result>
+			<result name="showData" type="tiles">
+				payroll.SalaryGradeData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="CashDisburse_*" method="{1}"
+			class="org.struts.action.payroll.salary.CashDisbursementAction">
+			<result name="input" type="tiles">
+				payroll.CashDisburseList
+			</result>
+			<result name="success" type="tiles">
+				payroll.CashDisburse
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+
+		<action name="CashClaim_*" method="{1}"
+			class="org.struts.action.payroll.salary.CashClaimAction">
+			<result name="input" type="tiles">payroll.CashClaim</result>
+			<result name="success" type="tiles">
+				payroll.CashClaim
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+		
+		<action name="CashClaimNew_*" method="{1}"
+			class="org.struts.action.payroll.salary.CashClaimActionNew">
+			<result name="input" type="tiles">payroll.CashClaimList</result>
+			<result name="success" type="tiles">
+				payroll.CashClaimNew
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+		<action name="CashClaimApproval_*" method="{1}"
+			class="org.struts.action.payroll.CashClaimApprovalAction">
+			<result name="input" type="tiles">
+				payroll.CashClaimApproval
+			</result>
+			<result name="success" type="tiles">
+				payroll.CashClaimApproval
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+
+		<action name="ClaimMisReport_*" method="{1}"
+			class="org.struts.action.payroll.salary.ClaimMisReportAction">
+			<result name="input" type="tiles">
+				payroll.ClaimMisReport
+			</result>
+			<result name="success" type="tiles">
+				payroll.ClaimMisReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+		<action name="CashProcess_*" method="{1}"
+			class="org.struts.action.payroll.CashProcessAction">
+			<result name="input" type="tiles">
+				payroll.cashProcess
+			</result>
+			<result name="success" type="tiles">
+				payroll.cashProcess
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+		<action name="DebitRecoveryReport_*" method="{1}"
+			class="org.struts.action.payroll.salary.DebitRecoveryReportAction">
+			<result name="input" type="tiles">
+				payroll.DebitRecoveryRep
+			</result>
+			<result name="success" type="tiles">
+				payroll.DebitRecoveryRep
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+
+		<action name="PTax_*" method="{1}"
+			class="org.struts.action.payroll.ProfessionalTaxReportAction">
+			<result name="input" type="tiles">payroll.ProffesionalTax</result>
+			<result name="success" type="tiles">payroll.ProffesionalTax</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+		<action name="FormulaBuilder_*" method="{1}"
+			class="org.struts.action.FormulaBuilder.FormulaBuilderAction">
+			<result name="showData" type="tiles">
+				payroll.formulaBuilderData
+			</result>
+			<result name="input" type="tiles">
+				payroll.FormulaBuilder
+			</result>
+			<result name="success" type="tiles">
+				payroll.FormulaBuilder
+			</result>
+			<result name="report" type="tiles">
+				payroll.FormulaBuilder
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9calc">
+				/pages/FormulaBuilder/formulaCalc.jsp
+			</result>
+		</action>
+		<action name="LeavePolicy_*" method="{1}"
+			class="org.struts.action.leave.LeavePolicyAction">
+			<result name="input" type="tiles">leave.LeavePolicy</result>
+			<result name="success" type="tiles">
+				leave.LeavePolicy
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9calc">
+				/pages/admin/leave/leaveCons.jsp
+			</result>
+		</action>
+
+		<action name="UploadDebit_*" method="{1}"
+			class="org.struts.action.payroll.salary.UploadDebitAction">
+			<result name="input" type="tiles">
+				payroll.UploadDebit
+			</result>
+			<result name="success" type="tiles">
+				payroll.UploadDebit
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+		<action name="UploadCredit_*" method="{1}"
+			class="org.struts.action.payroll.salary.UploadCreditAction">
+			<result name="input" type="tiles">
+				payroll.UploadCredit
+			</result>
+			<result name="success" type="tiles">
+				payroll.UploadCredit
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+		<action name="EmpSalReg_*" method="{1}" class="org.struts.action.payroll.EmpSalRegAction">
+			<result name="input" type="tiles">payroll.EmpSalReg</result>
+			<result name="success" type="tiles">payroll.EmpSalReg</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">payroll.EmpSalReg</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+		<action name="MonthlyArrears_*" method="{1}"
+			class="org.struts.action.payroll.MonthlyArrearsAction">
+			<!-- UPDATED BY REEBA -->
+			<result name="input" type="tiles">
+				payroll.MonthlyArrearsList
+			</result>
+			<!-- UPDATED BY REEBA ENDS-->
+			<result name="success" type="tiles">
+				payroll.MonthlyArrears
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="PromotionArrears_*" method="{1}"
+			class="org.struts.action.payroll.PromotionArrearsAction">
+			<result name="input" type="tiles">
+				payroll.PromotionArrearsList
+			</result>
+			<result name="success" type="tiles">
+				payroll.PromotionArrears
+			</result>
+			<result name="promotionArrearsEmpView" type="tiles">
+				payroll.promotionArrearsEmpView
+			</result>			
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9pageSearch" type="tiles">f9pageSearch</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+
+
+		<action name="UploadArrears_*" method="{1}"
+			class="org.struts.action.payroll.UploadArrearsAction">
+			<result name="input" type="tiles">
+				payroll.UploadArrears
+			</result>
+			<result name="success" type="tiles">
+				payroll.UploadArrears
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="TDSMaster_*" method="{1}"
+			class="org.struts.action.admin.master.TDSMasterAction">
+			<result name="input" type="tiles">master.TDSMasterList</result>
+			<result name="success" type="tiles">
+				master.TDSMaster
+			</result>
+			<result name="showData" type="tiles">master.TDSMasterData</result>
+			<result name="report" type="tiles">master.TDSMaster</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+		
+		<action name="PAProcess_*" method="{1}"
+			class="org.struts.action.payroll.salary.PAProcessAction">
+			<result name="input" type="tiles">payroll.paProcess</result>
+			<result name="success" type="tiles">
+				payroll.paProcess
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="PayrollZone_*" method="{1}"
+			class="org.struts.action.payroll.PayrollZoneMasterAction">
+			<result name="input" type="tiles">
+				payroll.payzonemaster
+			</result>
+			<result name="success" type="tiles">
+				payroll.payzonemaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="PAProcessReport_*" method="{1}"
+			class="org.struts.action.payroll.salary.PAProcessReportAction">
+			<result name="input" type="tiles">
+				payroll.paProcessReport
+			</result>
+			<result name="success" type="tiles">
+				payroll.paProcessReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="MonthlyArrearsReport_*" method="{1}"
+			class="org.struts.action.payroll.salary.MonthlyArrearsReportAction">
+			<result name="input" type="tiles">
+				payroll.monArrReport
+			</result>
+			<result name="success" type="tiles">
+				payroll.monArrReport
+			</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		<action name="CashBalance_*" method="{1}"
+			class="org.struts.action.payroll.salary.CashBalanceAction">
+			<result name="input" type="tiles">
+				payroll.CashBalance
+			</result>
+			<result name="success" type="tiles">
+				payroll.CashBalance
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="CashArrears_*" method="{1}"
+			class="org.struts.action.payroll.CashArrearsAction">
+			<result name="input" type="tiles">
+				payroll.cashArrears
+			</result>
+			<result name="success" type="tiles">
+				payroll.cashArrears
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="Form5Report_*" method="{1}"
+			class="org.struts.action.payroll.Form5PFAction">
+			<result name="input" type="tiles">
+				payroll.form5report
+			</result>
+			<result name="success" type="tiles">
+				payroll.form5report
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+		<action name="Form10Report_*" method="{1}"
+			class="org.struts.action.payroll.Form10PFAction">
+			<result name="input" type="tiles">
+				payroll.form10report
+			</result>
+			<result name="success" type="tiles">
+				payroll.form10report
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+		<action name="PAProcess_*" method="{1}"
+			class="org.struts.action.payroll.salary.PAProcessAction">
+			<result name="input" type="tiles">payroll.paProcess</result>
+			<result name="success" type="tiles">
+				payroll.paProcess
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="PayrollZone_*" method="{1}"
+			class="org.struts.action.payroll.PayrollZoneMasterAction">
+			<result name="input" type="tiles">
+				payroll.payzonemaster
+			</result>
+			<result name="success" type="tiles">
+				payroll.payzonemaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+
+		<action name="PAProcessReport_*" method="{1}"
+			class="org.struts.action.payroll.salary.PAProcessReportAction">
+			<result name="input" type="tiles">
+				payroll.paProcessReport
+			</result>
+			<result name="success" type="tiles">
+				payroll.paProcessReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		
+		<action name="CashBalance_*" method="{1}"
+			class="org.struts.action.payroll.salary.CashBalanceAction">
+			<result name="input" type="tiles">
+				payroll.CashBalance
+			</result>
+			<result name="success" type="tiles">
+				payroll.CashBalance
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="CashArrears_*" method="{1}"
+			class="org.struts.action.payroll.CashArrearsAction">
+			<result name="input" type="tiles">
+				payroll.cashArrears
+			</result>
+			<result name="success" type="tiles">
+				payroll.cashArrears
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="WageReport_*" method="{1}"
+			class="org.struts.action.payroll.WageReportAction">
+			<result name="input" type="tiles">
+				payroll.wageReport
+			</result>
+			<result name="success" type="tiles">
+				payroll.wageReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="Form6Report_*" method="{1}"
+			class="org.struts.action.payroll.Form6EsicReportAction">
+			<result name="input" type="tiles">
+				payroll.form6Report
+			</result>
+			<result name="success" type="tiles">
+				payroll.form6Report
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+		<action name="PFChallan_*" method="{1}"
+			class="org.struts.action.payroll.PFChallanAction">
+			<result name="input" type="tiles">payroll.pfChallan</result>
+			<result name="success" type="tiles">payroll.pfChallan</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="Data" type="tiles">payroll.pfChallanData</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>	
+		</action>
+
+
+		<action name="Form6A_*" method="{1}"
+			class="org.struts.action.payroll.Form6AAction">
+			<result name="input" type="tiles">payroll.Form6A</result>
+			<result name="success" type="tiles">payroll.Form6A</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+
+		<action name="Form7_*" method="{1}"
+			class="org.struts.action.payroll.Form7Action">
+			<result name="input" type="tiles">payroll.Form7</result>
+			<result name="success" type="tiles">payroll.Form7</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+		<action name="ESICChallan_*" method="{1}"
+			class="org.struts.action.payroll.ESICChallanAction">
+			<result name="input" type="tiles">payroll.esicChallanList</result>
+			<result name="success" type="tiles">payroll.esicChallan</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+		<action name="Form3a_*" method="{1}"
+			class="org.struts.action.payroll.Form3aAction">
+			<result name="input" type="tiles">payroll.Forrm3a</result>
+			<result name="success" type="tiles">payroll.Forrm3a</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+		<action name="AnnualEarning_*" method="{1}"	class="org.struts.action.payroll.AnnualEarningAction">
+			<result name="input" type="tiles">payroll.annualRep</result>
+			<result name="success" type="tiles">payroll.annualRep</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+
+		<action name="Tdsperquisites_*" method="{1}"
+			class="org.struts.action.payroll.TdsperquisitesAction">
+			<result name="input" type="tiles">
+				payroll.tdsperquisite
+			</result>
+			<result name="success" type="tiles">
+				payroll.tdsperquisite
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="showData" type="tiles">
+				payroll.tdsperquisiteData
+			</result>
+		</action>
+
+		<action name="EmpPerquisites_*" method="{1}"
+			class="org.struts.action.payroll.EmpPerquisitesAction">
+			<result name="input" type="tiles">tds.Perquisite</result>
+			<result name="success" type="tiles">tds.Perquisite</result>
+			<result name="showData" type="tiles">
+				payroll.tdsperquisiteData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				common.bonusEmpDebitReport
+			</result>
+		</action>
+
+		<action name="Form12BA_*" method="{1}"
+			class="org.struts.action.payroll.salary.Form12BAAction">
+			<result name="input" type="tiles">payroll.form12BA</result>
+			<result name="success" type="tiles">
+				payroll.form12BA
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>	
+		</action>
+
+		<action name="SalaryJV_*" method="{1}"
+			class="org.struts.action.payroll.SalaryJVAction">
+			<result name="input" type="tiles">payroll.salaryJV</result>
+			<result name="success" type="tiles">
+				payroll.salaryJV
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="SalPaybill_*" method="{1}"
+			class="org.struts.action.payroll.SalaryPayBillAction">
+			<result name="input" type="tiles">
+				payroll.salpaybill
+			</result>
+			<result name="success" type="tiles">
+				payroll.salpaybill
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="BranchWiseSal_*" method="{1}"
+			class="org.struts.action.payroll.BranchWiseSalReportAction">
+			<result name="input" type="tiles">
+				payroll.BranchWiseSal
+			</result>
+			<result name="success" type="tiles">
+				payroll.BranchWiseSal
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="SalaryReconcilation_*" method="{1}"
+			class="org.struts.action.payroll.SalaryReconcilationReportAction">
+			<result name="input" type="tiles">
+				payroll.salReconcil
+			</result>
+			<result name="success" type="tiles">
+				payroll.salReconcil
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="Form1_*" method="{1}"
+			class="org.struts.action.payroll.Form1Action">
+			<result name="input" type="tiles">payroll.form1</result>
+			<result name="success" type="tiles">payroll.form1</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		<action name="Form2_*" method="{1}"
+			class="org.struts.action.payroll.Form2Action">
+			<result name="input" type="tiles">payroll.form2</result>
+			<result name="success" type="tiles">payroll.form2</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+		<action name="SalarySummary_*" method="{1}"
+			class="org.struts.action.payroll.SalarySummaryAction">
+			<result name="input" type="tiles">
+				payroll.salSummary
+			</result>
+			<result name="success" type="tiles">
+				payroll.salSummary
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+		</action>
+
+		<!-- PF Mapping -->
+		<action name="PFInterestCal_*" method="{1}"
+			class="org.struts.action.payroll.pf.PfInterestCalAction">
+			<result name="input" type="tiles">
+				payroll.PfInterestCal
+			</result>
+			<result name="success" type="tiles">
+				payroll.PfInterestCal
+			</result>
+			<result name="pfIntestCalForEmp" type="tiles">
+				pfIntestCalForEmp
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+		</action>
+
+		<action name="PFBalanceRegister_*" method="{1}"
+			class="org.struts.action.payroll.pf.PfBalanceRegisterAction">
+			<result name="input" type="tiles">
+				payroll.PfRegister
+			</result>
+			<result name="success" type="tiles">
+				payroll.PfRegister
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Upload Salary -->
+		<action name="UploadSalary_*" method="{1}" class="org.struts.action.payroll.salary.UploadSalaryAction">
+			<result name="input" type="tiles">payroll.UploadSalary</result>
+			<result name="success" type="tiles">payroll.UploadSalary</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+		<action name="SalarySlipMisReport_*" method="{1}"
+			class="org.struts.action.payroll.SalarySlipMisReportAction">
+			<result name="input" type="tiles">
+				payroll.SalaryMisReport
+			</result>
+			<result name="success" type="tiles">
+				payroll.SalaryMisReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="AnnualIncrement_*" method="{1}"
+			class="org.struts.action.payroll.AnnualIncrementAction">
+			<result name="input" type="tiles">
+				payroll.AnnualIncrement
+			</result>
+			<result name="success" type="tiles">
+				payroll.AnnualIncrement
+			</result>
+			<result name="annualIncrementData" type="tiles">
+				payroll.AnnualIncrementData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="SalaryProcess_*" method="{1}"
+			class="org.struts.action.payroll.SalaryProcessAction">
+			<result name="input" type="tiles">
+				payroll.SalaryProcessList
+			</result>
+			<result name="success" type="tiles">
+				payroll.SalaryProcess
+			</result>
+			<result name="showEmpRecord" type="tiles">
+				payroll.showEmpRecord
+			</result>
+			<result name="editableSalary" type="tiles">
+				payroll.EditSalaryProcess
+			</result>
+			<result name="manageCurrentOnHold" type="tiles">
+				payroll.manageCurrentOnHold
+			</result>
+			<result name="managePreviousOnHold" type="tiles">
+				payroll.managePreviousOnHold
+			</result>
+			
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="UMC_SalaryProcess_*" method="{1}" class="org.struts.action.payroll.payroll_UMC.SalaryProcessActionUMC">
+			<result name="input" type="tiles">UMC.SalaryProcessList</result>
+			<result name="success" type="tiles">UMC.SalaryProcess</result>
+			<result name="editableSalary" type="tiles">UMC.EditSalaryProcess</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="BankStatementMis_*" method="{1}"
+			class="org.struts.action.payroll.BankStatementMisAction">
+			<result name="input" type="tiles">
+				payroll.BankStatementMis
+			</result>
+			<result name="success" type="tiles">
+				payroll.BankStatementMis
+			</result>
+			<result name="viewOnScreen" type="tiles">
+				payroll.misReportView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<!-- UPDATED BY REEBA BEGINS -->
+		<action name="FormA1CumReturn_*" method="{1}"
+			class="org.struts.action.payroll.FormA1CumReturnAction">
+			<result name="input" type="tiles">
+				payroll.FormA1CumReturn
+			</result>
+			<result name="success" type="tiles">
+				payroll.FormA1CumReturn
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		<!-- UPDATED BY REEBA ENDS -->
+
+		<action name="PTaxChallanReport_*" method="{1}"
+			class="org.struts.action.payroll.PTaxChallanReportAction">
+			<result name="input" type="tiles">
+				payroll.PTaxChallanReport
+			</result>
+			<result name="success" type="tiles">
+				payroll.PTaxChallanReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+
+		<!-- ADDED BY REEBA BEGINS -->
+		<action name="PFForm98_*" method="{1}"
+			class="org.struts.action.payroll.pf.PFForm98Action">
+			<result name="input" type="tiles">pf.form98</result>
+			<result name="success" type="tiles">pf.form98</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- ADDED BY REEBA ENDS -->
+
+
+		<!-- ADDED BY DHANASHREE -->
+		<action name="CashBalanceReport_*" method="{1}"
+			class="org.struts.action.payroll.salary.CashBalanceReportAction">
+			<result name="input" type="tiles">
+				payroll.CashBalanceReport
+			</result>
+
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+
+
+		<action name="MealVoucherBean_*" method="{1}"
+			class="org.struts.action.payroll.MealVoucherAction">
+			<result name="input" type="tiles">
+				payroll.mealVoucher
+			</result>
+			<result name="success" type="tiles">
+				payroll.mealVoucher
+			</result>
+
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="MealVoucherConf_*" method="{1}"
+			class="org.struts.action.payroll.MealVoucherConfigurationAction">
+			<result name="input" type="tiles">
+				payroll.mealVoucherConf
+			</result>
+			<result name="success" type="tiles">
+				payroll.mealVoucherConf
+			</result>
+
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="AllowancePay_*" method="{1}"
+			class="org.struts.action.payroll.AllowancePayAction">
+			<result name="input" type="tiles">
+				payroll.allowancePay
+			</result>
+			<result name="success" type="tiles">
+				payroll.allowancePay
+			</result>
+
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="AllowancePayReport_*" method="{1}"
+			class="org.struts.action.payroll.AllowancePayReportAction">
+			<result name="input" type="tiles">
+				payroll.allowancePayReport
+			</result>
+			<result name="success" type="tiles">
+				payroll.allowancePayReport
+			</result>
+
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<!-- ADDED BY Prashant BEGINS -->
+		<action name="ReimbursementConfiguaration_*" method="{1}"
+			class="org.struts.action.payroll.salary.ReimbursementConfigurationAction">
+			<result name="input" type="tiles">payroll.reimburseConfig</result>
+			<result name="success" type="tiles">payroll.reimburseConfig</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="showData" type="tiles">payroll.reimburseConfigView</result>
+		</action>
+		<!-- ADDED BY Prashant ENDS -->
+		
+		<!-- Added Ganesh -->
+			<action name="LTCConfig_*" method="{1}"
+			class="org.struts.action.payroll.salary.LTCConfigAction">
+			<result name="input" type="tiles">
+				salary.lTCConfig
+			</result>
+			<result name="success" type="tiles">
+				salary.lTCConfig
+			</result>
+
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Added ganesh end -->
+		
+		<!-- ADDED BY REEBA FOR LTC CALCULATION FORM -->
+		<action name="LTCCalc_*" method="{1}"
+			class="org.struts.action.payroll.salary.LTCProcessAction">
+			<result name="input" type="tiles">payroll.LTCCalcList</result>
+			<result name="success" type="tiles">
+				payroll.LTCCalc
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+		
+		<!-- ADDED BY DHANASHREE -->
+		<action name="LTCReport_*" method="{1}"
+			class="org.struts.action.payroll.salary.LTCReportAction">
+			<result name="input" type="tiles">
+				payroll.LTCReport
+			</result>
+
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+ 
+		<action name="EsicForm5_*" method="{1}" class="org.struts.action.payroll.EsicForm5Action">
+			<result name="input" type="tiles">payroll.Form5</result>
+			<result name="success" type="tiles">payroll.Form5</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+	 
+	 	<!-- ADDED BY Prashant BEGINS -->
+		<action name="EsicBranchWiseReport_*" method="{1}"
+			class="org.struts.action.payroll.EsicBranchWiseSummaryReportAction">
+			<result name="input" type="tiles">payroll.esicBranchWise</result>
+			<result name="success" type="tiles">payroll.esicBranchWise</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		<action name="EpfMonthlyReconciliation_*" method="{1}"
+			class="org.struts.action.payroll.EpfMonthlyReconciliationReportAction">
+			<result name="input" type="tiles">payroll.epfReconciliation</result>
+			<result name="success" type="tiles">payroll.epfReconciliation</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+		<action name="EsicMonthlyReconciliation_*" method="{1}"
+			class="org.struts.action.payroll.EsicMonthlyReconciliationReportAction">
+			<result name="input" type="tiles">payroll.esicReconciliation</result>
+			<result name="success" type="tiles">payroll.esicReconciliation</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+		<action name="EsicForm6_*" method="{1}"
+			class="org.struts.action.payroll.EsicForm6Action">
+			<result name="input" type="tiles">payroll.esicForm6</result>
+			<result name="success" type="tiles">payroll.esicForm6</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		<action name="PFTrustMasterReport_*" method="{1}"
+			class="org.struts.action.payroll.PFTrustMasterReportAction">
+			<result name="input" type="tiles">payroll.pfTrustMaster</result>
+			<result name="success" type="tiles">payroll.pfTrustMaster</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- ADDED BY Prashant ENDS -->
+				
+		<!-- Added By Ganesh start 28/09/2011 -->
+	
+	<action name="DonationMaster_*" method="{1}"
+			class="org.struts.action.admin.master.DonationMasterAction">
+			<result name="input" type="tiles">master.DonationMaster</result>
+			<result name="success" type="tiles">
+				master.DonationMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			
+			<result name="donationData" type="tiles">
+				master.DonationMasterData
+			</result>
+		</action>
+		
+	<!-- Added by Ganesh End -->
+	<!-- ADDED BY Prashant Begins -->
+		<action name="MiscSalaryUpload_*" method="{1}"
+			class="org.struts.action.payroll.MiscSalaryUploadAction">
+			<result name="input" type="tiles">payroll.miscSalUpload</result>
+			<result name="success" type="tiles">payroll.miscSalUpload</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			<result name="unauthorizedPage" type="tiles">payroll.unauthorizedPage</result>
+		</action>
+		<action name="EmployeeMonthlyEarningReport_*" method="{1}" class="org.struts.action.payroll.EmployeeMonthlyEarningReportAction">
+				<result name="input" type="tiles" >payroll.monthlyEarning</result>
+				<result name="success" type="tiles">payroll.monthlyEarning</result>
+				<result name="mailReport" type="tiles">common.mailReport</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="f9multiSelect" type="tiles">f9multiSelect</result>	
+		</action>
+		<action name="EmployeeAnnualEarningReport_*" method="{1}" class="org.struts.action.payroll.EmployeeAnnualEarningReportAction">
+				<result name="input" type="tiles" >payroll.annualEarning</result>
+				<result name="success" type="tiles">payroll.annualEarning</result>	
+				<result name="mailReport" type="tiles">common.mailReport</result>
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+		<action name="EmailPayrollReport_*" method="{1}" class="org.struts.action.payroll.EmailPayrollReportAction">
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+	<!-- ADDED BY Prashant Ends -->
+	<!-- Added by Ganesh -->
+	<action name="ReconciliationReport_*" method="{1}"
+			class="org.struts.action.payroll.ReconciliationReportAction">
+			<result name="input" type="tiles">
+				payroll.ReconciliationReport
+			</result>
+			<result name="success" type="tiles">
+				payroll.ReconciliationReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>	
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+		</action>
+		<action name="MonthlyEDSummaryReport_*" method="{1}"
+			class="org.struts.action.payroll.MonthlyEDSummaryReportAction">
+			<result name="input" type="tiles">
+				payroll.MonthlyEDSummaryReport
+			</result>
+			<result name="success" type="tiles">
+				payroll.MonthlyEDSummaryReport
+			</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>	
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+		</action>
+		
+		<action name="YearlyEDSummaryReport_*" method="{1}"
+			class="org.struts.action.payroll.YearlyEDSummaryReportAction">
+			<result name="input" type="tiles">
+				payroll.YearlyEDSummaryReport
+			</result>
+			<result name="success" type="tiles">
+				payroll.YearlyEDSummaryReport
+			</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>	
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+		</action>
+		<action name="PFSubsReport_*" method="{1}"
+			class="org.struts.action.payroll.PFSubsReportAction">
+			<result name="input" type="tiles">
+				payroll.PFSubsReport
+			</result>
+			<result name="success" type="tiles">
+				payroll.PFSubsReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="ReconciliationControlSheet_*" method="{1}"
+			class="org.struts.action.payroll.ReconciliationControlSheetAction">
+			<result name="input" type="tiles">
+				payroll.ReconciliationControlSheet
+			</result>
+			<result name="success" type="tiles">
+				payroll.ReconciliationControlSheet
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>	
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+		</action>
+		
+	<!-- Added by Ganesh End -->
+	
+		<action name="Form11Report_*" method="{1}"
+			class="org.struts.action.payroll.Form11PFAction">
+			<result name="input" type="tiles">
+				payroll.form11report
+			</result>
+			<result name="success" type="tiles">
+				payroll.form11report
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+		<action name="BonusAllowance_*" method="{1}" class="org.struts.action.payroll.bonus.BonusAllowanceAction">
+			<result name="input" type="tiles">bonus.initialListPage</result>
+			<result name="success" type="tiles">bonus.detailPage</result>
+			<result name="employeeRecords" type="tiles">bonus.employeeRecords</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>		
+		
+		<action name="BonusReport_*" method="{1}" class="org.struts.action.payroll.bonus.BonusAllowanceReportAction">
+			<result name="input" type="tiles">bonusAllowanceReportPage</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>	
+			<result name="f9page" type="tiles">common.f9page</result>	
+		</action>
+	
+	</package>
+</struts>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="WBT" namespace="/WBT" extends="struts-default">
+	<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+	</result-types>
+	<action name="ProgrammeMaster_*" method="{1}"
+			class="org.struts.action.WBT.ProgrammeMasterAction">
+			<result name="input" type="tiles">wbt.programmeMasterList</result>
+			<result name="success" type="tiles">wbt.programmeMasterList</result>
+			<result name="programmeJSP" type="tiles">wbt.programmeMaster</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="manageSectionPage" type="tiles">wbt.manageSectionPage</result>
+			<result name="manageQuestionPage" type="tiles">wbt.manageQuestionPage</result>
+			<!-- <result name="instructionPage" type="tiles">contentPage</result>  -->
+			<result name="instructionPage" type="tiles">instructionPage</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+		
+		
+		<action name="OnlineProgram_*" method="{1}"
+			class="org.struts.action.WBT.OnlineProgramAction">
+			<result name="input" type="tiles">
+				wbt.OnlineProgram
+			</result>
+			<result name="f9page" type="tiles">
+				common.f9page
+			</result>
+			
+			<result name="testScreenTemplate" type="tiles">
+				testScreenTemplate
+			</result>
+			 
+			
+			<result name="moduleScreen" type="tiles">
+				moduleScreen
+			</result>
+			
+			<result name="testScreen" type="tiles">
+				testScreen
+			</result>
+			<result name="onlineProgramSubmit" type="tiles">
+				onlineProgramSubmit
+			</result>
+			<result name="invalidTest" type="tiles">
+				invalidTest
+			</result>
+		 
+			<result name="displayContent" type="tiles">
+				wbt.displayContent
+			</result>
+		 
+			 
+		</action>
+		
+		 
+	
+	</package>
+</struts>

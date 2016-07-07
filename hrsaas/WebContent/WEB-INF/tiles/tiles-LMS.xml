@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name="LMS.Designation" extends=".mainLayout">
+		<put-attribute name="title" value="LMS Designation" />
+		<put-attribute name="body" value="/pages/LMS/lmsDesignation.jsp" />
+	</definition>
+
+
+	<definition name="LMS.MapDebits" extends=".mainLayout">
+		<put-attribute name="title" value="LMS Map Debits" />
+		<put-attribute name="body" value="/pages/LMS/lmsMapDebits.jsp" />
+	</definition>
+	<!--(End) Added by manish sakpal -->
+
+
+	<!--(Start) Added by Nilesh -->
+	<definition name="LMS.EmployeeType" extends=".mainLayout">
+		<put-attribute name="title" value="Employee Type" />
+		<put-attribute name="body" value="/pages/LMS/employeeType.jsp" />
+	</definition>
+	<!--(End) Added by Nilesh -->
+
+	<!--Minimum Wages Act Entry Start -->
+	<definition name="Returns.MinimumWagesAct" extends=".mainLayout">
+		<put-attribute name="title" value="MinimumWagesAct" />
+		<put-attribute name="body" value="/pages/LMS/minWagesAct.jsp" />
+	</definition>
+
+	<definition name="Returns.MinimumWagesActBook"
+		extends=".mainLayout">
+		<put-attribute name="title" value="MinimumWagesActBook" />
+		<put-attribute name="body" value="/pages/LMS/minimumwagesActBook.jsp" />
+	</definition>
+
+
+	<definition name="Returns.HomePage" extends=".mainLayout">
+		<put-attribute name="title" value="Returns.HomePage" />
+		<put-attribute name="body" value="/pages/LMS/returnListpage.jsp" />
+	</definition>
+
+	<definition name="Returns.MinWagesAct" extends=".mainLayout">
+		<put-attribute name="title" value="Returns.MinWagesAct" />
+		<put-attribute name="body" value="/pages/LMS/deptofLabour.jsp" />
+	</definition>
+
+	<definition name="Returns.GratuityRules" extends=".mainLayout">
+		<put-attribute name="title" value="Returns.GratuityRules" />
+		<put-attribute name="body" value="/pages/LMS/gratuityRules.jsp" />
+	</definition>
+
+	<definition name="Returns.RentAllowance" extends=".mainLayout">
+		<put-attribute name="title" value="Returns.RentAllowance" />
+		<put-attribute name="body" value="/pages/LMS/rentAllowance.jsp" />
+	</definition>
+
+	<definition name="Returns.BonusRules" extends=".mainLayout">
+		<put-attribute name="title" value="Returns.BonusRules" />
+		<put-attribute name="body" value="/pages/LMS/bonusRules.jsp" />
+	</definition>
+
+	<definition name="Returns.ChildLabour" extends=".mainLayout">
+		<put-attribute name="title" value="Returns.ChildLabour" />
+		<put-attribute name="body" value="/pages/LMS/childLabour.jsp" />
+	</definition>
+
+	<definition name="Returns.EqualRenumeration"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Returns.EqualRenumeration" />
+		<put-attribute name="body" value="/pages/LMS/equalRemuneration.jsp" />
+	</definition>
+
+	<definition name="Returns.MaternityBenefits"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Returns.MaternityBenefits" />
+		<put-attribute name="body" value="/pages/LMS/maternityBenefits.jsp" />
+	</definition>
+
+
+	<!--(Start) Added by Dhanashree -->
+	<definition name="LMS.ColonyMasterData" extends=".mainLayout">
+		<put-attribute name="title" value="ColonyMasterData" />
+		<put-attribute name="body" value="/pages/LMS/colonyMasterData.jsp" />
+	</definition>
+
+
+	<definition name="LMS.ColonyMasterList" extends=".mainLayout">
+		<put-attribute name="title" value="ColonyMasterList" />
+		<put-attribute name="body" value="/pages/LMS/colonyMasterList.jsp" />
+	</definition>
+	<!--(End) Added by Dhanashree -->
+
+
+	<definition name="Returns.AnnualFactory" extends=".mainLayout">
+		<put-attribute name="title" value="Returns.AnnualFactoryReturn" />
+		<put-attribute name="body" value="/pages/LMS/annualFactoryReturn.jsp" />
+	</definition>
+
+
+	<!--(Start) Added by Dhanashree -->
+	<definition name="LMS.HouseMasterData" extends=".mainLayout">
+		<put-attribute name="title" value="HouseMasterData" />
+		<put-attribute name="body" value="/pages/LMS/houseMasterData.jsp" />
+	</definition>
+
+
+	<definition name="LMS.HouseMasterList" extends=".mainLayout">
+		<put-attribute name="title" value="HouseMasterList" />
+		<put-attribute name="body" value="/pages/LMS/houseMasterList.jsp" />
+	</definition>
+	<!--(End) Added by Dhanashree -->
+
+	<!-- (Start)Added by manish sakpal -->
+
+	<definition name="Lms.DisputeManagementList"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Dispute Management System List" />
+		<put-attribute name="body"
+			value="/pages/LMS/disputeManagementSystemList.jsp" />
+	</definition>
+
+	<definition name="Lms.DisputeManagementDetail"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Dispute Management System" />
+		<put-attribute name="body" value="/pages/LMS/disputeManagementSystem.jsp" />
+	</definition>
+	<!-- (End)Added by manish sakpal -->
+
+	<!--Added by Janisha  -->
+	<definition name="LMS.AccommodationMasterData"
+		extends=".mainLayout">
+		<put-attribute name="title" value="AccommodationMasterData" />
+		<put-attribute name="body" value="/pages/LMS/AccommodationMasterData.jsp" />
+	</definition>
+
+
+	<definition name="LMS.AccommodationMasterList"
+		extends=".mainLayout">
+		<put-attribute name="title" value="AccommodationMasterList" />
+		<put-attribute name="body" value="/pages/LMS/AccommodationMasterList.jsp" />
+	</definition>
+
+
+	<definition name="LMS.AccommodationMasterCheckOutData"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Check Out Data Form" />
+		<put-attribute name="body" value="/pages/LMS/CheckOutData.jsp" />
+	</definition>
+	<!--End Added by Janisha -->
+
+	<!-- Added Ganesh For Dispute -->
+
+
+	<definition name="Lms.DisputeManagementList"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Dispute Management System List" />
+		<put-attribute name="body"
+			value="/pages/LMS/disputeManagementSystemList.jsp" />
+	</definition>
+
+	<definition name="Lms.DisputeManagementDetail"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Dispute Management System" />
+		<put-attribute name="body" value="/pages/LMS/disputeManagementSystem.jsp" />
+	</definition>
+
+	<definition name="Lms.AccidentDetailList" extends=".mainLayout">
+		<put-attribute name="title" value="Accident Details List" />
+		<put-attribute name="body" value="/pages/LMS/accidentDetailsList.jsp" />
+	</definition>
+
+	<definition name="Lms.AccidentDetails" extends=".mainLayout">
+		<put-attribute name="title" value="Accident Details" />
+		<put-attribute name="body" value="/pages/LMS/accidentDetails.jsp" />
+	</definition>
+	<!-- (End)Added by manish sakpal -->
+
+	<!--Added by Janisha  -->
+	<definition name="LMS.AccommodationMasterData"
+		extends=".mainLayout">
+		<put-attribute name="title" value="AccommodationMasterData" />
+		<put-attribute name="body" value="/pages/LMS/AccommodationMasterData.jsp" />
+	</definition>
+
+
+	<definition name="LMS.AccommodationMasterList"
+		extends=".mainLayout">
+		<put-attribute name="title" value="AccommodationMasterList" />
+		<put-attribute name="body" value="/pages/LMS/AccommodationMasterList.jsp" />
+	</definition>
+
+
+	<definition name="LMS.AccommodationMasterCheckOutData"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Check Out Data Form" />
+		<put-attribute name="body" value="/pages/LMS/CheckOutData.jsp" />
+	</definition>
+	<!--End Added by Janisha -->
+
+	<!-- Added Ganesh For Dispute -->
+<definition name="Dispute.TradeUnionWorkCouncilList"
+		extends=".mainLayout">
+		<put-attribute name="title" value="TradeUnion/WorkCouncil" />
+		<put-attribute name="body"
+			value="/pages/LMS/tradeUnionWorkCouncilList.jsp" />
+	</definition>
+
+	<definition name="Dispute.TradeUnionWorkCouncilData"
+		extends=".mainLayout">
+		<put-attribute name="title" value="TradeUnion/WorkCouncil" />
+		<put-attribute name="body"
+			value="/pages/LMS/tradeUnionWorkCouncilData.jsp" />
+	</definition>
+
+<definition name="welfare.WelfareInformationData"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Welfare Information Data" />
+		<put-attribute name="body" value="/pages/LMS/welfareInformationData.jsp" />
+	</definition>
+
+	<definition name="SafetyCommittee.SafetyCommitteeMasterList"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Safety Committee Master" />
+		<put-attribute name="body"
+			value="/pages/LMS/safetyCommitteeMasterList.jsp" />
+	</definition>
+
+	<definition name="SafetyCommittee.SafetyCommitteeMasterData"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Safety Committee Master" />
+		<put-attribute name="body"
+			value="/pages/LMS/safetyCommitteeMasterData.jsp" />
+	</definition>
+
+	<definition name="RulesAndPolicy.RulesAndPolicyMasterList"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Rules And Policy Master" />
+		<put-attribute name="body"
+			value="/pages/LMS/rulesAndPolicyMasterList.jsp" />
+	</definition>
+
+	<definition name="RulesAndPolicy.RulesAndPolicyMasterData"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Rules And Policy Master" />
+		<put-attribute name="body"
+			value="/pages/LMS/rulesAndPolicyMasterData.jsp" />
+	</definition>
+
+</tiles-definitions>

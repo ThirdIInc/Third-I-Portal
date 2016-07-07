@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+<!--Layout definitions begins-->
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+			<!-- Added by priyanka -->
+<definition name=".hrmHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/hrmHomeLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<!-- ended by priyanka -->
+	
+<!--Layout definitions ends-->
+
+<!-- DataMigration definition begins -->
+
+<definition name="DataMigration.empDetails" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Data Migration" />
+		<put-attribute name="body"
+			value="/pages/DataMigration/empDetailsUpload.jsp" />
+	</definition>
+
+	<definition name="DataMigration.employeewiseUpload"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Data Migration" />
+		<put-attribute name="body"
+			value="/pages/DataMigration/employeewiseUpload.jsp" />
+	</definition>
+
+	<definition name="DataMigration.masterDetails"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Data Migration" />
+		<put-attribute name="body"
+			value="/pages/DataMigration/masterDetailsUpload.jsp" />
+	</definition>
+
+	<definition name="partialUpload.personal" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Personal Details(Partial Upload)" />
+		<put-attribute name="body"
+			value="/pages/DataMigration/personalPartialUpload.jsp" />
+	</definition>
+
+	<definition name="partialUpload.official" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Official Details(Partial Upload)" />
+		<put-attribute name="body"
+			value="/pages/DataMigration/officialPartialUpload.jsp" />
+	</definition>
+
+	<definition name="DataMigration.assetMaster"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Asset Master Upload" />
+		<put-attribute name="body"
+			value="/pages/DataMigration/assetMasterUpload.jsp" />
+	</definition>
+
+	<definition name="DataMigration.CndDetails" extends=".mainLayout">
+		<put-attribute name="title" value="Data Migration" />
+		<put-attribute name="body"
+			value="/pages/DataMigration/candidateDetailsUpload.jsp" />
+	</definition>
+
+<!-- DataMigration definition ends -->
+</tiles-definitions>

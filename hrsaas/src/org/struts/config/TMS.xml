@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="TMS" namespace="/TMS" extends="struts-default">
+
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+
+		<!-- TMS Masters mapping-->
+
+
+		<action name="TravelMode_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.TravelModeAction">
+			<result name="input" type="tiles">TMS.travelMode</result>
+			<result name="success" type="tiles">TMS.travelMode</result>
+			<result name="view" type="tiles">TMS.travelModeView</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+
+		<action name="TravelPurpose_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.TravelPurposeAction">
+			<result name="input" type="tiles">TMS.travelPurpose</result>
+			<result name="success" type="tiles">
+				TMS.travelPurpose
+			</result>
+			<result name="view" type="tiles">
+				TMS.travelPurposeView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+
+		<action name="LocationType_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.LocationTypeAction">
+			<result name="input" type="tiles">TMS.locationType</result>
+			<result name="success" type="tiles">
+				TMS.locationType
+			</result>
+			<result name="view" type="tiles">
+				TMS.locationTypeView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="FoodType_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.FoodTypeAction">
+			<result name="input" type="tiles">TMS.foodTypeView</result>
+			<result name="success" type="tiles">TMS.foodType</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="HotelType_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.HotelTypeAction">
+			<result name="input" type="tiles">TMS.hotelType</result>
+			<result name="success" type="tiles">TMS.hotelType</result>
+			<result name="view" type="tiles">TMS.hotelViewType</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="RoomType_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.RoomTypeAction">
+			<result name="input" type="tiles">TMS.roomTypeView</result>
+			<result name="success" type="tiles">TMS.roomType</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="TravelGrade_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.TravelGradeAction">
+			<result name="input" type="tiles">TMS.travelGrade</result>
+			<result name="success" type="tiles">TMS.travelGrade</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+
+
+
+		<action name="ExpensesCategory_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.ExpensesCategoryAction">
+			<result name="input" type="tiles">TMS.expenses</result>
+			<result name="success" type="tiles">TMS.expenses</result>
+			<result name="view" type="tiles">
+				TMS.travelExpensesView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<!-- end of TMS masters mapping -->
+
+
+
+
+		<action name="AdvanceDefaulter_*" method="{1}"
+			class="org.struts.action.TravelManagement.ExpenseClaim.TravelAdvanceDefaulterAction">
+			<result name="input" type="tiles">TMS.advDefaulter</result>
+			<result name="success" type="tiles">
+				TMS.advDefaulter
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="TravelPolicy_*" method="{1}"
+			class="org.struts.action.TravelManagement.Config.TravelPolicyAction">
+			<result name="input" type="tiles">
+				TMS.travelSearchList
+			</result>
+			<result name="success" type="tiles">
+				TMS.travelPolicy
+			</result>
+			<result name="saveSecond" type="tiles">
+				TMS.polSaveSecond
+			</result>
+			<result name="saveThird" type="tiles">
+				TMS.polSaveThird
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+
+
+		<action name="TravelApplication_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelPlan.TravelApplicationAction">
+			<result name="input" type="tiles">TMS.trAppReadOnly</result>
+			<result name="success" type="tiles">TMS.trApp</result>
+			<result name="trAppPolicy" type="tiles">
+				TMS.trPolicy
+			</result>
+			<result name="trApprover" type="tiles">
+				TMS.trApproverView
+			</result>
+			<result name="trApproverView" type="tiles">
+				TMS.trApproverForReadOnly
+			</result>
+			<result name="trackMode" type="tiles">TMS.trackMode</result>
+			<result name="travelApporvalUpdate" type="chain">
+				TravelApprNew_saveForSingleApprover
+			</result>
+			<result name="travelRejectUpdate" type="chain">
+				TravelApprNew_saveForSingleReject
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="TravelProcessManager_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.TravelProcessManagerAction">
+			<result name="input" type="tiles">
+				TMS.travelProcessManager
+			</result>
+			<result name="success" type="tiles">
+				TMS.travelProcessManager
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="TravelAuthorities_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.TravelAuthoritiesAction">
+			<result name="input" type="tiles">TMS.travelAuth</result>
+			<result name="success" type="tiles">TMS.travelAuth</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="TravelApprNew_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelPlan.TravelApproverAction">
+			<result name="input" type="tiles">
+				TMS.TravelApprover
+			</result>
+			<result name="success" type="tiles">
+				TMS.TravelApprover
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="TravelExpDisbur_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelExpensesDisbursementAction">
+			<result name="input" type="tiles">
+				TMS.TravelExpDisburse
+			</result>
+			<result name="success" type="tiles">
+				TMS.TravelExpDisburse
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="trvlExpense" type="tiles">
+				TMS.TravelExp
+			</result>
+			<result name="trvlBalance" type="tiles">
+				TMS.TravelBal
+			</result>
+			<result name="trvlFull" type="tiles">TMS.TravelFull</result>
+		</action>
+
+		<action name="TrvlSchl_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelPlan.TrvlScheduleAction">
+			<result name="input" type="tiles">TMS.TravelSchle</result>
+			<result name="success" type="tiles">TMS.TravelSchle</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="scheDule" type="tiles">TMS.schedule</result>
+			<result name="schTrvlList" type="tiles">
+				TMS.schTrvlList
+			</result>
+			<result name="schRegList" type="tiles">
+				TMS.schReglList
+			</result>
+			<result name="schCancel" type="tiles">TMS.schCancel</result>
+			<result name="schCanceled" type="tiles">
+				TMS.schCanceled
+			</result>
+		</action>
+
+		<action name="TravelSchAppr_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelPlan.TravelScheduleApproverAction">
+			<result name="input" type="tiles">
+				TMS.TravelSchApprover
+			</result>
+			<result name="success" type="tiles">
+				TMS.TravelSchApprover
+			</result>
+			<result name="SchApprView" type="tiles">
+				TMS.SchApprView
+			</result>
+			<result name="SchApprPending" type="tiles">
+				TMS.SchApprPending
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+		<action name="TravelAdvanceDisbursement_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelPlan.TravelAdvanceDisbursementAction">
+			<result name="input" type="tiles">
+				TMS.travelAdvanceDisbursement
+			</result>
+			<result name="success" type="tiles">
+				TMS.travelAdvanceDisbursement
+			</result>
+			<result name="advancePaymentDetails" type="tiles">
+				TMS.advancePaymentDetails
+			</result>
+			<result name="paymentDetails" type="tiles">
+				TMS.paymentDetails
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="TravelAcknowledgement_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelPlan.TravelAcknowledgementAction">
+			<result name="input" type="tiles">
+				TMS.travelAcknowledgement
+			</result>
+			<result name="success" type="tiles">
+				TMS.travelAcknowledgement
+			</result>
+			<result name="travelScheduleDetails" type="tiles">
+				TMS.travelScheduleDetails
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="ExpenseClaimApproval_*" method="{1}"
+			class="org.struts.action.TravelManagement.ExpenseClaim.ExpenseClaimApprovalAction">
+			<result name="input" type="tiles">
+				TravelMngt.expenseClaimApproval
+			</result>
+			<result name="success" type="tiles">
+				TravelMngt.expenseClaimApproval
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+
+		<action name="ExpenseClaimApp_*" method="{1}"
+			class="org.struts.action.TravelManagement.ExpenseClaim.ExpenseClaimAppAction">
+			<result name="input" type="tiles">
+				TravelMngt.expenseClaimApp
+			</result>
+			<result name="success" type="tiles">
+				TravelMngt.expenseClaimApp
+			</result>
+			<result name="viewTravelClaimHdr" type="tiles">
+				TravelMngt.viewTravelClaimAppHdr
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<!-- TRAVEL MANAGEMENT SYSTEM (Phase-II)-->
+
+		<!-- MASTERS [Begin] -->
+		<action name="TravelClass_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.TravelClassAction">
+			<result name="input" type="tiles">TMS.travelClass</result>
+			<result name="success" type="tiles">TMS.travelClass</result>
+			<result name="view" type="tiles">
+				TMS.travelClassView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="HotelType_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.HotelTypeAction">
+			<result name="input" type="tiles">TMS.hotelType</result>
+			<result name="success" type="tiles">TMS.hotelType</result>
+			<result name="view" type="tiles">TMS.hotelViewType</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- MASTERS [END] -->
+
+		<!-- Hotel MASTERS [Begin] -->
+		<action name="HotelMaster_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.HotelMasterAction">
+			<result name="input" type="tiles">
+				travel.hotelMaster
+			</result>
+			<result name="addnew" type="tiles">
+				travel.hotelMasteraddnew
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+
+		<!-- Hotel MASTERS [END] -->
+
+		 	<!-- TRAVEL APPLICATION -->
+		<action name="TravelApplication_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelProcess.TravelApplicationAction">
+			<result name="success" type="tiles">
+				TrvlMngt.TrvlProcess.travelApp
+			</result>
+			<result name="empInfo" type="tiles">
+				TrvlMngt.TrvlProcess.travelAppEmpInfo
+			</result>
+			<result name="tourDtls" type="tiles">
+				TrvlMngt.TrvlProcess.travelAppTourDtls
+			</result>
+			<result name="advIdntDtls" type="tiles">
+				TrvlMngt.TrvlProcess.travelAppAdvIdntDtls
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="foodType" type="tiles">
+				TrvlMngt.TrvlProcess.travelFoodType
+			</result>
+			<result name="viewTravelPolicy" type="tiles">
+				TrvlMngt.TrvlProcess.travelPolicy
+			</result>
+			<result name="previewApplication" type="tiles">
+				TrvlMngt.TrvlProcess.travelAppPreview
+			</result>
+			<result name="book" type="tiles">
+				TravelApprNew.schldTrvlList
+			</result>
+			<result name="monitorBook" type="tiles">
+				TrvlProcess.monitorStartBook
+			</result>
+			<result name="addEmpToTraveller" type="tiles">
+				TrvlMngt.TrvlProcess.addEmployeeTraveller
+			</result>
+			<result name="cancelBookedDtls" type="chain">
+				TravelDesk_callStatus
+			</result>
+			<result name="travelApprovalJspPage" type="chain">
+				TravelAppvr_input
+			</result>
+			
+			<result name="bookingJspPage" type="tiles">TrvlMngt.bookingJspPage</result>
+			
+			<result name="applicationjsppage" type="tiles">TrvlMngt.applicationjsppage</result>
+			
+			 <!-- my page code -->
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+				<result name="mytimeCard" type="chain">
+				 MypageProcessManagerAlerts_mytimeCard
+			</result>
+			 
+			
+		</action>
+
+		<!-- Travel Policy -->
+		<action name="TravelPolicy_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelProcess.TmsTravelPolicyAction">
+			<result name="input" type="tiles">
+				TMS.travelviewpolicy
+			</result>
+			<result name="success" type="tiles">
+				TMS.travelPolicy
+			</result>
+			<result name="gradeview" type="tiles">
+				TMS.travelGradePolicy
+			</result>
+			<result name="details" type="tiles">
+				TMS.travelDetails
+			</result>
+			<result name="guidline" type="tiles">
+				TMS.viewGuidlines
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- Travel Approval -->
+		<action name="TravelAppvr_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelProcess.TmsTrvlApprovalAction">
+			<result name="input" type="tiles">
+				TMS.TravelApproval
+			</result>
+			<result name="success" type="tiles">
+				TMS.TravelApproval
+			</result>
+			<result name="trvlApprView" type="tiles">
+				TMS.TravelApprovalView
+			</result>
+			<result name="cmtsTrail" type="tiles">TMS.CmtsTrail</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			
+			 <!-- my page code -->
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+				<result name="mytimeCard" type="chain">
+				 MypageProcessManagerAlerts_mytimeCard
+			</result>
+			 
+			 
+		</action>
+
+		<!-- Travel Management Authorities  -->
+		<action name="TrvlMangAuthorities_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelProcess.TmsTrvlMangAuthoritiesAction">
+			<result name="input" type="tiles">TMS.trvlMangAuth</result>
+			<result name="success" type="tiles">
+				TMS.trvlMangAuth
+			</result>
+			<result name="view" type="tiles">
+				TMS.trvlMangAuthView
+			</result>
+			<result name="add" type="tiles">TMS.trvlMangAuthAdd</result>
+			<result name="show" type="tiles">
+				TMS.trvlMangAuthBranch
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- Travel Desk -->
+		<action name="TravelDesk_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelProcess.TmsTrvlDeskAction">
+			<result name="input" type="tiles">TMS.trvlDesk</result>
+			<result name="success" type="tiles">TMS.trvlDesk</result>
+			<result name="view" type="tiles">TMS.trvlDeskView</result>
+			<result name="book" type="tiles">TMS.trvlDeskBook</result>
+			<result name="cancelBookedDtls" type="chain">
+				TravelDesk_callStatus
+			</result>
+			<result name="trvlAppSchldLst" type="chain">
+				TravelApplication_getScheduledTravelList
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- Travel Process Manager -->
+		<action name="TravelProMngr_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelProcess.TmsTrvlProcessMngrAction">
+			<result name="input" type="tiles">
+				TMS.travelProManager
+			</result>
+			<result name="success" type="tiles">
+				TMS.travelProManager
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- TRAVEL MONITORING -->
+		<action name="TravelMonitor_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelProcess.TravelMonitoringAction">
+			<result name="input" type="tiles">
+				TrvlProcess.travelMonitor
+			</result>
+			<result name="success" type="tiles">
+				TrvlProcess.travelMonitor
+			</result>
+			<result name="travelDtl" type="tiles">
+				TrvlProcess.monitorTrvlDtl
+			</result>
+			<result name="accomDtl" type="tiles">
+				TrvlProcess.monitorAccomDtl
+			</result>
+			<result name="locConvDtl" type="tiles">
+				TrvlProcess.monitorLocConvDtl
+			</result>
+			<result name="book" type="tiles">
+				TrvlProcess.monitorStartBook
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="uploadFile">
+				/pages/TravelManagement/TravelProcess/fileUpload.jsp
+			</result>
+		</action>
+
+		<action name="Currency_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.CurrencyMasterAction">
+			<result name="input" type="tiles">
+				TMS.currencyMaster
+			</result>
+			<result name="success" type="tiles">
+				TMS.currencyMaster
+			</result>
+			<result name="view" type="tiles">
+				TMS.currencyMasterView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<!-- Travel Claim Application -->
+
+		<action name="TravelClaim_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelClaim.TmsClaimApplicationAction">
+			<result name="input" type="tiles">TMS.trvlClaim</result>
+			<result name="success" type="tiles">TMS.trvlClaim</result>
+			<result name="dtl" type="tiles">TMS.trvlClaimDtl</result>
+			<result name="view" type="tiles">TMS.trvlClaimView</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			
+			<!-- my page code -->
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+			
+		</action>
+
+		<!-- Travel Claim Approver -->
+
+		<action name="TravelClmAppvr_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelClaim.TmsTrvlClmApprovalAction">
+			<result name="input" type="tiles">
+				TMS.TravelClmApproval
+			</result>
+			<result name="success" type="tiles">
+				TMS.TravelClmApproval
+			</result>
+			<result name="trvlClmApprView" type="tiles">
+				TMS.TrvlClmApprvlView
+			</result>
+			<result name="splittedExpenditure" type="tiles">
+				TMS.TrvlExpenditureView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			
+			<result name="claimApprovalJsp" type="chain">TravelClmAppvr_callStatus</result>
+			
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+			
+		</action>
+	
+		<!-- Travel Claim Admin Approver -->
+
+		<action name="TravelClmAdminAppvr_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelClaim.TmsTrvlClmAdminApprovalAction">
+			<result name="input" type="tiles">
+				TMS.TravelClmAdminApproval
+			</result>
+			<result name="success" type="tiles">
+				TMS.TravelClmAdminApproval
+			</result>
+			<result name="trvlClmApprView" type="tiles">
+				TMS.TrvlClmAdminApprvlView
+			</result>
+			<result name="trvlClmAdmExpenditure" type="tiles">
+				TMS.TrvlClmAdminExpenditure
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+			
+			
+		</action>
+		
+		<!-- Travel Adv/Claim disbursement -->
+
+		<action name="AdvClmDisbursement_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelClaim.AdvCaimDisbAction">
+			<result name="input" type="tiles">TMS.Disbursement</result>
+			<result name="success" type="tiles">
+				TMS.currencyMaster
+			</result>
+			<result name="pendingadvdisburse" type="tiles">
+				TMS.pendingDisburse
+			</result>
+			<result name="closedadvancelist" type="tiles">
+				TMS.closedDisburse
+			</result>
+			<!-- ADDED BY REEBA FOR ADVANCE DEFAULTERS -->
+			<result name="advanceDefaulter" type="tiles">
+				TMS.advanceDefaulter
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="TravelExpDisbrsmnt_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelClaim.TmsClmDisbursementAction">
+			<result name="input" type="tiles">
+				TMS.TravelExpDisbrsmnt
+			</result>
+			<result name="success" type="tiles">
+				TMS.TravelExpDisbrsmnt
+			</result>
+			<result name="trvlClmDisbrView" type="tiles">
+				TMS.trvlClmDisbrView
+			</result>
+			
+			<result name="trvlClmAckView" type="tiles">
+				TMS.trvlClmAckView
+			</result>
+		 
+			<result name="f9page" type="tiles">common.f9page</result>
+			
+				<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+			
+		</action>
+
+
+		<!-- Travel Advance claim defaulter -->
+		<action name="TravelClaimDefaulter_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelClaim.TrvlSettmntDefaltrAction">
+			<result name="input" type="tiles">
+				TMS.travelSettDefault
+			</result>
+			<result name="employeeDet" type="tiles">
+				TMS.travelAdvSett
+			</result>
+			<result name="success" type="tiles">
+				TMS.travelSettDefault
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+
+
+		<!-- TMS Reports Mappings -->
+		<!-- Travel Applicant Report -->
+		<action name="TrvlApplicantReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TrvlApplicantReportAction">
+			<result name="input" type="tiles">
+				TMS.trvlApplicantReport
+			</result>
+			<result name="success" type="tiles">
+				TMS.trvlApplicantReport
+			</result>
+			<result name="viewOnScreen" type="tiles">
+				TMS.trvlApplicantReportView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Travel Approver Report -->
+
+		<action name="TravelApprvrReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TrvlApprvrReportAction">
+			<result name="input" type="tiles">
+				TMS.trvlApprvrReport
+			</result>
+			<result name="success" type="tiles">
+				TMS.trvlApprvrReport
+			</result>
+			<result name="viewOnScreen" type="tiles">
+				TMS.trvlApprvrReportView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Travel Main Scheduler Report -->
+		<action name="TravelMainSchdlrReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TrvlMainSchdlrReportAction">
+			<result name="input" type="tiles">
+				TMS.trvlMainSchdlrReport
+			</result>
+			<result name="success" type="tiles">
+				TMS.trvlMainSchdlrReport
+			</result>
+			<result name="viewOnScreen" type="tiles">
+				TMS.trvlMainSchdlrReportView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Travel Sub-Scheduler Report -->
+		<action name="TravelSubSchdlrReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TrvlSubSchdlrReportAction">
+			<result name="input" type="tiles">
+				TMS.trvlSubSchdlrReport
+			</result>
+			<result name="success" type="tiles">
+				TMS.trvlSubSchdlrReport
+			</result>
+			<result name="viewOnScreen" type="tiles">
+				TMS.trvlSubSchdlrReportView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- Travel Accountant Report -->
+		<action name="TravelAccntReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TrvlAccntReportAction">
+			<result name="input" type="tiles">
+				TMS.travelAccntReport
+			</result>
+			<result name="success" type="tiles">
+				TMS.travelAccntReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewOnScreen" type="tiles">
+				TMS.travelAccntReportView
+			</result>
+		</action>
+
+		<!-- Travel Administrator Report -->
+		<action name="TravelAdminReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TrvlAdminReportAction">
+			<result name="input" type="tiles">
+				TMS.travelAdminReport
+			</result>
+			<result name="success" type="tiles">
+				TMS.travelAdminReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewOnScreen" type="tiles">
+				TMS.travelAdminReportView
+			</result>
+		</action>
+
+
+
+		<!-- TMS Reports Mappings End  -->
+
+		<!-- Add actions here -->
+
+
+
+
+
+
+
+
+		<!-- Travel Agency  master -->
+		<action name="TravelAgencyList_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.TravelAgencyListAction">
+			<result name="input" type="tiles">
+				TravelMngt.travelAgencyList
+			</result>
+			<result name="success" type="tiles">
+				TravelMngt.travelAgency
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+		</action>
+
+		<!-- Customer master -->
+		<action name="CustomerMaster_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.CustomerMasterAction">
+			<result name="input" type="tiles">
+				TravelMngt.customerList
+			</result>
+			<result name="success" type="tiles">
+				TravelMngt.customerData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- Add actions here -->
+
+
+		<!-- CITY GRADE MASTERS [Begin] -->
+
+		<action name="CityGrade_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.CityGradeAction">
+			<result name="input" type="tiles">
+				travel.cityGradeinput
+			</result>
+			<result name="addnew" type="tiles">
+				travel.cityGradeMasteraddnew
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- CITY GRADE MASTERS [END] -->
+
+
+		<action name="ProjectMaster_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.ProjectMasterAction">
+			<result name="input" type="tiles">
+				TravelMngt.projectMasterList
+			</result>
+			<result name="success" type="tiles">
+				TravelMngt.projectMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+<!-- Travel Mode  master -->
+		<action name="ListOfTravelMode_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.TravelModeListMasterAction">
+			<result name="input" type="tiles">
+				TravelMngt.travelModeMasterList
+			</result>
+			<result name="success" type="tiles">
+				TravelMngt.travelModeMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+<!-- Travel Mode  master -->
+
+
+	<!-- Travel Quick Booking  -->
+		<action name="TravelQuickBooking_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelProcess.TravelQuickBookingAction">
+			<result name="input" type="tiles">
+				TravelMngt.travelQuickBooking
+			</result>
+			<result name="success" type="tiles">
+				TravelMngt.travelQuickBooking
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="bookingDetailsJspPage" type="tiles">TravelMngt.bookingDetailsJspPage</result>
+			
+				<result name="assignToSubschedulerPage" type="tiles">TravelMngt.assignToSubschedulerPage</result>
+				
+			<result name="mainPage" type="chain">TravelQuickBooking_input</result>
+			
+			<result name="bookingDtlViewPage" type="tiles">TravelMngt.showBookingPage</result>
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+			
+			
+			
+		</action>
+		<!-- Travel Quick Booking-->
+		
+	<action name="ExpenseSummaryReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.ExpenseSummaryReportAction">
+			<result name="input" type="tiles">TMS.expenseSummaryReport</result>
+			
+			<result name="f9page" type="tiles">common.f9page</result>
+			
+		</action>
+		
+		<!-- Travel Application Report -->
+		<action name="TravelApplicationReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TravelApplicationReportAction">
+			<result name="input" type="tiles">TMS.travelApplicantionReport</result>
+			<result name="success" type="tiles">TMS.travelApplicantionReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+		<!-- Travel Claim Report -->
+		<action name="TravelClaimReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TravelClaimMisReportAction">
+			<result name="input" type="tiles">TMS.travelClaimReport</result>
+			<result name="success" type="tiles">TMS.travelClaimReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+
+
+	<!-- Travel Claim Acknowledgement -->
+
+		<action name="ClmAcknowledgement_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelClaim.ClmAcknowledgementAction">
+			<result name="input" type="tiles">TMS.Acknowledgement</result>
+			<result name="success" type="tiles">
+				TMS.Acknowledgement
+			</result>
+			<result name="success" type="tiles">
+				TMS.trvlClmAckView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			
+		</action>
+
+		
+		<!-- Unblock Travel claim Applications -->
+		<action name="UnblockTravelClaim_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelClaim.TmsUnblockApplicationAction">
+			<result name="input" type="tiles">TMS.unblockApplication</result>
+			<result name="success" type="tiles">TMS.unblockApplication</result>			
+		</action>
+		
+		
+		<!-- Advance/Claim  Disbursement Report -->
+		<action name="AdvanceClaimDisbursementReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.AdvanceClaimDisbursementReportAction">
+			<result name="input" type="tiles">TMS.AdvanceClaimDisbursementReport</result>
+			<result name="success" type="tiles">TMS.AdvanceClaimDisbursementReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- Added by Abhijit -->
+		<action name="TravelRating_*" method="{1}"
+			class="org.struts.action.TravelManagement.Master.TravelRatingAction">
+			<result name="input" type="tiles">TMS.travelRating</result>
+			<result name="addnew" type="tiles">TMS.travelRatingData</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Ended by Abhijit -->
+		
+		<!-- TRAVEL REPORTS MAPPING ADDED BY REEBA -->
+		<action name="TrvlCostReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TrvlCostReportAction">
+			<result name="input" type="tiles">TMS.costReport</result>
+			<result name="success" type="tiles">TMS.costReport</result>			
+		</action>
+		
+		<action name="TrvlAccomReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TrvlAccomodationReportAction">
+			<result name="input" type="tiles">TMS.accomReport</result>
+			<result name="success" type="tiles">TMS.accomReport</result>			
+		</action>
+		
+		<action name="TrvlEmpClaimReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TrvlEmpwiseClaimReportAction">
+			<result name="input" type="tiles">TMS.empClaimReport</result>
+			<result name="success" type="tiles">TMS.empClaimReport</result>			
+		</action>
+		
+		<action name="TrvlHotelCostReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TrvlHotelwiseCostReportAction">
+			<result name="input" type="tiles">TMS.hotelCostReport</result>
+			<result name="success" type="tiles">TMS.hotelCostReport</result>			
+		</action>
+		
+		<action name="TrvlDeviationReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TrvlDeviationReportAction">
+			<result name="input" type="tiles">TMS.deviationReport</result>
+			<result name="success" type="tiles">TMS.deviationReport</result>			
+		</action>
+		
+		<action name="TrvlAirlinesCostReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TrvlAirlinesCostReportAction">
+			<result name="input" type="tiles">TMS.airlinesCostReport</result>
+			<result name="success" type="tiles">TMS.airlinesCostReport</result>
+		</action>
+		
+		<action name="TrvlOutstationMedReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TrvlOutstationMedReportAction">
+			<result name="input" type="tiles">TMS.outstationReport</result>
+			<result name="success" type="tiles">TMS.outstationReport</result>
+		</action>
+		
+		<!-- Added by Prashant starts -->
+		<action name="TrvlAdvanceReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TrvlAdvanceReportAction">
+			<result name="input" type="tiles">TMS.advReport</result>
+			<result name="success" type="tiles">TMS.advReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="TrvlBestTravellerReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TrvlBestTravellerReportAction">
+			<result name="input" type="tiles">TMS.bestTravellerReport</result>
+			<result name="success" type="tiles">TMS.bestTravellerReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="TrvlFrequentTravellerReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TrvlFrequentTravellerReportAction">
+			<result name="input" type="tiles">TMS.frequentTravellerReport</result>
+			<result name="success" type="tiles">TMS.frequentTravellerReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="TrvlBookingReport_*" method="{1}"
+			class="org.struts.action.TravelManagement.TravelReports.TrvlBookingReportAction">
+			<result name="input" type="tiles">TMS.bookingReport</result>
+			<result name="success" type="tiles">TMS.bookingReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Added by Prashant ends -->
+		
+		
+		<!-- TRAVEL MAPPING ENDS -->
+		
+		
+		<!-- This is for mypage starts -->
+		
+			<action name="MypageProcessManagerAlerts_*" method="{1}" class="org.struts.action.mypage.MypageProcessManagerAlertsAction">
+			<result name="input" type="tiles">alert.mypage</result>
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="tiles">
+				mypage.services
+			</result>	
+			 <result name="mytimeCard" type="tiles">mytimeCard</result>	
+			 <result name="myLeaves" type="tiles" >mypage.myLeaves</result>	
+			 <result name="f9page" type="tiles">common.f9page</result>	 
+			 <result name="shiftDetails">
+				 /pages/mypage/showShiftDetails.jsp
+			</result>
+		</action>
+		
+		<!-- This is for mypage ends -->
+
+	</package>
+</struts>

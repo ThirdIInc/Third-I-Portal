@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+	<link rel="stylesheet" href="../pages/common/demo-calendar-1_files/demos.css" media="screen" type="text/css">
+	<style type="text/css">
+		
+	#mainContainer{
+		width:600px;
+		margin:0 auto;
+		margin-top:10px;
+		border:1px double #000;
+		padding:3px;
+
+	}
+	#calendarDiv,#calendarDiv2{
+		width:240px;
+		height:240px;
+		float:left;
+	}
+	.clear{
+		clear:both;
+	}
+	</style>	
+	<script type="text/javascript" src="/demo-calendar-1_files/dhtmlSuite-common.js"></script>
+	<script type="text/javascript">
+	DHTMLSuite.include("calendar");
+	function calendarMonthChange(inputArray)
+	{
+		var calendarRef = inputArray.calendarRef;
+		
+		var month = inputArray.month;
+		var year = inputArray.year;
+		month++;
+		if(month>12){
+			month=1;
+			year++;
+		}
+		
+		var objectToChange = false;
+		switch(calendarRef.id)
+		{
+			case "calendar1":
+				objectToChange = myCalendar2;
+				break;
+			case "calendar2":	
+				objectToChange = myCalendar3;
+				break;
+			case "calendar3":
+				month-=3;
+				if(month<1){
+					month=12 + month;
+					year--;	
+				}
+				objectToChange = myCalendar;
+				break;
+		}
+		objectToChange.setDisplayedMonth(month);
+		objectToChange.setDisplayedYear(year);
+	}
+	</script>
+	<script language="javascript" type="text/javascript" src="../pages/common/demo-calendar-1_files/dhtmlSuite-calendar.js"></script>
+	<link type="text/css" media="screen" rel="stylesheet" href="../pages/common/demo-calendar-1_files/calendar.css">
+</head><body>
+<div id="calendarDiv4" ><div class="DHTMLSuite_calendarContent"><div style="position: relative;" class="DHTMLSuite_calendarHeading"><div style="display: none;" class="DHTMLSuite_calendarCloseButton"><span></span></div><div class="DHTMLSuite_calendarHeadingTxt"><table style="margin: 0pt auto;" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><div class="DHTMLSuite_calendarHeaderMonthAndYear">May</div></td><td><span>,</span></td><td><div class="DHTMLSuite_calendarHeaderMonthAndYear">2004</div></td></tr></tbody></table></div></div><div class="DHTMLSuite_calendar_navigationBar"><div class="DHTMLSuite_calendar_btnPreviousYear"><span></span></div><div class="DHTMLSuite_calendar_btnNextYear"><span></span></div><div class="DHTMLSuite_calendar_btnPreviousMonth"><span></span></div><div class="DHTMLSuite_calendar_btnNextMonth"><span></span></div><div class="DHTMLSuite_calendar_navigationBarToday"><span>Today</span></div></div><div class="DHTMLSuite_calendar_monthView">
+<table border="0" cellpadding="1" cellspacing="0" width="100%"><tbody><tr class="DHTMLSuite_calendar_monthView_headerRow"><td class="DHTMLSuite_calendar_monthView_firstColumn">Week</td><td class="DHTMLSuite_calendar_monthView_headerCell">Mon</td><td class="DHTMLSuite_calendar_monthView_headerCell">Tue</td><td class="DHTMLSuite_calendar_monthView_headerCell">Wed</td><td class="DHTMLSuite_calendar_monthView_headerCell">Thu</td><td class="DHTMLSuite_calendar_monthView_headerCell">Fri</td><td class="DHTMLSuite_calendar_monthView_headerCell">Sat</td><td class="DHTMLSuite_calendar_monthView_headerSunday">Sun</td></tr><tr><td class="DHTMLSuite_calendar_monthView_firstColumn">18</td><td class="DHTMLSuite_calendar_monthView_daysInOtherMonths">26</td><td class="DHTMLSuite_calendar_monthView_daysInOtherMonths">27</td><td class="DHTMLSuite_calendar_monthView_daysInOtherMonths">28</td><td class="DHTMLSuite_calendar_monthView_daysInOtherMonths">29</td><td class="DHTMLSuite_calendar_monthView_daysInOtherMonths">30</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">1</td><td class="DHTMLSuite_calendar_monthView_sundayInThisMonth">2</td></tr><tr><td class="DHTMLSuite_calendar_monthView_firstColumn">19</td>
+<td class="DHTMLSuite_calendar_monthView_daysInThisMonth">3</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">4</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">5</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">6</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">7</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">8</td><td class="DHTMLSuite_calendar_monthView_sundayInThisMonth">9</td></tr><tr><td class="DHTMLSuite_calendar_monthView_firstColumn">20</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">10</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">11</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">12</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">13</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">14</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">15</td><td class="DHTMLSuite_calendar_monthView_sundayInThisMonth">16</td></tr><tr><td class="DHTMLSuite_calendar_monthView_firstColumn">21</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">17</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">18</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">19</td>
+<td class="DHTMLSuite_calendar_monthView_initialDate">20</td>
+<td class="DHTMLSuite_calendar_monthView_daysInThisMonth">21</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">22</td>
+<td class="DHTMLSuite_calendar_monthView_sundayInThisMonth">23</td></tr>
+<tr><td class="DHTMLSuite_calendar_monthView_firstColumn">22</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">24</td>
+<td class="DHTMLSuite_calendar_monthView_daysInThisMonth">25</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">26</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">27</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">28</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">29</td><td class="DHTMLSuite_calendar_monthView_sundayInThisMonth">30</td></tr>
+<tr><td class="DHTMLSuite_calendar_monthView_firstColumn">23</td><td class="DHTMLSuite_calendar_monthView_daysInThisMonth">31</td><td class="DHTMLSuite_calendar_monthView_daysInOtherMonths">1</td><td class="DHTMLSuite_calendar_monthView_daysInOtherMonths">2</td><td class="DHTMLSuite_calendar_monthView_daysInOtherMonths">3</td><td class="DHTMLSuite_calendar_monthView_daysInOtherMonths">4</td><td class="DHTMLSuite_calendar_monthView_daysInOtherMonths">5</td><td class="DHTMLSuite_calendar_monthView_daysInOtherMonths">6</td></tr></tbody></table></div><div style="display: none;" class="DHTMLSuite_calendar_timeBar"><table style="margin: 0pt auto;" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><div class="DHTMLSuite_calendar_timeBarHourAndMinute">17</div></td><td><span>:</span></td><td><div class="DHTMLSuite_calendar_timeBarHourAndMinute">00</div></td></tr></tbody></table><div class="DHTMLSuite_calendarTimeBarTimeString">Time:</div></div></div></div>
+	
+	
+	<script type="text/javascript">
+	
+	var myCalendarModel5 = new DHTMLSuite.calendarModel({ initialYear:2004,initialMonth:5,initialDay:20 });
+	myCalendarModel5.addInvalidDateRange(false,{year: 2003,month:12,day:31});
+	myCalendarModel5.addInvalidDateRange({year: 2005,month:1,day:1},false);
+	myCalendarModel5.setLanguageCode('en');
+	var myCalendar5 = new DHTMLSuite.calendar({ id:'calendar4',displayCloseButton:false,numberOfRowsInYearDropDown:12 } );
+	myCalendar5.setCalendarModelReference(myCalendarModel5);
+	myCalendar5.setTargetReference('calendarDiv4');
+	myCalendar5.display();
+	</script><div class="DHTMLSuite_calendar_yearDropDown" style="display: none; left: 503px; top: 606px;">
+	<div class="DHTMLSuite_calendar_dropDown_arrowUp"></div><div><div class="DHTMLSuite_calendar_dropDownAYear">1999</div><div class="DHTMLSuite_calendar_dropDownAYear">2000</div><div class="DHTMLSuite_calendar_dropDownAYear">2001</div><div class="DHTMLSuite_calendar_dropDownAYear">2002</div><div class="DHTMLSuite_calendar_dropDownAYear">2003</div><div class="DHTMLSuite_calendar_yearDropDownCurrentYear">2004</div><div class="DHTMLSuite_calendar_dropDownAYear">2005</div><div class="DHTMLSuite_calendar_dropDownAYear">2006</div><div class="DHTMLSuite_calendar_dropDownAYear">2007</div><div class="DHTMLSuite_calendar_dropDownAYear">2008</div><div class="DHTMLSuite_calendar_dropDownAYear">2009</div><div class="DHTMLSuite_calendar_dropDownAYear">2010</div></div><div class="DHTMLSuite_calendar_dropDown_arrowDown"><span></span></div></div><div class="DHTMLSuite_calendar_monthDropDown" style="display: none; left: 475px; top: 606px;"><div id="DHTMLSuite_calendarMonthPicker1" class="DHTMLSuite_calendar_dropDownAMonth">January</div><div id="DHTMLSuite_calendarMonthPicker2" class="DHTMLSuite_calendar_dropDownAMonth">February</div><div id="DHTMLSuite_calendarMonthPicker3" class="DHTMLSuite_calendar_dropDownAMonth">March</div><div id="DHTMLSuite_calendarMonthPicker4" class="DHTMLSuite_calendar_dropDownAMonth">April</div><div id="DHTMLSuite_calendarMonthPicker5" class="DHTMLSuite_calendar_yearDropDownCurrentMonth">May</div><div id="DHTMLSuite_calendarMonthPicker6" class="DHTMLSuite_calendar_dropDownAMonth">June</div><div id="DHTMLSuite_calendarMonthPicker7" class="DHTMLSuite_calendar_dropDownAMonth">July</div><div id="DHTMLSuite_calendarMonthPicker8" class="DHTMLSuite_calendar_dropDownAMonth">August</div><div id="DHTMLSuite_calendarMonthPicker9" class="DHTMLSuite_calendar_dropDownAMonth">September</div><div id="DHTMLSuite_calendarMonthPicker10" class="DHTMLSuite_calendar_dropDownAMonth">October</div><div id="DHTMLSuite_calendarMonthPicker11" class="DHTMLSuite_calendar_dropDownAMonth">November</div><div id="DHTMLSuite_calendarMonthPicker12" class="DHTMLSuite_calendar_dropDownAMonth">December</div></div><div class="DHTMLSuite_calendar_hourDropDown" style="display: none; left: 0px; top: 0px;"><div class="DHTMLSuite_calendar_dropDown_arrowUp"></div><div><div class="DHTMLSuite_calendar_dropDownAnHour">12</div><div class="DHTMLSuite_calendar_dropDownAnHour">13</div><div class="DHTMLSuite_calendar_dropDownAnHour">14</div><div class="DHTMLSuite_calendar_dropDownAnHour">15</div><div class="DHTMLSuite_calendar_dropDownAnHour">16</div><div class="DHTMLSuite_calendar_hourDropDownCurrentHour">17</div><div class="DHTMLSuite_calendar_dropDownAnHour">18</div><div class="DHTMLSuite_calendar_dropDownAnHour">19</div><div class="DHTMLSuite_calendar_dropDownAnHour">20</div><div class="DHTMLSuite_calendar_dropDownAnHour">21</div></div><div class="DHTMLSuite_calendar_dropDown_arrowDown"><span></span></div></div><div class="DHTMLSuite_calendar_minuteDropDown" style="display: none; left: 0px; top: 0px;"><div class="DHTMLSuite_calendar_dropDown_arrowUp"></div><div><div class="DHTMLSuite_calendar_minuteDropDownCurrentMinute">00</div><div class="DHTMLSuite_calendar_dropDownAMinute">05</div><div class="DHTMLSuite_calendar_dropDownAMinute">10</div><div class="DHTMLSuite_calendar_dropDownAMinute">15</div><div class="DHTMLSuite_calendar_dropDownAMinute">20</div><div class="DHTMLSuite_calendar_dropDownAMinute">25</div><div class="DHTMLSuite_calendar_dropDownAMinute">30</div><div class="DHTMLSuite_calendar_dropDownAMinute">35</div><div class="DHTMLSuite_calendar_dropDownAMinute">40</div><div class="DHTMLSuite_calendar_dropDownAMinute">45</div></div><div class="DHTMLSuite_calendar_dropDown_arrowDown"><span></span></div></div>
+		
+</html>

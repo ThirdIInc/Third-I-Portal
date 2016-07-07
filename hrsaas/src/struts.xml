@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.i18n.resources" value="globalMessages" />
+
+	<include file="org/struts/config/common.xml" />
+	<include file="org/struts/config/LeaveManagement.xml" />
+	<include file="org/struts/config/SRDManagement.xml" />
+	<include file="org/struts/config/attendance.xml" />
+	<include file="org/struts/config/PayrollManagement.xml" />
+	<include file="org/struts/config/IncrementManagement.xml" />
+	<include file="org/struts/config/IncometaxManagement.xml" />
+	<include file="org/struts/config/MasterManagement.xml" />
+	<include file="org/struts/config/PAS.xml" />
+	<include file="org/struts/config/Recruitment.xml" />
+	<include file="org/struts/config/HelpDesk.xml" />
+	<include file="org/struts/config/Loan.xml" />
+	<include file="org/struts/config/conference.xml" />
+	<include file="org/struts/config/Settlement.xml" />
+	<include file="org/struts/config/Voucher.xml" />
+	<include file="org/struts/config/Asset.xml" />
+	<include file="org/struts/config/Poll.xml" />
+	<include file="org/struts/config/Pramotion.xml" />
+	<include file="org/struts/config/Setting.xml" />
+	<include file="org/struts/config/Reporting.xml" />
+	<include file="org/struts/config/TravelManagement.xml" />
+	<include file="org/struts/config/ApplicationStudio.xml" />
+	<include file="org/struts/config/EmailManagement.xml" />
+	<include file="org/struts/config/Probation.xml"/>
+	<include file="org/struts/config/VAS.xml"/>
+	<include file="org/struts/config/Pension.xml"/>
+	<include file="org/struts/config/ExtraWorkBenefits.xml"/>
+	<include file="org/struts/config/LTAManagement.xml"/>
+	<include file="org/struts/config/DataMigration.xml"/>
+	<include file="org/struts/config/KioskManagement.xml"/>
+	<include file="org/struts/config/OpenCloseOffice.xml" />
+	<include file="org/struts/config/EmployeeSurvey.xml" />
+	<include file="org/struts/config/Samsara.xml"/>
+	<include file="org/struts/config/Reimbursement.xml"/>
+	<include file="org/struts/config/LMS.xml"/>
+	<include file="org/struts/config/D1.xml"/>
+	<include file="org/struts/config/Event.xml"/>
+	<include file="org/struts/config/Portal.xml"/>
+	<include file="org/struts/config/businessCardInfo.xml"/>
+	<include file="org/struts/config/employeeCardInfo.xml"/>
+	<include file="org/struts/config/myPage.xml"/>
+	<include file="org/struts/config/eGov.xml"/>
+ 	<include file="org/struts/config/OT.xml"/>
+	<include file="org/struts/config/vendor.xml"/>
+	<include file="org/struts/config/WBT.xml"/>
+	<include file="org/struts/config/TMS.xml" />
+	<include file="org/struts/config/CR.xml"/>
+</struts>

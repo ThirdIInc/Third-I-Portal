@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+	/*
+	* Licensed to the Apache Software Foundation (ASF) under one
+	* or more contributor license agreements.  See the NOTICE file
+	* distributed with this work for additional information
+	* regarding copyright ownership.  The ASF licenses this file
+	* to you under the Apache License, Version 2.0 (the
+	* "License"); you may not use this file except in compliance
+	* with the License.  You may obtain a copy of the License at
+	* 
+	* http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing,
+	* software distributed under the License is distributed on an
+	* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	* KIND, either express or implied.  See the License for the
+	* specific language governing permissions and limitations
+	* under the License.
+	*
+	*/
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+ 
+
+	<definition name=".homeLayout"
+		template="/pages/common/homeLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+
+
+	<definition name=".myPageLeftRightLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/menu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+	<definition name=".dashLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="rightTile" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name=".reportLayout"
+		template="/pages/common/reportLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name=".loginLayout"
+		template="/pages/common/loginLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+ 
+	<definition name=".f9Layout"
+		template="/pages/common/f9layout.jsp">
+		<put-attribute name="title" value="Select record" />
+		<put-attribute name="header" value="/pages/common/f9header.jsp" />
+		<put-attribute name="footer" value="/pages/common/f9footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name=".payrollLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/payrollLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+<!-- Added By Priyanka -->
+	<definition name=".hrmHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/hrmHomeLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+		
+	<definition name=".leaveAttendanceHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/leaveAttendanceLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name=".adminHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/adminLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	
+	<definition name=".recruitmentHomeLayout"
+	template="/pages/common/layout.jsp">
+	<put-attribute name="title" value="PeoplePower"/>
+	<put-attribute name="header" value="/pages/common/header.jsp"/>
+	<put-attribute name="menu" value="/pages/common/recruitmentHomeLeftMenu.jsp"/>
+	<put-attribute name="rightTile" value="/pages/common/rightTile.jsp"/>
+	<put-attribute name="footer" value="/pages/common/footer.jsp" />
+	<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name=".decisionOneHomeLayout"
+	template="/pages/common/layout.jsp">
+	<put-attribute name="title" value="PeoplePower"/>
+	<put-attribute name="header" value="/pages/common/header.jsp"/>
+	<put-attribute name="menu" value="/pages/common/d1LeftMenuLayout.jsp"/>
+	<put-attribute name="rightTile" value="/pages/common/rightTile.jsp"/>
+	<put-attribute name="footer" value="/pages/common/footer.jsp" />
+	<put-attribute name="body" value="" />
+	</definition>
+<!-- Ended By Priyanka -->
+
+	<definition name=".cofigurationLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/configurationLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	
+	<definition name=".trainingLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/trainingLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	
+	
+	<definition name="f9multiSelect" extends=".f9Layout">
+		<put-attribute name="body" value="/pages/common/f9MultiSelect.jsp" />
+	</definition>
+
+
+	<definition name="template" extends=".mainLayout">
+		<put-attribute name="body" value="/pages/common/template.jsp" />
+	</definition>
+	<definition name="templateReport" extends=".mainLayout">
+		<put-attribute name="body" value="/pages/common/templateReport.jsp" />
+	</definition>
+
+	<definition name="menu.tree" extends=".dashLayout">
+		<put-attribute name="title" value="Menu" />
+		<put-attribute name="body" value="/pages/common/dtree/treemenu.jsp" />
+	</definition>
+
+	<definition name="menu.List" extends=".reportLayout">
+		<put-attribute name="title" value="Menu" />
+		<put-attribute name="body" value="/pages/common/mainHeader.jsp" />
+	</definition>
+	<!-- Added/Updated By Prajakta B  -->
+	<definition name="common.profile" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Profile Management" />
+		<put-attribute name="body" value="/pages/common/profileManagement.jsp" />
+	</definition>
+
+<definition name="common.profileData" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Profile Management" />
+		<put-attribute name="body" value="/pages/common/profileManagementData.jsp" />
+	</definition>
+	<definition name="common.profileMenuList" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Profile Management" />
+		<put-attribute name="body" value="/pages/common/profileMenuList.jsp" />
+	</definition>
+	
+	<definition name="common.profileMenuForm" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Profile Management" />
+		<put-attribute name="body" value="/pages/common/profileManagementMenu.jsp" />
+	</definition>
+	<!--Ends Added/Updated By Prajakta B -->
+	<definition name="common.profileReport" extends=".reportLayout">
+		<put-attribute name="title" value="Profile Management" />
+		<put-attribute name="body"
+			value="/pages/common/profileManagementReport.jsp" />
+	</definition>
+	
+
+
+	<definition name="mainheader" extends=".homeLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/common/mainHeader.jsp" />
+	</definition>
+
+<definition name="login.forgotpassque" extends=".reportLayout">
+		<put-attribute name="title" value="Form Finalization" />
+		<put-attribute name="body" value="/pages/common/forgotPassQue.jsp" />
+	</definition>
+
+	<definition name="login.username" extends=".reportLayout">
+		<put-attribute name="title" value="Form Finalization" />
+		<put-attribute name="body" value="/pages/common/userDetails.jsp" />
+	</definition>
+
+	<definition name="login.Login" extends=".loginLayout">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/pages/common/login.jsp" />
+	</definition>
+
+	<definition name="login.question" extends=".reportLayout">
+		<put-attribute name="title" value="Form Finalization" />
+		<put-attribute name="body" value="/pages/common/secureQuestion.jsp" />
+	</definition>
+
+	<definition name="login.Logout" extends=".loginLayout">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/pages/common/logout.jsp" />
+	</definition>
+	<definition name="relogin.Login" extends=".loginLayout">
+		<put-attribute name="title" value="Session Expired" />
+		<put-attribute name="body" value="/pages/common/relogin.jsp" />
+	</definition>
+	<definition name="relogin.blank" extends=".loginLayout">
+		<put-attribute name="title" value="Session Expired" />
+		<put-attribute name="body" value="/pages/common/blank.html" />
+	</definition>
+
+	<definition name="relogin.blankTxt" extends=".loginLayout">
+		<put-attribute name="title" value="Session Expired" />
+		<put-attribute name="body" value="/pages/common/blank.html" />
+	</definition>
+
+	<definition name="relogin.LoginTxt" extends=".reportLayout">
+		<put-attribute name="title" value="Session Expired" />
+		<put-attribute name="body" value="/pages/common/userImageText.jsp" />
+	</definition>
+
+
+	<definition name="login.putText" extends=".reportLayout">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/pages/common/usetImageText.jsp" />
+	</definition>
+
+	<definition name="login.ChangePassword" extends=".reportLayout">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/pages/common/changeExpPassword.jsp" />
+	</definition>
+
+	<definition name="login.forgotPwd" extends=".reportLayout">
+		<put-attribute name="title" value="Forgot Password" />
+		<put-attribute name="body" value="/pages/common/forgotPwd.jsp" />
+	</definition>
+
+	<definition name="login.error" extends=".loginLayout">
+		<put-attribute name="title" value="Message" />
+		<put-attribute name="body" value="/pages/common/error.jsp" />
+	</definition>
+
+	<definition name="login.Changepwd" extends=".reportLayout">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/pages/common/changeFirstLoginPwd.jsp" />
+	</definition>
+
+	
+	<definition name="user.User" extends=".mainLayout">
+		<put-attribute name="title" value="User Management" />
+		<put-attribute name="body" value="/pages/common/user.jsp" />
+	</definition>
+
+	<!-- Added by Nilesh 4th May 11 - User Management -->
+	<definition name="user.UserView" extends=".mainLayout">
+		<put-attribute name="title" value="User Management" />
+		<put-attribute name="body" value="/pages/common/userList.jsp" />
+	</definition>
+
+	<definition name="ChangePassword" extends=".mainLayout">
+		<put-attribute name="title" value="Change Password" />
+		<put-attribute name="body" value="/pages/common/changePsswd.jsp" />
+
+	</definition>
+
+	<definition name="email.viewCongEmailAccount"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Configure Email Accounts" />
+		<put-attribute name="body" value="/pages/email/viewConfigureEmail.jsp" />
+	</definition>
+
+	<definition name="dept.Hierarchy" extends=".mainLayout">
+		<put-attribute name="title" value="Hierarchy" />
+		<put-attribute name="body"
+			value="/pages/admin/hierarchy/deptHeirarchy.jsp" />
+	</definition>
+
+	<definition name="emp.Hierarchy" extends=".hrmHomeLayout">
+		<put-attribute name="title" value=" Employee Hierarchy" />
+		<put-attribute name="body" value="/pages/admin/hierarchy/empTree.jsp" />
+	</definition>
+	
+	<definition name="common.Formula" extends=".mainLayout">
+		<put-attribute name="title" value="Formula Builder" />
+		<put-attribute name="body" value="/pages/common/formulaBuilder.jsp" />
+	</definition>
+
+	<definition name="common.welcome" extends=".mainLayout">
+		<put-attribute name="title" value="Administration" />
+		<put-attribute name="body" value="/pages/common/welcome.jsp" />
+	</definition>
+
+	<definition name="common.home" extends=".decisionOneHomeLayout">
+		<put-attribute name="title" value="Home Page" />
+		<put-attribute name="body" value="/pages/common/d1HomePageLayout.jsp" />
+	</definition>
+
+	<definition name="common.mail" extends=".mainLayout">
+		<put-attribute name="title" value="Home Page" />
+		<put-attribute name="body" value="/pages/common/mailList.jsp" />
+	</definition>
+
+	<definition name="common.mailDesc" extends=".mainLayout">
+		<put-attribute name="title" value="Home Page" />
+		<put-attribute name="body" value="/pages/common/mailDesc.jsp" />
+	</definition>
+
+	<definition name="common.compose" extends=".mainLayout">
+		<put-attribute name="title" value="Home Page" />
+		<put-attribute name="body" value="/pages/common/mailCompose.jsp" />
+	</definition>
+
+	<definition name="common.WeekPlanner" extends=".mainLayout">
+		<put-attribute name="title" value="Week Planner Page" />
+		<put-attribute name="body" value="/pages/common/weekPlanner.jsp" />
+	</definition>
+
+	<definition name="common.editPlanner" extends=".mainLayout">
+		<put-attribute name="title" value="Week Planner Page" />
+		<put-attribute name="body" value="/pages/common/edit_window.jsp" />
+	</definition>
+
+	<definition name="common.calender" extends=".mainLayout">
+		<put-attribute name="title" value="Week Planner Page" />
+		<put-attribute name="body" value="/pages/common/calendar/events.jsp" />
+	</definition>
+
+	<definition name="common.trainHome" extends=".mainLayout">
+		<put-attribute name="title" value="Training Home" />
+		<put-attribute name="body" value="/pages/common/trainingHome.jsp" />
+	</definition>
+
+	<definition name="common.recHome" extends=".mainLayout">
+		<put-attribute name="title" value="Training Home" />
+		<put-attribute name="body" value="/pages/common/recHome.jsp" />
+	</definition>
+
+	<definition name="poll.pollStat" extends=".f9Layout">
+		<put-attribute name="title" value="Poll Statistics" />
+		<put-attribute name="body" value="/pages/common/pollStat.jsp" />
+	</definition>
+
+	<definition name="poll.prevPoll" extends=".f9Layout">
+		<put-attribute name="title" value="Poll Statistics" />
+		<put-attribute name="body" value="/pages/common/prevPoll.jsp" />
+	</definition>
+
+	<definition name="common.adminHome" extends=".mainLayout">
+		<put-attribute name="body" value="/pages/common/admHome.jsp" />
+	</definition>
+	
+	<definition name="common.adminHomeRightPage" extends=".adminHomeLayout">
+	  <put-attribute name="body" value="/pages/common/adminHomePage.jsp"/>
+	</definition>
+
+	<!--Performance Home mapping -->
+	<definition name="common.performanceHome" extends=".mainLayout">
+		<put-attribute name="body" value="/pages/common/performanceHome.jsp" />
+	</definition>
+
+	<!--Recruitment Home mapping -->
+	<definition name="common.recruitmentHome" extends=".recruitmentHomeLayout">
+		<put-attribute name="body" value="/pages/common/recruitmentHomePage.jsp" />
+	</definition>
+
+	<!--Tax Home mapping -->
+	<definition name="common.taxHome" extends=".mainLayout">
+		<put-attribute name="body" value="/pages/common/taxationHome.jsp" />
+	</definition>
+
+	<!--Analytics Home mapping -->
+	<definition name="common.analyticHome" extends=".dashLayout">
+		<put-attribute name="body" value="/pages/common/analtycHome.jsp" />
+	</definition>
+
+	<definition name="common.dashBoard" extends=".mainLayout">
+		<put-attribute name="title" value="Common Dashboard Page" />
+		<put-attribute name="body" value="/pages/common/commonDashboard.jsp" />
+	</definition>
+		
+	<definition name="common.decisionDash" extends=".mainLayout">
+		<put-attribute name="title" value="Common Dashboard Page" />
+		<put-attribute name="body" value="/pages/common/decisionOneDashboard.jsp" />
+	</definition>
+
+		
+	<definition name="ceoConnectData" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body"
+			value="/pages/common/ceoConnectDashletData.jsp" />
+	</definition>
+	<!--  Added by prajakta B for show messages link of ceo connect-->
+	<definition name="ceoConnectMsg" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body"
+			value="/pages/common/ceoConnectDashletMsg.jsp" />
+	</definition>
+	<!--ends Added by prajakta B for show messages link of ceo connect -->
+
+	<definition name="common.newtask"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="New Task" />
+		<put-attribute name="body" value="/pages/common/myNewTask.jsp" />
+	</definition>
+	
+	<definition name="common.addnewtask"
+		extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="New Task" />
+		<put-attribute name="body" value="/pages/common/addNewTask.jsp" />
+	</definition>
+	
+	<definition name="common.showOnTitle" extends=".mainLayout">
+		<put-attribute name="title" value="Assigned Task" />
+		<put-attribute name="body" value="/pages/common/showTask.jsp" />
+	</definition>
+
+	<definition name="common.addTask" extends=".reportLayout">
+		<put-attribute name="body" value="/pages/common/calendar/addTask.jsp" />
+	</definition>
+
+	<definition name="common.myPage" extends=".mainLayout">
+		<put-attribute name="title" value="Home Page" />
+		<put-attribute name="body" value="/pages/common/myPage.jsp" />
+	</definition>
+	
+<!-- Added By Priyanka -->
+	<definition name="common.hrmHome" extends=".hrmHomeLayout">
+		<put-attribute name="body" value="/pages/common/hrmHomeMyPage.jsp" />
+	</definition>
+
+	<definition name="common.leaveAttendance" extends=".leaveAttendanceHomeLayout">
+		<put-attribute name="body" value="/pages/common/leaveAttendanceHomePage.jsp" />
+	</definition>
+<!-- Ended By Priyanka -->
+
+
+<!-- Added By Prajakta B-->
+<definition name="common.pasHome" extends=".pasHomeLayout">
+		<put-attribute name="body" value="/pages/common/pasHomePage.jsp" />
+	</definition>
+<!-- Ends Added By Prajakta B-->	
+
+
+<!--Leave Home mapping -->
+	<definition name="common.leaveHome" extends=".mainLayout">
+		<put-attribute name="body" value="/pages/common/leaveHome.jsp" />
+	</definition>
+
+
+	<!--Payroll Home mapping -->
+	<definition name="common.payrollHome" extends=".payrollLayout">
+		<put-attribute name="body" value="/pages/common/payrollHome.jsp" />
+	</definition>
+	
+	
+	<definition name="common.trainingHome" extends=".trainingLayout">
+		<put-attribute name="body" value="/pages/common/trainingHome.jsp" />
+	</definition>
+	
+
+	<definition name="common.QueryReport" extends=".mainLayout">
+		<put-attribute name="title" value="Query Report" />
+		<put-attribute name="body" value="/pages/common/queryReport.jsp" />
+	</definition>
+
+	<definition name="common.ReportingStructure"
+		extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Reporting Structure" />
+		<put-attribute name="body" value="/pages/common/reportingStructure.jsp" />
+	</definition>
+
+	<definition name="common.defaultStructure" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Reporting Structure" />
+		<put-attribute name="body"
+			value="/pages/common/reportingStructureDefault.jsp" />
+	</definition>
+	<definition name="reporting.Structure" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Reporting Structure" />
+		<put-attribute name="body"
+			value="/pages/reportingStructure/repStructure.jsp" />
+	</definition>
+
+	<definition name="common.Structure" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Reporting Structure" />
+		<put-attribute name="body"
+			value="/pages/common/reportingStructureMain.jsp" />
+	</definition>
+
+	<!-- ADDED BY REEBA FOR MAPPING REPORTING EXCEPTIONS-->
+	<definition name="common.exceptionStructure"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Reporting Structure" />
+		<put-attribute name="body"
+			value="/pages/common/reportingStructureExceptions.jsp" />
+	</definition>
+	<!-- REPORTING EXCEPTIONS MAPPING ENDS-->
+
+	<definition name="ReportingHandover" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Reporting Handover" />
+		<put-attribute name="body" value="/pages/common/reportingHandover.jsp" />
+	</definition>
+
+	<definition name="srd.misReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="MIS Report" />
+		<put-attribute name="body" value="/pages/admin/srd/misReport.jsp" />
+	</definition>
+
+	
+	<definition name="common.grievanceView" extends=".mainLayout">
+		<put-attribute name="body" value="/pages/common/grievanceView.jsp" />
+	</definition>
+
+	<definition name="menu.candtree" extends=".reportLayout">
+		<put-attribute name="title" value="Menu" />
+		<put-attribute name="body" value="/pages/common/dtree/candidateTree.jsp" />
+	</definition>
+
+	<definition name="common.ProfileAccess" extends=".mainLayout">
+		<put-attribute name="title" value="Access Profile" />
+		<put-attribute name="body" value="/pages/common/profileAccess.jsp" />
+	</definition>
+
+	<definition name="common.ProfileAccessData" extends=".mainLayout">
+		<put-attribute name="title" value="Access Profile" />
+		<put-attribute name="body" value="/pages/common/profileAccessData.jsp" />
+	</definition>
+
+	<definition name="common.accessprofileReport"
+		extends=".reportLayout">
+		<put-attribute name="title" value="Access Profile" />
+		<put-attribute name="body" value="/pages/common/profileAccessReport.jsp" />
+	</definition>
+
+	<definition name="common.MenuManagement" extends=".mainLayout">
+		<put-attribute name="title" value="Menu Management" />
+		<put-attribute name="body" value="/pages/common/menuManagement.jsp" />
+	</definition>
+
+	<definition name="common.menumanagementReport"
+		extends=".reportLayout">
+		<put-attribute name="title" value="Menu Management" />
+		<put-attribute name="body" value="/pages/common/menuManagementReport.jsp" />
+	</definition>
+
+	<definition name="common.TaskReport" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Task Report" />
+		<put-attribute name="body" value="/pages/common/taskReport.jsp" />
+	</definition>
+
+	<definition name="common.LabelManage" extends=".mainLayout">
+		<put-attribute name="title" value="Label Management" />
+		<put-attribute name="body" value="/pages/common/labelManagement.jsp" />
+	</definition>
+
+	<definition name="Appraisal.BellCurve" extends=".mainLayout">
+		<put-attribute name="title" value="Appraisal Bell Curve" />
+		<put-attribute name="body" value="/pages/PAS/appraisalBellCurve.jsp" />
+	</definition>
+	
+	<definition name="ApplCodeTemplate" extends=".mainLayout">
+		<put-attribute name="title" value="Application Code Template" />
+		<put-attribute name="body" value="/pages/common/applCodeTemplate.jsp" />
+	</definition>
+
+	<definition name="mypage.search" extends=".myPageLeftRightLayout">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="body" value="/pages/mypage/myPagEmpDirSearch.jsp" />
+	</definition>
+	
+	<definition name="common.configureHome" extends=".cofigurationLayout">
+		<put-attribute name="title" value="PeoplePower"/>
+		<put-attribute name="body" value="/pages/common/configurationHome.jsp"/>
+	</definition>
+	
+</tiles-definitions>

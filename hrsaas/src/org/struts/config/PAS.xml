@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="pas" namespace="/pas" extends="struts-default">
+    	<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+		</result-types>
+		
+
+     
+			<!-- Appraisal Calendar -->
+		<action name="AppraisalCalendar_*" method="{1}" class="org.struts.action.PAS.AppraisalCalendarAction">
+			<result name="input" type="tiles">Appraisal.Calendar</result>
+			<result name="success" type="tiles">Appraisal.Calendar</result>
+			<result name="eligibleEmp" type="tiles">Appraisal.Calendar.EligibleEmp</result>
+			<result name="editAppraisalCalendar" type="tiles">Appraisal.Calendar.Edit</result>
+			<result name="mapGoalComp" type="tiles">Appraisal.Map.GoalComp</result>
+			<result name="importAppraisal" type="tiles">Appraisal.ImportAppraisal</result>
+			<result name="eligibilityCriteria" type="tiles">Appraisal.EligibilityCriteria</result>
+			<result name="goalCompetencyMap" type="tiles">Appraisal.Map.GoalComp</result>
+			<result name="eligibilityCriteriaSave" type="tiles">Appraisal.EligibilityCriteriaSave</result>
+			<result name="phaseConfig" type="tiles">Appraisal.PhaseConfig</result>
+			<!--<result name="apprSchedule" type="tiles">Appraisal.AppraisalSchedule</result>
+			<result name="ratingDefn" type="tiles">Appraisal.ApprRatingDefn</result>
+			<result name="apprConfigView" type="tiles">Appraiser.Config.view</result>
+			<result name="apprFormDesign" type="tiles">Appraisal.Instruction</result>-->
+			
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Appraiser Configuration -->
+		<action name="AppraiserConfig_*" method="{1}" class="org.struts.action.PAS.AppraiserConfigAction">
+			<result name="input" type="tiles">Appraiser.Config.view</result>
+			<result name="success" type="tiles">Appraiser.Config.view</result>
+			<result name="AppraiserConfigEdit" type="tiles">Appraiser.Config.edit</result>
+			<result name="moveGroup" type="tiles">Appraiser.moveGroup</result>
+			<result name="defineAppraiser" type="tiles">Appraiser.defineAppraiser</result>
+			<result name="defineAppraisee" type="tiles">Appraiser.defineAppraisee</result>
+			<result name="addEmloyee" type="tiles">Appraiser.addEmloyee</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Appraisal Report -->
+		<action name="AppraisalReport_*" method="{1}" class="org.struts.action.PAS.AppraisalReportAction">
+			<result name="input" type="tiles">Appraisal.report</result>
+			<result name="success" type="tiles">Appraisal.report</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Appraisal Summary Report -->
+		<action name="AppraisalSummaryReport_*" method="{1}" class="org.struts.action.PAS.AppraisalSummaryReportAction">
+			<result name="input" type="tiles">Appraisal.summaryReport</result>
+			<result name="success" type="tiles">Appraisal.summaryReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+			<!-- Appraisal Phase Configuration -->
+		<action name="AppraisalPhaseConfig_*" method="{1}" class="org.struts.action.PAS.AppraisalPhaseConfigAction">
+			<result name="input" type="tiles">Appraisal.PhaseConfig</result>
+			<result name="success" type="tiles">Appraisal.PhaseConfig</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			<result name="calendarList" type="chain">
+				 AppraisalCalendar_input 
+			</result>
+		</action>
+			<!-- Appraisal Phase Schedule -->
+		<action name="AppraisalSchedule_*" method="{1}" class="org.struts.action.PAS.AppraisalScheduleAction">
+			<result name="input" type="tiles">Appraisal.Schedule.view</result>
+			<result name="success" type="tiles">Appraisal.Schedule</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="calendarList" type="chain">
+				 AppraisalCalendar_input 
+			</result>
+		</action>
+			<!-- Question Category -->
+		<action name="QuestionCategory_*" method="{1}" class="org.struts.action.PAS.QuestionCategoryAction">
+			<result name="input" type="tiles">Question.Category.view</result>
+			<result name="success" type="tiles">Question.Category</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+			<!-- Questionnaire Defination -->
+		<action name="QuestionnaireDefinition_*" method="{1}" class="org.struts.action.PAS.QuestionnaireDefinitionAction">
+			<result name="input" type="tiles">Questionnaire.Definition.view</result>
+			<result name="success" type="tiles">Questionnaire.Definition</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+			<!-- Rating Scale Definition -->
+		<action name="RatingScaleDefinition_*" method="{1}" class="org.struts.action.PAS.RatingScaleDefinitionAction">
+			<result name="input" type="tiles">RatingScale.Definition.view</result>
+			<result name="success" type="tiles">RatingScale.Definition</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="calendarList" type="chain">
+				 AppraisalCalendar_input 
+			</result>
+		</action>
+		
+		<!-- Appraisal Form Designer -->
+			<!-- Appraisal Form Designer - Template Defination -->
+		<action name="TemplateDefination_*" method="{1}" class="org.struts.action.PAS.TemplateDefinationAction">
+			<result name="input" type="tiles">Appraisal.Template</result>
+			<result name="success" type="tiles">Appraisal.Template</result>
+			<result name="next" type="chain">AppraisalInstruction_input</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="TempList" type="tiles">Appraisal.Template</result>
+		</action>
+			<!-- Appraisal Form Designer - Appraisal Instructions -->
+		<action name="AppraisalInstruction_*" method="{1}" class="org.struts.action.PAS.AppraisalInstructionAction">
+			<result name="input" type="tiles">Appraisal.Instruction</result>
+			<result name="success" type="tiles">Appraisal.Instruction</result>
+			<result name="next" type="chain">DefineSection_input</result>
+			<result name="previous" type="chain">TemplateDefination_input</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+			<!-- Appraisal Form Designer - Define Section -->
+		<action name="DefineSection_*" method="{1}" class="org.struts.action.PAS.DefineSectionAction">
+			<result name="input" type="tiles">Appraisal.Section</result>
+			<result name="success" type="tiles">Appraisal.Section</result>
+			<result name="next" type="chain">SectionMapping_input</result>
+			<result name="previous" type="chain">AppraisalInstruction_input</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+			<!-- Appraisal Form Designer - Section Mapping -->
+		<action name="SectionMapping_*" method="{1}" class="org.struts.action.PAS.SectionMappingAction">
+			<result name="input" type="tiles">Section.Mapping</result>
+			<result name="success" type="tiles">Section.Mapping</result>
+			<result name="defineTempQuestion" type="tiles">SectionMapping.defineTemplateQues</result>
+			<result name="defineTempEmployee" type="tiles">SectionMapping.defineTempEmployee</result>
+			<result name="addEmloyee" type="tiles">SectionMapping.addEmloyee</result>
+			<result name="moveGroupMapping" type="tiles">SectionMapping.moveGroup</result>
+			<result name="next" type="chain">TrainingDetails_input</result>
+			<result name="previous" type="chain">DefineSection_input</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+			<!-- Appraisal Form Designer - Training Details -->
+		<action name="TrainingDetails_*" method="{1}" class="org.struts.action.PAS.TrainingDetailsAction">
+			<result name="input" type="tiles">Appraisal.trainingDetails</result>
+			<result name="success" type="tiles">Appraisal.trainingDetails</result>
+			<result name="saveAndNext" type="chain">AwardsRecognition_input</result>
+			<result name="saveAndPrevious" type="chain">SectionMapping_input</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+			<!-- Appraisal Form Designer - Award Details -->
+		<action name="AwardsRecognition_*" method="{1}" class="org.struts.action.PAS.AwardsRecognitionAction">
+			<result name="input" type="tiles">Appraisal.awardRecog</result>
+			<result name="success" type="tiles">Appraisal.awardRecog</result>
+			<result name="saveAndNext" type="chain">DisciplinaryMeasures_input</result>
+			<result name="saveAndPrevious" type="chain">TrainingDetails_input</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+			<!-- Appraisal Form Designer - Disciplinary Details -->
+		<action name="DisciplinaryMeasures_*" method="{1}" class="org.struts.action.PAS.DisciplinaryMeasuresAction">
+			<result name="input" type="tiles">Appraisal.discipMeasures</result>
+			<result name="success" type="tiles">Appraisal.discipMeasures</result>
+			<result name="saveAndNext" type="chain">CareerProgression_input</result>
+			<result name="saveAndPrevious" type="chain">AwardsRecognition_input</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+			<!-- Appraisal Form Designer -Career Details -->
+		<action name="CareerProgression_*" method="{1}" class="org.struts.action.PAS.CareerProgressionAction">
+			<result name="input" type="tiles">Appraisal.careerProg</result>
+			<result name="success" type="tiles">Appraisal.careerProg</result>
+			<result name="saveAndNext" type="chain">WeightageDistribution_input</result>
+			<result name="saveAndPrevious" type="chain">DisciplinaryMeasures_input</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+			<!-- Appraisal Form Designer -Weightage Distribution-->
+		<action name="WeightageDistribution_*" method="{1}" class="org.struts.action.PAS.WeightageDistributionAction">
+			<result name="input" type="tiles">Appraisal.weighDistri</result>
+			<result name="success" type="tiles">Appraisal.weighDistri</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+			<!-- Appraisal Form Designer -Form Finalization-->
+		<action name="FormFinalization_*" method="{1}" class="org.struts.action.PAS.FormFinalizationAction">
+			<result name="input" type="tiles">Appraisal.frmFinal</result>
+			<result name="success" type="tiles">Appraisal.frmFinal</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+			<!-- Appraisal Form -->
+			<!-- Appraisal Form Start page-->
+		<action name="ApprFormStart_*" method="{1}" class="org.struts.action.PAS.ApprFormStartAction">
+			<result name="input" type="tiles">Appraisal.Form.Start</result>
+			<result name="success" type="tiles">Appraisal.Form.Start</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<!-- my page code -->
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+			
+		</action>
+			<!-- Appraisal Form General Info -->
+		<action name="ApprFormGeneralInfo_*" method="{1}" class="org.struts.action.PAS.ApprFormGeneralInfoAction">
+			<result name="input" type="tiles">Appraisal.Form.General.Info</result>
+			<result name="success" type="tiles">Appraisal.Form.General.Info</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+			<!-- Appraisal Form Instructions -->
+		<action name="ApprFormInstruction_*" method="{1}" class="org.struts.action.PAS.ApprFormInstructionAction">
+			<result name="input" type="tiles">Appraisal.Form.Instruction</result>
+			<result name="success" type="tiles">Appraisal.Form.Instruction</result>
+			<result name="previous" type="chain">ApprFormGeneralInfo_retrieveDetails</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+			<!-- Appraisal Form Section -->
+		<action name="ApprFormSection_*" method="{1}" class="org.struts.action.PAS.ApprFormSectionAction">
+			<result name="input" type="tiles">Appraisal.Form.Section</result>
+			<result name="success" type="tiles">Appraisal.Form.Section</result>
+			<result name="samenext" type="chain">ApprFormSection_next</result>
+			<result name="next" type="chain">ApprFormTrainingDtls_input</result>
+			<result name="sameprevious" type="chain">ApprFormSection_previous</result>
+			<result name="previous" type="chain">ApprFormInstruction_previousFirst</result>
+			<result name="previousphase" type="tiles">Appraisal.PreviousPhase.Details</result>
+			<result name="finish_self" type="chain">ApprFormStart_input</result>
+			<result name="finish_evaluator" type="chain">EvaluatorPanel_input</result>
+			<result name="forward_training" type="chain">ApprFormTrainingDtls_input</result>			
+			<result name="previewApprRating" type="tiles">Appraisal.Form.Preview</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+			<!-- Appraisal Form Training -->
+		<action name="ApprFormTrainingDtls_*" method="{1}" class="org.struts.action.PAS.ApprFormTrainingDtlsAction">
+			<result name="input" type="tiles">Appraisal.ApprFormTrainingDtls</result>
+			<result name="success" type="tiles">Appraisal.ApprFormTrainingDtls</result>
+			<result name="next" type="chain">ApprFormAwardDtls_input</result>
+			<result name="previous" type="chain">ApprFormSection_trainingPrevious</result>
+			<result name="previousToInstr" type="chain">ApprFormInstruction_previousFirst</result>
+			<result name="saveAndNext" type="chain">ApprFormAwardDtls_input</result>
+			<result name="saveAndPrevious" type="chain">ApprFormSection_trainingPrevious</result>
+			<result name="previousPhaseDetails" type="tiles">ApprFormTrainingDtls.previousPhaseDetails</result>
+			<result name="previousPhaseRecommDetails" type="tiles">ApprFormTrainingDtls.previousPhaseRecommDetails</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+			<!-- Appraisal Form Award -->
+		<action name="ApprFormAwardDtls_*" method="{1}" class="org.struts.action.PAS.ApprFormAwardDtlsAction">
+			<result name="input" type="tiles">Appraisal.ApprFormAwardDtls</result>
+			<result name="success" type="tiles">Appraisal.ApprFormAwardDtls</result>
+			<result name="next" type="chain">ApprFormDiscpMeasures_input</result>
+			<result name="previous" type="chain">ApprFormTrainingDtls_previous</result>
+			<result name="saveAndNext" type="chain">ApprFormDiscpMeasures_input</result>
+			<result name="saveAndPrevious" type="chain">ApprFormTrainingDtls_previous</result>			
+			<result name="previousPhaseDetails" type="tiles">ApprFormAwardDtls.previousPhaseDetails</result>
+			<result name="previousPhaseRecommDetails" type="tiles">ApprFormTrainingDtls.previousPhaseRecommDetails</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+			<!-- Appraisal Form Disciplinary -->
+		<action name="ApprFormDiscpMeasures_*" method="{1}" class="org.struts.action.PAS.ApprFormDiscpMeasuresAction">
+			<result name="input" type="tiles">Appraisal.ApprFormDiscpMeasures</result>
+			<result name="success" type="tiles">Appraisal.ApprFormDiscpMeasures</result>
+			<result name="next" type="chain">ApprFormCareerProgression_input</result>
+			<result name="previous" type="chain">ApprFormAwardDtls_previous</result>
+			<result name="saveAndNext" type="chain">ApprFormCareerProgression_input</result>
+			<result name="saveAndPrevious" type="chain">ApprFormAwardDtls_previous</result>
+			<result name="previousPhaseDetails" type="tiles">ApprFormDiscpMeasures.previousPhaseDetails</result>
+			<result name="previousPhaseRecommDetails" type="tiles">ApprFormTrainingDtls.previousPhaseRecommDetails</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+			<!-- Appraisal Form Career Progression -->
+		<action name="ApprFormCareerProgression_*" method="{1}" class="org.struts.action.PAS.ApprFormCareerProgressionAction">
+			<result name="input" type="tiles">Appraisal.ApprFormCareerProgression</result>
+			<result name="success" type="tiles">Appraisal.ApprFormCareerProgression</result>
+			<result name="next" type="chain">ApprFormSection_input</result>
+			<result name="previous" type="chain">ApprFormSection_input</result>
+			<result name="saveAndNext" type="chain">ApprFormCareerProgression_input</result>
+			<result name="saveAndPrevious" type="chain">ApprFormDiscpMeasures_previous</result>
+			<result name="previousPhaseDetails" type="tiles">ApprFormCareerProgression.previousPhaseDetails</result>
+			<result name="finish_self" type="chain">ApprFormStart_input</result>
+			<result name="finish_evaluator" type="chain">EvaluatorPanel_input</result>
+			<result name="trainingDtl" type="chain">ApprFormTrainingDtls_input</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<!-- my page code -->
+		</action>
+		<!-- Evaluator Panel -->
+		<action name="EvaluatorPanel_*" method="{1}" class="org.struts.action.PAS.EvaluatorPanelAction">
+			<result name="input" type="tiles">Evaluator.Panel</result>
+			<result name="success" type="tiles">Evaluator.Panel</result>
+			<!-- my page code -->
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+			
+		</action>
+		<!-- Score Balancer -->
+		<action name="ScoreBalancer_*" method="{1}" class="org.struts.action.PAS.ScoreBalancerAction">
+			<result name="input" type="tiles">Appraisal.ScoreBalancer</result>
+			<result name="success" type="tiles">Appraisal.ScoreBalancer</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Appraisal Bell Curve -->
+		<action name="AppraisalBellCurve_*" method="{1}" class="org.struts.action.PAS.AppraisalBellCurveAction">
+			<result name="input" type="tiles">Appraisal.BellCurve</result>
+			<result name="success" type="tiles">Appraisal.BellCurve</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<!-- Appraisal Eligible Employee Report -->
+		<action name="AppraisalEligibleEmpReport_*" method="{1}" class="org.struts.action.PAS.AppraisalEligibleEmpReportAction">
+			<result name="input" type="tiles">Appraisal.EligibleEmpReport</result>
+			<result name="success" type="tiles">Appraisal.EligibleEmpReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+		<!-- Appraisal Questionnaire Report -->
+		<action name="AppraisalQuestionnaireReport_*" method="{1}" class="org.struts.action.PAS.AppraisalQuestionnaireReportAction">
+			<result name="input" type="tiles">Appraisal.QuestionnaireReport</result>
+			<result name="success" type="tiles">Appraisal.QuestionnaireReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+		
+		<!-- Appraisal Score Balancer Report -->
+		<action name="AppraisalScoreBalancerReport_*" method="{1}" class="org.struts.action.PAS.AppraisalScoreBalancerReportAction">
+			<result name="input" type="tiles">Appraisal.ScoreBalancerReport</result>
+			<result name="success" type="tiles">Appraisal.ScoreBalancerReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<!-- Appraisal form preview -->
+		<action name="AppraisalFormPreview_*" method="{1}" class="org.struts.action.PAS.AppraisalFormPreviewAction">
+			<result name="input" type="tiles">Appraisal.FormPreview</result>
+			<result name="success" type="tiles">Appraisal.FormPreview</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+		<!-- Appraisal Configuration Report -->
+		<action name="AppraisalConfigReport_*" method="{1}" class="org.struts.action.PAS.AppraisalConfigReportAction">
+			<result name="input" type="tiles">Appraisal.configReport</result>
+			<result name="success" type="tiles">Appraisal.configReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+		<!-- Appraisal Status Report -->
+		<action name="AppraisalStatusReport_*" method="{1}" class="org.struts.action.PAS.AppraisalStatusReportAction">
+			<result name="input" type="tiles">Appraisal.statusReport</result>
+			<result name="success" type="tiles">Appraisal.statusReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+		<!-- Appraisal Statistics Report -->
+		<action name="AppraisalStatistic_*" method="{1}" class="org.struts.action.PAS.AppraisalStatisticAction">
+			<result name="input" type="tiles">apprisal.statistic</result>
+			<result name="success" type="tiles">apprisal.statistic</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+		<!-- Appraisal Form Report -->
+		<action name="AppraisalFormReport_*" method="{1}" class="org.struts.action.PAS.AppraisalFormReportAction">
+			<result name="input" type="tiles">apprisal.formReport</result>
+			<result name="success" type="tiles">apprisal.formReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<!-- Appraisal Configuration Status Report -->
+		<action name="AppraisalConfigStatusReport_*" method="{1}" class="org.struts.action.PAS.AppraisalConfigStatusReportAction">
+			<result name="input" type="tiles">apprisal.configStatusReport</result>
+			<result name="success" type="tiles">apprisal.configStatusReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+		<!-- Appraiser Configuration Report -->
+		<action name="AppraiserConfigurationReport_*" method="{1}" class="org.struts.action.PAS.AppraiserConfigurationReportAction">
+			<result name="input" type="tiles">Appraiser.ConfigurationReport</result>
+			<result name="success" type="tiles">Appraiser.ConfigurationReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+		<!-- Appraisal Reminder Mail -->
+		<action name="AppraisalReminderMail_*" method="{1}" class="org.struts.action.PAS.ReminderMailAction">
+			<result name="input" type="tiles">Appraisal.ReminderMail</result>
+			<result name="success" type="tiles">Appraisal.ReminderMail</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<!-- Appraisal Evaluator Score Balancer Report -->
+		<action name="AppraisalEvaluatorScoreBalancerRpt_*" method="{1}" class="org.struts.action.PAS.AppraisalEvaluatorScoreBalancerRptAction">
+			<result name="input" type="tiles">Appraisal.EvaluatorScoreBalancerRpt</result>
+			<result name="success" type="tiles">Appraisal.EvaluatorScoreBalancerRpt</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+			<!-- Appraisal Rating Definition-->
+		<action name="ApprRatingDefinition_*" method="{1}" class="org.struts.action.PAS.ApprRatingDefinitionAction">
+			<result name="input" type="tiles">Appraisal.ApprRatingDefinition</result>
+			<result name="success" type="tiles">Appraisal.ApprRatingDefinition</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<!-- Appraisal Monitoring -->
+		<action name="AppraisalMonitoring_*" method="{1}" class="org.struts.action.PAS.AppraisalMonitoringAction">
+			<result name="input" type="tiles">Appraisal.Monitoring</result>
+			<result name="success" type="tiles">Appraisal.Monitoring</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<!-- Department Rating-->
+		<action name="DepartmentRating_*" method="{1}" class="org.struts.action.PAS.DepartmentRatingAction">
+			<result name="input" type="tiles">deptRating</result>
+			<result name="success" type="tiles">deptRating</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<!-- Appraisal MIS Report -->
+		<action name="AppraisalMisReport_*" method="{1}" class="org.struts.action.PAS.AppraisalMisReportAction">
+			<result name="input" type="tiles">Appraisal.MIS.Report</result>
+			<result name="success" type="tiles">Appraisal.MIS.Report</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Appraisal Question Analysis -->
+		<action name="AppraisalQuesAnalysis_*" method="{1}" class="org.struts.action.PAS.AppraisalQuesAnalysisAction">
+			<result name="input" type="tiles">Appraisal.QuesAnalysis</result>
+			<result name="success" type="tiles">Appraisal.QuesAnalysis</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Employee Goal Assessment -->
+		<action name="EmpGoalAssessment_*" method="{1}" class="org.struts.action.PAS.GoalSetting.EmpGoalAssessmentAction">
+			<result name="input" type="tiles">Appraisal.EmpGoalAssessment</result>
+			<result name="success" type="tiles">Appraisal.EmpGoalAssessment</result>
+			<result name="goalview" type="tiles">Appraisal.EmpGoalAssmtView</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+		</action>
+
+		<action name="GoalInitialization_*" method="{1}" class="org.struts.action.PAS.GoalSetting.GoalInitializationAction">
+			<result name="input" type="tiles">Appraisal.GoalInit</result>
+			<result name="success" type="tiles">Appraisal.GoalInit</result>
+			<result name="addnew" type="tiles">Appraisal.GoalAddNew</result>
+			<result name="eligibleEmployee" type="tiles">Appraisal.eligibleEmployee</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<!-- Added new employee list page -->
+			<result name="listOfEligibleEmployee" type="tiles">Appraisal.listEligibleEmployee</result>
+		</action>
+		
+		<action name="EmpGoalSetting_*" method="{1}" class="org.struts.action.PAS.GoalSetting.EmployeeGoalSettingAction">
+			<result name="input" type="tiles">Appraisal.EmpGoalSetting</result>
+			<result name="success" type="tiles">Appraisal.EmpGoalSetting</result>
+			<result name="goalDetails" type="tiles">Appraisal.EmpGoalDetails</result>
+			<result name="competencyjsp" type="tiles">EmpGoalSetting</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			
+				<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+			
+			
+		</action>
+		
+		<action name="EmpGoalApproval_*" method="{1}" class="org.struts.action.PAS.GoalSetting.EmployeeGoalApprovalAction">
+			<result name="input" type="tiles">Appraisal.EmpGoalApproval</result>
+			<result name="success" type="tiles">Appraisal.EmpGoalApproval</result>
+			<result name="goalDetails" type="tiles">Appraisal.EmpGoalDetails</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="EmpGoalReport_*" method="{1}" class="org.struts.action.PAS.GoalSetting.EmpGoalReportAction">
+			<result name="input" type="tiles">Appraisal.EmpGoalReport</result>
+			<result name="success" type="tiles">Appraisal.EmpGoalReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		<!-- <action name="EmpGoalReportPending_*" method="{1}" class="org.struts.action.PAS.GoalSetting.EmpGoalReportWithPendingRecord">
+			<result name="input" type="tiles">Appraisal.EmpGoalReport1</result>
+			<result name="success" type="tiles">Appraisal.EmpGoalReport1</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>-->
+		<action name="MyTeamGoalReport_*" method="{1}" class="org.struts.action.PAS.GoalSetting.MyTeamGoalReportAction">
+			<result name="input" type="tiles">Appraisal.TeamReport</result>
+			<result name="success" type="tiles">Appraisal.TeamReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		<action name="GoalAssesReport_*" method="{1}" class="org.struts.action.PAS.GoalSetting.GoalAssesmentReportAction">
+			<result name="input" type="tiles">Appraisal.GoalAssesReport</result>
+			<result name="success" type="tiles">Appraisal.GoalAssesReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		<action name="GoalRatingReport_*" method="{1}" class="org.struts.action.PAS.GoalSetting.GoalRatingSheetReportAction">
+			<result name="input" type="tiles">Appraisal.GoalRatingReport</result>
+			<result name="success" type="tiles">Appraisal.GoalRatingReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		<action name="AppraisalMisReportKF_*" method="{1}" class="org.struts.action.PAS.AppraisalMisReportKFAction">
+			<result name="input" type="tiles">Appraisal.MIS.KFReport</result>
+			<result name="success" type="tiles">Appraisal.MIS.KFReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<!-- MONTHLY PERFORMANCE RATING - ADDED BY REEBA -->
+		<action name="MonthlyRating_*" method="{1}" class="org.struts.action.PAS.MonthlyRatingAction">
+			<result name="input" type="tiles">Appraisal.MonthlyRating</result>
+			<result name="success" type="tiles">Appraisal.MonthlyRating</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<!-- Monthly Rating Report -->
+		<action name="MonthlyRatingReport_*" method="{1}" class="org.struts.action.PAS.MonthlyRatingReportAction">
+			<result name="input" type="tiles">Appraisal.monthlyRatingReport</result>
+			<result name="success" type="tiles">Appraisal.monthlyRatingReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		
+		<action name="SelfGoalAssessment_*" method="{1}" class="org.struts.action.PAS.GoalSetting.SelfGoalAssessmentAction">
+			<result name="input" type="tiles">Appraisal.selfGoalAssessment</result>
+			<result name="success" type="tiles">Appraisal.selfGoalAssessment</result>
+			<result name="goalviewPage" type="tiles">Appraisal.selfGoalAssmtView</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="ReviewerGoalAssessment_*" method="{1}" class="org.struts.action.PAS.GoalSetting.ReviewerGoalAssessmentAction">
+			<result name="input" type="tiles">Appraisal.reviewerGoalAssessment</result>
+			<result name="success" type="tiles">Appraisal.reviewerGoalAssessment</result>
+			<result name="goalviewPage" type="tiles">Appraisal.reviewerGoalAssessmentView</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+				<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="tiles">
+				mypage.services
+			</result>	
+			
+		</action>
+		
+		<!-- Added by manish sakpal Begins -->
+		<action name="GoalReportingStructure_*" method="{1}" class="org.struts.action.PAS.GoalSetting.GoalReportingStructureAction">
+			<result name="input" type="tiles">goal.ReportingStructure</result>						
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Added by manish sakpal Ends -->
+		
+		<action name="GoalMonitoring_*" method="{1}" class="org.struts.action.PAS.GoalSetting.GoalMonitoringAction">
+			<result name="input" type="tiles">goal.monitoring</result>						
+			<result name="success" type="tiles">goal.monitoring</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<!-- ADDED BY REEBA -->
+		<action name="MgmntReviewPanel_*" method="{1}" class="org.struts.action.PAS.MgmntReviewPanelAction">
+			<result name="input" type="tiles">Appraisal.MgmntReviewPanel</result>
+			<result name="success" type="tiles">Appraisal.MgmntReviewPanel</result>
+			<result name="employeeList" type="tiles">MgmntReviewPanel.employeeList</result>
+			<result name="employeeDetails" type="tiles">MgmntReviewPanel.employeeDetails</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- ADDED BY REEBA ENDS -->
+		<!-- ADDED BY PRASHANT -->
+		<action name="EmployeeScoreCalculation_*" method="{1}" class="org.struts.action.PAS.EmployeeScoreCalculationAction">
+			<result name="input" type="tiles">Appraisal.EmployeeScoreCalc</result>
+			<result name="success" type="tiles">Appraisal.EmployeeScoreCalc</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="EmployeeCTCCalculation_*" method="{1}" class="org.struts.action.PAS.EmpScoreCalculationAction">
+			<result name="input" type="tiles">Appraisal.EmployeeCTCCalc</result>
+			<result name="success" type="tiles">Appraisal.EmployeeCTCCalc</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- ADDED BY PRASHANT ENDS -->
+		
+		<action name="DepartmentRating_*" method="{1}" class="org.struts.action.PAS.DepartmentRatingAction">
+			<result name="input" type="tiles">Appraisal.deptRating</result>
+			<result name="success" type="tiles">Appraisal.deptRating</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<!-- Added by Manish Sakpal Begins -->
+		<action name="SelfCompentencyAssesment_*" method="{1}" class="org.struts.action.PAS.Competency.SelfCompentencyAssesmentAction">
+			<result name="input" type="tiles">SelfCompentencyAssesment.selfAssesmentListPage</result>
+			<result name="success" type="tiles">SelfCompentencyAssesment.selfAssesmentDetailPage</result>
+			<result name="mymessages" type="chain">MypageProcessManagerAlerts_input</result>
+			<result name="serviceJsp" type="chain">MypageProcessManagerAlerts_serviceData</result>
+		</action>
+	
+		<action name="SelfCompentencyAssessmentApproval_*" method="{1}" class="org.struts.action.PAS.Competency.SelfCompentencyAssesmentApprovalAction">
+			<result name="input" type="tiles">SelfCompentencyAssessmentApprovalAction.selfAssessmentApprovalListPage</result>
+			<result name="success" type="tiles">SelfCompentencyAssessmentApprovalAction.selfAssessmentApprovalDetailPage</result>
+			<result name="mymessages" type="chain">MypageProcessManagerAlerts_input</result>
+			<result name="serviceJsp" type="chain">MypageProcessManagerAlerts_serviceData</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="ReviewerCompetencyAssessment_*" method="{1}" class="org.struts.action.PAS.Competency.ReviewerCompetencyAssessmentAction">
+			<result name="input" type="tiles">ReviewerCompetencyAssessmentAction.reviewerListPage</result>
+			<result name="success" type="tiles">ReviewerCompetencyAssessmentAction.reviewerDetailPage</result>
+			<result name="mymessages" type="chain">MypageProcessManagerAlerts_input</result>
+			<result name="serviceJsp" type="chain">MypageProcessManagerAlerts_serviceData</result>
+		</action>
+		<!-- Added by Manish Sakpal Ends -->
+		
+		<action name="CompetencyMaster_*" method="{1}" class="org.struts.action.PAS.Competency.CompetencyMasterAction">
+			<result name="input" type="tiles">CompetencyMaster.competencyMasterListPage</result>
+			<result name="success" type="tiles">CompetencyMaster.competencyMasterListPage</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="competencyData" type="tiles">CompetencyMaster.competencyData</result>
+		</action>
+		
+		<!-- Added by Anantha lakshmi added BEGINS-->
+		<action name="CompDesigMapping_*" method="{1}" class="org.struts.action.PAS.Competency.CompDesigMappingAction">
+			<result name="input" type="tiles">CompDesignMappingData</result>
+			<result name="success" type="tiles">CompDesignMappingData</result>
+			<result name="report" type="tiles">CompDesignMappingData</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="CompDesignMappingData" type="tiles">CompDesignMappingData</result>
+		</action>
+		
+		<action name="CompetencyInitialization_*" method="{1}" class="org.struts.action.PAS.Competency.CompInitializationAction">
+			<result name="input" type="tiles">CompInit</result>
+			<result name="success" type="tiles">CompInit</result>
+			<result name="addnew" type="tiles">CompAddNew</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Added by Anantha lakshmi added ENDS-->
+		
+		<!-- This is for mypage starts BEGINS-->
+		<action name="MypageProcessManagerAlerts_*" method="{1}" class="org.struts.action.mypage.MypageProcessManagerAlertsAction">
+			<result name="input" type="tiles">alert.mypage</result>
+			<result name="mymessages" type="chain">MypageProcessManagerAlerts_input</result>
+			<result name="serviceJsp" type="tiles">mypage.services</result>	
+		</action>
+		<!-- This is for mypage starts ENDS-->
+		<action name="EmailPayrollReport_*" method="{1}" class="org.struts.action.payroll.EmailPayrollReportAction">
+				<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Added by Ganesh start-->
+		<action name="CompetencyDevelopmentPlan_*" method="{1}"
+			class="org.struts.action.PAS.Competency.CompetencyDevelopmentPlanAction">
+			<result name="input" type="tiles">
+				competency.competencyDevelopmentPlan
+			</result>
+			<result name="success" type="tiles">
+				competency.competencyDevelopmentPlanData
+			</result> 
+			<result name="f9page" type="tiles">common.f9page</result>
+			
+		</action>
+		<!-- Added By Pramila --> 
+		<action name="CompDevPlanMisReport_*" method="{1}"
+			class="org.struts.action.PAS.Competency.CompDevPlanMisReportAction">
+			<result name="input" type="tiles">
+				competency.competencyDevPlanReport
+			</result>
+			<result name="success" type="tiles">
+				competency.competencyDevPlanReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		<action name="RoleWiseCompMisReport_*" method="{1}"
+			class="org.struts.action.PAS.Competency.RoleWiseCompMisReportAction">
+			<result name="input" type="tiles">
+				competency.roleWiseCompMisReport
+			</result>
+			<result name="success" type="tiles">
+				competency.roleWiseCompMisReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+		<action name="GoalSettingStatusMisReport_*" method="{1}"
+			class="org.struts.action.PAS.GoalSetting.GoalSettingStatusMisReportAction">
+			<result name="input" type="tiles">
+				Appraisal.GoalStatusReport
+			</result>
+			<result name="success" type="tiles">
+				Appraisal.GoalStatusReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		
+		<!-- Added by Ganesh end-->
+		<action name="MyTeamCompReport_*" method="{1}"
+			class="org.struts.action.PAS.Competency.MyTeamCompetencyReportAction">
+			<result name="input" type="tiles">
+				competency.myTeamCompReport
+			</result>
+			<result name="success" type="tiles">
+				competency.myTeamCompReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			
+		</action>
+		<action name="MyTeamGoalRatingReport_*" method="{1}"
+			class="org.struts.action.PAS.GoalSetting.MyTeamGoalRatingReportAction">
+			<result name="input" type="tiles">
+				goal.myTeamGoalRatingReport
+			</result>
+			<result name="success" type="tiles">
+				goal.myTeamGoalRatingReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			
+		</action>
+		<action name="EmpCompitencyReport_*" method="{1}"
+			class="org.struts.action.PAS.Competency.EmpCompitencyReportAction">
+			<result name="input" type="tiles">
+				competency.empCompReport
+			</result>
+			<result name="success" type="tiles">
+				competency.empCompReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			 
+		</action>
+		
+		<action name="MyTeamCompDetReport_*" method="{1}"
+			class="org.struts.action.PAS.Competency.MyTeamCompDetReportAction">
+			<result name="input" type="tiles">
+				competency.MyTeamCompDetReport
+			</result>
+			<result name="success" type="tiles">
+				competency.MyTeamCompDetReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			
+		</action>
+		<action name="CompetencyRatingSheet_*" method="{1}"
+			class="org.struts.action.PAS.Competency.CompetencyRatingSheetAction">
+			<result name="input" type="tiles">
+				competency.CompetencyRatingSheet
+			</result>
+			<result name="success" type="tiles">
+				competency.CompetencyRatingSheet
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			
+		</action>
+		 
+		 <action name="CompetencyStatusMisReport_*" method="{1}"
+			class="org.struts.action.PAS.Competency.CompetencyStatusMisReportAction">
+			<result name="input" type="tiles">
+				competency.CompetencyStatuReport
+			</result>
+			<result name="success" type="tiles">
+				competency.CompetencyStatuReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			
+		</action>
+		<action name="CompetencyMonitoring_*" method="{1}"
+			class="org.struts.action.PAS.Competency.CompetencyMonitoringAction">
+			<result name="input" type="tiles">
+				competency.monitoring
+			</result>
+			<result name="success" type="tiles">
+				competency.monitoring
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			 
+		</action>
+		 
+	</package>
+</struts>

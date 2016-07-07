@@ -1,0 +1,1271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="recruit" namespace="/recruit"
+		extends="struts-default">
+
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+		<!-- Mapping for Online Portal   -->
+		<action name="CandChngPass_*" method="{1}"
+			class="org.struts.action.recruitment.CandChangePasswordAction">
+			<result name="input" type="tiles">
+				recruit.changePass
+			</result>
+			<result name="success" type="tiles">
+				recruit.changePass
+			</result>
+		</action>
+
+		<action name="CandidateJobBoard_*" method="{1}"
+			class="org.struts.action.recruitment.CandidateJobBoardAction">
+			<result name="input" type="tiles">
+				recruitment.CandJobBoard
+			</result>
+			<result name="success" type="tiles">
+				recruitment.CandJobBoard
+			</result>
+			<result name="viewBoth" type="tiles">
+				recruitment.requi
+			</result>
+			<result name="candJobBoardViewReq" type="tiles">
+				master.candJobBoardViewReq
+			</result>
+			<result name="scopeOfResume" type="tiles">
+				recruitment.scopeOfResume
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="jobNameDtlJsp"> /pages/recruitment/jobDetails.jsp</result>
+			
+		</action>
+
+
+		<action name="CandidateRegistration_*" method="{1}"
+			class="org.struts.action.recruitment.CandidateRegistrationAction">
+			<result name="input" type="tiles">
+				recruit.Registration
+			</result>
+			<result name="success" type="tiles">
+				recruit.Registration
+			</result>
+			<result name="candLogin" type="tiles">
+				login.candidateLogin
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="candidateForgotPassword" type="tiles">
+				login.candidateForgotPassword
+			</result>
+			<result name="candidateHomePage" type="tiles">
+				login.candidateLogin
+			</result>
+		</action>
+
+		<action name="CandidateLogin_*" method="{1}"
+			class="org.struts.action.recruitment.CandidateLoginAction">
+			<result name="success" type="tiles">
+				mainheadercnadidate
+			</result>
+			<result name="input" type="tiles">
+				login.candidateLogin
+			</result>
+			<result name="logout" type="tiles">login.candLogout</result>
+			<result name="error" type="tiles">
+				login.candidateLogin
+			</result>
+			<result name="gofortest" type="tiles">
+				recruitment.priview
+			</result>
+		</action>
+
+		<action name="CandidateProfile_*" method="{1}"
+			class="org.struts.action.recruitment.CandProfileAction">
+			<result name="input" type="tiles">CandidateProfile</result>
+			<result name="view" type="tiles">
+				recruit.candProfile
+			</result>
+			<result name="viewNext" type="tiles">
+				recruit.candProfile2
+			</result>
+			<result name="success" type="tiles">
+				recruit.candProfileEdit
+			</result>
+			<result name="viewSecond" type="tiles">
+				recruit.candProfile1
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+
+
+		<action name="InductionSchedule_*" method="{1}"
+			class="org.struts.action.recruitment.InductionScheduleAction">
+			<result name="input" type="tiles">
+				inductionSchedule.Master
+			</result>
+			<result name="success" type="tiles">
+				inductionSchedule.Master
+			</result>
+			<result name="inductionSchedulePlan" type="tiles">
+				inductionSchdPlan.Master
+			</result>
+			<result name="viewInducSchPlan" type="tiles">
+				viewInductionSchdPlan.Master
+			</result>
+			<result name="scheduledInduction" type="tiles">
+				scheduledInductionSchdPlan.Master
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="InductionFeedback_*" method="{1}"
+			class="org.struts.action.recruitment.InductionFeedbackAction">
+			<result name="input" type="tiles">
+				inductionFeedback.Master
+			</result>
+			<result name="success" type="tiles">
+				inductionFeedback.Master
+			</result>
+			<result name="viewFeedback" type="tiles">
+				viewFeedback.Master
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="TestReschedule_*" method="{1}"
+			class="org.struts.action.recruitment.TestRescheduleAction">
+			<result name="input" type="tiles">
+				master.TestReschedule
+			</result>
+			<result name="success" type="tiles">
+				master.TestReschedule
+			</result>
+			<result name="f9page" type="tiles">
+				common.TestReschedule
+			</result>
+		</action>
+
+
+		<action name="CreateAppointment_*" method="{1}"
+			class="org.struts.action.recruitment.CreateAppointmentAction">
+			<result name="input" type="tiles">CreateAppointment</result>
+			<result name="success" type="tiles">
+				CreateAppointment
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="appointmentDetails" type="chain">
+				AppointmentDetails_fromCreateOffer
+			</result>
+		</action>
+
+
+		<action name="PostInterview_*" method="{1}"
+			class="org.struts.action.recruitment.PostInterviewAction">
+			<result name="input" type="tiles">
+				master.PostInterview
+			</result>
+			<result name="success" type="tiles">
+				master.PostInterview
+			</result>
+			<result name="f9page" type="tiles">
+				common.PostInterview
+			</result>
+
+		</action>
+
+		<action name="InterviewSchedule_*" method="{1}"
+			class="org.struts.action.recruitment.InterviewScheduleAction">
+			<result name="input" type="tiles">
+				master.InterviewSchedule
+			</result>
+			<result name="success" type="tiles">
+				master.InterviewSchedule
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="testChecklist" type="tiles">
+				master.intChecklist
+			</result>
+			<result name="intChecklist" type="tiles">
+				master.intChecklist
+			</result>
+
+			<result name="postResume" type="chain">
+				PostResume_addNewCandidate
+			</result>
+			<result name="schdInterviewList" type="chain">
+				SchdInterviewList_scheduledInterviews
+			</result>
+			<result name="viewTestDetails" type="tiles">
+				InterviewSchedule.viewTestDetails
+			</result>
+		</action>
+
+		<action name="SchdInterviewList_*" method="{1}"
+			class="org.struts.action.recruitment.SchdInterviewListAction">
+			<result name="input" type="tiles">
+				recruitment.SchdInterviewList
+			</result>
+			<result name="success" type="tiles">
+				recruitment.SchdInterviewList
+			</result>
+			<result name="intStatusList" type="tiles">
+				recruitment.IntStatusList
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="toOfferDetails" type="chain">
+				OfferDetails_fromCreateOffer
+			</result>
+		</action>
+
+
+		<action name="EmployeeRequi_*" method="{1}"
+			class="org.struts.action.recruitment.EmployeeReqAction">
+			<result name="input" type="tiles">
+				master.EmpRequisition
+			</result>
+			<result name="success" type="tiles">
+				master.EmpRequisition
+			</result>
+			<result name="next" type="tiles">master.next</result>
+			<result name="previous" type="tiles">
+				master.previous
+			</result>
+			<result name="viewFirst" type="tiles">
+				master.viewFirst
+			</result>
+			<result name="viewSecond" type="tiles">
+				master.viewSec
+			</result>
+			<result name="prevPageView" type="tiles">
+				master.viewPrev
+			</result>
+			<result name="viewBoth" type="tiles">
+				master.viewBoth
+			</result>
+			<result name="removeEmp" type="tiles">
+				master.removeEmp
+			</result>
+			<result name="applicationProcess" type="tiles">
+				master.applicationProcess
+			</result>
+
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="offerDetail" type="chain">
+				OfferDetails_detailsOffer
+			</result>
+			<result name="offerDetails" type="chain">
+				OfferDetails_input
+			</result>
+			<result name="appointmentDetails" type="chain">
+				AppointmentDetails_input
+			</result>
+			<result name="appointmentDetail" type="chain">
+				AppointmentDetails_detailsOffer
+			</result>
+			<result name="candEval" type="chain">
+				ConductInterview_input
+			</result>
+			<result name="candEvals" type="chain">
+				ConductInterview_detailsOffer
+			</result>
+
+			<result name="mymessages" type="chain">
+				MypageProcessManagerAlerts_input
+			</result>
+			<result name="serviceJsp" type="chain">
+				MypageProcessManagerAlerts_serviceData
+			</result>
+
+		</action>
+
+
+		<action name="CandidateEvolMaster_*" method="{1}"
+			class="org.struts.action.recruitment.CandidateEvolMasterAction">
+			<result name="input" type="tiles">master.candidate</result>
+			<result name="success" type="tiles">
+				master.candidate
+			</result>
+			<result name="report" type="tiles">master.report</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="EntranceTest_*" method="{1}"
+			class="org.struts.action.recruitment.EntranceTest">
+			<result name="input" type="tiles">master.entrance</result>
+			<result name="success" type="tiles">master.entrance</result>
+			<result name="report" type="tiles">master.report</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="PostApplied_*" method="{1}"
+			class="org.struts.action.recruitment.PostAppliedAction">
+			<result name="input" type="tiles">
+				master.postApplied
+			</result>
+			<result name="success" type="tiles">
+				master.postApplied
+			</result>
+			<result name="report" type="tiles">master.report</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+
+
+		<action name="EntranceTestMaster_*" method="{1}"
+			class="org.struts.action.recruitment.EntranceTestMasterAction">
+			<result name="input" type="tiles">
+				master.entrancetestmaster
+			</result>
+			<result name="success" type="tiles">
+				master.entrancetestmaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="QuestionnaireMaster_*" method="{1}"
+			class="org.struts.action.recruitment.QuestionnarieMasterAction">
+			<result name="input" type="tiles">
+				master.questmaster
+			</result>
+			<result name="success" type="tiles">
+				master.questmaster
+			</result>
+			<result name="questData" type="tiles">
+				master.questmasterData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="RecruitmentSetting_*" method="{1}"
+			class="org.struts.action.recruitment.RecruitmentSettingAction">
+			<result name="input" type="tiles">
+				master.RecruitmentSetting
+			</result>
+			<result name="success" type="tiles">
+				master.RecruitmentSetting
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+		<action name="ApplicationForm_*" method="{1}"
+			class="org.struts.action.recruitment.ApplicationFormAction">
+			<result name="input" type="tiles">
+				applicationForm.recruitment
+			</result>
+			<result name="success" type="tiles">
+				applicationForm.recruitment
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="RequisitionApproval_*" method="{1}"
+			class="org.struts.action.recruitment.RequisitionApprovalAction">
+			<result name="input" type="tiles">
+				RequisitionApproval
+			</result>
+			<result name="success" type="tiles">
+				RequisitionApproval
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mymessages" type="chain">
+				MypageProcessManagerAlerts_input
+			</result>
+			<result name="serviceJsp" type="chain">
+				MypageProcessManagerAlerts_serviceData
+			</result>
+
+		</action>
+
+		<action name="VacancyListing_*" method="{1}"
+			class="org.struts.action.recruitment.VacancyListingAction">
+			<result name="input" type="tiles">
+				master.VacancyListing
+			</result>
+			<result name="success" type="tiles">
+				master.VacancyListing
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+		<action name="OnlinePaper_*" method="{1}"
+			class="org.struts.action.recruitment.OnlinePaperAction">
+			<result name="input" type="tiles">login.Login</result>
+			<result name="success" type="tiles">login.Login</result>
+
+		</action>
+
+		<action name="OnlinePaperPriview_*" method="{1}"
+			class="org.struts.action.recruitment.OnlinePaperPriviewAction">
+			<result name="input" type="tiles">
+				recruitment.OnlinePaper
+			</result>
+			<result name="success" type="tiles">
+				recruitment.priview
+			</result>
+			<result name="report" type="tiles">
+				recruitment.OnlinePaper
+			</result>
+			<result name="priview" type="tiles">
+				recruitment.priview
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="SubjectiveMarks_*" method="{1}"
+			class="org.struts.action.recruitment.SubjectiveMarksAction">
+			<result name="input" type="tiles">
+				recruitment.subjectiveMarks
+			</result>
+			<result name="success" type="tiles">
+				recruitment.subjectiveMarks
+			</result>
+			<result name="error" type="tiles">
+				recruitment.subjectiveMarks
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+
+		<action name="DomainMaster_*" method="{1}"
+			class="org.struts.action.recruitment.DomainMasterAction">
+			<result name="input" type="tiles">
+				master.DomainMaster
+			</result>
+			<result name="success" type="tiles">
+				master.DomainMaster
+			</result>
+			<result name="view" type="tiles">
+				master.viewDomainMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+		<action name="CandidateScreeningApproval_*" method="{1}"
+			class="org.struts.action.recruitment.CandidateScreeningApprovalAction">
+			<result name="input" type="tiles">
+				recruit.CandidateScreening
+			</result>
+			<result name="success" type="tiles">
+				recruit.CandidateScreening
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+		<action name="CandidateScreeningStatus_*" method="{1}"
+			class="org.struts.action.recruitment.CandidateScreeningStatusAction">
+			<result name="input" type="tiles">
+				recruit.CandidateScreeningStatus
+			</result>
+			<result name="success" type="tiles">
+				recruit.CandidateScreeningStatus
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+		<action name="VacancyManagement_*" method="{1}"
+			class="org.struts.action.recruitment.VacancyManagementAction">
+			<result name="input" type="tiles">
+				recruitment.VacancyManagement
+			</result>
+			<result name="success" type="tiles">
+				recruitment.VacancyManagement
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="VacancyPublish_*" method="{1}"
+			class="org.struts.action.recruitment.VacancyPublishAction">
+			<result name="input" type="tiles">
+				recruitment.VacancyPublish
+			</result>
+			<result name="success" type="tiles">
+				recruitment.VacancyPublish
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewPublish" type="tiles">
+				recruitment.ViewVacancyPublish
+			</result>
+			<result name="viewcancelVacanciesList" type="tiles">
+				recruitment.ViewCancelVacanciesList
+			</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+
+		<action name="CandDataBank_*" method="{1}"
+			class="org.struts.action.recruitment.CandDataBankAction">
+			<result name="input" type="tiles">rec.candDB</result>
+			<result name="success" type="tiles">rec.candDB</result>
+			<result name="viewSearch" type="tiles">
+				rec.candDBView
+			</result>
+			<result name="viewSearch1" type="tiles">
+				rec.candDBView1
+			</result>
+			<result name="next" type="tiles">rec.candDB1</result>
+			<result name="saveSecond" type="tiles">
+				rec.candDBView1
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="jobNameDtlJsp"> /pages/recruitment/jobDetails.jsp</result>
+
+		</action>
+
+		<action name="TestSchedule_*" method="{1}"
+			class="org.struts.action.recruitment.TestScheduleAction">
+			<result name="input" type="tiles">
+				recruitment.TestSchedule
+			</result>
+			<result name="success" type="tiles">
+				recruitment.TestSchedule
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="testChecklist" type="tiles">
+				recruitment.TestCheckList
+			</result>
+			<result name="postResume" type="chain">
+				PostResume_addNewCandidate
+			</result>
+			<result name="testRescheduleList" type="chain">
+				TestReschedule_input
+			</result>
+			<result name="testResultForm" type="chain">
+				TestResult_showTestResult
+			</result>
+		</action>
+
+
+		<action name="InterviewDetails_*" method="{1}"
+			class="org.struts.action.recruitment.InterviewDetailsAction">
+			<result name="input" type="tiles">
+				recruitment.IntDetails
+			</result>
+			<result name="success" type="tiles">
+				recruitment.IntDetails
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="postResume" type="chain">
+				PostResume_addNewCandidate
+			</result>
+			<result name="viewIntDetails" type="tiles">
+				recruitment.viewDetails
+			</result>
+		</action>
+
+		<action name="ConductInterview_*" method="{1}"
+			class="org.struts.action.recruitment.ConductInterviewAction">
+			<result name="input" type="tiles">
+				recruitment.ConductIntr
+			</result>
+			<result name="success" type="tiles">
+				recruitment.ConductIntr
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="InterviewDetails" type="tiles">
+				recruitment.IntDetails
+			</result>
+			<result name="interviewPending" type="chain">
+				InterviewDetails_showInterviewCandList
+			</result>
+			<result name="postResume" type="chain">
+				PostResume_addNewCandidate
+			</result>
+		</action>
+
+		<action name="CandidateSearch_*" method="{1}"
+			class="org.struts.action.recruitment.CandidateSearchAction">
+			<result name="input" type="tiles">
+				master.CandidateSearch
+			</result>
+			<result name="success" type="tiles">
+				master.CandidateSearch
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="postResume" type="chain">
+				PostResume_addNewCandidate
+			</result>
+		</action>
+
+		<action name="PostResume_*" method="{1}"
+			class="org.struts.action.recruitment.PostResumeAction">
+			<result name="input" type="tiles">Post Resume</result>
+			<result name="success" type="tiles">Post Resume</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="testSch" type="chain">
+				TestSchedule_returnFromPostResume
+			</result>
+			<result name="intSch" type="chain">
+				InterviewSchedule_returnFromPostResume
+			</result>
+			<result name="cndtInt" type="chain">
+				ConductInterview_returnFromPostResume
+			</result>
+			<result name="offer" type="chain">
+				OfferDetails_returnFromPostResume
+			</result>
+			<result name="appointment" type="chain">
+				AppointmentDetails_returnFromPostResume
+			</result>
+			<result name="candSearch" type="chain">
+				CandidateSearch_input
+			</result>
+		</action>
+
+		<action name="CreateOffer_*" method="{1}"
+			class="org.struts.action.recruitment.CreateOfferAction">
+			<result name="input" type="tiles">Create Offer</result>
+			<result name="success" type="tiles">Create Offer</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="offerDetails" type="chain">
+				OfferDetails_fromCreateOffer
+			</result>
+			<result name="appointmentDetails" type="chain">
+				AppointmentDetails_fromCreateOffer
+			</result>
+		</action>
+
+		<action name="OfferDetails_*" method="{1}"
+			class="org.struts.action.recruitment.OfferDetailsAction">
+			<result name="input" type="tiles">Offer Details</result>
+			<result name="success" type="tiles">Offer Details</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="joiningCheckList" type="tiles">
+				Offer.joiningCheckList
+			</result>
+			<result name="viewOfferDetails" type="tiles">
+				viewOfferDetails
+			</result>
+			<result name="postResume" type="chain">
+				PostResume_addNewCandidate
+			</result>
+			<result name="defineSalStructure" type="tiles">
+				salaryStructure
+			</result>
+		</action>
+
+		<action name="AppointmentDetails_*" method="{1}"
+			class="org.struts.action.recruitment.AppointmentDetailsAction">
+			<result name="input" type="tiles">
+				Appointment Details
+			</result>
+			<result name="success" type="tiles">
+				Appointment Details
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="joiningCheckList" type="tiles">
+				Appointment.joiningCheckList
+			</result>
+			<result name="viewAppointmentDetails" type="tiles">
+				viewAppointmentDetails
+			</result>
+			<result name="viewAppointmentDetails" type="tiles">
+				viewAppointmentDetails
+			</result>
+			<result name="postResume" type="chain">
+				PostResume_addNewCandidate
+			</result>
+		</action>
+
+		<action name="MyRequisition_*" method="{1}"
+			class="org.struts.action.recruitment.MyRequisitionAction">
+			<result name="input" type="tiles">My Requisition</result>
+			<result name="success" type="tiles">My Requisition</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="BackGroundCheck_*" method="{1}"
+			class="org.struts.action.recruitment.BackGroundCheckAction">
+			<result name="input" type="tiles">recruit.bgcheck</result>
+			<result name="success" type="tiles">recruit.bgcheck</result>
+			<result name="success1" type="tiles">
+				recruit.bgcheck1
+			</result>
+			<result name="PageView" type="tiles">
+				recruit.bgcheckPrev
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="backGroundCheckMailMesageJsp" type="tiles">
+				recruit.backGroundCheckMailMesage
+			</result>
+		</action>
+		<action name="PrejoiningActivities_*" method="{1}"
+			class="org.struts.action.recruitment.PrejoiningActivitiesAction">
+			<result name="input" type="tiles">recruit.Precheck</result>
+			<result name="success" type="tiles">
+				recruit.Precheck
+			</result>
+			<result name="success1" type="tiles">
+				recruit.Precheck1
+			</result>
+			<result name="PageView" type="tiles">
+				recruit.PrecheckPrev
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="PrejoiningActivitiesMonitor_*" method="{1}"
+			class="org.struts.action.recruitment.PrejoiningActivitiesMonitorAction">
+			<result name="input" type="tiles">recruit.monitor</result>
+			<result name="success" type="tiles">recruit.monitor</result>
+		</action>
+
+
+		<action name="TestTemplate_*" method="{1}"
+			class="org.struts.action.recruitment.TestTemplateAction">
+			<result name="input" type="tiles">
+				master.TestTemplate
+			</result>
+			<result name="success" type="tiles">
+				master.TestTemplate
+			</result>
+			<result name="addnew" type="tiles">
+				master.TestTemplate
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="questionList" type="tiles">
+				master.TestQuestions
+			</result>
+			<result name="viewFirst" type="tiles">
+				master.TemplateViewRec
+			</result>
+			<result name="viewcart">
+				/pages/recruitment/viewCartQuestions.jsp
+			</result>
+
+		</action>
+
+		<action name="TestResult_*" method="{1}"
+			class="org.struts.action.recruitment.TestResultAction">
+			<result name="input" type="tiles">Test Result</result>
+			<result name="success" type="tiles">Test Result</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="schInt" type="chain">
+				InterviewSchedule_returnFromPostResume
+			</result>
+			<result name="schTestRound" type="chain">
+				TestSchedule_fromTestResult
+			</result>
+		</action>
+
+		<action name="OnlineTest_*" method="{1}"
+			class="org.struts.action.recruitment.OnlineTestAction">
+			<result name="input" type="tiles">master.OnlineTest</result>
+			<result name="success" type="tiles">
+				master.OnlineTest
+			</result>
+			<result name="toTemplateDtl" type="tiles">
+				master.OnlineTestTemplateDtl
+			</result>
+			<result name="toStartTest" type="tiles">
+				master.OnlineTestScreen
+			</result>
+			<result name="onlineTestSubmit" type="tiles">
+				master.OnlineTestSubmit
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="backToMainMenu" type="tiles">
+				mainheadercnadidate
+			</result>
+		</action>
+
+		<action name="ConvertEmp_*" method="{1}"
+			class="org.struts.action.recruitment.ConvertToEmpAction">
+			<result name="input" type="tiles">convertEmp</result>
+			<result name="success" type="tiles">convertEmp</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="OfferApproval_*" method="{1}"
+			class="org.struts.action.recruitment.OfferApprovalAction">
+			<result name="input" type="tiles">recruit.Approval</result>
+			<result name="success" type="tiles">
+				recruit.Approval
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="OpenVacReport_*" method="{1}"
+			class="org.struts.action.recruitment.OpenVacReportAction">
+			<result name="input" type="tiles">OpenVac</result>
+			<result name="success" type="tiles">OpenVac</result>
+			<result name="viewReq" type="tiles">recruit.dispReq</result>
+			<result name="viewOnScreen" type="tiles">
+				recruit.openVacView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="InterviewAnalysis_*" method="{1}"
+			class="org.struts.action.recruitment.SchInterviewAnalysisAction">
+			<result name="input" type="tiles">
+				recruit.InterviewAnalysis
+			</result>
+			<result name="success" type="tiles">
+				recruit.InterviewAnalysis
+			</result>
+			<result name="viewInterviewReq" type="tiles">
+				recruit.InterviewAnalysisDispReq
+			</result>
+			<result name="viewOnScreen" type="tiles">
+				recruit.InterviewAnalysisView
+			</result>
+			<result name="viewSummary" type="tiles">
+				recruit.viewSummary
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="SchTestAnalysis_*" method="{1}"
+			class="org.struts.action.recruitment.SchTestAnalysisAction">
+			<result name="input" type="tiles">
+				recruit.schTestAnalysis
+			</result>
+			<result name="success" type="tiles">
+				recruit.schTestAnalysis
+			</result>
+			<result name="viewTestReq" type="tiles">
+				recruit.TestAnalysisDispReq
+			</result>
+			<result name="viewOnScreen" type="tiles">
+				recruit.TestAnalysisView
+			</result>
+			<result name="viewSummary" type="tiles">
+				recruit.viewTestSummary
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="TestInterviewReport_*" method="{1}"
+			class="org.struts.action.recruitment.ScheduleTestIntReportAction">
+			<result name="input" type="tiles">
+				recruit.testIntRep
+			</result>
+			<result name="success" type="tiles">
+				recruit.testIntRep
+			</result>
+			<result name="view" type="tiles">
+				recruit.viewTestIntRep
+			</result>
+			<result name="viewReq" type="tiles">
+				recruit.TestInterviewpReq
+			</result>
+			<result name="viewsummaryReport" type="tiles">
+				recruit.dispsummaryReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="CandidateStatusReport_*" method="{1}"
+			class="org.struts.action.recruitment.CandidateStatusReportAction">
+			<result name="input" type="tiles">CandidateStatus</result>
+			<result name="success" type="tiles">CandidateStatus</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewreport" type="tiles">	common.report1</result>
+			<result name="viewInJsp" type="tiles">	viewCandidstaeSearchReport</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+		</action>
+		<action name="InductionStatusReport_*" method="{1}"
+			class="org.struts.action.recruitment.InductionStatusReportAction">
+			<result name="input" type="tiles">InductionStatus</result>
+			<result name="success" type="tiles">InductionStatus</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewreport" type="tiles">
+				common.report1
+			</result>
+		</action>
+
+		<action name="Advertisement_*" method="{1}"
+			class="org.struts.action.recruitment.AdvertisementAction">
+			<result name="input" type="tiles">
+				recruit.advertisement
+			</result>
+			<result name="success" type="tiles">
+				recruit.advertisement
+			</result>
+			<result name="advertiseDtl" type="tiles">
+				recruit.advertisementDtl
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="ConfigureMailAlerts_*" method="{1}"
+			class="org.struts.action.recruitment.ConfigureMailAlertsAction">
+			<result name="input" type="tiles">
+				recruit.ConfmailAlert
+			</result>
+			<result name="success" type="tiles">
+				recruit.ConfmailAlert
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="CentralisedPanelSetting_*" method="{1}"
+			class="org.struts.action.recruitment.CentralisedPanelSettingAction">
+			<result name="input" type="tiles">
+				recruit.CentralisedPanel
+			</result>
+			<result name="success" type="tiles">
+				recruit.CentralisedPanel
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="AdvertiseReport_*" method="{1}"
+			class="org.struts.action.recruitment.AdvertiseVacReportAction">
+			<result name="input" type="tiles">
+				recruit.adverReport
+			</result>
+			<result name="success" type="tiles">
+				recruit.adverReport
+			</result>
+			<result name="viewReq" type="tiles">
+				recruit.advertiseDispReq
+			</result>
+			<result name="viewOnScreen" type="tiles">
+				recruit.adverReportView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="ManpowerRequisitionAnalysis_*" method="{1}"
+			class="org.struts.action.recruitment.ManpowerRequisitionAnalysisAction">
+			<result name="input" type="tiles">
+				ManpowerRequisitionAnalysis
+			</result>
+			<result name="success" type="tiles">
+				ManpowerRequisitionAnalysis
+			</result>
+			<result name="viewReqAnalysis" type="tiles">
+				view.manpwrReqsn
+			</result>
+			<result name="pageWise" type="tiles">
+				view.manpwrReqsnPageWise
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewreport" type="tiles">
+				common.report1
+			</result>
+		</action>
+
+		<action name="PartnerLogin_*" method="{1}"
+			class="org.struts.action.recruitment.PartnerLoginAction">
+			<result name="input" type="tiles">
+				recruit.partnerLogin
+			</result>
+			<result name="invalid" type="tiles">
+				recruit.partnerLogin
+			</result>
+			<result name="logout" type="tiles">
+				recruit.partnerLogout
+			</result>
+			<result name="success">
+				/pages/common/partnerMainHeader.jsp
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="partnerHomePage" type="tiles">
+				recruit.partnerLogin
+			</result>
+			<result name="partnerForgotPassword" type="tiles">
+				recruit.partnerForgotPassword
+			</result>
+		</action>
+
+		<action name="menuAction_*" method="{1}"
+			class="org.struts.action.common.MenuAction">
+			<result name="input" type="tiles">recruit.menuTree</result>
+			<result name="success" type="tiles">
+				recruit.menuTree
+			</result>
+			<result name="menuList" type="tiles">menu.List</result>
+			<result name="subMenu">
+				/pages/common/subMenuTree.jsp
+			</result>
+			<result name="planner">
+				/pages/common/calendar/events.jsp
+			</result>
+		</action>
+
+		<action name="PartnerHomePage_*" method="{1}"
+			class="org.struts.action.recruitment.PartnerHomePageAction">
+			<result name="success" type="tiles">
+				menu.partnertree
+			</result>
+			<result name="input" type="tiles">
+				recruit.PartnerHome
+			</result>
+		</action>
+
+		<action name="PartnerJobBoard_*" method="{1}"
+			class="org.struts.action.recruitment.PartnerJobBoardAction">
+			<result name="input" type="tiles">
+				recruit.partnerJobBoard
+			</result>
+			<result name="success" type="tiles">
+				recruit.partnerJobBoard
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewFirst" type="tiles">
+				master.viewFirst
+			</result>
+		</action>
+
+		<action name="PartnerChangePassword_*" method="{1}"
+			class="org.struts.action.recruitment.PartnerChangePasswordAction">
+			<result name="input" type="tiles">
+				recruit.partnerChangePass
+			</result>
+			<result name="success" type="tiles">
+				recruit.partnerChangePass
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="InterviewEvaluationReport_*" method="{1}"
+			class="org.struts.action.recruitment.InterviewEvaluationReportAction">
+			<result name="input" type="tiles">
+				recruit.interviewEvaluation
+			</result>
+			<result name="success" type="tiles">
+				recruit.interviewEvaluation
+			</result>
+			<result name="viewReq" type="tiles">recruit.dispReq</result>
+			<result name="viewOnScreen" type="tiles">
+				recruit.interviewEvaluationView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- 
+			<result name="centralizePage" type="tiles">recruit.CentralisedPanel</result>
+			<result name="centralizeSuccess" type="tiles">recruit.CentralisedPanel</result>
+		-->
+
+		<action name="OfferLetterAnalysis_*" method="{1}"
+			class="org.struts.action.recruitment.OfferAnalysisReportAction">
+			<result name="input" type="tiles">
+				recruit.offerAnalysis
+			</result>
+			<result name="success" type="tiles">
+				recruit.offerAnalysis
+			</result>
+			<result name="viewReq" type="tiles">
+				recruit.offerAnalysisDisp
+			</result>
+			<result name="viewOnScreen" type="tiles">
+				recruit.offerAnalysisView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="AppointLetterAnalysis_*" method="{1}"
+			class="org.struts.action.recruitment.AppointmentAnalysisReportAction">
+			<result name="input" type="tiles">
+				recruitment.appointLetterAnalysis
+			</result>
+			<result name="success" type="tiles">
+				recruitment.appointLetterAnalysis
+			</result>
+			<result name="viewReq" type="tiles">
+				recruit.appointAnalysisDisp
+			</result>
+			<result name="viewOnScreen" type="tiles">
+				recruit.appointAnalysisView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="ManpowerProjection_*" method="{1}"
+			class="org.struts.action.recruitment.ManpowerProjectionAction">
+			<result name="input" type="tiles">
+				manpowerProjection.report
+			</result>
+			<result name="success" type="tiles">
+				manpowerProjection.report
+			</result>
+			<result name="view" type="tiles">
+				manpowerProjection.viewReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="CTCProjection_*" method="{1}"
+			class="org.struts.action.recruitment.CTCProjectionAction">
+			<result name="input" type="tiles">
+				ctcProjection.report
+			</result>
+			<result name="success" type="tiles">
+				ctcProjection.report
+			</result>
+			<result name="view" type="tiles">ctc.viewReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!--Interview Assessment Master -->
+
+		<action name="InterviewAssessMasterAction_*" method="{1}"
+			class="org.struts.action.recruitment.InterviewAssessMasterAction">
+			<result name="input" type="tiles">
+				recruit.interviewGroupList
+			</result>
+			<result name="addnew" type="tiles">
+				recruit.interviewMasteraddnew
+			</result>
+			<result name="addnewGroup" type="tiles">
+				recruit.interviewAddNewGroup
+			</result>
+			<result name="addNewParameter" type="tiles">
+				recruit.interviewMasteraddnew
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="InterviewAssessmentReport_*" method="{1}"
+			class="org.struts.action.recruitment.InterviewAssessmentReportAction">
+			<result name="input" type="tiles">
+				recruit.interviewAssessmentReport
+			</result>
+			<result name="success" type="tiles">
+				recruit.interviewAssessmentReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- Added Ganesh -->
+		<action name="ResumeApproval_*" method="{1}"
+			class="org.struts.action.recruitment.ResumeApprovalAction">
+			<result name="input" type="tiles">
+				resumeApproval.resumeApproval
+			</result>
+			<result name="success" type="tiles">
+				resumeApproval.resumeApproval
+			</result>
+			<result name="viewSearch" type="tiles">
+				resumeApproval.resumeApprovalView
+			</result>
+			<result name="viewSearch1" type="tiles">
+				resumeApproval.resumeApprovalView1
+			</result>
+			<result name="next" type="tiles">
+				resumeApproval.resumeApproval1
+			</result>
+			<result name="saveSecond" type="tiles">
+				resumeApproval.resumeApprovalView1
+			</result>
+
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+		<action name="PreOfferProcessing_*" method="{1}"
+			class="org.struts.action.recruitment.PreOfferProcessingAction">
+			<result name="input" type="tiles">
+				recruit.preOfferProcessing
+			</result>
+			<result name="success" type="tiles">
+				recruit.preOfferProcessing
+			</result>
+			<result name="success1" type="tiles">
+				recruit.preOfferProcessing1
+			</result>
+			<result name="PageView" type="tiles">
+				recruit.preOfferProcessingPrev
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- Added Ganesh -->
+
+		<action name="ConsultantBoard_*" method="{1}"
+			class="org.struts.action.recruitment.ConsultantBoardAction">
+			<result name="input" type="tiles">
+				recruit.consultantHome
+			</result>
+			<result name="success" type="tiles">
+				recruit.consultantHome
+			</result>
+		</action>
+
+		<action name="ConsultantPortal_*" method="{1}"
+			class="org.struts.action.recruitment.ConsultantPortalAction">
+			<result name="input" type="tiles">
+				recruit.consultantJobPrtal
+			</result>
+			<result name="success" type="tiles">
+				recruit.consultantJobPrtal
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- End Ganesh -->
+
+		<!-- Added by Abhijit -->
+		<action name="ClosedRequisition_*" method="{1}"
+			class="org.struts.action.recruitment.ClosedRequisitionAction">
+			<result name="input" type="tiles">
+				recruit.closedRequisition
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Ended by Abhijit -->
+
+		<action name="PartnerPostResume_*" method="{1}"
+			class="org.struts.action.recruitment.PartnerPostResumeAction">
+			<result name="input" type="tiles">
+				Partner Post Resume
+			</result>
+			<result name="success" type="tiles">
+				Partner Post Resume
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="MySubmittedResume_*" method="{1}"
+			class="org.struts.action.recruitment.MySubmittedResumeAction">
+			<result name="input" type="tiles">
+				my submitted resume
+			</result>
+		</action>
+
+		<!-- This is for mypage starts -->
+
+		<action name="MypageProcessManagerAlerts_*" method="{1}"
+			class="org.struts.action.mypage.MypageProcessManagerAlertsAction">
+			<result name="input" type="tiles">alert.mypage</result>
+			<result name="mymessages" type="chain">
+				MypageProcessManagerAlerts_input
+			</result>
+			<result name="serviceJsp" type="tiles">
+				mypage.services
+			</result>
+		</action>
+
+
+		<action name="UploadDocuments_*" method="{1}"
+			class="org.struts.action.recruitment.UploadDocumentsAction">
+			<result name="input" type="tiles">uploadDocs</result>
+			<result name="success" type="tiles">uploadDocs</result>
+		</action>
+
+
+   <action name="EmailPayrollReport_*" method="{1}" class="org.struts.action.payroll.EmailPayrollReportAction">
+		     	<result name="f9page" type="tiles">common.f9page</result>
+		     </action>
+		<!-- This is for mypage ends -->
+
+
+
+	</package>
+</struts>
+

@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="common" namespace="/common"
+		extends="struts-default">
+
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+		<action name="ProcessManagerAlerts_*" method="{1}" class="org.struts.action.ApplicationStudio.ProcessManagerAlertsAction">
+			<result name="alert">/pages/ApplicationStudio/alert.jsp</result>
+		</action>
+		
+		<action name="TemplateAction_*" method="{1}"
+			class="org.struts.action.common.TemplateAction">
+			<result name="input" type="tiles">template</result>
+			<result name="Report" type="tiles">templateReport</result>
+			<result name="success" type="tiles">template</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9ParamPage" type="tiles">
+				common.f9ParamPage
+			</result>
+		</action>
+		
+		<action name="menuAction_*" method="{1}"
+			class="org.struts.action.common.MenuAction">
+			<result name="input" type="tiles">menu.tree</result>
+			<result name="success" type="tiles">menu.tree</result>
+			<result name="menuList" type="tiles">portalD1HomePage</result>
+			<result name="subMenu">
+				/pages/common/subMenuTree.jsp
+			</result>
+			<result name="planner">
+				/pages/common/calendar/events.jsp
+			</result>
+		</action>
+		
+		<action name="profileAction_*" method="{1}"
+			class="org.struts.action.common.ProfileManagementAction">
+			<result name="input" type="tiles">common.profile</result>
+			<result name="success" type="tiles">common.profile</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">common.profileReport</result>
+			<result name="profileMenuList" type="tiles">common.profileMenuList</result>
+			<result name="profileData" type="tiles">common.profileData</result>
+			<result name="profileMenuForm" type="tiles">common.profileMenuForm</result>
+			
+		</action>
+
+		<action name="Login_*" method="{1}"
+			class="org.struts.action.common.LoginAction">
+			<result name="input" >/pages/common/login.jsp</result>
+			<result name="success" type="tiles">portalD1HomePage</result>
+			<result name="invalid" >/pages/common/login.jsp</result>
+			<result name="logout" type="tiles">login.Logout</result>
+			<result name="send-to-changePassword" type="tiles">login.ChangePassword</result>
+			<result name="forwardTo" type="tiles">login.putText</result> 
+			<result name="send-to-changePwd" type="tiles">login.Changepwd</result>
+			<result name="successJsp" >/pages/common/login.jsp</result>  
+			<result name="send-to-question" type="tiles">login.question</result>
+			<result name="notActive" >/pages/common/login.jsp</result>
+			<result name="alreadyInSession">/pages/common/alreadyInUse.jsp</result>
+			<result name="glodyneHome" type="tiles">
+				portalHomePage
+			</result>
+			<!-- Added By AA1711 for DecisionOne Home Page -->
+			<result name="decisionOneHome" type="tiles">portalD1HomePage</result>
+		</action>
+			
+		<action name="LoginText_*" method="{1}"
+			class="org.struts.action.common.LoginAction">
+			<result name="input" type="tiles">relogin.LoginTxt</result>
+			<result name="invalid" type="tiles">relogin.LoginTxt</result>
+			<result name="success" type="tiles">relogin.blankTxt</result>
+			<result name="successJsp" type="tiles">login.Login</result>  
+		</action>
+		
+		<action name="ReLogin_*" method="{1}"
+			class="org.struts.action.common.LoginAction">
+			<result name="input" type="tiles">relogin.Login</result>
+			<result name="invalid" type="tiles">relogin.Login</result>
+			<result name="success" type="tiles">relogin.blank</result>
+		</action>
+		<action name="User_*" method="{1}"
+			class="org.struts.action.common.UserAction">
+			<result name="list" type="tiles">user.UserView</result>
+			<result name="input" type="tiles">user.User</result>
+			<result name="successUser" type="tiles">user.User</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="logout" type="tiles">login.Login</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+
+		<action name="ChangePassword_*" method="{1}"
+			class="org.struts.action.common.ChangePsswdAction">
+			<result name="input" type="tiles">ChangePassword</result>
+			<result name="success" type="tiles">ChangePassword</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="configureEmail" type="tiles">email.viewCongEmailAccount</result>	
+		</action>
+
+		<action name="EmpHierarchy_*" method="{1}"
+			class="org.struts.action.admin.hierarchy.EmpHierarchyAction">
+			<result name="input" type="tiles">emp.Hierarchy</result>
+			<result name="success" type="tiles">emp.Hierarchy</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+		<action name="Formula_*" method="{1}"
+			class="org.struts.action.common.FormulaBuilderAction">
+			<result name="input" type="tiles">common.Formula</result>
+			<result name="success" type="tiles">common.Formula</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+		<action name="Welcome_*" method="{1}"
+			class="org.struts.action.common.WelcomeAction">
+			<result name="input" type="tiles">common.welcome</result>
+			<result name="success" type="tiles">common.welcome</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+		<action name="HomePage_*" method="{1}"
+			class="org.struts.action.common.HomePageAction">
+			<result name="input" type="tiles">common.home</result>
+			<result name="success" type="tiles">common.home</result>
+			<result name="mail" type="tiles">common.mail</result>
+			<result name="mailChkHome">
+				/pages/common/mailChkHome.jsp
+			</result>
+			<result name="mailDesc" type="tiles">
+				common.mailDesc
+			</result>
+			<result name="compose" type="tiles">common.compose</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="bulletin">
+				/pages/common/hrWorkComm.jsp
+			</result>
+			<result name="pollChart">
+				/pages/common/pollChart.jsp
+			</result>
+			<result name="pollStat" type="tiles">poll.pollStat</result>
+			<result name="prevPoll" type="tiles">poll.prevPoll</result>
+			<result name="chat">/skin_mirc/onlineList.jsp</result>
+			<result name="corpComm">/pages/common/corpComm.jsp</result>
+			<result name="quickSearch">
+				/pages/common/quickSearch.jsp
+			</result>
+			<result name="corpInfo">/pages/common/corpInfo.jsp</result>
+			<result name="knowInfo">/pages/common/knowList.jsp</result>
+			<result name="genInfo">/pages/common/genInfo.jsp</result>
+			<result name="homeAdv">
+				/pages/common/profile/homeAdvertise.jsp
+			</result>
+			<result name="trainingHome" type="tiles">
+				common.trainHome
+			</result>
+			<result name="recHome" type="tiles">common.recHome</result>
+			<result name="adminHome" type="tiles">
+				common.adminHome
+			</result>
+			<result name="dashboard" type="tiles">common.dashBoard</result>
+			<result name="rewardDashlet">/pages/common/rewardDashlet.jsp</result>
+			<result name="ceoConnect">/pages/common/ceoConnectDashlet.jsp</result>
+			<result name="ceoConnectData" type="tiles">ceoConnectData</result>
+			<!--  Added by prajakta B for show messages link of CEO connect-->
+			<result name="ceoConnectMsg" type="tiles">ceoConnectMsg</result>
+			<!-- end Added by prajakta B for show messages link of CEO connect-->
+			<result name="corporateEvent">/pages/common/corporateEventDashlet.jsp</result>
+			<result name="quickDownload">/pages/common/quickDownloadDashlet.jsp</result>
+			<result name="knowledgeList">/pages/common/knowledgeList.jsp</result>
+			<result name="decisionDash" type="tiles">common.decisionDash</result>	
+			<result name="decisionOneHomePage" type="tiles">common.home</result>	
+		</action>
+
+		<action name="WeekPlanner_*" method="{1}"
+			class="org.struts.action.common.WeekPlannerAction">
+			<result name="calender">
+				/pages/common/calendar/events.jsp
+			</result>
+			<result name="addTask">
+				/pages/common/calendar/events.jsp
+			</result>
+			<result name="editEvent" type="tiles">
+				common.editPlanner
+			</result>
+			<result name="input" type="tiles">
+				common.WeekPlanner
+			</result>
+			<result name="success" type="tiles">
+				common.WeekPlanner
+			</result>
+			<result name="newtask" type="tiles">common.newtask</result>
+			<result name="addnewTask" type="tiles">common.addnewtask</result>				
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="taskWindow" type="tiles">
+				common.addTask
+			</result>
+			<result name="showOnTitle" type="tiles">
+				common.showOnTitle
+			</result>
+		</action>
+		
+		<action name="MyPage_*" method="{1}"
+			class="org.struts.action.common.MyPageAction">
+			<result name="input" type="tiles">common.myPage</result>
+			<result name="success" type="tiles">common.myPage</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="utvCommunication">
+				/pages/common/utvCommunication.jsp
+			</result>
+			<result name="myPerformance">
+				/pages/common/myPerformance.jsp
+			</result>
+			<result name="myLeaveStatus">
+				/pages/common/myLeaveStatus.jsp
+			</result>
+			<result name="myTrainingProgram">
+				/pages/common/myTrainingProgram.jsp
+			</result>
+			<result name="dashboard" type="tiles">common.dashBoard</result>
+		</action>
+
+
+		<action name="QueryReport_*" method="{1}"
+			class="org.struts.action.common.QueryReportAction">
+			<result name="input" type="tiles">
+				common.QueryReport
+			</result>
+			<result name="success" type="tiles">
+				common.QueryReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="ReportingStrNew_*" method="{1}"
+			class="org.struts.action.reporting.ReportingStructureAction">
+			<result name="input" type="tiles">reporting.Structure</result>
+			<result name="success" type="tiles">
+				reporting.ReportingStructure
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+				<result name="managerApproverPage" type="tiles">
+				common.managerApproverPage
+			</result>
+				<result name="manageTeammember" type="tiles">
+				common.manageTeammember
+			</result>
+				<result name="configureEmployeeList" type="tiles">
+				common.configureEmployeeList
+			</result>
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+				<result name="moveGroup" type="tiles">common.moveGroup</result>
+		</action>	
+		
+		<action name="ReportingStr_*" method="{1}"
+			class="org.struts.action.common.ReportingStructureAction">
+			<result name="input" type="tiles">common.Structure</result>
+			<result name="success" type="tiles">
+				common.ReportingStructure
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mainPage" type="tiles">
+				common.Structure
+			</result>
+			<result name="defaultPage" type="tiles">
+				common.defaultStructure
+			</result>
+			<!-- ADDED BY REEBA FOR REPORTING EXCEPTION MAPPING -->
+			<result name="exceptionPage" type="tiles">
+				common.exceptionStructure
+			</result>
+			<result name="report" type="tiles">common.report</result>
+			<result name="f9ParamPage" type="tiles">
+				common.f9ParamPage
+			</result>
+			<result name="dashboard" type="tiles">common.dashBoard</result>
+		</action>
+
+		<action name="ReportingHandover_*" method="{1}"
+			class="org.struts.action.common.ReportingHandoverAction">
+			<result name="input" type="tiles">ReportingHandover</result>
+			<result name="success" type="tiles">
+				ReportingHandover
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		 <action name="MISReport_*" method="{1}"
+			class="org.struts.action.admin.srd.MISReportAction">
+			<result name="input" type="tiles">srd.misReport</result>
+			<result name="success" type="tiles">srd.misReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="HrmHome_*" method="{1}"
+			class="org.struts.action.common.HrmHomeAction">
+			<result name="input" type="tiles">common.hrmHome</result>
+			<result name="success" type="tiles">common.hrmHome</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="manPower">/pages/common/manpower.jsp</result>
+			<result name="sugg">/pages/common/grievance.jsp</result>
+			<result name="annual">/pages/common/annualCost.jsp</result>
+			<result name="work">/pages/common/workFlow.jsp</result>
+			<result name="grievanceView" type="tiles">common.grievanceView</result>
+			<result name="dashboard" type="tiles">common.dashBoard</result>
+			<result name="settlementDue">/pages/common/settlementDue.jsp</result>
+			<!-- added by Priyanka.K -->
+			<result name="hrmHomePage" type="tiles">common.hrmHome</result>
+			<!-- ended By Priyanka -->
+		</action>
+
+		<action name="LeaveHome_*" method="{1}"
+			class="org.struts.action.common.LeaveHomeAction">
+			<result name="input" type="tiles">common.leaveAttendance</result>
+			<result name="success" type="tiles">
+				common.leaveAttendance
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="attendance">
+				/pages/common/attendance.jsp
+			</result>
+			<result name="pending">/pages/common/pending.jsp</result>
+			<result name="empLeave">/pages/common/onLeave.jsp</result>
+			<result name="dashboard" type="tiles">common.dashBoard</result>
+			<result name="leaveAttendanceHomePage" type="tiles">common.leaveAttendance</result>
+		</action>
+	
+		<action name="PayrollHome_*" method="{1}"
+			class="org.struts.action.common.PayrollHomeAction">
+			<result name="input" type="tiles">
+				common.payrollHome
+			</result>
+			<result name="pendingAct">
+				/pages/common/pendingActivity.jsp
+			</result>
+			<result name="pendingQuery">
+				/pages/common/pendingQueries.jsp
+			</result>
+			<result name="annualSal">
+				/pages/common/salaryStatus.jsp
+			</result>
+			<result name="annualCost">
+				/pages/common/annualCosDistt.jsp
+			</result>
+			<result name="success" type="tiles">
+				common.payrollHome
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="dashboard" type="tiles">common.payrollHome</result>
+		</action>
+
+		<action name="AdminHome_*" method="{1}"
+			class="org.struts.action.common.AdminHomeAction">
+			<result name="input" type="tiles">common.adminHome</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="conference">
+				/pages/common/conference.jsp
+			</result>
+			<result name="voucher">/pages/common/voucher.jsp</result>
+			<result name="budget">
+				/pages/common/combineGraph.jsp
+			</result>
+			<result name="assetVolume">/pages/common/assetVolumeGraph.jsp</result>
+			<result name="asset">/pages/common/assets.jsp</result>
+			<result name="dashboard" type="tiles">common.dashBoard</result>
+			<result name="adminPage" type="tiles">common.adminHomeRightPage</result>
+		</action>
+
+		<action name="PerformanceHome_*" method="{1}"
+			class="org.struts.action.common.PerformanceHomeAction">
+			<result name="input" type="tiles">common.performanceHome</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="perform">/pages/common/myPerformance.jsp</result>
+			<result name="pendingAppr">/pages/common/pendingApprGraph.jsp</result>
+			<result name="deptAvgScore">/pages/common/deptAverageScoresGraph.jsp</result>
+			<result name="department">/pages/common/deptEff.jsp</result>
+			<result name="apprAlrt">/pages/common/appraisalAlert.jsp</result>
+			<result name="statistics">/pages/common/appStatcs.jsp</result>
+			<result name="dashboard" type="tiles">common.dashBoard</result>
+			<result name="empPerformance">/pages/common/empPerformance.jsp</result>
+			<!-- added by Prajakta B-->
+			<result name="pasHomePage" type="tiles">common.pasHome</result>
+			<!-- ends added By Prajakta B -->
+		</action>
+		
+		<action name="CandidateHome_*" method="{1}"
+			class="org.struts.action.common.CandidateHomeAction">
+			<result name="success" type="tiles">menu.candtree</result>
+			<result name="input">/pages/recruitment/candidateHeader.jsp</result>
+			<result name="dashboard" type="tiles">common.dashBoard</result>
+		</action>
+
+		<action name="TaxationHome_*" method="{1}"
+			class="org.struts.action.common.TaxHomeAction">
+			<result name="input" type="tiles">common.taxHome</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="pending">
+				/pages/common/pendingQueriesTax.jsp
+			</result>
+			<result name="taxSt">
+				/pages/common/taxStatistics.jsp
+			</result>
+			<result name="dashboard" type="tiles">common.dashBoard</result>
+			<result name="taxPaid" >/pages/common/incomeTaxPaid.jsp</result>
+		</action>
+		
+		<action name="ConfigurationHome_*" method="{1}"
+			class="org.struts.action.common.ConfigurationHomeAction">
+			<result name="input" type="tiles">common.configureHome</result>
+		</action>
+		
+		<action name="AnalyticHome_*" method="{1}"
+			class="org.struts.action.common.AnalyticHomeAction">
+			<result name="input" type="tiles">
+				common.analyticHome
+			</result>
+			<result name="admin">
+				/pages/common/adminAnalytics.jsp
+			</result>
+			<result name="dashboard" type="tiles">common.dashBoard</result>
+		</action>
+
+		<action name="AccessProfile_*" method="{1}"
+			class="org.struts.action.common.ProfileAccessAction">
+			<result name="input" type="tiles">
+				common.ProfileAccess
+			</result>
+			<result name="success" type="tiles">
+				common.ProfileAccessData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				common.accessprofileReport
+			</result>
+			<result name="f9multiSelect" type="tiles">
+				f9multiSelect
+			</result>
+		</action>
+
+		<action name="ForgotPwd_*" method="{1}"
+			class="org.struts.action.common.ForgotPwdAction">
+			<result name="input" type="tiles">login.forgotPwd</result>
+			<result name="success" type="tiles">login.forgotPwd</result>
+			<result name="forgotPage" type="tiles">
+				login.forgotPwd
+			</result>
+			<result name="page" type="tiles">login.error</result>
+			<result name="fail" type="tiles">login.forgotPwd</result>
+			<result name="forgotque" type="tiles">login.forgotpassque</result>
+		 	<result name="userNameJsp" type="tiles">login.username</result> 
+		</action>
+
+		<action name="MenuManagement_*" method="{1}"
+			class="org.struts.action.common.MenuManagementAction">
+			<result name="input" type="tiles">
+				common.MenuManagement
+			</result>
+			<result name="success" type="tiles">
+				common.MenuManagement
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="report" type="tiles">
+				common.menumanagementReport
+			</result>
+		</action>
+		
+		<action name="TaskReport_*" method="{1}"
+			class="org.struts.action.common.TaskReportAction">
+			<result name="input" type="tiles">common.TaskReport</result>
+			<result name="success" type="tiles">
+				common.TaskReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="LabelManage_*" method="{1}"
+			class="org.struts.action.common.LabelManagementAction">
+			<result name="input" type="tiles">common.LabelManage</result>
+		</action>
+		
+		<action name="RecruitmentHome_*" method="{1}"
+			class="org.struts.action.common.RecruitmentHomeAction">
+			<result name="input" type="tiles">
+				common.recruitmentHome
+			</result>
+			<result name="dashboard" type="tiles">common.dashBoard</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="requisition">
+				/pages/common/requisition.jsp
+			</result>
+			<result name="schedule">
+				/pages/common/interviewSchedule.jsp
+			</result>
+			<result name="attrition">
+				/pages/common/attritionRate.jsp
+			</result>
+			<result name="quaAnalysisGraph">
+				/pages/common/quaAnalysisGraph.jsp
+			</result>
+			<result name="manPower">
+				/pages/common/manpower.jsp
+			</result>
+			<result name="department">
+				/pages/common/manpowerDeptwise.jsp
+			</result>
+			<result name="workflow">
+				/pages/common/workFloRecruit.jsp
+			</result>
+			<result name="intervwrSch">
+				/pages/common/interviewerSchedule.jsp
+			</result>
+			<result name="empReferalprogram">
+			 /pages/common/employeeReferalProgram.jsp
+			</result>
+			
+			<!-- Added By Priynaka Kumbhar -->
+			<result name="recruitmentHomePage" type="tiles">common.recruitmentHome</result>
+			<!-- Ended By Priynaka Kumbhar -->
+			
+		</action>
+		
+
+		<!--  <action name="AppraisalBellCurve_*" method="{1}" class="org.struts.action.PAS.AppraisalBellCurveAction">
+		 <action name="AppraisalBellCurve_*" method="{1}" class="org.struts.action.PAS.AppraisalBellCurveAction">
+			<result name="input" type="tiles">Appraisal.BellCurve</result>
+			<result name="success" type="tiles">Appraisal.BellCurve</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		</action> -->
+
+		
+		<action name="ApplCodeTemplate_*" method="{1}" class="org.struts.action.common.ApplCodeTemplateAction">
+			<result name="input" type="tiles">ApplCodeTemplate</result>
+			<result name="success" type="tiles">ApplCodeTemplate</result>
+		</action>
+		
+		<!-- for home page search record starts -->
+			<action name="EmployeePortal_*" method="{1}"
+			class="org.struts.action.common.EmployeePortalAction">
+			<result name="searchRecord" type="tiles" >
+				mypage.search
+			</result>
+		</action>
+		
+		<action name="FileUpload_*"	method="{1}" class="org.struts.action.common.FileUploadAction">
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">2597152</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="success">/pages/common/uploadSuccess.jsp</result>
+			<result name="uploadFileWithPath">/pages/common/uploadSuccessPath.jsp</result>
+			<result name="uploadFile">/pages/common/uploadSuccessImg.jsp</result>
+		</action>
+		
+		
+		<action name="TrainingHome_*" method="{1}"
+			class="org.struts.action.common.TrainingHomeAction">
+			<result name="input" type="tiles">
+				common.trainingHome
+			</result>
+			
+			<result name="success" type="tiles">
+				common.trainingHome
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			
+		</action>
+		
+	</package>
+</struts>

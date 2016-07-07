@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="pension" namespace="/pension" extends="struts-default">
+    	<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+		</result-types>
+		
+		<!-- Pension Configuration -->
+		<action name="PensionConfiguration_*" method="{1}" class="org.struts.action.payroll.pension.PensionConfigurationAction">
+			<result name="input" type="tiles">pension.configuration.view</result>
+			<result name="success" type="tiles">pension.configuration</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="FormulaBuilderPension_*" method="{1}"
+			class="org.struts.action.payroll.pension.FormulaBuilderPensionAction">
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9calc">/pages/payroll/pension/formulaCalcPension.jsp	</result>
+		</action>
+		
+		<action name="FormulaBuilder_*" method="{1}"
+			class="org.struts.action.FormulaBuilder.FormulaBuilderAction">
+			<result name="input" type="tiles">
+				payroll.FormulaBuilder
+			</result>
+			<result name="success" type="tiles">
+				payroll.FormulaBuilder
+			</result>
+			<result name="report" type="tiles">
+				payroll.FormulaBuilder
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9calc">
+				/pages/FormulaBuilder/formulaCalc.jsp
+			</result>
+		</action>
+		
+		<!-- Pension Employee Configuration -->
+		<action name="EmpConfForPension_*" method="{1}" class="org.struts.action.payroll.pension.EmpConfForPensionAction">
+			<result name="input" type="tiles">pension.empConf</result>
+			<result name="success" type="tiles">pension.empConf</result>
+			<result name="report" type="tiles">master.report</result>
+			<result name="applEmpListScreen" type="tiles">pension.applEmpListScreen</result>
+			<result name="pensionCalScreen" type="tiles">pension.pensionCalScreen</result>
+			<result name="pensionDetails" type="tiles">pension.pensionDetails</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+		
+		<!-- Pension Process -->
+		<action name="PensionProcess_*" method="{1}" class="org.struts.action.payroll.pension.PensionProcessAction">
+			<!-- UPDATED BY REEBA -->
+			<result name="input" type="tiles">pension.processList</result>
+			<result name="success" type="tiles">pension.process</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<!-- Pension Configuration -->
+		<action name="PensionSlip_*" method="{1}" class="org.struts.action.payroll.pension.PensionSlipAction">
+			<result name="input" type="tiles">pension.slip</result>
+			<result name="success" type="tiles">pension.slip</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<!-- Pension Register -->
+		<action name="PensionRegister_*" method="{1}" class="org.struts.action.payroll.pension.PensionRegisterAction">
+			<result name="input" type="tiles">pension.register</result>
+			<result name="success" type="tiles">pension.register</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<!-- RELEASE ONHOLD PENSION - ADDED BY REEBA -->
+		<action name="ReleaseOnHold_*" method="{1}" class="org.struts.action.payroll.pension.ReleaseOnholdPensionAction">
+			<result name="input" type="tiles">pension.releaseOnhold</result>
+			<result name="success" type="tiles">pension.releaseOnhold</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+	</package>
+</struts>

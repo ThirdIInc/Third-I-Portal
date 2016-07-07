@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="extraWorkBenefits" namespace="/extraWorkBenefits" extends="struts-default">
+
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		
+		<!-- Extra Working Benefits -->
+		<action name="ExtraWorkingBenefits_*" method="{1}"
+			class="org.struts.action.extraWorkBenefits.ExtraWorkingBenefitsAction">
+			<result name="input" type="tiles">extraWorkBenefits.ExtraWorkBenefitsList</result>
+			<result name="success" type="tiles">extraWorkBenefits.ExtraWorkBenefits</result> 
+			<result name="report" type="tiles">extraWorkBenefits.ExtraWorkBenefits</result>		
+			<result name="f9page" type="tiles">common.f9page</result>	
+		</action>
+		
+		<action name="ExtraWorkApproval_*" method="{1}" class="org.struts.action.extraWorkBenefits.ExtraWorkApprovalAction">
+			<result name="input" type="tiles" >extraWorkBenefits.extraWorkAppr</result>
+			<result name="success" type="tiles">extraWorkBenefits.extraWorkAppr</result>
+			<result name="viewExtraWork" type="tiles">extraWorkBenefits.viewExtraWork</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<!-- For mypage Entry starts -->
+			<result name="mymessages" type="chain">MypageProcessManagerAlerts_input</result>
+			<result name="serviceJsp" type="chain">MypageProcessManagerAlerts_serviceData</result>
+			<result name="mytimeCard" type="chain">MypageProcessManagerAlerts_mytimeCard</result>
+			<result name="myLeaves" type="chain">MypageProcessManagerAlerts_myLeaves</result>
+			<!-- For mypage Entry ends -->
+		</action>
+		
+		<action name="ExtraWorkApplication_*" method="{1}" class="org.struts.action.extraWorkBenefits.ExtraWorkApplicationAction">
+			<result name="input" type="tiles" >extraWorkBenefits.extraWorkApplnList</result>
+			<result name="success" type="tiles">extraWorkBenefits.extraWorkAppln</result>	
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="approvalJsp" type="chain">ExtraWorkApproval_callstatus</result>
+			<!-- For mypage Entry starts -->
+			<result name="mymessages" type="chain">MypageProcessManagerAlerts_input</result>
+			<result name="serviceJsp" type="chain">MypageProcessManagerAlerts_serviceData</result>
+			<result name="mytimeCard" type="chain">MypageProcessManagerAlerts_mytimeCard</result>
+			<result name="myLeaves" type="chain">MypageProcessManagerAlerts_myLeaves</result>
+			<!-- For mypage Entry ends -->
+		</action>
+		
+		<action name="ExtraWorkBenifitCalculation_*" method="{1}"
+			class="org.struts.action.extraWorkBenefits.ExtraWorkBenifitCalculationAction">
+			<result name="input" type="tiles">extraWorkBenefits.ExtraWorkBenefitsCal</result>
+			<result name="success" type="tiles">extraWorkBenefits.ExtraWorkBenefitsCal</result> 
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="ExtraWorkingBenefitCalReport_*" method="{1}"
+			class="org.struts.action.extraWorkBenefits.ExtraWorkingBenefitCalReportAction">
+			<result name="input" type="tiles">extraWorkBenefits.ExtraWorkBenefitsCalReport</result>
+			<result name="success" type="tiles">extraWorkBenefits.ExtraWorkBenefitsCalReport</result> 
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="mailReport" type="tiles">common.mailReport</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+		
+		<!--  
+		<action name="ExtraWorkReport_*" method="{1}" class="org.struts.action.extraWorkBenefits.ExtraWorkMisReportAction">
+			<result name="input" type="tiles" >extraWorkBenefits.extraWorkAppMisReport</result>
+			<result name="success" type="tiles">extraWorkBenefits.extraWorkAppMisReport</result>				 
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>-->
+		
+		
+		<action name="ExtraWorkBenefitMisBean_*" method="{1}"
+			class="org.struts.action.extraWorkBenefits.ExtraWorkBenefitMisAction">
+			<result name="input" type="tiles">extraWorkBenefits.ExtraWorkBenefitsMisReport</result>
+			<result name="success" type="tiles">extraWorkBenefits.ExtraWorkBenefitsMisReport</result> 
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewOnScreen" type="tiles">extraWorkBenefits.misReportView</result> 
+		</action>
+		
+		<action name="AttendanceReglMISReport_*" method="{1}"
+			class="org.struts.action.extraWorkBenefits.AttReglMisReportAction">
+			<result name="input" type="tiles">attendanceReglMisReport</result>
+			<result name="success" type="tiles">attendanceReglMisReport</result> 
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewOnScreen" type="tiles">attendanceRegl.misReportView</result> 
+		</action>		
+		
+		<action name="LateReglMISReport_*" method="{1}"
+			class="org.struts.action.extraWorkBenefits.LateReglMisReportAction">
+			<result name="input" type="tiles">lateReglMisReport</result>
+			<result name="success" type="tiles">lateReglMisReport</result> 
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewOnScreen" type="tiles">lateRegl.misReportView</result> 
+		</action>				
+	
+		<action name="RedressalMISReport_*" method="{1}"
+			class="org.struts.action.extraWorkBenefits.RedressalMisReportAction">
+			<result name="input" type="tiles">redressalMisReport</result>
+			<result name="success" type="tiles">redressalMisReport</result> 
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewOnScreen" type="tiles">redressal.misReportView</result> 
+		</action>					
+
+		<action name="PersonalTimeMISReport_*" method="{1}"
+			class="org.struts.action.extraWorkBenefits.PersonalTimeMisReportAction">
+			<result name="input" type="tiles">personalTimeMisReport</result>
+			<result name="success" type="tiles">personalTimeMisReport</result> 
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewOnScreen" type="tiles">personalTime.misReportView</result> 
+		</action>	
+		
+		<action name="EmailPayrollReport_*" method="{1}" class="org.struts.action.payroll.EmailPayrollReportAction">
+				<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<!-- This is for mypage starts -->
+		<action name="MypageProcessManagerAlerts_*" method="{1}"
+			class="org.struts.action.mypage.MypageProcessManagerAlertsAction">
+			<result name="input" type="tiles">alert.mypage</result>
+			<result name="mymessages" type="chain">MypageProcessManagerAlerts_input</result>
+			<result name="serviceJsp" type="tiles">mypage.services</result>
+			<result name="mytimeCard" type="tiles">mytimeCard</result>
+			<result name="myLeaves" type="tiles">mypage.myLeaves
+			</result>
+		</action>
+		<!-- This is for mypage ends -->
+		
+	</package>
+</struts>

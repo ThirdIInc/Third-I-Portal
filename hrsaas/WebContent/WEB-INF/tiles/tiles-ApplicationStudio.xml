@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+<!--Layout and common definitions begins-->
+
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+
+	<definition name=".dashLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="rightTile" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+	<definition name=".loginLayout"
+		template="/pages/common/loginLayout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+ 
+	<definition name=".f9Layout"
+		template="/pages/common/f9layout.jsp">
+		<put-attribute name="title" value="Select record" />
+		<put-attribute name="header" value="/pages/common/f9header.jsp" />
+		<put-attribute name="footer" value="/pages/common/f9footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name=".cofigurationLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/configurationLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+<!--Layout and common definitions ends-->
+
+<!--Application definition begins-->
+<definition name="AppStudio.EmailTemplate" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Email Templates" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/EmailTemplates.jsp" />
+	</definition>
+
+
+
+<definition name="AppStudio.EmailTemplateClient"
+		extends=".cofigurationLayout">
+		<put-attribute name="title" value="Email Templates" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/emailTemplateClient.jsp" />
+	</definition>
+
+<definition name="AppStudio.LetterTemplateClient"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Letter Templates" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/letterTemplateClient.jsp" />
+	</definition>
+
+<definition name="AppStudio.NavigationPanelSettings"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Navigation Panel" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/navigationPanelSettings.jsp" />
+	</definition>
+
+	<definition name="AppStudio.themes" extends=".mainLayout">
+		<put-attribute name="title" value="Themes Settings" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/themeSettings.jsp" />
+	</definition>
+
+	<definition name="AppStudio.LetterTemplate" extends=".mainLayout">
+		<put-attribute name="title" value="Letter Templates" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/letterTemplates.jsp" />
+	</definition>
+
+	<definition name="AppStudio.BirthdayMaillSettings"
+		extends=".cofigurationLayout">
+		<put-attribute name="title" value="Birthday Mail Settings" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/birthdayMailSettings.jsp" />
+	</definition>
+
+	<definition name="AppStudio.DashletSettings"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Dashlet Settings" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/dashletSettings.jsp" />
+	</definition>
+
+	<definition name="AppStudio.ButtonMaster" extends=".mainLayout">
+		<put-attribute name="title" value="Letter Templates" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/buttonMaster.jsp" />
+	</definition>
+
+	<definition name="AppStudio.IPFilter" extends=".mainLayout">
+		<put-attribute name="title" value="IP Filtering" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/ipFilterSetting.jsp" />
+	</definition>
+
+	<definition name="AppStudio.DashletProfileSettings"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Dashlet Profile Settings" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/dashletProfileSettings.jsp" />
+	</definition>
+
+	<definition name="AppStudio.DefaultDashletConfig"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Default Dashlet Configuration" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/defaultDashletConfig.jsp" />
+	</definition>
+
+	<definition name="AppStudio.DashletList" extends=".mainLayout">
+		<put-attribute name="title" value="Dashlet List" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/dashletList.jsp" />
+	</definition>
+
+	<definition name="AppStudio.DataModification"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Data Modify" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/dataModification.jsp" />
+	</definition>
+
+	<definition name="AppStudio.MenuRelease" extends=".mainLayout">
+		<put-attribute name="title" value="Menu Release" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/menuRelease.jsp" />
+	</definition>
+
+	<definition name="AppStudio.ProcessManagerAlerts"
+		extends=".dashLayout">
+		<put-attribute name="title" value="Process Manager Alerts" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/processManagerAlerts.jsp" />
+	</definition>
+
+	<definition name="AppStudio.ProcessManagerAlertsAppraisal"
+		extends=".dashLayout">
+		<put-attribute name="title" value="Process Manager Alerts" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/processManagerAlertsAppraisal.jsp" />
+	</definition>
+
+	<definition name="AppStudio.MenuSettings" extends=".mainLayout">
+		<put-attribute name="title" value="Menu Settings" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/menuTabSetting.jsp" />
+	</definition>
+
+	<definition name="AppStudio.BirthdayTemplate"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Birthday Templates" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/birthdayTemplate.jsp" />
+	</definition>
+
+	<definition name="AppStudio.UserDashletConfig"
+		extends=".mainLayout">
+		<put-attribute name="title" value="User Dashlet Configuration" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/userDashletConfig.jsp" />
+	</definition>
+
+	<definition name="AppStudio.AnniversaryTemplate"
+		extends=".cofigurationLayout">
+		<put-attribute name="title" value="Anniversary Templates" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/anniversaryTemplate.jsp" />
+	</definition>
+
+	<definition name="AppStudio.AnniversaryMailSettings"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Anniversary Mail Settings" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/anniversaryMailSettings.jsp" />
+	</definition>
+
+	<definition name="AppStudio.ShowMaster" extends=".f9Layout">
+		<put-attribute name="title" value="Show Master" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/showMaster.jsp" />
+	</definition>
+
+
+	<definition name="AppStudio.eventSettings" extends=".mainLayout">
+		<put-attribute name="title" value="Event" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/eventMaster.jsp" />
+	</definition>
+
+	<definition name="AppStudio.eventData" extends=".mainLayout">
+		<put-attribute name="title" value="Event Data" />
+		<put-attribute name="body" value="/pages/ApplicationStudio/eventData.jsp" />
+	</definition>
+
+	
+	<definition name="AppStudio.MyContacts" extends=".cofigurationLayout">
+		<put-attribute name="title" value="My Contacts" />
+		<put-attribute name="body" value="/pages/ApplicationStudio/myContacts.jsp" />
+	</definition>
+	
+	
+	<definition name="AppStudio.MyDownloads" extends=".cofigurationLayout">
+		<put-attribute name="title" value="Setting Master" />
+		<put-attribute name="body" value="/pages/ApplicationStudio/myDownloads.jsp" />
+	</definition>
+
+	<definition name="AppStudio.audittrailreport"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Audit Trail Report" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/auditTrailReport.jsp" />
+	</definition>
+
+	<definition name="AppStudio.AlertEmailSetting"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Audit Trail Report" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/alertEmailSetting.jsp" />
+	</definition>
+
+	<definition name="AppStudio.LetterTypeMaster"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Letter Type Master" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/letterTypeMaster.jsp" />
+	</definition>
+
+	<definition name="AppStudio.configAuth" extends=".mainLayout">
+		<put-attribute name="title" value="Configuration Authorization" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/configAuth/ConfigAuthorization.jsp" />
+	</definition>
+
+	<definition name="AppStudio.AutoMailAlertSettings"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Auto Mail Alert Settings" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/autoMailAlertSetting.jsp" />
+	</definition>
+
+	<definition name="AppStudio.AutoMailAlertSettingsList"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Auto Mail Alert Settings" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/autoMailAlertSettingsList.jsp" />
+	</definition>
+
+	<definition name="AppStudio.AlertAdminSetting"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Alert Admin Setting" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/alertAdminSetting.jsp" />
+	</definition>
+	<definition name="AppStudio.AlertClientSetting"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Alert Client Setting" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/alertClientSetting.jsp" />
+	</definition>
+
+	<definition name="AppStudio.EmployeeDirectoryConf"
+		extends=".mainLayout">
+		<put-attribute name="title" value="Employee Directory Configuration" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/EmployeeDirectoryConfiguration.jsp" />
+	</definition>
+
+	<definition name="AppStudio.MiscSalaryUploadAuth"
+		extends=".mainLayout">
+		<put-attribute name="title" value="House Rent" />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/configAuth/miscSalaryUploadAuth.jsp" />
+	</definition>
+	<definition name="AppStudio.ComponentHead" extends=".mainLayout">
+		<put-attribute name="title" value="Component Head " />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/configAuth/componentHead.jsp" />
+	</definition>
+
+	<definition name="AppStudio.CreditHead" extends=".mainLayout">
+		<put-attribute name="title" value="Credit Head " />
+		<put-attribute name="body"
+			value="/pages/ApplicationStudio/configAuth/creditHead.jsp" />
+	</definition>
+<!--Application definition ends-->
+</tiles-definitions>

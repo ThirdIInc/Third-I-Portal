@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+        
+   <struts>   
+        <package name="help" namespace="/help" extends="struts-default">
+        
+	        <result-types>
+			  	<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+			</result-types>
+			
+			<action name="HelpDesk_*" method="{1}" class="org.struts.action.helpdesk.HelpDeskAction">
+				<result name="input" type="tiles">helpdesk.MasterList</result>	
+				<result name="success" type="tiles">helpdesk.Master</result>	
+				<result name="f9page" type="tiles">common.f9page</result>
+	 			<result name="processJsp" type="chain">HelpDeskApproval_callstatus</result>
+	 			<result name="uploadFile">/pages/helpdesk/fileUpload.jsp</result>
+	 			<result name="VIEW_TRUE" type="tiles">viewHelpDeskApp.Master</result>
+	 			
+	 			<!-- my page code -->
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+	 			
+			</action>
+			
+			<action name="HelpDeskApproval_*" method="{1}" class="org.struts.action.helpdesk.HelpDeskApprovalAction">
+				<result name="input" type="tiles">helpdeskappr.Master</result>	
+				<result name="success" type="tiles">helpdeskappr.MasterView</result>		
+				<!-- <result name="VIEW_TRUE" type="tiles">viewHelpDeskApp.Master</result> -->
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+			</action>
+				
+			<action name="HelpDeskMisReport_*" method="{1}" class="org.struts.action.helpdesk.HelpDeskMisReportAction">
+				<result name="input" type="tiles">helpDeskReport</result>	
+				<result name="success" type="tiles">helpDeskReport</result>		
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="mailReport" type="tiles">common.mailReport</result>
+				<result name="f9multiSelect" type="tiles">f9multiSelect	</result>
+				
+			</action>
+				<action name="HelpDeskReqDurationReport_*" method="{1}" class="org.struts.action.helpdesk.HelpdeskRequestDurationAction">
+				<result name="input" type="tiles">helpDeskReqReport</result>	
+				<result name="success" type="tiles">helpDeskReqReport</result>		
+				<result name="f9page" type="tiles">common.f9page</result>
+				<result name="mailReport" type="tiles">common.mailReport</result>
+				<result name="f9multiSelect" type="tiles">f9multiSelect	</result>
+				
+			</action>
+			
+				<action name="HelpDeskTechMisReport_*" method="{1}" class="org.struts.action.helpdesk.HelpdeskTechMisReportAction">
+					<result name="techReport" type="tiles">techReport</result>
+					<result name="mailReport" type="tiles">common.mailReport</result>
+				</action>
+			<!-- Mapping for HelpDesk Management -->
+			<action name="HelpDeskDeptMaster_*" method="{1}" class="org.struts.action.helpdesk.HelpDeskDeptAction">
+				<result name="input" type="tiles" >helpdesk.HelpDeskDeptMasterList</result>
+				<result name="success" type="tiles">helpdesk.HelpDeskDeptMaster</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+			</action>
+			
+			<action name="HelpDeskReqType_*" method="{1}" class="org.struts.action.helpdesk.HelpDeskReqTypeAction">
+				<result name="input" type="tiles" >helpdesk.HelpDeskReqTypeList</result>
+				<result name="success" type="tiles">helpdesk.HelpDeskReqType</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+			</action>
+			
+			<action name="HelpDeskSubReqType_*" method="{1}" class="org.struts.action.helpdesk.HelpDeskSubReqTypeAction">
+				<result name="input" type="tiles" >helpdesk.HelpDeskSubReqTypeList</result>
+				<result name="success" type="tiles">helpdesk.HelpDeskSubReqType</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+			</action>
+			
+			<action name="HelpDeskSLAMaster_*" method="{1}" class="org.struts.action.helpdesk.HelpDeskSLAMasterAction">
+				<result name="input" type="tiles" >helpdesk.HelpDeskSLAMasterList</result>
+				<result name="success" type="tiles">helpdesk.HelpDeskSLAMaster</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+			</action>
+			
+			<action name="HelpDeskStatusCateg_*" method="{1}" class="org.struts.action.helpdesk.HelpDeskStatusCatgAction">
+				<result name="input" type="tiles" >helpdesk.HelpDeskStatusList</result>
+				<result name="success" type="tiles">helpdesk.HelpDeskStatus</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+			</action>
+			
+			<action name="HelpDeskMgrReporting_*" method="{1}" class="org.struts.action.helpdesk.HelpDeskMgrRepAction">
+				<result name="input" type="tiles" >helpdesk.HelpDeskMgrRepList</result>
+				<result name="success" type="tiles">helpdesk.HelpDeskMgrRep</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+			</action>
+			
+			<action name="HelpDeskTechReporting_*" method="{1}" class="org.struts.action.helpdesk.HelpDeskTechRepAction">
+				<result name="input" type="tiles" >helpdesk.HelpDeskTechRepList</result>
+				<result name="success" type="tiles">helpdesk.HelpDeskTechRep</result>	
+				<result name="f9page" type="tiles">common.f9page</result>	
+			</action>
+			
+			<action name="HelpDeskProcess_*" method="{1}" class="org.struts.action.helpdesk.HelpDeskProcessAction">
+				<result name="input" type="tiles" >helpdesk.HelpDeskProcess</result>
+				<result name="success" type="tiles">helpdesk.HelpDeskProcessData</result>
+				<result name="f9page" type="tiles">common.f9page</result>	
+				<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="chain">
+				 MypageProcessManagerAlerts_serviceData
+			</result>
+			</action>
+			
+					<!-- This is for mypage starts -->
+		
+			<action name="MypageProcessManagerAlerts_*" method="{1}" class="org.struts.action.mypage.MypageProcessManagerAlertsAction">
+			<result name="input" type="tiles">alert.mypage</result>
+			<result name="mymessages" type="chain">
+				 MypageProcessManagerAlerts_input 
+			</result>
+			<result name="serviceJsp" type="tiles">
+				mypage.services
+			</result>	
+			</action>
+			
+		<!-- This is for mypage ends -->
+			
+			<action name="EmailPayrollReport_*" method="{1}" class="org.struts.action.payroll.EmailPayrollReportAction">
+				<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+        </package>
+	</struts>
+
+

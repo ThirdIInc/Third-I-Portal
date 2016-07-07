@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+<!--Layout and common definitions begins-->
+
+	<definition name=".mainLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	 
+	<definition name=".f9Layout"
+		template="/pages/common/f9layout.jsp">
+		<put-attribute name="title" value="Select record" />
+		<put-attribute name="header" value="/pages/common/f9header.jsp" />
+		<put-attribute name="footer" value="/pages/common/f9footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<!-- Added by priyanka -->
+<definition name=".hrmHomeLayout"
+		template="/pages/common/layout.jsp">
+		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="header" value="/pages/common/header.jsp" />		
+		<put-attribute name="menu" value="/pages/common/hrmHomeLeftMenu.jsp" />
+		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<!-- ended by priyanka -->
+	
+	
+<definition name="common.dashBoard" extends=".mainLayout">
+		<put-attribute name="title" value="Common Dashboard Page" />
+		<put-attribute name="body" value="/pages/common/commonDashboard.jsp" />
+	</definition>
+
+	
+<!--Layout and common definitions ends-->
+
+
+<!--Pramotion definition begins-->
+<definition name="master.promotion" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Promotion Master" />
+		<put-attribute name="body" value="/pages/pramotion/pramotion.jsp" />
+	</definition>
+
+<definition name="master.addnewpromotion" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Promotion Master" />
+		<put-attribute name="body" value="/pages/pramotion/promotionData.jsp" />
+	</definition>
+
+	<definition name="master.promotionMis" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Promotion Report" />
+		<put-attribute name="body" value="/pages/pramotion/promotionReport.jsp" />
+	</definition>
+
+	<definition name="emp.promotion" extends=".mainLayout">
+		<put-attribute name="title" value="Promotion Report" />
+		<put-attribute name="body"
+			value="/pages/pramotion/promotionEmpReport.jsp" />
+	</definition>
+
+	<definition name="promotion.upload" extends=".hrmHomeLayout">
+		<put-attribute name="title" value="Promotion Report" />
+		<put-attribute name="body" value="/pages/pramotion/promotionUpload.jsp" />
+	</definition>
+<!--Pramotion definition ends -->
+</tiles-definitions>

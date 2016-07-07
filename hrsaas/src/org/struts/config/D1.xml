@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="D1" namespace="/D1" extends="struts-default">
+
+		<result-types>
+			<!-- Added By Nilesh -->
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+
+		<!-- Added by janisha  -->
+		<action name="DepartmentNumberMaster_*" method="{1}"
+			class="org.struts.action.D1.DepartmentNoMasterAction">
+			<result name="input" type="tiles">
+				d1.DepartmentNoMaster
+			</result>
+			<result name="success" type="tiles">
+				d1.DepartmentNoMaster
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="successCheck" type="tiles">
+				d1.DepartmentNoMaster
+			</result>
+			<result name="deptData" type="tiles">
+				d1.DeptNoMasterData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+		<!-- End Added by janisha  -->
+		<!-- Added by Janisha for D1 Official Configuration Setting -->
+		<!-- Added by Janisha for D1 Official Configuration Setting -->
+		<action name="OfficialDetailsSettings_*" method="{1}"
+			class="org.struts.action.D1.OfficialDetailSettingsAction">
+			<result name="input" type="tiles">
+				setting.OfficialDetail
+			</result>
+			<result name="success" type="tiles">
+				setting.OfficialDetailSettings
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- End Added by Janisha for D1 Official Configuration Setting -->
+		<!-- End Added by Janisha for D1 Official Configuration Setting -->
+
+
+		<!-- added by bhushan start -->
+		<action name="ApprovalSettings_*" method="{1}"
+			class="org.struts.action.D1.ApprovalSettingsAction">
+			<result name="input" type="tiles">
+				setting.ApprovalSettings
+			</result>
+			<result name="success" type="tiles">
+				setting.ApprovalSettings
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+
+		<action name="PersonalDataChange_*" method="{1}"
+			class="org.struts.action.D1.PersonalDataChangeAction">
+			<result name="input" type="tiles">
+				d1Integration.personalDataChangeList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.personalDataChangeData
+			</result>
+
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+
+		<action name="PersonalDataChangeApproval_*" method="{1}"
+			class="org.struts.action.D1.PersonalDataChangeApprovalAction">
+			<result name="input" type="tiles">
+				d1Integration.personalDataChangeApprovalList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.personalDataChangeApprovalVIew
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+
+
+		<!-- added by bhushan end -->
+		<!-- added by Janisha start -->
+
+
+
+		<action name="VendorMaster_*" method="{1}"
+			class="org.struts.action.D1.VendorMasterAction">
+			<result name="input" type="tiles">
+				d1Integration.VendorMasterList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.VendorMasterData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+		<!-- Added 24th Feb 11 -->
+
+		<action name="BusinessUnit_*" method="{1}"
+			class="org.struts.action.D1.BusinessUnitAction">
+			<result name="input" type="tiles">
+				d1Integration.BusinessUnitList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.BusinessUnitData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+
+		</action>
+
+		<!-- Ended  24th Feb 11 -->
+
+		<!-- Soft Req start -->
+		<action name="SoftwareRequest_*" method="{1}"
+			class="org.struts.action.D1.SoftwareRequestAction">
+			<result name="input" type="tiles">
+				d1Integration.SoftwareRequestList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.SoftwareRequestData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- Soft Req end -->
+		<!--Imprint Type Start  -->
+
+		<action name="ImprintType_*" method="{1}"
+			class="org.struts.action.D1.ImprintTypeAction">
+			<result name="input" type="tiles">
+				d1Integration.ImprintTypeList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.ImprintTypeData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!--Imprint Type End  -->
+
+		<!--Stationary Start 3rd Mar 11 -->
+
+		<action name="Stationary_*" method="{1}"
+			class="org.struts.action.D1.StationaryAction">
+			<result name="input" type="tiles">
+				d1Integration.StationaryList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.StationaryData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<!--Stationary  End  3rd Mar 11-->
+
+
+		<!--Class Request Start 3rd Mar 11 -->
+		<action name="ClassRequest_*" method="{1}"
+			class="org.struts.action.D1.ClassRequestAction">
+			<result name="input" type="tiles">
+				d1Integration.ClassReqList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.ClassReqData
+			</result>
+			<result name="viewDetails" type="tiles">
+				d1Integration.ClassReqData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!--Class Request End 3rd Mar 11-->
+
+		<!-- Class Request Approval Start -Nilesh-->
+		<action name="ClassRequestApproval_*" method="{1}"
+			class="org.struts.action.D1.ClassRequestApproveAction">
+			<result name="input" type="tiles">
+				d1Integration.ClassReqApproveList
+			</result>
+
+			<result name="success" type="tiles">
+				d1Integration.ClassReqApproveData
+			</result>
+			<result name="viewDetails" type="tiles">
+				d1Integration.ClassReqApproveData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Class Request Approval End-->
+
+		<!-- added by janisha end -->
+		<action name="Region_*" method="{1}"
+			class="org.struts.action.D1.RegionMasterAction">
+			<result name="input" type="tiles">
+				settings.regionList
+			</result>
+			<result name="success" type="tiles">
+				settings.regionAdd
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- Added by manish sakpal Begins -->
+		<action name="ReqToBackOutVoucher_*" method="{1}"
+			class="org.struts.action.D1.ReqToBackOutVoucherAction">
+			<result name="input" type="tiles">
+				d1Integration.ReqToBackOutVoucherList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.ReqToBackOutVoucherDetails
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="ReqToBackOutApprover_*" method="{1}"
+			class="org.struts.action.D1.ReqToBackOutApproverAction">
+			<result name="input" type="tiles">
+				d1Integration.ReqToBackOutApproverList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.ReqToBackOutApproverDetails
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="HardwareSoftwareRequest_*" method="{1}"
+			class="org.struts.action.D1.HardwareSoftwareRequestAction">
+			<result name="input" type="tiles">
+				d1Integration.HardwareSoftwareRequestList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.HardwareSoftwareRequestForm
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="HardwareSoftwareRequestApprover_*" method="{1}"
+			class="org.struts.action.D1.HardwareSoftwareRequestApproverAction">
+			<result name="input" type="tiles">
+				d1Integration.HardwareSoftwareRequestApproverList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.HardwareSoftwareRequestApproverForm
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- Added by manish sakpal Ends -->
+
+
+
+
+		<!-- ADDED BY SHASHIKANT : START-->
+
+		<action name="WorkersCompInjury_*" method="{1}"
+			class="org.struts.action.D1.WorkersCompInjuryAction">
+			<result name="input" type="tiles">D1.input</result>
+			<result name="success" type="tiles">
+				D1.workersCompInjury
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="Resubmit" type="tiles">D1.Resubmit</result>
+
+		</action>
+		<action name="WorkersCompInjuryAppr_*" method="{1}"
+			class="org.struts.action.D1.WorkersCompInjuryApprAction">
+			<result name="input" type="tiles">D1.inputAppr</result>
+			<result name="success" type="tiles">
+				D1.workersCompInjuryAppr
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="NonInventoryPurchase_*" method="{1}"
+			class="org.struts.action.D1.NonInventoryPurchaseAction">
+			<result name="input" type="tiles">
+				D1.NonInventoryPurchaseList
+			</result>
+			<result name="success" type="tiles">
+				D1.NonInventoryPurchaseData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="NonInventoryPurchaseAppr_*" method="{1}"
+			class="org.struts.action.D1.NonInventoryPurchaseApprAction">
+			<result name="input" type="tiles">
+				D1.NonInventoryPurchaseApprList
+			</result>
+			<result name="success" type="tiles">
+				D1.NonInventoryPurchaseApprData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+
+
+
+		<action name="ShortTermDisability_*" method="{1}"
+			class="org.struts.action.D1.ShortTermDisabilityAction">
+			<result name="input" type="tiles">
+				D1.ShortTermDisabilityInput
+			</result>
+			<result name="success" type="tiles">
+				D1.ShortTermDisability
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="ShortTermDisabilityAppr_*" method="{1}"
+			class="org.struts.action.D1.ShortTermDisabilityApprAction">
+			<result name="input" type="tiles">
+				D1.ShortTermDisabilityInputAppr
+			</result>
+			<result name="success" type="tiles">
+				D1.ShortTermDisability
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="ExpenseApprovalReg_*" method="{1}"
+			class="org.struts.action.D1.ExpenseApprovalRegAction">
+			<result name="input" type="tiles">
+				D1.ExpenseApprovalRegInput
+			</result>
+			<result name="success" type="tiles">
+				D1.ExpenseApprovalReg
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="ExpenseApprovalRegAppr_*" method="{1}"
+			class="org.struts.action.D1.ExpenseApprovalRegApprAction">
+			<result name="input" type="tiles">
+				D1.ExpenseApprovalRegApprInput
+			</result>
+			<result name="success" type="tiles">
+				D1.ExpenseApprovalRegAppr
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+
+
+
+
+
+		<action name="QuickProject_*" method="{1}"
+			class="org.struts.action.D1.QuickProjectAction">
+			<result name="input" type="tiles">
+				D1.QuickProjectInput
+			</result>
+			<result name="success" type="tiles">D1.QuickProject</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="QuickProjectAppr_*" method="{1}"
+			class="org.struts.action.D1.QuickProjectApprAction">
+			<result name="input" type="tiles">
+				D1.QuickProjectApprInput
+			</result>
+			<result name="success" type="tiles">
+				D1.QuickProjectAppr
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- ADDED BY SHASHIKANT: END -->
+
+		<!-- Added Ganesh END -->
+		<!-- CD rom Starts -->
+
+		<action name="CDRomRequest_*" method="{1}"
+			class="org.struts.action.D1.CDRomRequestAction">
+			<result name="input" type="tiles">CDROM.input</result>
+			<result name="success" type="tiles">CDROM.request</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="approve" type="chain">
+				CDRomApproval_input
+			</result>
+			<result name="view" type="chain">CDRomRequest_input</result>
+			<result name="viewApprove" type="tiles">
+				view_Approve
+			</result>
+		</action>
+
+
+		<action name="CDRomApproval_*" method="{1}"
+			class="org.struts.action.D1.CDRomApprovalAction">
+			<result name="input" type="tiles">CDROMAPP.input</result>
+			<result name="success" type="tiles">CDROMAPP.input</result>
+			<result name="f9page" type="tiles">CDROMAPP.f9page</result>
+		</action>
+
+		<!-- CD Rom Ends -->
+
+
+		<action name="DepartmentChangeApproval_*" method="{1}"
+			class="org.struts.action.D1.DepartmentChangeApprovalAction">
+			<result name="input" type="tiles">
+				d1Integration.DepartmentChangeApproval
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.DepartmentChangeApproval
+			</result>
+			<result name="viewDetails" type="tiles">
+				settings.deptlocationChangeData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="DepartmentLocationChange_*" method="{1}"
+			class="org.struts.action.D1.DepartmentandLocationChangeAction">
+			<result name="input" type="tiles">
+				settings.deptlocationChange
+			</result>
+			<result name="success" type="tiles">
+				settings.deptlocationChangeData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewDetails" type="tiles">
+				settings.deptlocationChangeData
+			</result>
+			<result name="approve" type="chain">
+				DepartmentChangeApproval_input
+			</result>
+			<result name="viewApprove" type="tiles">
+				dept_Approve
+			</result>
+		</action>
+
+		<!--  ADDED BY MANISH SAKPAL BEGINS -->
+		<action name="ASIPOReconciliation_*" method="{1}"
+			class="org.struts.action.D1.ASIPOReconciliationAction">
+			<result name="input" type="tiles">ASIPO.input</result>
+			<result name="success" type="tiles">ASIPO.success</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="ASIPOReconciliationApprover_*" method="{1}"
+			class="org.struts.action.D1.ASIPOReconciliationApproverAction">
+			<result name="input" type="tiles">
+				ASIPOApprover.input
+			</result>
+			<result name="success" type="tiles">
+				ASIPOApprover.success
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="CreditCheckRequest_*" method="{1}"
+			class="org.struts.action.D1.CreditCheckRequestAction">
+			<result name="input" type="tiles">
+				creditCheckRequest.input
+			</result>
+			<result name="success" type="tiles">
+				creditCheckRequest.success
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="CreditCheckRequestApprover_*" method="{1}"
+			class="org.struts.action.D1.CreditCheckRequestApproverAction">
+			<result name="input" type="tiles">
+				creditCheckRequestApprover.input
+			</result>
+			<result name="success" type="tiles">
+				creditCheckRequestApprover.success
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="Termination_*" method="{1}"
+			class="org.struts.action.D1.TerminationAction">
+			<result name="input" type="tiles">termination.input</result>
+			<result name="success" type="tiles">
+				termination.success
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="TerminationApproval_*" method="{1}"
+			class="org.struts.action.D1.TerminationApprovalAction">
+			<result name="input" type="tiles">
+				terminationApproval.input
+			</result>
+			<result name="success" type="tiles">
+				terminationApproval.success
+			</result>
+		</action>
+
+		<action name="CapitalExpenditure_*" method="{1}"
+			class="org.struts.action.D1.CapitalExpenditureAction">
+			<result name="input" type="tiles">
+				capitalExpenditure.input
+			</result>
+			<result name="success" type="tiles">
+				capitalExpenditure.success
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="CapitalExpenditureApproval_*" method="{1}"
+			class="org.struts.action.D1.CapitalExpenditureApprovalAction">
+			<result name="input" type="tiles">
+				capitalExpenditureApproval.input
+			</result>
+			<result name="success" type="tiles">
+				capitalExpenditureApproval.success
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!--  ADDED BY MANISH SAKPAL ENDS -->
+
+
+		<!-- Salary Plan Master Start -Nilesh D -->
+		<action name="SalaryPlan_*" method="{1}"
+			class="org.struts.action.D1.SalaryPlanAction">
+			<result name="input" type="tiles">SalaryPlan.List</result>
+			<result name="success" type="tiles">SalaryPlan.Data</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Salary Plan End -->
+
+		<action name="TravelApplication_*" method="{1}"
+			class="org.struts.action.D1.TravelApplicationFormAction">
+			<result name="input" type="tiles">travel.input</result>
+			<result name="success" type="tiles">travel.form</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="approve" type="chain">
+				TravelApplicationApp_input
+			</result>
+			<result name="back" type="chain">
+				TravelApplication_input
+			</result>
+			<result name="view" type="tiles">travel.formApp</result>
+		</action>
+
+		<action name="TravelApplicationApp_*" method="{1}"
+			class="org.struts.action.D1.TravelApplicationAppAction">
+			<result name="input" type="tiles">travelApp.input</result>
+			<result name="success" type="tiles">travelApp.input</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- ADDED BY JANISHA ENDS -->
+
+		<!-- Ganesh Begins -->
+		<action name="NewHireRehire_*" method="{1}"
+			class="org.struts.action.D1.NewHireRehireAction">
+			<result name="input" type="tiles">
+				d1Integration.NewHireRehireList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.NewHireRehireDetails
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="NewHireRehireApprover_*" method="{1}"
+			class="org.struts.action.D1.NewHireRehireApprovalAction">
+			<result name="input" type="tiles">
+				d1Integration.NewHireRehireApprovalList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.NewHireRehireApprovalDetails
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Ganesh end -->
+		<!-- Added by Nilesh D 5 Mar-->
+		<action name="Ethinicity_*" method="{1}"
+			class="org.struts.action.D1.EthinicityAction">
+			<result name="input" type="tiles">
+				d1Integration.EthinicityList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.EthinicityData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- added by bhushan start for Application Security Request -->
+		<action name="ApplicationSecurityRequest_*" method="{1}"
+			class="org.struts.action.D1.ApplicationSecurityRequestAction">
+			<result name="input" type="tiles">
+				d1Integration.applicationSecurityRequestList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.applicationSecurityRequestData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="ApplicationSecurityRequestApproval_*" method="{1}"
+			class="org.struts.action.D1.ApplicationSecurityRequestApprovalAction">
+			<result name="input" type="tiles">
+				d1Integration.applicationSecurityRequestApprovalList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.applicationSecurityRequestApprovalData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- added by bhushan end for Application Security Request -->
+
+		<!-- added by bhushan start for Report Request Change -->
+		<action name="ReportRequestChange_*" method="{1}"
+			class="org.struts.action.D1.ReportRequestChangeAction">
+			<result name="input" type="tiles">
+				d1Integration.reportRequestChangeList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.reportRequestChangeData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="ReportRequestChangeApproval_*" method="{1}"
+			class="org.struts.action.D1.ReportRequestChangeApprovalAction">
+			<result name="input" type="tiles">
+				d1Integration.reportRequestChangeApprovalList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.reportRequestChangeApprovalData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- added by bhushan end for Report Request Change -->
+
+		<!--Referral Start Nilesh D  -->
+		<action name="ReferralSource_*" method="{1}"
+			class="org.struts.action.D1.ReferralSourceAction">
+			<result name="input" type="tiles">
+				d1Integration.ReferralList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.ReferralData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!--Referral End  -->
+		<!-- Ganesh Begins 17/03 -->
+		<action name="PersonalRequisition_*" method="{1}"
+			class="org.struts.action.D1.PersonalRequisitionAction">
+			<result name="input" type="tiles">
+				d1Integration.PersonalRequisitionList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.PersonalRequisitionDetails
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="PersonalRequisitionApprover_*" method="{1}"
+			class="org.struts.action.D1.PersonalRequisitionApproverAction">
+			<result name="input" type="tiles">
+				d1Integration.PersonalRequisitionApproverList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.PersonalRequisitionApproverDetails
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<!-- Ganesh end -->
+
+		<!--IT Application Start Nilesh D  -->
+		<action name="ITApplication_*" method="{1}"
+			class="org.struts.action.D1.ITApplicationAction">
+			<result name="input" type="tiles">
+				d1Integration.ITAppList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.ITAppData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!--IT Application End  -->
+		<!-- Ganesh Begins 08/04 -->
+		<action name="CashAdvanceRequest_*" method="{1}"
+			class="org.struts.action.D1.CashAdvanceRequestAction">
+			<result name="input" type="tiles">
+				d1Integration.CashAdvanceRequestList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.CashAdvanceRequestDetails
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="CashAdvanceRequestApproval_*" method="{1}"
+			class="org.struts.action.D1.CashAdvanceRequestApprovalAction">
+			<result name="input" type="tiles">
+				d1Integration.CashAdvanceRequestApprovalList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.CashAdvanceRequestApprovalDetails
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+
+		<action name="CBTForm_*" method="{1}"
+			class="org.struts.action.D1.CBTFormAction">
+			<result name="input" type="tiles">CBT.input</result>
+			<result name="success" type="tiles">CBT.form</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="view" type="chain">CBTForm_input</result>
+		</action>
+
+		<action name="CBTApproval_*" method="{1}"
+			class="org.struts.action.D1.CBTApprovalAction">
+			<result name="input" type="tiles">CBTApp.input</result>
+			<result name="success" type="tiles">CBTApp.form</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="ClassEnrollmentForm_*" method="{1}"
+			class="org.struts.action.D1.ClassEnrollmentFormAction">
+			<result name="input" type="tiles">
+				d1Integration.classEnrollmentFormList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.classEnrollmentFormData
+			</result>
+
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+
+		<action name="ClassEnrollmentApproverForm_*" method="{1}"
+			class="org.struts.action.D1.ClassEnrollmentApproverAction">
+			<result name="input" type="tiles">
+				d1Integration.ClassEnrollmentApproverList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.ClassEnrollmentApproverDetails
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- ganesh added 6 may 2011 start -->
+		<action name="InformationSystemChangeRequest_*" method="{1}"
+			class="org.struts.action.D1.InformationSystemChangeRequestAction">
+			<result name="input" type="tiles">
+				d1Integration.InformationSystemChangeRequestList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.InformationSystemChangeRequestDetails
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="InformationSystemChangeRequestAppr_*" method="{1}"
+			class="org.struts.action.D1.InformationSystemChangeRequestApprAction">
+			<result name="input" type="tiles">
+				d1Integration.InformationSystemChangeRequestApprList
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.InformationSystemChangeRequestApprDetails
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- ganesh added 6 may 2011 end -->
+
+
+
+
+		<!-- Start of Termination Added by Nilesh D 11th May 11 -->
+		<action name="TerminationMISReport_*" method="{1}"
+			class="org.struts.action.D1.reports.TerminationMISReportAction">
+			<result name="input" type="tiles">
+				d1Integration.TerminationMISData
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.TerminationMISView
+			</result>
+
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- End od Termination -->
+
+		<action name="HireRehireMisReport_*" method="{1}"
+			class="org.struts.action.D1.reports.HireRehireMisReportAction">
+			<result name="input" type="tiles">
+				hireRehireMisReport
+			</result>
+			<result name="success" type="tiles">
+				hireRehireMisReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewOnScreen" type="tiles">
+				hireRehire.misReportView
+			</result>
+		</action>
+
+
+		<action name="ATRMISReport_*" method="{1}"
+			class="org.struts.action.D1.reports.ATRMISReportAction">
+			<result name="input" type="tiles">ATRMISReport</result>
+			<result name="success" type="tiles">ATRMISReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewOnScreen" type="tiles">
+				ATRMISReport.misReportView
+			</result>
+		</action>
+		<action name="D1SuperUser_*" method="{1}"
+			class="org.struts.action.D1.reports.D1SuperUserAction">
+			<result name="input" type="tiles">D1SuperUser</result>
+			<result name="success" type="tiles">D1SuperUser</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewOnScreen" type="tiles">
+				expense.D1SuperUser
+			</result>
+		</action>
+
+		<action name="QuickProject_*" method="{1}"
+			class="org.struts.action.D1.QuickProjectAction">
+			<result name="input" type="tiles">
+				D1.QuickProjectInput
+			</result>
+			<result name="success" type="tiles">D1.QuickProject</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="QuickProjectAppr_*" method="{1}"
+			class="org.struts.action.D1.QuickProjectApprAction">
+			<result name="input" type="tiles">
+				D1.QuickProjectApprInput
+			</result>
+			<result name="success" type="tiles">
+				D1.QuickProjectAppr
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<action name="ExpenseMISReport_*" method="{1}"
+			class="org.struts.action.D1.reports.ExpenseMISReportAction">
+			<result name="input" type="tiles">expenseMisReport</result>
+			<result name="success" type="tiles">
+				expenseMisReport
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewOnScreen" type="tiles">
+				expense.misReportView
+			</result>
+		</action>
+
+		<!-- Start of WORK COMP INJURY Added by Nilesh D 18th May 11 -->
+		<action name="WorkCompInjuryMISReport_*" method="{1}"
+			class="org.struts.action.D1.reports.WorkCompInjuryIllnessMISReportAction">
+			<result name="input" type="tiles">
+				d1Integration.WorkCompMISData
+			</result>
+			<result name="success" type="tiles">
+				d1Integration.WorkCompMISData
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="viewOnScreen" type="tiles">
+				d1Integration.WorkCompMISView
+			</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- END OF WORK COMP INJURY-->
+
+		<!-- BRD Starts on 29th Sept 2011- Nilesh -->
+		<action name="BusinessRequirementDocument_*" method="{1}"
+			class="org.struts.action.D1.BusinessRequirementDocumentAction">
+		<result name="input" type="tiles">d1Integration.BRDList</result>
+		<result name="success" type="tiles">d1Integration.BRDDetails</result>
+		<result name="view" type="tiles">d1Integration.BRDAppViewDetails</result>
+		<result name="f9page" type="tiles">common.f9page</result>
+		<result name="backToBrdSuperUser" type="chain">BRDSuperUser_input</result>
+		</action>
+		
+		
+		<!-- End of BRD -->
+		
+		
+		<!-- BRD Approval Starts on 4th Oct 2011- Nilesh -->
+	<!--<action name="BusinessRequirementDocumentApproval_*" method="{1}"
+			class="org.struts.action.D1.BusinessReqDocApprovalAction">
+		<result name="input" type="tiles">d1Integration.BRDAppList</result>
+		<result name="success" type="tiles">d1Integration.BRDAppDetails</result>
+		<result name="f9page" type="tiles">common.f9page</result>
+		</action>  -->	
+		<!-- End of BRD Approval -->
+		
+		<!-- Added by Anantha Lakshmi -->
+	    <action name="CustomerConciergeServiceRequest_*" method="{1}" class="org.struts.action.D1.CustomerConciergeServiceRequestAction">
+			<result name="input" type="tiles">d1Integration.CustConciergeList</result>
+			<result name="success" type="tiles">d1Integration.CustConciergeData</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		 <action name="CustConciergeServiceReqApprover_*" method="{1}" class="org.struts.action.D1.CustConciergeServiceReqApproverAction">
+			<result name="input" type="tiles">d1Integration.CCSRApprList</result>
+			<result name="success" type="tiles">d1Integration.CCSRApprData</result>
+			<result name="success" type="tiles">d1Integration.CCSRApprData</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- Added by Anantha Lakshmi -->
+		
+		<!-- BEGINS - Added by Manish Sakpal -->
+		<action name="BRDSuperUser_*" method="{1}"
+			class="org.struts.action.D1.reports.BRDSuperUserAction">
+			<result name="input" type="tiles">BRDSuperUserInitialPage</result>
+			<result name="success" type="tiles">BRDSuperUserInitialPage</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="InformationSystemChangeMisReport_*" method="{1}"
+			class="org.struts.action.D1.reports.InformationSystemChangeMisReportAction">
+			<result name="input" type="tiles">infoChangeMisReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+		
+		<action name="BRDMisReport_*" method="{1}"
+			class="org.struts.action.D1.reports.BRDMisReportAction">
+			<result name="input" type="tiles">brdMisReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+		</action>
+		
+		<action name="ApplicationSecurityRequestMisReport_*" method="{1}" class="org.struts.action.D1.reports.ApplicationSecurityMisReportAction">
+			<result name="input" type="tiles">applicationSecurityMisReport</result>
+			<result name="success" type="tiles">applicationSecurityMisReport</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+			<result name="f9multiSelect" type="tiles">f9multiSelect</result>
+			<result name="viewOnScreen" type="tiles">applicationSecurityMisReportView</result>
+		</action>
+		
+		<action name="BRDType_*" method="{1}" class="org.struts.action.D1.BRDTypeAction">
+			<result name="input" type="tiles">brdTypeListPage</result>
+			<result name="success" type="tiles">brdTypeDetailPage</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		
+		<action name="BRDClassification_*" method="{1}" class="org.struts.action.D1.BRDClassificationAction">
+			<result name="input" type="tiles">classificationListPage</result>
+			<result name="success" type="tiles">classificationDetailPage</result>
+			<result name="f9page" type="tiles">common.f9page</result>
+		</action>
+		<!-- ENDS - Added by Manish Sakpal -->
+
+	</package>
+</struts>
