@@ -1019,7 +1019,7 @@ public class LoginAction extends ActionSupport implements ModelDriven,
 						// response.sendRedirect("http://localhost:8080/pims/common/Login_input.action?infoId=TIxS2uuT3RMp9WGxdbhufQ==");
 						response.sendRedirect("http://"
 								+ request.getServerName());
-						return SUCCESS;
+						return "success";
 					} else {
 						poolName = new StringEncrypter(
 								StringEncrypter.DESEDE_ENCRYPTION_SCHEME,

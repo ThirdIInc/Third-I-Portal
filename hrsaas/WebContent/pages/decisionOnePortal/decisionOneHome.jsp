@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <%@page import="com.itextpdf.text.log.SysoLogger"%>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 			<jsp:include page="/pages/CommonCssJS.jsp" ></jsp:include>
