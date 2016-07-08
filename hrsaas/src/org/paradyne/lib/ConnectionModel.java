@@ -43,13 +43,13 @@ public class ConnectionModel {
 			}
 			setConnectionInfo(poolName);//Sets the connection parameters
 			pool = new org.paradyne.lib.DbConnectionBroker(getConnectionDriver(),getConnectionUrl(),
-					getDbUserName(),getDbPassword(), 1, 25, "e:\\logs.log", 7.0);
+					getDbUserName(),getDbPassword(), 1, 25, "d:\\logs.log", 7.0);
 			context.setAttribute(poolName,pool);//Sets the pool name at context level
 		} catch (Exception e) {
 			logger.error("Connection pool failed"+e);
 		} //end of try-catch block
 	}
-
+	//aakash
 	/**
 	 * Destroys a pool
 	**/
