@@ -51,6 +51,7 @@ public class ApprFormGeneralInfoModel extends ModelBase {
 				bean.setPhaseStartDate(checkNull(String.valueOf(phaseData[0][2])));
 				bean.setPhaseEndDate(checkNull(String.valueOf(phaseData[0][3])));
 				bean.setPhaseLockFlag(checkNull(String.valueOf(phaseData[0][4])));
+				bean.setPhaseOrder(checkNull(String.valueOf(phaseData[0][5])));
 				
 				if(bean.getDetailFLag().equals("false")){
 					

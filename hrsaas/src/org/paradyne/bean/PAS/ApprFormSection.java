@@ -7,6 +7,8 @@ import org.paradyne.lib.BeanBase;
 
 public class ApprFormSection extends BeanBase {
 	
+	private String phaseOrder="";
+	
 	private String source="";
 	private String goalFinalizeFlag="false";
 	private String compFinalizeFlag="false";

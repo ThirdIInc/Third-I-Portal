@@ -24,7 +24,7 @@ public class ConnectionEncripter {
 					StringEncrypter.DBPOOL_ENCRYPTION_KEY).encrypt("oracle.jdbc.OracleDriver");
 			url = new StringEncrypter(
 					StringEncrypter.DESEDE_ENCRYPTION_SCHEME,
-					StringEncrypter.DBPOOL_ENCRYPTION_KEY).encrypt("jdbc:oracle:thin:@192.168.1.145:1521:orcl11g");
+					StringEncrypter.DBPOOL_ENCRYPTION_KEY).encrypt("jdbc:oracle:thin:@192.168.1.144:1521:orcl11g");
 			user = new StringEncrypter(
 					StringEncrypter.DESEDE_ENCRYPTION_SCHEME,
 					StringEncrypter.DBPOOL_ENCRYPTION_KEY).encrypt("hr_the3i");

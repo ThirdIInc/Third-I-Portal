@@ -629,7 +629,7 @@ function callLink(action){
 } 
  
 function logout(){
-	try{alert("logout click");
+	try{
 		document.getElementById("paraFrm").target="_self";
 		document.getElementById("paraFrm").action='<%=request.getContextPath()%>/common/Login_input.action';
 		document.getElementById("paraFrm").submit();

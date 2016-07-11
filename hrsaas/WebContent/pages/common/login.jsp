@@ -108,7 +108,7 @@ String pool_name="abc";
 					</s:if>
 				
 				<div class = "col" style = " margin-bottom: 10px;">
-					<a href="#" class="text1" onclick="javascript:callForgot();">Forgot Login ID /
+					<a href="#" class="text1" onclick="javascript:callForgot();">Forgot Username /
 									Password?</a></div>
 				
 				<div class = "col"><s:if test="loginFlag">

@@ -154,6 +154,7 @@ public class ApprFormSectionModel extends ModelBase {
 				+"		WHERE  PAS_APPR_COMMENTS.APPR_ID= "+bean.getApprId()+" AND PAS_APPR_COMMENTS.APPR_TEMPLATE_ID = "+bean.getTemplateCode()+"  "
 				+"		and APPR_EVALUATOR_CODE  != "+bean.getUserEmpId()+" and PAS_APPR_COMMENTS.APPR_EMP_ID = "+bean.getEmpId()+"  "
 				+"      and PAS_APPR_COMMENTS.APPR_SECTION_ID = "+bean.getSectionCode()+" "
+				+"      and PAS_APPR_PHASE_CONFIG.APPR_PHASE_ORDER  < "+groupObj[1][1]+" "
 				+"		ORDER BY PAS_APPR_PHASE_CONFIG.APPR_PHASE_ORDER,APPR_EVALUATOR_LEVEL,PAS_APPR_QUES_MAPPING.APPR_QUESTION_ORDER ";
 						
 			Object[][]subObj=getSqlModel().getSingleResult(query);

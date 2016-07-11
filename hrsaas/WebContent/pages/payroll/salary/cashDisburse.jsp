@@ -71,7 +71,7 @@
 
 					<td width="20%" colspan="1" class="formtext"><label
 						class="set" name="department" id="department"
-						ondblclick="callShowDiv(this);"><%=label.get("department")%></label
+						ondblclick="callShowDiv(this);"><%=label.get("department")%></label>
 					: </td>
 					<td width="30%" colspan="1"><s:property value="departmentName" /></td>
 				</tr>
@@ -79,7 +79,7 @@
 				<tr>
 					<td colspan="1" width="20%" class="formtext" height="22"><label
 						class="set" name="division" id="division"
-						ondblclick="callShowDiv(this);"><%=label.get("division")%></label: </td>
+						ondblclick="callShowDiv(this);"><%=label.get("division")%></label> </td>
 					<td width="30%" colspan="1"><s:property value="divisionName" /></td>
 
 					<td width="20%" colspan="1" class="formtext"><label

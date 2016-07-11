@@ -448,7 +448,6 @@
 		  
 		function recalculateFun(){
 		
-			alert("here");
 			if(document.getElementById("paraFrm_apprCode").value==""){
 			
 				alert("Please select "+document.getElementById("appraisal.code").innerHTML)	;

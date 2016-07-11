@@ -251,7 +251,7 @@
 		if(document.getElementById('paraFrm_appraisalCode').value==""){
 			alert("Please select appraisal code");
 			return false;
-		}else{alert("here");
+		}else{
 			document.getElementById('paraFrm').target = '_self';
 			document.getElementById('paraFrm_searchFlag').value=true;  
 			document.getElementById('paraFrm').action = 'EmployeeScoreCalculation_getEmployeeListByAppraisalID.action';

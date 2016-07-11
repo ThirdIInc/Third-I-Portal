@@ -180,7 +180,7 @@ function validateF9(action){
 	callsF9(500,325,'ScoreBalancer_'+action+'.action'); 
 }
 
-function saveFun(){alert("here");
+function saveFun(){
 		if(document.getElementById("paraFrm_apprCode").value==""){
 			alert("Please select "+document.getElementById("appraisal.code").innerHTML)	;
 			return false;	
@@ -353,7 +353,7 @@ function pgshow()
    		}
    }
    function finalizeFun()
-   {alert("here");
+   {
    		if(document.getElementById("paraFrm_apprCode").value==""){
 			alert("Please select "+document.getElementById("appraisal.code").innerHTML)	;
 			return false;	
@@ -422,7 +422,7 @@ function pgshow()
 
 	
 	function resetFun()
-	{alert("here");
+	{
 		document.getElementById('paraFrm_startDate').value='';
 		document.getElementById('paraFrm_endDate').value='';
 		document.getElementById('paraFrm_apprId').value='';
@@ -441,7 +441,7 @@ function pgshow()
 		document.getElementById("paraFrm").target = 'main';
 	}
 	function recalculateFun(){
-		alert("here");
+		
 		if(document.getElementById("paraFrm_apprCode").value==""){
 			alert("Please select "+document.getElementById("appraisal.code").innerHTML)	;
 			return false;	

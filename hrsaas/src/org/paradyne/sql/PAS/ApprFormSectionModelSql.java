@@ -57,6 +57,7 @@ public class ApprFormSectionModelSql extends SqlBase {
 		
 		case 6 : return " SELECT * FROM PAS_APPR_COMMENTS WHERE APPR_ID= ? AND APPR_TEMPLATE_ID= ? AND APPR_PHASE_ID =  ? AND APPR_SECTION_ID= ? AND APPR_EMP_ID = ? AND APPR_EVALUATOR_CODE = ? ";
 		
+		
 		case 7 : return " DELETE FROM PAS_APPR_COMMENTS WHERE APPR_ID = ? AND APPR_TEMPLATE_ID = ? AND APPR_PHASE_ID = ? AND APPR_SECTION_ID = ? AND APPR_EMP_ID = ? and APPR_EVALUATOR_LEVEL = ? ";
 		
 		
@@ -153,9 +154,10 @@ public class ApprFormSectionModelSql extends SqlBase {
 						+" WHERE PAS_APPR_APPRAISER.APPR_ID = ? and PAS_APPR_APPRAISER.APPR_APPRAISER_CODE = ? and APPR_PHASE_ID = ? AND APPR_APPRAISEE_ID = ? ";
 
 		//--------------emp group for ques mapping
-		case 26 : return " select PAS_APPR_EMP_GRP_HDR.APPR_EMP_GRP_ID from PAS_APPR_EMP_GRP_DTL "
+		case 26 : return " select PAS_APPR_EMP_GRP_HDR.APPR_EMP_GRP_ID,PAS_APPR_PHASE_CONFIG.APPR_PHASE_ORDER  from PAS_APPR_EMP_GRP_DTL"
 						+" inner join PAS_APPR_EMP_GRP_HDR on (PAS_APPR_EMP_GRP_HDR.APPR_EMP_GRP_ID = PAS_APPR_EMP_GRP_DTL.APPR_EMP_GRP_ID) "
-						+" where APPR_EMP_GRP_EMPID = ? and APPR_ID=? "; 
+						+" left join pas_appr_phase_config on (PAS_APPR_PHASE_CONFIG.appr_id=PAS_APPR_EMP_GRP_HDR.appr_id)"
+						+" where APPR_EMP_GRP_EMPID = ? and PAS_APPR_EMP_GRP_HDR.APPR_ID=? "; 
 		
 		
 		case 27 : return " SELECT APPR_RATING_VALU,APPR_RATING_DESC from PAS_APPR_QUESTION_RATING_DTL WHERE APPR_ID = ? ";

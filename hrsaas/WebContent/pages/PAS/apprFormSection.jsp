@@ -1,5 +1,7 @@
+
 <%@ taglib  uri="/struts-tags" prefix="s"%>
 <%@ include file="/pages/common/labelManagement.jsp"%>
+
 
 
 <div align="center" id="overlay"
@@ -831,7 +833,7 @@ function previewFun(){
 				
 				//window.open('ApprFormSection_previewAppraisal.action',500,200);
 	}
-function finishFun(){alert("here");
+function finishFun(){
 	
 	var tableLength = document.getElementById("count").value;
 				if(tableLength == 0 )

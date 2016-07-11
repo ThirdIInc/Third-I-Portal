@@ -43,6 +43,17 @@ public class ApprFormGeneralInfo extends BeanBase {
 	private String templateCode;
 	private String ratingDefined="false";
 	
+	private String phaseOrder="";
+	
+	
+	public void setPhaseOrder(String phaseOrder) {
+		this.phaseOrder = phaseOrder;
+	}
+	public String getPhaseOrder() {
+		return phaseOrder;
+	}
+	
+	
 	
 	public String getTemplateCode() {
 		return templateCode;
