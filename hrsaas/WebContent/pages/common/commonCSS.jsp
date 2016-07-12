@@ -2,11 +2,11 @@
 <jsp:include page="/pages/CommonCssJS.jsp" ></jsp:include>
 <style>
  
-
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
 <%
   
 String themeName="globe";
-String fontName="Arial, Helvetica, sans-serif";
+String fontName="Roboto, Helvetica, sans-serif, Arial";
 String font_Size="8pt";
 
 String smallFontSize ="7pt";
@@ -339,12 +339,11 @@ FONT-SIZE: <%=fontSize%>;
 	FONT-SIZE: <%=fontSize%>;
 	COLOR: #333333;
 	font-Family:<%=fontFamily%>;
+	padding: 6px;
+	text-align: center;
+	
 }
 
-
-
-
- 
 
 .headerline {
 	color: <%=inputBorder %>;
@@ -675,6 +674,7 @@ table.sortable thead {
 	FONT-SIZE: <%=fontSize%>;
 	color: #333333;
 	text-decoration: none;
+	font-weight: 500;
 }
 
 .salTableHd {

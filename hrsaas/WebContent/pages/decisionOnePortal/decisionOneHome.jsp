@@ -294,8 +294,8 @@
 						</ul>
 							
 					</nav><div class="thought1" style="margin-top:8px;">
-								<div><strong>Thought	of the day:</strong> 
-								<span><%=request.getAttribute("thought")%></span></div>
+								<div class="thought-label">Thought	of the day: 
+								<div><span><%=request.getAttribute("thought")%></span></div></div>
 							</div>
 				</div>
 											

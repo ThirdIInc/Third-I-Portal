@@ -4,16 +4,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>PeoplePower</title>
-
 				
 				<jsp:include page="/pages/CommonCssJS.jsp" ></jsp:include>
-				
-				
-				
-				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-				<link href="../pages/portal/logincss/login.css" rel="stylesheet" type="text/css" />
+				<link type="text/css" href="../pages/portal/logincss/login.css" rel="stylesheet"  />
 				<script type="text/javascript" src="../pages/portal/loginjs/jquery_002.js"></script>
 				<script type="text/javascript" src="../pages/portal/loginjs/jquery.js"></script>
+				<script type="text/javascript">
+				
+				
+				</script>
+				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				
 				
 
 <%
@@ -54,73 +55,37 @@ String pool_name="abc";
 %>
 </head>
 <body>
-
-<s:form action="Login" method="post" validate="true" theme="simple"
-	id="paraFrm" name="form" target="_top">
+<div class="wrapper">
+	<form class="login" action="../common/Login_submitUser.action" method="post" validate="true" theme="simple" id="paraFrm" name="form" target="_top">
 	<s:hidden id="screenWidth" name="screenWidth"></s:hidden>
-	
-<div class = "container">
-	
-	<div class = "login" style = "position: relative; top: 0; right: 0; bottom: 0; left: 0; text-align: center;">
-		
-		<div class="row" class="emptext"  style="color:#00ace6;
-			font-family: Comic Sans MS; font-size: 30px;text-align: center; margin-top: 50px; margin-bottom: 20px;"><strong><%=comanyName%></strong>
 
-							<%	String cmpName = null;
-								cmpName = (String) request.getAttribute("logo");
-
-								System.out.println("String cmpName =" + cmpName);
-								if (cmpName != null && !cmpName.equals("null")
-										&& !cmpName.equals("")) {
-											pool_name=(String)session.getAttribute("session_pool");
-							%> 
-							<input type="hidden" name="compImg" value="<%=cmpName%>" /> 
-							<% } else { %> 
-							<input type="hidden" name="compImg" value="client_logo.jpg" /> 
-							<img align="absmiddle" src="../pages/common/css/default/images/logo.jpg" height="51" />
-							<% } %>
-		</div>
-
-		<div class="form-heading" >Log In</div>
+		<div class="title"><%=comanyName%></div>
+		<div class="form-title" >Log In</div>
+		<div class = "col" style = "margin-bottom: 10px;"><s:if test="settingFlag">
+		<!--<div class = "login-label" ><fieldset><section>Username <span class = "un"><i class="fa fa-user"></i></span> :</section></fieldset></div>-->
+		<input type="text" name="loginName"   size="20" placeholder="Username" autofocus/>
+		</s:if> <s:else>
+		<input type="text" name="loginName" cssClass="textfield" size="13"  readonly="true"  />
+		</s:else></div>
 				
-		<div class ="form" 	id="paraFrm" style = "padding : 10px;"  >	
-			<div class = "col" style = "margin-bottom: 10px;"><s:if test="settingFlag">
-				<div class = "login-label" "><fieldset><section>Username <span class = "un"><i class="fa fa-user"></i></span> :</section></fieldset></div>
-			
-					
-					<s:textfield name="loginName" cssClass="textfield" size="20" />
-					</s:if> <s:else>
-							<s:textfield name="loginName" cssClass="textfield" size="13" readonly="true" />
-					</s:else></div>
-				
-				<div class = "col"><s:if test="loginFlag">
-					</s:if> <s:else>
-							<s:submit action="Login_continueUser" value="Continue" onclick="return callContinue();" />
-					</s:else></div>
+		<div class = "col"><s:if test="loginFlag">
+		</s:if> <s:else>
+		<s:submit action="Login_continueUser" value="Continue" onclick="return callContinue();" />
+		</s:else></div>
 						
-					<s:if test="passFlag">
-						<div class = "col" style = "height : 15%; margin-bottom: 10px;">
-							<div class = "login-label"><fieldset><section>Password <span class = "un"><i class="fa fa-lock"></i></span> :</section></fieldset></div>
-								
-								<s:password name="loginPassword" onkeypress="return fSubmit(event);" size="20" 
-									cssClass="textfield"
-									onfocus="javascript:setKeyboardFocus('form','loginPassword');" /></div>
-					</s:if>
+		<s:if test="passFlag">
+		<!--  <div class = "login-label"><fieldset><section>Password <span class = "un"><i class="fa fa-lock"></i></span> :</section></fieldset></div>-->
+		<input type="password" name="loginPassword" onkeypress="return fSubmit(event);" size="20" onfocus="javascript:setKeyboardFocus('form','loginPassword');" 
+			placeholder="Password" autofocus/>
+		</s:if>
 				
-				<div class = "col" style = " margin-bottom: 10px;">
-					<a href="#" class="text1" onclick="javascript:callForgot();">Forgot Username /
-									Password?</a></div>
-				
-				<div class = "col"><s:if test="loginFlag">
-					<s:submit name="loginBtn" value="Login" cssClass="btn"
-											onclick="return callSubmit();" id="loginBtn" />
-					</s:if> 
-					<s:else></s:else></div>
-				
-		</div>
-	</div>
-</div>
-	
+		<a href="#" class="forget-link" onclick="javascript:callForgot();">Forgot Username/Password?</a>
+
+		<s:if test="loginFlag">
+		<input type="submit" name="loginBtn" value="Login" class="btn" class="login-btn"
+						onclick="return callSubmit();" id="loginBtn"/>
+		</s:if> 
+		<s:else></s:else>
 	
 	<% 
 String infoStr="";
@@ -138,9 +103,7 @@ if(infoStr==null ||infoStr.equals("null")||infoStr.equals(""))
  
 %> 
 
-  
-<input type="hidden" name="infoId"
-		value='<%=infoStr%>' />
+	<input type="hidden" name="infoId"	value='<%=infoStr%>' />
 	 
 	<s:hidden name="clientName" value="%{clientName}" />
 	<s:hidden name="name" value="%{name}" />
@@ -157,26 +120,24 @@ if(infoStr==null ||infoStr.equals("null")||infoStr.equals(""))
 	<s:hidden name="imgTxtFlag" id="imgTxtFlag"></s:hidden>
 	<input type="text" name="login" style="visibility: hidden;" />
 
-</s:form>
-
+	</form>
+</div>
 </body>
+
+
 <script>
 
-
-
-  function callContinue()
+function callContinue()
 {
 	try
 	{
 		var name = document.getElementById('paraFrm_loginName').value;
-  		
   		
   			if(name =="") {
   			alert("Please Enter Login ID"); 
   			document.getElementById('paraFrm_loginName').focus(); 			
   			return false;  			
   			}
-  		
   		return true;
   	}
   	catch(e)
@@ -185,10 +146,8 @@ if(infoStr==null ||infoStr.equals("null")||infoStr.equals(""))
   	}	
 }
 
-
- var entry_field		= "";
+var entry_field		= "";
 var form_name		= "";
-
 
 function setKeyboardFocus(p_formname, p_fieldname)
 {
@@ -202,11 +161,7 @@ function setKeyboardFocus(p_formname, p_fieldname)
 	 }
 	 
 }
- 
-
-
 function callSubmit() {
- 	
  	try
  	{
  		var name = document.getElementById('paraFrm_loginName').value;
@@ -227,7 +182,6 @@ function callSubmit() {
   		//alert(imgTxtFlag);
   		if(imgTxtFlag=="true")
   		{
-  	
   		try{
   			var checkFlag=document.getElementById('checkbox_confirm').checked;
   			//alert(checkFlag);
@@ -280,51 +234,37 @@ function callSubmit() {
   		{
   			 //alert(e);
   		}
-  }
-
+}
 function callForgot(){
-try
-{
-document.getElementById('paraFrm').action="ForgotPwd_forgotPage.action";
-document.getElementById('paraFrm').submit();
-}
-catch(e)
-{
-	//alert(e);
-}
-}
-
-
- init();
-function init(){
-
-	
-	try
-	{
-	//setKeyboardFocus("form","loginPassword");
-		if(document.getElementById('paraFrm_loginName').value=="")
-  			{
-  			document.getElementById('paraFrm_loginName').focus();
-  			}
-  			else
-  			{
-  			//document.getElementById('paraFrm_loginPassword').value="demo";
-  			}
-  			
-  				if(document.getElementById('lockAttempt').value==1) {
-  					window.close();
-											 		}
-	
-	//document.form.loginPassword.focus();
+	try{
+		document.getElementById('paraFrm').action="ForgotPwd_forgotPage.action";
+		document.getElementById('paraFrm').submit();
 	}
-	catch(e)
-	{
+	catch(e){
+	//alert(e);
+	}
+}
+init();
+function init(){
+	try{
+	//setKeyboardFocus("form","loginPassword");
+		if(document.getElementById('paraFrm_loginName').value=="")	{
+  			document.getElementById('paraFrm_loginName').focus();
+  		}else {
+  			//document.getElementById('paraFrm_loginPassword').value="demo";
+  		}
+  		if(document.getElementById('lockAttempt').value==1) {
+  			window.close();
+ 		}
+			//document.form.loginPassword.focus();
+	}
+	catch(e){
 		//alert(e);
 	}
 }
 
-
 </script>
+
 <script type="text/javascript">
 <!--
 var BrowserDetect = {

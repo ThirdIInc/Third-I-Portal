@@ -50,7 +50,7 @@
 	              				<td width="18%" colspan="1" height="20" class="formtext"><label  class = "set" name="appraisal.form.period"  id="appraisal.form.period" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.period")%></label> :</td>
 				  				<td width="15%" colspan="1" height="20"><s:hidden name="apprId"/><s:hidden name="apprCode"/><s:property value="apprCode"  /></td>
 	              				<td width="10%" colspan="1" height="20"></td>   
-	              				<td width="50%" colspan="1" height="20"><label name="appr.from.date" class = "set"  id="appr.from.date" ondblclick="callShowDiv(this);"><%=label.get("appr.from.date")%></label> :
+	              				<td width="50%" colspan="1" height="20" class="formtext"><label name="appr.from.date" class = "set"  id="appr.from.date" ondblclick="callShowDiv(this);"><%=label.get("appr.from.date")%></label> :
 	              					<s:hidden name="apprStartDate"/><s:property value="apprStartDate"  />&nbsp;
 	              					<label name="appr.to.date" class = "set"  id="appr.to.date" ondblclick="callShowDiv(this);"><%=label.get("appr.to.date")%></label> :
 	              					<s:hidden name="apprEndDate"/><s:property value="apprEndDate" /></td> 
@@ -61,8 +61,8 @@
 				  				<s:hidden name="phaseCode"/>
 				  				<s:hidden name="phaseName"/>
 				  				<s:property value="phaseName"/></td>
-	              				<td width="10%" colspan="1" height="20"></td>   
-	              				<td width="50%" colspan="1" height="20"><label name="phase.from.date" class = "set"  id="phase.from.date" ondblclick="callShowDiv(this);"><%=label.get("phase.from.date")%></label> : 
+	              				<td width="10%" colspan="1" height="20" class="formtext"></td>   
+	              				<td width="50%" colspan="1" height="20" class="formtext"><label name="phase.from.date" class = "set"  id="phase.from.date" ondblclick="callShowDiv(this);"><%=label.get("phase.from.date")%></label> : 
 	              					<s:hidden name="phaseStartDate"/><s:property value="phaseStartDate" />&nbsp;
 	               					<label name="phase.to.date" class = "set"  id="phase.to.date" ondblclick="callShowDiv(this);"><%=label.get("phase.to.date")%></label> : 
 	              					<s:hidden name="phaseEndDate"/><s:property value="phaseEndDate" /><s:hidden name="phaseLockFlag"/></td> 
@@ -71,7 +71,7 @@
 				              	<td width="18%" colspan="1" height="20" class="formtext"><label  class = "set" name="employee"  id="employee" ondblclick="callShowDiv(this);"><%=label.get("employee")%></label> :</td>
 							  	<td width="15%" colspan="1" height="20"><s:hidden name="empId"/><s:hidden name="empName"/><s:property value="empName"  /></td>
 				              	<td width="10%" colspan="1" height="20"></td>   
-				              	<td width="50%" colspan="1" height="20"><label  class = "set" name="designation"  id="designation" ondblclick="callShowDiv(this);"><%=label.get("designation")%></label>:
+				              	<td width="50%" colspan="1" height="20" class="formtext"><label  class = "set" name="designation"  id="designation" ondblclick="callShowDiv(this);"><%=label.get("designation")%></label>:
 				             	 <s:hidden name="empDesgName"/><s:property value="empDesgName" /></td>  
 				            </tr>
                     	 </table>
