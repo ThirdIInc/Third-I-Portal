@@ -621,7 +621,7 @@ table.sortable thead {
 }
 .text_head {
 	font-Family: sans-serif;
-	font-size: 12pt;
+	font-size: 10pt;
 	color: #4D4D4D;
 }
 
@@ -715,8 +715,10 @@ table.sortable thead {
 	font-weight: normal;
 	color: #333333;
 	text-decoration: none;
-	padding-left: 7px;
-	padding-right: 5px;
+	//padding-left: 7px;
+	//padding-right: 5px;
+	padding: 5px;
+    text-align: center;
 }
 
 .sumTD {
@@ -1270,7 +1272,7 @@ font-Family:<%=fontFamily%>;
 	FONT-SIZE: <%=fontSize%>;
 	color: <%=aLink %>;
 	text-decoration: none;
-	font-weight: lighter;
+	font-weight: bold;
 }
 
 .apptxt {
@@ -2015,7 +2017,7 @@ a.servicelink:link, a.servicelink:active{
 	FONT-SIZE: 12px;
 	color: <%=aLink %>;
 	text-decoration: none;
-	font-weight: lighter;
+	font-weight: 400;
 } 
 
 a.servicelink:hover{
@@ -2023,7 +2025,7 @@ a.servicelink:hover{
 	FONT-SIZE: 12px;
 	color: <%=aLink %>;
 	text-decoration: underline;
-	font-weight: lighter;
+	font-weight: 500;
 } 
 
 
@@ -2032,7 +2034,7 @@ font-Family:<%=fontFamily%>;
 	FONT-SIZE: <%=fontSize%>;
 	color: <%=aLink %>;
 	text-decoration: none;
-	font-weight: lighter;
+	font-weight: 400;
 }
 
 A.contlink:visited  {

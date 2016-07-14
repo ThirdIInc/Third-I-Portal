@@ -37,8 +37,9 @@ body {
 	max-width: 350px;
 	background: #ffffff;
 	position: relative;
-	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 	align-self: center;
+	margin-top: 11%;
 }
 
 .logotext {
@@ -66,7 +67,9 @@ body {
 	font-size: 18px;
 	margin-bottom: 5px;
 }
-
+.input-group-addon{
+	height:20px;
+}
 input[type=text], input[type=password] {
 	display: block;
 	padding: 15px 10px;
@@ -76,10 +79,10 @@ input[type=text], input[type=password] {
 	transition: border-width 0.3s ease;
 	border-radius: 2px;
 	color: #ccc;
-	-webkit-transition: 0.3s linear;
-	-moz-transition: 0.3s linear;
-	-o-transition: 0.3s linear;
-	transition: 0.3s linear;
+	-webkit-transition: 0.2s linear;
+	-moz-transition: 0.2s linear;
+	-o-transition: 0.2s linear;
+	transition: 0.2s linear;
 }
 
 input[type=button], input[type=submit] {
@@ -101,11 +104,11 @@ input[type=button]:hover, input[type=submit]:hover {
 	color: #88A1F8;
 	background-color: #fff;
 	font-weight: 300;
-	border: 1px solid #88A1F8;
-	-webkit-transition: 0.3s linear;
-	-moz-transition: 0.3s linear;
-	-o-transition: 0.3s linear;
-	transition: 0.3s linear;
+	border: 2px solid #88A1F8;
+	-webkit-transition: 0.2s linear;
+	-moz-transition: 0.2s linear;
+	-o-transition: 0.2s linear;
+	transition: 0.2s linear;
 }
 
 .bottomborder {
@@ -140,6 +143,7 @@ input[type=button]:hover, input[type=submit]:hover {
 .forget-link {
 	font-family: Roboto, Helvetica, sans-serif;
 	font-weight: normal;
+	color: #88A1F8;
 	font-size: 12px;
 	text-decoration: none;
 	font-weight: 200;
@@ -147,6 +151,7 @@ input[type=button]:hover, input[type=submit]:hover {
 }
 
 .forget-link:hover {
+	font-family: Roboto, Helvetica, sans-serif;
 	font-weight: 300;
 	-webkit-transition: 0.3s linear;
 	-moz-transition: 0.3s linear;

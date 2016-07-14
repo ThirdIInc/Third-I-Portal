@@ -1808,7 +1808,7 @@ public class AppraisalCalendarModel extends ModelBase {
 			calCodeObj [i][0]= calCodeFinal[i];
 		}
 		Vector <Object> paramVactor= new Vector<Object>(); 
-		String [] queryArray= new String [10];
+		String [] queryArray= new String [15];
 		for (int i = 0; i < queryArray.length; i++) {
 			paramVactor.add(calCodeObj);
 		}
@@ -1821,8 +1821,12 @@ public class AppraisalCalendarModel extends ModelBase {
 		queryArray [6] = "DELETE FROM PAS_APPR_ELIGIBLE_EMP_TEMP WHERE APPR_ID=?";
 		queryArray [7] = "DELETE FROM PAS_APPR_CALENDAR WHERE APPR_ID=?";
 		queryArray [8] = "DELETE FROM PAS_APPR_PHASE_CONFIG WHERE APPR_ID=?";
-		queryArray [9] = "DELETE FROM PAS_APPR_QUESTION_RATING_DTL WHERE APPR_ID=?";
-		//queryArray [10] = "DELETE FROM PAS_APPR_PHASE_OVERALL_RATING WHERE APPR_ID=?";
+		queryArray [9] = "DELETE FROM PAS_APPR_PHASE_SCHEDULE WHERE APPR_ID=?";
+		queryArray [10] = "DELETE FROM PAS_APPR_QUESTION_RATING_HDR WHERE APPR_ID=?";
+		queryArray [11] = "DELETE FROM PAS_APPR_OVERALL_RATING WHERE APPR_ID=?";
+		queryArray [12] = "DELETE FROM PAS_APPR_APPRAISER WHERE APPR_ID=?";
+		queryArray [13] = "DELETE FROM PAS_APPR_APPRAISER_GRP_HDR WHERE APPR_ID=?";
+		queryArray [14] = "DELETE FROM PAS_APPR_TEMPLATE WHERE APPR_ID=?";
 		
 		result = getSqlModel().multiExecute(queryArray, paramVactor);
 		

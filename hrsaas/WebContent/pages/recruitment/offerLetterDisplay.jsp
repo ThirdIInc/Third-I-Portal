@@ -42,7 +42,7 @@
 				 <s:iterator value="dispList"> 
 					  <tr> 
 					   <td width="9%" class="sortableTD" align="center" > <%=i%> </td>
-					   <td width="28%" class="sortableTD" > <s:hidden name="itReqName" id="<%="itReqName"+i%>" /> <s:hidden name="itPosition"/>  <s:hidden name="itReqCode" id="<%="itReqCode"+i%>"/>
+					   <td width="28%" class="sortableTD" > <s:hidden name="itReqName" id='<%="itReqName"+i%>' /> <s:hidden name="itPosition"/>  <s:hidden name="itReqCode" id='<%="itReqCode"+i%>'/>
 					   <s:hidden name="itReqDate"/> <s:hidden name="itStatus"/> <s:hidden name="selectedReqFlag"/>  <s:hidden name="itRecriuterName"/>   <s:property value="itReqName"/> </td>
 					   <td width="25%" class="sortableTD" ><s:property value="itPosition"/> </td>
 					   <td width="15%" class="sortableTD" ><s:property value="itReqDate"/> </td>

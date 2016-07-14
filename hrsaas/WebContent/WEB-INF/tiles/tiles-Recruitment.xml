@@ -1113,7 +1113,7 @@
 	<definition name="recruit.interviewMasteraddnew" extends=".recruitmentHomeLayout">
 	<put-attribute name="title" value="Interview Assess Master" />
 	<put-attribute name="body"
-			value="/pages/recruitment/interviewMasterData.jsp" />
+			value="/pages/recruitment/InterviewMasterData.jsp" />
 	</definition>
 	
 	<definition name="recruit.interviewAddNewGroup" extends=".recruitmentHomeLayout">

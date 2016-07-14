@@ -1,11 +1,10 @@
 
-<%@ taglib  uri="/struts-tags" prefix="s"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ include file="/pages/common/labelManagement.jsp"%>
 
 
 
-<div align="center" id="overlay"
-	style="z-index: 3; visibility: hidden; position: absolute; width: 776px; height: 700px; margin: 0px; left: 0; top: 0; background-color: #A7BEE2; background-image: url('images/grad.gif'); filter: progid :             DXImageTransform .             Microsoft .             alpha(opacity =             15); -moz-opacity: .1; opacity: .1;">
+<div align="center" id="overlay" style="z-index: 3; visibility: hidden; position: absolute; width: 776px; height: 700px; margin: 0px; left: 0; top: 0; background-color: #A7BEE2; background-image: url('images/grad.gif'); filter: progid :             DXImageTransform .             Microsoft .             alpha(opacity =             15); -moz-opacity: .1; opacity: .1;">
 </div>
 <s:form action="ApprFormSection" validate="true" id="paraFrm" theme="simple">
 
@@ -110,7 +109,7 @@
 	              			<tr>
 								<td  width="15%" nowrap="nowrap" ><s:hidden name="sectionCode"/><b><s:property value="sectionName"/></b>
 								<br>									<s:if test="apprFormSection.ratingFlag">
-									<!-- <label name="appraisal.form.ques.forLink" class = "set"  id="appraisal.form.ques.forLink" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.ques.forLink")%></label>--!>
+									<!-- <label name="appraisal.form.ques.forLink" class = "set"  id="appraisal.form.ques.forLink" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.ques.forLink")%></label>-->
 									</s:if>
 								
 								</td>
@@ -798,7 +797,7 @@ function viewPreviousDetails(sectionCode,phaseCode,apprId,templateCode,empCode){
 function nextFun(){
 	
 		if(document.getElementById('paraFrm_nextExist').value == 'true'){	
-			alert("next")
+			
 			document.getElementById("paraFrm").action="ApprFormSection_next.action";
 			document.getElementById("paraFrm").submit();
 		}else{

@@ -119,10 +119,10 @@
 								   <table width="100%">
 								      <tr> 
 								         <td nowrap="nowrap"> <s:select headerKey="1" headerValue="--Select--" name="dateFilter" list="#{'O':'On','B':'Before','A':'After' ,'OB':'On before' ,'OA':'On after','F':'From'}" onchange="callToDateDispOnClick();" />  </td>
-								         <td width="10%" colspan="1" > <s:textfield name="frmDate"  size="9" maxlength="10"  onkeypress="return numbersWithHiphen();" onkeypress="return numbersOnly();" onfocus="clearText('paraFrm_frmDate','dd-mm-yyyy')" onblur="setText('paraFrm_frmDate','dd-mm-yyyy')"  />   </td>
+								         <td width="10%" colspan="1" > <s:textfield name="frmDate"  size="9" maxlength="10"  onkeypress="return numbersWithHiphen();return numbersOnly();" onfocus="clearText('paraFrm_frmDate','dd-mm-yyyy')" onblur="setText('paraFrm_frmDate','dd-mm-yyyy')"  />   </td>
 								         <td width="10%" colspan="1" align="left"> <img src="../pages/images/recruitment/Date.gif" id="fromDateIcon" class="iconImage" height="18" align="absmiddle" width="18" onclick="javascript:NewCal('paraFrm_frmDate','DDMMYYYY');">  </td>
 								         <td width="15%" colspan="1" > <div id="toDateDivLabel"> <label  class = "set"  id="toDateLabel"  name="toDateLabel" ondblclick="callShowDiv(this);"><%=label.get("toDateLabel")%></label> : </div> </td>
-								         <td width="50%" colspan="2" ><div id="toDateDiv">  <s:textfield name="toDate"  size="10" maxlength="10"  onkeypress="return numbersWithHiphen();" onkeypress="return numbersOnly();"  onfocus="clearText('paraFrm_toDate','dd-mm-yyyy')" onblur="setText('paraFrm_toDate','dd-mm-yyyy')"  /> &nbsp; 
+								         <td width="50%" colspan="2" ><div id="toDateDiv">  <s:textfield name="toDate"  size="10" maxlength="10"  onkeypress="return numbersWithHiphen();return numbersOnly();"  onfocus="clearText('paraFrm_toDate','dd-mm-yyyy')" onblur="setText('paraFrm_toDate','dd-mm-yyyy')"  /> &nbsp; 
 								                       <img src="../pages/images/recruitment/Date.gif"  class="iconImage" height="18" align="absmiddle" width="18" onclick="javascript:NewCal('paraFrm_toDate','DDMMYYYY');">
 								                       </div>
 								            </td>
@@ -268,9 +268,9 @@
 							    <td width="68%" colspan="1" class="formtext"> 
 							     <table width="100%" border="0">
 							       <tr>
-							          <td width="32%"> <s:textfield name="requirdeByFromDateTxt" size="14" onkeypress="return numbersWithHiphen();" onkeypress="return numbersOnly();"  maxlength="10"  onfocus="clearText('paraFrm_requirdeByFromDateTxt','dd-mm-yyyy');" onblur="setText('paraFrm_requirdeByFromDateTxt','dd-mm-yyyy');" />  <img src="../pages/images/recruitment/Date.gif"  class="iconImage" height="18" align="absmiddle" width="18" onclick="javascript:NewCal('paraFrm_requirdeByFromDateTxt','DDMMYYYY');"  >  </td>
+							          <td width="32%"> <s:textfield name="requirdeByFromDateTxt" size="14" onkeypress="return numbersWithHiphen();return numbersOnly();"  maxlength="10"  onfocus="clearText('paraFrm_requirdeByFromDateTxt','dd-mm-yyyy');" onblur="setText('paraFrm_requirdeByFromDateTxt','dd-mm-yyyy');" />  <img src="../pages/images/recruitment/Date.gif"  class="iconImage" height="18" align="absmiddle" width="18" onclick="javascript:NewCal('paraFrm_requirdeByFromDateTxt','DDMMYYYY');"  >  </td>
 							          <td   nowrap="nowrap" id="advanceToDateLabel">  <label  class = "set"  id="toDateLabel"  name="toDateLabel" ondblclick="callShowDiv(this);"><%=label.get("toDateLabel")%></label> : </td>
-							          <td id="advanceToDateField" >  <s:textfield name="requirdeByToDateTxt" size="15" onkeypress="return numbersWithHiphen();" onkeypress="return numbersOnly();"  maxlength="10" onfocus="clearText('paraFrm_requirdeByToDateTxt','dd-mm-yyyy');" onblur="setText('paraFrm_requirdeByToDateTxt','dd-mm-yyyy');"   />   <img src="../pages/images/recruitment/Date.gif"  class="iconImage" height="18" align="absmiddle" width="18" onclick="javascript:NewCal('paraFrm_requirdeByToDateTxt','DDMMYYYY');">  </td>
+							          <td id="advanceToDateField" >  <s:textfield name="requirdeByToDateTxt" size="15" onkeypress="return numbersWithHiphen();return numbersOnly();"  maxlength="10" onfocus="clearText('paraFrm_requirdeByToDateTxt','dd-mm-yyyy');" onblur="setText('paraFrm_requirdeByToDateTxt','dd-mm-yyyy');"   />   <img src="../pages/images/recruitment/Date.gif"  class="iconImage" height="18" align="absmiddle" width="18" onclick="javascript:NewCal('paraFrm_requirdeByToDateTxt','DDMMYYYY');">  </td>
 							     </tr>
 							     </table>
 							    

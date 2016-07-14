@@ -1,69 +1,74 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <%@page import="java.util.HashMap"%>
 <%@include file="/pages/common/labelManagement.jsp"%>
-<script type="text/javascript"
-	src="../pages/common/include/javascript/sorttable.js"></script>
+
+	<jsp:include page="/pages/CommonCssJS.jsp" ></jsp:include>
+<script type="text/javascript"	src="../pages/common/include/javascript/sorttable.js"></script>
+
 <STYLE type=text/css>
-
-a:hover{
-COLOR:#FF0000;
-text-decoration:underline;
+a:hover {
+	COLOR: #FF0000;
+	text-decoration: underline;
 }
-
-
-</STYLE> 
+</STYLE>
 <s:form action="AppraisalCalendar" validate="true" id="paraFrm"
 	theme="simple">
-	<table width="100%" border="0"  cellpadding="2"
-		cellspacing="1" class="formbg">
+	<table width="100%" border="0" cellpadding="2" cellspacing="1"
+		class="formbg">
 		<tr>
-	        	<td colspan="3" width="100%">
-	        		<table width="100%" border="0" align="center" cellpadding="2" cellspacing="2" class="formbg">
-	        			 <tr>
-				          <td width="4%" valign="bottom" class="txt"><strong class="formhead">
-				          	<img src="../pages/images/recruitment/review_shared.gif" width="25" height="25" /></strong></td>
-				          <td width="93%" class="txt"><strong class="text_head">Appraisal Calendar</strong></td>
-				          <td width="3%" valign="top" class="txt"><div align="right">
-				          	<img src="../pages/images/recruitment/help.gif" width="16" height="16" /></div></td>
-				        </tr>
-	        		</table>
-	        	</td> 
-        	</tr>
-      <tr> 
-<s:hidden name="appraisalCode" />
-		<s:hidden name="appraisalId" />
-		<s:hidden name="startDate" />
-		<s:hidden name="validTill" />
-		<s:hidden name="repeatFreq" />
-		<s:hidden name="endDate" />
-		<s:hidden name="hideAutoStart"></s:hidden>
-		<s:hidden name="hideJoinDateCheck"></s:hidden>
-		<s:hidden name="hideEmpTypeCheck"></s:hidden>
-		<s:hidden name="hideEmpDivCheck"></s:hidden>
-		<s:hidden name="hideEmpGradeCheck"></s:hidden>
-		<s:hidden name="hideEmpDeptCheck"></s:hidden>
-		<s:hidden name="hideImportContentConfig"></s:hidden>
-		<s:hidden name="appraisalIdPhase"></s:hidden>
-		<s:hidden name="appraisalIdRating"></s:hidden>
-		<s:hidden name="appraisalIdParameters"></s:hidden>
-		<s:hidden name="appraisalIdAppraisers"></s:hidden>
-		<s:hidden name="appraisalIdTemplate"></s:hidden>
-		<s:hidden name="appraisalIdMapping"></s:hidden>
-		<s:hidden name="paraId" />
-		<s:hidden name="edit" />
-		<s:hidden name="addNew" />
-		<s:hidden name="onload" />
-		<s:hidden name="importStartDate"></s:hidden>
-		<s:hidden name="importEndDate"></s:hidden>
-		<s:hidden name="hideImportConfig"></s:hidden>
-		<s:hidden name="joinToDate" />
-		<s:hidden name="joinFromDate" />
-		<s:hidden name="show" value="%{show}" />
-		<s:hidden name="myPage" id="myPage" />
-		<s:hidden name="isStarted"/>
-		<s:hidden name="calUpdateflag"/>
-<s:hidden name="importAppraisalID"></s:hidden>
-<script>
+			<td colspan="3" width="100%">
+				<table width="100%" border="0" align="center" cellpadding="2"
+					cellspacing="2" class="formbg">
+					<tr>
+						<td width="4%" valign="bottom" class="txt"><strong
+							class="formhead"> <img
+								src="../pages/images/recruitment/review_shared.gif" width="25"
+								height="25" /></strong></td>
+						<td width="93%" class="txt"><strong class="text_head">Appraisal
+								Calendar</strong></td>
+						<td width="3%" valign="top" class="txt"><div align="right">
+								<img src="../pages/images/recruitment/help.gif" width="16"
+									height="16" />
+							</div></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<s:hidden name="appraisalCode" />
+			<s:hidden name="appraisalId" />
+			<s:hidden name="startDate" />
+			<s:hidden name="validTill" />
+			<s:hidden name="repeatFreq" />
+			<s:hidden name="endDate" />
+			<s:hidden name="hideAutoStart"></s:hidden>
+			<s:hidden name="hideJoinDateCheck"></s:hidden>
+			<s:hidden name="hideEmpTypeCheck"></s:hidden>
+			<s:hidden name="hideEmpDivCheck"></s:hidden>
+			<s:hidden name="hideEmpGradeCheck"></s:hidden>
+			<s:hidden name="hideEmpDeptCheck"></s:hidden>
+			<s:hidden name="hideImportContentConfig"></s:hidden>
+			<s:hidden name="appraisalIdPhase"></s:hidden>
+			<s:hidden name="appraisalIdRating"></s:hidden>
+			<s:hidden name="appraisalIdParameters"></s:hidden>
+			<s:hidden name="appraisalIdAppraisers"></s:hidden>
+			<s:hidden name="appraisalIdTemplate"></s:hidden>
+			<s:hidden name="appraisalIdMapping"></s:hidden>
+			<s:hidden name="paraId" />
+			<s:hidden name="edit" />
+			<s:hidden name="addNew" />
+			<s:hidden name="onload" />
+			<s:hidden name="importStartDate"></s:hidden>
+			<s:hidden name="importEndDate"></s:hidden>
+			<s:hidden name="hideImportConfig"></s:hidden>
+			<s:hidden name="joinToDate" />
+			<s:hidden name="joinFromDate" />
+			<s:hidden name="show" value="%{show}" />
+			<s:hidden name="myPage" id="myPage" />
+			<s:hidden name="isStarted" />
+			<s:hidden name="calUpdateflag" />
+			<s:hidden name="importAppraisalID"></s:hidden>
+			<script>
         function setJoinDateCheck(){
 			if(document.getElementById("paraFrm_hideJoinDateCheck").value=="Y"){
 				document.getElementById("joinDateCheck").checked=true;
@@ -113,121 +118,134 @@ text-decoration:underline;
 			}
 		}
    </script>
-	<s:if test="onloadMode">
-	<tr>
-				<td width="78%">
-	            <jsp:include page="/pages/ApplicationStudio/navigationPanel.jsp" />
-	     			
-			</td>
-				<td>
-				<% int totalPage = 0; int pageNo = 0; %>
-					<s:if test="noData"></s:if>
-					<s:else>
-						<td id="ctrlShow" width="30%" align="right" class=""><b>Page:</b>
-						<%	 totalPage = (Integer) request.getAttribute("totalPage");
-								 pageNo = (Integer) request.getAttribute("pageNo");
-							%> <a href="#"
-							onclick="callPage('1', 'F', '<%=totalPage%>', 'AppraisalCalendar_callPage.action');">
-						<img title="First Page" src="../pages/common/img/first.gif"
-							width="10" height="10" class="iconImage" /> </a>&nbsp; <a href="#"
-							onclick="callPage('P', 'P', '<%=totalPage%>', 'AppraisalCalendar_callPage.action');">
-						<img title="Previous Page" src="../pages/common/img/previous.gif"
-							width="10" height="10" class="iconImage" /> </a> <input type="text"
-							name="pageNoField" id="pageNoField" size="3" value="<%=pageNo%>"
-							maxlength="10"
-							onkeypress="callPageText(event, '<%=totalPage%>', 'AppraisalCalendar_callPage.action');return numbersOnly();" />
-						of <%=totalPage%> <a href="#"
-							onclick="callPage('N', 'N', '<%=totalPage%>', 'AppraisalCalendar_callPage.action')">
-						<img title="Next Page" src="../pages/common/img/next.gif"
-							class="iconImage" /> </a>&nbsp; <a href="#"
-							onclick="callPage('<%=totalPage%>', 'L', '<%=totalPage%>', 'AppraisalCalendar_callPage.action');">
-						<img title="Last Page" src="../pages/common/img/last.gif"
-							width="10" height="10" class="iconImage" /> </a></td>
-					</s:else>
-				</td>
+			<s:if test="onloadMode">
+				<tr>
+					<td width="78%"><jsp:include
+							page="/pages/ApplicationStudio/navigationPanel.jsp" /></td>
+					<td>
+						<%
+							int totalPage = 0;
+									int pageNo = 0;
+						%> <s:if test="noData"></s:if>
+						<s:else>
+							<td id="ctrlShow" width="30%" align="right" class=""><b>Page:</b>
+								<%
+									totalPage = (Integer) request.getAttribute("totalPage");
+												pageNo = (Integer) request.getAttribute("pageNo");
+								%> <a href="#"
+								onclick="callPage('1', 'F', '<%=totalPage%>', 'AppraisalCalendar_callPage.action');">
+									<img title="First Page" src="../pages/common/img/first.gif"
+									width="10" height="10" class="iconImage" />
+							</a>&nbsp; <a href="#"
+								onclick="callPage('P', 'P', '<%=totalPage%>', 'AppraisalCalendar_callPage.action');">
+									<img title="Previous Page"
+									src="../pages/common/img/previous.gif" width="10" height="10"
+									class="iconImage" />
+							</a> <input type="text" name="pageNoField" id="pageNoField" size="3"
+								value="<%=pageNo%>" maxlength="10"
+								onkeypress="callPageText(event, '<%=totalPage%>', 'AppraisalCalendar_callPage.action');return numbersOnly();" />
+								of <%=totalPage%> <a href="#"
+								onclick="callPage('N', 'N', '<%=totalPage%>', 'AppraisalCalendar_callPage.action')">
+									<img title="Next Page" src="../pages/common/img/next.gif"
+									class="iconImage" />
+							</a>&nbsp; <a href="#"
+								onclick="callPage('<%=totalPage%>', 'L', '<%=totalPage%>', 'AppraisalCalendar_callPage.action');">
+									<img title="Last Page" src="../pages/common/img/last.gif"
+									width="10" height="10" class="iconImage" />
+							</a></td>
+						</s:else>
+					</td>
 				</tr>
 				<tr>
-				<td align="left" class="formtext" colspan="3">
-			Note:
-			<img
+					<td align="left" class="formtext" colspan="3">Note: <img
 						src="../pages/mypage/images/icons/appraisal_phase_config.png"
-						width="16"  align="absmiddle" />&nbsp;Appraisal Phase Configuration &nbsp;
-						<img
+						width="16" align="absmiddle" />&nbsp;Appraisal Phase
+						Configuration &nbsp; <img
 						src="../pages/mypage/images/icons/appraisal_schedule.png"
-						width="16" align="absmiddle" />&nbsp;Appraisal Schedule&nbsp;
-						<img
-						src="../pages/mypage/images/icons/rating_scale.png"
-						width="16"  align="absmiddle" />&nbsp;Rating Scale Definition
-
-						<img
+						width="16" align="absmiddle" />&nbsp;Appraisal Schedule&nbsp; <img
+						src="../pages/mypage/images/icons/rating_scale.png" width="16"
+						align="absmiddle" />&nbsp;Rating Scale Definition <img
 						src="../pages/mypage/images/icons/appraiser_configuration.png"
-						width="16"  align="absmiddle" />&nbsp;Appraiser Configuration &nbsp;
+						width="16" align="absmiddle" />&nbsp;Appraiser Configuration
+						&nbsp; <img src="../pages/mypage/images/icons/form_designer.png"
+						width="16" align="absmiddle" />&nbsp;Appraisal Form Designer&nbsp;
 
-						<img
-						src="../pages/mypage/images/icons/form_designer.png"
-						width="16"  align="absmiddle"/>&nbsp;Appraisal Form Designer&nbsp;
-			 
-			 </td>
-			 </tr>
-			<tr>
-				<td colspan="3">
-				<table width="100%" border="0" cellpadding="2" cellspacing="2"
-					class="formbg">
-					<tr>
-						<td class="formtext">
-						<table width="100%" border="0" cellpadding="1" cellspacing="1"
-							class="sortable">
-							
-							<tr class="td_bottom_border">
-								<td width="5%" class="formth">Sr.No.</td> 
-								<td class="formth" align="left" width="20%"><label  class = "set" name="appraisal.code"  id="appraisal.code12" ondblclick="callShowDiv(this);"><%=label.get("appraisal.code")%></label></td>
-								
-								<td class="formth" width="15%"><label  class = "set" name="start.date"  id="start.date12" ondblclick="callShowDiv(this);"><%=label.get("start.date")%></label></td>
-								<td class="formth" width="15%"><label  class = "set" name="end.date"  id="end.date1" ondblclick="callShowDiv(this);"><%=label.get("end.date")%></label></td>
-								<td class="formth" width="15%">Configure</td>
-								<td class="formth" align="center" width="5%">Edit</td>
-								<td class="formth" width="15%" no ><input type="button" value =" Delete" class="delete" onclick="return deleteMultiple();"/>
-								<br><input type="checkbox" name="allChk" id="allChk"
-								onclick="callAllCheck()" align="center"/></td>
-								</tr>
-								<%
-								int count = 0;
-								%>
-								<%
-									int k = 0;
-									int c = 0;
-									int cnt = pageNo * 10 - 10;
-								%>
-								<s:if test="noData">
-					<tr>
-						<td width="100%" colspan="8" align="center" class="sortableTD"><font color="red">No
-						Data To Display</font></td>
-					</tr>
-				</s:if><s:else>
-								<s:iterator value="calendarList">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<table width="100%" border="0" cellpadding="2" cellspacing="2"
+							class="formbg">
+							<tr>
+								<td class="formtext">
+									<table width="100%" border="0" cellpadding="1" cellspacing="1"
+										class="sortable">
 
-									<tr <%if(count%2==0){
-									%> class="tableCell1"
-										<%}else{%> class="tableCell2" <%	}count++; %>
-										ondblclick=""
-										onmouseover="javascript:newRowColor(this);"
-										title=""
-										onmouseout="javascript:oldRowColor(this,<%=count%2 %>);">
+										<tr class="td_bottom_border">
+											<td width="5%" class="formth">Sr.No.</td>
+											<td class="formth" align="left" width="20%"><label
+												class="set" name="appraisal.code" id="appraisal.code12"
+												ondblclick="callShowDiv(this);"><%=label.get("appraisal.code")%></label></td>
 
-										<td class="sortableTD" width="5%" align="center"><%=++cnt%><%
-										++k;
-										%></td>
-										<td class="sortableTD" width="20%" nowrap="nowrap"><s:property
-											value="appraisalCodeList" />&nbsp;<s:hidden
-											name="appraisalCodeList" /><input type="hidden" name="appraisalIdList" value="<s:property value='appraisalIdList'/>" id="appraisalIdList<%=k%>" /></td>
-										
-										<td class="sortableTD" align="center"  nowrap="nowrap" width="15%"><s:property
-											value="startDateList" />&nbsp;<s:hidden name="startDateList" /></td>
-										<td class="sortableTD" align="center"  nowrap="nowrap" width="15%"><s:property
-											value="endDateList" />&nbsp;<s:hidden name="endDateList" /></td>
-										<input type="hidden" name="hdeleteCode" id="hdeleteCode<%=k%>" />
-										 
-										<!--  <td align="left">
+											<td class="formth" width="15%"><label class="set"
+												name="start.date" id="start.date12"
+												ondblclick="callShowDiv(this);"><%=label.get("start.date")%></label></td>
+											<td class="formth" width="15%"><label class="set"
+												name="end.date" id="end.date1"
+												ondblclick="callShowDiv(this);"><%=label.get("end.date")%></label></td>
+											<td class="formth" width="15%">Configure</td>
+											<td class="formth" align="center" width="5%">Edit</td>
+											<td class="formth" width="15%" no><input type="button"
+												value=" Delete" class="delete"
+												onclick="return deleteMultiple();" /> <br>
+											<input type="checkbox" name="allChk" id="allChk"
+												onclick="callAllCheck()" align="center" /></td>
+										</tr>
+										<%
+											int count = 0;
+										%>
+										<%
+											int k = 0;
+													int c = 0;
+													int cnt = pageNo * 10 - 10;
+										%>
+										<s:if test="noData">
+											<tr>
+												<td width="100%" colspan="8" align="center"
+													class="sortableTD"><font color="red">No Data To
+														Display</font></td>
+											</tr>
+										</s:if>
+										<s:else>
+											<s:iterator value="calendarList">
+
+												<tr <%if (count % 2 == 0) {%> class="tableCell1"
+													<%} else {%> class="tableCell2" <%}
+							count++;%> ondblclick=""
+													onmouseover="javascript:newRowColor(this);" title=""
+													onmouseout="javascript:oldRowColor(this,<%=count % 2%>);">
+
+													<td class="sortableTD" width="5%" align="center"><%=++cnt%>
+														<%
+															++k;
+														%></td>
+													<td class="sortableTD" width="20%" nowrap="nowrap"><s:property
+															value="appraisalCodeList" />&nbsp;<s:hidden
+															name="appraisalCodeList" /><input type="hidden"
+														name="appraisalIdList"
+														value="<s:property value='appraisalIdList'/>"
+														id="appraisalIdList<%=k%>" /></td>
+
+													<td class="sortableTD" align="center" nowrap="nowrap"
+														width="15%"><s:property value="startDateList" />&nbsp;<s:hidden
+															name="startDateList" /></td>
+													<td class="sortableTD" align="center" nowrap="nowrap"
+														width="15%"><s:property value="endDateList" />&nbsp;<s:hidden
+															name="endDateList" /></td>
+													<input type="hidden" name="hdeleteCode"
+														id="hdeleteCode<%=k%>" />
+
+													<!--  <td align="left">
 												<a href="#?" class="link"  onclick="javascript:callForPhaseConfig('<s:property value="appraisalIdList"/>');"> <img
 						src="../pages/mypage/images/icons/appraisal_phase_config.png"
 						width="10" height="10" align="absmiddle"/>Appraisal Phase Configuration </a><br>
@@ -245,317 +263,349 @@ text-decoration:underline;
 						width="10" height="10" align="absmiddle"/>Appraisal Form Designer </a><br>
 												<!--<a href="#?" class="link"  onclick="javascript:callForAppraisalRatingDef('<s:property value="appraisalIdList"/>');">Appraisal Rating Definition </a> 
 											</td>-->
-											
-											<td align="middle" nowrap="nowrap">
-												<a href="#?" class="link"  onclick="javascript:callForPhaseConfig('<s:property value="appraisalIdList"/>');"> <img
-						src="../pages/mypage/images/icons/appraisal_phase_config.png"
-						width="16" height="16" align="absmiddle" title="Appraisal Phase Configuration " class="iconImage"/></a>&nbsp;
-												<a href="#?" class="link"  onclick="javascript:callForAppraisalSchedule('<s:property value="appraisalIdList"/>');"><img
-						src="../pages/mypage/images/icons/appraisal_schedule.png"
-						width="16" height="16" align="absmiddle" title="Appraisal Schedule " class="iconImage"/></a>&nbsp;
-												<a href="#?" class="link"  onclick="javascript:callForRatingScaleDef('<s:property value="appraisalIdList"/>');"><img
-						src="../pages/mypage/images/icons/rating_scale.png"
-						width="16" height="16" align="absmiddle" title="Rating Scale Definition " class="iconImage"/></a>&nbsp;
-												<a href="#?" class="link"  onclick="javascript:callForAppraiserConfig('<s:property value="appraisalIdList"/>');"><img
-						src="../pages/mypage/images/icons/appraiser_configuration.png"
-						width="16" height="16" align="absmiddle" title="Appraiser Configuration" class="iconImage"/> </a>&nbsp;
-												<a href="#?" class="link"  onclick="javascript:callForAppraisalFormDesigner('<s:property value="appraisalIdList"/>');"><img
-						src="../pages/mypage/images/icons/form_designer.png"
-						width="16" height="16" align="absmiddle" title="Appraisal Form Designer " class="iconImage"/></a>&nbsp;
-										<td class="sortableTD" width="5%" id="ctrlShow"
-													align="center"><input type="button" class="rowEdit"
-													title="Click for edit"
-													onclick="callForEdit('<s:property value="appraisalIdList"/>')" />
 
-												</td>
-										<td class="sortableTD" nowrap="nowrap" align="center" width="10%"><input type="checkbox" al name="deleteChk"  id="deleteChk<%=k%>"
-								onclick="callCheckBox(<%=k%>)" /></td>
-									
-									</tr>
+													<td align="middle" nowrap="nowrap"><a href="#?"
+														class="link"
+														onclick="javascript:callForPhaseConfig('<s:property value="appraisalIdList"/>');">
+															<img
+															src="../pages/mypage/images/icons/appraisal_phase_config.png"
+															width="16" height="16" align="absmiddle"
+															title="Appraisal Phase Configuration " class="iconImage" />
+													</a>&nbsp; <a href="#?" class="link"
+														onclick="javascript:callForAppraisalSchedule('<s:property value="appraisalIdList"/>');"><img
+															src="../pages/mypage/images/icons/appraisal_schedule.png"
+															width="16" height="16" align="absmiddle"
+															title="Appraisal Schedule " class="iconImage" /></a>&nbsp; <a
+														href="#?" class="link"
+														onclick="javascript:callForRatingScaleDef('<s:property value="appraisalIdList"/>');"><img
+															src="../pages/mypage/images/icons/rating_scale.png"
+															width="16" height="16" align="absmiddle"
+															title="Rating Scale Definition " class="iconImage" /></a>&nbsp;
+														<a href="#?" class="link"
+														onclick="javascript:callForAppraiserConfig('<s:property value="appraisalIdList"/>');"><img
+															src="../pages/mypage/images/icons/appraiser_configuration.png"
+															width="16" height="16" align="absmiddle"
+															title="Appraiser Configuration" class="iconImage" /> </a>&nbsp;
+														<a href="#?" class="link"
+														onclick="javascript:callForAppraisalFormDesigner('<s:property value="appraisalIdList"/>');"><img
+															src="../pages/mypage/images/icons/form_designer.png"
+															width="16" height="16" align="absmiddle"
+															title="Appraisal Form Designer " class="iconImage" /></a>&nbsp;
+													
+													<td class="sortableTD" width="5%" id="ctrlShow"
+														align="center"><i class="fa fa-pencil" aria-hidden="true" title="Click for edit"
+														onclick="callForEdit('<s:property value="appraisalIdList"/>')" ></i>
 
-									<%
-									c++;
-									%>
-								</s:iterator>
-								</s:else>
-								<td>&nbsp;<input type="hidden" name="count" id="count" value="<%=c%>" />
+													</td>
+													<td class="sortableTD" nowrap="nowrap" align="center"
+														width="10%"><input type="checkbox" al
+														name="deleteChk" id="deleteChk<%=k%>"
+														onclick="callCheckBox(<%=k%>)" /></td>
+
+												</tr>
+
+												<%
+													c++;
+												%>
+											</s:iterator>
+										</s:else>
+										<td>&nbsp;<input type="hidden" name="count" id="count"
+											value="<%=c%>" />
+									</table>
 						</table>
-				</table>
-			</tr>
-			<tr><td width="78%">
-	            <jsp:include page="/pages/ApplicationStudio/navigationPanel.jsp" />
-	     			
-			</td>
-			</tr>
-		</s:if>
-		<s:else>
-		<tr>
-				<td width="78%">
-	            <input type="button" class="back" value=" Back "
-							onclick="return callBack();" />
-	          			
-			</td>
+				</tr>
+				<tr>
+					<td width="78%"><jsp:include
+							page="/pages/ApplicationStudio/navigationPanel.jsp" /></td>
+				</tr>
+			</s:if>
+			<s:else>
+				<tr>
+					<td width="78%"><input type="button" class="back"
+						value=" Back " onclick="return callBack();" /></td>
 					<td width="22%">
-						<div align="right"><font color="red">*</font> Indicates
-						Required</div>
-						</td>
-			</tr>
-			
-			<tr>
-				<td colspan="3">
-				<div
-					style=""
-					bgcolor="#FFFFFF" align="center">
-				
-					<table width="100%" border="0" cellpadding="2" cellspacing="2"
-						class="formbg">
-						<tr>
-							<td>
-							<table width="100%" border="0" align="center" cellpadding="2"
-								cellspacing="2">
+						<div align="right">
+							<font color="red">*</font> Indicates Required
+						</div>
+					</td>
+				</tr>
 
-								<tr>
-									<td colspan="3" width="100%"><STRONG><label name="set.eligibility.criteria"
-										class="set" id="set.eligibility.criteria"
-										ondblclick="callShowDiv(this);"><%=label.get("set.eligibility.criteria")%></label> <font color="red" >*</font></STRONG>
-									</td>
-								</tr>
-							<tr>
-									<td align="center"><input type="button" class="token"
-										value="View Eligible Employees" id="ctrlShow"
-										onclick="return viewEligibleEmp();" /></td>
-								</tr>
-							
-					<tr>
-							<td colspan="3" width="100%"><input type="checkbox"
-										name="empDivCheck" class="checkbox" id="empDivCheck"
-										disabled="disabled" value="N"></input> <script>setEmpDivCheck();</script><label name="based.on.division"
-										class="set" id="based.on.division"
-										ondblclick="callShowDiv(this);"><%=label.get("based.on.division")%></label>
-									</td>
-								</tr>
+				<tr>
+					<td colspan="3">
+						<div style="" bgcolor="#FFFFFF" align="center">
 
+							<table width="100%" border="0" cellpadding="2" cellspacing="2"
+								class="formbg">
 								<tr>
 									<td>
-									<div id="divisionDiv">
-									<table border="0" width="100%">
-										<tr>
-											<td width="25%" class="formtext" colspan="1" nowrap="nowrap"><label name="select.employee.div"
-												class="set" id="select.employee.div"
-												ondblclick="callShowDiv(this);"><%=label.get("select.employee.div")%></label>
-											:</td>
-											<td width="25%" colspan="1" nowrap="nowrap"><s:optiontransferselect
-												doubleDisabled="true" disabled="true" size="10"
-												doubleSize="10" doubleId="selDivId" id="availDivId"
-												label="Employee Division" rightTitle="Selected Division"
-												leftTitle="Available Division" addToLeftLabel="<< Remove"
-												addToRightLabel="Add >>" addAllToLeftLabel="Remove All"
-												addAllToRightLabel="Add All" selectAllLabel="Select All"
-												cssStyle="width:100px" doubleCssStyle="width:100px"
-												name="availDiv" multiple="true" buttonCssClass="token"
-												list="%{hashmapDiv}" doubleName="selDiv"
-												doubleList="%{hashmapDivSel}" /></td>
-											<td width="25%" class="formtext" colspan="1"></td>
-											<td width="25%" colspan="1" nowrap="nowrap"></td>
-										</tr>
-									</table>
-								</div>
-							</td>
-						</tr>
-								<tr>
-									<td colspan="3" width="100%"><input type="checkbox"
-										name="joinDateCheck" class="checkbox" id="joinDateCheck"
-										disabled="disabled" value="N"
-										onclick="return callJoinDateCheck();"></input> <label name="based.on.join.date"
-										class="set" id="based.on.join.date"
-										ondblclick="callShowDiv(this);"><%=label.get("based.on.join.date")%></label>
-									</td>
-								</tr>
-								<tr>
-									<td>
-									<div id="joinDateDiv">
-									<table border="0" width="100%">
-										<tr>
-											<td width="25%" class="formtext" colspan="1" nowrap="nowrap"><label name="employee.join.date"
-												class="set" id="employee.join.date"
-												ondblclick="callShowDiv(this);"><%=label.get("employee.join.date")%></label>
-											:</td>
-											<td width="25%" colspan="1" nowrap="nowrap"><s:select
-												name="joinDateCondition" headerKey="1" headerValue="On"
-												cssStyle="width:150" disabled="true"
-												list="#{'2':'Between','3':'Before','4':'After','5':'On or Before','6':'On or After' }"
-												onchange="return callJoinDateCond();" /></td>
-											<td width="25%" class="formtext" colspan="1"></td>
-											<td width="25%" colspan="1" nowrap="nowrap"></td>
-										</tr>
-										<tr>
-											<td width="25%" class="formtext" colspan="4">
-											<div id="joinDateFromDiv">
-											<table width="100%" border="0">
-												<tr>
-													<td width="25%" class="formtext" colspan="1" align="right"><label name="join.date"
-														class="set" id="join.date" ondblclick="callShowDiv(this);"><%=label.get("join.date")%></label>
-													<font color="red">*</font>:</td>
-													<td width="75%" colspan="3" nowrap="nowrap"><s:property
-														value="joinDate" /></td>
-												</tr>
-											</table>
-											</div>
-											</td>
-										</tr>
-										<tr>
-											<td width="25%" class="formtext" colspan="4">
-											<div id="joinDateToDiv">
-											<table width="100%" border="0">
-												<tr>
-													<td width="25%" class="formtext" colspan="1" align="right"><label name="from.date"
-														class="set" id="from.date" ondblclick="callShowDiv(this);"><%=label.get("from.date")%></label>
-													<font color="red">*</font>:</td>
-													<td width="25%" colspan="1" nowrap="nowrap"><s:property
-														value="joinFromDate" /></td>
-													<td width="25%" class="formtext" colspan="1" align="right"><label name="to.date"
-														class="set" id="to.date" ondblclick="callShowDiv(this);"><%=label.get("to.date")%></label>
-													<font color="red">*</font>:</td>
-													<td width="25%" colspan="1" nowrap="nowrap"><s:property
-														value="joinToDate" /></td>
-												</tr>
-											</table>
-											</div>
-											</td>
-										</tr>
-										<script>setJoinDateCheck();</script>
-									</table>
-									</td>
-								</tr>
-								<tr>
-									<td colspan="3" width="100%"><input type="checkbox"
-										name="empTypeCheck" class="checkbox" id="empTypeCheck"
-										disabled="disabled" value="N"
-										onclick="return callEmpTypeCheck();"></input> <script>setEmpTypeCheck();</script><label name="based.on.emp.type"
-										class="set" id="based.on.emp.type"
-										ondblclick="callShowDiv(this);"><%=label.get("based.on.emp.type")%></label>
-									</td>
-								</tr>
-								<tr>
-									<td>
-									<div id="empTypeDiv">
-									<table border="0" width="100%">
-										<tr>
-											<td width="25%" class="formtext" colspan="1" nowrap="nowrap"><label name="select.employee.type"
-												class="set" id="select.employee.type"
-												ondblclick="callShowDiv(this);"><%=label.get("select.employee.type")%></label>
-											:</td>
-											<td width="25%" colspan="1" nowrap="nowrap"><s:optiontransferselect
-												doubleDisabled="true" disabled="true" size="10"
-												doubleSize="10" doubleId="selTypeId" id="availTypeId"
-												label="Employee Type" rightTitle="Selected Type"
-												leftTitle="Available Type" addToLeftLabel="<< Remove"
-												addToRightLabel="Add >>" addAllToLeftLabel="Remove All"
-												addAllToRightLabel="Add All" selectAllLabel="Select All"
-												cssStyle="width:100px" doubleCssStyle="width:100px"
-												name="availType" multiple="true" buttonCssClass="token"
-												list="%{hashmapType}" doubleName="selType"
-												doubleList="%{hashmapTypeSel}" /></td>
-											<td width="25%" class="formtext" colspan="1"></td>
-											<td width="25%" colspan="1" nowrap="nowrap"></td>
-										</tr>
-									</table>
-									</div>
-									</td>
-								</tr>
-								<tr>
-									<td colspan="3" width="100%"><input type="checkbox"
-										disabled="disabled" name="empGradeCheck" class="checkbox"
-										id="empGradeCheck" value="N"
-										onclick="return callEmpGradeCheck();"></input> <script>setEmpGradeCheck();</script><label name="based.on.emp.grade"
-										class="set" id="based.on.emp.grade"
-										ondblclick="callShowDiv(this);"><%=label.get("based.on.emp.grade")%></label>
-									</td>
-								</tr>
-								<tr>
-									<td>
-									<div id="empGradeDiv">
-									<table border="0" width="100%">
-										<tr>
-											<td width="25%" class="formtext" colspan="1" nowrap="nowrap"><label name="select.employee.grade"
-												class="set" id="select.employee.grade"
-												ondblclick="callShowDiv(this);"><%=label.get("select.employee.grade")%></label>
-											:</td>
-											<td width="25%" colspan="1" nowrap="nowrap"><s:optiontransferselect
-												doubleDisabled="true" disabled="true" size="10"
-												doubleSize="10" doubleId="selGradeId" id="availGradeId"
-												label="Employee Grade" rightTitle="Selected Grade"
-												leftTitle="Available Grade" addToLeftLabel="<< Remove"
-												addToRightLabel="Add >>" addAllToLeftLabel="Remove All"
-												addAllToRightLabel="Add All" selectAllLabel="Select All"
-												cssStyle="width:100px" doubleCssStyle="width:100px"
-												doubleName="selGrade" multiple="true" buttonCssClass="token"
-												doubleList="%{hashmapGradeSel}" name="availGrade"
-												list="%{hashmapGrade}" /></td>
-											<td width="25%" class="formtext" colspan="1"></td>
-											<td width="25%" colspan="1" nowrap="nowrap"></td>
-										</tr>
-									</table>
-									</div>
-									</td>
-								</tr>
-								<tr>
-									<td colspan="3" width="100%"><input type="checkbox"
-										disabled="disabled" name="empDeptCheck" class="checkbox"
-										id="empDeptCheck" value="N"
-										onclick="return callEmpDeptCheck();"></input> <script>setEmpDeptCheck();</script><label name="based.on.emp.dept"
-										class="set" id="based.on.emp.dept"
-										ondblclick="callShowDiv(this);"><%=label.get("based.on.emp.dept")%></label>
-									</td>
-								</tr>
-								<tr>
-									<td>
-									<div id="empDeptDiv">
-									<table border="0" width="100%">
-										<tr>
-											<td width="25%" class="formtext" colspan="1" nowrap="nowrap"><label name="select.employee.dept"
-												class="set" id="select.employee.dept"
-												ondblclick="callShowDiv(this);"><%=label.get("select.employee.dept")%></label>
-											:</td>
-											<td width="25%" colspan="1" nowrap="nowrap"><s:optiontransferselect
-												doubleDisabled="true" disabled="true" size="10"
-												doubleSize="10" doubleId="selDeptId" id="availDeptId"
-												label="Employee Department" rightTitle="Selected Department"
-												leftTitle="Available Department" addToLeftLabel="<< Remove"
-												addToRightLabel="Add >>" addAllToLeftLabel="Remove All"
-												addAllToRightLabel="Add All" selectAllLabel="Select All"
-												cssStyle="width:100px" doubleCssStyle="width:100px"
-												doubleName="selDept" multiple="true" buttonCssClass="token"
-												doubleList="%{hashmapDeptSel}" name="availDept"
-												list="%{hashmapDept}" /></td>
-											<td width="25%" class="formtext" colspan="1"></td>
-											<td width="25%" colspan="1" nowrap="nowrap"></td>
-										</tr>
-									</table>
-									</div>
+										<table width="100%" border="0" align="center" cellpadding="2"
+											cellspacing="2">
+
+											<tr>
+												<td colspan="3" width="100%"><STRONG><label
+														name="set.eligibility.criteria" class="set"
+														id="set.eligibility.criteria"
+														ondblclick="callShowDiv(this);"><%=label.get("set.eligibility.criteria")%></label>
+														<font color="red">*</font></STRONG></td>
+											</tr>
+											<tr>
+												<td align="center"><input type="button" class="token"
+													value="View Eligible Employees" id="ctrlShow"
+													onclick="return viewEligibleEmp();" /></td>
+											</tr>
+
+											<tr>
+												<td colspan="3" width="100%"><input type="checkbox"
+													name="empDivCheck" class="checkbox" id="empDivCheck"
+													disabled="disabled" value="N"></input> <script>setEmpDivCheck();</script><label
+													name="based.on.division" class="set" id="based.on.division"
+													ondblclick="callShowDiv(this);"><%=label.get("based.on.division")%></label>
+												</td>
+											</tr>
+
+											<tr>
+												<td>
+													<div id="divisionDiv">
+														<table border="0" width="100%">
+															<tr>
+																<td width="25%" class="formtext" colspan="1"
+																	nowrap="nowrap"><label name="select.employee.div"
+																	class="set" id="select.employee.div"
+																	ondblclick="callShowDiv(this);"><%=label.get("select.employee.div")%></label>
+																	:</td>
+																<td width="25%" colspan="1" nowrap="nowrap"><s:optiontransferselect
+																		doubleDisabled="true" disabled="true" size="10"
+																		doubleSize="10" doubleId="selDivId" id="availDivId"
+																		label="Employee Division"
+																		rightTitle="Selected Division"
+																		leftTitle="Available Division"
+																		addToLeftLabel="<< Remove" addToRightLabel="Add >>"
+																		addAllToLeftLabel="Remove All"
+																		addAllToRightLabel="Add All"
+																		selectAllLabel="Select All" cssStyle="width:100px"
+																		doubleCssStyle="width:100px" name="availDiv"
+																		multiple="true" buttonCssClass="token"
+																		list="%{hashmapDiv}" doubleName="selDiv"
+																		doubleList="%{hashmapDivSel}" /></td>
+																<td width="25%" class="formtext" colspan="1"></td>
+																<td width="25%" colspan="1" nowrap="nowrap"></td>
+															</tr>
+														</table>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3" width="100%"><input type="checkbox"
+													name="joinDateCheck" class="checkbox" id="joinDateCheck"
+													disabled="disabled" value="N"
+													onclick="return callJoinDateCheck();"></input> <label
+													name="based.on.join.date" class="set"
+													id="based.on.join.date" ondblclick="callShowDiv(this);"><%=label.get("based.on.join.date")%></label>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div id="joinDateDiv">
+														<table border="0" width="100%">
+															<tr>
+																<td width="25%" class="formtext" colspan="1"
+																	nowrap="nowrap"><label name="employee.join.date"
+																	class="set" id="employee.join.date"
+																	ondblclick="callShowDiv(this);"><%=label.get("employee.join.date")%></label>
+																	:</td>
+																<td width="25%" colspan="1" nowrap="nowrap"><s:select
+																		name="joinDateCondition" headerKey="1"
+																		headerValue="On" cssStyle="width:150" disabled="true"
+																		list="#{'2':'Between','3':'Before','4':'After','5':'On or Before','6':'On or After' }"
+																		onchange="return callJoinDateCond();" /></td>
+																<td width="25%" class="formtext" colspan="1"></td>
+																<td width="25%" colspan="1" nowrap="nowrap"></td>
+															</tr>
+															<tr>
+																<td width="25%" class="formtext" colspan="4">
+																	<div id="joinDateFromDiv">
+																		<table width="100%" border="0">
+																			<tr>
+																				<td width="25%" class="formtext" colspan="1"
+																					align="right"><label name="join.date"
+																					class="set" id="join.date"
+																					ondblclick="callShowDiv(this);"><%=label.get("join.date")%></label>
+																					<font color="red">*</font>:</td>
+																				<td width="75%" colspan="3" nowrap="nowrap"><s:property
+																						value="joinDate" /></td>
+																			</tr>
+																		</table>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td width="25%" class="formtext" colspan="4">
+																	<div id="joinDateToDiv">
+																		<table width="100%" border="0">
+																			<tr>
+																				<td width="25%" class="formtext" colspan="1"
+																					align="right"><label name="from.date"
+																					class="set" id="from.date"
+																					ondblclick="callShowDiv(this);"><%=label.get("from.date")%></label>
+																					<font color="red">*</font>:</td>
+																				<td width="25%" colspan="1" nowrap="nowrap"><s:property
+																						value="joinFromDate" /></td>
+																				<td width="25%" class="formtext" colspan="1"
+																					align="right"><label name="to.date"
+																					class="set" id="to.date"
+																					ondblclick="callShowDiv(this);"><%=label.get("to.date")%></label>
+																					<font color="red">*</font>:</td>
+																				<td width="25%" colspan="1" nowrap="nowrap"><s:property
+																						value="joinToDate" /></td>
+																			</tr>
+																		</table>
+																	</div>
+																</td>
+															</tr>
+															<script>setJoinDateCheck();</script>
+														</table>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3" width="100%"><input type="checkbox"
+													name="empTypeCheck" class="checkbox" id="empTypeCheck"
+													disabled="disabled" value="N"
+													onclick="return callEmpTypeCheck();"></input> <script>setEmpTypeCheck();</script><label
+													name="based.on.emp.type" class="set" id="based.on.emp.type"
+													ondblclick="callShowDiv(this);"><%=label.get("based.on.emp.type")%></label>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div id="empTypeDiv">
+														<table border="0" width="100%">
+															<tr>
+																<td width="25%" class="formtext" colspan="1"
+																	nowrap="nowrap"><label name="select.employee.type"
+																	class="set" id="select.employee.type"
+																	ondblclick="callShowDiv(this);"><%=label.get("select.employee.type")%></label>
+																	:</td>
+																<td width="25%" colspan="1" nowrap="nowrap"><s:optiontransferselect
+																		doubleDisabled="true" disabled="true" size="10"
+																		doubleSize="10" doubleId="selTypeId" id="availTypeId"
+																		label="Employee Type" rightTitle="Selected Type"
+																		leftTitle="Available Type" addToLeftLabel="<< Remove"
+																		addToRightLabel="Add >>"
+																		addAllToLeftLabel="Remove All"
+																		addAllToRightLabel="Add All"
+																		selectAllLabel="Select All" cssStyle="width:100px"
+																		doubleCssStyle="width:100px" name="availType"
+																		multiple="true" buttonCssClass="token"
+																		list="%{hashmapType}" doubleName="selType"
+																		doubleList="%{hashmapTypeSel}" /></td>
+																<td width="25%" class="formtext" colspan="1"></td>
+																<td width="25%" colspan="1" nowrap="nowrap"></td>
+															</tr>
+														</table>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3" width="100%"><input type="checkbox"
+													disabled="disabled" name="empGradeCheck" class="checkbox"
+													id="empGradeCheck" value="N"
+													onclick="return callEmpGradeCheck();"></input> <script>setEmpGradeCheck();</script><label
+													name="based.on.emp.grade" class="set"
+													id="based.on.emp.grade" ondblclick="callShowDiv(this);"><%=label.get("based.on.emp.grade")%></label>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div id="empGradeDiv">
+														<table border="0" width="100%">
+															<tr>
+																<td width="25%" class="formtext" colspan="1"
+																	nowrap="nowrap"><label
+																	name="select.employee.grade" class="set"
+																	id="select.employee.grade"
+																	ondblclick="callShowDiv(this);"><%=label.get("select.employee.grade")%></label>
+																	:</td>
+																<td width="25%" colspan="1" nowrap="nowrap"><s:optiontransferselect
+																		doubleDisabled="true" disabled="true" size="10"
+																		doubleSize="10" doubleId="selGradeId"
+																		id="availGradeId" label="Employee Grade"
+																		rightTitle="Selected Grade"
+																		leftTitle="Available Grade" addToLeftLabel="<< Remove"
+																		addToRightLabel="Add >>"
+																		addAllToLeftLabel="Remove All"
+																		addAllToRightLabel="Add All"
+																		selectAllLabel="Select All" cssStyle="width:100px"
+																		doubleCssStyle="width:100px" doubleName="selGrade"
+																		multiple="true" buttonCssClass="token"
+																		doubleList="%{hashmapGradeSel}" name="availGrade"
+																		list="%{hashmapGrade}" /></td>
+																<td width="25%" class="formtext" colspan="1"></td>
+																<td width="25%" colspan="1" nowrap="nowrap"></td>
+															</tr>
+														</table>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3" width="100%"><input type="checkbox"
+													disabled="disabled" name="empDeptCheck" class="checkbox"
+													id="empDeptCheck" value="N"
+													onclick="return callEmpDeptCheck();"></input> <script>setEmpDeptCheck();</script><label
+													name="based.on.emp.dept" class="set" id="based.on.emp.dept"
+													ondblclick="callShowDiv(this);"><%=label.get("based.on.emp.dept")%></label>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div id="empDeptDiv">
+														<table border="0" width="100%">
+															<tr>
+																<td width="25%" class="formtext" colspan="1"
+																	nowrap="nowrap"><label name="select.employee.dept"
+																	class="set" id="select.employee.dept"
+																	ondblclick="callShowDiv(this);"><%=label.get("select.employee.dept")%></label>
+																	:</td>
+																<td width="25%" colspan="1" nowrap="nowrap"><s:optiontransferselect
+																		doubleDisabled="true" disabled="true" size="10"
+																		doubleSize="10" doubleId="selDeptId" id="availDeptId"
+																		label="Employee Department"
+																		rightTitle="Selected Department"
+																		leftTitle="Available Department"
+																		addToLeftLabel="<< Remove" addToRightLabel="Add >>"
+																		addAllToLeftLabel="Remove All"
+																		addAllToRightLabel="Add All"
+																		selectAllLabel="Select All" cssStyle="width:100px"
+																		doubleCssStyle="width:100px" doubleName="selDept"
+																		multiple="true" buttonCssClass="token"
+																		doubleList="%{hashmapDeptSel}" name="availDept"
+																		list="%{hashmapDept}" /></td>
+																<td width="25%" class="formtext" colspan="1"></td>
+																<td width="25%" colspan="1" nowrap="nowrap"></td>
+															</tr>
+														</table>
+													</div>
+												</td>
+											</tr>
+										</table>
 									</td>
 								</tr>
 							</table>
-							</td>
-						</tr>
-					</table>
-				</div>
-				</td>
-			</tr>
-			<tr>
-				<td width="78%">
-	            <input type="button" class="back" value=" Back "
-							onclick="return callBack();" />
-			</td>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="78%"><input type="button" class="back"
+						value=" Back " onclick="return callBack();" /></td>
 					<td width="22%">
-						<div align="right"><font color="red">*</font> Indicates
-						Required</div>
-						</td>
-			</tr>
-		</s:else>
-</tr>
+						<div align="right">
+							<font color="red">*</font> Indicates Required
+						</div>
+					</td>
+				</tr>
+			</s:else>
+		</tr>
 	</table>
-<s:hidden name="joinDate" />
+	<s:hidden name="joinDate" />
 </s:form>
 
 <script type="text/javascript" src="../pages/common/datetimepicker.js">

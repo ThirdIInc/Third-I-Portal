@@ -103,12 +103,12 @@
               <%=label.get("appraisal.to")%></label> : <s:property value="toDate" /></td>
             </tr>
             
-                 <tr >
-													<td   ><label name="group.name" class = "set"  id="group.name" ondblclick="callShowDiv(this);"><%=label.get("group.name")%></label> <font color="red">*</font> :</td>
-													<td   nowrap="nowrap" colspan="2"><s:textfield name="groupName" size="20" onkeypress="return allcharacters();" maxlength="20" /></td>
-													<td   ></td>
+                 <tr>
+					<td><label name="group.name" class = "set"  id="group.name" ondblclick="callShowDiv(this);"><%=label.get("group.name")%></label> <font color="red">*</font> :</td>
+					<td nowrap="nowrap" colspan="2"><s:textfield name="groupName" size="20" onkeypress="return allcharacters();" maxlength="20" /></td>
+					<td><input type="button" name="importgroup" id="importgroup" value="Import" onclick="return importGrp();"/></td>
 													
-											</tr>    
+				</tr>    
            
           
             </table></td>
@@ -163,7 +163,7 @@
 								id="editRemove" ondblclick="callShowDiv(this);">Define Appraisee</label>&nbsp;
 							</td>
 							<td class="formth" class="formth" width="20%" id="ctrlHide">
-							<input type="button" class="delete" value="    Delete" onclick="return deleteProcessConfig();">
+							<input type="button" class="delete" value="Delete" onclick="return deleteProcessConfig();">
 							</td>
 						</tr>
 						<%
@@ -238,6 +238,18 @@
 </s:form>
 
 <script>
+
+function importGrp(){
+	
+	var name = document.getElementById('importgroup').value;
+	alert(name);
+	document.getElementById('paraFrm').action = 'AppraiserConfig_importGrpdetails.action';
+	document.getElementById('paraFrm').submit();
+	
+	
+	
+	return true;
+}
 function resetFun()
 {
 	
@@ -300,8 +312,10 @@ function rowCheck(){
 		  	  
 		  	  }
 		  	 }
+		  	 
+		  	 
 function defineAppraiserGrp(mycheck,groupId)
-{
+{alert();
 	
 	document.getElementById('paraFrm_groupId').value=groupId;
 	document.getElementById('paraFrm').action='AppraiserConfig_defineAppraiser.action';

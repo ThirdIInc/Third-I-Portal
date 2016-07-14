@@ -1,6 +1,6 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <%@include file="/pages/common/labelManagement.jsp" %>
-<s:form action="TestTemplate" validate="true" id="paraFrm" validate="true" theme="simple">
+<s:form action="TestTemplate" validate="true" id="paraFrm" theme="simple">
 <s:hidden name="testTemplateCode"/>
 <s:hidden name="cancelFlag" />
 <s:hidden name="myPage" id="myPage" />

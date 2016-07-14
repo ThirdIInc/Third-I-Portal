@@ -1,7 +1,6 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <%@include file="/pages/common/labelManagement.jsp"%>
-<s:form action="InterviewAssessMasterAction" validate="true"
-	id="paraFrm" validate="true" theme="simple">
+<s:form action="InterviewAssessMasterAction" validate="true"	id="paraFrm"  theme="simple">
 	<s:hidden name="groupCode" />
 	<s:hidden name="parameterCode" />
 	<s:hidden name="myPage" id="myPage"/>

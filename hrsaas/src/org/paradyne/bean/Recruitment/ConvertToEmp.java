@@ -56,7 +56,29 @@ public class ConvertToEmp extends BeanBase {
 	private String totalPage="";
 	private String appointmentCode = "";
 	private String appointmentCodeItr = "";
+	private String ittrdivisionCode = "";
+	private String ittrdesgnCode = "";
+	private String ittrbranchCode = "";
+	private String ittrdeptCode = "";
 	
+	public String getIttrdeptCode() {
+		return ittrdeptCode;
+	}
+	public void setIttrdeptCode(String ittrdeptCode) {
+		this.ittrdeptCode = ittrdeptCode;
+	}
+	public String getIttrbranchCode() {
+		return ittrbranchCode;
+	}
+	public void setIttrbranchCode(String ittrbranchCode) {
+		this.ittrbranchCode = ittrbranchCode;
+	}
+	public String getIttrdesgnCode() {
+		return ittrdesgnCode;
+	}
+	public void setIttrdesgnCode(String ittrdesgnCode) {
+		this.ittrdesgnCode = ittrdesgnCode;
+	}
 	public String getAppointmentCodeItr() {
 		return appointmentCodeItr;
 	}
@@ -375,6 +397,12 @@ public class ConvertToEmp extends BeanBase {
 	}
 	public void setAppointmentCode(String appointmentCode) {
 		this.appointmentCode = appointmentCode;
+	}
+	public String getIttrdivisionCode() {
+		return ittrdivisionCode;
+	}
+	public void setIttrdivisionCode(String ittrdivisionCode) {
+		this.ittrdivisionCode = ittrdivisionCode;
 	}
 	
 }

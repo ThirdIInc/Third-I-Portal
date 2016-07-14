@@ -70,6 +70,10 @@ public class AppraiserConfigAction extends ParaActionSupport {
 		
 		return "f9page";
 	}
+	
+	/*
+		
+	}*/
 	public String resetDetails(){
 		/*appraiserConfig.setPhaseId("");
 		appraiserConfig.setPhaseName("");
@@ -878,4 +882,13 @@ public String getEmployees1(){
 		return "addEmloyee";
 		
 	}
+	public String importGrpdetails(){
+		String apprName=appraiserConfig.getApprCode();
+		System.out.println("Aprraisal Name:"+apprName);
+		AppraiserConfigModel model = new AppraiserConfigModel();
+		model.initiate(context, session);
+		boolean importGrp = model.getImportGrp(request,appraiserConfig);
+		return SUCCESS;
+	}
+	
 }

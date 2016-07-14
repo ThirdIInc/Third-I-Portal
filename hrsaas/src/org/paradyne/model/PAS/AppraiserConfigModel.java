@@ -20,6 +20,10 @@ public class AppraiserConfigModel extends ModelBase {
 	static org.apache.log4j.Logger logger = org.apache.log4j.Logger
 	.getLogger(AppraiserConfigModel.class);
 	
+	
+	
+	/**/
+	
 	public Object[][] getEmployees(AppraiserConfig bean){
 		String query ="";
 		String subQuery="";
@@ -1024,4 +1028,29 @@ public boolean deleteApprGroupConfg(AppraiserConfig bean, HttpServletRequest req
 		return result;	
 		
 	}
+	public boolean getImportGrp(HttpServletRequest request, AppraiserConfig bean){
+		boolean result = false;
+		Object[][] apprId =  new Object[1][1];
+		try {
+			String apprName[]=request.getParameterValues("apprCode");
+			if(apprName != null && apprName.length >0){
+							
+				apprId[0][0] = bean.getApprId();
+				
+			}
+			
+			String query = "INSERT INTO APPR_CONFIG(APPR_ID) VALUES(?)";
+			 result = getSqlModel().singleExecute(query, apprId);
+			System.out.println(result);
+			logger.info("----------------"+result);
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return  result;
+	}
+
+	
 }
