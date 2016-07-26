@@ -29,7 +29,7 @@
 
 	<definition name=".mainLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS portal" />
 		<put-attribute name="header" value="/pages/common/header.jsp" />
 		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
 		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
@@ -39,7 +39,7 @@
 
 	<definition name=".myPageLeftRightLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS portal" />
 		<put-attribute name="header" value="/pages/common/header.jsp" />
 		<put-attribute name="menu" value="/pages/common/menu.jsp" />
 		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
@@ -49,7 +49,7 @@
 
 	<definition name=".mainLayoutPay"
 		template="/pages/common/layoutPay.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS portal" />
 		<put-attribute name="header" value="" />
 		<put-attribute name="menu" value="/pages/common/menu.jsp" />
 		<put-attribute name="rightTile" value="" />
@@ -59,7 +59,7 @@
 	
 	<definition name=".payrollLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS portal" />
 		<put-attribute name="header" value="/pages/common/header.jsp" />
 		<!--  <put name="menu" value="/pages/common/payrollLeftMenu.jsp" />-->
 		<put-attribute name="menu" value="/pages/common/payrollLeftMenu.jsp" />

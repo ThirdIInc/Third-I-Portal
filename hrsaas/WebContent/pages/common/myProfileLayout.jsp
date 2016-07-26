@@ -167,6 +167,7 @@ function errorHandler(){
 			</tr>
 				<%
          					for (int i = 0; i < hrmData.length; i++) {
+         						System.out.println("hrmdata:::>>>>>:::>>>"+hrmData[i][1]);
         	 			%>
 			<tr id="off"  >
 				<td width="17%">
@@ -175,7 +176,8 @@ function errorHandler(){
 					height="16" /></div>
 				</td>
 				<td width="100%" height="20" nowrap="nowrap"><a id="official"
-					href="..<%=hrmData[i][1] %>" class="dashlink"><%=hrmData[i][0]%></a></td>
+					href="..<%=hrmData[i][1] %>" class="dashlink"><%=hrmData[i][0]%>
+					</a></td><% %>
 			</tr>
 			<% } 
 			%>

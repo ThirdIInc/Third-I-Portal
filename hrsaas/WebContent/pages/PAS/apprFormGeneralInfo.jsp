@@ -1,6 +1,6 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <%@include file="/pages/common/labelManagement.jsp" %>
-<%@page import="org.paradyne.bean.PAS.ApprFormGeneralInfo;"%>
+<%@page import="org.paradyne.bean.PAS.*"%>
 
 <% ApprFormGeneralInfo aprInfo = new ApprFormGeneralInfo(); %>
 

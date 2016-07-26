@@ -49,7 +49,7 @@ function errorHandler(){
 <tiles:insertAttribute name="header"/>
 </td></tr>
 <tr height="100%" WIDTH="100%" >
-<td width="2" valign="top" style="padding-top: 10px;"><tiles:insertAttribute name="menu" /></td>
+<td width="2" valign="top" style="padding-top: 10px;"><tiles:insertAttribute name="menu" /></td> 
 <td valign="top" width="100%" style="padding-top: 10px;padding-left: 5px;padding-right:5px;">
 <tiles:insertAttribute name="body"/>
 </td>

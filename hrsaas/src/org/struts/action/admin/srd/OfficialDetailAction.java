@@ -1123,6 +1123,7 @@ public class OfficialDetailAction extends org.struts.lib.ParaActionSupport {
 		model.showHRM(code);
 		model.terminate();
 		return SUCCESS;
+		
 	}
 
 	/*

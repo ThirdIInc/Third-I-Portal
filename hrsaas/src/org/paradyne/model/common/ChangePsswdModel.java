@@ -105,9 +105,9 @@ public class ChangePsswdModel extends ModelBase {
 	public void savePsswd(ChangePsswdBean bean) throws EncryptionException {
 		try {
 			String passQuery = " SELECT LOGIN_PASSWORD FROM HRMS_LOGIN WHERE EMP_ID= "
-					+ bean.getUserEmpId()
-					+ " and LOGIN_NAME = '"
-					+ bean.getChatLogin() + "'";
+					+ bean.getUserEmpId();
+					//+ " and LOGIN_NAME = '";
+					//+ bean.getChatLogin() + "'";
 			Object[][] resultPass = getSqlModel().getSingleResult(passQuery);
 			String log_code = bean.getUserLoginCode();
 			String emp_id = bean.getEmp_id();
@@ -214,9 +214,9 @@ public class ChangePsswdModel extends ModelBase {
 		try {
 			// HrWork Login
 			String passQuery = " SELECT LOGIN_PASSWORD FROM HRMS_LOGIN WHERE EMP_ID= "
-					+ bean.getUserEmpId()
-					+ " and LOGIN_NAME = '"
-					+ bean.getChatLogin() + "'";
+					+ bean.getUserEmpId();
+					//+ " and LOGIN_NAME = '"
+					//+ bean.getChatLogin() + "'";
 			Object[][] resultPass = getSqlModel().getSingleResult(passQuery);
 			String dPass = "";
 			// setting password

@@ -7,7 +7,7 @@
 	src="../pages/common/include/javascript/jquery-1.2.2.pack.js"></script>
 
 <s:form action="EmployeeRequi" validate="true" id="paraFrm"
-	validate="true" theme="simple">
+	 theme="simple">
 	<table width="100%" border="0" align="right" class="formbg">
 		<tr>
 			<td colspan="3">
@@ -628,9 +628,9 @@
 															<td width="10%" align="center" class="sortableTD"><%=++v%></td>
 
 															<td width="15%" align="center" class="sortableTD">&nbsp;
-															<s:property value="noOfVac" id="<%="noOfVac"+v%>" /></td>
+															<s:property value="noOfVac" id='<%="noOfVac"+v%>' /></td>
 															<td width="15%" align="center" class="sortableTD">&nbsp;
-															<s:property value="vacDate" id="<%="vacDate"+v%>" /></td>
+															<s:property value="vacDate" id='<%="vacDate"+v%>' /></td>
 
 
 														</tr>

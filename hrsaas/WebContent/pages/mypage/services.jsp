@@ -55,14 +55,12 @@
 		<%if(j!=0)
 		 {
 		 %>
-		 <tr>
+		<!-- <tr>
 			<td colspan="6">&nbsp;</td>
 		</tr>
 
 		<tr>
-			<td colspan="6" style="height: 1px; background-color: #EBEBEB;  "> 
-			 
-			 </td>
+			 <td colspan="6" style="height: 1px; background-color: #EBEBEB;  "> </td> 
 		</tr>
 		
 
@@ -71,9 +69,9 @@
 			<%if(j!=0)
 		 {
 		 %>
-		<tr>
+		<!-- <tr>
 			<td colspan="6">&nbsp;</td>
-		</tr>
+		</tr> -->
 
 		<%} %>
 

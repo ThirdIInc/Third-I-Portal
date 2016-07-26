@@ -3493,34 +3493,27 @@
 	</definition>
 	<definition name="master.qualification" extends=".mainLayout">
 		<put name="title" value="Post Applied Master" />
-		<put name="body"
-			value="/pages/recruitment/QualificationMaster.jsp" />
+		<put name="body" value="/pages/recruitment/QualificationMaster.jsp" />
 	</definition>
 
 	<definition name="inductionSchdPlan.Master" extends=".mainLayout">
 		<put name="title" value="Induction Schedule Approval" />
-		<put name="body"
-			value="/pages/recruitment/inductionSchdPlan.jsp" />
+		<put name="body" value="/pages/recruitment/inductionSchdPlan.jsp" />
 	</definition>
 
-	<definition name="viewInductionSchdPlan.Master"
-		extends=".mainLayout">
+	<definition name="viewInductionSchdPlan.Master"	extends=".mainLayout">
 		<put name="title" value="Induction Schedule Approval" />
-		<put name="body"
-			value="/pages/recruitment/viewInductionSchdPlan.jsp" />
+		<put name="body" value="/pages/recruitment/viewInductionSchdPlan.jsp" />
 	</definition>
 
-	<definition name="scheduledInductionSchdPlan.Master"
-		extends=".mainLayout">
+	<definition name="scheduledInductionSchdPlan.Master" extends=".mainLayout">
 		<put name="title" value="Induction Schedule Approval" />
-		<put name="body"
-			value="/pages/recruitment/scheduledInduction.jsp" />
+		<put name="body" value="/pages/recruitment/scheduledInduction.jsp" />
 	</definition>
 
 	<definition name="inductionFeedback.Master" extends=".myPageLeftRightLayout">
 		<put name="title" value="Induction Feedback" />
-		<put name="body"
-			value="/pages/recruitment/inductionFeedback.jsp" />
+		<put name="body" value="/pages/recruitment/inductionFeedback.jsp" />
 	</definition>
 	 
 

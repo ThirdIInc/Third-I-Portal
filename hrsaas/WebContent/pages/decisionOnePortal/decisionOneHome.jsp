@@ -4,6 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
+	<%
+String comanyName = (String) request.getAttribute("comanyName");
+String pool_name="abc";
+%>
+	
+	<title><%=comanyName%></title>
 			<jsp:include page="/pages/CommonCssJS.jsp" ></jsp:include>
 			<link rel="stylesheet" type="text/css" href="../pages/decisionOnePortal/Css/navigationMenu.css"/>
 			<script type="text/javascript" src="../pages/common/Ajax.js"></script>
@@ -46,7 +52,7 @@
 		</script>
 	
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-			<title>PeoplePower</title>
+			
 
 	</head>
 <body>
@@ -312,10 +318,8 @@
 			}
 		}
 	</script>
-						
-								   
 			
-			<div id="clientNameDtls" style="background-color: #6979ac; float: left; width: 100%; margin: 0; padding: 0;">
+			<!-- <div id="clientNameDtls" style="background-color: #6979ac; float: left; width: 100%; margin: 0; padding: 0;"> -->
 			 
 				<%
 				//check for menu list Empty or not
@@ -355,10 +359,10 @@
 			<div>
 			<%
 				String homePage = "";
-				if (session.getAttribute("homePage") != null)
+				if (session.getAttribute("homePage") != null)	
 					homePage = String.valueOf(session.getAttribute("homePage"));
 				else
-					homePage = "/common/HomePage_decisionHome.action";
+					//homePage = "/common/HomePage_decisionHome.action";
 			%>
 					
 							<% //check for menu list Empty or not
@@ -366,12 +370,11 @@
 							%>
 						
 							
-							<div valign="top"><iframe id="myframe"
-								frameborder="0"
+							 <div valign="top">
+							 	<iframe id="myframe" frameborder="0"
 								style="vertical-align: top; float: center; border: 0px solid;"
-								src="<%=request.getContextPath()+homePage %> "
 								scrolling="auto" marginwidth="0" marginheight="0" 
-								name="main" width="98%"> </iframe></div>
+								name="main" width="98%"> </iframe> </div>
 							<%
 							} else {
 							%>
@@ -380,19 +383,21 @@
 								name="contents" scrolling="no" marginwidth="0" height="0px"
 								id="leftFrame" width="0" marginheight="0" frameborder="0"> </iframe> 
 								
-								<iframe src="<%=request.getContextPath()%>/pages/common/hiddenFrame.jsp"
-								name="hiddenFrame" scrolling="no" marginwidth="0"
-								marginheight="0" frameborder="0"  width="0" height="0"></iframe>
+								<iframe name="hiddenFrame" scrolling="no" marginwidth="0"
+								marginheight="0" frameborder="0"  width="0" height="0" ></iframe>
 							</div>	
-							<div class="row" style=" align:center;">
-								<iframe id="myframe" frameborder="0" style="vertical-align: top; float: none; border: 0px solid; height: 600px;"
-								src="<%=request.getContextPath()+homePage%>"
-								scrolling="auto" marginwidth="0" marginheight="0" 
-								name="main" width="100%"> </iframe>
-							</div>
+							
+							<div class = "home" style=" align:center;">
+							<!-- <p>Welcome to HRMS  Portal</p> -->
+								<iframe id="myframe" style = "border: 0px solid;"scrolling="auto" name="main" width="100%"
+								src="<%=request.getContextPath()+homePage%>"></iframe>
+								
+								
+						</div> 
 						<% }//end icol%>
 					
 			</div>
+			
 	</div>
 	
 </s:form>

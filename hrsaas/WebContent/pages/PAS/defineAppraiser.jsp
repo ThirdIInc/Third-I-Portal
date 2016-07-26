@@ -53,12 +53,10 @@
               <td width="25%" colspan="1" height="20" class="formtext"><label name="appraisal.code" class = "set"  id="appraisal.code" ondblclick="callShowDiv(this);"><%=label.get("appraisal.code")%></label> <font color="red">*</font> :</td>
 			  <td width="25%" colspan="1" height="20" align="left"><s:hidden name="apprCode"  /><s:property value="apprCode" /></td>
               <td width="50%" colspan="1" height="20" class="formtext"><label name="group.name" class = "set"  id="group.name" ondblclick="callShowDiv(this);"><%=label.get("group.name")%></label>  :</td>
-	        	<td width="50%" colspan="2" height="20"><s:hidden name="groupName"  /><s:property value="groupName" /></td>
+	        	<td width="50%" colspan="2" height="20"><s:hidden name="groupName"/><s:property value="groupName" /></td>
             </tr>
               
             <tr>
-              
-              
               <td width="25%" colspan="1" height="20" class="formtext" nowrap="nowrap"><label name="phase.name" class = "set"  id="phase.name" ondblclick="callShowDiv(this);"><%=label.get("phase.name")%></label> <font color="red">*</font> :</td>
 			  <td width="25%" colspan="1" height="20" nowrap="nowrap"><s:textfield name="phaseName" size="20" maxlength="25" readonly="true" /><s:hidden name="phaseId" /><img src="../pages/images/recruitment/search2.gif" height="16" align="absmiddle" width="17" theme="simple" onclick="callPhase();" ></td>
               <td width="25%" height="22" class="formtext"nowrap="nowrap" colspan="1"><s:hidden name="isSelfPhase"/></td>

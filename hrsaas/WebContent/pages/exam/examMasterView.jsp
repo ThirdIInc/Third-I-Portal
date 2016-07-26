@@ -12,7 +12,7 @@ var categoryArray=new Array();
 			.toString());
 %>
 
-<s:form action="ExamMaster" validate="true" id="paraFrm" validate="true"
+<s:form action="ExamMaster" validate="true" id="paraFrm" 
 	theme="simple">
 	<s:hidden name="show" value="%{show}" />
 	<s:hidden name="hiddencode" />

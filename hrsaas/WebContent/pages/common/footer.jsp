@@ -1,7 +1,7 @@
 
 		<table width="99%" border="0" cellspacing="0" cellpadding="0" style="margin: 1px;">
 		<tr>
-					<td height="20px" bgcolor="#7d5da7" class="border1" width="100%">
+					<!--  <td height="20px" bgcolor="#7d5da7" class="border1" width="100%">
 					<table width="100%" border="0" align="center">
 						<tr>
 							
@@ -20,12 +20,12 @@
 							</td>
 						</tr>
 					</table>
-					</td>
+					</td>-->
 				</tr>
 		</table>
-<table width="99%" border="0" cellspacing="0" cellpadding="0">
+<!-- <table width="99%" border="0" cellspacing="0" cellpadding="0">
 	<tr>
-		
+		<div class="border"></div>
 		<td width="40%" align="right" valign="top">
 
 		<table width="100%" border="0" cellspacing="0" cellpadding="0"
@@ -46,6 +46,6 @@
 		</td>
 	</tr>
 </table>
-
+ -->
 
 

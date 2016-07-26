@@ -7,7 +7,8 @@ import org.paradyne.lib.StringEncrypter.EncryptionException;
 import org.paradyne.model.common.ChangePsswdModel;
 import org.paradyne.model.common.UserModel;
 
-public class ChangePsswdAction extends org.struts.lib.ParaActionSupport {
+@SuppressWarnings("serial")
+public class ChangePasswordAction extends org.struts.lib.ParaActionSupport {
 	ChangePsswdBean bean;
 
 	static org.apache.log4j.Logger logger = org.apache.log4j.Logger
@@ -97,7 +98,7 @@ public class ChangePsswdAction extends org.struts.lib.ParaActionSupport {
 	 * @throws Exception
 	 */
 	public String savePsswd() throws EncryptionException, Exception {
-		logger.info(" the change pass word is==================");
+		logger.info(" the change password is==================");
 		ChangePsswdModel model = new ChangePsswdModel();
 		UserModel userModel = new UserModel();
 		/* sets employee id and name */

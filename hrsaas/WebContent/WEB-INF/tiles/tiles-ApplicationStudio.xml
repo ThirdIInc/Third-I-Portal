@@ -12,7 +12,7 @@
 
 	<definition name=".mainLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="PeoplePower1" />
 		<put-attribute name="header" value="/pages/common/header.jsp" />
 		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
 		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
@@ -23,7 +23,7 @@
 
 	<definition name=".dashLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="PeoplePower1" />
 		<put-attribute name="header" value="" />
 		<put-attribute name="menu" value="" />
 		<put-attribute name="rightTile" value="" />
@@ -34,7 +34,7 @@
 
 	<definition name=".loginLayout"
 		template="/pages/common/loginLayout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="PeoplePower1" />
 		<put-attribute name="header" value="" />
 		<put-attribute name="footer" value="" />
 		<put-attribute name="body" value="" />
@@ -51,7 +51,7 @@
 
 	<definition name=".cofigurationLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="PeoplePower1" />
 		<put-attribute name="header" value="/pages/common/header.jsp" />
 		<put-attribute name="menu" value="/pages/common/configurationLeftMenu.jsp" />
 		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />

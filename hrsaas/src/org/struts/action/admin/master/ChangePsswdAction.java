@@ -39,8 +39,8 @@ public class ChangePsswdAction extends org.struts.lib.ParaActionSupport {
 		
 	}
 	public String savePsswd() throws EncryptionException
-	{
-		logger.info(" the change pass word is");
+	{	
+		logger.info(" the change password is");
 		ChangePsswdModel model =new ChangePsswdModel();
 		model.initiate(context,session);
 		model.savePsswd(bean);

@@ -1,18 +1,24 @@
-
 <%@ taglib prefix="s" uri="/struts-tags"%>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../pages/common/decisionOneDashboard/decisionOneDashboard.css"/>
 <script type="text/javascript" src="../pages/common/Ajax.js"></script>
 <script type="text/javascript" src="../pages/common/js/ajax.js"></script>
 <script type="text/javascript"
 	src="../pages/common/js/dragable-boxes.js"></script>
 <script type="text/javascript" src="../pages/common/js/jquery.min.js"></script>
 <script type="text/javascript" src="../pages/common/js/jquery.loader.js"></script>
-
-<s:form action="HomePage" id="paraFrm" name="HomeForm" theme="simple"></s:form>
-
-<input type="hidden" name="divMovementHidden" id="divMovementHidden" />
-<s:hidden id="screenWidth" name="screenWidth"></s:hidden>
+</head>
 
 
+<body>
+<!--<s:form action="HomePage" id="paraFrm" name="HomeForm" theme="simple"></s:form>-->
+
+<!-- <input type="hidden" name="divMovementHidden" id="divMovementHidden" />
+<s:hidden id="screenWidth" name="screenWidth"></s:hidden> -->
+<div class = "hometext">
+		Performance Review 2016
+</div>
 <%
 			String[][] portalAppsObj = (String[][]) request
 			.getAttribute("portalD1Obj");
@@ -91,15 +97,17 @@
 	}
 %>
 
-<table width="100%" border="0" cellspacing="0" cellpadding="0"
+
+
+<!-- <table width="100%" border="0" cellspacing="0" cellpadding="0"
 	align="center">
 	<tr>
 		<%
 		if (portalAppsObj != null && portalAppsObj.length > 0) {
 		%>
 
-		<td width="15%" valign="top">
-		<table width="100%" border="0" cellpadding="0" cellspacing="1">
+		<td width="15%" valign="top"> -->
+			<!--  <table width="100%" border="0" cellpadding="0" cellspacing="1">
 			<tr>
 				<td><img src="../pages/images/icons/portal/myapps.png" /></td>
 			</tr>
@@ -119,7 +127,7 @@
 					}
 			%>
 			<tr></tr>
-		</table>
+		</table>-->
 		</td>
 
 
@@ -131,26 +139,27 @@
 
 
 
-		<td>
-		<table width="100%" border="0" cellspacing="5px" cellpadding="0"
-			align="center">
-			<%
+		<!-- <td>
+		 <table width="100%" border="0" cellspacing="5px" cellpadding="0"
+			align="center">-->
+		<%
 				int counter = 0;
 				String str = "defaultText";
 			%>
-			<%
+		<%
 			for (int p = 0; p < (totdashs / totCols + 1); p++) {
 			%>
-			<tr>
-				<%
+	
+	<tr>
+		<%
 				for (int q = 0; q < totCols; q++) {
 				%>
-				<%
+		<%
 				if (counter < totdashs) {
 				%>
-				<td width="<%=widths.split(",")[q]%>%" valign="top">
+		<!-- <td width="<%=widths.split(",")[q]%>%" valign="top"> -->
 
-				<table width="100%" border="0" align="center" cellpadding="0"
+		<!--<table width="100%" border="0" align="center" cellpadding="0"
 					cellspacing="0" class="dashborder">
 					<tr>
 						<td height="25" bgcolor="#f2f2f2" class="bottomborder">
@@ -192,31 +201,28 @@
 						</td>
 					</tr>
 
-				</table>
-				</td>
+				</table>-->
+		<!-- </td> -->
 
-				<%
+		<%
 							counter++;
 
 							}
 				%>
-				<%
+		<%
 				}
 				%><!-- End of for for <td> -->
 
-			</tr>
-			<%
+	</tr>
+	<%
 			}
 			%><!-- End of for loop for <tr> -->
 
-		</table>
-		</td>
-	</tr>
-</table>
+	<!-- </table></td></tr></table> -->
+</body>
+</html>
 
-
-
-<script type="text/javascript">
+	<script type="text/javascript">
 (function($){
 $(document).ready(function(){
 	

@@ -14,7 +14,7 @@
 			if (typeof p1=="string"){ 
 				image=(p1=="")?"../images/zoomloader.gif":p1;
 			}
-			else image="../images/zoomloader.gif";
+			/*else image="../images/zoomloader.gif";
 			var jNode=$('<div style="-moz-opacity:0.8;opacity:0.8;filter:alpha(opacity=80);color:#333;font-size:12px;font-family:Tahoma;'
 				+'text-align:center;background-image:url('+image+');position:absolute;'
 				+'background-repeat:no-repeat;background-position:43px 30px;width:100px;height:55px;z-index:999;'
@@ -25,7 +25,7 @@
 			});
 			var t=parseInt(this.target.offset().top+(this.target.height()-jNode.height())/2);
 			var l=parseInt(this.target.offset().left+(this.target.width()-jNode.width())/2);
-			this.jNode=jNode.css({top:t,left:l})
+			this.jNode=jNode.css({top:t,left:l})*/
 		}
 	}
 	Loader.prototype.callBack=function(){

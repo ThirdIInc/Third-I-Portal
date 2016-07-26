@@ -3,6 +3,7 @@
 
 <s:form action="ApprFormStart" validate="true" id="paraFrm"
 	theme="simple">
+<s:hidden name="finalApprEmpNameItt" /> 
 
 	<table width="100%" border="0" align="right" cellpadding="2"
 		cellspacing="1" class="formbg">

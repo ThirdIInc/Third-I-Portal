@@ -166,13 +166,13 @@
 												</td>
 												<td width="60%" class="sortableTD"><s:property
 													value="inducListName" /> <s:hidden name="inducListName"
-													id="<%="inducListName"+j%>" /></td>
+													id='<%="inducListName"+j%>' /></td>
 												<td nowrap="nowrap" class="sortableTD"><s:property
 													value="inducFrmDt" /> <s:hidden name="inducFrmDt"
-													id="<%="inducFrmDt"+j%>" /></td>
+													id='<%="inducFrmDt"+j%>' /></td>
 												<td nowrap="nowrap" class="sortableTD"><s:property
 													value="inducToDt" /> <s:hidden name="inducToDt"
-													id="<%="inducToDt"+j%>" /></td>
+													id='<%="inducToDt"+j%>' /></td>
 											</tr>
 											<%j++;%>
 										</s:iterator>

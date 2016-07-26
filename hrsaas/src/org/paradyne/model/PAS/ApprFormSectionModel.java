@@ -140,7 +140,9 @@ public class ApprFormSectionModel extends ModelBase {
 			sectionObj[2] = bean.getPhaseCode();
 			sectionObj[3] = bean.getSectionCode();
 			sectionObj[4] = ""+groupObj[0][0];
-			
+			String phaseOrderQuery = "select appr_phase_order from pas_appr_phase_config where phase_id = "+bean.getPhaseCode()+" ";
+			Object PhaseOrder = getSqlModel().getSingleResult(phaseOrderQuery);
+			System.out.println("phase order-------------------"+PhaseOrder);
 			// get the questions for the selected group and for this section and this phase
 			Object quesData[][] = getSqlModel().getSingleResult(getQuery(3),sectionObj);
 			
@@ -154,7 +156,7 @@ public class ApprFormSectionModel extends ModelBase {
 				+"		WHERE  PAS_APPR_COMMENTS.APPR_ID= "+bean.getApprId()+" AND PAS_APPR_COMMENTS.APPR_TEMPLATE_ID = "+bean.getTemplateCode()+"  "
 				+"		and APPR_EVALUATOR_CODE  != "+bean.getUserEmpId()+" and PAS_APPR_COMMENTS.APPR_EMP_ID = "+bean.getEmpId()+"  "
 				+"      and PAS_APPR_COMMENTS.APPR_SECTION_ID = "+bean.getSectionCode()+" "
-				+"      and PAS_APPR_PHASE_CONFIG.APPR_PHASE_ORDER  < "+groupObj[1][1]+" "
+				+"      and PAS_APPR_PHASE_CONFIG.APPR_PHASE_ORDER  < "+PhaseOrder+" "
 				+"		ORDER BY PAS_APPR_PHASE_CONFIG.APPR_PHASE_ORDER,APPR_EVALUATOR_LEVEL,PAS_APPR_QUES_MAPPING.APPR_QUESTION_ORDER ";
 						
 			Object[][]subObj=getSqlModel().getSingleResult(query);

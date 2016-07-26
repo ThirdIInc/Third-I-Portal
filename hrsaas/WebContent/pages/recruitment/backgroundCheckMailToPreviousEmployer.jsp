@@ -9,9 +9,10 @@
 </style>
 <%@include file="/pages/common/labelManagement.jsp"%>
 
+
 <script type="text/javascript"
 	src="http://<%=request.getServerName()%>:<%=request.getServerPort()%><%=request.getContextPath()%>/pages/common/fckeditor/fckeditor.js"></script>
-
+	
 <s:form action="BackGroundCheck" method="post" name="EmailTemplate"
 	validate="true" id="paraFrm" theme="simple">
 
@@ -149,6 +150,8 @@ function setMess() {
 	
 	
 function setMessage() {
+	
+	
 	var oEditor = FCKeditorAPI.GetInstance('MyTextarea') ;
 	var ms=document.getElementById('paraFrm_htmlcode').value=oEditor.GetHTML();
 }
@@ -160,6 +163,7 @@ function callCancel() {
  function sendMailFunction() {  
 		try {
 		setMessage();
+		debugger;
 				var emailID = trim(document.getElementById("paraFrm_bgcheckMailToMailID").value);
 				if(emailID =="") {
 					alert("please enter "+document.getElementById('bgcheck.toMailId').innerHTML.toLowerCase());

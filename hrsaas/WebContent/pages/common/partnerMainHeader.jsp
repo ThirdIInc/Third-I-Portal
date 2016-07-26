@@ -5,8 +5,12 @@
 <head>
 <link rel="stylesheet" type="text/css" title="default-theme"
 	href="../pages/common/css/commonCSS.jsp" />
+<%
+String comanyName = (String) request.getAttribute("comanyName");
+String pool_name="abc";
+%>
+<title><%=comanyName%></title>
 
-<title>PeoplePower</title>
 </head>
 <body topmargin="0" leftmargin="0" class="main">
 

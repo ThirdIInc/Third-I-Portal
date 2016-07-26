@@ -194,10 +194,11 @@ public class ConvertToEmpAction extends ParaActionSupport
 
       String requisitionCode = "";
       String candidateCode = "";
-      String appointmentCode = this.convertEmp.getHiddenappointmentCode();
+      String appointmentCode = convertEmp.getHiddenappointmentCode();
 
-      requisitionCode = this.convertEmp.getHiddenrequisationCode();
-      candidateCode = this.convertEmp.getHiddenCandiateCode();
+      requisitionCode = this.convertEmp.getReqsCode();
+      candidateCode = this.convertEmp.getCandidateCode();
+    
       System.out.println("requisitionCode :: " + requisitionCode);
       System.out.println("candidateCode :: " + candidateCode);
       ConvertToEmpModel model = new ConvertToEmpModel();

@@ -30,14 +30,14 @@
 
 	<definition name=".homeLayout"
 		template="/pages/common/homeLayout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="body" value="" />
 	</definition>
 
 
 	<definition name=".mainLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="header" value="/pages/common/header.jsp" />
 		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
 		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
@@ -49,7 +49,7 @@
 
 	<definition name=".myPageLeftRightLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="header" value="/pages/common/header.jsp" />
 		<put-attribute name="menu" value="/pages/common/menu.jsp" />
 		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
@@ -60,7 +60,7 @@
 
 	<definition name=".dashLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="header" value="" />
 		<put-attribute name="menu" value="" />
 		<put-attribute name="rightTile" value="" />
@@ -70,7 +70,7 @@
 
 	<definition name=".reportLayout"
 		template="/pages/common/reportLayout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="header" value="" />
 		<put-attribute name="footer" value="" />
 		<put-attribute name="body" value="" />
@@ -78,7 +78,7 @@
 
 	<definition name=".loginLayout"
 		template="/pages/common/loginLayout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="header" value="" />
 		<put-attribute name="footer" value="" />
 		<put-attribute name="body" value="" />
@@ -95,7 +95,7 @@
 	
 	<definition name=".payrollLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="header" value="/pages/common/header.jsp" />		
 		<put-attribute name="menu" value="/pages/common/payrollLeftMenu.jsp" />
 		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
@@ -105,7 +105,7 @@
 <!-- Added By Priyanka -->
 	<definition name=".hrmHomeLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="header" value="/pages/common/header.jsp" />		
 		<put-attribute name="menu" value="/pages/common/hrmHomeLeftMenu.jsp" />
 		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
@@ -116,7 +116,7 @@
 		
 	<definition name=".leaveAttendanceHomeLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="header" value="/pages/common/header.jsp" />		
 		<put-attribute name="menu" value="/pages/common/leaveAttendanceLeftMenu.jsp" />
 		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
@@ -126,7 +126,7 @@
 	
 	<definition name=".adminHomeLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="header" value="/pages/common/header.jsp" />		
 		<put-attribute name="menu" value="/pages/common/adminLeftMenu.jsp" />
 		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
@@ -137,7 +137,7 @@
 	
 	<definition name=".recruitmentHomeLayout"
 	template="/pages/common/layout.jsp">
-	<put-attribute name="title" value="PeoplePower"/>
+	<put-attribute name="title" value="HRMS Portal"/>
 	<put-attribute name="header" value="/pages/common/header.jsp"/>
 	<put-attribute name="menu" value="/pages/common/recruitmentHomeLeftMenu.jsp"/>
 	<put-attribute name="rightTile" value="/pages/common/rightTile.jsp"/>
@@ -147,7 +147,7 @@
 	
 	<definition name=".decisionOneHomeLayout"
 	template="/pages/common/layout.jsp">
-	<put-attribute name="title" value="PeoplePower"/>
+	<put-attribute name="title" value="HRMS Portal"/>
 	<put-attribute name="header" value="/pages/common/header.jsp"/>
 	<put-attribute name="menu" value="/pages/common/d1LeftMenuLayout.jsp"/>
 	<put-attribute name="rightTile" value="/pages/common/rightTile.jsp"/>
@@ -158,7 +158,7 @@
 
 	<definition name=".cofigurationLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="header" value="/pages/common/header.jsp" />
 		<put-attribute name="menu" value="/pages/common/configurationLeftMenu.jsp" />
 		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
@@ -169,7 +169,7 @@
 	
 	<definition name=".trainingLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="header" value="/pages/common/header.jsp" />		
 		<put-attribute name="menu" value="/pages/common/trainingLeftMenu.jsp" />
 		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
@@ -229,7 +229,7 @@
 
 
 	<definition name="mainheader" extends=".homeLayout">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="body" value="/pages/common/mainHeader.jsp" />
 	</definition>
 
@@ -442,13 +442,13 @@
 
 		
 	<definition name="ceoConnectData" extends=".myPageLeftRightLayout">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="body"
 			value="/pages/common/ceoConnectDashletData.jsp" />
 	</definition>
 	<!--  Added by prajakta B for show messages link of ceo connect-->
 	<definition name="ceoConnectMsg" extends=".myPageLeftRightLayout">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="body"
 			value="/pages/common/ceoConnectDashletMsg.jsp" />
 	</definition>
@@ -620,12 +620,12 @@
 	</definition>
 
 	<definition name="mypage.search" extends=".myPageLeftRightLayout">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="body" value="/pages/mypage/myPagEmpDirSearch.jsp" />
 	</definition>
 	
 	<definition name="common.configureHome" extends=".cofigurationLayout">
-		<put-attribute name="title" value="PeoplePower"/>
+		<put-attribute name="title" value="HRMS Portal"/>
 		<put-attribute name="body" value="/pages/common/configurationHome.jsp"/>
 	</definition>
 	

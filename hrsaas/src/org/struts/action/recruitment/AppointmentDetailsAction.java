@@ -1140,8 +1140,12 @@ public String f9ReportingAdminAction(){
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
+	
+
+		String empId = appointmentDetails.getEmployeeId();
+		String empName = appointmentDetails.getEmployeeName();
 		
-		comleteTemplate=template.execute(request,response,"APPOINTMENT_LETTER",true);
+		comleteTemplate=template.execute(request,response,"APPOINTMENT_LETTER",true, empId, empName);
 		logger.info("comleteTemplate....."+comleteTemplate);
 		comleteTemplate = comleteTemplate.replaceAll("&nbsp;", "");
 		comleteTemplate = comleteTemplate.replaceAll("& ", "&amp; ");
@@ -1303,7 +1307,10 @@ public String f9ReportingAdminAction(){
 			// TODO: handle exception
 		}
 		
-		String comleteTemplate=template.execute(request,response,"APPOINTMENT_LETTER");
+		String empId = appointmentDetails.getEmployeeId();
+		String empName = appointmentDetails.getEmployeeName();
+		
+		String comleteTemplate=template.execute(request,response,"APPOINTMENT_LETTER", empId, empName);
 		logger.info("comleteTemplate....."+comleteTemplate);
 		model.terminate();
 		}catch(Exception e){

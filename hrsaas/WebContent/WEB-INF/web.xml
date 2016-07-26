@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-	<display-name>PeoplePower</display-name>
+	<display-name>HRMS Portal</display-name>
 	
 	<context-param>
 		<param-name>org.apache.tiles.CONTAINER_FACTORY</param-name>
@@ -9,8 +9,7 @@
 			org.apache.struts2.tiles.StrutsTilesContainerFactory
 		</param-value>
 	</context-param>
-
-	
+		
 	
 	<context-param>
 <param-name> org.apache.tiles.impl.BasicTilesContainer.DEFINITIONS_CONFIG </param-name>
@@ -92,7 +91,6 @@
 			org.struts.action.ApplicationStudio.jobScheduling.SchedulerListener
 		</listener-class>
 	</listener>
-	
 	
 	
 	<welcome-file-list>

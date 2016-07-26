@@ -98,7 +98,7 @@
 		</action>
 
 		<action name="ChangePassword_*" method="{1}"
-			class="org.struts.action.common.ChangePsswdAction">
+			class="org.struts.action.common.ChangePasswordAction">
 			<result name="input" type="tiles">ChangePassword</result>
 			<result name="success" type="tiles">ChangePassword</result>
 			<result name="f9page" type="tiles">common.f9page</result>

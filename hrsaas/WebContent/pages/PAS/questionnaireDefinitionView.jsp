@@ -353,7 +353,7 @@
 
 <script type="text/javascript">
 
-alert('hiii');
+
 	function addnewFun() {
 		document.getElementById("paraFrm").action="QuestionnaireDefinition_addNew.action";
 		document.getElementById("paraFrm").submit();	

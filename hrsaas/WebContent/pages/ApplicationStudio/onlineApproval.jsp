@@ -19,7 +19,12 @@
 	<script type="text/javascript"
 	src="../pages/common/include/javascript/styleswitch.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>PeoplePower - Online Approval</title>
+<%
+String comanyName = (String) request.getAttribute("comanyName");
+String pool_name="abc";
+%>
+	
+	<title><%=comanyName%> Online Approval</title>
 
 <script type="text/javascript">
 

@@ -3,7 +3,7 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <%@include file="/pages/common/labelManagement.jsp"%>
 <s:form action="profileAction" validate="true" id="paraFrm"
-	validate="true" theme="simple">
+	 theme="simple">
 	<s:hidden name="hiddenProfile" />
 	<s:hidden name="hiddenProfileId" />
 	<s:hidden name="profileId" />

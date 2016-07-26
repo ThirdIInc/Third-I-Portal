@@ -407,7 +407,10 @@ public class OfferDetailsAction extends ParaActionSupport {
 					.getAttribute("session_pool"));
 		//	String completeTemplate = letterTemplate.executeWriteFile(request,
 			//response, "OFFER_LETTER");
-			String completeTemplate =letterTemplate.execute(request, response, "OFFER_LETTER", true);
+			
+			String empId = offerDetails.getEmployeeId();
+			String empName = offerDetails.getEmployeeName();
+			String completeTemplate =letterTemplate.execute(request, response, "OFFER_LETTER", true, empId, empName);
 			try {
 				completeTemplate = completeTemplate.replaceAll("&nbsp;", "");
 				completeTemplate = completeTemplate.replaceAll("& ", "&amp; ");
@@ -1460,7 +1463,10 @@ public class OfferDetailsAction extends ParaActionSupport {
 			} catch (final Exception e) {
 				// TODO: handle exception
 			}
-			comleteTemplate = template.execute(request, response, "OFFER_LETTER", true);
+			String empId = offerDetails.getEmployeeId();
+			String empName = offerDetails.getEmployeeName();
+			
+			comleteTemplate = template.execute(request, response, "OFFER_LETTER", true, empId, empName);
 			logger.info("comleteTemplate....." + comleteTemplate);
 			comleteTemplate = comleteTemplate.replaceAll("&nbsp;", "");
 			comleteTemplate = comleteTemplate.replaceAll("& ", "&amp; ");
@@ -1642,8 +1648,11 @@ public class OfferDetailsAction extends ParaActionSupport {
 			} catch (final Exception e) {
 				// TODO: handle exception
 			}
-			String comleteTemplate = template.execute(request, response,
-					"OFFER_LETTER");
+			
+			String empId = offerDetails.getEmployeeId();
+			String empName = offerDetails.getEmployeeName();
+			
+			String comleteTemplate = template.execute(request, response,"OFFER_LETTER", true, empId, empName);
 			logger.info("comleteTemplate....." + comleteTemplate);
 
 			model.terminate();

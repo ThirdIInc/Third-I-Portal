@@ -163,7 +163,7 @@
 					
 					<s:if test="%{bean.insertFlag || bean.updateFlag}">
 						<input type="button" class="add"
-						theme="simple" value="    Save"
+						theme="simple" value="Save" id="savebtn"
 						onclick="return calladd('hrwork');" />
 					</s:if> 
 					<s:if test="%{bean.generalFlag}"></s:if>   
@@ -632,11 +632,10 @@ function callDivLoad(id)
 
 function calladd(type)
 {
-    //alert(type);
-try
-{
+	try{
+		
 	if(type == 'hrwork')
-	{
+	{alert(type);
 	 
 			var fieldName1 = ["paraFrm_oldpsswd","paraFrm_newpsswd1","paraFrm_newpsswd2"];
 			var labelName1 = ["oldpass","newpass","confpass"];
@@ -644,136 +643,132 @@ try
 			var fieldName2 = ["paraFrm_userName","paraFrm_oldPass"];
 			var labelName2 = ["Email Address","Password"];
 		
-		if(!validateBlank(fieldName1, labelName1, flag))
+		if(!validateBlank(fieldName1, labelName1, flag)){
 			return false;
+		}
 		var oldpssd  = document.getElementById('paraFrm_oldpsswd').value;                               
 		var newpssd1 = document.getElementById('paraFrm_newpsswd1').value;
 		var newpssd2 = document.getElementById('paraFrm_newpsswd2').value;
 		var pssword  = document.getElementById('paraFrm_pssword').value;
-		if(newpssd1.length < eval(<%= minLength%>) || newpssd1.length > eval(<%= maxLength%>))
-		{
+		if(newpssd1.length < eval(<%= minLength%>) || newpssd1.length > eval(<%= maxLength%>)){
 			alert(document.getElementById('newpass').innerHTML.toLowerCase()+' should be of min <%= minLength%> and max <%= maxLength%> characters.');
 			document.getElementById('paraFrm_newpsswd1').focus();
 			return false;
 		} 
-		if(!validatePassword(pssword, oldpssd, newpssd1, newpssd2))
+		if(!validatePassword(pssword, oldpssd, newpssd1, newpssd2)){
+			alert("Please enter old password correctly");
 			return false;
+		}
 			
+		alert("action");
 		document.getElementById('paraFrm').action="ChangePassword_savePsswd.action";
 		document.getElementById('paraFrm').submit();
+		
 	}
-	if(type == 'email')
-	{
-	var fieldName1 = ["paraFrm_secureAns1","paraFrm_secureAns2","paraFrm_secureAns3"];
-	var labelName1 = ["que1","que2","que3"];
-	var flag = ["enter","enter","enter"];
-	var question1=document.getElementById('paraFrm_secureQue1').value;
-	var question2=document.getElementById('paraFrm_secureQue2').value;
-	var question3=document.getElementById('paraFrm_secureQue3').value;
-	var answer_1=document.getElementById('paraFrm_secureAns1').value;
-	var answer_2=document.getElementById('paraFrm_secureAns2').value;
-	var answer_3=document.getElementById('paraFrm_secureAns3').value;
-	if(!validateBlank(fieldName1, labelName1, flag))
-			{
+	
+	if(type == 'email'){
+		
+		var fieldName1 = ["paraFrm_secureAns1","paraFrm_secureAns2","paraFrm_secureAns3"];
+		var labelName1 = ["que1","que2","que3"];
+		var flag = ["enter","enter","enter"];
+		var question1=document.getElementById('paraFrm_secureQue1').value;
+		var question2=document.getElementById('paraFrm_secureQue2').value;
+		var question3=document.getElementById('paraFrm_secureQue3').value;
+		var answer_1=document.getElementById('paraFrm_secureAns1').value;
+		var answer_2=document.getElementById('paraFrm_secureAns2').value;
+		var answer_3=document.getElementById('paraFrm_secureAns3').value;
+	
+		if(!validateBlank(fieldName1, labelName1, flag)){
 			return false;
-			}
-		if(question1=="")
-		{
-		alert('Please select '+document.getElementById('que1').innerHTML.toLowerCase());
-		return false;
-	}
-	if(answer_1=="")
-	{
+		}
+		if(question1==""){
+			alert('Please select '+document.getElementById('que1').innerHTML.toLowerCase());
+			return false;
+		}
+		if(answer_1==""){
 			alert('Please enter answer of '+document.getElementById('que1').innerHTML.toLowerCase());
-		return false;
-	}
-		if(question2=="")
-	{
+			return false;
+		}
+		if(question2==""){
 			alert('Please select '+document.getElementById('que2').innerHTML.toLowerCase());
-		return false;
-	}
-	if(answer_2=="")
-	{
+			return false;
+		}
+		if(answer_2==""){
 			alert('Please enter answer of '+document.getElementById('que2').innerHTML.toLowerCase());
-		return false;
-	}
-		if(question3=="")
-	{
+			return false;
+		}
+		if(question3==""){
 			alert('Please select '+document.getElementById('que3').innerHTML.toLowerCase());
-		return false;
-	}
-	if(answer_3=="")
-	{
+			return false;
+		}
+		if(answer_3==""){
 			alert('Please enter answer of '+document.getElementById('que3').innerHTML.toLowerCase());
-		return false;
-	}
+			return false;
+		}
 		
 		document.getElementById('paraFrm').action="ChangePassword_saveQuestion.action";
 		document.getElementById('paraFrm').submit();
 	}
 	
-	if(type == 'image')
-	{
+	if(type == 'image'){
+		
 		var fieldName1 = ["paraFrm_userText"];
 		var labelName1 = ["securemsg"];
 		var flag = ["enter"];
-		if(!validateBlank(fieldName1, labelName1, flag))
-			{
+		if(!validateBlank(fieldName1, labelName1, flag)){
 			return false;
-			}
-	document.getElementById('paraFrm_userText').focus;
-	if(document.getElementById('paraFrm_userText').value=="")
- 	{
- 	alert("Please enter "+document.getElementById('securemsg').innerHTML.toLowerCase());;
- 	return false;
- 	}
+		}
+		document.getElementById('paraFrm_userText').focus;
+		if(document.getElementById('paraFrm_userText').value==""){
+ 			
+			alert("Please enter "+document.getElementById('securemsg').innerHTML.toLowerCase());;
+ 			return false;
+ 		}
  
- if(document.getElementById('paraFrm_hiddenRadio').value=="")
- {
- alert("Please select at least one image");
- 	return false;
- }
- 	document.getElementById('paraFrm').action="ChangePassword_saveImage.action";
+ 		if(document.getElementById('paraFrm_hiddenRadio').value==""){
+ 			alert("Please select at least one image");
+ 			return false;
+ 		}
+ 		
+ 		document.getElementById('paraFrm').action="ChangePassword_saveImage.action";
 		document.getElementById('paraFrm').submit();
-}
+	}
 
-if(type == 'authpass')
-	{
-			var fieldName1 = ["paraFrm_authorizationPassword","paraFrm_confirmAuthorizationPassword"];
-			var labelName1 = ["authpass","confauthpass"];
-			var flag = ["enter","enter"];
-			 var authpass = document.getElementById('paraFrm_authorizationPassword').value;
-			 var confirmAuthPass = document.getElementById('paraFrm_confirmAuthorizationPassword').value;
-			 var pssword  = document.getElementById('paraFrm_pssword').value; 
-		  	if(!validateBlank(fieldName1, labelName1, flag))
-			 	{
-					return false;
-				}
+	if(type == 'authpass'){
+		var fieldName1 = ["paraFrm_authorizationPassword","paraFrm_confirmAuthorizationPassword"];
+		var labelName1 = ["authpass","confauthpass"];
+		var flag = ["enter","enter"];
+		var authpass = document.getElementById('paraFrm_authorizationPassword').value;
+		var confirmAuthPass = document.getElementById('paraFrm_confirmAuthorizationPassword').value;
+		var pssword  = document.getElementById('paraFrm_pssword').value; 
+		
+		if(!validateBlank(fieldName1, labelName1, flag)){
+			return false;
+		}
 			
 		var authorizationPassword = document.getElementById('paraFrm_authorizationPassword').value;
 		var confirmAuthorizationPassword = document.getElementById('paraFrm_confirmAuthorizationPassword').value;
 	 
-		if(authorizationPassword.length < eval(<%= minLength%>) || authorizationPassword.length > eval(<%= maxLength%>))
-		{
+		if(authorizationPassword.length < eval(<%= minLength%>) || authorizationPassword.length > eval(<%= maxLength%>)){
+			
 			alert(document.getElementById('authpass').innerHTML.toLowerCase()+' should be of min <%= minLength%> and max <%= maxLength%> characters.');
 			document.getElementById('paraFrm_authorizationPassword').focus();
 			return false;
 		} 
 		
-		if(!validateAuthPassword(pssword,authpass, confirmAuthPass))
+		if(!validateAuthPassword(pssword,authpass, confirmAuthPass)){
 			return false;
-			
+		}
 		document.getElementById('paraFrm').action="ChangePassword_saveAuthorizationPsswd.action";
 		document.getElementById('paraFrm').submit();
 		 
 	}		
 		
 
-}
-catch(e)
-{
+	}
+	catch(e){
 		// alert(e);
-}
+	}
 }
 
 
@@ -904,12 +899,12 @@ function testPassword(passwd){
 	
 	
 	
-	function validatePassword(password, oldPass, newPass, confPass){
+function validatePassword(password, oldPass, newPass, confPass){
 	
 	try
 	{
 	if(password!=oldPass){
-		alert("Please enter "+document.getElementById('oldpass').innerHTML.toLowerCase()+" correctly");
+		//alert("Please enter "+document.getElementById('oldpass').innerHTML.toLowerCase()+" correctly");
 		return false;
 	}
 	

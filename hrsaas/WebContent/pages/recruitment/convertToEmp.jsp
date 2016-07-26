@@ -57,8 +57,8 @@
 						            	ondblclick="callShowDiv(this);"><%=label.get("division")%></label>&nbsp;:<font color="red" size="2">*</font> </td>
 						         <td width="25%" nowrap="nowrap" height="22"><s:hidden name="divisionCode"/><s:textfield name="divisionName" size="25" readonly="true"/>
 						           
-						          <!-- <img class="iconImage" src="../pages/images/recruitment/search2.gif" width="15"
-											height="16" onclick="javascript:callsF9(500,325,'ConvertEmp_f9Division.action');"/> -->  	
+						           <img class="iconImage" src="../pages/images/recruitment/search2.gif" width="15"
+											height="16" onclick="javascript:callsF9(500,325,'ConvertEmp_f9Division.action');"/>  	
 						           </td>
 						           
 						         <td width="14%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
@@ -68,8 +68,8 @@
 						            	ondblclick="callShowDiv(this);"><%=label.get("branch")%></label>&nbsp;:<font color="red" size="2">*</font> </td>
 						         <td width="25%" nowrap="nowrap" height="22"><s:hidden name="branchCode"/><s:textfield name="branchName" size="25" readonly="true"/>
 						            
-						            	<!-- <img class="iconImage" src="../pages/images/recruitment/search2.gif" width="15"
-											height="16" onclick="javascript:callsF9(500,325,'ConvertEmp_f9Branch.action');"/> -->
+						            	 <img class="iconImage" src="../pages/images/recruitment/search2.gif" width="15"
+											height="16" onclick="javascript:callsF9(500,325,'ConvertEmp_f9Branch.action');"/> 
 						            </td>
 						       
 						       </tr>
@@ -80,8 +80,8 @@
 						            	ondblclick="callShowDiv(this);"><%=label.get("department")%></label>&nbsp;:<font color="red" size="2">*</font> </td>
 						         <td width="25%" nowrap="nowrap" height="22"><s:hidden name="deptCode"/><s:textfield name="deptName" size="25" readonly="true"/>
 						           
-						            	<!--<img class="iconImage" src="../pages/images/recruitment/search2.gif" width="15"
-											height="16" onclick="javascript:callsF9(500,325,'ConvertEmp_f9Dept.action');"/>  -->
+						            	<img class="iconImage" src="../pages/images/recruitment/search2.gif" width="15"
+											height="16" onclick="javascript:callsF9(500,325,'ConvertEmp_f9Dept.action');"/> 
 						            </td>
 						               <td width="14%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
 						             <td width="18%" height="22" nowrap="nowrap">
@@ -89,8 +89,8 @@
 						            	ondblclick="callShowDiv(this);"><%=label.get("designation")%></label>&nbsp;:<font color="red" size="2">*</font> </td>
 						         <td width="25%" nowrap="nowrap" height="22"><s:hidden name="desgCode"/><s:textfield name="desgName" size="25" readonly="true"/>
 						           
-						            	<!--<img class="iconImage" src="../pages/images/recruitment/search2.gif" width="15"
-											height="16" onclick="javascript:callsF9(500,325,'ConvertEmp_f9Desg.action');"/>  -->
+						            	<img class="iconImage" src="../pages/images/recruitment/search2.gif" width="15"
+											height="16" onclick="javascript:callsF9(500,325,'ConvertEmp_f9Desg.action');"/>  
 						           </td>
 						       
 						       </tr>
@@ -265,9 +265,9 @@
 			                          <td width="20%" valign="top" class="formth">
 			                          	<b><label  class = "set" name="hiring.mgr" id="hiring.manager" 
 			            				ondblclick="callShowDiv(this);"><%=label.get("hiring.mgr")%></label></b></td>
-			                       <!--   <td width="6%" valign="top" class="formth">
+			                       	 <td width="6%" valign="top" class="formth">
 			                          	<b><label  class = "set" name="view.reqs" id="view.reqs" 
-			            				ondblclick="callShowDiv(this);"><%=label.get("view.reqs")%></label></b></td> -->
+			            				ondblclick="callShowDiv(this);"><%=label.get("view.reqs")%></label></b></td> 
 			                          <td nowrap="nowrap"  valign="top" class="formth" width="5%">
 			                          	<b><label  class = "set" name="view.cv" id="view.cv" 
 			            				ondblclick="callShowDiv(this);"><%=label.get("view.cv")%></label></b></td>
@@ -315,8 +315,8 @@
 			                        		<td width="20%" class="sortabletd"><s:property value="position"/>&nbsp;</td>
 			                        		<td width="15%" class="sortabletd"><s:property value="empType"/> &nbsp;</td>
 			                        		<td width="20%" class="sortabletd"><s:property value="hireMan"/>&nbsp;</td>
-			                        	<!-- 	<td width="6%" class="sortabletd" align="center">
-			                        			<input type="button" class="token" value="View" onclick="viewReqs('<s:property value="reqsCode"/>','O','<%=j%>');"/></td> -->
+			                        	 	<td width="6%" class="sortabletd" align="center">
+			                        			<input type="button" class="token" value="View" onclick="viewReqs('<s:property value="reqsCode"/>','O','<%=j%>');"/></td> 
 			                        			<s:hidden name="candResume"/>
 			                        		<td width="5%" class="sortabletd" align="center">
 			                        			<input type="button" class="token" value="View" onclick="showRecord('<s:property value="candResume"/>');"/></td>

@@ -30,13 +30,13 @@
 
 	<definition name=".homeLayout"
 		template="/pages/common/homeLayout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="body" value="" />
 	</definition>
 
 	<definition name=".myPageLeftRightLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="header" value="/pages/common/header.jsp" />
 		<put-attribute name="menu" value="/pages/common/menu.jsp" />
 		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
@@ -46,7 +46,7 @@
 
 	<definition name=".reportLayout"
 		template="/pages/common/reportLayout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="header" value="" />
 		<put-attribute name="footer" value="" />
 		<put-attribute name="body" value="" />
@@ -55,7 +55,7 @@
 
 	<definition name=".loginLayout"
 		template="/pages/common/loginLayout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="header" value="" />
 		<put-attribute name="footer" value="" />
 		<put-attribute name="body" value="" />
@@ -63,7 +63,7 @@
 		
 	<definition name="portalD1HomePage"
 		extends=".homeLayout">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="body" value="/pages/decisionOnePortal/decisionOneHome.jsp" />
 	</definition>
 	

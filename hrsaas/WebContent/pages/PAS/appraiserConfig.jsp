@@ -315,8 +315,7 @@ function rowCheck(){
 		  	 
 		  	 
 function defineAppraiserGrp(mycheck,groupId)
-{alert();
-	
+{
 	document.getElementById('paraFrm_groupId').value=groupId;
 	document.getElementById('paraFrm').action='AppraiserConfig_defineAppraiser.action';
 	document.getElementById('paraFrm').submit();

@@ -211,8 +211,7 @@
 </s:form>
 
 <script type="text/javascript">
-alert("hii");
-	
+
 	function saveFun() 
 	{
 		var fields=["paraFrm_sQuestion"];
@@ -275,7 +274,7 @@ alert("hii");
 	
 	//function onload()
 	/{
-		alert("hi");
+	
 		alert(document.getElementById("paraFrm_sMode").value);
 		
 	}

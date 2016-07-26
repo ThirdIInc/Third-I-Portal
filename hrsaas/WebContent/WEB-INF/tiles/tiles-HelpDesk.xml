@@ -11,7 +11,7 @@
 
 	<definition name=".mainLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="header" value="/pages/common/header.jsp" />
 		<put-attribute name="menu" value="/pages/common/rightTile.jsp" />
 		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
@@ -22,7 +22,7 @@
 
 	<definition name=".myPageLeftRightLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="header" value="/pages/common/header.jsp" />
 		<put-attribute name="menu" value="/pages/common/menu.jsp" />
 		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
@@ -37,7 +37,7 @@
 <!--  Added by Priyanka-->
 	<definition name=".adminHomeLayout"
 		template="/pages/common/layout.jsp">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="header" value="/pages/common/header.jsp" />		
 		<put-attribute name="menu" value="/pages/common/adminLeftMenu.jsp" />
 		<put-attribute name="rightTile" value="/pages/common/rightTile.jsp" />
@@ -48,7 +48,7 @@
 
 	<definition name="mypage.services"
 		extends=".myPageLeftRightLayout">
-		<put-attribute name="title" value="PeoplePower" />
+		<put-attribute name="title" value="HRMS Portal" />
 		<put-attribute name="body" value="/pages/mypage/services.jsp" />
 	</definition>
 

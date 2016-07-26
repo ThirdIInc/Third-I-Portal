@@ -9,7 +9,7 @@ var records = new Array();
 </script>
 
 <s:form action="profileAction" validate="true" id="paraFrm"
-	validate="true" theme="simple">
+	 theme="simple">
 	<input type="hidden" id="changeNameId" name="changeNameId" />
 	<input type="hidden" id="changeMenuId" name="changeMenuId" />
 	<s:hidden name="noConf" />

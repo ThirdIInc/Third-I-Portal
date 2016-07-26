@@ -269,7 +269,7 @@ public class EmailTemplateBody extends ModelBase {
 
 							String replaceWith = "&lt;#NO DATA TO DISPLAY#&gt;";
 							try {
-								replaceWith = String.valueOf(queryData[0][j]);
+								replaceWith = String.valueOf(queryData[1][j]);
 							} catch (Exception e) {
 								logger.error(e);
 								e.printStackTrace();

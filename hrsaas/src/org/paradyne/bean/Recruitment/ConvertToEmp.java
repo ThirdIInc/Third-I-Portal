@@ -60,6 +60,27 @@ public class ConvertToEmp extends BeanBase {
 	private String ittrdesgnCode = "";
 	private String ittrbranchCode = "";
 	private String ittrdeptCode = "";
+	private String hiddenappointmentCode = "";
+	public String getHiddenappointmentCode() {
+		return hiddenappointmentCode;
+	}
+	public void setHiddenappointmentCode(String hiddenappointmentCode) {
+		this.hiddenappointmentCode = hiddenappointmentCode;
+	}
+	public String getHiddenrequisationCode() {
+		return hiddenrequisationCode;
+	}
+	public void setHiddenrequisationCode(String hiddenrequisationCode) {
+		this.hiddenrequisationCode = hiddenrequisationCode;
+	}
+	public String getHiddenCandiateCode() {
+		return hiddenCandiateCode;
+	}
+	public void setHiddenCandiateCode(String hiddenCandiateCode) {
+		this.hiddenCandiateCode = hiddenCandiateCode;
+	}
+	private String hiddenrequisationCode = "";
+	private String hiddenCandiateCode = "";
 	
 	public String getIttrdeptCode() {
 		return ittrdeptCode;

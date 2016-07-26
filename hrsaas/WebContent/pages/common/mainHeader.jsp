@@ -8,7 +8,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>PeoplePower</title>
+<%
+String comanyName = (String) request.getAttribute("comanyName");
+String pool_name="abc";
+%>
+<title><%=comanyName%></title>
 
 
 <script type="text/javascript" src="../pages/common/Ajax.js"></script>

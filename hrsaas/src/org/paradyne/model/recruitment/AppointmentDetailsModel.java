@@ -86,21 +86,17 @@ public class AppointmentDetailsModel extends ModelBase {
 			if (reqsDetails != null && reqsDetails.length != 0) {
 				bean.setRequisitionName(checkNull(
 						String.valueOf(reqsDetails[0][0])).trim());
-				bean.setReqStatus(checkNull(String.valueOf(reqsDetails[0][9])));
-				/*
-				 * bean.setPosition(checkNull(String.valueOf(reqsDetails[0][1])));
-				 * bean.setDivision(checkNull(String.valueOf(reqsDetails[0][2])));
-				 * bean.setBranch(checkNull(String.valueOf(reqsDetails[0][3])));
-				 * bean.setDepartment(checkNull(String.valueOf(reqsDetails[0][4])));
-				 * bean.setPositionCode(checkNull(String.valueOf(reqsDetails[0][5])));//position
-				 * code
-				 * bean.setDivisionCode(checkNull(String.valueOf(reqsDetails[0][6])));//division
-				 * code
-				 * bean.setBranchCode(checkNull(String.valueOf(reqsDetails[0][7])));//branch
-				 * code
-				 * bean.setDeptCode(checkNull(String.valueOf(reqsDetails[0][8])));//department
-				 * code
-				 */}
+				//bean.setReqStatus(checkNull(String.valueOf(reqsDetails[0][9])));
+				
+				  bean.setPosition(checkNull(String.valueOf(reqsDetails[0][1])));
+				  bean.setDivision(checkNull(String.valueOf(reqsDetails[0][2])));
+				  bean.setBranch(checkNull(String.valueOf(reqsDetails[0][3])));
+				  bean.setDepartment(checkNull(String.valueOf(reqsDetails[0][4])));
+				  bean.setPositionCode(checkNull(String.valueOf(reqsDetails[0][5])));//position	  code
+				  bean.setDivisionCode(checkNull(String.valueOf(reqsDetails[0][6])));//division code
+				  bean.setBranchCode(checkNull(String.valueOf(reqsDetails[0][7])));//branch code
+				 bean.setDeptCode(checkNull(String.valueOf(reqsDetails[0][8])));//department code
+				 }
 
 			if (candDetails != null && candDetails.length != 0) {
 				bean.setCandidateCode(checkNull(

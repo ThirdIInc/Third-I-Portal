@@ -4,7 +4,7 @@
 <%@include file="/pages/common/labelManagement.jsp" %>
 
 <s:form action="ChangePassword" validate="true" id="paraFrm"
-	validate="true" theme="simple">
+	theme="simple">
 	
 	
 	 

@@ -275,7 +275,7 @@
 								list=" #{'S':'Satisfied','N ':'Not Satisfied','NA':'Not Applicable'}"
 								name="checkListresponce" />&nbsp;</td>
 							<td class="sortabletd" width="25%" nowrap="nowrap"><s:textarea
-								name="checkListComments" id="<%="checkListComments"+z%>"
+								name="checkListComments" id='<%="checkListComments"+z%>'
 								cols="20" rows="2" />&nbsp;&nbsp;<img
 								src="../pages/images/zoomin.gif" height="12" align="absmiddle"
 								width="12" theme="simple"

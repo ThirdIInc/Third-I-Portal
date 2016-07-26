@@ -135,7 +135,7 @@
 									<s:if test="apprFormSection.quesWtDisplayFlag">
 										<td class="formth" width="5%"  align="center" ><label name="appraisal.form.ques.wt" class = "set"  id="appraisal.form.ques.wt" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.ques.wt")%></label></td>
 									</s:if>	
-									<td class="formth" width="5%"  align="center" nowrap="nowrap"><label name="appraisal.form.rating" class = "set"  id="appraisal.form.rating" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.rating")%></label></td>
+									<td class="formth" width="5%"  align="center" nowrap="nowrap"><label name="appraisal.form.rating" class = "set"  id="appraisal.form.rating" ondblclick="callShowDiv(this);">Rating</label></td>
 									<s:if test="apprFormSection.quesWtDisplayFlag">
 										<td class="formth" width="5%"  align="center" ><label name="appraisal.form.ques.avg" class = "set"  id="appraisal.form.ques.avg" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.ques.avg")%></label></td>
 									</s:if>
@@ -206,7 +206,7 @@
 									</s:if>
 									<s:if test="apprFormSection.detailFLag">
 									<s:if test="flag">
-										<td><a onclick="showPreviou(<%=c%>);" >Show/Hide</td>
+										<td><a onclick="showPrevious(<%=c%>);" >Show/Hide</td>
 										</s:if>
 										
 									</s:if>
@@ -223,7 +223,7 @@
 									<td  width="5%"  align="center" class="formth" ><b><label name="appraisal.form.ques.wt" class = "set"  id="appraisal.form.ques.wt1" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.ques.wt")%></label></b></td>
 									</s:if>
 	
-									<td width="5%"  align="center" nowrap="nowrap" class="formth"><b><label name="appraisal.form.rating" class = "set"  id="appraisal.form.rating1" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.rating")%></label></b></td>
+									<td width="5%"  align="center" nowrap="nowrap" class="formth"><b><label name="appraisal.form.rating" class = "set"  id="appraisal.form.rating1" ondblclick="callShowDiv(this);">Rating</label></b></td>
 									
 									<s:if test="apprFormSection.quesWtDisplayFlag">									
 									<td  width="5%"  align="center" class="formth"><b><label name="appraisal.form.ques.avg" class = "set"  id="appraisal.form.ques.avg1" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.ques.avg")%></label></b></td>
@@ -626,7 +626,7 @@
 								
 								
 								
-							function showPreviou(id){
+							function showPrevious(id){
 							
 								var temp = eval(id);
 								var row = document.getElementById('previous'+temp);

@@ -50,7 +50,7 @@ body {
 }
 
 .title {
-	font-family: Roboto, Helvetica, sans-serif;
+	font-family: Roboto, Heslvetica, sans-serif;
 	color: #88A1F8;
 	font-size: 1.9em;
 	font-weight: 500;
@@ -63,7 +63,7 @@ body {
 .form-title {
 	font-family: Roboto, Helvetica, sans-serif;
 	text-align: center;
-	font-weight: 200;
+	font-weight: 300;
 	font-size: 18px;
 	margin-bottom: 5px;
 }
