@@ -429,7 +429,16 @@ public class ApprFormSectionAction extends ParaActionSupport{
 		ApprFormSectionModel model = new ApprFormSectionModel();
 		save();
 		model.initiate(context, session);
+		String apprCode1 = apprFormSection.getApprId();
+		String phaseCode1= apprFormSection.getPhaseCode();
+		String appraiserCode1=apprFormSection.getUserEmpId();
+		String quesCommentCheck = "select count(*) from pas_appr_comments where  appr_id="+apprCode1+" and appr_phase_id="+phaseCode1+" and appr_evaluator_code= "+appraiserCode1+" and (trim(nvl(appr_ques_comments,' '))||' '=' ' or nvl(appr_ques_rating,0) = 0) ";
+		Object[][] check = model.getSqlModel().getSingleResult(quesCommentCheck);
+		System.out.println("Question comment check is  ::>>>>>>>>>>>>>>>>>>>>>>>>>>>  "+check[0][0]);
+		String finalCheck = String.valueOf(check[0][0]);
+		int emptyCheck = Integer.parseInt(finalCheck);
 		
+		System.out.println("Question comment check is  ::>>>>>>>>>>>>>>>>>>>>>>>>>>> 1:::>>"+emptyCheck);
 		synchronized(context) {
 			
 			String apprCode = apprFormSection.getApprId();
@@ -442,14 +451,20 @@ public class ApprFormSectionAction extends ParaActionSupport{
 			String apprPeriod = Utility.displayMonthInDate(apprFormSection.getApprStartDate())+" to "+
 								Utility.displayMonthInDate(apprFormSection.getApprEndDate());
 			
-			//logger.info("apprPeriod------------ "+apprPeriod);
-			result = model.forwardAppraisal(request, apprCode,templateCode,sectionCode,phaseCode,empCode,appraiserCode,apprPeriod);
+			logger.info("apprPeriod------------ "+apprPeriod);
+			
+			if(emptyCheck == 0){
+				result = model.forwardAppraisal(request, apprCode,templateCode,sectionCode,phaseCode,empCode,appraiserCode,apprPeriod,finalCheck);
+				System.out.println("result value is ::>>>>>>>>>>>>>>>>>>>>>>>>>>> "+result);
+				System.out.println("Question comment check is  ::>>>>>>>>>>>>>>>>>>>>>>>>>>>2 "+emptyCheck);
+			}
 		}
+		
 		String preViewFlagVal=(request.getAttribute("previewFlag")!=null?""+request.getAttribute("previewFlag"):"false");
-		System.out.println("preViewFlagVal :::: "+preViewFlagVal);
-		if(result){
-			//String preViewFlagVal=(request.getAttribute("previewFlag")!=null?""+request.getAttribute("previewFlag"):"false");
-			System.out.println("preViewFlagVal :::: "+preViewFlagVal);
+		System.out.println("preViewFlagVal :::: 1"+preViewFlagVal);
+		if(result == true && emptyCheck == 0){
+			
+			System.out.println("preViewFlagVal ::::2 "+preViewFlagVal);
 			if(preViewFlagVal.equals("true"))
 			{
 				apprFormSection.setPreviewFlag("true");
@@ -488,15 +503,23 @@ public class ApprFormSectionAction extends ParaActionSupport{
 			
 				apprFormSection.setActionMessage("");
 			
-			}else
-			{
+			}else{
+				System.out.println("2222.Question comment is missing from one of "+getMessage("appraisal.form.head")+" sections.2222>>>>>>>>>>>>>>>>>>>>>>>>>>> 1 ");
 				addActionMessage(getMessage("appraisal.form.head")+" forwarded successfully");
+				
 			}
-			
 			request.setAttribute("forwardStatus", "true");
+			
 		}else{
-			addActionMessage("Error while forwarding the "+getMessage("appraisal.form.head"));
-			request.setAttribute("forwardStatus", "false");
+			if(emptyCheck != 0){
+				System.out.println("Question comment is missing from one of "+getMessage("appraisal.form.head")+" sections.>>>>>>>>>>>>>>>>>>>>>>>>>>>2  ");
+				addActionMessage("Question comment is missing from one of "+getMessage("appraisal.form.head")+" sections. ");
+				request.setAttribute("forwardStatus", "false");
+			}else{
+				System.out.println("2<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<manager phase>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2 ");
+				addActionMessage("Error while forwarding the "+getMessage("appraisal.form.head"));
+				request.setAttribute("forwardStatus", "false");
+			}
 		}
 		
 		//getProcessAlerts();
@@ -526,11 +549,11 @@ public class ApprFormSectionAction extends ParaActionSupport{
 			model.initiate(context, session);
 			boolean result = model.updateAppraisal(request,apprCode,templateCode,empCode,appraiserCode,phaseCode);
 			if(result)
-			{
+			{//System.out.println("2222.Question comment is missing from one of "+getMessage("appraisal.form.head")+" sections.2222 ");
 				addActionMessage(getMessage("appraisal.form.head")+" forwarded successfully");
 				request.setAttribute("forwardStatus", "true");
 			}else
-			{
+			{System.out.println("3<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<manager phase>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 3");
 				addActionMessage("Error while forwarding the "+getMessage("appraisal.form.head"));
 				request.setAttribute("forwardStatus", "false");
 			}
@@ -554,7 +577,7 @@ public class ApprFormSectionAction extends ParaActionSupport{
 			if(result){
 				addActionMessage(getMessage("appraisal.form.head")+"Cancel");
 			}
-			else{
+			else{System.out.println("4<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<manager phase>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 4");
 				addActionMessage("Error While Forwarding the"+getMessage("appraisal.form.head"));
 				request.setAttribute("forwardStatus", "false");
 			}

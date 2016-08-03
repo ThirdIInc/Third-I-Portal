@@ -602,7 +602,7 @@ public class UserCreationModel extends ModelBase {
 					e.printStackTrace();
 					clientName = "www";
 				}
-				String URL = "http://" + clientName + ".peoplepower.com";
+				String URL = "http://" + clientName + ".com";
 				subject[z] = "PeoplePower Account Information";
 
 				/*
@@ -628,7 +628,7 @@ public class UserCreationModel extends ModelBase {
 							+ "<tr> " + "<td><p>Dear&nbsp;<b>"
 							+ mailObj[z][1]
 							+ "</b>, </p><br /> "
-							+ "<p>Welcome to <u>PeoplePower-Human Resource Management Tool</u>.  "
+							+ "<p>Welcome to <u>HRMS Tool</u>.  "
 							+ ""
 							+ "Kindly find your account information below.</p> "
 							+ ""
@@ -640,7 +640,7 @@ public class UserCreationModel extends ModelBase {
 									StringEncrypter.DESEDE_ENCRYPTION_SCHEME)
 									.decrypt(String.valueOf(mailObj[z][4]))
 							+ "</p> "
-							+ "<br /><p>PeoplePower Link :<a href='"
+							+ "<br /><p>HRMS Link :<a href='"
 							+ URL
 							+ "'>"
 							+ URL

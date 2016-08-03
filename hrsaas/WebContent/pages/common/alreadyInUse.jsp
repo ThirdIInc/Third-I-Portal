@@ -15,8 +15,7 @@
 	href="../pages/common/css/fifth/fifth.css" />
 	<script type="text/javascript"
 	src="../pages/common/include/javascript/styleswitch.js"></script>
-<s:form action="Login" method="post" validate="true" theme="simple" id="paraFrm"
-	name="form" target="_top">
+<s:form action="Login" method="post" validate="true" theme="simple" id="paraFrm" name="form" target="_top">
 <br>
 <br>
 <br>
@@ -25,7 +24,7 @@
 <table align="center" cellpadding="0" cellspacing="0" border="0" class="formbg" >
 <tr>
 <td height="100" style="font-family:arial,sans-serif;font-weight: normal;font-size: 12px;text-align: center;" width="60%">
-Your previous session was terminated incorrectly or is currently active<br>
+Thank you for useing HRMS Portal<br>
 <br>
 <br>
 <a href="javascript:logout();">Please Click here to Relogin</a>

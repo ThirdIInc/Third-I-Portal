@@ -151,14 +151,14 @@
 
 function callMyAction_OLD(actionName)
 { 
- 	// alert(actionName);
+ 	 alert(actionName);
 	document.getElementById('paraFrm').action ='<%=request.getContextPath()%>/mypage/MypageProcessManagerAlerts_getServiceLinkMenu.action?actionName='+actionName;
 	document.getElementById('paraFrm').submit();
 }
 
 function callMyAction(actionName)
 	{
- //alert("In my code:"+actionName);
+ alert("In my code:"+actionName);
 	try{
 	document.getElementById('paraFrm').action= '<%=request.getContextPath()%>'+actionName;
 	document.getElementById("paraFrm").target="_self";

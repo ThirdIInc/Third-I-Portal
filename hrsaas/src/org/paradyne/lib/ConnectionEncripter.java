@@ -27,7 +27,7 @@ public class ConnectionEncripter {
 					StringEncrypter.DBPOOL_ENCRYPTION_KEY).encrypt("jdbc:oracle:thin:@THIRDIPORTAL:1521:orcl11g");
 			user = new StringEncrypter(
 					StringEncrypter.DESEDE_ENCRYPTION_SCHEME,
-					StringEncrypter.DBPOOL_ENCRYPTION_KEY).encrypt("hr_the3i3");
+					StringEncrypter.DBPOOL_ENCRYPTION_KEY).encrypt("hr_the3i");
 			pwd = new StringEncrypter(
 					StringEncrypter.DESEDE_ENCRYPTION_SCHEME,
 					StringEncrypter.DBPOOL_ENCRYPTION_KEY).encrypt("hrsaas");

@@ -20,6 +20,7 @@
 						class='<%=String.valueOf(settingsList[i][4])%>'
 						onclick="callButton('<%=String.valueOf(settingsList[i][0]).replaceAll(" ", "").toLowerCase() + "Fun"%>', 
 						'<%=String.valueOf(settingsList[i][2])%>', '<%=String.valueOf(settingsList[i][3])%>');" />
+						<%System.out.println("btn is::" +settingsList[i] ); %>
 				<%		out.print("");
 					}
 				%>

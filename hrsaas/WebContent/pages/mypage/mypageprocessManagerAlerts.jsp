@@ -76,9 +76,9 @@
 					<td width="87%" class="emptext" nowrap="nowrap"><a href="#"
 						title="Draft" class="contlink"
 						onclick="return callInboxOrDraft('Draft');">&nbsp;<b>Draft&nbsp;(<%=DraftCount%>)</b></a></td>
-					<td colspan="1" height="20" nowrap="nowrap"><img
-						align="absmiddle" src="../pages/mypage/images/info.png">
-					Information Message</td>
+					<td colspan="1" height="20" nowrap="nowrap">
+					<span style = "color:#33A6E7;padding-left: 10px;font-size:11pt;"> <i class="fa fa-info-circle" aria-hidden="true"></i>
+					</span> <!--  <img align="absmiddle" src="../pages/mypage/images/info.png">--> Information Message</td>
 					<td colspan="1" height="20" nowrap="nowrap">&nbsp;&nbsp;<img
 						align="absmiddle" src="../pages/mypage/images/icons/action.png">
 					Action Message</td>
@@ -211,7 +211,7 @@
 						if (String.valueOf(alertMsg[6]).equalsIgnoreCase("Alert")) {
 					%><img src="../pages/mypage/images/icons/action.png"> <%
  					} else {
- 					%> <img src="../pages/mypage/images/info.png"> <%
+ 					%> <span style = "color:#33A6E7;padding-left: 10px;font-size:11pt;"> <i class="fa fa-info-circle" aria-hidden="true"></i></span><!--<img src="../pages/mypage/images/info.png">-->  <%
 					}
 					%>
 					</td>
@@ -235,8 +235,7 @@
 				</tr>
 				<%} %>
 				<tr bgcolor="#6979AC" height="25">
-					<td class="mainheader" colspan="5" height="28">&nbsp;<strong>Item
-					No :<%=noOfItem%> </strong></td>
+					<td class="mainheader" colspan="5" height="28">&nbsp;<strong>Item No :<%=noOfItem%> </strong></td>
 				</tr> 
 			</table>
 			</td>

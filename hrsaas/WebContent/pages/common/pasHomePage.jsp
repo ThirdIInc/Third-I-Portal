@@ -102,19 +102,20 @@
 
 
 			<td width="5%" valign="top" style="padding-top: 5px"></td>
-			<td width="25%" valign="middle" style="padding-top: 5px"><img
-				align="absmiddle" src="../pages/common/css/default/images/dot.gif"><a
-				class="servicelink" href="javascript:void(0);"
-				title="<%=String.valueOf(menuObj[1])%>"
+			<td width="25%" valign="middle" style="padding-top: 5px">
+			<img align="absmiddle" src="../pages/common/css/default/images/dot.gif">
+			<a	class="servicelink" href="javascript:void(0);"	title="<%=String.valueOf(menuObj[1])%>"
 				onclick="callMyAction('<%=Utility.checkNull(String.valueOf(menuObj[2]))%>'); ">
 				<%
 				String menuName=Utility.checkNull(String.valueOf(menuObj[1]));
 				if(menuName.length()>25){
 					menuName=menuName.substring(0,25)+"...";
 				}
-				%><%=menuName%></a><br>
-			<span class="smalltext"><%=Utility.checkNull(String
-												.valueOf(menuObj[4]))%></span></td>
+				%><%=menuName%>
+			</a>
+				<br>
+					<!--<span class="smalltext"><%=Utility.checkNull(String.valueOf(menuObj[4]))%></span>-->
+			</td>
 			<%
 			if (m % 3 == 2 || m == vect.size()) {
 			%>
@@ -153,14 +154,14 @@
 
 function callMyAction_OLD(actionName)
 { 
- 	// alert(actionName);
+ 	 //alert(actionName);
 	document.getElementById('paraFrm').action ='<%=request.getContextPath()%>/mypage/MypageProcessManagerAlerts_getServiceLinkMenu.action?actionName='+actionName;
 	document.getElementById('paraFrm').submit();
 }
 
 function callMyAction(actionName)
 	{
- //alert("In my code:"+actionName);
+	 //alert("In my code:"+actionName);
 	try{
 	document.getElementById('paraFrm').action= '<%=request.getContextPath()%>'+actionName;
 	document.getElementById("paraFrm").target="_self";
@@ -171,7 +172,7 @@ function callMyAction(actionName)
 		alert("Exception:"+e);
 	}
 	
-    }
+}
 
 </script>
 

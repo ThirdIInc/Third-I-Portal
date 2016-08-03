@@ -7,11 +7,11 @@
 	<BUTTON btnCode="5" btnName="Delete" btnOrder="9" btnFlag="D" enableAll="Y" btnClass="delete" />
 	<BUTTON btnCode="6" btnName="Cancel" btnOrder="40" btnFlag="V" enableAll="Y" btnClass="cancel" />
 	<BUTTON btnCode="7" btnName="Send For Approval" btnOrder="10" btnFlag="V" enableAll="Y" btnClass="token" />
-	<BUTTON btnCode="8" btnName="Next" btnOrder="11" btnFlag="V" enableAll="Y" btnClass="next" />
+	<BUTTON btnCode="8" btnName="Back" btnOrder="11" btnFlag="V" enableAll="Y" btnClass="back" />
 	<BUTTON btnCode="9" btnName="Previous" btnOrder="11" btnFlag="V" enableAll="Y" btnClass="back" />
 	<BUTTON btnCode="10" btnName="Save and Next" btnOrder="11" btnFlag="V" enableAll="Y" btnClass="next" />
 	<BUTTON btnCode="11" btnName="Save and Previous" btnOrder="11" btnFlag="U" enableAll="Y" btnClass="back" />
-	<BUTTON btnCode="12" btnName="Back" btnOrder="27" btnFlag="V" enableAll="Y" btnClass="back" />
+	<BUTTON btnCode="12" btnName="Next" btnOrder="27" btnFlag="V" enableAll="Y" btnClass="Next" />
 	<BUTTON btnCode="13" btnName="Finish" btnOrder="13" btnFlag="U" enableAll="Y" btnClass="token" />
 	<BUTTON btnCode="14" btnName="Approve" btnOrder="14" btnFlag="U" enableAll="Y" btnClass="token" />
 	<BUTTON btnCode="15" btnName="Reject" btnOrder="15" btnFlag="U" enableAll="Y" btnClass="token" />

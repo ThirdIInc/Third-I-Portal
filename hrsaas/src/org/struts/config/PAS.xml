@@ -778,6 +778,24 @@
 			<result name="mailReport" type="tiles">common.mailReport</result>
 			 
 		</action>
+		
+		<action name="ApprisalMgmtReport_*" method="{1}" class="org.struts.action.PAS.ApprisalMgmtReportAction">
+			 <result name="input" type="tiles">Appraisal.mgmtReport</result>
+			 <result name="f9page" type="tiles">common.f9page</result> 
+		     <result name="success" type="tiles">Appraisal.mgmtReport</result>
+		</action>
+		
+		<action name="AppraisalStatusReport_*" method="{1}" class="org.struts.action.PAS.AppraisalStatusReportAction">
+			 <result name="input" type="tiles">Appraisal.statusReport</result>
+			 <result name="f9page" type="tiles">common.f9page</result> 
+		     <result name="success" type="tiles">Appraisal.statusReport</result>
+		</action>
+		
+		<action name="ApprisalComment_*" method="{1}" class="org.struts.action.PAS.ApprisalCommentAction">
+			 <result name="input" type="tiles">Appraisal.commentReport</result>
+			 <result name="f9page" type="tiles">common.f9page</result> 
+		     <result name="success" type="tiles">Appraisal.commentReport</result>
+		</action>
 		 
 	</package>
 </struts>

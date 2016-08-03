@@ -3,26 +3,23 @@
 <%@page import="org.paradyne.bean.PAS.*"%>
 
 <% ApprFormGeneralInfo aprInfo = new ApprFormGeneralInfo(); %>
+<html>
+<head>
+<link type="text/css" href="../pages/PAS/PAS-Css/apprFormGeneralInfo.css" rel="stylesheet"  />
+</head>
+<body>
 
-<s:form action="ApprFormGeneralInfo" validate="true" id="paraFrm"
-	theme="simple">
+<s:form action="ApprFormGeneralInfo" validate="true" id="paraFrm" theme="simple">
 	<s:hidden name="source" id="source"/>
 		
 	  <table width="100%" border="0" align="right" cellpadding="2" cellspacing="1" class="formbg" >
-    
-    		<tr>
-	        	<td colspan="3" width="100%">
-	        		<table width="100%" border="0" align="center" cellpadding="2" cellspacing="2" class="formbg">
-	        			 <tr>
-				          <td width="4%" valign="bottom" class="txt"><strong class="formhead">
-				          	<img src="../pages/images/recruitment/review_shared.gif" width="25" height="25" /></strong></td>
-				          <td width="93%" class="txt"><strong class="text_head"><label name="appraisal.form.head" class = "set"  id="appraisal.form.head" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.head")%></label></strong></td>
-				          <td width="3%" valign="top" class="txt"><div align="right">
-				          	<img src="../pages/images/recruitment/help.gif" width="16" height="16" /></div></td>
-				        </tr>
-	        		</table>
-	        	</td>
-        	</tr>
+	        			
+				          <div class = "form-header">
+				          	<img src="../pages/images/recruitment/review_shared.gif" /> 
+				          					          	
+				          	<label class = "form-head-label" name="appraisal.form.head" id="appraisal.form.head" ondblclick="callShowDiv(this);">  <%=label.get("appraisal.form.head")%></label>
+				         		
+				          </div>
     <tr>
       <td colspan="3"><table width="100%" border="0" cellpadding="2" cellspacing="0">
          <tr>
@@ -30,88 +27,131 @@
             <jsp:include page="/pages/ApplicationStudio/navigationPanel.jsp" />
           			
 		</td>
-            <td width="22%"><div align="right"><font color="red">*</font> Indicates Required   </div></td>
+            
           </tr>
         </table>
           </td>
     </tr>
     <tr>
-      <td colspan="3" width="100%"><table width="100%" border="0" cellpadding="2" cellspacing="2" class="formbg">
-          <tr>
-            <td><s:hidden name="phaseForwardFlag"/><s:hidden name="detailFLag"/><s:hidden name="instrVisibilty"/><s:hidden name="templateCode"/><b> <label name="appraisal.details" class = "set"  id="appraisal.details" ondblclick="callShowDiv(this);"><%=label.get("appraisal.details")%></label></b><table width="98%" border="0" align="center" cellpadding="2" cellspacing="2">
-              <s:hidden name="apprValidTillDate"/><s:hidden name="ratingDefined"/>
-            <tr>
-              <td width="18%" colspan="1" height="20" class="formtext"><b><label name="appraisal.form.period"  class = "set"  id="appraisal.form.period" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.period")%></label> :</b></td>
-			  <td width="15%" colspan="1" height="20"><s:hidden name="apprId"/><s:hidden name="apprCode"/><s:property value="apprCode"  /></td>
-              <td width="10%" colspan="1" height="20"></td>   
-              <td width="50%" colspan="1" height="20">
-              <label name="appr.from.date" class = "set"  id="appr.from.date" ondblclick="callShowDiv(this);"><%=label.get("appr.from.date")%></label> : 
-              	<s:hidden name="apprStartDate"/><s:property value="apprStartDate"  />&nbsp;
-              <label name="appr.to.date" class = "set"  id="appr.to.date" ondblclick="callShowDiv(this);"><%=label.get("appr.to.date")%></label> : 
-               <s:hidden name="apprEndDate"/><s:property value="apprEndDate" /></td> 
-            </tr>
-             <tr>
-              <td width="18%" colspan="1" height="20" class="formtext"><b><label name="appraisal.form.phase" class = "set"  id="appraisal.form.phase" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.phase")%></label> :</b></td>
-			  <td width="15%" colspan="1" height="20"><s:hidden name="phaseCode"/><s:hidden name="phaseName"/><s:property value="phaseName"  /></td>
-              <td width="10%" colspan="1" height="20"></td>   
-              <td width="50%" colspan="1" height="20">
-              <label name="phase.from.date" class = "set"  id="phase.from.date" ondblclick="callShowDiv(this);"><%=label.get("phase.from.date")%></label> : 
-              	<s:hidden name="phaseStartDate"/><s:property value="phaseStartDate" />&nbsp;
-              <label name="phase.to.date" class = "set"  id="phase.to.date" ondblclick="callShowDiv(this);"><%=label.get("phase.to.date")%></label> :
-              	<s:hidden name="phaseEndDate"/><s:property value="phaseEndDate" /><s:hidden name="phaseLockFlag"/><s:hidden name="quesWtDisplayFlag"/></td> 
-            </tr>
-                           
-            </table></td>
-          </tr>
-          
-      </table></td>
-    </tr>
-    <tr>
-      <td colspan="5" width="100%"><table width="100%" border="0" cellpadding="2" cellspacing="2" class="formbg">
-          <tr>
-            <td><b>Employee Details</b><table width="98%" border="0" align="center" cellpadding="2" cellspacing="2">
-             <tr>
-              <td width="14%" colspan="1" height="20" class="formtext"><label  name="employee.id" class = "set"  id="employee.id" ondblclick="callShowDiv(this);"><%=label.get("employee.id")%></label> :</td>
-			  <td width="15%" colspan="1" height="20"><s:hidden name="empId"></s:hidden><s:property value="empCode"  /></td>
-			  <td width="4%" colspan="1" height="20"></td>
-              <td width="16%" colspan="1" height="20" class="formtext"><label  name="employee" class = "set"  id="employee" ondblclick="callShowDiv(this);"><%=label.get("employee")%></label> :</td>   
-              <td width="22%" colspan="1" height="20"><s:hidden name="empName"/><s:property value="empName" /></td> 
-            </tr>
-            <tr>
-              <td width="14%" colspan="1" height="20" class="formtext"><label  name="branch" class = "set"  id="branch" ondblclick="callShowDiv(this);"><%=label.get("branch")%></label> :</td>
-			  <td width="15%" colspan="1" height="20"><s:property value="empBrnName"  /></td>
-              <td width="4%" colspan="1" height="20"></td>
-              <td width="16%" colspan="1" height="20"><label name="department"  class = "set"  id="department" ondblclick="callShowDiv(this);"><%=label.get("department")%></label> :</td>   
-              <td width="22%" colspan="1" height="20"><s:property value="empDeptName" /></td> 
-            </tr>
+      <td colspan="3" width="100%">
+         
+            <div class="Appraisal-details">
+            	<s:hidden name="phaseForwardFlag"/><s:hidden name="detailFLag"/><s:hidden name="instrVisibilty"/><s:hidden name="templateCode"/>
+            	<div>
+            	<b> 
+            		<span><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+            		<label name="appraisal.details" class = "Appraisal-details"  id="appraisal.details"><%=label.get("appraisal.details")%></label>
+            	</b>
+            	</div>
             
-             <tr>
-              <td width="14%" colspan="1" height="20" class="formtext"><label  name="designation" class = "set"  id="designation" ondblclick="callShowDiv(this);"><%=label.get("designation")%></label> :</td>
-			  <td width="15%" colspan="1" height="20"><s:hidden name="empDesgName"/><s:property value="empDesgName"  /></td>
-              <td width="4%" colspan="1" height="20"></td>
-              <td width="16%" colspan="1" height="20"><label name="reporting.to"  class = "set"  id="reporting.to" ondblclick="callShowDiv(this);"><%=label.get("reporting.to")%></label> :</td>   
-              <td width="22%" colspan="1" height="20"><s:property value="empReportingTo" /></td> 
-            </tr>
+              	<s:hidden name="apprValidTillDate"/><s:hidden name="ratingDefined"/>
+           	</div>	
+           	<div class = "formWrapper">
+              	<div class="col-md-4">
+              	<b>
+              		<label name="appraisal.form.period"  class = "set"  id="appraisal.form.period" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.period")%>
+          			 </label> :</b>
+             
+			  		<s:hidden name="apprId"/><s:hidden name="apprCode"/><s:property value="apprCode"  />
+			   </div>
+                
+              <div class= "col-md-4">
+              		<label name="appr.from.date" class = "set"  id="appr.from.date" ondblclick="callShowDiv(this);"><%=label.get("appr.from.date")%></label> : 
+              		<s:hidden name="apprStartDate"/><s:property value="apprStartDate"  />&nbsp;
+              		<label name="appr.to.date" class = "set"  id="appr.to.date" ondblclick="callShowDiv(this);"><%=label.get("appr.to.date")%></label> : 
+               		<s:hidden name="apprEndDate"/><s:property value="apprEndDate" /> 
+              </div>
             
-             <tr>
-              <td width="14%" colspan="1" height="20" class="formtext"><label name="doj" class = "set"  id="doj" ondblclick="callShowDiv(this);"><%=label.get("doj")%></label> :</td>
-			  <td width="15%" colspan="1" height="20"><s:property value="empDoj"  /></td>
-              <td width="4%" colspan="1" height="20"></td>
-              <td width="16%" colspan="1" height="20"><label  class = "set" name="appraisal.form.appr.date"  id="appraisal.form.appr.date" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.appr.date")%></label> :</td>   
-              <td width="22%" colspan="1" height="20"><s:hidden name="apprDate" /><s:property value="phaseStartDate" /></td> 
-            </tr>
-            <label  class = "set" name="appraisal.valid.date"  id="appraisal.valid.date" style="visibility: hidden"><%=label.get("appraisal.valid.date")%></label>
-                  
-            </table></td>
-          </tr>
+             
+             <div class="col-md-4"> 
+             	<b>
+             	<label name="appraisal.form.phase" class = "set"  id="appraisal.form.phase" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.phase")%>
+             	</label> :</b>
+			  	<s:hidden name="phaseCode"/><s:hidden name="phaseName"/><s:property value="phaseName"  />
+             </div>
+             
+             <div class= "col-md-4">
+	             <label name="phase.from.date" class = "set"  id="phase.from.date" ondblclick="callShowDiv(this);"><%=label.get("phase.from.date")%></label> : 
+    	       	 <s:hidden name="phaseStartDate"/><s:property value="phaseStartDate" />&nbsp;
+              	<label name="phase.to.date" class = "set"  id="phase.to.date" ondblclick="callShowDiv(this);"><%=label.get("phase.to.date")%></label> :
+              	<s:hidden name="phaseEndDate"/><s:property value="phaseEndDate" /><s:hidden name="phaseLockFlag"/><s:hidden name="quesWtDisplayFlag"/>
+              </div>
+           </div>
           
-      </table></td>
+      </td>
     </tr>
     
+      <td colspan="5" width="100%">
+          <div  class="Appraisal-details">
+          
+           
+            	<div>
+            	<b>
+            		<span><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+            		<label name="appraisal.details" class = "Appraisal-details"  id="appraisal.details">Employee Details</label>
+            	</b>
+            	</div>
+            
+           </div>
+            	<div class = "formWrapper">
+              		<div class = "col-md-3">
+              			<label  name="employee.id" class = "set"  id="employee.id"><%=label.get("employee.id")%></label> :
+			  			<s:hidden name="empId"></s:hidden><s:property value="empCode"  />
+			  		</div>
+					<div class = "col-md-3">
+             			<label  name="employee" class = "set"  id="employee" ><%=label.get("employee")%></label> :   
+              			<s:hidden name="empName"/><s:property value="empName" />
+              		</div> 
+            
+            
+           		 	<div class = "col-md-3">
+              			<label  name="branch" class = "set"  id="branch" ondblclick="callShowDiv(this);"><%=label.get("branch")%></label> :
+			  			<s:property value="empBrnName"  />
+			  		</div>
+			  		<div class = "col-md-3">
+              			<label name="department"  class = "set"  id="department" ondblclick="callShowDiv(this);"><%=label.get("department")%></label> :   
+              			<s:property value="empDeptName" />
+              		</div>
+            
+            
+             		<div class = "col-md-3">
+            			<label  name="designation" class = "set"  id="designation" ondblclick="callShowDiv(this);"><%=label.get("designation")%></label> :
+			  			<s:hidden name="empDesgName"/><s:property value="empDesgName"  />
+			  		</div>
+			  		<div class = "col-md-3">
+              			<label name="reporting.to"  class = "set"  id="reporting.to" ondblclick="callShowDiv(this);"><%=label.get("reporting.to")%></label> :   
+              			<s:property value="empReportingTo" />
+             		 </div>
+            
+            
+           			<!-- <div class = "col-md-3">
+            		 	 <label name="doj" class = "set"  id="doj" ondblclick="callShowDiv(this);"><%=label.get("doj")%></label> :
+			 		 	<s:property value="empDoj"  /> 
+              		</div>-->
+              		<div class = "col-md-3">
+              			<label  class = "set" name="appraisal.form.appr.date"  id="appraisal.form.appr.date" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.appr.date")%></label> :   
+              			<s:hidden name="apprDate" /><s:property value="phaseStartDate" />
+            		</div>
+            			<label  class = "set" name="appraisal.valid.date"  id="appraisal.valid.date" style="visibility: hidden"><%=label.get("appraisal.valid.date")%></label>
+                  </div>
+           
+          
+          
+     </td>
+   
+    
     <tr>
-      <td colspan="3" width="100%"><table width="100%" border="0" cellpadding="2" cellspacing="2" class="formbg">
-          <tr>
-            <td><b><label name="appraisal.form.appraiser" class = "set"  id="appraisal.form.appraiser" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.appraiser")%></label></b><table width="98%" border="0" align="center" cellpadding="2" cellspacing="2">
+      <td colspan="3" width="100%">
+          
+           
+            <div class = "Appraisal-details">
+            	<b>
+            	<span><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+            	<label name="appraisal.form.appraiser" class = "set"  id="appraisal.form.appraiser" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.appraiser")%></label>
+            	</b>
+            </div>
+            <div class = "tabledetails">
+            <table width="98%" border="0" align="center" cellpadding="2" cellspacing="2">
               <tr>
 					<td class="formth" width="5%"><label  class = "set" name="appraisal.form.appraiser.srno"  id="appraisal.form.appraiser.srno" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.appraiser.srno")%></label></td>
 					<td class="formth" width="25%" align="left"><label  name="appraisal.form.appraiser.name" class = "set"  id="appraisal.form.appraiser.name" ondblclick="callShowDiv(this);"><%=label.get("appraisal.form.appraiser.name")%></label></td>
@@ -133,10 +173,10 @@
 								 <%} %>
 							</s:iterator>
 							<tr><td><input type="hidden" name="count" id="count" value="<%=c%>"/></td></tr>         
-      </table></td>
-    </tr>
+      </table></div>
+ 
    
-  </table>
+  
  </td></tr>
  <tr>
       <td colspan="3"><table width="100%" border="0" cellpadding="2" cellspacing="2">
@@ -159,6 +199,8 @@
 	
 	
 	</s:form>
+	</body>
+</html>
 
 <script type="text/javascript" src="../pages/common/datetimepicker.js">
 

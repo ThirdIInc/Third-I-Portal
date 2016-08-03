@@ -16,9 +16,29 @@
 
 <!-- <input type="hidden" name="divMovementHidden" id="divMovementHidden" />
 <s:hidden id="screenWidth" name="screenWidth"></s:hidden> -->
-<div class = "hometext">
+<form class="home" action="../PAS/ApprFormSectionAction.java" method="post" validate="true" id="paraFrm"	theme="simple">
+	
+	<div class="wrapper">
+	<div class = "title">
 		Performance Review 2016
-</div>
+	</div>
+	<ul>
+	<div>
+		<img src="../pages/mypage/images/icons/appraisal.png" width="30" height="30">
+			<a class="servicelink" href="javascript:void(0);" title="My Appraisal" onclick="callMyAction('/pas/ApprFormStart_input.action'); ">My Appraisal</a>
+				<br>
+				<span class="smalltext">It is time to review my performance</span>
+	</div>
+
+	<div>
+		<img src="../pages/mypage/images/icons/teamAppraisal.png" width="30" height="30">
+			<a class="servicelink" href="javascript:void(0);" title="Team Appraisal" onclick="callMyAction('/pas/EvaluatorPanel_input.action?src=myservices'); ">Team Appraisal</a>
+			<br>
+				<span class="smalltext">I can review my teams performance here.</span>
+	</div>
+	</ul>
+	</div>
+</form>
 <%
 			String[][] portalAppsObj = (String[][]) request
 			.getAttribute("portalD1Obj");
@@ -223,6 +243,8 @@
 </html>
 
 	<script type="text/javascript">
+	
+	
 (function($){
 $(document).ready(function(){
 	
@@ -345,7 +367,21 @@ function detectFlashPlayerPlugin(graphDivId,pluginDivId){
     	document.getElementById("paraFrm").submit();
     	document.getElementById('paraFrm').target = 'main';
 	}
- 
+		function callMyAction(actionName)
+		{
+	 // alert("In my code:"+actionName);
+		try{
+		document.getElementById('paraFrm').action= '<%=request.getContextPath()%>'+actionName;
+		document.getElementById("paraFrm").target="_self";
+		document.getElementById('paraFrm').submit();
+		}
+		catch(e)
+		{
+			alert("Exception:"+e);
+		}
+		
+	    }
+
  
  
 </script>

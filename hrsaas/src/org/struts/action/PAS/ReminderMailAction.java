@@ -121,8 +121,10 @@ public class ReminderMailAction extends ParaActionSupport {
 		} // end if
 		else {
 			addActionMessage("Mail could not be sent  ");
-		}// end else*/	
+		}// end else*/
+		
 		Object to_mailIds[][]=model.getSendToEmpId(reminderMail);
+		
 		Object from_mailIds[][]=model.getDefaultFromId();
 		result = model.sendMail(reminderMail,from_mailIds,to_mailIds);
 		if(result.equals("true")){

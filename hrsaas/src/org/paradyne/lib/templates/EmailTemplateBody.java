@@ -1014,7 +1014,7 @@ public class EmailTemplateBody extends ModelBase {
 		String port_80 = String.valueOf(request.getServerPort());
 		String link = "";
 		// if(port_80.equals("80")){
-		link = "http://" + clientName + ".peoplepower.com"
+		link = "http://" + clientName + ".com"
 				+ request.getContextPath()
 				+ "/AppStudio/OnlineApprRejc_approveRejectApp.action?pool="
 				+ poolName + "&parameter=";
@@ -1084,7 +1084,7 @@ public class EmailTemplateBody extends ModelBase {
 			// For Live
 			String link = "http://"
 					+ clientName
-					+ ".peoplepower.com"
+					+ ".com"
 					+ "/hrsaas/AppStudio/OnlineApprRejc_approveRejectApp.action?pool="
 					+ poolName + "&parameter=";
 

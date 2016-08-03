@@ -505,7 +505,7 @@ public class LoginAction extends ActionSupport implements ModelDriven,
 
 				if (this.loginBean .getInvalidCount() < 2) {
 					this.loginBean .setInvalidCount(this.loginBean .getInvalidCount() + 1);
-					addActionMessage("Invalid Password!!\nThe browser will be closed after 3 unsuccessful login attempts.");
+					addActionMessage("Invalid Password!");
 
 				} else {
 					addActionMessage("You have attempted 3 unsuccessful logins. The browser will be closed.");
@@ -753,8 +753,7 @@ public class LoginAction extends ActionSupport implements ModelDriven,
 
 		try {
 
-			poolName = String.valueOf(request.getSession().getAttribute(
-					"session_pool"));
+			poolName = String.valueOf(request.getSession().getAttribute("session_pool"));
 			// //logger.info("in createMenu..22222222222222222222");
 			if (!(poolName.equals("") || poolName == null || poolName
 					.equals(null))) {
@@ -1618,7 +1617,7 @@ public class LoginAction extends ActionSupport implements ModelDriven,
 				}
 			else if(isClientMultipleDashboard.equals("1")){
 				if (flag.equals("2")) {
-					addActionMessage("Invalid Password!!\nThe browser will be closed after 3 unsuccessful login attempts.");
+					addActionMessage("Invalid Password!");
 					
 				} else if (flag.equals("3")) {
 					addActionMessage("User is Inactive so can not Login");
@@ -1652,7 +1651,7 @@ public class LoginAction extends ActionSupport implements ModelDriven,
 			}else{
 				
 				if (flag.equals("2")) {
-					addActionMessage("Invalid Password!!\nThe browser will be closed after 3 unsuccessful login attempts.");
+					addActionMessage("Invalid Password!");
 				} else if (flag.equals("3")) {
 					addActionMessage("User is Inactive so can not Login");
 				}else{

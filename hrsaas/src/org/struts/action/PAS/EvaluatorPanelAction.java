@@ -35,7 +35,8 @@ public class EvaluatorPanelAction extends ParaActionSupport {
 			if(forwardStatus.equals("true")){
 				addActionMessage(getMessage("appraisal.form.head")+" forwarded successfully");
 			}else if(forwardStatus.equals("false")){
-				addActionMessage("Error while forwarding the "+getMessage("appraisal.form.head"));
+				System.out.println("6<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<manager phase>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>6 ");
+				addActionMessage("Error while forwarding the "+getMessage("appraisal.form.head")+" due to empty rating or blank comments.");
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

@@ -18,7 +18,7 @@
 					<tr>
 						<td valign="bottom" class="txt"><strong class="formhead"><img
 							src="../pages/images/review_shared.gif" width="25" height="25" /></strong></td>
-						<td width="93%" class="txt"><strong class="text_head">Questionnaire Definition</strong></td>
+						<td width="93%" class="txt"><strong class="text_head">Questions Definition</strong></td>
 						<td width="3%" valign="top" class="txt">
 						<div align="right"><img src="../pages/images/help.gif"
 							width="16" height="16" /></div>

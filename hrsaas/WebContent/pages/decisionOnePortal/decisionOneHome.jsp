@@ -162,7 +162,7 @@ String pool_name="abc";
 				
 				<div class= "col-md-7" style="padding-left: 28%; padding-top:38px;">				
 				<div class="form-inline" style="margin-bottom:3px;">
-					<div class="form-group">
+					<!-- <div class="form-group">
 						<input type="text"	name="searchText" id="searchText" onkeypress="setSearchFocus();"  class="form-control input-sm"
 								onfocus="clearText('searchText','Search In')" onblur="setText('searchText','Search In')" >
 								<input type="hidden" id="menuoremployee" value="emp" name="menuoremployee"></input>
@@ -176,7 +176,7 @@ String pool_name="abc";
 					</div>
 					<div class="form-group">
 						<input type="button" name="search" value="Search" onclick="javascript:getSearchData();" ></input>
-							</div>							   		
+					</div> -->							   		
 				</div>
 				</div>
 				
@@ -213,19 +213,18 @@ String pool_name="abc";
 						e.printStackTrace();
 					}
 				%>
-					
+					<strong style="padding-left:40px;"><%=request.getAttribute("UserName")%><%=request.getAttribute("UserID")%></strong>
 							<%
 							if (str.equals("empimage.gif")) {
 							%> <img src="../pages/mypage/images/icons/<%=gender%>" width="25"
 								height="25" />
 							 <%
                             } else { %> 
-                            <img src="../pages/images/<%=session.getAttribute("session_pool") %>/employee/<%=str %>" width="25" height="25" /> 
+                            <div class="user-img" style="padding-left:25px;"><img src="../pages/images/<%=session.getAttribute("session_pool") %>/employee/<%=str %>" width="20" height="20" /></div> 
                             <%
                              }%>
 
-							<strong><%=request.getAttribute("UserName")%>
-							<%=request.getAttribute("UserID")%></strong>
+							
 					
 						<div style="padding-top: 2px;margin-left: 13px;" class="emptext">
 							 

@@ -385,8 +385,7 @@ public class RatingScaleDefinitionModel extends ModelBase {
 					bean.setSAllowFractionFlg("off");
 				}
 
-				bean.setIflg((String
-						.valueOf(ratingScaleData[0][4]))); /* Rating Tolerance */
+				bean.setIflg((String.valueOf(ratingScaleData[0][4]))); /* Rating Tolerance */
 				bean.setSRatingType(String.valueOf(ratingScaleData[0][5])); /* Rating Type */
 			}
 			if (bean.getSRatingType().equals("scale")) {

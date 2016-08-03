@@ -1,7 +1,6 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <%@include file="/pages/common/labelManagement.jsp"%>
-<s:form action="AppraisalMisReport" validate="true" id="paraFrm"
-	validate="true" theme="simple">
+<s:form action="AppraisalMisReport" validate="true" id="paraFrm" theme="simple">
 	
 	<table class="formbg" width="100%">
 		<tr>
@@ -90,7 +89,7 @@
 										onclick="callCheck('empType');">
 									</td>
 								</tr>
-								</s:else>
+								<!--</s:else>-->
 								
 								<tr>
 									<td colspan="1" width="20%"><label class="set" id="employee" name="employee" ondblclick="callShowDiv(this);"><%=label.get("employee")%></label>:</td>

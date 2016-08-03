@@ -309,6 +309,12 @@
             </tr>
             <tr>
                 <td height="29" width="100%" nowrap="nowrap">
+                	<s:if test="%{iflg == null}">
+                		<input type="radio" name="sAppScoreFlg" value="1"> Minimum Score Among all appraisers<br>
+						<input type="radio" name="sAppScoreFlg" value="2"> Maximum Score Among all appraisers<br>
+						<input type="radio" name="sAppScoreFlg" value="3"> Average Score Among all appraiser<br>
+						<input type="radio" name="sAppScoreFlg" value="4"> Score of last appraiser Among all appraisers
+                	</s:if>
                 	<s:if test="%{iflg == 1}">
 						<input type="radio" name="sAppScoreFlg" value="1" checked="checked"> Minimum Score Among all appraisers<br>
 						<input type="radio" name="sAppScoreFlg" value="2"> Maximum Score Among all appraisers<br>

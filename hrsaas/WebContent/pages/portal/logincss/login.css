@@ -71,6 +71,8 @@ body {
 	height:20px;
 }
 input[type=text], input[type=password] {
+	
+	color: #400040;
 	display: block;
 	padding: 15px 10px;
 	margin-bottom: 10px;
@@ -78,11 +80,11 @@ input[type=text], input[type=password] {
 	border: 1px solid #ddd;
 	transition: border-width 0.3s ease;
 	border-radius: 2px;
-	color: #ccc;
 	-webkit-transition: 0.2s linear;
 	-moz-transition: 0.2s linear;
 	-o-transition: 0.2s linear;
 	transition: 0.2s linear;
+	height : 45px;
 }
 
 input[type=button], input[type=submit] {

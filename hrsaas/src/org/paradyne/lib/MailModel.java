@@ -46,8 +46,7 @@ public class MailModel extends ModelBase {
 	 * @param empId
 	 * @return
 	 */
-	public Object[][] getServerMailBox(String empId, String fromMailId,
-			Connection conn) {
+	public Object[][] getServerMailBox(String empId, String fromMailId, Connection conn) {
 		Object[][] empMailBoxData = null;
 		try {
 			System.out.println("empId  in getServerMailBox   " + empId);
@@ -62,20 +61,14 @@ public class MailModel extends ModelBase {
 				getMailBox = " SELECT  SERVER_OUT_IP, SERVER_OUT_PORT,SERVER_OUT_TYPE,EMAIL_USER_NAME,EMAIL_USER_PASS, SERVER_AUTH_REQUIRED, "
 						+ " SERVER_POP_BEFORE_SMTP,SERVER_IN_IP, SERVER_IN_PORT, SERVER_IN_TYPE,SERVER_CODE,EMAIL_USER_NAME  "
 						+ " ,SERVER_LOGON_USING, SERVER_LOGON_USERNAME, SERVER_LOGON_PASSWORD ,SERVER_USESYSTEMMAILID_FLAG " // newly
-						// added
-						// for
-						// logon
-						// using
-						// same
-						// or
-						// different
-						// Id
+						// added// for// logon// using// // or// // Id
 						+ " FROM HRMS_EMAIL_SERVER  "
 						+ " INNER JOIN HRMS_EMAIL_ACCOUNT ON (HRMS_EMAIL_ACCOUNT.EMAIL_SERVER_CODE=HRMS_EMAIL_SERVER.SERVER_CODE) "
 						+ " WHERE EMAIL_EMP_ID="
 						+ empId
 						+ "  AND EMAIL_OFFICIAL_FLAG='Y'";
 				empMailBoxData = SqlModel.getSingleResult(getMailBox, conn);
+				
 				if (empMailBoxData != null && empMailBoxData.length > 0) {
 					String sysmailQuery = "SELECT SYSMAIL_EMAIL_ID,SYSMAIL_EMAIL_PASS FROM HRMS_SETTINGS_SYSMAILID WHERE SYSMAIL_SERVER_CODE= "
 							+ String.valueOf(empMailBoxData[0][10])

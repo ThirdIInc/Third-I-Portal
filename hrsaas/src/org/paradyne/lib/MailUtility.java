@@ -943,8 +943,7 @@ public class MailUtility extends ModelBase {
 		return result;
 	}
 
-	public void sendApprReminderMail(Object[][] to_mailIds,
-			Object[][] from_mailIds, String[] messageBody, String[] subject) {
+	public void sendApprReminderMail(Object[][] to_mailIds,	Object[][] from_mailIds, String endDate, String string) {
 		MailModel model = new MailModel();
 		model.initiate(context, session);
 
@@ -952,9 +951,11 @@ public class MailUtility extends ModelBase {
 
 		fromMail[0] = "" + from_mailIds[0][0];
 
-		String[] toMails = new String[to_mailIds.length];
+		String[][] toMails = new String[1][5];
 		for (int i = 0; i < toMails.length; i++) {
-			toMails[i] = "" + to_mailIds[i][0];
+			for(int j = 0;j < 5 ; j ++){
+			toMails[0][j] = "" + to_mailIds[i][j];
+			}
 		}
 		// String empName = model.getEmpName(from_mailIds);//Get emp name for
 		// the first emp ID
@@ -983,9 +984,10 @@ public class MailUtility extends ModelBase {
 				+ "<td width='100%'>"
 				+ "<table width='96%' border='0' cellpadding='2' cellspacing='2' class='border'> "
 				+ "<tr> " + "<td><p>Dear Colleagues&nbsp;<b>"
-				+ "</b>, </p><br /> "
-				+ messageBody[0]
-				+ "</td> "
+				+ "</b>, </p><br/> "
+				+ "Please complete your appraisal form on or before "
+				+ endDate
+				+ ".</td> "
 				+ "</tr> "
 				+ "<tr>"
 				+ "<td width='100%'>"
@@ -993,19 +995,14 @@ public class MailUtility extends ModelBase {
 				+ "</td></tr>"
 				+ "<tr>"
 				+ "<td width='100%'>"
-				+ "Vikas V. Pathak"
+				+ "Shweta Chirvi"
 				+ "</td></tr>"
 				+ "<tr>"
 				+ "<td width='100%'>"
-				+ "Sr. Vice President & Head "
-				+ "</td></tr>"
+				+ "Manager-HR "
 				+ "<tr>"
 				+ "<td width='100%'>"
-				+ "Human Capital & Admin (Global Operations) "
-				+ "</td></tr>"
-				+ "<tr>"
-				+ "<td width='100%'>"
-				+ "<br><br>For any queries or assistance please mail to <u>support@peoplepower.com.</u>"
+				+ "<br><br>For any queries or assistance please mail to <u>hr@the3i.com</u>"
 				+ "</td></tr>"
 				+ "<tr>"
 				+ "<td width='100%'>"
@@ -1021,16 +1018,16 @@ public class MailUtility extends ModelBase {
 		SendMailModel sendMail = new SendMailModel();
 		sendMail.initiate(context, session);
 		messg[0] = sendMail.getMassMessage(messg[0]);// Get HTML text
-		sendBdayMail(toMails, fromMail, subject, messg, "");
+		sendBdayMail(toMails, fromMail, string, messg, "");
 		sendMail.terminate();
 		model.terminate();
 	}
 
-	public void sendBdayMail(String[] to_mailIds1, String[] from_mailIds1,
-			String subject1[], String messg1[], String attachPath1) {
-		final String[] to_mailIds = to_mailIds1;
+	public void sendBdayMail(String[][] to_mailIds1, String[] from_mailIds1,
+			String string, String messg1[], String attachPath1) {
+		final String[][] to_mailIds = to_mailIds1;
 		final String[] from_mailIds = from_mailIds1;
-		final String[] subject = subject1;
+		final String subject = string;
 		final String[] messg = messg1;
 		final String attachPath = attachPath1;
 		/**
@@ -1058,17 +1055,28 @@ public class MailUtility extends ModelBase {
 									.valueOf(mailBoxData[0][4]);
 							logger.info("-----userName-------" + userName);
 							logger.info("-----pass-------" + pass);
-							props.put("mail.smtp.host", String.valueOf(
-									mailBoxData[0][0]).trim());
-							props.put("mail.smtp.port", String.valueOf(
-									mailBoxData[0][2]).trim());
-
-							if (String.valueOf(mailBoxData[0][9]).equals(
-									"pop3/ssl")) {
+						  /*props.put("mail.smtp.host", String.valueOf(mailBoxData[0][0]).trim());
+							props.put("mail.smtp.port", String.valueOf(mailBoxData[0][2]).trim());*/
+							
+							
+							   	
+						        props.put("mail.smtp.starttls.enable", "true");
+						        props.put("mail.smtp.debug", "true");
+						        props.put("mail.smtp.ssl.trust", "*");
+						        
+						        props.put("mail.smtp.host", "smtp.gmail.com");
+						        props.put("mail.smtp.socketFactory.port", "465");
+						        props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+						        props.put("mail.smtp.auth", "true");
+						        props.put("mail.smtp.port", "465");
+						        props.put("mail.smtp.socketFactory.fallback", "false");
+							
+							
+							/*if (String.valueOf(mailBoxData[0][9]).equals("pop3/ssl")) {
 								props.put("mail.smtp.starttls.enable", "true");
 								props.put("mail.smtp.ssl.trust", "*");
 
-							}
+							}*/
 
 							if (String.valueOf(mailBoxData[0][5]).equals("Y")) {
 
@@ -1090,6 +1098,7 @@ public class MailUtility extends ModelBase {
 						try {
 							t = session1.getTransport("smtp");
 							try {
+								 //t.connect ("smtp.gmail.com", 587,"jigar.vasani@the3i.com" , "Mind@123");
 								t.connect();
 							} catch (MessagingException e) {
 								logger.info(e);
@@ -1120,57 +1129,87 @@ public class MailUtility extends ModelBase {
 
 								InternetAddress addressFrom = null;
 								for (int z = 0; z < to_mailIds.length; z++) {
-									if (!(String.valueOf(to_mailIds[z])
-											.equals("null"))) {
+									if (!(String.valueOf(to_mailIds[z]).equals("null"))) {
 										// logger.info("11111----*****+++++++++***---->>
 										// "+to_mailIds[z]);
 
-										toEmail[z] = new InternetAddress(String
-												.valueOf(to_mailIds[z]));
-										logger
-												.info("TO Employee ----********---->> "
-														+ toEmail[z]);
+										htmlText = "<html> "
+												+ "<style>"
+												+ " .txt {font-family: Verdana, Arial, Helvetica, sans-serif;	font-size: 12px; color: #000000; text-decoration: none; } "
+												+ " .style13 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF; text-decoration: none; font-weight: bold; } "
+												+ " .birth { font-family: Monotype Corsiva; font-size: 22px; font-style: italic; font-weight: bold; text-decoration: none; }"
+												+ ".style14 {font-family: Monotype Corsiva; font-size: 22px; font-style: italic; font-weight: bold; text-decoration: none; color: #FF6600; }"
+												+ ".style15 {color: #CC0000} "
+												+ ".style16 {color: #D23A49} "
+												+ "</style>"
+												+ "	<body> "
+												+ "<table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+												+ "<tr> "
+												+ "<td width='100%'>"
+												+ "<table width='96%' border='0' cellpadding='2' cellspacing='2' class='border'> "
+												+ "<tr> " + "<td><p>Dear Colleagues&nbsp;<b>"
+												+ "</b>, </p><br/> "
+												+ "Please complete your appraisal "
+												+ String.valueOf(to_mailIds[z][3])
+												+ " form on or before "
+												+ String.valueOf(to_mailIds[z][4])
+												+ ".</td> "
+												+ "</tr> "
+												+ "<tr>"
+												+ "<td width='100%'>"
+												+ "<br><br>With Regards,"
+												+ "</td></tr>"
+												+ "<tr>"
+												+ "<td width='100%'>"
+												+ "Shweta Chirvi"
+												+ "</td></tr>"
+												+ "<tr>"
+												+ "<td width='100%'>"
+												+ "Manager-HR "
+												+ "<tr>"
+												+ "<td width='100%'>"
+												+ "<br><br>For any queries or assistance please mail to <u>hr@the3i.com</u>"
+												+ "</td></tr>"
+												+ "<tr>"
+												+ "<td width='100%'>"
+												+ "<br>(Note: This is a system generated mail and hence do not reply to this mail.)"
+												+ "</td></tr>"
+												+ "</table> "
+												+ "</td> "
+												+ "</tr> "
+												+ "</table> " + "</body> " + "</html> ";										
+										
+										
+										
+										
+										toEmail[z] = new InternetAddress(String.valueOf(to_mailIds[z][2]));
+										logger.info("TO Employee ----********---->> "+ toEmail[z]);
 
-										addressFrom = new InternetAddress(
-												from_mailIds[0]);
-										message.addHeader("To", String
-												.valueOf(to_mailIds[z]));
-										logger
-												.info("From Employee ----********---->> "
-														+ from_mailIds[0]);
+										addressFrom = new InternetAddress(from_mailIds[0]);
+										message.addHeader("To", String.valueOf(to_mailIds[z]));
+										logger.info("From Employee ----********---->> "+ from_mailIds[0]);
 
 									}
 								}
 								try {
 									session1.setDebug(debug);
 
-									MimeMultipart multipart = new MimeMultipart(
-											"related");
-									((MimeMessage) message)
-											.setSubject(subject[0]);
+									MimeMultipart multipart = new MimeMultipart("related");
+									((MimeMessage) message).setSubject(subject);
 									message.setFrom(addressFrom);
 
-									if (!(String.valueOf(attachPath)
-											.equalsIgnoreCase("null") || String
-											.valueOf(attachPath)
-											.equalsIgnoreCase(""))) {
-										DataSource fds1 = new FileDataSource(
-												file1);
-										messageBodyPart2
-												.setDataHandler(new DataHandler(
-														fds1));
-										messageBodyPart2.setHeader(
-												"Content-ID", "");
+									if (!(String.valueOf(attachPath).equalsIgnoreCase("null") || String.valueOf(attachPath).equalsIgnoreCase(""))) {
+										DataSource fds1 = new FileDataSource(file1);
+										messageBodyPart2.setDataHandler(new DataHandler(fds1));
+										messageBodyPart2.setHeader("Content-ID", "");
 										multipart.addBodyPart(messageBodyPart2);
 									}
-									messageBodyPart.setContent(htmlText,
-											"text/html");
+									messageBodyPart.setContent(htmlText,"text/html");
 
 									multipart.addBodyPart(messageBodyPart);
 									((Part) message).setContent(multipart);
 									t.sendMessage(message, toEmail);
-									logger.info("TOTAL MAILS SENT= "
-											+ to_mailIds.length);
+									logger.info("TOTAL MAILS SENT= "+ to_mailIds.length);
 								} catch (Exception e) {
 									logger.info(e);
 									e.printStackTrace();
@@ -1189,7 +1228,7 @@ public class MailUtility extends ModelBase {
 						logger.info(e);
 					}
 				} catch (Exception e) {
-					logger.info(e);
+						logger.info(e);
 				} // end of try-catch block
 			}
 		}).start();
@@ -1304,16 +1343,11 @@ public class MailUtility extends ModelBase {
 			if (isThread) {
 				new Thread(new Runnable() {
 					public void run() {
-						sendMail(to_mailIds, from_mailIds, subject, messg,
-								attachPath, fromEmpId, isCalendarIn,
-								fromDateIn, toDateIn, calMessageIn,
-								calSubjectIn);
+						sendMail(to_mailIds, from_mailIds, subject, messg, attachPath, fromEmpId, isCalendarIn,	fromDateIn, toDateIn, calMessageIn,	calSubjectIn);
 					}
 				}).start();
 			} else {
-				message = sendMail(to_mailIds, from_mailIds, subject, messg,
-						attachPath1, fromEmpId, isCalendarIn, fromDateIn,
-						toDateIn, calMessageIn, calSubjectIn);
+				message = sendMail(to_mailIds, from_mailIds, subject, messg, attachPath1, fromEmpId, isCalendarIn, fromDateIn, toDateIn, calMessageIn, calSubjectIn);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -2308,7 +2342,7 @@ public class MailUtility extends ModelBase {
 
 									if (t.isConnected()) {
 										// t.sendMessage(message, toEmail);
-										t.send(message);
+										Transport.send(message);
 
 										try {
 											Thread.sleep(10);

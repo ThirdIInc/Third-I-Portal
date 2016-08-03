@@ -44,7 +44,8 @@ public class ApprFormStartAction extends ParaActionSupport {
 			if(forwardStatus.equals("true")){
 				addActionMessage(getMessage("appraisal.form.head")+" forwarded successfully");
 			}else if(forwardStatus.equals("false")){
-				addActionMessage("Error while forwarding the "+getMessage("appraisal.form.head"));
+				System.out.println("5<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<manager phase>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>5 ");
+				addActionMessage("Error while forwarding the "+getMessage("appraisal.form.head")+" due to empty rating or blank comments.");
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

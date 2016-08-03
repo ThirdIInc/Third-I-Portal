@@ -546,6 +546,7 @@
 										for (int k = 0; k < data.length; k++) { System.out.println("data for rating====-=-=-=---_=-=-::::"+data[k]);
 							%>
 				<tr>
+					
 					<td><input type="hidden" name="apprPhaseId"
 						id="apprPhaseId<%=k%>" value="<%= String.valueOf(data[k][0]) %>" />
 					<input type="hidden" name="apprPhaseName" id="apprPhaseName<%=k%>"

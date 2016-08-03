@@ -36,6 +36,7 @@ public class ApprFormGeneralInfoAction extends ParaActionSupport {
 			if(forwardStatus.equals("true")){
 				addActionMessage(getMessage("appraisal.form.head")+" forwarded successfully");
 			}else if(forwardStatus.equals("false")){
+				System.out.println("1<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<manager phase>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>1 ");
 				addActionMessage("Error while forwarding the "+getMessage("appraisal.form.head"));
 			}
 		} catch (Exception e) {

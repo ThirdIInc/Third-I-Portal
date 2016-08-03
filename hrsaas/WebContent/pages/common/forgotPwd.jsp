@@ -34,9 +34,7 @@
 				System.out.println("String cmpName =" + cmpName);
 				if (cmpName != null && !cmpName.equals("null")
 						&& !cmpName.equals("")) {
-			%> <input type="hidden" name="compImg" value="<%=cmpName%>" /> <img
-				src="../pages/Logo/<%=session.getAttribute("session_pool")%>/<%=cmpName%>"
-				height="51" /> <%
+			%> <input type="hidden" name="compImg" value="<%=cmpName%>" /><%
  } else {
  %> <input type="hidden" name="compImg" value="client_logo.jpg" /> <img
 				src="../pages/common/css/default/images/logo.jpg"
@@ -93,9 +91,11 @@
 				</tr>
 			
 				<tr>
-					<td colspan="1">&nbsp;</td>
-					<td colspan="1" width="30%" align="left"><s:submit cssClass="token" theme="simple" value="Continue"
+					<!-- <td colspan="1">&nbsp;</td> -->
+					<td colspan="1" width="25%" align="center"><s:submit cssClass="token" theme="simple" value="Continue"
 						onclick="return submitFun();" action="ForgotPwd_submitForgot" /> 
+					</td>
+					<td colspan="1" width="30%" align="center"><s:submit cssClass="token" theme="simple" value="Back" onclick="return BackFun();"/> 
 					</td>
 				</tr>
 			</table>
@@ -169,6 +169,13 @@ var empId=document.getElementById('empIdfg').value;
   }
    return true;
   
+}
+
+function BackFun()
+{
+document.getElementById('paraFrm').action="Login_input.action";
+document.getElementById('paraFrm').submit();
+
 }
 
 

@@ -24,6 +24,11 @@ public class AppraisalStatusReportAction extends ParaActionSupport {
 	public Object getModel() {
 		return appStatus;
 	}
+	public String input()
+	{
+	    getNavigationPanel(1);
+	    return "input";
+	}
 	
 	public String getPhaseList()
 	{

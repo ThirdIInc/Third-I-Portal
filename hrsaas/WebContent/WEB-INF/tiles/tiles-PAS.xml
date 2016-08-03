@@ -155,10 +155,31 @@
 	</definition>
 <!-- Appraisal Report End-->
 
+<!-- Appraisal management Report Start-->
+	<definition name="Appraisal.mgmtReport" extends=".mainLayout">
+		<put-attribute name="title" value="Appraisal Managment Report" />
+		<put-attribute name="body" value="/pages/PAS/apprisalMgmtReport.jsp" />
+	</definition>
+<!-- Appraisal management Report End-->
+
+<!-- Appraisal Status Report Start-->
+	<definition name="Appraisal.statusReport" extends=".mainLayout">
+		<put-attribute name="title" value="Appraisal Status Report" />
+		<put-attribute name="body" value="/pages/PAS/apprisalStatusReport.jsp" />
+	</definition>
+<!-- Appraisal management Report End-->
+
 <!-- Appraisal Summary Report Start-->
 	<definition name="Appraisal.summaryReport" extends=".pasHomeLayout">
 		<put-attribute name="title" value="Apprisal Summary" />
 		<put-attribute name="body" value="/pages/PAS/appraisalSummaryReport.jsp" />
+	</definition>
+<!-- Appraisal Summary Report End-->
+
+<!-- Appraisal Summary Report Start-->
+	<definition name="Appraisal.commentReport" extends=".pasHomeLayout">
+		<put-attribute name="title" value="Apprisal Comment" />
+		<put-attribute name="body" value="/pages/PAS/apprisalComment.jsp" />
 	</definition>
 <!-- Appraisal Summary Report End-->
 

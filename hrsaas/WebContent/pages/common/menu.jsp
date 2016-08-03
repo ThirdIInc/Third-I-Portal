@@ -32,7 +32,7 @@
 			<tr>
 				<td colspan="2" height="4"></td>
 			</tr>
-			<tr>
+			<!-- <tr>
 				<td>
 				<div align="center"><img
 					src="../pages/mypage/images/icons/attendance.png" /></div>
@@ -42,11 +42,11 @@
 					title="My Attendance" href="javascript:void(0)" class="servicelink">My
 				Attendance</a><br/>
 				<span class="smalltext">Track my leave & attendance</span></td>
-			</tr>
+			</tr> -->
 			<tr>
 				<td colspan="2" height="4"></td>
 			</tr>
-			<tr>
+			<!-- <tr>
 				<td>
 				<div align="center"><img
 					src="../pages/mypage/images/icons/dashboard_basic_blue.png"
@@ -56,11 +56,11 @@
 					onclick="return callAction('mydashboard');" class="servicelink"
 					title="My Dashboard">My Dashboard</a><br/>
 				<span class="smalltext">Monitor my dashboard</span></td>
-			</tr>
+			</tr> -->
 			<tr>
 				<td colspan="2" height="4"></td>
 			</tr>
-			<tr>
+			<!-- <tr>
 				<td>
 				<div align="center"><img
 					src="../pages/mypage/images/icons/myfavourite.gif" /></div>
@@ -69,11 +69,11 @@
 					onclick="return callAction('myFavourites');" title="My Favorites">My
 				Favorites</a><br/>
 				<span class="smalltext">Manage my favourite links</span></td>
-			</tr>
+			</tr> -->
 			<tr>
 				<td colspan="2" height="4"></td>
 			</tr>
-			<tr>
+			<!-- <tr>
 				<td>
 				<div align="center"><img
 					src="../pages/mypage/images/icons/calendar.png" /></div>
@@ -81,11 +81,11 @@
 				<td><a href="javascript:void(0)" class="servicelink"
 					onclick="return callAction('mytask');" title="My Task">My Task</a><br/>
 				<span class="smalltext">Let me manage my tasks</span></td>
-			</tr>
+			</tr> -->
 			<tr>
 				<td colspan="2" height="4"></td>
 			</tr>
-			<tr>
+			<!-- <tr>
 				<td>
 				<div align="center"><img
 					src="../pages/mypage/images/icons/dashboard.png" /></div>
@@ -94,17 +94,17 @@
 					onclick="return callAction('mynotes');" title="My Notes">My
 				Notes</a><br />
 				<span class="smalltext">Manage my important notes</span></td>
-			</tr>
+			</tr> -->
 			<tr>
 				<td colspan="2" height="4"></td>
 			</tr>
-			<tr>
+			<!-- <tr>
 				<td><img src="../pages/mypage/images/icons/settings_events.png" /></td>
 				<td><a href="javascript:void(0)" class="servicelink"
 					onclick="return callAction('myanalytics');" title="My Analytics">My
 				Analytics</a><br/>
 				<span class="smalltext">Download my reports</span></td>
-			</tr>
+			</tr> -->
 			<tr>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>

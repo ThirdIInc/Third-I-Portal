@@ -635,35 +635,36 @@ function calladd(type)
 	try{
 		
 	if(type == 'hrwork')
-	{alert(type);
-	 
-			var fieldName1 = ["paraFrm_oldpsswd","paraFrm_newpsswd1","paraFrm_newpsswd2"];
+	{
 			var labelName1 = ["oldpass","newpass","confpass"];
 			var flag = ["enter","enter","enter"];
 			var fieldName2 = ["paraFrm_userName","paraFrm_oldPass"];
 			var labelName2 = ["Email Address","Password"];
-		
-		if(!validateBlank(fieldName1, labelName1, flag)){
+			
+		/*if(!validateBlank(fieldName1, labelName1, flag)){
+			
 			return false;
-		}
+		}*/
 		var oldpssd  = document.getElementById('paraFrm_oldpsswd').value;                               
 		var newpssd1 = document.getElementById('paraFrm_newpsswd1').value;
 		var newpssd2 = document.getElementById('paraFrm_newpsswd2').value;
 		var pssword  = document.getElementById('paraFrm_pssword').value;
+	
 		if(newpssd1.length < eval(<%= minLength%>) || newpssd1.length > eval(<%= maxLength%>)){
 			alert(document.getElementById('newpass').innerHTML.toLowerCase()+' should be of min <%= minLength%> and max <%= maxLength%> characters.');
 			document.getElementById('paraFrm_newpsswd1').focus();
 			return false;
 		} 
+	
 		if(!validatePassword(pssword, oldpssd, newpssd1, newpssd2)){
 			alert("Please enter old password correctly");
 			return false;
 		}
-			
-		alert("action");
 		document.getElementById('paraFrm').action="ChangePassword_savePsswd.action";
 		document.getElementById('paraFrm').submit();
 		
+		
+			
 	}
 	
 	if(type == 'email'){

@@ -9,6 +9,7 @@ import java.util.Vector;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.struts.action.ActionMessage;
 import org.paradyne.bean.PAS.ApprFormSection;
 import org.paradyne.lib.MailUtility;
 import org.paradyne.lib.ModelBase;
@@ -140,9 +141,9 @@ public class ApprFormSectionModel extends ModelBase {
 			sectionObj[2] = bean.getPhaseCode();
 			sectionObj[3] = bean.getSectionCode();
 			sectionObj[4] = ""+groupObj[0][0];
-			String phaseOrderQuery = "select appr_phase_order from pas_appr_phase_config where phase_id = "+bean.getPhaseCode()+" ";
-			Object PhaseOrder = getSqlModel().getSingleResult(phaseOrderQuery);
-			System.out.println("phase order-------------------"+PhaseOrder);
+			//String phaseOrderQuery = "select appr_phase_order from pas_appr_phase_config where appr_phase_id = "+bean.getPhaseCode()+" ";
+			//Object PhaseOrder = getSqlModel().getSingleResult(phaseOrderQuery);
+			//System.out.println("phase order-------------------"+PhaseOrder);
 			// get the questions for the selected group and for this section and this phase
 			Object quesData[][] = getSqlModel().getSingleResult(getQuery(3),sectionObj);
 			
@@ -156,7 +157,7 @@ public class ApprFormSectionModel extends ModelBase {
 				+"		WHERE  PAS_APPR_COMMENTS.APPR_ID= "+bean.getApprId()+" AND PAS_APPR_COMMENTS.APPR_TEMPLATE_ID = "+bean.getTemplateCode()+"  "
 				+"		and APPR_EVALUATOR_CODE  != "+bean.getUserEmpId()+" and PAS_APPR_COMMENTS.APPR_EMP_ID = "+bean.getEmpId()+"  "
 				+"      and PAS_APPR_COMMENTS.APPR_SECTION_ID = "+bean.getSectionCode()+" "
-				+"      and PAS_APPR_PHASE_CONFIG.APPR_PHASE_ORDER  < "+PhaseOrder+" "
+				//+"      and PAS_APPR_PHASE_CONFIG.APPR_PHASE_ORDER  < "+PhaseOrder+" "
 				+"		ORDER BY PAS_APPR_PHASE_CONFIG.APPR_PHASE_ORDER,APPR_EVALUATOR_LEVEL,PAS_APPR_QUES_MAPPING.APPR_QUESTION_ORDER ";
 						
 			Object[][]subObj=getSqlModel().getSingleResult(query);
@@ -958,10 +959,9 @@ public class ApprFormSectionModel extends ModelBase {
 	//--------------------------for forward appraisal 
 	
 	public boolean forwardAppraisal(HttpServletRequest request, String apprCode,String templateCode,String sectionCode,String phaseCode,String empCode,
-			String appraiserCode,String apprPeriod){
+			String appraiserCode,String apprPeriod,String finalCheck){
 		boolean result = false;
 		boolean result1 = false;
-		
 		try{
 			Object [][]nextPhaseObj = null;
 			Object [][] apprGrpObj =null;

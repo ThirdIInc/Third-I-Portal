@@ -29,7 +29,7 @@
 					<td style="padding: 3px;"><strong class="text_head"><img  
 						src="../pages/mypage/images/icons/myservices.png"  
 						  /></strong></td>
-					<td width="93%" class="txt"><strong class="text_head">My Services </strong></td>
+					<td width="93%" class="txt"><strong class="text_head">My Services</strong></td>
 					<td width="3%" valign="top" class="txt">
 					<div align="right"></div>
 					</td>

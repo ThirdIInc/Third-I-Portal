@@ -304,7 +304,7 @@ function deleteFun(){
 							document.getElementById("paraFrm").submit();
 						}
 			}else{
-			alert("hrllo");
+			
 				alert("Appraisal schedule cannot be deleted as it is referenced to some other resources.");
 			}
 }

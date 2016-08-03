@@ -613,9 +613,9 @@ public class LoginModel extends ModelBase {
 			}
 				if (request.getRequestURL().toString().contains(
 					"http://localhost:8080")) {
-				URL = "http://www.myglodyne.com";
+				URL = "http://www.the3i.com";
 			} else {
-				URL = "http://" + clientName + ".peoplepower.com";
+				URL = "http://" + clientName + ".com";
 			}
 
 			/*
@@ -1197,9 +1197,9 @@ public class LoginModel extends ModelBase {
 
 			if (request.getRequestURL().toString().contains(
 					"http://www.myglodyne")) {
-				URL = "http://www.myglodyne.com";
+				URL = "http://www.the3i.com";
 			} else {
-				URL = "http://" + clientName + ".peoplepower.com";
+				URL = "http://" + clientName + ".com";
 			}
 
 			String username;
@@ -1307,9 +1307,9 @@ public class LoginModel extends ModelBase {
 				+ "<td><p>Dear&nbsp;<b>"
 				+ uname
 				+ "</b>, </p><br /> "
-				+ "Welcome to People Power-Human Resource Management Tool  "
+				+ "Welcome to HRMS portal "
 				+ "Kindly find your account information below.</p> "
-				+ "<br /><p>People Power Link :<a href='"
+				+ "<br /><p>HRMS Portal Link :<a href='"
 				+ url
 				+ "'>"
 				+ url
@@ -2437,4 +2437,9 @@ public class LoginModel extends ModelBase {
 		}
 		return result;
 		}
+
+	public Object[][] setMyTheme(LoginBean loginBean) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

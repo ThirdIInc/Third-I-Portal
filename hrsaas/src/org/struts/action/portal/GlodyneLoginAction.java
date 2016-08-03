@@ -431,9 +431,7 @@ public class GlodyneLoginAction extends ActionSupport implements ModelDriven,
 				// loginModel.getLastLoginTime(loginBean.getEmpId());
 				// session.setAttribute("lastAcctActivity",
 				// String.valueOf(lastAcctActivity[0][0]));
-				Object[][] result = loginModel.saveLoginSession(String
-						.valueOf(loginData[0][3]), strSpilt[0], strSpilt[1],
-						strSpilt[2], strSpilt[3], strPort);
+				Object[][] result = loginModel.saveLoginSession(String.valueOf(loginData[0][3]), strSpilt[0], strSpilt[1],strSpilt[2], strSpilt[3], strPort);
 				try {
 					LoginBean emailInfo = (LoginBean) context
 							.getAttribute("email");
@@ -1572,7 +1570,7 @@ public class GlodyneLoginAction extends ActionSupport implements ModelDriven,
 				LoginAttendanceModel LoginAttendanceModel = new LoginAttendanceModel();
 				LoginAttendanceModel.initiate(context, session);
 				LoginAttendanceModel.calculateAttendance(String
-						.valueOf(loginData[0][1]), "LOGIN");
+						.valueOf(loginData[0][1]), "LOGIN", isCorrect);
 				LoginAttendanceModel.terminate();
 			}
 			long endTime = System.currentTimeMillis();

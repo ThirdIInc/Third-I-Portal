@@ -86,7 +86,7 @@
 			<tr>
 				<td colspan="2" height="4"></td>
 			</tr>
-			<tr>
+			<!-- <tr>
 				<td>
 				<div align="center"><img
 					src="../pages/mypage/images/icons/attendance.png" /></div>
@@ -96,7 +96,7 @@
 					title="My Attendance" href="javascript:void(0)" class="servicelink">My
 				Attendance</a><br />
 				<span class="smalltext">Track my leave & attendance</span></td>
-			</tr>
+			</tr> -->
 
 		</table>
 		</td>

@@ -38,9 +38,12 @@ public class ReminderMailModel extends ModelBase {
 	}
 public Object [][]getSendToEmpId(ReminderMail bean){
 		
-		String empListQuery="SELECT APPR_EMP_ID FROM PAS_APPR_ELIGIBLE_EMP WHERE APPR_ID="+bean.getApprCode()+" AND APPR_EMP_STATUS='A'";
-				
+		//String empListQuery="SELECT add_email1 FROM PAS_APPR_ELIGIBLE_EMP inner join hrms_emp_address on pas_appr_eligible_emp.appr_emp_id= hrms_emp_address.emp_id where add_type='P' and APPR_ID="+bean.getApprCode()+" AND APPR_EMP_STATUS='A'";
+	String empListQuery="SELECT * FROM  VIEW_APPRAISAL_SCHEDULE WHERE APPR_ID="+bean.getApprCode()+" AND APPR_PHASE_END_DATE >= TRUNC(SYSDATE) ";
+	
 		Object [][]empObj =getSqlModel().getSingleResult(empListQuery);
+		System.out.println("phase name is::::: "+bean.getPhaseList());
+		
 		return empObj;
 	}
 	public String getEndDate(ReminderMail bean){
@@ -83,9 +86,12 @@ public Object [][]getSendToEmpId(ReminderMail bean){
 				MailUtility mail=new MailUtility();
 				mail.initiate(context, session);
 				for (int i = 0; i < toEmpObj.length; i++) {
-					Object [][] to_mailId= new Object[1][1];
-					to_mailId[0][0]= toEmpObj[i][0];
-					mail.sendApprReminderMail(to_mailId, from_mailIds,endDate,bean.getApprName());
+					Object [][] to_mailId= new Object[1][5];
+					for(int j = 0; j < 5; j++){
+					
+					to_mailId[0][j]= toEmpObj[i][j];
+					
+					}mail.sendApprReminderMail(to_mailId, from_mailIds,endDate,bean.getApprName());
 				}			
 				
 				result="true";
